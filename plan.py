@@ -590,6 +590,12 @@ def load_ckpt(snapshot_path, device):
 
 
 def load_model(model_ckpt, train_cfg, num_action_repeat, device):
+    from models.ddpwm.loader import is_ddpwm, load_ddpwm
+    from models.lewm import is_lewm, load_lewm
+    if is_ddpwm(train_cfg):  # state-dict checkpoint of the DDP-WM baseline
+        return load_ddpwm(model_ckpt, train_cfg, num_action_repeat, device)
+    if is_lewm(train_cfg):  # LeWM baseline trained with train_lewm.py
+        return load_lewm(model_ckpt, train_cfg, device)
     result = {}
     if model_ckpt.exists():
         result = load_ckpt(model_ckpt, device)
