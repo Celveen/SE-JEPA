@@ -1,0 +1,15 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_dino_h1_fs1_e100_seed0
+- model_epoch=latest
+- +eval_data_path=/data/zjc/adaJEPA/CL-JEPA/data/deformable
+- goal_source=random_state
+- goal_H=5
+- n_evals=10
+- seed=102
+- planner.max_iter=1
+- planner.n_taken_actions=5
+- planner.sub_planner.horizon=5
+- planner.sub_planner.num_samples=300
+- planner.sub_planner.topk=30
+- planner.sub_planner.opt_steps=30
+- planner.sub_planner.eval_every=-1
+- decode_for_viz=false

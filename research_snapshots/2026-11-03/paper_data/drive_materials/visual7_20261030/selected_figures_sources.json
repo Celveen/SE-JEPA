@@ -1,0 +1,32 @@
+[
+  {
+    "file": "18_cem_red_object_prediction_loss.png",
+    "id": "1x5cAJ-2sWIHV2b8ahT3I4BlKWMG6MLiw",
+    "size": 192985,
+    "dimensions": [
+      2592,
+      1026
+    ],
+    "sha256": "1bd1d597b1b0d17480fee45cb13bc7ec509cc39ff5f946916111cc591644bea2"
+  },
+  {
+    "file": "03_visual7_grouped.png",
+    "id": "1gDEcVxirhY4KNf7ZWQPujXMauqLyh4KR",
+    "size": 68942,
+    "dimensions": [
+      1836,
+      702
+    ],
+    "sha256": "b7b45575aab0cf6ffb695b99b1d3023983694e6ded777d371e5de37513c0116c"
+  },
+  {
+    "file": "19_cem_red_goal_prediction_loss.png",
+    "id": "1hiOpQTrxz7NnAcaU4eiG60kqMb2qU_Sd",
+    "size": 204023,
+    "dimensions": [
+      2592,
+      1026
+    ],
+    "sha256": "0e7c860d968c95062566b6054483e45c9f71acd2afa90f95b3815fa1a497ad90"
+  }
+]

@@ -1,0 +1,12 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_dino_h1_fs1_e100_seed0
+- model_epoch=latest
+- +eval_data_path=/data/zjc/adaJEPA/CL-JEPA/data/deformable
+- goal_source=dset
+- n_evals=10
+- seed=109
+- +wandb_logging=false
+- planner.resim_from_start=false
+- planner._target_=planning.mpc.MPCPlanner
+- ~planner.adapt
+- ~planner.probe
+- ~planner.continual

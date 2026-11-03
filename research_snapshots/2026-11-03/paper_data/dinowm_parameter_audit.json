@@ -1,0 +1,25 @@
+{
+  "official_checkpoint_epoch": 2,
+  "official_components": {
+    "predictor": 20122600,
+    "decoder": 10140163,
+    "action_encoder": 110,
+    "proprio_encoder": 50
+  },
+  "current_components": {
+    "predictor": 20122600,
+    "action_encoder": 130,
+    "proprio_encoder": 70,
+    "decoder": 0
+  },
+  "frozen_encoder_params_from_training_log": 22056576,
+  "matched_model_components": {
+    "predictor": 20122600,
+    "decoder": 10140163,
+    "action_encoder": 110,
+    "proprio_encoder": 50,
+    "frozen_encoder": 22056576,
+    "total": 52319499
+  },
+  "all_component_state_shapes_match": true
+}

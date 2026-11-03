@@ -1,0 +1,9 @@
+{
+  "formal_batches_verified": 420,
+  "formal_episodes": 21000,
+  "heldout_episodes": 10500,
+  "paired_target_groups": 126,
+  "all_npz_hashes_and_success_curves_verified": true,
+  "source_final_results_sha256": "46810b021149b39cf5a5ad0526cf30b98098572055d462b83d8402abe63b5803",
+  "selection": "All completed formal held-out episodes; no learning episodes in final comparison"
+}

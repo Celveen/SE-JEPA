@@ -1,0 +1,16 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_granular
+- model_epoch=latest
+- +eval_data_path=/data/zjc/adaJEPA/CL-JEPA/data/deformable
+- goal_source=file
+- +goal_file_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular/targets/granular_seed303.pkl
+- n_evals=10
+- seed=303
+- +wandb_logging=false
+- ++env_kwargs_override.object_name=granular
+- planner.resim_from_start=false
+- planner.continual.tag=granular
+- planner.continual.save_deltas=false
+- planner._target_=planning.mpc.MPCPlanner
+- ~planner.adapt
+- ~planner.probe
+- ~planner.continual

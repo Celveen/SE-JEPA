@@ -1,0 +1,733 @@
+{
+  "snapshot": "2026-11-03 15:52 北京时间",
+  "visual_baselines": {
+    "dinowm_VIS50": {
+      "blur": {
+        "rate": 66.0,
+        "count": 50,
+        "mean_mpc_steps": 15.52,
+        "complete": true
+      },
+      "snp": {
+        "rate": 4.0,
+        "count": 50,
+        "mean_mpc_steps": 29.16,
+        "complete": true
+      },
+      "dark": {
+        "rate": 76.0,
+        "count": 50,
+        "mean_mpc_steps": 12.86,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 74.0,
+        "count": 50,
+        "mean_mpc_steps": 13.06,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 46.0,
+        "count": 50,
+        "mean_mpc_steps": 19.72,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 76.0,
+        "count": 50,
+        "mean_mpc_steps": 13.62,
+        "complete": true
+      }
+    },
+    "dino_cls_VIS50": {
+      "blur": {
+        "rate": 30.0,
+        "count": 50,
+        "mean_mpc_steps": 23.52,
+        "complete": true
+      },
+      "snp": {
+        "rate": 16.0,
+        "count": 50,
+        "mean_mpc_steps": 26.26,
+        "complete": true
+      },
+      "dark": {
+        "rate": 56.00000000000001,
+        "count": 50,
+        "mean_mpc_steps": 17.94,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 42.0,
+        "count": 50,
+        "mean_mpc_steps": 20.7,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 22.0,
+        "count": 50,
+        "mean_mpc_steps": 24.92,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 42.0,
+        "count": 50,
+        "mean_mpc_steps": 20.94,
+        "complete": true
+      }
+    },
+    "r3m_VIS50": {
+      "blur": {
+        "rate": 30.0,
+        "count": 50,
+        "mean_mpc_steps": 22.64,
+        "complete": true
+      },
+      "snp": {
+        "rate": 16.0,
+        "count": 50,
+        "mean_mpc_steps": 26.52,
+        "complete": true
+      },
+      "dark": {
+        "rate": 2.0,
+        "count": 50,
+        "mean_mpc_steps": 29.46,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 32.0,
+        "count": 50,
+        "mean_mpc_steps": 22.48,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 32.0,
+        "count": 50,
+        "mean_mpc_steps": 23.08,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 18.0,
+        "count": 50,
+        "mean_mpc_steps": 25.82,
+        "complete": true
+      }
+    },
+    "t16k_adajepa_VIS50": {
+      "blur": {
+        "rate": 82.0,
+        "count": 50,
+        "mean_mpc_steps": 13.78,
+        "complete": true
+      },
+      "snp": {
+        "rate": 72.0,
+        "count": 50,
+        "mean_mpc_steps": 15.58,
+        "complete": true
+      },
+      "dark": {
+        "rate": 84.0,
+        "count": 50,
+        "mean_mpc_steps": 12.4,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 60.0,
+        "count": 50,
+        "mean_mpc_steps": 16.74,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 26.0,
+        "count": 50,
+        "mean_mpc_steps": 25.6,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 36.0,
+        "count": 50,
+        "mean_mpc_steps": 23.24,
+        "complete": true
+      }
+    },
+    "t16k_frozen_VIS50": {
+      "blur": {
+        "rate": 57.99999999999999,
+        "count": 50,
+        "mean_mpc_steps": 18.32,
+        "complete": true
+      },
+      "snp": {
+        "rate": 62.0,
+        "count": 50,
+        "mean_mpc_steps": 17.82,
+        "complete": true
+      },
+      "dark": {
+        "rate": 72.0,
+        "count": 50,
+        "mean_mpc_steps": 14.46,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 64.0,
+        "count": 50,
+        "mean_mpc_steps": 14.96,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 18.0,
+        "count": 50,
+        "mean_mpc_steps": 26.02,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 22.0,
+        "count": 50,
+        "mean_mpc_steps": 25.38,
+        "complete": true
+      }
+    },
+    "lewm_VIS50": {
+      "blur": {
+        "rate": 66.0,
+        "count": 50,
+        "mean_mpc_steps": 16.98,
+        "complete": true
+      },
+      "snp": {
+        "rate": 64.0,
+        "count": 50,
+        "mean_mpc_steps": 16.02,
+        "complete": true
+      },
+      "dark": {
+        "rate": 64.0,
+        "count": 50,
+        "mean_mpc_steps": 15.38,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 2.0,
+        "count": 50,
+        "mean_mpc_steps": 29.42,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 20.0,
+        "count": 50,
+        "mean_mpc_steps": 25.58,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 26.0,
+        "count": 50,
+        "mean_mpc_steps": 25.34,
+        "complete": true
+      }
+    },
+    "ddpwm_VIS50": {
+      "blur": {
+        "rate": 56.00000000000001,
+        "count": 50,
+        "mean_mpc_steps": 17.9,
+        "complete": true
+      },
+      "snp": {
+        "rate": 22.0,
+        "count": 50,
+        "mean_mpc_steps": 25.0,
+        "complete": true
+      },
+      "dark": {
+        "rate": 66.0,
+        "count": 50,
+        "mean_mpc_steps": 15.78,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 62.0,
+        "count": 50,
+        "mean_mpc_steps": 16.32,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 42.0,
+        "count": 50,
+        "mean_mpc_steps": 20.0,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 68.0,
+        "count": 50,
+        "mean_mpc_steps": 15.36,
+        "complete": true
+      }
+    }
+  },
+  "visual_main_protocol": "visual_shape_protocol_3x5_heldout_20261029",
+  "visual_main_rates": {
+    "GD": {
+      "frozen": {
+        "all": {
+          "mean": 44.095238095238095,
+          "sd": 2.0067911910195693,
+          "units": [
+            44.285714285714285,
+            46.0,
+            42.0
+          ],
+          "episodes": 1050,
+          "successes": 463
+        },
+        "default": {
+          "mean": 59.333333333333336,
+          "sd": 3.0550504633038895,
+          "units": [
+            60.0,
+            62.0,
+            56.00000000000001
+          ],
+          "episodes": 150,
+          "successes": 89
+        },
+        "shifted": {
+          "mean": 41.55555555555555,
+          "sd": 1.83585684909537,
+          "units": [
+            41.66666666666667,
+            43.333333333333336,
+            39.666666666666664
+          ],
+          "episodes": 900,
+          "successes": 374
+        }
+      },
+      "adajepa": {
+        "all": {
+          "mean": 58.666666666666664,
+          "sd": 3.7289089429432187,
+          "units": [
+            55.14285714285714,
+            58.285714285714285,
+            62.57142857142857
+          ],
+          "episodes": 1050,
+          "successes": 616
+        },
+        "default": {
+          "mean": 81.33333333333333,
+          "sd": 2.3094010767585034,
+          "units": [
+            80.0,
+            80.0,
+            84.0
+          ],
+          "episodes": 150,
+          "successes": 122
+        },
+        "shifted": {
+          "mean": 54.888888888888886,
+          "sd": 4.004626953542244,
+          "units": [
+            51.0,
+            54.666666666666664,
+            59.0
+          ],
+          "episodes": 900,
+          "successes": 494
+        }
+      },
+      "ours": {
+        "all": {
+          "mean": 75.68253968253968,
+          "sd": 2.05443678569695,
+          "units": [
+            76.57142857142857,
+            77.14285714285715,
+            73.33333333333333
+          ],
+          "episodes": 3150,
+          "successes": 2384
+        },
+        "default": {
+          "mean": 88.0,
+          "sd": 3.4641016151377544,
+          "units": [
+            90.0,
+            90.0,
+            84.0
+          ],
+          "episodes": 450,
+          "successes": 396
+        },
+        "shifted": {
+          "mean": 73.62962962962962,
+          "sd": 1.8268685118723802,
+          "units": [
+            74.33333333333333,
+            75.0,
+            71.55555555555554
+          ],
+          "episodes": 2700,
+          "successes": 1988
+        }
+      }
+    },
+    "CEM": {
+      "frozen": {
+        "all": {
+          "mean": 50.857142857142854,
+          "sd": 2.2677868380553594,
+          "units": [
+            50.0,
+            49.142857142857146,
+            53.42857142857142
+          ],
+          "episodes": 1050,
+          "successes": 534
+        },
+        "default": {
+          "mean": 66.0,
+          "sd": 9.165151389911676,
+          "units": [
+            68.0,
+            56.00000000000001,
+            74.0
+          ],
+          "episodes": 150,
+          "successes": 99
+        },
+        "shifted": {
+          "mean": 48.333333333333336,
+          "sd": 1.5275252316519465,
+          "units": [
+            47.0,
+            48.0,
+            50.0
+          ],
+          "episodes": 900,
+          "successes": 435
+        }
+      },
+      "adajepa": {
+        "all": {
+          "mean": 62.952380952380956,
+          "sd": 2.8902839819987594,
+          "units": [
+            61.42857142857143,
+            61.142857142857146,
+            66.28571428571428
+          ],
+          "episodes": 1050,
+          "successes": 661
+        },
+        "default": {
+          "mean": 79.33333333333333,
+          "sd": 4.163331998932265,
+          "units": [
+            78.0,
+            76.0,
+            84.0
+          ],
+          "episodes": 150,
+          "successes": 119
+        },
+        "shifted": {
+          "mean": 60.22222222222222,
+          "sd": 2.6943012562182522,
+          "units": [
+            58.666666666666664,
+            58.666666666666664,
+            63.33333333333333
+          ],
+          "episodes": 900,
+          "successes": 542
+        }
+      },
+      "ours": {
+        "all": {
+          "mean": 77.04761904761905,
+          "sd": 1.7327052760628812,
+          "units": [
+            78.0,
+            75.04761904761905,
+            78.0952380952381
+          ],
+          "episodes": 3150,
+          "successes": 2427
+        },
+        "default": {
+          "mean": 82.66666666666667,
+          "sd": 4.163331998932265,
+          "units": [
+            86.0,
+            78.0,
+            84.0
+          ],
+          "episodes": 450,
+          "successes": 372
+        },
+        "shifted": {
+          "mean": 76.11111111111111,
+          "sd": 1.36535619193828,
+          "units": [
+            76.66666666666667,
+            74.55555555555556,
+            77.11111111111111
+          ],
+          "episodes": 2700,
+          "successes": 2055
+        }
+      }
+    }
+  },
+  "learning_test_source_overlap": 0,
+  "sources": [
+    "CL-JEPA-cudagraph/reports/shape_shift_figs/data/shape7_summary.json",
+    "CL-JEPA-cudagraph/reports/shape_shift_figs/data/mpc_steps.json",
+    "CL-JEPA-cudagraph/reports/shape_shift_figs/data/ours_rounds.json",
+    "paper_cvpr2027/drive_materials/visual7_20261030/visual7_summary.json",
+    "paper_cvpr2027/drive_materials/visual7_20261030/ours_rounds.json",
+    "paper_cvpr2027/drive_materials/visual7_20261030/mpc_steps.json",
+    "paper_cvpr2027/drive_materials/visual7_20261030/protocol.json",
+    "paper_cvpr2027/drive_materials/visual7_20261030/sample_manifest.json",
+    "paper_cvpr2027/drive_materials/visual7_20261030/source_verification.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/blur/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/blur/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/dinowm_pusht_official/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/blur/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/snp/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/snp/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/snp/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/dark/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/dark/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/dark/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_agent/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_agent/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_agent/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_object/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_object/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_object/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_goal/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_goal/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_goal/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/blur/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/blur/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/dino_cls_T16k_e10/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/blur/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/snp/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/snp/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/snp/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/dark/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/dark/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/dark/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_agent/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_agent/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_agent/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_object/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_object/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_object/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_goal/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_goal/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_goal/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/blur/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/blur/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/r3m_T16k_e10/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/blur/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/snp/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/snp/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/snp/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/dark/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/dark/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/dark/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_agent/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_agent/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_agent/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_object/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_object/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_object/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_goal/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_goal/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_goal/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/blur/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/blur/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/pushobj_T16k_bias_e3/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/blur/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/snp/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/snp/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/snp/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/dark/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/dark/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/dark/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_agent/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_agent/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_agent/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_object/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_object/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_object/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_goal/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_goal/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_goal/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/blur/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/blur/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/blur/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/snp/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/snp/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/snp/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/dark/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/dark/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/dark/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_agent/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_agent/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_agent/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_object/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_object/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_object/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_goal/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_goal/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_goal/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/blur/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/blur/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/lewm_pushobj_T16k/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/blur/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/snp/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/snp/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/snp/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/dark/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/dark/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/dark/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_agent/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_agent/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_agent/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_object/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_object/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_object/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_goal/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_goal/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_goal/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/blur/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/blur/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/ddpwm_pusht/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/blur/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/snp/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/snp/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/snp/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/dark/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/dark/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/dark/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_agent/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_agent/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_agent/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_object/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_object/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_object/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_goal/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_goal/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_goal/final_eval_results.npz",
+    "Git ef134eef56ec2143cd2fd96bbfdd51adac60a3ad:reports/visual_v6a/summary.md",
+    "CL-JEPA-cudagraph/eval_outputs/rope_cl_single/paper/data/rope_table.csv",
+    "CL-JEPA-cudagraph/eval_outputs/rope_cl_single/paper/data/granular_table.csv",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_H7t3/pipeline_status.json",
+    "CL-JEPA-cudagraph/data/cont_streams/H7t3/manifest.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_00_I/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_00_I/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_00_I/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_01_L/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_01_L/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_01_L/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_02_square/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_02_square/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_02_square/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_03_Z/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_03_Z/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_03_Z/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_04_small_tee/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_04_small_tee/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_04_small_tee/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_05_plus/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_05_plus/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_05_plus/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_06_T/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_06_T/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_06_T/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_00_I/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_00_I/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_00_I/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_01_L/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_01_L/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_01_L/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_02_square/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_02_square/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_02_square/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_03_Z/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_03_Z/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_03_Z/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_04_small_tee/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_04_small_tee/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_04_small_tee/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_05_plus/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_05_plus/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_05_plus/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_06_T/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_06_T/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_06_T/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_00_I/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/lewm_pushobj_bias16k/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_00_I/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_00_I/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_01_L/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_01_L/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_01_L/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_02_square/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_02_square/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_02_square/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_03_Z/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_03_Z/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_03_Z/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_04_small_tee/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_04_small_tee/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_04_small_tee/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_05_plus/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_05_plus/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_05_plus/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_06_T/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_06_T/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_06_T/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_00_I/.hydra/config.yaml",
+    "CL-JEPA/checkpoints/ddpwm_bias16k/hydra.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_00_I/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_00_I/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_01_L/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_01_L/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_01_L/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_02_square/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_02_square/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_02_square/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_03_Z/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_03_Z/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_03_Z/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_04_small_tee/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_04_small_tee/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_04_small_tee/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_05_plus/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_05_plus/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_05_plus/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_06_T/.hydra/config.yaml",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_06_T/final_eval_results.npz",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_06_T/logs.json",
+    "CL-JEPA-cudagraph/eval_outputs/rope_cl_single/paper/data/rope_ours_by_pass.csv",
+    "CL-JEPA-cudagraph/eval_outputs/rope_cl_single/paper/data/granular_ours_by_pass.csv",
+    "paper_cvpr2027/论文结构.md",
+    "CL-JEPA-cudagraph/eval_outputs/baselines/BIG_TABLE.md",
+    "CL-JEPA-cudagraph/eval_outputs/rope_cl_single/paper/README.md",
+    "CL-JEPA-cudagraph/reports/shape_shift_figs_delivery/说明.txt",
+    "CL-JEPA-cudagraph/reports/shape_shift_figs/preview/15_cem_square_prediction_loss.png",
+    "CL-JEPA-cudagraph/eval_outputs/rope_cl_single/paper/main_qualitative.png",
+    "paper_cvpr2027/drive_materials/visual7_20261030/17_cem_red_agent_prediction_loss.png"
+  ],
+  "legacy_visual_report_revision": "ef134eef56ec2143cd2fd96bbfdd51adac60a3ad"
+}

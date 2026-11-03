@@ -1,0 +1,15 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_dino_h1_fs1_e100_seed0
+- model_epoch=latest
+- +eval_data_path=/data/zjc/adaJEPA/CL-JEPA/data/deformable
+- goal_source=file
+- +goal_file_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/smoke/smoke_a.pkl
+- n_evals=4
+- seed=99
+- +wandb_logging=false
+- planner.resim_from_start=false
+- planner._target_=planning.continual.LearnerFrozenMPCPlanner
+- planner.continual.state_in=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/dino_ours/cl/chunk_4/continual_state.pt
+- planner.continual.tag=rope
+- planner.max_iter=1
+- planner.sub_planner.opt_steps=3
+- planner.sub_planner.num_samples=100

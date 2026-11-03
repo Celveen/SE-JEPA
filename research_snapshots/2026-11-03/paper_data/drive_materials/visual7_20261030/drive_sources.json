@@ -1,0 +1,91 @@
+{
+  "folder": "https://drive.google.com/drive/folders/1OIXvr6kd4lLX35Q4535YGGYhodzNprkV",
+  "files": {
+    "protocol.json": "1O6R0zcijLa4-o2c918Uf2sO2BfkylLs6",
+    "sample_manifest.json": "1aV9vfdlVNEHftc_tctAdIroLoFE8oMLc",
+    "visual7_summary.json": "1nBXUIY1T50agLaXjA5yY_sKlYUfS5OZB",
+    "ours_rounds.json": "1tsWZ1UgfIbr6B8ZuoGIFo87au_NUF1VH",
+    "mpc_steps.json": "1l_KHueyGYGFFfPEig-K_8qmMkXvjwKFn",
+    "source_verification.json": "1GZGDfEwcsLLNaHCvPQzTeLSLkcRFck_T"
+  },
+  "downloads": [
+    {
+      "file": "sample_manifest.json",
+      "bytes": 122153,
+      "keys": [
+        "source",
+        "source_sha256",
+        "streams",
+        "train_test_source_episodes_disjoint",
+        "test_seeds_source_episodes_disjoint",
+        "split_counts"
+      ]
+    },
+    {
+      "file": "protocol.json",
+      "bytes": 139900,
+      "keys": [
+        "name",
+        "created",
+        "status",
+        "checkpoint",
+        "checkpoint_origin",
+        "checkpoint_download",
+        "checkpoint_archive_bytes",
+        "model_epoch",
+        "python",
+        "code",
+        "code_base",
+        "methods",
+        "optimizers",
+        "seeds",
+        "rounds",
+        "episodes_per_domain_per_seed",
+        "total_episodes",
+        "domain_order",
+        "blocks",
+        "target_sha256"
+      ]
+    },
+    {
+      "file": "visual7_summary.json",
+      "bytes": 184815,
+      "keys": [
+        "groups",
+        "unit",
+        "rates",
+        "by_shape",
+        "curves"
+      ]
+    },
+    {
+      "file": "mpc_steps.json",
+      "bytes": 3245,
+      "keys": [
+        "GD",
+        "CEM"
+      ]
+    },
+    {
+      "file": "ours_rounds.json",
+      "bytes": 6979,
+      "keys": [
+        "GD",
+        "CEM"
+      ]
+    },
+    {
+      "file": "source_verification.json",
+      "bytes": 386,
+      "keys": [
+        "formal_batches_verified",
+        "formal_episodes",
+        "heldout_episodes",
+        "paired_target_groups",
+        "all_npz_hashes_and_success_curves_verified",
+        "source_final_results_sha256",
+        "selection"
+      ]
+    }
+  ]
+}

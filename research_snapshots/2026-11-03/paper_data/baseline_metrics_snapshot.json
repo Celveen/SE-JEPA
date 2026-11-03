@@ -1,0 +1,566 @@
+{
+  "snapshot": "2026-11-03 15:52 北京时间",
+  "definition": "Mean MPC replans over all episodes; unsuccessful episodes use the configured maximum; saved action length divided by executed model actions per replan.",
+  "runs": {
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/blur": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.66,
+      "mean_mpc_steps": 15.52,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/snp": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.04,
+      "mean_mpc_steps": 29.16,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/dark": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.76,
+      "mean_mpc_steps": 12.86,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_agent": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.74,
+      "mean_mpc_steps": 13.06,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_object": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.46,
+      "mean_mpc_steps": 19.72,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_VIS50/red_goal": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.76,
+      "mean_mpc_steps": 13.62,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/blur": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.3,
+      "mean_mpc_steps": 23.52,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/snp": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.16,
+      "mean_mpc_steps": 26.26,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/dark": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.56,
+      "mean_mpc_steps": 17.94,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_agent": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.42,
+      "mean_mpc_steps": 20.7,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_object": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.22,
+      "mean_mpc_steps": 24.92,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_VIS50/red_goal": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.42,
+      "mean_mpc_steps": 20.94,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/blur": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.3,
+      "mean_mpc_steps": 22.64,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/snp": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.16,
+      "mean_mpc_steps": 26.52,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/dark": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.02,
+      "mean_mpc_steps": 29.46,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_agent": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.32,
+      "mean_mpc_steps": 22.48,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_object": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.32,
+      "mean_mpc_steps": 23.08,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_VIS50/red_goal": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.18,
+      "mean_mpc_steps": 25.82,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/blur": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.82,
+      "mean_mpc_steps": 13.78,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/snp": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.72,
+      "mean_mpc_steps": 15.58,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/dark": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.84,
+      "mean_mpc_steps": 12.4,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_agent": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.6,
+      "mean_mpc_steps": 16.74,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_object": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.26,
+      "mean_mpc_steps": 25.6,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_adajepa_VIS50/red_goal": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.36,
+      "mean_mpc_steps": 23.24,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/blur": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.58,
+      "mean_mpc_steps": 18.32,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/snp": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.62,
+      "mean_mpc_steps": 17.82,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/dark": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.72,
+      "mean_mpc_steps": 14.46,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_agent": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.64,
+      "mean_mpc_steps": 14.96,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_object": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.18,
+      "mean_mpc_steps": 26.02,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/t16k_frozen_VIS50/red_goal": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.22,
+      "mean_mpc_steps": 25.38,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/blur": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.66,
+      "mean_mpc_steps": 16.98,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/snp": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.64,
+      "mean_mpc_steps": 16.02,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/dark": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.64,
+      "mean_mpc_steps": 15.38,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_agent": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.02,
+      "mean_mpc_steps": 29.42,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_object": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.2,
+      "mean_mpc_steps": 25.58,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_VIS50/red_goal": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.26,
+      "mean_mpc_steps": 25.34,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/blur": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.56,
+      "mean_mpc_steps": 17.9,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/snp": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.22,
+      "mean_mpc_steps": 25.0,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/dark": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.66,
+      "mean_mpc_steps": 15.78,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_agent": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.62,
+      "mean_mpc_steps": 16.32,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_object": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.42,
+      "mean_mpc_steps": 20.0,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_VIS50/red_goal": {
+      "seed": 100,
+      "episodes": 50,
+      "success_rate": 0.68,
+      "mean_mpc_steps": 15.36,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_00_I": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.12,
+      "mean_mpc_steps": 27.04,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_01_L": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.32,
+      "mean_mpc_steps": 22.18,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_02_square": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.06,
+      "mean_mpc_steps": 28.78,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_03_Z": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.1,
+      "mean_mpc_steps": 27.64,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_04_small_tee": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.36,
+      "mean_mpc_steps": 21.36,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_05_plus": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.16,
+      "mean_mpc_steps": 26.14,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_06_T": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.2,
+      "mean_mpc_steps": 25.26,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_00_I": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.0,
+      "mean_mpc_steps": 30.0,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_01_L": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.2,
+      "mean_mpc_steps": 26.16,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_02_square": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.04,
+      "mean_mpc_steps": 29.1,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_03_Z": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.06,
+      "mean_mpc_steps": 28.56,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_04_small_tee": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.26,
+      "mean_mpc_steps": 23.68,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_05_plus": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.12,
+      "mean_mpc_steps": 27.76,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_06_T": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.36,
+      "mean_mpc_steps": 22.14,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_00_I": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.28,
+      "mean_mpc_steps": 24.12,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_01_L": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.8,
+      "mean_mpc_steps": 13.48,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_02_square": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.46,
+      "mean_mpc_steps": 19.98,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_03_Z": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.72,
+      "mean_mpc_steps": 14.32,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_04_small_tee": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.76,
+      "mean_mpc_steps": 13.1,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_05_plus": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.72,
+      "mean_mpc_steps": 14.78,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_06_T": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.74,
+      "mean_mpc_steps": 14.16,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_00_I": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.28,
+      "mean_mpc_steps": 25.06,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_01_L": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.72,
+      "mean_mpc_steps": 14.36,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_02_square": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.32,
+      "mean_mpc_steps": 22.68,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_03_Z": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.56,
+      "mean_mpc_steps": 18.12,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_04_small_tee": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.7,
+      "mean_mpc_steps": 14.92,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_05_plus": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.7,
+      "mean_mpc_steps": 14.96,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    },
+    "CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_06_T": {
+      "seed": 2000,
+      "episodes": 50,
+      "success_rate": 0.76,
+      "mean_mpc_steps": 13.06,
+      "actions_per_replan_model_steps": 1,
+      "failure_steps": 30
+    }
+  }
+}
