@@ -1,0 +1,94 @@
+{
+  "source": "data/revision_assets/visual_heldout_episodes.json",
+  "sha256": "f54480c9daf070f6362d93f83843be339a97df0e4fa1c031a8e491238d0b391d",
+  "episode_count": 10500,
+  "groups": {
+    "Shift": [
+      "blur",
+      "snp1",
+      "dark",
+      "red_agent",
+      "red_object",
+      "red_goal"
+    ],
+    "Color": [
+      "red_agent",
+      "red_object",
+      "red_goal"
+    ]
+  },
+  "methods": {
+    "Frozen": {
+      "shift_successes": 435,
+      "shift_episodes": 900,
+      "shift_rate": 48.333333333333336,
+      "color_successes": 151,
+      "color_episodes": 450,
+      "color_rate": 33.55555555555556,
+      "steps": 20.101111111111113
+    },
+    "AdaJEPA": {
+      "shift_successes": 542,
+      "shift_episodes": 900,
+      "shift_rate": 60.22222222222222,
+      "color_successes": 190,
+      "color_episodes": 450,
+      "color_rate": 42.22222222222222,
+      "steps": 18.464444444444446
+    },
+    "SE-JEPA": {
+      "shift_successes": 2055,
+      "shift_episodes": 2700,
+      "shift_rate": 76.11111111111111,
+      "color_successes": 880,
+      "color_episodes": 1350,
+      "color_rate": 65.18518518518519,
+      "steps": 14.461481481481481
+    }
+  },
+  "DINO-WM": {
+    "status": "withheld_from_table_pending_author_verification",
+    "snapshot_domains": {
+      "blur": {
+        "rate": 66.0,
+        "count": 50,
+        "mean_mpc_steps": 15.52,
+        "complete": true
+      },
+      "snp": {
+        "rate": 4.0,
+        "count": 50,
+        "mean_mpc_steps": 29.16,
+        "complete": true
+      },
+      "dark": {
+        "rate": 76.0,
+        "count": 50,
+        "mean_mpc_steps": 12.86,
+        "complete": true
+      },
+      "red_agent": {
+        "rate": 74.0,
+        "count": 50,
+        "mean_mpc_steps": 13.06,
+        "complete": true
+      },
+      "red_object": {
+        "rate": 46.0,
+        "count": 50,
+        "mean_mpc_steps": 19.72,
+        "complete": true
+      },
+      "red_goal": {
+        "rate": 76.0,
+        "count": 50,
+        "mean_mpc_steps": 13.62,
+        "complete": true
+      }
+    },
+    "snapshot_shift": 57.0,
+    "snapshot_color": 65.33333333333333,
+    "episode_source_available": false,
+    "teaser": "User requested retaining the old DINO-WM visual bar at 57.0 with normal styling. Raw-episode verification remains pending; table cells stay blank."
+  }
+}

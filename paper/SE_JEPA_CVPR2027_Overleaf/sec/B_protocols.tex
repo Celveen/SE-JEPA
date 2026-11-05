@@ -1,0 +1,39 @@
+\section{Evaluation Protocols}
+\label{app:protocols}
+
+\subsection{Shape shifts}
+The shape learning stream has five deployment rounds over seven shapes, with 50 episodes per shape in every round. The held-out benchmark uses target seeds 2000, 2100, and 2200, each with 350 episodes. I, square, and small tee are unseen in pretraining; T, L, Z, and plus are seen.
+
+Each planner has three learned memory states. Every state is evaluated on all three held-out seeds; for each seed we average over episodes and states, and standard deviations are computed over the three seed-level means. The CEM states are S7t3, S7t3b, and S7t3s700, where S7t3b is a rerun of S7t3 that replaces a run in which no learner matured. Frozen and AdaJEPA use the same three held-out seeds; the external baselines use seed 2000.
+
+\subsection{Visual shifts}
+The paired visual evaluation contains the original T condition, blur, salt-and-pepper noise, darkness, red agent, red object, and red goal. Three five-round learning chains resample targets every round, with 350 episodes per round. Held-out testing uses three target seeds and 50 episodes per condition. Direct checks of source-episode identifiers confirm that held-out sources never occur in the learning streams and that the three test seeds use disjoint sources.
+
+The external visual baselines use the established VIS50 collection with planning seed 100. The external comparisons use its six shifted conditions, with 50 paired initial/goal states per condition.
+
+\subsection{Success and interaction counts}
+Rigid-object success follows the environment's goal test: object-position error below 20 simulator units and angular error below $\pi/9$. Each executed model action contains five physical actions, and an episode has at most 30 MPC replans. For episode $i$ with success indicator $S_i$ and first successful replan $T_i$,
+\begin{equation}
+  \overline{T} = \frac{1}{N}\sum_{i=1}^{N}
+  \big[\, S_i T_i + (1-S_i)\, T_{\max} \big], \qquad T_{\max}=30.
+\end{equation}
+Equivalently, $\overline{T} = T_{\max} - \sum_{t=1}^{T_{\max}-1} F(t)$, where $F(t)$ is the fraction of episodes solved by replan $t$; the cumulative curves in Fig.~\mainref{fig:efficiency_main} visualize $F$.
+
+\subsection{Deformable manipulation}
+Rope and granular each use one slow predictor, a DINO-WM backbone, and 50 instances revisited over four passes, with the same targets, order, and planning seeds in every pass. The slow-only variant plans from the slow predictor without fast within-episode updates. CEM uses 300 samples, 30 elites, and 10 iterations, with three MPC iterations of five pushes each. The unseen-rope evaluation freezes the predictor saved after the first pass and tests it on 91 instances absent from the learning stream, against the frozen reference on the same instances. Two frozen granular episodes with unstable batched particle simulation were rerun individually with identical settings and seeds.
+
+\begin{table*}[t]
+ \centering
+ \caption{Both planners on the paired held-out sets. Shape All and Unseen use held-out PushObj targets. Visual All averages seven conditions and Shift six; visual Steps averages all seven conditions.}
+ \label{tab:planners}
+ \small
+ \begin{tabular}{llcccccc}
+ \toprule
+ & & \multicolumn{3}{c}{PushObj} & \multicolumn{3}{c}{PushT}\\
+ \cmidrule(lr){3-5}\cmidrule(lr){6-8}
+ Planner & Method & All $\uparrow$ & Unseen $\uparrow$ & Steps $\downarrow$ & All $\uparrow$ & Shift $\uparrow$ & Steps $\downarrow$\\
+ \midrule
+ \inputrows{tables/paired_planners.tex}
+ \bottomrule
+ \end{tabular}
+\end{table*}

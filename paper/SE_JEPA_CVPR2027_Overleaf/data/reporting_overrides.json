@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "omit_main_methods": [
+    "DreamerV3",
+    "IRIS"
+  ],
+  "pending_visual_methods": [
+    "DINO-WM"
+  ],
+  "teaser_retained_unverified": {
+    "DINO-WM": {
+      "visual_shift": 57.0
+    }
+  },
+  "reason": "User requests DINO-WM PushT table cells blank until author confirmation, and explicitly retains the existing first-page visual-shift bar (57.0) with normal styling. This value remains unverified and is not used to fill the main table."
+}

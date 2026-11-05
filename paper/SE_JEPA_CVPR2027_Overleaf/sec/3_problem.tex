@@ -1,0 +1,40 @@
+\subsection{Deployment setting and motivation}
+\label{sec:problem}
+\label{sec:setting}
+
+An agent receives episodes $e=1,2,\dots$, each with an initial observation $o^e_0$ and a goal image $g^e$. It acts, observes the consequences, and may learn from them. Neither the type nor the onset of a distribution shift is announced; episode boundaries only mark when the scene is reset.
+
+The world model consists of an encoder $E_\psi$ and an action-conditioned predictor $P_\theta$. With history length $h$, the encoder produces $z_t=E_\psi(o_t)$ and the predictor estimates $\hat z_{t+1}=P_\theta(x_t)$ from $x_t=(z_{t-h+1:t},a_{t-h+1:t})$. The observation embedding includes visual features and proprioception. Rolling $P_\theta$ forward under a candidate action sequence, MPC solves
+\begin{equation}
+  a^\star_{t:t+H-1} = \argmin_{a_{t:t+H-1}}
+  \mathcal{J}\big(\hat{z}_{t+1:t+H},\, E_\psi(g)\big),
+  \label{eq:mpc}
+\end{equation}
+executes the first action block, observes the result, and replans. The optimizer is either GD or CEM. \ours leaves $\mathcal{J}$ and the optimizer unchanged; it changes only the predictor that MPC consults.
+
+\paragraph{Why consolidate experience?}
+\label{sec:diagnosis}
+
+Test-time adaptation produces a sequence of fast updates $\Delta_1,\Delta_2,\dots$, one per episode. The direct inheritance rule accumulates a persistent offset, $s_{e+1}=s_e+w\Delta_e$, and starts the next episode from $\theta_0+s_{e+1}$. Here $w=0$ is episodic reset and $w=1$ keeps every update in full.
+
+\begin{table}[t]
+  \centering
+  \caption{\textbf{Keeping the adapted weights hurts.} Success on a matched 100-episode PushObj stream (I, square, T, I, square; 20 episodes each). Wins/losses count episodes solved only by the variant / only by reset.}
+  \label{tab:inheritance}
+  \small
+  \begin{tabular}{lcc}
+    \toprule
+    Accumulation $w$ & Success (\%) $\uparrow$ & Wins / losses\\
+    \midrule
+    $0$ \;(episodic reset) & 62.0 & \missing\\
+    $0.003$ & 64.0 & \phantom{0}7 / \phantom{0}5\\
+    $0.01$ & 59.0 & \phantom{0}5 / \phantom{0}8\\
+    $0.03$ & 54.0 & \phantom{0}4 / 12\\
+    $1$ \;(keep all) & 48.0 & 11 / 25\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Table~\ref{tab:inheritance} runs this rule on one fixed target order. Keeping every update lowers success by 14 points (exact McNemar test, $p=0.029$), and small coefficients add at most two points (7 wins, 5 losses at $w=0.003$). The update geometry offers a diagnostic clue. The mean cosine between consecutive updates is 0.061 on this stream and 0.018 over 2{,}449 consecutive pairs per planner in a longer seven-round stream (\supref{D}). Each update solves a local problem, around one start state, one goal, and the trajectory the planner happened to take, and these local solutions point in nearly orthogonal directions. This motivates fitting the underlying transitions jointly rather than treating episode-specific parameter changes as reusable solutions.
+
+We therefore consolidate the \emph{transitions} behind fast adaptation into persistent predictors, grouping experience by predictive compatibility.

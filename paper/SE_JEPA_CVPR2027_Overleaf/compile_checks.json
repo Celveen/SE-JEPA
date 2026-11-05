@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-05T17:52:22+08:00",
+  "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
+  "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
+  "shell_escape_required": false,
+  "main": {
+    "pages": 16,
+    "unresolved_references": false,
+    "layout_warnings": [
+      "LaTeX Warning: Text page 14 contains only floats."
+    ],
+    "fonts_without_embedded_data": [],
+    "main_text_pages": 7,
+    "appendix_appended": true,
+    "appendix_start_page": 10,
+    "architecture_figure_page": 3,
+    "deform_qualitative_page": 7,
+    "pdf_sha256": "7ea3e9b2167592df825900c6218cca43551c7d28c39046deca13d55e2919473b"
+  },
+  "supplement": {
+    "pages": 8,
+    "unresolved_references": false,
+    "layout_warnings": [
+      "LaTeX Warning: Text page 5 contains only floats."
+    ],
+    "fonts_without_embedded_data": [],
+    "pdf_sha256": "aa9a23209698f69c2db81ea264f089fe3ec371c471a84ff244d1148c8a73c394"
+  },
+  "notes": [
+    "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
+    "The appendix includes pages devoted to figures and tables.",
+    "Raw simulator frames remain raster; labels and charts are vector."
+  ],
+  "main_numbered_equations": 4,
+  "pusht_audit": "data/pusht_audit.json",
+  "reporting_overrides": "data/reporting_overrides.json",
+  "bibliography_entries": 31,
+  "bibliography_verification": "data/reference_verification.json",
+  "abstract_matches_author_source": true,
+  "qualitative_selection": "data/revision_assets/selection_manifest.json"
+}

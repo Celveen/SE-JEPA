@@ -1,0 +1,66 @@
+% CVPR 2027 Paper Template; see https://github.com/cvpr-org/author-kit
+% Built from the official author kit (author-kit-CVPR2027-v1-latex.zip, kept in _kit_download/).
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+% \usepackage{cvpr}              % To produce the CAMERA-READY version
+\usepackage[review]{cvpr}      % To produce the REVIEW version
+% \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
+% Import additional packages in the preamble file, before hyperref
+\input{preamble}
+
+% It is strongly recommended to use hyperref, especially for the review version.
+% hyperref with option pagebackref eases the reviewers' job.
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+
+\def\confName{CVPR}
+\def\confYear{2027}
+
+%%%%%%%%% TITLE (set by the authors on 2026-10-30)
+\title{SE-JEPA: Self-Evolving Latent World Models}
+
+%%%%%%%%% AUTHORS - hidden in review mode; fill in for the camera-ready version
+\author{Anonymous CVPR submission}
+
+\begin{document}
+\maketitle
+\input{sec/0_abstract}
+
+\input{sec/1_introduction}
+\input{sec/2_related_work}
+\input{sec/4_method}
+\input{sec/5_experiments}
+\input{sec/6_conclusion}
+
+% Mandatory for CVPR 2027: after the main text, before the references; not counted toward the page limit.
+% Flush remaining figures and reset both column heights before references.
+\clearpage
+\onecolumn
+\twocolumn
+\raggedbottom
+\input{sec/9_llm_statement}
+
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{references}
+}
+
+% ---------------------------------------------------------------------------
+% Appendix appended for whole-paper review (2026-11-05). For submission, the
+% same sections also build standalone from supplement.tex.
+% ---------------------------------------------------------------------------
+\clearpage
+\flushbottom
+\appendix
+\twocolumn[{\centering{\Large\bfseries Supplementary Material\par}\vspace{1.2em}}]
+\input{sec/A_implementation}
+\input{sec/B_protocols}
+\input{sec/C_baselines}
+\input{sec/D_additional_results}
+\input{sec/E_qualitative}
+
+\end{document}

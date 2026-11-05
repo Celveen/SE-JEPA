@@ -1,0 +1,10 @@
+{
+  "CL-JEPA-cudagraph/reports/shape_shift_figs/data/shape7_summary.json": "7a0f2de0e8ab22bdd714207ff157a9d1d794f49f784719ebaec05fe28d4e012e",
+  "CL-JEPA-cudagraph/reports/shape_shift_figs/data/ours_rounds.json": "1cef9ecd7df25af5721dde5df9bd3b6b50adb2711d97c99602787fc35668f212",
+  "CL-JEPA-cudagraph/reports/shape_shift_figs/data/mpc_steps.json": "56b12ef4efa256c8429389e96fbc8607428bac5c8d65b095501e2482f27b60e2",
+  "paper_cvpr2027/drive_materials/visual7_20261030/visual7_summary.json": "bdf6c65a6f1bc923917bd78a24c911223b43e00e2642be3948cf5c38159ea5b1",
+  "paper_cvpr2027/drive_materials/visual7_20261030/ours_rounds.json": "a21d9433315ac42a29deff7ce52112ec7d3cbeef87c7e8e02154b4f41da8f067",
+  "paper_cvpr2027/drive_materials/visual7_20261030/mpc_steps.json": "fd5f1f8503ddd868b64eea1ad8ccf08bf82cb11adb953ba97ce17ff82a7aec65",
+  "paper_cvpr2027/drive_materials/visual7_20261030/sample_manifest.json": "cb1666f4bbbc1183ba966e69479db1fe7e0c8316e0eff632dd48611af7429183",
+  "git:origin/results:reports/cont_S2/summary.md": "6fd3eac9d2737e4be11130deaeada74a00a9c6c2a3f7e135de9d3c65d03388ed"
+}

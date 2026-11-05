@@ -1,0 +1,5 @@
+# Preserve supplied assets and provenance hashes byte for byte.
+SE_JEPA_CVPR2027_Overleaf/data/** -text -whitespace
+SE_JEPA_CVPR2027_Overleaf/figures/** -text -whitespace
+SE_JEPA_CVPR2027_Overleaf/cvpr.sty -text -whitespace
+SE_JEPA_CVPR2027_Overleaf/ieeenat_fullname.bst -text -whitespace

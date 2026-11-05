@@ -1,0 +1,14 @@
+# Generated LaTeX intermediates and local caches
+**/*.aux
+**/*.log
+**/*.bbl
+**/*.blg
+**/*.brf
+**/*.out
+**/*.fls
+**/*.fdb_latexmk
+**/*.synctex.gz
+**/__pycache__/
+# Manuscript figures are versioned source assets.
+!**/figures/
+!**/figures/**

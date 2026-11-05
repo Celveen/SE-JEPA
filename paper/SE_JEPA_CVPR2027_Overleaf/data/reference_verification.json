@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "bibliography": "references.bib",
+  "verified_on": "2026-11-05",
+  "verification_method": "Metadata checked against primary publisher/proceedings pages, author-hosted papers/project pages, or original arXiv records. Equivalent capitalization and abbreviated middle names are retained.",
+  "reference_count": 31,
+  "references": [
+    {
+      "citation_key": "wang2026adajepa",
+      "title_bibtex": "{AdaJEPA}: An Adaptive Latent World Model",
+      "authors_bibtex": "Wang, Ying and Bounou, Oumayma and LeCun, Yann and Ren, Mengye",
+      "venue": "arXiv preprint arXiv:2606.32026",
+      "year": 2026,
+      "primary_sources": [
+        "https://arxiv.org/abs/2606.32026"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "wang2026straightening",
+      "title_bibtex": "Temporal Straightening for Latent Planning",
+      "authors_bibtex": "Wang, Ying and Bounou, Oumayma and Zhou, Gaoyue and Balestriero, Randall and Rudner, Tim G. J. and LeCun, Yann and Ren, Mengye",
+      "venue": "International Conference on Machine Learning",
+      "year": 2026,
+      "primary_sources": [
+        "https://arxiv.org/abs/2603.12231"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ],
+      "notes": "The arXiv record explicitly states ICML2026 Camera Ready."
+    },
+    {
+      "citation_key": "zhou2024dinowm",
+      "title_bibtex": "{DINO-WM}: World Models on Pre-trained Visual Features Enable Zero-shot Planning",
+      "authors_bibtex": "Zhou, Gaoyue and Pan, Hengkai and LeCun, Yann and Pinto, Lerrel",
+      "venue": "arXiv preprint arXiv:2411.04983",
+      "year": 2024,
+      "primary_sources": [
+        "https://arxiv.org/abs/2411.04983"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "oquab2024dinov2",
+      "title_bibtex": "{DINOv2}: Learning Robust Visual Features without Supervision",
+      "authors_bibtex": "Oquab, Maxime and Darcet, Timoth{\\'e}e and Moutakanni, Th{\\'e}o and Vo, Huy and Szafraniec, Marc and Khalidov, Vasil and Fernandez, Pierre and Haziza, Daniel and Massa, Francisco and El-Nouby, Alaaeldin and Assran, Mahmoud and Ballas, Nicolas and Galuba, Wojciech and Howes, Russell and Huang, Po-Yao and Li, Shang-Wen and Misra, Ishan and Rabbat, Michael and Sharma, Vasu and Synnaeve, Gabriel and Xu, Hu and J{\\'e}gou, Herv{\\'e} and Mairal, Julien and Labatut, Patrick and Joulin, Armand and Bojanowski, Piotr",
+      "venue": "Transactions on Machine Learning Research",
+      "year": 2024,
+      "primary_sources": [
+        "https://openreview.net/pdf/e00d5b694b7463511c0c840099de47596874ff2d.pdf"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "assran2023ijepa",
+      "title_bibtex": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+      "authors_bibtex": "Assran, Mahmoud and Duval, Quentin and Misra, Ishan and Bojanowski, Piotr and Vincent, Pascal and Rabbat, Michael and LeCun, Yann and Ballas, Nicolas",
+      "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2023,
+      "primary_sources": [
+        "https://openaccess.thecvf.com/content/CVPR2023/html/Assran_Self-Supervised_Learning_From_Images_With_a_Joint-Embedding_Predictive_Architecture_CVPR_2023_paper.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ],
+      "notes": "The CVF proceedings are the authority for the CVPR 2023 venue; the arXiv comments field is inconsistent."
+    },
+    {
+      "citation_key": "maes2026lewm",
+      "title_bibtex": "{LeWorldModel}: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels",
+      "authors_bibtex": "Maes, Lucas and Le Lidec, Quentin and Scieur, Damien and LeCun, Yann and Balestriero, Randall",
+      "venue": "arXiv preprint arXiv:2603.19312",
+      "year": 2026,
+      "primary_sources": [
+        "https://arxiv.org/abs/2603.19312"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "yin2026ddpwm",
+      "title_bibtex": "{DDP-WM}: Disentangled Dynamics Prediction for Efficient World Models",
+      "authors_bibtex": "Yin, Shicheng and Yin, Kaixuan and Chen, Weixing and Liu, Yang and Li, Guanbin and Lin, Liang",
+      "venue": "arXiv preprint arXiv:2602.01780",
+      "year": 2026,
+      "primary_sources": [
+        "https://hcplab-sysu.github.io/DDP-WM/",
+        "https://arxiv.org/abs/2602.01780"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ],
+      "notes": "Cited as the verified arXiv preprint. The earlier ICML 2026 venue was removed because no primary confirmation was located."
+    },
+    {
+      "citation_key": "nair2022r3m",
+      "title_bibtex": "{R3M}: A Universal Visual Representation for Robot Manipulation",
+      "authors_bibtex": "Nair, Suraj and Rajeswaran, Aravind and Kumar, Vikash and Finn, Chelsea and Gupta, Abhinav",
+      "venue": "Proceedings of the 6th Conference on Robot Learning",
+      "year": 2023,
+      "primary_sources": [
+        "https://proceedings.mlr.press/v205/nair23a.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ],
+      "notes": "The citation key retains the conference year; the bibliography uses the official PMLR publication year 2023."
+    },
+    {
+      "citation_key": "hafner2020dreamer",
+      "title_bibtex": "Dream to Control: Learning Behaviors by Latent Imagination",
+      "authors_bibtex": "Hafner, Danijar and Lillicrap, Timothy and Ba, Jimmy and Norouzi, Mohammad",
+      "venue": "International Conference on Learning Representations",
+      "year": 2020,
+      "primary_sources": [
+        "https://danijar.com/project/dreamer/"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "hafner2025dreamerv3",
+      "title_bibtex": "Mastering Diverse Control Tasks through World Models",
+      "authors_bibtex": "Hafner, Danijar and Pasukonis, Jurgis and Ba, Jimmy and Lillicrap, Timothy",
+      "venue": "Nature",
+      "year": 2025,
+      "primary_sources": [
+        "https://www.nature.com/articles/s41586-025-08744-2"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "micheli2023iris",
+      "title_bibtex": "Transformers Are Sample-Efficient World Models",
+      "authors_bibtex": "Micheli, Vincent and Alonso, Eloi and Fleuret, Fran{\\c{c}}ois",
+      "venue": "International Conference on Learning Representations",
+      "year": 2023,
+      "primary_sources": [
+        "https://openreview.net/pdf?id=vhFu1Acb0xb"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "chua2018pets",
+      "title_bibtex": "Deep Reinforcement Learning in a Handful of Trials Using Probabilistic Dynamics Models",
+      "authors_bibtex": "Chua, Kurtland and Calandra, Roberto and McAllister, Rowan and Levine, Sergey",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2018,
+      "primary_sources": [
+        "https://proceedings.neurips.cc/paper_files/paper/2018/hash/3de568f8597b94bda53149c7d7f5958c-Abstract.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "sun2020ttt",
+      "title_bibtex": "Test-Time Training with Self-Supervision for Generalization under Distribution Shifts",
+      "authors_bibtex": "Sun, Yu and Wang, Xiaolong and Liu, Zhuang and Miller, John and Efros, Alexei A. and Hardt, Moritz",
+      "venue": "International Conference on Machine Learning",
+      "year": 2020,
+      "primary_sources": [
+        "https://proceedings.mlr.press/v119/sun20b.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "wang2021tent",
+      "title_bibtex": "Tent: Fully Test-Time Adaptation by Entropy Minimization",
+      "authors_bibtex": "Wang, Dequan and Shelhamer, Evan and Liu, Shaoteng and Olshausen, Bruno and Darrell, Trevor",
+      "venue": "International Conference on Learning Representations",
+      "year": 2021,
+      "primary_sources": [
+        "https://openreview.net/pdf/4de0af9691a5dcc52de7de756676fded33d037ef.pdf"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "wang2022cotta",
+      "title_bibtex": "Continual Test-Time Domain Adaptation",
+      "authors_bibtex": "Wang, Qin and Fink, Olga and Van Gool, Luc and Dai, Dengxin",
+      "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2022,
+      "primary_sources": [
+        "https://openaccess.thecvf.com/content/CVPR2022/html/Wang_Continual_Test-Time_Domain_Adaptation_CVPR_2022_paper.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "mcclelland1995cls",
+      "title_bibtex": "Why There Are Complementary Learning Systems in the Hippocampus and Neocortex: Insights from the Successes and Failures of Connectionist Models of Learning and Memory",
+      "authors_bibtex": "McClelland, James L. and McNaughton, Bruce L. and O'Reilly, Randall C.",
+      "venue": "Psychological Review",
+      "year": 1995,
+      "primary_sources": [
+        "https://stanford.edu/~jlmcc/papers/McCMcNaughtonOReilly95.pdf"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "rolnick2019replay",
+      "title_bibtex": "Experience Replay for Continual Learning",
+      "authors_bibtex": "Rolnick, David and Ahuja, Arun and Schwarz, Jonathan and Lillicrap, Timothy and Wayne, Gregory",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2019,
+      "primary_sources": [
+        "https://proceedings.neurips.cc/paper/2019/hash/fa7cdfad1a5aaf8370ebeda47a1ff1c3-Abstract.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "kirkpatrick2017ewc",
+      "title_bibtex": "Overcoming Catastrophic Forgetting in Neural Networks",
+      "authors_bibtex": "Kirkpatrick, James and Pascanu, Razvan and Rabinowitz, Neil and Veness, Joel and Desjardins, Guillaume and Rusu, Andrei A. and Milan, Kieran and Quan, John and Ramalho, Tiago and Grabska-Barwinska, Agnieszka and Hassabis, Demis and Clopath, Claudia and Kumaran, Dharshan and Hadsell, Raia",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "year": 2017,
+      "primary_sources": [
+        "https://www.pnas.org/doi/10.1073/pnas.1611835114"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "lin2020softgym",
+      "title_bibtex": "{SoftGym}: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation",
+      "authors_bibtex": "Lin, Xingyu and Wang, Yufei and Olkin, Jake and Held, David",
+      "venue": "Proceedings of the 2020 Conference on Robot Learning",
+      "year": 2021,
+      "primary_sources": [
+        "https://proceedings.mlr.press/v155/lin21a.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ],
+      "notes": "The citation key retains the conference year; the bibliography uses the official PMLR publication year 2021."
+    },
+    {
+      "citation_key": "bardes2024vjepa",
+      "title_bibtex": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+      "authors_bibtex": "Bardes, Adrien and Garrido, Quentin and Ponce, Jean and Chen, Xinlei and Rabbat, Michael and LeCun, Yann and Assran, Mahmoud and Ballas, Nicolas",
+      "venue": "arXiv preprint arXiv:2404.08471",
+      "year": 2024,
+      "primary_sources": [
+        "https://arxiv.org/abs/2404.08471"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "assran2025vjepa2",
+      "title_bibtex": "{V-JEPA 2}: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+      "authors_bibtex": "Assran, Mido and Bardes, Adrien and Fan, David and Garrido, Quentin and others",
+      "venue": "arXiv preprint arXiv:2506.09985",
+      "year": 2025,
+      "primary_sources": [
+        "https://arxiv.org/abs/2506.09985"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ],
+      "notes": "The author list is intentionally abbreviated with BibTeX and others after the first four verified authors."
+    },
+    {
+      "citation_key": "ha2018worldmodels",
+      "title_bibtex": "World Models",
+      "authors_bibtex": "Ha, David and Schmidhuber, J{\\\"u}rgen",
+      "venue": "arXiv preprint arXiv:1803.10122",
+      "year": 2018,
+      "primary_sources": [
+        "https://arxiv.org/abs/1803.10122"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "watter2015e2c",
+      "title_bibtex": "Embed to Control: A Locally Linear Latent Dynamics Model for Control from Raw Images",
+      "authors_bibtex": "Watter, Manuel and Springenberg, Jost Tobias and Boedecker, Joschka and Riedmiller, Martin",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2015,
+      "primary_sources": [
+        "https://arxiv.org/abs/1506.07365"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "hafner2019planet",
+      "title_bibtex": "Learning Latent Dynamics for Planning from Pixels",
+      "authors_bibtex": "Hafner, Danijar and Lillicrap, Timothy and Fischer, Ian and Villegas, Ruben and Ha, David and Lee, Honglak and Davidson, James",
+      "venue": "International Conference on Machine Learning",
+      "year": 2019,
+      "primary_sources": [
+        "https://proceedings.mlr.press/v97/hafner19a.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "hafner2021dreamerv2",
+      "title_bibtex": "Mastering Atari with Discrete World Models",
+      "authors_bibtex": "Hafner, Danijar and Lillicrap, Timothy and Norouzi, Mohammad and Ba, Jimmy",
+      "venue": "International Conference on Learning Representations",
+      "year": 2021,
+      "primary_sources": [
+        "https://arxiv.org/abs/2010.02193"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "schrittwieser2020muzero",
+      "title_bibtex": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",
+      "authors_bibtex": "Schrittwieser, Julian and Antonoglou, Ioannis and Hubert, Thomas and Simonyan, Karen and Sifre, Laurent and Schmitt, Simon and Guez, Arthur and Lockhart, Edward and Hassabis, Demis and Graepel, Thore and Lillicrap, Timothy and Silver, David",
+      "venue": "Nature",
+      "year": 2020,
+      "primary_sources": [
+        "https://www.nature.com/articles/s41586-020-03051-4"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "hansen2022tdmpc",
+      "title_bibtex": "Temporal Difference Learning for Model Predictive Control",
+      "authors_bibtex": "Hansen, Nicklas A. and Su, Hao and Wang, Xiaolong",
+      "venue": "International Conference on Machine Learning",
+      "year": 2022,
+      "primary_sources": [
+        "https://proceedings.mlr.press/v162/hansen22a.html"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "hansen2024tdmpc2",
+      "title_bibtex": "{TD-MPC2}: Scalable, Robust World Models for Continuous Control",
+      "authors_bibtex": "Hansen, Nicklas and Su, Hao and Wang, Xiaolong",
+      "venue": "International Conference on Learning Representations",
+      "year": 2024,
+      "primary_sources": [
+        "https://arxiv.org/abs/2310.16828"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "caron2021dino",
+      "title_bibtex": "Emerging Properties in Self-Supervised Vision Transformers",
+      "authors_bibtex": "Caron, Mathilde and Touvron, Hugo and Misra, Ishan and J{\\'e}gou, Herv{\\'e} and Mairal, Julien and Bojanowski, Piotr and Joulin, Armand",
+      "venue": "IEEE/CVF International Conference on Computer Vision",
+      "year": 2021,
+      "primary_sources": [
+        "https://openaccess.thecvf.com/content/ICCV2021/papers/Caron_Emerging_Properties_in_Self-Supervised_Vision_Transformers_ICCV_2021_paper.pdf"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "bardes2022vicreg",
+      "title_bibtex": "{VICReg}: Variance-Invariance-Covariance Regularization for Self-Supervised Learning",
+      "authors_bibtex": "Bardes, Adrien and Ponce, Jean and LeCun, Yann",
+      "venue": "International Conference on Learning Representations",
+      "year": 2022,
+      "primary_sources": [
+        "https://arxiv.org/abs/2105.04906"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    },
+    {
+      "citation_key": "lopezpaz2017gem",
+      "title_bibtex": "Gradient Episodic Memory for Continual Learning",
+      "authors_bibtex": "Lopez-Paz, David and Ranzato, Marc'Aurelio",
+      "venue": "Advances in Neural Information Processing Systems",
+      "year": 2017,
+      "primary_sources": [
+        "https://arxiv.org/abs/1706.08840"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
+    }
+  ]
+}

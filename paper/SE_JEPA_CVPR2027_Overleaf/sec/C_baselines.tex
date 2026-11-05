@@ -1,0 +1,11 @@
+\section{Baseline Checkpoints and Comparisons}
+\label{app:baselines}
+
+\paragraph{Predictive world models.}
+The comparisons focus on latent world models used for visual planning: DINO-WM, LeWM, and DDP-WM, with DINO CLS and R3M as representation baselines. Frozen and AdaJEPA use released task-specific checkpoints. The shape backbone of \ours is trained for three epochs on 16,000 trajectories covering T, L, Z, and plus. The additional DINO-WM shape model uses the same training trajectory count and epoch budget, with 4,000 validation trajectories and batch size 32. DINO CLS and R3M use existing T-only checkpoints; LeWM and DDP-WM use their corresponding checkpoint adapters.
+
+\paragraph{Evaluation groups.}
+The paired Frozen/AdaJEPA/\ours comparison uses the independent held-out target sets in Appendix~B. External visual baselines use VIS50, with 50 initial/goal pairs in each of six shifted conditions and planning seed 100. The table separates these evaluation groups. Within each group, methods receive the same targets and planning budget. PushT Shift averages blur, noise, dark, red agent, red object, and red goal; Color averages the last three. The original condition is included in the seven-condition tables and curves, but excluded from Shift.
+
+\paragraph{Deformable results.}
+DINO-WM is the frozen backbone for the rope and granular experiments. AdaJEPA adapts within each episode, whereas \ours uses a consolidated slow predictor. Italic entries for R3M and DINO CLS are published values from DINO-WM~\cite{zhou2024dinowm}; the other entries are measured results. The repeated-instance and unseen-rope protocols are specified in Appendix~B.

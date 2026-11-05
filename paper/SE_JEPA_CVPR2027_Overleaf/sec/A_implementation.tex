@@ -1,0 +1,98 @@
+\section{Implementation and Memory Management}
+\label{app:implementation}
+
+\subsection{Fast and slow learning}
+The label-free rigid-object configuration builds on the episodic adaptation loop of AdaJEPA~\cite{wang2026adajepa}. At every replan, the most recent observed transitions provide a self-supervised next-latent loss. The predictor's last block and the encoder's designated projection/head parameters are adapted with one Adam step. The episode-local predictor and encoder changes are reset at the next episode. A retrieved slow predictor supplies the predictor initialization; it does not replace the frozen reference encoder.
+
+Persistent replay is re-encoded by the reference encoder. Each slow learner is a full predictor copy, initialized from the pretrained predictor rather than from the final fast parameters of its founding episode. For each slow optimization step, up to eight stored episodes are sampled with replacement; each contributes a random window of up to six latent frames. The prediction objective averages one-step observation-feature errors over the available history windows. Action features condition prediction but are not reconstruction targets. Standard writes use 15 Adam steps. Founding a learner after $n$ stored episodes uses $15n$ steps to process the accumulated evidence. Merging likewise adds replay updates for absorbed experience.
+
+\begin{table}[t]
+  \centering
+  \caption{Label-free configuration used for PushObj and PushT. The seven-round stream in Appendix~D uses a slow learning rate of $2\times10^{-4}$.}
+  \label{tab:hyperparams}
+  \small
+  \begin{tabular}{lr}
+    \toprule
+    Setting & Value\\
+    \midrule
+    Fast predictor learning rate & $5\times10^{-4}$\\
+    Fast encoder-head learning rate & $10^{-5}$\\
+    Fast steps per replan & 1\\
+    Recent adaptation buffer & 5 transitions\\
+    Slow learning rate & $10^{-4}$\\
+    Slow steps per standard write & 15\\
+    Slow batch size (episodes) & 8\\
+    Slow sampled window (frames) & up to 6\\
+    Familiarity threshold $\tau_f$ & 0.0146\\
+    Existing-domain cosine threshold & 0.10\\
+    New-domain cosine threshold & 0.05\\
+    Episodes to confirm a domain & 3\\
+    Pending-pool capacity & 40\\
+    Minimum episodes to train a learner & 3\\
+    Retrieval window & first 3 replans\\
+    Maturity history length $m$ & 3\\
+    Maturity error-ratio threshold $\tau_m$ & 0.9\\
+    Write rejection ratio & 1.2\\
+    Merge evidence per direction & 2 episodes\\
+    Merge relative tolerance & 0.5\\
+    Fragment absorption interval & 25 episodes\\
+    Absorption error-ratio threshold & 0.8\\
+    Fragment-size limit & $<6$ episodes\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Replay stores compact latent trajectories rather than images. The pending pool is bounded, and merging and absorption remove redundant predictor copies as compatible domains are recognized.
+
+\subsection{Order of decisions}
+Algorithm~\ref{alg:sejepa} summarizes a learning episode. Familiarity uses the geometric mean of newest-frame prediction errors on up to the first three observed transitions. The threshold is calibrated once on the shape backbone and transfers unchanged to the visual experiments.
+
+\begin{algorithm}[t]
+\caption{One deployment-learning episode of \ours}
+\label{alg:sejepa}
+\begin{algorithmic}[1]
+  \Require Frozen $(E_0,P_0)$, memory $\memory$, initial observation $o$, goal $g$
+  \State Reset fast parameters to $(E_0,P_0)$
+  \State Initialize recent buffer $\mathcal{B}$ and episode trajectory $\tau$
+  \While{budget remains and task is not complete}
+    \State Optimize an action sequence with the current fast model
+    \State Execute its first block; observe the next state
+    \State Append real transitions to $\mathcal{B}$ and $\tau$
+    \If{within the early retrieval window}
+      \State Form candidates: $P_0$ and mature slow predictors
+      \State Restrict to $P_0$ if the observed episode is familiar
+      \State Select the smallest observed prediction error
+      \State Load the selected predictor, retaining the fast offset
+    \EndIf
+    \State Adapt the fast model on recent real transitions
+  \EndWhile
+  \State Encode $\tau$ with frozen $E_0$
+  \State Measure pre-update rollout errors of existing predictors
+  \If{episode is unfamiliar}
+    \State Propose a domain using retrieval or an update fingerprint
+    \State Reject an incompatible write, or retain pending evidence
+    \If{a domain is assigned or newly confirmed}
+      \State Record prospective validation when a learner exists
+      \State Append latent experience; update its slow predictor
+      \State Check bidirectional merges and periodic absorption
+    \EndIf
+  \EndIf
+  \State Discard episode-local fast parameters
+\end{algorithmic}
+\end{algorithm}
+
+The selected predictor's error is evaluated before it learns from the current episode, so maturity reflects transfer to data the predictor has not fitted. In read-only evaluation, the episode-end write, validation-history update, slow training, merging, and absorption steps are all disabled.
+
+\subsection{Fingerprints and delayed domain founding}
+A fingerprint concatenates the adapted predictor and encoder-head changes and is normalized to unit length. Domain prototypes accumulate normalized fingerprints from episodes planned from the reference; episodes starting from a slow predictor do not redefine that reference-based prototype. If an episode has already read a learner, it preferentially writes to that learner's domain unless the prospective error ratio rejects the write. Otherwise, it tries compatible domain directions in descending cosine order.
+
+An unassigned episode enters a pending pool. It confirms a new domain when at least two pending fingerprints align with its own above the new-domain threshold. These members need not be pairwise aligned with one another; the incoming fingerprint is the common reference for this confirmation. The members and the new episode are transferred together to the new replay. No ground-truth shape or appearance category participates in this procedure.
+
+\subsection{Merging and fragment absorption}
+For a new unfamiliar episode, every existing trained learner is evaluated before training. The resulting ratios provide cross-domain evidence. Let $G_{A\to B}$ be the geometric mean error ratio of learner $B$ on recent episodes assigned to $A$, and $G_{A\to A}$ the corresponding ratio for learner $A$. Domains merge only if both directions satisfy
+\begin{equation}
+ G_{A\to B}\leq \min\{1,(1+\epsilon_m)G_{A\to A}\},
+\end{equation}
+with the symmetric condition for $B\to A$. Each direction requires two jointly evaluated episodes in the primary configuration. The larger domain retains its learner and incorporates the union of stored experience. Merged identifiers are not reused.
+
+Every 25 episodes, small immature domains can be absorbed into a mature predictor that explains their experience with an error ratio at most 0.8. The primary configuration limits absorption to fragments with fewer than six episodes and fewer than three maturity measurements. Pending-pool absorption and the additional absolute-error gate are disabled in the shape and visual experiments.

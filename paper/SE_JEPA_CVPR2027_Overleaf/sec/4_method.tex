@@ -1,0 +1,53 @@
+\section{SE-JEPA}
+\label{sec:method}
+
+\ours couples episode-local adaptation with persistent predictive memory (Fig.~\ref{fig:architecture}). It keeps the pretrained encoder and predictor $(E_0,P_0)$ as a fixed reference and learns additional predictors from deployment experience. Each discovered domain stores a slow predictor $P_{\phi_k}$, a replay buffer $\replay_k$, an update-direction prototype, and a validation history.
+
+\input{sec/3_problem}
+
+\subsection{Fast adaptation and replay consolidation}
+\label{sec:fast}
+\label{sec:slow}
+
+Within an episode, the fast model follows AdaJEPA: after each replan, one Adam step updates the predictor's last block and encoder head using the recent observed transitions. These changes are reset at the next episode. A retrieved slow predictor can supply a better starting point for this adaptation.
+
+To retain experience across episodes, we re-encode the executed trajectory with the frozen encoder $E_0$. This gives replay a stable coordinate system even as the fast encoder head changes. An accepted trajectory enters its domain's replay, and the slow predictor is trained on sampled transition windows:
+\begin{equation}
+  \loss_k(\phi_k)=
+  \mathbb{E}_{(x,z^+)\sim\replay_k}
+  \big\|P_{\phi_k}(x)-z^+\big\|_2^2.
+  \label{eq:replay}
+\end{equation}
+Here $x$ contains the latent history and executed actions, and $z^+$ is the next observation embedding. Sampling windows from earlier episodes fits their transitions jointly with the new experience. A new slow predictor starts from $P_0$; it learns from replay rather than inheriting the last fast update.
+
+\subsection{Discovering predictive domains}
+\label{sec:write}
+
+The reference model determines which episodes enter memory. We measure its newest-frame prediction error over the first three observed transitions and compare their geometric mean with a calibrated familiarity threshold. Episodes already explained by the reference use it as the base for fast adaptation and do not enter persistent replay. Slow learning is thus concentrated on experience that extends the reference model.
+
+For other episodes, the fast parameter change $\Delta_e$ provides a direction fingerprint, $u_e=\Delta_e/\|\Delta_e\|_2$. An episode that retrieved a slow predictor first tries to write to that predictor's domain. Otherwise, cosine similarity to the stored direction prototypes proposes a domain, and a prediction-error check tests compatibility. Unmatched episodes wait in a pending pool. An incoming fingerprint aligned with two pending episodes establishes a new domain with those episodes. This discovers groups of compatible predictive experience without shape or appearance labels.
+
+Domains can also share experience. We merge two domains when each predictor transfers to the other's recent episodes and both improve on the reference. Small immature fragments are absorbed by a mature domain that already predicts them well. Appendix~A specifies the confirmation, merging, and absorption rules.
+
+\subsection{Validated retrieval for planning}
+\label{sec:trust}
+
+Before training a slow predictor on an incoming episode, we evaluate its open-loop prediction of that episode's executed trajectory $\tau_e$:
+\begin{equation}
+  r_{e,k}=
+  \frac{\loss_{\mathrm{roll}}(\phi_k;\tau_e)}
+       {\loss_{\mathrm{roll}}(\theta_0;\tau_e)}.
+  \label{eq:ratio}
+\end{equation}
+This prospective measurement checks whether previous experience transfers to the new trajectory. A ratio above $1.2$ rejects the proposed write. A predictor becomes eligible for retrieval when it has at least three validation measurements and their latest mean is at most $0.9$.
+
+During the first three replans, the reference and eligible slow predictors are compared on the transitions observed so far:
+\begin{equation}
+  k^\star=\argmin_{k\in\{0\}\cup\mathcal{K}_{\mathrm{eligible}}}
+  \loss_{\mathrm{pred}}(\phi_k;\mathcal{B}_{e,t}),
+  \qquad \phi_0=\theta_0.
+  \label{eq:retrieval}
+\end{equation}
+The selected predictor supplies the base for fast adaptation, retaining the episode's current fast offset. Reference-familiar episodes restrict this choice to $P_0$. Prediction error therefore serves two distinct purposes: prospective validation determines which memories are eligible, and current observations determine which eligible memory to use.
+
+During deployment, replay, slow weights, and domain structure evolve after each episode. Held-out evaluation fixes this memory while retaining retrieval and episode-local adaptation, measuring how the accumulated experience transfers to new targets.

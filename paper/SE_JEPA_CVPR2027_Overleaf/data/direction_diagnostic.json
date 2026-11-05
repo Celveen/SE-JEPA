@@ -1,0 +1,18 @@
+{
+  "gd": {
+    "episodes": 2450,
+    "cosine_count": 2449,
+    "cosine_mean": 0.018377028814825575,
+    "cosine_median": 0.011860939361425906,
+    "writes": 622,
+    "reads": 630
+  },
+  "cem": {
+    "episodes": 2450,
+    "cosine_count": 2449,
+    "cosine_mean": 0.0180511076652812,
+    "cosine_median": 0.011637380255438307,
+    "writes": 663,
+    "reads": 666
+  }
+}
