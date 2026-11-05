@@ -1,0 +1,3 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_dinowm_rope
+- model_epoch=latest
+- +eval_data_path=/data/zjc/adaJEPA/CL-JEPA/data/deformable

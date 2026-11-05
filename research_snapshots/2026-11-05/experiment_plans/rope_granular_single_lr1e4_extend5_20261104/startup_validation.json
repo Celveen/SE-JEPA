@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-04T02:52:59.513617+00:00",
+  "chains": {
+    "rope": {
+      "gpu": "5",
+      "pid": 1900397,
+      "round": 4,
+      "slow_lr": 0.0001,
+      "initial_episodes": 150,
+      "initial_state": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/dino_ours/cl_noada_r3/chunk_4/continual_state.pt",
+      "completed_mpc_feedbacks": 2,
+      "latest_cd": "0.4591752886772156",
+      "fast_updates": 0
+    },
+    "granular": {
+      "gpu": "6",
+      "pid": 1900398,
+      "round": 4,
+      "slow_lr": 0.0001,
+      "initial_episodes": 150,
+      "initial_state": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/granular_ref/cl_noada_r3/chunk_4/continual_state.pt",
+      "completed_mpc_feedbacks": 2,
+      "latest_cd": "0.25457802414894104",
+      "fast_updates": 0
+    }
+  }
+}

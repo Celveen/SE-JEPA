@@ -1,0 +1,218 @@
+{
+  "object": "granular",
+  "protocol": "same 50 targets/order/seeds repeated each round; slow-only cl_noada; one oracle domain per chain",
+  "slow_lr": 0.0002,
+  "rounds": [
+    {
+      "round": 1,
+      "n": 50,
+      "mean_cd": 0.26043558314442633,
+      "se_cd": 0.01212713936679212,
+      "median_cd": 0.2701176404953003,
+      "successes": 13,
+      "success_rate": 0.26,
+      "learner_reads": 32,
+      "val_ratio_geomean": 0.8808836374334773,
+      "slow_loss_median": 0.0389556385576725,
+      "domain": {
+        "granular": {
+          "n": 50,
+          "tags": {
+            "granular": 50
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.8105480044928032,
+            0.6584413352419994,
+            1.0086360965343215
+          ]
+        }
+      },
+      "large_cd_samples": 0
+    },
+    {
+      "round": 2,
+      "n": 50,
+      "mean_cd": 0.24149207174777984,
+      "se_cd": 0.011775801182470222,
+      "median_cd": 0.24262382835149765,
+      "successes": 19,
+      "success_rate": 0.38,
+      "learner_reads": 48,
+      "val_ratio_geomean": 0.8023701931984948,
+      "slow_loss_median": 0.038451611623167986,
+      "domain": {
+        "granular": {
+          "n": 100,
+          "tags": {
+            "granular": 100
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.7480317558057706,
+            0.6593277564660819,
+            0.8817633327085747
+          ]
+        }
+      },
+      "large_cd_samples": 0,
+      "gain_from_previous": {
+        "cd_improvement": 0.0189435113966465,
+        "cd_improvement_ci95": [
+          -0.007203511629253624,
+          0.044576910044997926
+        ],
+        "improved": 29,
+        "worsened": 21,
+        "wilcoxon_p": 0.14333259515310637,
+        "success_change_pp": 12.0,
+        "gained_success": 10,
+        "lost_success": 4,
+        "mcnemar_p": 0.1795654296875
+      }
+    },
+    {
+      "round": 3,
+      "n": 50,
+      "mean_cd": 0.24659163638949394,
+      "se_cd": 0.011763650722547104,
+      "median_cd": 0.2433934286236763,
+      "successes": 14,
+      "success_rate": 0.28,
+      "learner_reads": 47,
+      "val_ratio_geomean": 0.7839898717940541,
+      "slow_loss_median": 0.039557131752371785,
+      "domain": {
+        "granular": {
+          "n": 150,
+          "tags": {
+            "granular": 150
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.8689951209970003,
+            0.6882528980440208,
+            0.7295887508064683
+          ]
+        }
+      },
+      "large_cd_samples": 0,
+      "gain_from_previous": {
+        "cd_improvement": -0.005099564641714096,
+        "cd_improvement_ci95": [
+          -0.027549048967659473,
+          0.016166398257017125
+        ],
+        "improved": 24,
+        "worsened": 26,
+        "wilcoxon_p": 0.9923668279164506,
+        "success_change_pp": -9.999999999999998,
+        "gained_success": 5,
+        "lost_success": 10,
+        "mcnemar_p": 0.30175781249999994
+      }
+    },
+    {
+      "round": 4,
+      "n": 50,
+      "mean_cd": 0.24279529795050622,
+      "se_cd": 0.012664755923664544,
+      "median_cd": 0.23543822020292282,
+      "successes": 18,
+      "success_rate": 0.36,
+      "learner_reads": 46,
+      "val_ratio_geomean": 0.7520436246724689,
+      "slow_loss_median": 0.04060700573027134,
+      "domain": {
+        "granular": {
+          "n": 200,
+          "tags": {
+            "granular": 200
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.8243530961118001,
+            0.7743602190401921,
+            0.7532491190029094
+          ]
+        }
+      },
+      "large_cd_samples": 0,
+      "gain_from_previous": {
+        "cd_improvement": 0.003796338438987732,
+        "cd_improvement_ci95": [
+          -0.02269309015199542,
+          0.029988122582435606
+        ],
+        "improved": 27,
+        "worsened": 23,
+        "wilcoxon_p": 0.5086300594933544,
+        "success_change_pp": 7.9999999999999964,
+        "gained_success": 9,
+        "lost_success": 5,
+        "mcnemar_p": 0.4239501953125
+      }
+    },
+    {
+      "round": 5,
+      "n": 50,
+      "mean_cd": 0.2176552465558052,
+      "se_cd": 0.008795515628193612,
+      "median_cd": 0.21321991086006165,
+      "successes": 20,
+      "success_rate": 0.4,
+      "learner_reads": 50,
+      "val_ratio_geomean": 0.7418811193466951,
+      "slow_loss_median": 0.04008196927607059,
+      "domain": {
+        "granular": {
+          "n": 250,
+          "tags": {
+            "granular": 250
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.7736631378062848,
+            0.7266449706554968,
+            0.6116377819919145
+          ]
+        }
+      },
+      "large_cd_samples": 0,
+      "gain_from_previous": {
+        "cd_improvement": 0.025140051394701005,
+        "cd_improvement_ci95": [
+          0.002973255645483732,
+          0.047381848074495796
+        ],
+        "improved": 29,
+        "worsened": 21,
+        "wilcoxon_p": 0.07395602411280144,
+        "success_change_pp": 4.0000000000000036,
+        "gained_success": 8,
+        "lost_success": 6,
+        "mcnemar_p": 0.79052734375
+      }
+    }
+  ],
+  "final_vs_first": {
+    "cd_improvement": 0.04278033658862114,
+    "cd_improvement_ci95": [
+      0.022156923044472934,
+      0.06396495682373643
+    ],
+    "improved": 33,
+    "worsened": 17,
+    "wilcoxon_p": 0.0002308749851795966,
+    "success_change_pp": 14.000000000000002,
+    "gained_success": 9,
+    "lost_success": 2,
+    "mcnemar_p": 0.0654296875
+  },
+  "note": "Target-level paired bootstrap intervals; repeated targets measure revisit performance, not unseen-target generalization. No samples excluded."
+}

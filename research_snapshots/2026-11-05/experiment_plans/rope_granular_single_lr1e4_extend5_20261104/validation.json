@@ -1,0 +1,41 @@
+{
+  "status": "passed_cpu_only",
+  "new_jobs": 20,
+  "historical_jobs_not_rerun": 30,
+  "source_states_and_configs": {
+    "rope": {
+      "source_state": {
+        "episode": 150,
+        "slow_lr": 0.0001,
+        "replay_episodes": 150,
+        "validation_history": 147,
+        "domain": "rope"
+      },
+      "config_differences": {
+        "planner.continual.state_in": [
+          null,
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/dino_ours/cl_noada_r3/chunk_4/continual_state.pt"
+        ]
+      }
+    },
+    "granular": {
+      "source_state": {
+        "episode": 150,
+        "slow_lr": 0.0001,
+        "replay_episodes": 150,
+        "validation_history": 147,
+        "domain": "granular"
+      },
+      "config_differences": {
+        "goal_file_path": [
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/../rope_granular/targets/granular_seed301.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular/targets/granular_seed301.pkl"
+        ],
+        "planner.continual.state_in": [
+          null,
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/granular_ref/cl_noada_r3/chunk_4/continual_state.pt"
+        ]
+      }
+    }
+  }
+}

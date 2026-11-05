@@ -77,6 +77,10 @@ def main():
             path = directory / name
             if path.exists():
                 entries.append(store_file(path, relative / (name + ".gz"), compressed=True))
+        for name in ["protocol.json", "run_metadata.json"]:
+            path = directory / name
+            if path.exists():
+                entries.append(store_file(path, relative / name, role="run_protocol"))
         references = []
         for name in ["config.yaml", "overrides.yaml"]:
             config_path = directory / ".hydra" / name
@@ -96,7 +100,11 @@ def main():
                         if config.get("model_name"):
                             checkpoint = checkpoint / config["model_name"]
                         references.append((checkpoint / "hydra.yaml", "model_config"))
-        record = {"directory": relative.as_posix(), "source": str(directory), "episodes": len(successes), "recorded_success_rate": float(successes.mean()), "final_log_matches_results": consistency, "group": f"{base.parent.name}/{directory.relative_to(base).parts[0]}"}
+        diagnostic = any("smoke" in part or "startup_failure" in part for part in directory.parts)
+        protocol = directory / "protocol.json"
+        if protocol.exists():
+            diagnostic |= bool(json.loads(protocol.read_text()).get("diagnostic_only", False))
+        record = {"directory": relative.as_posix(), "source": str(directory), "episodes": len(successes), "recorded_success_rate": float(successes.mean()), "final_log_matches_results": consistency, "group": f"{base.parent.name}/{directory.relative_to(base).parts[0]}", "diagnostic_only": diagnostic}
         return record, entries, references
 
     runs, files, references = [], [], []
@@ -129,8 +137,13 @@ def main():
         reference_status.append({"path": str(path), "status": "copied", "snapshot_path": relative.as_posix(), "role": role})
 
     paper = WORKSPACE / "paper_cvpr2027"
+    unavailable = []
     for name in ["baseline_metrics_snapshot.json", "structure_data_snapshot.json", "dinowm_parameter_audit.json"]:
-        files.append(store_file(paper / name, Path("paper_data") / name, role="summary"))
+        path = paper / name
+        if path.exists():
+            files.append(store_file(path, Path("paper_data") / name, role="summary"))
+        else:
+            unavailable.append(str(path))
     collections = [
         (ROOT / "reports/shape_shift_figs/data", Path("paper_data/shape"), {".json", ".csv"}),
         (ROOT / "reports/figs", Path("paper_data/rounds"), {".json", ".csv", ".md"}),
@@ -142,13 +155,80 @@ def main():
         for path in sorted(source.rglob("*")):
             if path.is_file() and path.suffix in suffixes:
                 files.append(store_file(path, destination / path.relative_to(source), role="paper_data"))
-    files.append(store_file(ROOT / "eval_outputs/baselines/BIG_TABLE.md", Path("paper_data/baseline_tables.md"), role="summary"))
-    for name in ["pipeline_status.json", "training_reference_config.yaml", "source_revision.txt", "training_source_changes.patch", "encoder_local_changes.patch"]:
-        path = ROOT / "eval_outputs/baselines/dinowm_H7t3" / name
-        if path.exists():
-            files.append(store_file(path, Path("running_dinowm_reference100") / name, role="running_metadata_not_final_result"))
+    files.append(store_file(ROOT / "eval_outputs/baselines/BIG_TABLE.md", Path("paper_data/historical_baseline_tables.md"), role="historical_summary"))
+    for name in ["AGENTS.md", "EXPERIMENT_POLICY.md"]:
+        files.append(store_file(WORKSPACE / name, Path("protocols") / name, role="experiment_policy"))
+    plan_root = WORKSPACE / "experiment_plans"
+    suffixes = {".py", ".json", ".yaml", ".yml", ".csv", ".md", ".patch", ".png", ".pdf"}
+    for path in sorted(plan_root.rglob("*")):
+        if path.is_file() and path.suffix in suffixes and "__pycache__" not in path.parts:
+            files.append(store_file(path, Path("experiment_plans") / path.relative_to(plan_root), role="experiment_recipe_or_analysis"))
+    for family in sorted((ROOT / "eval_outputs").iterdir()):
+        if not family.is_dir() or "202611" not in family.name:
+            continue
+        for path in sorted(family.rglob("*")):
+            if path.is_file() and "analysis" in path.parts and path.suffix in suffixes:
+                files.append(store_file(path, Path("analyses") / path.relative_to(ROOT / "eval_outputs"), role="analysis"))
+    latest = {}
+    domains = ["default", "blur", "snp", "dark", "red_agent", "red_object", "red_goal"]
+    shapes = ["I", "L", "square", "Z", "small_tee", "plus", "T"]
+    for method in ["dreamerv3", "iris", "dinowm"]:
+        name = "dinowm_H7t3" if method == "dinowm" else f"{method}_VIS350"
+        folder = ROOT / "eval_outputs/baselines" / name
+        status_path = folder / "pipeline_status.json"
+        if not status_path.exists():
+            continue
+        status = json.loads(status_path.read_text())
+        for filename in ["pipeline_status.json", "summary.json", "epoch_budget_guard.json", "training_reference_config.yaml", "source_revision.txt", "training_source_changes.patch", "encoder_local_changes.patch"]:
+            path = folder / filename
+            if path.exists():
+                files.append(store_file(path, Path("baseline_metadata") / name / filename, role="pipeline_metadata"))
+        checkpoint = Path(status["checkpoint"])
+        if not checkpoint.is_dir():
+            unavailable.append(str(checkpoint))
+            continue
+        for path in sorted(checkpoint.iterdir()):
+            if path.is_file() and path.suffix in {".json", ".jsonl", ".yaml"}:
+                compressed = path.suffix == ".jsonl"
+                files.append(store_file(path, Path("training_metadata") / method / (path.name + (".gz" if compressed else "")), compressed, "training_metadata"))
+        receipt = checkpoint / "adapter_sources.json"
+        if receipt.exists():
+            for filename, expected in json.loads(receipt.read_text()).items():
+                actual = digest((ROOT / "scripts/offline_visual" / filename).read_bytes())
+                if actual != expected:
+                    raise RuntimeError(f"Source differs from training receipt: {method}/{filename}")
+        model = yaml.safe_load((checkpoint / "hydra.yaml").read_text())
+        rates, steps, counts = {}, {}, {}
+        for index, condition in enumerate(shapes if method == "dinowm" else domains):
+            directory = folder / (f"chunk_{index:02d}_{condition}" if method == "dinowm" else condition)
+            final = directory / "final_eval_results.npz"
+            log = directory / "logs.json"
+            if not final.exists() or not log.exists() or "final_eval/success_rate" not in log.read_text():
+                continue
+            config = yaml.safe_load((directory / ".hydra/config.yaml").read_text())
+            actions_per_replan = int(config["planner"]["n_taken_actions"]) // int(model["frameskip"])
+            limit = int(config["planner"]["max_iter"])
+            with np.load(final, allow_pickle=False) as data:
+                successes = data["successes"].astype(bool)
+                lengths = np.asarray(data["action_len"], dtype=float)
+            assert len(successes) == 50 and actions_per_replan > 0
+            replans = np.where(successes, lengths / actions_per_replan, limit)
+            assert np.isfinite(replans).all() and ((replans >= 0) & (replans <= limit)).all()
+            rates[condition] = float(successes.mean() * 100)
+            counts[condition] = int(successes.sum())
+            steps[condition] = float(replans.mean())
+        complete = len(rates) == 7
+        item = {"task": "PushObj H7t3" if method == "dinowm" else "PushT VIS350", "training_epochs_per_stage": 3, "complete": complete, "pipeline_stage": status["stage"], "conditions_completed": len(rates), "episodes_completed": len(rates) * 50, "planned_episodes": 350, "successes": counts, "success_rates_percent": rates, "mean_mpc_steps": steps, "all_seven_success_rate_percent": float(np.mean(list(rates.values()))) if complete else None, "all_seven_mean_mpc_steps": float(np.mean(list(steps.values()))) if complete else None}
+        if complete and method != "dinowm":
+            item["six_shift_success_rate_percent"] = float(np.mean([rates[d] for d in domains[1:]]))
+            item["six_shift_mean_mpc_steps"] = float(np.mean([steps[d] for d in domains[1:]]))
+        if complete and method == "dinowm":
+            item["unseen_success_rate_percent"] = float(np.mean([rates[d] for d in ["I", "square", "small_tee"]]))
+        latest[method] = item
+    (output / "latest_baseline_results.json").write_text(json.dumps(latest, indent=2))
+    (output / "unavailable_sources.json").write_text(json.dumps(unavailable, indent=2))
     sizes = sum(entry["bytes"] for entry in files)
-    manifest = {"format_version": 1, "created_utc": created, "source_git_commit": revision, "completed_directories": len(runs), "stored_bytes": sizes, "groups": dict(sorted(Counter(record["group"] for record in runs).items())), "files": sorted(files, key=lambda entry: entry["path"]), "runs": runs, "references": reference_status, "excluded": ["training datasets", "model checkpoints", "wandb directories", "raw console logs", "unfinished evaluation directories", "full manuscript drafts"], "selection_policy": "All evaluation directories with final result files and final-evaluation markers before the cutoff; extra baseline seeds and diagnostic runs are archived, not selected as main-table results."}
+    manifest = {"format_version": 1, "created_utc": created, "source_git_commit": revision, "completed_directories": len(runs), "stored_bytes": sizes, "groups": dict(sorted(Counter(record["group"] for record in runs).items())), "files": sorted(files, key=lambda entry: entry["path"]), "runs": runs, "references": reference_status, "unavailable_sources": unavailable, "excluded": ["training datasets", "model checkpoints", "wandb directories", "raw console logs", "unfinished evaluation directories", "full manuscript drafts"], "selection_policy": "All evaluation directories with final result files and final-evaluation markers before the cutoff; extra baseline seeds and diagnostic runs are archived, not selected as main-table results."}
     (output / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
     with (output / "run_index.csv").open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(runs[0]))
@@ -171,7 +251,10 @@ This snapshot archives {len(runs)} completed evaluation directories ({sizes / 2*
 - Newly running experiments may contribute completed chunks only. A completed chunk does not imply that its entire experiment has finished.
 - New visual experiments use resampled learning targets and an independent held-out set. Existing VIS50 baselines use their recorded targets/noise protocol. Their sources remain distinct.
 - Existing Rope/Granular paper data are the earlier version, pending the author's newer data. Legacy environment `successes` for deformable tasks are not the paper's CD-threshold success metric; use CD summaries rather than treating those raw flags as paper SR.
-- `running_dinowm_reference100/` is metadata only: the complete 52.32M-parameter DINO-WM has started 100-epoch training. It has no final PushObj result in this snapshot.
+- The new DreamerV3 and IRIS scope is original T plus six visual shifts, seven conditions x 50 episodes. New DINO-WM evaluation uses seven PushObj shapes x 50 episodes, seed 2000.
+- The effective training budget is three epochs per stage. IRIS has separate tokenizer/dynamics stages. DINO-WM uses the full 52.32M model and fixed epoch 3; historical e100 paths/configs do not change that effective budget.
+- Pipeline state and training records are preserved under baseline_metadata/ and training_metadata/. The current complete baseline aggregates are in latest_baseline_results.json; historical_baseline_tables.md is source history, not the latest aggregate.
+- experiment_plans/ and analyses/ preserve new seven-round PushObj and Rope/Granular experiments, including stopped/partial mixed streams. A stopped run is not silently relabeled complete.
 
 ## Reuse
 

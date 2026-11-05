@@ -1,0 +1,14 @@
+group,method,cd,cd_se,success_rate,delta_cd_vs_dinowm,p_wilcoxon_cd,p_mcnemar_success
+"Reported by DINO-WM (its protocol)","IRIS",1.11,,,,,
+"Reported by DINO-WM (its protocol)","DreamerV3",2.49,,,,,
+"Reported by DINO-WM (its protocol)","TD-MPC2",2.52,,,,,
+"Reported by DINO-WM (its protocol)","R3M encoder",1.13,,,,,
+"Reported by DINO-WM (its protocol)","ResNet encoder",1.08,,,,,
+"Reported by DINO-WM (its protocol)","DINO CLS encoder",0.84,,,,,
+"Reported by DINO-WM (its protocol)","DINO-WM",0.41,,,,,
+"Reported by DINO-WM (its protocol)","DINO-WM, our reproduction",0.821209,0.111795,0.46,,,
+"Online stream, 50 instances (our protocol)","DINO-WM",0.490977,0.0593236,0.64,,,
+"Online stream, 50 instances (our protocol)","AdaJEPA",0.629086,0.0961953,0.6,0.138109,0.151503,0.845019
+"Online stream, 50 instances (our protocol)","Ours",0.28206,0.0332944,0.88,-0.208917,0.00184253,0.00753784
+"Unseen instances, 91 (our protocol, frozen planning)","DINO-WM",0.663812,0.0723821,0.604396,,,
+"Unseen instances, 91 (our protocol, frozen planning)","Ours†",0.349388,0.0422289,0.802198,-0.314424,0.00122237,0.00509764

@@ -1,0 +1,2 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_h1_fs1_e100_seed0
+- model_epoch=latest

@@ -1,0 +1,16 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_dino_h1_fs1_e100_seed0
+- model_epoch=latest
+- +eval_data_path=/data/zjc/adaJEPA/CL-JEPA/data/deformable
+- goal_source=file
+- +goal_file_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/stream/chunk_2.pkl
+- n_evals=10
+- seed=101
+- +wandb_logging=false
+- planner.resim_from_start=false
+- planner.continual.tag=rope
+- planner.continual.save_deltas=false
+- planner._target_=planning.continual.CLSMPCPlanner
+- planner.continual.write=oracle
+- planner.continual.mature_k=3
+- planner.continual.mature_ratio=0.9
+- planner.continual.state_in=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/dino_ours/cl_r3/chunk_1/continual_state.pt

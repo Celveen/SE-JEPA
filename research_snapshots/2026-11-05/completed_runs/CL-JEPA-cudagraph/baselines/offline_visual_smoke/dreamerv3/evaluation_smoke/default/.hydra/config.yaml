@@ -1,0 +1,10 @@
+ckpt_base_path: /data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/offline_visual_smoke/dreamerv3
+model_name: null
+model_epoch: 0
+seed: 100
+n_evals: 1
+eval_data_path: /data/zjc/adaJEPA/baselines/offline_visual_cache/targets/default.npz
+planner:
+  n_taken_actions: 5
+  max_iter: 1
+  backend: official_world_model_rpc

@@ -1,0 +1,7 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_h3_fs1_cos_e100_seed0
+- model_epoch=50
+- +eval_data_path=/data/zjc/adaJEPA/CL-JEPA/data/deformable
+- seed=100
+- n_evals=10
+- goal_source=file
+- +goal_file_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_dset_n50/targets/seed100.pkl

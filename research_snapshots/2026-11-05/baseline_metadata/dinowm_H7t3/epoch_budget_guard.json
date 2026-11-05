@@ -1,0 +1,12 @@
+{
+  "pid": 2685029,
+  "controller_pid": 1168793,
+  "controller_start_ticks": "405912984",
+  "original_epochs": 100,
+  "effective_epochs": 3,
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e100/checkpoints/model_3.pth",
+  "checkpoint_alias": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3",
+  "stage": "evaluation_handoff",
+  "started": "2026-11-03T09:24:09+00:00",
+  "updated": "2026-11-03T14:26:05+00:00"
+}

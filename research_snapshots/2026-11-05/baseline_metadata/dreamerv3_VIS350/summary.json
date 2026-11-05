@@ -1,0 +1,24 @@
+{
+  "episodes": 350,
+  "domain_success_rates": {
+    "default": 0.1,
+    "blur": 0.12,
+    "snp": 0.14,
+    "dark": 0.08,
+    "red_agent": 0.0,
+    "red_object": 0.0,
+    "red_goal": 0.0
+  },
+  "domain_mean_mpc_steps": {
+    "default": 27.92,
+    "blur": 27.68,
+    "snp": 27.22,
+    "dark": 28.56,
+    "red_agent": 30.0,
+    "red_object": 30.0,
+    "red_goal": 30.0
+  },
+  "all_seven_success_rate": 0.06285714285714286,
+  "six_shifts_success_rate": 0.05666666666666667,
+  "six_shifts_mean_mpc_steps": 28.909999999999997
+}

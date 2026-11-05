@@ -1,0 +1,23 @@
+{
+  "method": "dreamerv3",
+  "checkpoint_directory": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3",
+  "checkpoint_sha256": "a247115fed112b44e9e2f798e9e1d7bd0e2aeb429b1bed7d7a86f7a93d229368",
+  "target_sha256": "f4a8227ebbad92c2eaeb54d8c54956325128f67039e9dd847b8972cc34a23599",
+  "episodes": 50,
+  "planning_seed": 100,
+  "episode_planning_seed": "100 + sample index",
+  "environment_seed": "1 + 100 * sample index",
+  "cem_action_clipping": false,
+  "model_action_encoding": "tanh(physical relative action)",
+  "frameskip": 5,
+  "objective": "decoded RGB MSE in [-1,1] plus normalized proprio MSE; staged terminal/full-horizon objective",
+  "noise": "fresh per-MPC noise; realized seeds recorded",
+  "CEM": {
+    "samples": 200,
+    "topk": 30,
+    "iterations": 10,
+    "model_horizon": 5,
+    "max_replans": 30
+  },
+  "diagnostic_only": false
+}

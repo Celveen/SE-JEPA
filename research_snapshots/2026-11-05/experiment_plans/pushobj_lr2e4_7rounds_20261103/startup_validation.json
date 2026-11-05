@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-03T03:02:49.902381+00:00",
+  "chains": {
+    "gd": {
+      "pid": 3076210,
+      "gpu": "0",
+      "slow_lr": 0.0002,
+      "current_round": 1,
+      "current_chunk": "chunk_00_I",
+      "mpc_eval_calls": 118,
+      "episodes_started": 6,
+      "adajepa_updates": 118,
+      "launcher_log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_lr2e4_7rounds_20261103/gd_launcher.log"
+    },
+    "cem": {
+      "pid": 3076212,
+      "gpu": "1",
+      "slow_lr": 0.0002,
+      "current_round": 1,
+      "current_chunk": "chunk_00_I",
+      "mpc_eval_calls": 115,
+      "episodes_started": 6,
+      "adajepa_updates": 114,
+      "launcher_log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_lr2e4_7rounds_20261103/cem_launcher.log"
+    }
+  }
+}

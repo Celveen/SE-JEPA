@@ -1,0 +1,23 @@
+{
+  "method": "iris",
+  "checkpoint_directory": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+  "checkpoint_sha256": "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+  "target_sha256": "bf852ccd5db40be8f889f10daa48b19b9e13e3342d0b3f88b536e2b88ce1f3b0",
+  "episodes": 50,
+  "planning_seed": 100,
+  "episode_planning_seed": "100 + sample index",
+  "environment_seed": "1 + 100 * sample index",
+  "cem_action_clipping": false,
+  "model_action_encoding": "tanh(physical relative action)",
+  "frameskip": 5,
+  "objective": "decoded RGB MSE in [-1,1] plus normalized proprio MSE; staged terminal/full-horizon objective",
+  "noise": "fresh per-MPC noise; realized seeds recorded",
+  "CEM": {
+    "samples": 200,
+    "topk": 30,
+    "iterations": 10,
+    "model_horizon": 5,
+    "max_replans": 30
+  },
+  "diagnostic_only": false
+}

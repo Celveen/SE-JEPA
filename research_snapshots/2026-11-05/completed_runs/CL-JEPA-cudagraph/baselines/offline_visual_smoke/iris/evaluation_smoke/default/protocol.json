@@ -1,0 +1,25 @@
+{
+  "method": "iris",
+  "checkpoint_directory": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/offline_visual_smoke/iris",
+  "checkpoint_sha256": "9a5a7047147cbb79ecad14c7d8a13f16779ab8f983ad61787647fda56349e66e",
+  "target_sha256": "99b834f7c3b1bca54f391b55058c7a579aac83d6bc5edea95ca9eb9925d24d7c",
+  "episodes": 1,
+  "planning_seed": 100,
+  "episode_planning_seed": "100 + sample index",
+  "environment_seed": "1 + 100 * sample index",
+  "action_bounds": [
+    -1,
+    1
+  ],
+  "frameskip": 5,
+  "objective": "decoded RGB MSE in [-1,1] plus normalized proprio MSE; staged terminal/full-horizon objective",
+  "noise": "fresh per-MPC noise; realized seeds recorded",
+  "CEM": {
+    "samples": 200,
+    "topk": 30,
+    "iterations": 10,
+    "model_horizon": 5,
+    "max_replans": 1
+  },
+  "diagnostic_only": true
+}

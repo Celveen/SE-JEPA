@@ -1,0 +1,132 @@
+{
+  "method": "dinowm",
+  "gpus": [
+    "2",
+    "3"
+  ],
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/pushobj_bias_16k",
+  "evaluation_scope": "PushObj checkpoint evaluated on H7t3",
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_H7t3",
+  "train_command": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node",
+    "2",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/train.py",
+    "--config-name",
+    "train_dinowm_reference",
+    "env.dataset.data_path=/data/zjc/adaJEPA/CL-JEPA/data/pushobj_bias_16k",
+    "env.num_workers=8",
+    "training.epochs=3",
+    "training.batch_size=32",
+    "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3"
+  ],
+  "training_batch_size": 32,
+  "evaluation_epoch": "3",
+  "training_profile": "train_dinowm_reference",
+  "test_seeds": [
+    2000
+  ],
+  "episodes_per_shape": 50,
+  "planned_episodes": 350,
+  "total_chunks": 7,
+  "already_complete": 0,
+  "missing_chunks": [
+    "chunk_00_I",
+    "chunk_01_L",
+    "chunk_02_square",
+    "chunk_03_Z",
+    "chunk_04_small_tee",
+    "chunk_05_plus",
+    "chunk_06_T"
+  ],
+  "first_evaluation": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/plan.py",
+    "--config-name",
+    "cont_plan_gd_pushobj.yaml",
+    "ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3",
+    "model_epoch=3",
+    "eval_data_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_00_I.pkl",
+    "n_evals=50",
+    "+wandb_logging=false",
+    "planner.continual.w=0",
+    "planner.continual.tag=I",
+    "planner.continual.state_in=null",
+    "planner._target_=planning.continual.SlowFrozenMPCPlanner",
+    "planner.sub_planner.target=planning.cem.CEMPlanner",
+    "+planner.sub_planner.topk=30",
+    "+planner.sub_planner.num_samples=200",
+    "planner.sub_planner.opt_steps=10",
+    "seed=2000",
+    "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_H7t3/chunk_00_I"
+  ],
+  "pid": 2685029,
+  "started": "2026-11-03T14:26:05+00:00",
+  "stage": "complete",
+  "jobs": {
+    "chunk_00_I": {
+      "gpu": "2",
+      "status": "complete",
+      "started": "2026-11-03T14:26:05+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T21:42:01+00:00"
+    },
+    "chunk_01_L": {
+      "gpu": "3",
+      "status": "complete",
+      "started": "2026-11-03T14:26:05+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T21:46:46+00:00"
+    },
+    "chunk_02_square": {
+      "gpu": "2",
+      "status": "complete",
+      "started": "2026-11-03T21:42:01+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-04T04:58:20+00:00"
+    },
+    "chunk_03_Z": {
+      "gpu": "3",
+      "status": "complete",
+      "started": "2026-11-03T21:46:46+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-04T05:07:54+00:00"
+    },
+    "chunk_04_small_tee": {
+      "gpu": "2",
+      "status": "complete",
+      "started": "2026-11-04T04:58:20+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-04T12:15:43+00:00"
+    },
+    "chunk_05_plus": {
+      "gpu": "3",
+      "status": "complete",
+      "started": "2026-11-04T05:07:54+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-04T12:29:09+00:00"
+    },
+    "chunk_06_T": {
+      "gpu": "2",
+      "status": "complete",
+      "started": "2026-11-04T12:15:43+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-04T19:30:50+00:00"
+    }
+  },
+  "updated": "2026-11-04T19:30:50+00:00",
+  "failures": [],
+  "summary": {
+    "complete_chunks": 7,
+    "episodes": 350,
+    "success_rate": 0.62,
+    "unseen_success_rate": 0.46
+  },
+  "ended": "2026-11-04T19:30:50+00:00"
+}

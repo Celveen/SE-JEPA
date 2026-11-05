@@ -1,0 +1,24 @@
+[
+  {
+    "planner": "gd",
+    "pid": 3076210,
+    "gpu": "0",
+    "launcher_log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_lr2e4_7rounds_20261103/gd_launcher.log",
+    "started_at": "2026-11-03T03:01:05.104949+00:00",
+    "attempt": 2,
+    "compatibility_env": {
+      "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD": "1"
+    }
+  },
+  {
+    "planner": "cem",
+    "pid": 3076212,
+    "gpu": "1",
+    "launcher_log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_lr2e4_7rounds_20261103/cem_launcher.log",
+    "started_at": "2026-11-03T03:01:05.106235+00:00",
+    "attempt": 2,
+    "compatibility_env": {
+      "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD": "1"
+    }
+  }
+]

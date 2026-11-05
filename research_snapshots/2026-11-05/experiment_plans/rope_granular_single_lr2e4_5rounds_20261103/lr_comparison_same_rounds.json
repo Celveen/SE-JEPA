@@ -1,0 +1,112 @@
+{
+  "protocol": "same 50 goals, matched rounds, cl_noada; historical single-chain comparison",
+  "delta_definition": "2e-4 minus 1e-4; negative is better",
+  "results": {
+    "rope": [
+      {
+        "round": 1,
+        "n": 50,
+        "old_lr": 0.0001,
+        "new_lr": 0.0002,
+        "old_cd": 0.46890196062624456,
+        "new_cd": 0.4160033338516951,
+        "new_minus_old": -0.052898626774549484,
+        "relative_reduction_percent": 11.281383149667457,
+        "paired_bootstrap_ci95": [
+          -0.27327640055492525,
+          0.14013732642680402
+        ],
+        "wilcoxon_p": 0.7389573758206106,
+        "new_better": 22,
+        "new_worse": 27
+      },
+      {
+        "round": 2,
+        "n": 50,
+        "old_lr": 0.0001,
+        "new_lr": 0.0002,
+        "old_cd": 0.34209663420915604,
+        "new_cd": 0.28626353934407234,
+        "new_minus_old": -0.05583309486508369,
+        "relative_reduction_percent": 16.320854776649934,
+        "paired_bootstrap_ci95": [
+          -0.17947441136837003,
+          0.0537942673303186
+        ],
+        "wilcoxon_p": 0.2695104487517437,
+        "new_better": 27,
+        "new_worse": 23
+      },
+      {
+        "round": 3,
+        "n": 50,
+        "old_lr": 0.0001,
+        "new_lr": 0.0002,
+        "old_cd": 0.2820601865649223,
+        "new_cd": 0.2829322463274002,
+        "new_minus_old": 0.0008720597624778748,
+        "relative_reduction_percent": -0.3091750640522146,
+        "paired_bootstrap_ci95": [
+          -0.06578341870382427,
+          0.06589271820336579
+        ],
+        "wilcoxon_p": 0.7089524432753507,
+        "new_better": 23,
+        "new_worse": 27
+      }
+    ],
+    "granular": [
+      {
+        "round": 1,
+        "n": 50,
+        "old_lr": 0.0001,
+        "new_lr": 0.0002,
+        "old_cd": 0.25694493353366854,
+        "new_cd": 0.26043558314442633,
+        "new_minus_old": 0.0034906496107578277,
+        "relative_reduction_percent": -1.3585205058345298,
+        "paired_bootstrap_ci95": [
+          -0.018828160516917703,
+          0.025355151746421986
+        ],
+        "wilcoxon_p": 0.6959894720514077,
+        "new_better": 15,
+        "new_worse": 24
+      },
+      {
+        "round": 2,
+        "n": 50,
+        "old_lr": 0.0001,
+        "new_lr": 0.0002,
+        "old_cd": 0.23480176292359828,
+        "new_cd": 0.24149207174777984,
+        "new_minus_old": 0.006690308824181557,
+        "relative_reduction_percent": -2.849343523182366,
+        "paired_bootstrap_ci95": [
+          -0.024391724582761523,
+          0.03479161332361399
+        ],
+        "wilcoxon_p": 0.47831983611594175,
+        "new_better": 24,
+        "new_worse": 26
+      },
+      {
+        "round": 3,
+        "n": 50,
+        "old_lr": 0.0001,
+        "new_lr": 0.0002,
+        "old_cd": 0.22389636799693108,
+        "new_cd": 0.24659163638949394,
+        "new_minus_old": 0.022695268392562865,
+        "relative_reduction_percent": -10.136505828836823,
+        "paired_bootstrap_ci95": [
+          0.0005842485539615154,
+          0.04412700325623154
+        ],
+        "wilcoxon_p": 0.011529687649083797,
+        "new_better": 17,
+        "new_worse": 33
+      }
+    ]
+  }
+}

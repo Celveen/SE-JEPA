@@ -1,0 +1,25 @@
+{
+  "status": "passed_cpu_only",
+  "unique_targets_per_object": 50,
+  "rounds": 5,
+  "episodes_per_object": 250,
+  "all_50_configs_composed": true,
+  "differences_from_historical_single_domain_configs": {
+    "rope": {
+      "planner.continual.slow_lr": [
+        0.0001,
+        0.0002
+      ]
+    },
+    "granular": {
+      "goal_file_path": [
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/../rope_granular/targets/granular_seed301.pkl",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular/targets/granular_seed301.pkl"
+      ],
+      "planner.continual.slow_lr": [
+        0.0001,
+        0.0002
+      ]
+    }
+  }
+}

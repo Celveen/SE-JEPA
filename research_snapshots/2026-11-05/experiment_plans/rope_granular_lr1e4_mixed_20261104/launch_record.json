@@ -1,0 +1,11 @@
+{
+  "pid": 1921543,
+  "started_at": "2026-11-04T05:07:12.332553+00:00",
+  "chain_gpu": "1",
+  "slow_lr": 0.0001,
+  "rounds": 3,
+  "episodes": 300,
+  "initial_state": null,
+  "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr1e4_mixed_20261104/pipeline_launcher.log",
+  "shared_targets": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets"
+}

@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-03T05:53:04.614640+00:00",
+  "chains": {
+    "rope": {
+      "gpu": "5",
+      "pid": 3248905,
+      "round": 1,
+      "mpc_evaluation_calls": 3,
+      "completed_cd_evaluations": 3,
+      "recent_cd_values": [
+        "0.4471035897731781",
+        "0.4471035897731781",
+        "0.4471035897731781"
+      ],
+      "fast_adaptation_updates": 0
+    },
+    "granular": {
+      "gpu": "6",
+      "pid": 3248906,
+      "round": 1,
+      "mpc_evaluation_calls": 3,
+      "completed_cd_evaluations": 2,
+      "recent_cd_values": [
+        "0.3540208339691162",
+        "0.270328551530838"
+      ],
+      "fast_adaptation_updates": 0
+    }
+  }
+}

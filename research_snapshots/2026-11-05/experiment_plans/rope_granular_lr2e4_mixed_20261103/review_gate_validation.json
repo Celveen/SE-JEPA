@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "tests": [
+    "clean_two_domain_run_passes",
+    "mixed_domain_stops",
+    "immature_domain_stops",
+    "zero_success_stops",
+    "initial_chamfer_known_geometry"
+  ],
+  "scope": "CPU synthetic fixtures only; no simulation"
+}
