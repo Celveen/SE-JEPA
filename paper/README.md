@@ -16,3 +16,7 @@ uses the supplied abstract and architecture figure, expands the bibliography,
 and selects qualitative cases with successful SE-JEPA outcomes where both
 baselines fail. DINO-WM PushT table entries remain blank awaiting author
 confirmation; its existing first-page bar is retained as requested.
+
+The revised layout places the main table on page 5 and all main result figures
+before Conclusion on page 7. The bibliography contains 40 cited references;
+Appendix A records the author-supplied 8-GPU RTX 5090 and A100 compute systems.

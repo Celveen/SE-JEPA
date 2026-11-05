@@ -1,0 +1,47 @@
+% Declare experimental floats early so they accompany the results, before Conclusion.
+
+\begin{table*}[!t]
+  \centering
+  \caption{\textbf{Comparison with the state of the art (CEM).} Success in \%; Steps is the mean number of MPC replans over all episodes, counting failures as 30. PushT Shift averages six visual shifts and Color the three recolorings. Rope and granular report Chamfer distance (CD). Rows above the rule use one test seed; their PushT targets are the established VIS50 set. \textit{Italic}: published values from DINO-WM~\cite{zhou2024dinowm}. $^{\mathrm{T}}$: trained on T only. Rows below the rule use three test seeds on our paired held-out targets. Bold marks the largest success or smallest cost in each column; evaluation groups use different target sets.}
+  \label{tab:main}
+  \small
+  \setlength{\tabcolsep}{5pt}
+  \begin{tabular}{lcccccccc}
+    \toprule
+    & \multicolumn{3}{c}{PushObj} & \multicolumn{3}{c}{PushT visual shifts} & Rope & Granular\\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-8}\cmidrule(lr){9-9}
+    Method & All $\uparrow$ & Unseen $\uparrow$ & Steps $\downarrow$
+      & Shift $\uparrow$ & Color $\uparrow$ & Steps $\downarrow$ & CD $\downarrow$ & CD $\downarrow$\\
+    \midrule
+    \inputrows{tables/main_rows.tex}
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=\textwidth]{qualitative.pdf}
+  \caption{\textbf{Persistent memory resolves failures of episodic adaptation.} Selected GD examples on an unseen I shape (top) and red-object shift (bottom). Frozen and AdaJEPA exhaust 30 replans in both cases; \ours succeeds in six and seven, respectively. Each row shares the same start and goal. The target is the movable object's pose in the goal image; the green marker is static.}
+  \label{fig:qualitative}
+\end{figure*}
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=\textwidth]{deform_qualitative.pdf}
+  \caption{\textbf{Consolidated predictions support deformable manipulation.} Real FleX simulator trajectories for rope (top) and granular material (bottom), with two instances per task. Each group shows the start and the three methods' final states after 15 pushes; gold denotes the goal. These third-pass examples illustrate successful slow-only consolidation and were selected where both baselines fail. Frozen DINO-WM frames replay its executed actions. The aggregate fourth-pass results are reported in Table~\ref{tab:main}.}
+  \label{fig:deform_qualitative}
+\end{figure*}
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\linewidth]{planning_efficiency.pdf}
+  \caption{\textbf{Higher success within the same interaction budget.} Cumulative held-out success under CEM. Curves use all seven shapes (top) and all seven visual conditions (bottom).}
+  \label{fig:efficiency_main}
+\end{figure}
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\linewidth]{deployment.pdf}
+  \caption{\textbf{Learning while deployed.} Online success of \ours over five rounds with targets resampled every round. Bands: variation across learning chains.}
+  \label{fig:deployment}
+\end{figure}

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05T17:52:22+08:00",
+  "checked_at": "2026-11-05T18:19:14+08:00",
   "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -14,8 +14,20 @@
     "appendix_appended": true,
     "appendix_start_page": 10,
     "architecture_figure_page": 3,
-    "deform_qualitative_page": 7,
-    "pdf_sha256": "7ea3e9b2167592df825900c6218cca43551c7d28c39046deca13d55e2919473b"
+    "deform_qualitative_page": 6,
+    "pdf_sha256": "fbcc824eafd2980798eb9741a8f60b4f2bee075a482b8d2954812b3ccf3106b3",
+    "main_table_page": 5,
+    "main_figure_pages": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 5,
+      "5": 6,
+      "6": 6,
+      "7": 6
+    },
+    "conclusion_page": 7,
+    "all_main_floats_precede_conclusion": true
   },
   "supplement": {
     "pages": 8,
@@ -24,7 +36,7 @@
       "LaTeX Warning: Text page 5 contains only floats."
     ],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "aa9a23209698f69c2db81ea264f089fe3ec371c471a84ff244d1148c8a73c394"
+    "pdf_sha256": "ee509646d41849b7b48deafc243d0d6ea7e6785282abebc625b7ac765c6e54c6"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -34,8 +46,16 @@
   "main_numbered_equations": 4,
   "pusht_audit": "data/pusht_audit.json",
   "reporting_overrides": "data/reporting_overrides.json",
-  "bibliography_entries": 31,
+  "bibliography_entries": 40,
   "bibliography_verification": "data/reference_verification.json",
   "abstract_matches_author_source": true,
-  "qualitative_selection": "data/revision_assets/selection_manifest.json"
+  "qualitative_selection": "data/revision_assets/selection_manifest.json",
+  "hardware_statement": {
+    "source": "Author instruction",
+    "systems": [
+      "8 x NVIDIA GeForce RTX 5090",
+      "8 x NVIDIA A100"
+    ],
+    "scope": "Model training and evaluation"
+  }
 }

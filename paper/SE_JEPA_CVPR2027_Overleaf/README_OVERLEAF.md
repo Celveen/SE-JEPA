@@ -70,3 +70,13 @@ these. The appendix retains additional complete trajectories.
 
 Before camera-ready release, supply author details, change the review option
 in `main.tex`, and reconcile the AI-use statement with all authors' tool use.
+
+## Current layout and bibliography
+
+The main comparison table is on page 5, the main result figures on pages 5–6,
+and Conclusion with Future work closes the main text on page 7. Result floats
+are declared early in `sec/5_result_floats.tex`; a float barrier before Conclusion
+keeps them ahead of the closing section. The bibliography has 40 cited entries,
+with primary-source checks recorded in `data/reference_verification.json`.
+Appendix A reports training and evaluation on systems with 8 NVIDIA GeForce
+RTX 5090 GPUs and 8 NVIDIA A100 GPUs, as supplied by the authors.

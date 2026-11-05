@@ -1,6 +1,9 @@
 \section{Implementation and Memory Management}
 \label{app:implementation}
 
+\paragraph{Compute environment.}
+Model training and evaluation were conducted on systems equipped with $8\times$ NVIDIA GeForce RTX 5090 GPUs and $8\times$ NVIDIA A100 GPUs.
+
 \subsection{Fast and slow learning}
 The label-free rigid-object configuration builds on the episodic adaptation loop of AdaJEPA~\cite{wang2026adajepa}. At every replan, the most recent observed transitions provide a self-supervised next-latent loss. The predictor's last block and the encoder's designated projection/head parameters are adapted with one Adam step. The episode-local predictor and encoder changes are reset at the next episode. A retrieved slow predictor supplies the predictor initialization; it does not replace the frozen reference encoder.
 
