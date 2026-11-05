@@ -18,5 +18,12 @@ baselines fail. DINO-WM PushT table entries remain blank awaiting author
 confirmation; its existing first-page bar is retained as requested.
 
 The revised layout places the main table on page 5 and all main result figures
-before Conclusion on page 7. The bibliography contains 40 cited references;
+before Conclusion on page 7. The bibliography contains 41 cited references;
 Appendix A records the author-supplied 8-GPU RTX 5090 and A100 compute systems.
+
+The backbone discussion distinguishes task-trained ResNet models on PushObj/PushT
+from DINO-WM on rope/granular. Main Figure 7 presents five-round unseen-shape
+and color-shift success together with four-pass rope/granular CD. Its archived
+counts and uncertainty definitions are in `data/learning_progress.json` within
+the source project. Future work includes improving planning as prediction
+accuracy and behavioral performance become decoupled later in deployment.

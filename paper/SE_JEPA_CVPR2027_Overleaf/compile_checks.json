@@ -1,21 +1,19 @@
 {
-  "checked_at": "2026-11-05T18:19:14+08:00",
+  "checked_at": "2026-11-05T19:20:15+08:00",
   "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
     "pages": 16,
     "unresolved_references": false,
-    "layout_warnings": [
-      "LaTeX Warning: Text page 14 contains only floats."
-    ],
+    "layout_warnings": [],
     "fonts_without_embedded_data": [],
     "main_text_pages": 7,
     "appendix_appended": true,
     "appendix_start_page": 10,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "fbcc824eafd2980798eb9741a8f60b4f2bee075a482b8d2954812b3ccf3106b3",
+    "pdf_sha256": "8cf9c41f3baeb39caa59fff9aeb2b960a70df5d390ecf26c030175605e6fd100",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -32,11 +30,9 @@
   "supplement": {
     "pages": 8,
     "unresolved_references": false,
-    "layout_warnings": [
-      "LaTeX Warning: Text page 5 contains only floats."
-    ],
+    "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "ee509646d41849b7b48deafc243d0d6ea7e6785282abebc625b7ac765c6e54c6"
+    "pdf_sha256": "aa7c81914a7a753a54e377d330a34e7b633759cd6858c4716bf4bbd3899c3d2c"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -46,7 +42,7 @@
   "main_numbered_equations": 4,
   "pusht_audit": "data/pusht_audit.json",
   "reporting_overrides": "data/reporting_overrides.json",
-  "bibliography_entries": 40,
+  "bibliography_entries": 41,
   "bibliography_verification": "data/reference_verification.json",
   "abstract_matches_author_source": true,
   "qualitative_selection": "data/revision_assets/selection_manifest.json",
@@ -57,5 +53,17 @@
       "8 x NVIDIA A100"
     ],
     "scope": "Model training and evaluation"
+  },
+  "learning_progress": {
+    "source": "data/learning_progress.json",
+    "figure": "figures/learning_progress.pdf",
+    "color_counts_match_independent_audit": true,
+    "shape_rounds": 5,
+    "color_rounds": 5,
+    "deform_passes": 4
+  },
+  "backbones": {
+    "PushObj/PushT": "Task-trained ResNet-based world models",
+    "Rope/Granular": "DINO-WM with pretrained DINOv2 features"
   }
 }

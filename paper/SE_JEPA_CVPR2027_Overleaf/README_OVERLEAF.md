@@ -45,6 +45,7 @@ Run these scripts in order when regenerating all figures:
 python tools/build_paper_assets.py
 python tools/restyle_paper_figures.py
 python tools/build_revision_assets.py
+python tools/build_learning_progress.py
 python tools/audit_pusht.py
 python tools/package_overleaf.py
 ```
@@ -76,7 +77,22 @@ in `main.tex`, and reconcile the AI-use statement with all authors' tool use.
 The main comparison table is on page 5, the main result figures on pages 5–6,
 and Conclusion with Future work closes the main text on page 7. Result floats
 are declared early in `sec/5_result_floats.tex`; a float barrier before Conclusion
-keeps them ahead of the closing section. The bibliography has 40 cited entries,
+keeps them ahead of the closing section. The bibliography has 41 cited entries, including the original ResNet paper,
 with primary-source checks recorded in `data/reference_verification.json`.
 Appendix A reports training and evaluation on systems with 8 NVIDIA GeForce
 RTX 5090 GPUs and 8 NVIDIA A100 GPUs, as supplied by the authors.
+
+## Backbone and learning-progress revision
+
+PushObj and PushT use task-trained ResNet-based world models; rope and granular
+use the DINO-WM backbone. Figure 7 in the main text combines five-round unseen
+shape and color-shift success with four-pass rope and granular CD. The top-row
+bands are sample SD across three learning chains; bottom-row bands are SEM
+over 50 fixed instances. The color plot aggregates only red agent, red object,
+and red goal, using archived successes and counts rather than seven-condition
+averages. `tools/build_learning_progress.py` writes its numerical audit to
+`data/learning_progress.json`. The fourth-pass deformable values come from the
+existing manuscript snapshot; the archived Drive qualitative package remains
+at the third pass. The Future work observation about later prediction/behavior
+saturation was provided by the authors and is not presented as a new quantified
+experiment.

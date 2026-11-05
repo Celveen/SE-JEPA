@@ -1,7 +1,7 @@
 \section{SE-JEPA}
 \label{sec:method}
 
-\ours couples episode-local adaptation with persistent predictive memory (Fig.~\ref{fig:architecture}). It keeps the pretrained encoder and predictor $(E_0,P_0)$ as a fixed reference and learns additional predictors from deployment experience. Each discovered domain stores a slow predictor $P_{\phi_k}$, a replay buffer $\replay_k$, an update-direction prototype, and a validation history.
+\ours turns episode-local corrections into reusable planning knowledge through replay in a fixed latent space, label-free domain discovery, and validation before retrieval (Fig.~\ref{fig:architecture}). It keeps the pretrained encoder and predictor $(E_0,P_0)$ as a fixed reference and learns additional predictors from deployment experience. Each discovered domain stores a slow predictor $P_{\phi_k}$, a replay buffer $\replay_k$, an update-direction prototype, and a validation history.
 
 \input{sec/3_problem}
 

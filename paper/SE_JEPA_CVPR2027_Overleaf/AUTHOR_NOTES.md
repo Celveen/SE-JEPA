@@ -92,3 +92,12 @@
 - 采用提前声明浮动体与结论前 FloatBarrier；官方样式、字号、行距和页边距不变。
 - 参考文献扩展为40篇实际引用，一手核验记录同步更新。
 - 按作者说明，附录A补充模型训练与测评使用8×NVIDIA GeForce RTX 5090及8×NVIDIA A100系统；未添加未经提供的显存、耗时或各任务硬件分配。
+
+## 跨 backbone 与完整学习曲线（2026-11-05）
+
+- 按作者确认，PushObj/PushT使用任务数据直接训练的ResNet模型；rope/granular使用DINO-WM。引言、贡献、实验设置、结果、结论和附录C统一说明，强调持续巩固在两类模型上的适用性，不将其写成同一权重跨backbone迁移。
+- 新正文图7：PushObj unseen与PushT三颜色偏移各5轮（GD/CEM），rope/granular各4遍CD。颜色曲线按90条原始域汇总记录重新聚合，每链每轮3×50个episode，三链均值±样本SD；变形任务使用50实例均值±SEM。
+- 第四遍变形数据取自冻结manuscript snapshot；未用旧delta/p-value字段，也不声称本次从第四遍逐实例日志重算。
+- 原始颜色记录、视觉backbone协议、形状轮次均已归档；所有图示数值与来源哈希在data/learning_progress.json中。
+- Future work保留无标签路由方向，并按作者观察增加后期预测精度提高但成功率趋稳、可改进规划时域和动作序列优化的方向；没有把该现象归因为已被实验单独证实的规划瓶颈。
+- 补原始ResNet引用后共41篇，约40篇的参考规模保持不变。

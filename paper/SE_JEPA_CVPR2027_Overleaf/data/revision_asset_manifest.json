@@ -151,8 +151,12 @@
     "data/revision_assets/selected_cases/shape_GD_I/ours.png": "4e872cbeef504ee1e3ca1c3f72a4c730e8b563b96f497f441ee33fa967a0bb92",
     "data/revision_assets/selected_cases/shape_GD_I/frozen.png": "733de1837308987ab7db9406686bdbba95f8af9e60e6cfa8a4b11f9a074203da",
     "data/revision_assets/selected_cases/shape_GD_I/case.json": "fa516303425db70303b129740a342092ab8d9648c176c1e7a17279c173f4d68a",
-    "data/revision_assets/selected_cases/shape_GD_I/start.png": "0285efc5e7ff0e31849f9aba5fb36fc5343e94d85bdb5f35fb1ac478ae913ece"
+    "data/revision_assets/selected_cases/shape_GD_I/start.png": "0285efc5e7ff0e31849f9aba5fb36fc5343e94d85bdb5f35fb1ac478ae913ece",
+    "data/revision_assets/visual_protocol.json": "abe743e6c29a5c0b05fc6fdd91a1e142a570e83375e8cb55b59f2e610879f57b",
+    "data/revision_assets/shape_learning_rounds.json": "1cef9ecd7df25af5721dde5df9bd3b6b50adb2711d97c99602787fc35668f212",
+    "data/revision_assets/visual_color_learning_records.json": "db0224d006a230f10773c627b26326a94c51072f921c849221bf7b62744e6371"
   },
   "latest_figures": "tools/restyle_paper_figures.py and tools/build_revision_assets.py",
-  "main_qualitative_selection": "data/revision_assets/selection_manifest.json"
+  "main_qualitative_selection": "data/revision_assets/selection_manifest.json",
+  "learning_progress": "data/learning_progress.json"
 }

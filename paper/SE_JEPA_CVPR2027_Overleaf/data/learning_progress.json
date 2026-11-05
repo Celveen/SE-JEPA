@@ -1,0 +1,468 @@
+{
+  "sources": {
+    "data/paper_snapshot.json": "29be26f8e6c61fd87f60927c7e95b9da4e78a3db92a9aead262549e9c47ff135",
+    "data/revision_assets/visual_color_learning_records.json": "db0224d006a230f10773c627b26326a94c51072f921c849221bf7b62744e6371"
+  },
+  "shape": {
+    "GD": [
+      {
+        "round": 1,
+        "mean": 60.444444444444436,
+        "sd": 2.5239592648001192,
+        "units": [
+          58.666666666666664,
+          59.333333333333336,
+          63.33333333333333
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 2,
+        "mean": 65.55555555555554,
+        "sd": 2.036700308869263,
+        "units": [
+          66.0,
+          63.33333333333333,
+          67.33333333333333
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 3,
+        "mean": 63.55555555555554,
+        "sd": 2.036700308869263,
+        "units": [
+          64.0,
+          65.33333333333333,
+          61.33333333333333
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 4,
+        "mean": 65.55555555555556,
+        "sd": 4.682512779045659,
+        "units": [
+          70.0,
+          60.66666666666667,
+          66.0
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 5,
+        "mean": 67.33333333333333,
+        "sd": 2.403700850309335,
+        "units": [
+          69.33333333333334,
+          64.66666666666666,
+          68.0
+        ],
+        "episodes": 450
+      }
+    ],
+    "CEM": [
+      {
+        "round": 1,
+        "mean": 60.22222222222222,
+        "sd": 2.5239592648001192,
+        "units": [
+          57.333333333333336,
+          61.33333333333333,
+          62.0
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 2,
+        "mean": 63.11111111111111,
+        "sd": 3.0061665018819292,
+        "units": [
+          60.0,
+          63.33333333333333,
+          66.0
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 3,
+        "mean": 65.55555555555556,
+        "sd": 1.0183501544346305,
+        "units": [
+          65.33333333333333,
+          64.66666666666666,
+          66.66666666666666
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 4,
+        "mean": 64.44444444444444,
+        "sd": 1.0183501544346305,
+        "units": [
+          65.33333333333333,
+          64.66666666666666,
+          63.33333333333333
+        ],
+        "episodes": 450
+      },
+      {
+        "round": 5,
+        "mean": 73.1111111111111,
+        "sd": 5.347204184673757,
+        "units": [
+          78.66666666666666,
+          72.66666666666667,
+          68.0
+        ],
+        "episodes": 450
+      }
+    ]
+  },
+  "color": {
+    "GD": [
+      {
+        "round": 1,
+        "mean": 44.44444444444445,
+        "sd": 2.1430335024428797,
+        "units": [
+          45.333333333333336,
+          42.0,
+          46.0
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 68,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 63,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 69,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "mean": 57.77777777777777,
+        "sd": 8.03695169778894,
+        "units": [
+          58.666666666666664,
+          49.333333333333336,
+          65.33333333333333
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 88,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 74,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 98,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "mean": 53.333333333333336,
+        "sd": 7.859884081701066,
+        "units": [
+          44.666666666666664,
+          55.333333333333336,
+          60.0
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 67,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 83,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 90,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "mean": 61.77777777777778,
+        "sd": 1.3877773329774237,
+        "units": [
+          63.333333333333336,
+          60.666666666666664,
+          61.333333333333336
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 95,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 91,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 92,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "mean": 62.0,
+        "sd": 4.055175020198815,
+        "units": [
+          60.0,
+          59.333333333333336,
+          66.66666666666667
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 90,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 89,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 100,
+            "episodes": 150
+          }
+        ]
+      }
+    ],
+    "CEM": [
+      {
+        "round": 1,
+        "mean": 44.666666666666664,
+        "sd": 5.456901847914965,
+        "units": [
+          43.333333333333336,
+          40.0,
+          50.666666666666664
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 65,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 60,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 76,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "mean": 60.22222222222222,
+        "sd": 0.38490017945974914,
+        "units": [
+          60.0,
+          60.0,
+          60.666666666666664
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 90,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 90,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 91,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "mean": 62.22222222222222,
+        "sd": 6.194382162118376,
+        "units": [
+          58.0,
+          69.33333333333333,
+          59.333333333333336
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 87,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 104,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 89,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "mean": 61.11111111111111,
+        "sd": 1.387777332977421,
+        "units": [
+          60.0,
+          62.666666666666664,
+          60.666666666666664
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 90,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 94,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 91,
+            "episodes": 150
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "mean": 67.77777777777777,
+        "sd": 2.036700308869263,
+        "units": [
+          67.33333333333333,
+          66.0,
+          70.0
+        ],
+        "episodes": 450,
+        "counts": [
+          {
+            "chain": 1,
+            "successes": 101,
+            "episodes": 150
+          },
+          {
+            "chain": 2,
+            "successes": 99,
+            "episodes": 150
+          },
+          {
+            "chain": 3,
+            "successes": 105,
+            "episodes": 150
+          }
+        ]
+      }
+    ]
+  },
+  "deform": {
+    "rope": {
+      "passes": [
+        {
+          "pass": 1,
+          "mean": 0.46890196062624456,
+          "se": 0.10031364237280826
+        },
+        {
+          "pass": 2,
+          "mean": 0.34209663420915604,
+          "se": 0.053500375712875324
+        },
+        {
+          "pass": 3,
+          "mean": 0.2820601865649223,
+          "se": 0.033294447398711326
+        },
+        {
+          "pass": 4,
+          "mean": 0.25248285837471485,
+          "se": 0.045245900707013995
+        }
+      ],
+      "DINO-WM": 0.490977,
+      "AdaJEPA": 0.629086
+    },
+    "granular": {
+      "passes": [
+        {
+          "pass": 1,
+          "mean": 0.25694493353366854,
+          "se": 0.0135402214318006
+        },
+        {
+          "pass": 2,
+          "mean": 0.23480176292359828,
+          "se": 0.01170135785366486
+        },
+        {
+          "pass": 3,
+          "mean": 0.22389636799693108,
+          "se": 0.009778403653321714
+        },
+        {
+          "pass": 4,
+          "mean": 0.22021083459258078,
+          "se": 0.011793324698068052
+        }
+      ],
+      "DINO-WM": 0.300553,
+      "AdaJEPA": 0.303736
+    }
+  },
+  "protocol": {
+    "shape": "PushObj I, square, small tee; new targets each round; 150 episodes per chain and round; three chains.",
+    "color": "PushT red agent, red object, red goal; new targets each round; 150 episodes per chain and round; three chains.",
+    "rigid_error": "Sample standard deviation across chain-level rates (ddof=1).",
+    "deform": "Slow learning rate 1e-4; same 50 instances revisited for four passes; mean CD and standard error from the reporting snapshot."
+  }
+}

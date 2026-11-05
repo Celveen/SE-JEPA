@@ -1,9 +1,9 @@
 % Keep the closing section together when the preceding column is nearly full.
-\Needspace{24\baselineskip}
+\Needspace{25\baselineskip}
 \section{Conclusion}
 \label{sec:conclusion}
 
-\ours makes deployment experience a lasting resource for latent planning. Fast adaptation handles the current episode; replay consolidates its transitions into predictors for self-discovered domains; prospective validation determines when those predictors enter the planning loop. This combination improves held-out success and reduces interactions on shape and visual shifts with both GD and CEM. Slow consolidation also improves rope and granular manipulation, demonstrating the value of persistent predictive memory for deformable dynamics. By retaining a fixed pretrained reference alongside learned experience, \ours provides a practical foundation for world models that continue learning through use.
+\ours makes deployment experience a lasting resource for latent planning. Fast adaptation handles the current episode; replay consolidates its transitions into predictors for self-discovered domains; prospective validation determines when those predictors enter the planning loop. This combination improves held-out success and reduces interactions on shape and visual shifts with both GD and CEM. The benefits span task-trained ResNet models for rigid-object manipulation and DINO-WM for deformable dynamics, demonstrating the broader applicability of persistent predictive memory. By retaining a fixed pretrained reference alongside learned experience, \ours provides a practical foundation for world models that continue learning through use.
 
 \paragraph{Future work.}
-Our label-free gate groups experience by predictive compatibility, which need not fully distinguish tasks with similar short-term dynamics. Improving task discrimination with longer interaction histories is a promising direction for more reliable routing and memory reuse across diverse tasks.
+Longer interaction histories could help label-free routing distinguish tasks with similar short-term dynamics. We also observe that late in deployment, prediction accuracy can continue improving while task success plateaus. This motivates improving planning alongside the world model, for example by adapting the planning horizon and action-sequence optimization to make better use of the learned dynamics.

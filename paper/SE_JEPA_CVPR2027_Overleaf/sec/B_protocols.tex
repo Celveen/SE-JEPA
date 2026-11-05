@@ -9,6 +9,8 @@ Each planner has three learned memory states. Every state is evaluated on all th
 \subsection{Visual shifts}
 The paired visual evaluation contains the original T condition, blur, salt-and-pepper noise, darkness, red agent, red object, and red goal. Three five-round learning chains resample targets every round, with 350 episodes per round. Held-out testing uses three target seeds and 50 episodes per condition. Direct checks of source-episode identifiers confirm that held-out sources never occur in the learning streams and that the three test seeds use disjoint sources.
 
+The color-learning curve in Fig.~\mainref{fig:deployment} aggregates red-agent, red-object, and red-goal episodes. For each round and learning chain, it sums successes over the three conditions and divides by 150 episodes, then reports the mean and sample standard deviation of the three chain-level rates. The three conditions share the same 50 source targets within a chain and round.
+
 The external visual baselines use the established VIS50 collection with planning seed 100. The external comparisons use its six shifted conditions, with 50 paired initial/goal states per condition.
 
 \subsection{Success and interaction counts}

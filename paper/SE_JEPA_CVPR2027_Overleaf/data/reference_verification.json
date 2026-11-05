@@ -3,7 +3,7 @@
   "bibliography": "references.bib",
   "verified_on": "2026-11-05",
   "verification_method": "Metadata checked against primary publisher/proceedings pages, author-hosted papers/project pages, or original arXiv records. Equivalent capitalization and abbreviated middle names are retained.",
-  "reference_count": 40,
+  "reference_count": 41,
   "references": [
     {
       "citation_key": "wang2026adajepa",
@@ -664,6 +664,26 @@
         "year"
       ],
       "relevance": "Distillation-based preservation of earlier behavior during continual learning."
+    },
+    {
+      "citation_key": "he2016resnet",
+      "title_bibtex": "Deep Residual Learning for Image Recognition",
+      "authors_bibtex": "He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian",
+      "venue": "IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2016,
+      "primary_sources": [
+        "https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html",
+        "https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year",
+        "pages"
+      ],
+      "pages": "770--778",
+      "relevance": "Original ResNet architecture used by the task-trained PushObj and PushT backbones."
     }
   ]
 }

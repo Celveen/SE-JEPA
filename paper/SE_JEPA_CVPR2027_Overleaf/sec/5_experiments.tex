@@ -4,8 +4,8 @@
 \subsection{Setup}
 \label{sec:setup}
 
-\paragraph{Tasks.}
-\emph{PushObj} has seven object shapes. Our backbone is pretrained on T, L, Z, and plus; I, square, and small tee are unseen. \emph{PushT} covers the original condition and six appearance shifts: blur, salt-and-pepper noise, darkness, and a red agent, object, or goal. \emph{Rope} and \emph{granular} manipulation use the deformable simulation of prior world-model work~\cite{zhou2024dinowm,lin2020softgym}.
+\paragraph{Tasks and backbones.}
+\emph{PushObj} and \emph{PushT} use ResNet-based world models~\cite{he2016resnet} trained directly on task trajectories. PushObj has seven shapes: T, L, Z, and plus are used in pretraining; I, square, and small tee are unseen. PushT covers the original condition and six appearance shifts: blur, noise, darkness, and a red agent, object, or goal. \emph{Rope} and \emph{granular} use DINO-WM with pretrained DINOv2 features in deformable simulation~\cite{zhou2024dinowm,oquab2024dinov2,lin2020softgym}. These settings test persistent learning with both task-trained convolutional features and pretrained transformer features.
 
 \paragraph{Deployment and evaluation.}
 For PushObj and PushT, \ours learns from streams of five rounds with 50 episodes per shape or condition, resampling targets every round, with three learning chains per planner. We then freeze each final memory and evaluate it on independent held-out targets: three test seeds with 50 episodes per shape or condition, whose source episodes never appear in the learning streams. For rope and granular, \ours consolidates a single slow predictor per task over four passes on 50 instances, planning with the slow predictor alone.
@@ -16,13 +16,13 @@ Frozen planning and AdaJEPA~\cite{wang2026adajepa} isolate the effect of episodi
 \subsection{Remembered experience improves held-out planning}
 \label{sec:sota}
 
-Table~\ref{tab:main} places the benefit of persistent memory in the context of recent world models. The paired comparison with AdaJEPA shows gains in both success and interaction efficiency. On PushObj it reaches 79.1\% success, 8.7 points above AdaJEPA and 15 points above the best frozen world model, LeWM. The margin widens on unseen shapes, 69.9\% against 54.4\%, exactly where a fixed predictor is most wrong and remembered corrections help most. \ours also finishes faster: 13.53 replans on average against 16.02 for AdaJEPA, a 16\% reduction in interaction.
+Table~\ref{tab:main} places the benefit of persistent memory in the context of recent world models. The paired comparison with AdaJEPA shows gains in both success and interaction efficiency. On PushObj it reaches 79.1\% success, 8.7 points above AdaJEPA and 15 points above the best frozen world model, LeWM. The margin widens on unseen shapes, 69.9\% against 54.4\%, showing that deployment experience is particularly valuable for shapes absent from pretraining. \ours also finishes faster: 13.53 replans on average against 16.02 for AdaJEPA, a 16\% reduction in interaction.
 
 The visual shifts show the clearest gap. Averaged over six shifts, \ours reaches 76.1\% against 60.2\% for AdaJEPA. The largest gains over episodic adaptation occur under object and goal recoloring; \ours raises red-object success from 14.0\% to 47.1\% and red-goal success from 41.3\% to 68.9\%. It improves on all seven conditions, including the original one (\supref{D}).
 
 The gains hold for gradient-based planning. With GD, \ours reaches 81.6\% on PushObj (AdaJEPA: 72.2\%) and 72.4\% on unseen shapes (55.3\%), and 75.7\% across the seven visual conditions (58.7\%), while cutting mean replans from 14.52 to 11.30 and from 17.96 to 13.21.
 
-On deformable objects, \ours reduces Chamfer distance to 0.252 on rope and 0.220 on granular material. This is 49\% and 27\% below the DINO-WM model it builds on, with the lowest reported CD among the methods in Table~\ref{tab:main}. Fast adaptation is switched off in this setting, so the improvement comes entirely from consolidated knowledge.
+On deformable objects, \ours reduces Chamfer distance to 0.252 on rope and 0.220 on granular material. This is 49\% and 27\% below the DINO-WM model it builds on, with the lowest reported CD among the methods in Table~\ref{tab:main}. With fast adaptation switched off, these improvements isolate the value of slow consolidation in the DINO-WM setting. Together with the ResNet results, they establish that persistent predictive memory is effective across two backbone families and distinct manipulation dynamics.
 
 Remembered experience also makes each interaction more productive (Fig.~\ref{fig:efficiency_main}). The cumulative success curves show how the benefit develops across the planning budget, complementing the mean replan counts in Table~\ref{tab:main}.
 
@@ -36,6 +36,6 @@ Figure~\ref{fig:deform_qualitative} extends the behavioral evidence to deformabl
 \subsection{Stronger with deployment}
 \label{sec:deployment}
 
-Figure~\ref{fig:deployment} tracks knowledge accumulation during deployment, with new targets in every round. With CEM, unseen-shape success rises from 60.2\% in the first round to 73.1\% in the fifth, and success over the seven visual conditions from 67.1\% to 79.0\%. GD follows the same trend, from 60.4\% to 67.3\% and from 69.1\% to 75.8\%.
+Figure~\ref{fig:deployment} shows how experience improves both backbone families. Over five deployment rounds with resampled targets, CEM unseen-shape success rises from 60.2\% to 73.1\%, while success over the three PushT color shifts rises from 44.7\% to 67.8\%. GD also improves, from 60.4\% to 67.3\% on unseen shapes and from 44.4\% to 62.0\% on color shifts. Each curve reports online performance during learning; the main table separately measures transfer to held-out targets.
 
-Deformable manipulation shows the same behavior (Fig.~\ref{fig:deform_passes}). Rope CD falls from 0.469 after the first pass to 0.252 after the fourth, and granular CD from 0.257 to 0.220, with both curves well below the pretrained DINO-WM. The knowledge also transfers to new instances: a rope predictor saved after the first pass, frozen and tested on 91 unseen instances, lowers CD from 0.664 to 0.349.
+The DINO-WM models benefit from repeated consolidation on deformable objects (Fig.~\ref{fig:deployment}, bottom). Rope CD falls from 0.469 after the first pass to 0.252 after the fourth, and granular CD from 0.257 to 0.220. The benefit extends beyond the repeated instances: a rope predictor frozen after its first pass lowers CD from 0.664 to 0.349 on 91 unseen instances. Together, these results show that accumulated transitions improve planning under new shapes, altered appearance, and deformable dynamics.
