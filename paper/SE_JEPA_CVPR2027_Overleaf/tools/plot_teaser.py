@@ -82,6 +82,16 @@ def plot_teaser(data, output_dir):
                                 fontsize=6.6, weight="bold", color="white",
                                 bbox={"facecolor": COLORS[method], "edgecolor": "none",
                                       "boxstyle": "square,pad=0.03"})
+                else:
+                    # Leave space to the right for a full label, even if a
+                    # future data edit brings a baseline close to 100%.
+                    inside = value > 71
+                    ax.annotate(f"{value:.1f}", (value, j),
+                                (-1.5 if inside else 1.5, 0), textcoords="offset points",
+                                ha="right" if inside else "left", va="center",
+                                fontsize=6.6, color="#213345",
+                                bbox={"facecolor": "white", "edgecolor": "none",
+                                      "boxstyle": "square,pad=0.03"})
         fig.text(.602, .045, "Held-out success (%)", ha="center", fontsize=7.2,
                  color="#253648")
         for extension in ("pdf", "svg", "png"):
