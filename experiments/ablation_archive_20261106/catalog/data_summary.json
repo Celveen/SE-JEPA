@@ -1,0 +1,1940 @@
+{
+  "experiments": [
+    {
+      "name": "shape_naive_gd_n50_3x5_heldout_20261031",
+      "formal_batches": 168,
+      "formal_episodes": 8400,
+      "estimated_selected_bytes": 251591295,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "naive",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1082,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.6182857142857143,
+          "mpc_steps_all": 16.84057142857143
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "naive",
+          "chain": 2,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1093,
+          "seeds": [
+            1200,
+            1300,
+            400,
+            500,
+            600
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.6245714285714286,
+          "mpc_steps_all": 16.648
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "naive",
+          "chain": 3,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1085,
+          "seeds": [
+            1400,
+            1500,
+            700,
+            800,
+            900
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.62,
+          "mpc_steps_all": 16.744
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "naive",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 679,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.6466666666666666,
+          "mpc_steps_all": 16.11904761904762
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "naive",
+          "chain": 2,
+          "batches": 21,
+          "n": 1050,
+          "successes": 704,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.6704761904761904,
+          "mpc_steps_all": 15.481904761904762
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "naive",
+          "chain": 3,
+          "batches": 21,
+          "n": 1050,
+          "successes": 694,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.660952380952381,
+          "mpc_steps_all": 15.914285714285715
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "shape_core_gd_singlechain_5round_20261031",
+      "formal_batches": 245,
+      "formal_episodes": 12250,
+      "estimated_selected_bytes": 444245133,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "no_maturity_read",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1345,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7685714285714286,
+          "mpc_steps_all": 12.488
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "shared_slow",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1346,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7691428571428571,
+          "mpc_steps_all": 12.418285714285714
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "slow_lr_high",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1327,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7582857142857143,
+          "mpc_steps_all": 12.770857142857142
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "slow_lr_low",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1352,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7725714285714286,
+          "mpc_steps_all": 12.372
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "adajepa_same",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 808,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            null
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7695238095238095,
+          "mpc_steps_all": 12.54
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "no_maturity_read",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 849,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.8085714285714286,
+          "mpc_steps_all": 11.455238095238096
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "shared_slow",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 853,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.8123809523809524,
+          "mpc_steps_all": 11.413333333333334
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "slow_lr_high",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 865,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.8238095238095238,
+          "mpc_steps_all": 11.262857142857143
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "slow_lr_low",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 836,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7961904761904762,
+          "mpc_steps_all": 11.791428571428572
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "shape_slow_lr_extended_gd_singlechain_5round_20261101",
+      "formal_batches": 112,
+      "formal_episodes": 5600,
+      "estimated_selected_bytes": 260596593,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "slow_lr_1e2",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1282,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7325714285714285,
+          "mpc_steps_all": 13.307428571428572
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "slow_lr_5e4",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1292,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7382857142857143,
+          "mpc_steps_all": 13.317714285714287
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "slow_lr_1e2",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 808,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7695238095238095,
+          "mpc_steps_all": 12.54
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "slow_lr_5e4",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 823,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7838095238095238,
+          "mpc_steps_all": 12.39904761904762
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "shape_slow_lr_3e4_gd_singlechain_5round_20261102",
+      "formal_batches": 56,
+      "formal_episodes": 2800,
+      "estimated_selected_bytes": 117571549,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "slow_lr_3e4",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1318,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7531428571428571,
+          "mpc_steps_all": 12.898857142857143
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "slow_lr_3e4",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 846,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.8057142857142857,
+          "mpc_steps_all": 11.724761904761905
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "shape_ema_slow_gd_singlechain_5round_20261101",
+      "formal_batches": 56,
+      "formal_episodes": 2800,
+      "estimated_selected_bytes": 81560578,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "ema_slow",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1304,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7451428571428571,
+          "mpc_steps_all": 13.165714285714285
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "ema_slow",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 795,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7571428571428571,
+          "mpc_steps_all": 12.838095238095239
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "shape_no_familiarity_gd_singlechain_5round_20261104",
+      "formal_batches": 56,
+      "formal_episodes": 2800,
+      "estimated_selected_bytes": 130500485,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "no_familiarity",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1363,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7788571428571428,
+          "mpc_steps_all": 12.232571428571429
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "no_familiarity",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 873,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.8314285714285714,
+          "mpc_steps_all": 10.89904761904762
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "shape_familiarity_split_gd_singlechain_5round_20261105",
+      "formal_batches": 168,
+      "formal_episodes": 8400,
+      "estimated_selected_bytes": 387508267,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "CEM",
+          "method": "no_familiarity",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1340,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7657142857142857,
+          "mpc_steps_all": 14.156571428571429
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "no_familiar_read",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1359,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7765714285714286,
+          "mpc_steps_all": 12.290857142857142
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "no_familiar_write",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1356,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7748571428571429,
+          "mpc_steps_all": 12.284571428571429
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "no_familiarity",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 836,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7961904761904762,
+          "mpc_steps_all": 13.12
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "no_familiar_read",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 808,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7695238095238095,
+          "mpc_steps_all": 12.54
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "no_familiar_write",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 834,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "I",
+            "L",
+            "T",
+            "Z",
+            "plus",
+            "small_tee",
+            "square"
+          ],
+          "success_rate": 0.7942857142857143,
+          "mpc_steps_all": 11.755238095238095
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "visual_shape_protocol_3x5_heldout_20261029",
+      "formal_batches": 420,
+      "formal_episodes": 21000,
+      "estimated_selected_bytes": 939986295,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1295,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.74,
+          "mpc_steps_all": 14.918857142857142
+        },
+        {
+          "phase": "learn",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1289,
+          "seeds": [
+            1200,
+            1300,
+            400,
+            500,
+            600
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7365714285714285,
+          "mpc_steps_all": 14.8
+        },
+        {
+          "phase": "learn",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1329,
+          "seeds": [
+            1400,
+            1500,
+            700,
+            800,
+            900
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7594285714285715,
+          "mpc_steps_all": 13.978285714285715
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1277,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7297142857142858,
+          "mpc_steps_all": 13.818857142857143
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1289,
+          "seeds": [
+            1200,
+            1300,
+            400,
+            500,
+            600
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7365714285714285,
+          "mpc_steps_all": 13.629714285714286
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1338,
+          "seeds": [
+            1400,
+            1500,
+            700,
+            800,
+            900
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7645714285714286,
+          "mpc_steps_all": 12.782285714285715
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "adajepa",
+          "chain": 0,
+          "batches": 21,
+          "n": 1050,
+          "successes": 661,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            null
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.6295238095238095,
+          "mpc_steps_all": 17.86857142857143
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "frozen",
+          "chain": 0,
+          "batches": 21,
+          "n": 1050,
+          "successes": 534,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            null
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.5085714285714286,
+          "mpc_steps_all": 19.559047619047618
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 823,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7838095238095238,
+          "mpc_steps_all": 13.885714285714286
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 21,
+          "n": 1050,
+          "successes": 818,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7790476190476191,
+          "mpc_steps_all": 14.02095238095238
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 21,
+          "n": 1050,
+          "successes": 786,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7485714285714286,
+          "mpc_steps_all": 14.542857142857143
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "adajepa",
+          "chain": 0,
+          "batches": 21,
+          "n": 1050,
+          "successes": 616,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            null
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.5866666666666667,
+          "mpc_steps_all": 17.957142857142856
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "frozen",
+          "chain": 0,
+          "batches": 21,
+          "n": 1050,
+          "successes": 463,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            null
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.44095238095238093,
+          "mpc_steps_all": 19.938095238095237
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 781,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7438095238095238,
+          "mpc_steps_all": 13.541904761904762
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 21,
+          "n": 1050,
+          "successes": 804,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7657142857142857,
+          "mpc_steps_all": 12.925714285714285
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 21,
+          "n": 1050,
+          "successes": 799,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7609523809523809,
+          "mpc_steps_all": 13.174285714285714
+        }
+      ],
+      "raw_problems": []
+    },
+    {
+      "name": "visual_slow_lr_2e4_3x5_heldout_20261102",
+      "formal_batches": 336,
+      "formal_episodes": 16800,
+      "estimated_selected_bytes": 883067822,
+      "groups": [
+        {
+          "phase": "learn",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1279,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7308571428571429,
+          "mpc_steps_all": 15.16
+        },
+        {
+          "phase": "learn",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1295,
+          "seeds": [
+            1200,
+            1300,
+            400,
+            500,
+            600
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.74,
+          "mpc_steps_all": 14.916571428571428
+        },
+        {
+          "phase": "learn",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1364,
+          "seeds": [
+            1400,
+            1500,
+            700,
+            800,
+            900
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7794285714285715,
+          "mpc_steps_all": 13.633714285714285
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1234,
+          "seeds": [
+            100,
+            1000,
+            1100,
+            200,
+            300
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7051428571428572,
+          "mpc_steps_all": 14.419428571428572
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1300,
+          "seeds": [
+            1200,
+            1300,
+            400,
+            500,
+            600
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7428571428571429,
+          "mpc_steps_all": 13.506285714285715
+        },
+        {
+          "phase": "learn",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 35,
+          "n": 1750,
+          "successes": 1335,
+          "seeds": [
+            1400,
+            1500,
+            700,
+            800,
+            900
+          ],
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7628571428571429,
+          "mpc_steps_all": 12.849142857142857
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 791,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7533333333333333,
+          "mpc_steps_all": 14.59142857142857
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 21,
+          "n": 1050,
+          "successes": 806,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7676190476190476,
+          "mpc_steps_all": 14.331428571428571
+        },
+        {
+          "phase": "test",
+          "optimizer": "CEM",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 21,
+          "n": 1050,
+          "successes": 797,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7590476190476191,
+          "mpc_steps_all": 14.445714285714285
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 1,
+          "batches": 21,
+          "n": 1050,
+          "successes": 786,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7485714285714286,
+          "mpc_steps_all": 13.352380952380953
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 2,
+          "batches": 21,
+          "n": 1050,
+          "successes": 807,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7685714285714286,
+          "mpc_steps_all": 12.860952380952382
+        },
+        {
+          "phase": "test",
+          "optimizer": "GD",
+          "method": "v6a",
+          "chain": 3,
+          "batches": 21,
+          "n": 1050,
+          "successes": 797,
+          "seeds": [
+            2000,
+            2100,
+            2200
+          ],
+          "rounds": [
+            5
+          ],
+          "domains": [
+            "blur",
+            "dark",
+            "default",
+            "red_agent",
+            "red_goal",
+            "red_object",
+            "snp1"
+          ],
+          "success_rate": 0.7590476190476191,
+          "mpc_steps_all": 13.071428571428571
+        }
+      ],
+      "raw_problems": []
+    }
+  ],
+  "formal_batches": 1617,
+  "formal_episodes": 80850,
+  "result_file_counts": {
+    "adajepa_losses.csv": 1575,
+    "audit.json": 1617,
+    "command.json": 1617,
+    "console.log": 1617,
+    "episodes.jsonl": 945,
+    "export_manifest.json": 1617,
+    "final_eval_results.npz": 1617,
+    "inheritance_audit.json": 189,
+    "inheritance_definition.json": 189,
+    "local_backup_receipt.json": 1542,
+    "logs.json": 1617,
+    "per_iter_logs.json": 1617,
+    "plan.log": 1617,
+    "plan_targets.pkl.gz": 1617,
+    "run_metadata.json": 1617,
+    "target_archive.json": 1617,
+    "ablation_audit.json": 616,
+    "continual_episodes.jsonl": 1288,
+    "probe_meta.json": 1288,
+    "local_state_retired.json": 387,
+    "ema_audit.json": 56,
+    "ema_definition.json": 56,
+    "checkpoint_retention.json": 12,
+    "server_backup_receipt.json": 78,
+    "source_export_manifest.json": 78,
+    "offline_local_backup_receipt.json": 75,
+    "round_checkpoint_archive.json": 3,
+    "live_episodes.jsonl": 672,
+    "state_load_audit.json": 672,
+    "paired_noise.jsonl": 108,
+    "model_reset_audit.json": 84,
+    "slow_applied.json": 42,
+    "readonly_audit.json": 252,
+    "slow_lr_audit.json": 336
+  },
+  "reference_availability": "reference_availability.json",
+  "note": "Size estimate removes model weights, smoke/validation, known duplicate recovery trees and source/deployment archives, old_experiment_backup, and __pycache__. It retains source_snapshot_launched.tar.gz.",
+  "estimated_selected_bytes": 3496628017
+}

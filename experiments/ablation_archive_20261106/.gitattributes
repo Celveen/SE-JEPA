@@ -1,0 +1,3 @@
+packages/** -text -diff
+preview/*.pdf -text -diff
+preview/charts/** -text -diff

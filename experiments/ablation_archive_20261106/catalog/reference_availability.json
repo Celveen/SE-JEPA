@@ -1,0 +1,113 @@
+{
+  "source_archive_remote": "/home/tyy/jepa/shape-data/unzip_20261029175018744_Docs_shape-20261029T094829Z-1-001_5fa546/Docs_shape/Python绘图源码与数据.zip",
+  "local_archive": "D:\\ADAJEPA\\outputs\\github_ablation_archive_20261106\\reference_source\\Python绘图源码与数据.zip",
+  "archive_bytes": 7915231,
+  "server_sha256": "b0bc91ec8bd1b00089401fddf06a976bf0267333d4d5f4c9e50cec5ba4ab3762",
+  "local_sha256": "b0bc91ec8bd1b00089401fddf06a976bf0267333d4d5f4c9e50cec5ba4ab3762",
+  "verified": true,
+  "episode_csv_records": 10500,
+  "episode_csv_fields": [
+    "planner",
+    "method",
+    "unit",
+    "seed",
+    "shape",
+    "sample_idx",
+    "success",
+    "success_step",
+    "mpc_steps"
+  ],
+  "source_batches": 210,
+  "full_original_results_npz_count": 0,
+  "example_trajectory_npz_count": 14,
+  "example_trajectory_paths": [
+    "shape_shift_figs/replay/CEM/I/frozen/trajectory.npz",
+    "shape_shift_figs/replay/CEM/L/frozen/trajectory.npz",
+    "shape_shift_figs/replay/CEM/T/frozen/trajectory.npz",
+    "shape_shift_figs/replay/CEM/Z/frozen/trajectory.npz",
+    "shape_shift_figs/replay/CEM/plus/frozen/trajectory.npz",
+    "shape_shift_figs/replay/CEM/small_tee/frozen/trajectory.npz",
+    "shape_shift_figs/replay/CEM/square/frozen/trajectory.npz",
+    "shape_shift_figs/replay/GD/I/frozen/trajectory.npz",
+    "shape_shift_figs/replay/GD/L/frozen/trajectory.npz",
+    "shape_shift_figs/replay/GD/T/frozen/trajectory.npz",
+    "shape_shift_figs/replay/GD/Z/frozen/trajectory.npz",
+    "shape_shift_figs/replay/GD/plus/frozen/trajectory.npz",
+    "shape_shift_figs/replay/GD/small_tee/frozen/trajectory.npz",
+    "shape_shift_figs/replay/GD/square/frozen/trajectory.npz"
+  ],
+  "groups": [
+    {
+      "planner": "GD",
+      "method": "frozen",
+      "unit": "official",
+      "n": 1050
+    },
+    {
+      "planner": "GD",
+      "method": "adajepa",
+      "unit": "official",
+      "n": 1050
+    },
+    {
+      "planner": "GD",
+      "method": "ours",
+      "unit": "s100",
+      "n": 1050
+    },
+    {
+      "planner": "GD",
+      "method": "ours",
+      "unit": "s400",
+      "n": 1050
+    },
+    {
+      "planner": "GD",
+      "method": "ours",
+      "unit": "s700",
+      "n": 1050
+    },
+    {
+      "planner": "CEM",
+      "method": "frozen",
+      "unit": "official",
+      "n": 1050
+    },
+    {
+      "planner": "CEM",
+      "method": "adajepa",
+      "unit": "official",
+      "n": 1050
+    },
+    {
+      "planner": "CEM",
+      "method": "ours",
+      "unit": "s100",
+      "n": 1050
+    },
+    {
+      "planner": "CEM",
+      "method": "ours",
+      "unit": "s400",
+      "n": 1050
+    },
+    {
+      "planner": "CEM",
+      "method": "ours",
+      "unit": "s700",
+      "n": 1050
+    }
+  ],
+  "availability_note": "The supplied original shape-report archive provides all 10,500 episode-level statistics and 210 source-batch paths with SHA256 digests. It does not provide the full original final_eval_results.npz files containing actions and initial/goal states. Its 14 trajectory.npz files are Frozen replay examples (one per planner and shape) only. The newly run ablations and two visual experiments separately contain their complete formal raw NPZ files (1,617 batches / 80,850 episodes), verified in data_inventory.json.",
+  "reproducible_from_csv": [
+    "success rates by planner/method/unit/seed/shape",
+    "MPC steps including failures capped at30",
+    "cumulative successes by MPC step",
+    "paired episode identities (seed,shape,sample_idx)"
+  ],
+  "not_available_from_original_shape_report": [
+    "all original action arrays",
+    "all original initial and goal state arrays",
+    "all original per-step learner logs"
+  ]
+}

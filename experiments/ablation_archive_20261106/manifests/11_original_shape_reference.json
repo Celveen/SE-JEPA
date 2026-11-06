@@ -1,0 +1,16 @@
+{
+  "package": "11_original_shape_reference",
+  "files": [
+    {
+      "path": "reference_original_shape/Python绘图源码与数据.zip",
+      "bytes": 7915231,
+      "sha256": "b0bc91ec8bd1b00089401fddf06a976bf0267333d4d5f4c9e50cec5ba4ab3762"
+    },
+    {
+      "path": "reference_original_shape/reference_availability.json",
+      "bytes": 3791,
+      "sha256": "dab1a1945d241680a0fa4119dc9d393cbd1d04e16a44bcafeba69bdb648cf1a1"
+    }
+  ],
+  "scope": "Original historical shape reference: full per-episode statistics; only 14 demonstration trajectories, not complete original actions/states"
+}

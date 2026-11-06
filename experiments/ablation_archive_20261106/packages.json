@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "created": "2026-11-06",
+  "packages": [
+    {
+      "name": "01_shape_naive_gd_n50_3x5_heldout_20261031",
+      "archive": "01_shape_naive_gd_n50_3x5_heldout_20261031.zip",
+      "archive_bytes": 78725329,
+      "archive_sha256": "89e5d0545a44f38ce396eb59d224469e9306a3428b1b5ab8ecf12c6e37aeae2c",
+      "files": 3688,
+      "uncompressed_bytes": 254336873,
+      "parts": [
+        {
+          "file": "packages/01_shape_naive_gd_n50_3x5_heldout_20261031.zip.001",
+          "bytes": 50331648,
+          "sha256": "b1bdb63f60dd07ba6063143f529d8fb408eb8a6893669b271ee8d96e17d60299"
+        },
+        {
+          "file": "packages/01_shape_naive_gd_n50_3x5_heldout_20261031.zip.002",
+          "bytes": 28393681,
+          "sha256": "642c308606ac6529b182042cff3974af921be41b5b7a5905dc7e4371631803c1"
+        }
+      ],
+      "experiment": "shape_naive_gd_n50_3x5_heldout_20261031",
+      "verified_batches": 168,
+      "verified_episodes": 8400,
+      "source_snapshot_sha256": "0432677a63ac035c078074bd602960f858f4e2cf552b245f3531a5749b37f48b",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "02_shape_core_gd_singlechain_5round_20261031",
+      "archive": "02_shape_core_gd_singlechain_5round_20261031.zip",
+      "archive_bytes": 137151835,
+      "archive_sha256": "2f627bdd3464e60ec26983592c5183f8ddefc40079e948996833f88943783173",
+      "files": 5323,
+      "uncompressed_bytes": 447777760,
+      "parts": [
+        {
+          "file": "packages/02_shape_core_gd_singlechain_5round_20261031.zip.001",
+          "bytes": 50331648,
+          "sha256": "74d07e50ece21614fd89582b57f5acd36ae0875ff43f35edc7c380ae54efc9f5"
+        },
+        {
+          "file": "packages/02_shape_core_gd_singlechain_5round_20261031.zip.002",
+          "bytes": 50331648,
+          "sha256": "7320c5a8189fa8b9444a07cf3195c3f472060dab1f1700167ad412341f5423f6"
+        },
+        {
+          "file": "packages/02_shape_core_gd_singlechain_5round_20261031.zip.003",
+          "bytes": 36488539,
+          "sha256": "ac14206e487146ab37ef02c04dfbd0e7db731f8863f7330f3aa73d0b9effb5b1"
+        }
+      ],
+      "experiment": "shape_core_gd_singlechain_5round_20261031",
+      "verified_batches": 245,
+      "verified_episodes": 12250,
+      "source_snapshot_sha256": "6c2a52ade945d4e51a90f8084455f461ee195faa5dca9f0d4f3db938722b7f17",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "03_shape_slow_lr_extended_gd_singlechain_5round_20261101",
+      "archive": "03_shape_slow_lr_extended_gd_singlechain_5round_20261101.zip",
+      "archive_bytes": 72936780,
+      "archive_sha256": "e41ee18df1ff3d91e68e5c30b9369321bd3b42e09b8fc5b95254e9d0eca24244",
+      "files": 2859,
+      "uncompressed_bytes": 263834611,
+      "parts": [
+        {
+          "file": "packages/03_shape_slow_lr_extended_gd_singlechain_5round_20261101.zip.001",
+          "bytes": 50331648,
+          "sha256": "68335d975f95dd6237c0d3167ba0493bb48ef61c1c2681111a8700093beffeb0"
+        },
+        {
+          "file": "packages/03_shape_slow_lr_extended_gd_singlechain_5round_20261101.zip.002",
+          "bytes": 22605132,
+          "sha256": "1b1867944a29b376956218fe5d4ab4b5302b87e9bf0001325fc83f4b4ad52157"
+        }
+      ],
+      "experiment": "shape_slow_lr_extended_gd_singlechain_5round_20261101",
+      "verified_batches": 112,
+      "verified_episodes": 5600,
+      "source_snapshot_sha256": "d718aaeb67f98b2126b663d78e20ed8c084bea56bdde3b5e51a7d72d514829c2",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "04_shape_slow_lr_3e4_gd_singlechain_5round_20261102",
+      "archive": "04_shape_slow_lr_3e4_gd_singlechain_5round_20261102.zip",
+      "archive_bytes": 39543459,
+      "archive_sha256": "441677cc4337242c040cb5ee4928fec0217fb1834c6f9e818d1d67c39f007d5b",
+      "files": 1780,
+      "uncompressed_bytes": 120790002,
+      "parts": [
+        {
+          "file": "packages/04_shape_slow_lr_3e4_gd_singlechain_5round_20261102.zip",
+          "bytes": 39543459,
+          "sha256": "441677cc4337242c040cb5ee4928fec0217fb1834c6f9e818d1d67c39f007d5b"
+        }
+      ],
+      "experiment": "shape_slow_lr_3e4_gd_singlechain_5round_20261102",
+      "verified_batches": 56,
+      "verified_episodes": 2800,
+      "source_snapshot_sha256": "763f923753b0cb240ced573cbb241d7fe5fd54fdecf5af2326f01fd1f6a90e9a",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "05_shape_ema_slow_gd_singlechain_5round_20261101",
+      "archive": "05_shape_ema_slow_gd_singlechain_5round_20261101.zip",
+      "archive_bytes": 30601494,
+      "archive_sha256": "f89c23577b2f8167aaed4a7abd0182db4f38cc06f1c5c4ea4c633f99a429b4dc",
+      "files": 1694,
+      "uncompressed_bytes": 84720215,
+      "parts": [
+        {
+          "file": "packages/05_shape_ema_slow_gd_singlechain_5round_20261101.zip",
+          "bytes": 30601494,
+          "sha256": "f89c23577b2f8167aaed4a7abd0182db4f38cc06f1c5c4ea4c633f99a429b4dc"
+        }
+      ],
+      "experiment": "shape_ema_slow_gd_singlechain_5round_20261101",
+      "verified_batches": 56,
+      "verified_episodes": 2800,
+      "source_snapshot_sha256": "61531bcf5f01071b01c60980ca048c8809ad76c9dafd16f835ff885257724280",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "06_shape_no_familiarity_gd_singlechain_5round_20261104",
+      "archive": "06_shape_no_familiarity_gd_singlechain_5round_20261104.zip",
+      "archive_bytes": 40749003,
+      "archive_sha256": "183ea482ffd0cba21a74bbd3a2c802020832c11c6bc2d345cb247e679b5faab3",
+      "files": 1788,
+      "uncompressed_bytes": 133345317,
+      "parts": [
+        {
+          "file": "packages/06_shape_no_familiarity_gd_singlechain_5round_20261104.zip",
+          "bytes": 40749003,
+          "sha256": "183ea482ffd0cba21a74bbd3a2c802020832c11c6bc2d345cb247e679b5faab3"
+        }
+      ],
+      "experiment": "shape_no_familiarity_gd_singlechain_5round_20261104",
+      "verified_batches": 56,
+      "verified_episodes": 2800,
+      "source_snapshot_sha256": "0fb08c4fedadccecd59dd43064aa351cb217d1cc78f51016bdcee4287562b14f",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "07_shape_familiarity_split_gd_singlechain_5round_20261105",
+      "archive": "07_shape_familiarity_split_gd_singlechain_5round_20261105.zip",
+      "archive_bytes": 106261024,
+      "archive_sha256": "85b4537dfdba5fc62941b013cf7823313adc75c2d35157d41155a990ec85aae1",
+      "files": 4167,
+      "uncompressed_bytes": 385850862,
+      "parts": [
+        {
+          "file": "packages/07_shape_familiarity_split_gd_singlechain_5round_20261105.zip.001",
+          "bytes": 50331648,
+          "sha256": "7e5c7afb5d0bc047d32a6a8b21d33a3f90fc969b7cd3696804ed8a3dfe24102a"
+        },
+        {
+          "file": "packages/07_shape_familiarity_split_gd_singlechain_5round_20261105.zip.002",
+          "bytes": 50331648,
+          "sha256": "67f1ea3d2f0cd0456ee2fa8cc2bf2ea7626347e88bf9fa1a90426ff60275a4f7"
+        },
+        {
+          "file": "packages/07_shape_familiarity_split_gd_singlechain_5round_20261105.zip.003",
+          "bytes": 5597728,
+          "sha256": "a0dbeeb01c798811143d0755973526429630bd541e38bed5eefc4a9e932ccbf6"
+        }
+      ],
+      "experiment": "shape_familiarity_split_gd_singlechain_5round_20261105",
+      "verified_batches": 168,
+      "verified_episodes": 8400,
+      "source_snapshot_sha256": "a1770527df13d710b28dad130f9c35a6ef3f54c04b5296e1bd28732a29766dfe",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "08_visual_shape_protocol_3x5_heldout_20261029",
+      "archive": "08_visual_shape_protocol_3x5_heldout_20261029.zip",
+      "archive_bytes": 328759767,
+      "archive_sha256": "b83a501aef027e14a4c47019a17b6fe25d7b9c13ba48635216328305290d0d54",
+      "files": 8951,
+      "uncompressed_bytes": 977506690,
+      "parts": [
+        {
+          "file": "packages/08_visual_shape_protocol_3x5_heldout_20261029.zip.001",
+          "bytes": 50331648,
+          "sha256": "3e0c87f1c332a214ec428894c66523e2d08dbac0be8892d8eb3fd582d427c4c8"
+        },
+        {
+          "file": "packages/08_visual_shape_protocol_3x5_heldout_20261029.zip.002",
+          "bytes": 50331648,
+          "sha256": "6618a68b19d5825a28520c7b81cf98beb71ef811d7d175592541ef5e23ea2a2e"
+        },
+        {
+          "file": "packages/08_visual_shape_protocol_3x5_heldout_20261029.zip.003",
+          "bytes": 50331648,
+          "sha256": "f1cae4ff1c92af6b16751478878883a80ab2cb35fc15ff03f8d2c2bdb9e8be90"
+        },
+        {
+          "file": "packages/08_visual_shape_protocol_3x5_heldout_20261029.zip.004",
+          "bytes": 50331648,
+          "sha256": "8be37d1396bbbe28e2acf43238ed23b5483bb9eb62d7d76e0f2277c63d5d6bcd"
+        },
+        {
+          "file": "packages/08_visual_shape_protocol_3x5_heldout_20261029.zip.005",
+          "bytes": 50331648,
+          "sha256": "51c128bab5d5734535bb27b82a9bacbcf4461d32a18d5149ca7d063edb608034"
+        },
+        {
+          "file": "packages/08_visual_shape_protocol_3x5_heldout_20261029.zip.006",
+          "bytes": 50331648,
+          "sha256": "30d8b933b0618d7b79c57a1a204734b91d50b2976a995e1d30fcf0984c3c3ccc"
+        },
+        {
+          "file": "packages/08_visual_shape_protocol_3x5_heldout_20261029.zip.007",
+          "bytes": 26769879,
+          "sha256": "e4a9675f3861aa6d9537a749102e0afb97670cc4b6da71b1ec50cb2991899c3d"
+        }
+      ],
+      "experiment": "visual_shape_protocol_3x5_heldout_20261029",
+      "verified_batches": 420,
+      "verified_episodes": 21000,
+      "source_snapshot_sha256": "e7437e0f0d531731c467e5b47a5304219bfbd5b0140238a6d66f768139392abe",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "09_visual_slow_lr_2e4_3x5_heldout_20261102",
+      "archive": "09_visual_slow_lr_2e4_3x5_heldout_20261102.zip",
+      "archive_bytes": 298047151,
+      "archive_sha256": "3d6429c9a1b520fbcc2f7bda116498822eda36276b26df1d6d6ed60492e277dc",
+      "files": 8471,
+      "uncompressed_bytes": 883472956,
+      "parts": [
+        {
+          "file": "packages/09_visual_slow_lr_2e4_3x5_heldout_20261102.zip.001",
+          "bytes": 50331648,
+          "sha256": "6be119a5011ba42ac85591a7d6ea3a0a41a72eb877dcddd849880a3820c9f3b4"
+        },
+        {
+          "file": "packages/09_visual_slow_lr_2e4_3x5_heldout_20261102.zip.002",
+          "bytes": 50331648,
+          "sha256": "306b2fb0d7516beaa35b38d275e9cf5bb4bed162690ef22b6add18683c6c7953"
+        },
+        {
+          "file": "packages/09_visual_slow_lr_2e4_3x5_heldout_20261102.zip.003",
+          "bytes": 50331648,
+          "sha256": "6d2fa3282d6675f0f8b5cbf908faee330eba7597581374703dfa0dab251ff2f8"
+        },
+        {
+          "file": "packages/09_visual_slow_lr_2e4_3x5_heldout_20261102.zip.004",
+          "bytes": 50331648,
+          "sha256": "df93908ee9877e615c49f919977d97d071d0623dfc4450d54530370124411ec6"
+        },
+        {
+          "file": "packages/09_visual_slow_lr_2e4_3x5_heldout_20261102.zip.005",
+          "bytes": 50331648,
+          "sha256": "48a7f67d03411447e89648507dc28453802bfb8b932fd64cba5777e34e5c6482"
+        },
+        {
+          "file": "packages/09_visual_slow_lr_2e4_3x5_heldout_20261102.zip.006",
+          "bytes": 46388911,
+          "sha256": "cba81acecc55aa8961c8a1b750ac2836602cc32b200f48a20a02e7cc345ee476"
+        }
+      ],
+      "experiment": "visual_slow_lr_2e4_3x5_heldout_20261102",
+      "verified_batches": 336,
+      "verified_episodes": 16800,
+      "source_snapshot_sha256": "855b4d63329c70023d69e0b8429ea116dbd455c3d26a743bedc26107aaf7b45d",
+      "source_snapshot_scientific_entries_included": true
+    },
+    {
+      "name": "10_reports_and_figures",
+      "archive": "10_reports_and_figures.zip",
+      "archive_bytes": 20829922,
+      "archive_sha256": "8f6ae58ef567283e1d96ffce8ea10d56b490634f52e5955b6a9e8a2abac44997",
+      "files": 172,
+      "uncompressed_bytes": 61693739,
+      "parts": [
+        {
+          "file": "packages/10_reports_and_figures.zip",
+          "bytes": 20829922,
+          "sha256": "8f6ae58ef567283e1d96ffce8ea10d56b490634f52e5955b6a9e8a2abac44997"
+        }
+      ],
+      "independent_figure_designs": 27,
+      "historical_report_cutoff": "2026-11-05",
+      "final_familiarity_split_results_in": "07_shape_familiarity_split_gd_singlechain_5round_20261105"
+    },
+    {
+      "name": "11_original_shape_reference",
+      "archive": "11_original_shape_reference.zip",
+      "archive_bytes": 7461436,
+      "archive_sha256": "121d5fa3701a20bee4b55c2240c801877fe3492b6673aa6aa0266373938dac65",
+      "files": 2,
+      "uncompressed_bytes": 7919022,
+      "parts": [
+        {
+          "file": "packages/11_original_shape_reference.zip",
+          "bytes": 7461436,
+          "sha256": "121d5fa3701a20bee4b55c2240c801877fe3492b6673aa6aa0266373938dac65"
+        }
+      ],
+      "scope": "Original historical shape reference: full per-episode statistics; only 14 demonstration trajectories, not complete original actions/states"
+    }
+  ],
+  "formal_batches": 1617,
+  "formal_executed_episodes": 80850,
+  "completed_experiments": 9,
+  "archive_bytes": 1161067200,
+  "notes": [
+    "Execution count is not unique task count.",
+    "Model checkpoints are excluded.",
+    "Historical shape baseline original arrays were not supplied; per-episode CSV retained.",
+    "2026-11-06 visual familiarity ablation is running and excluded."
+  ]
+}

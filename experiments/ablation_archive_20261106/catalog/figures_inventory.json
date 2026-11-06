@@ -1,0 +1,1825 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "reports": [
+    {
+      "source_root": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104",
+      "name": "七形状域_继承与EMA消融图表_20261104",
+      "description": "历史 2026-11-04：形状 GD，朴素继承第一链、EMA、同权重 AdaJEPA 对比 s100 Ours；8 张图；每组 1050 测试回合。",
+      "all_file_count": 43,
+      "all_bytes": 7073226,
+      "selected_file_count": 43,
+      "selected_bytes": 7073226,
+      "extension_counts": {
+        ".json": 5,
+        ".txt": 2,
+        ".pdf": 9,
+        ".png": 16,
+        ".py": 2,
+        ".svg": 8,
+        ".html": 1
+      },
+      "selected_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\data\\plot_data.json",
+          "relative": "data/plot_data.json",
+          "bytes": 1630680,
+          "sha256": "e03c39c10700c442a98da0336fc5f8fa7121c90383f76c3678cb50d0fcae3b6b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\data\\style.json",
+          "relative": "data/style.json",
+          "bytes": 560,
+          "sha256": "63ee64c294ac473ead623a0722b199f139c390286cf0b6927776e432ea72078c"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\data\\summary.json",
+          "relative": "data/summary.json",
+          "bytes": 1060,
+          "sha256": "298a07f50676d1349108ca1782bd7b0ba92c792d427736334c8d1b660376c601"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\English_captions.txt",
+          "relative": "English_captions.txt",
+          "bytes": 1883,
+          "sha256": "fb8064149af4ed3aabe9e3414256274c8f978c7ecf500f2d928d2cca9f79a4df"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figure_manifest.json",
+          "relative": "figure_manifest.json",
+          "bytes": 6092,
+          "sha256": "3bac8dcbef645dfb768e09c03f23110c0dc94acd53d89c5adf753ce80eedc896"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\01_overall_success_and_mpc.pdf",
+          "relative": "figures/01_overall_success_and_mpc.pdf",
+          "bytes": 17790,
+          "sha256": "f5f0de758901d68f9ca2c91eb36c7e395a942092cc7339df5dfcc7a51a8e89ec"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\02_per_shape_success_rate.pdf",
+          "relative": "figures/02_per_shape_success_rate.pdf",
+          "bytes": 19313,
+          "sha256": "35a961c51bb3360855544d439c31523fb2722fbd412cd0cdb00914ef0ed48fb5"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\03_per_shape_mpc_steps.pdf",
+          "relative": "figures/03_per_shape_mpc_steps.pdf",
+          "bytes": 18414,
+          "sha256": "fea9587ccbae9b7befd69bc71546fdf175410bbefb8f8e150ea68a646a54353e"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\04_cumulative_success_all.pdf",
+          "relative": "figures/04_cumulative_success_all.pdf",
+          "bytes": 19139,
+          "sha256": "6d9aa24870ed7330bbeea9798cd6b6540c08751d8abf13d28d593b02c6949748"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\05_naive_vs_ours.pdf",
+          "relative": "figures/05_naive_vs_ours.pdf",
+          "bytes": 25345,
+          "sha256": "a233c2d115f075786e5f5b0bdbf6720ef020a047e9e0295a651f5b87135db3be"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\06_ema_slow_vs_ours.pdf",
+          "relative": "figures/06_ema_slow_vs_ours.pdf",
+          "bytes": 25064,
+          "sha256": "ecd82b06404f173a6f9fb134794cb79927d9b732040737c3043c68dab2dc47c6"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\07_adajepa_same_vs_ours.pdf",
+          "relative": "figures/07_adajepa_same_vs_ours.pdf",
+          "bytes": 25208,
+          "sha256": "cc678d850ecdfda0bc6c9cadc7517bec7af17126357bcabe8b7380a857096189"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\figures\\08_test_seed_comparison.pdf",
+          "relative": "figures/08_test_seed_comparison.pdf",
+          "bytes": 18066,
+          "sha256": "3a7c7b72ed58f2f9220fdb5199f8433f36b3db1b5d5b321275e2588bb21351a8"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\01_overall_success_and_mpc.png",
+          "relative": "PNG_600dpi/01_overall_success_and_mpc.png",
+          "bytes": 358398,
+          "sha256": "60d05a400552dec3c4fcd8efab86a9374ca2ff423d8d5b21d8ef2ba2ad4c2b8d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\02_per_shape_success_rate.png",
+          "relative": "PNG_600dpi/02_per_shape_success_rate.png",
+          "bytes": 352181,
+          "sha256": "db3c680c4bf2c7ab3729955e424f419a1a7e7872b7818d39a16ef37e38d6df78"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\03_per_shape_mpc_steps.png",
+          "relative": "PNG_600dpi/03_per_shape_mpc_steps.png",
+          "bytes": 354237,
+          "sha256": "fae22325b88c72ee920c401120a439262bc8b63393483c01e771b29e65d52d13"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\04_cumulative_success_all.png",
+          "relative": "PNG_600dpi/04_cumulative_success_all.png",
+          "bytes": 424288,
+          "sha256": "724499e8ab273d651a6764ff02aa0b13e4fc8c10bd36ba4d7311f1e4719c4993"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\05_naive_vs_ours.png",
+          "relative": "PNG_600dpi/05_naive_vs_ours.png",
+          "bytes": 544202,
+          "sha256": "9a8fd2944f939566fa817e7b54b36a71ae8e8242e1ea6e969f232017de6912f4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\06_ema_slow_vs_ours.png",
+          "relative": "PNG_600dpi/06_ema_slow_vs_ours.png",
+          "bytes": 505737,
+          "sha256": "f76d724715377e2f570da129ef64b3d76b8666daf9fb6c18eee64e15893dc8f4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\07_adajepa_same_vs_ours.png",
+          "relative": "PNG_600dpi/07_adajepa_same_vs_ours.png",
+          "bytes": 491094,
+          "sha256": "8ae8a628969edf1b17b2e038ce4b00186afcca12c1022488c63ed8ef911bac40"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\PNG_600dpi\\08_test_seed_comparison.png",
+          "relative": "PNG_600dpi/08_test_seed_comparison.png",
+          "bytes": 409333,
+          "sha256": "c850f075725118308db03c629ecb96667dd1d2385c36097ac06dcc27513ada95"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\01_overall_success_and_mpc.png",
+          "relative": "preview/01_overall_success_and_mpc.png",
+          "bytes": 96323,
+          "sha256": "74303880ef475426c9c9d05681a53c0c92a69a6255048db60b8dcaaf21a899e8"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\02_per_shape_success_rate.png",
+          "relative": "preview/02_per_shape_success_rate.png",
+          "bytes": 87331,
+          "sha256": "247ea647a6cbb8f71d6c750e7470d8a8d104c7b021f52422fc82285225890c0d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\03_per_shape_mpc_steps.png",
+          "relative": "preview/03_per_shape_mpc_steps.png",
+          "bytes": 88810,
+          "sha256": "047720220ed5b4a20d4e8c647f41805b7f48d91f1c5434f733e04a4dc9a5be2b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\04_cumulative_success_all.png",
+          "relative": "preview/04_cumulative_success_all.png",
+          "bytes": 119030,
+          "sha256": "da45cb73338c1b37adb13c176112b1cbfdb3ddc9da1d7beb5bb6e87b76aad1bb"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\05_naive_vs_ours.png",
+          "relative": "preview/05_naive_vs_ours.png",
+          "bytes": 147273,
+          "sha256": "4219dd23bfe332e1a4fff289824ca1ad4616375fac870e907263559cd3c21913"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\06_ema_slow_vs_ours.png",
+          "relative": "preview/06_ema_slow_vs_ours.png",
+          "bytes": 137149,
+          "sha256": "744fdcbebc720c90e168789503a5018f97f22611e4c31ead127651a781347249"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\07_adajepa_same_vs_ours.png",
+          "relative": "preview/07_adajepa_same_vs_ours.png",
+          "bytes": 131653,
+          "sha256": "6b98a76e9c4cc44d20da0954efcaaef4207f82339a7b2193ad8200c99b840779"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\preview\\08_test_seed_comparison.png",
+          "relative": "preview/08_test_seed_comparison.png",
+          "bytes": 101375,
+          "sha256": "a17c922e3558985ed59079b09a99ad3070bfea317ab227dde2f6e9229e01ebc4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\README.txt",
+          "relative": "README.txt",
+          "bytes": 466,
+          "sha256": "e6299c970dd6fc6343babc72ad432a317e56516c4bd201bd4c4be072fc05d929"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\scripts\\build_figures.py",
+          "relative": "scripts/build_figures.py",
+          "bytes": 18183,
+          "sha256": "aebdffd86d3b34b5a272befe26efee5769aaf525db69c448b9f5066e65d62b28"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\scripts\\extract_data.py",
+          "relative": "scripts/extract_data.py",
+          "bytes": 16632,
+          "sha256": "fabd0e9b99def6cce2deaea3595f6f65690e146310c6dbe16cd2e80e272e94ab"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\01_overall_success_and_mpc.svg",
+          "relative": "SVG_矢量/01_overall_success_and_mpc.svg",
+          "bytes": 79061,
+          "sha256": "2196ce99dd3a3361028f5b6b929a9e10a10be6762226fa26ff55c10d32ed46c9"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\02_per_shape_success_rate.svg",
+          "relative": "SVG_矢量/02_per_shape_success_rate.svg",
+          "bytes": 91541,
+          "sha256": "38924fbe8a8c348f1e690d397cec0eb609ad4ad6b797bd55c623af428fe3dcdf"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\03_per_shape_mpc_steps.svg",
+          "relative": "SVG_矢量/03_per_shape_mpc_steps.svg",
+          "bytes": 90626,
+          "sha256": "911060567e4d4f181f308dcf1c386efe267e8cf72f7bf2876fa9313638f8a11d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\04_cumulative_success_all.svg",
+          "relative": "SVG_矢量/04_cumulative_success_all.svg",
+          "bytes": 63316,
+          "sha256": "434b10ce05ad2ff6ae7611e275f5a249fac646d3e4f3998ea7662d76df2a901f"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\05_naive_vs_ours.svg",
+          "relative": "SVG_矢量/05_naive_vs_ours.svg",
+          "bytes": 132051,
+          "sha256": "74f4ef753d9f81720e66d661e742b2ad25f6fead151a923c513e18a8679b8e41"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\06_ema_slow_vs_ours.svg",
+          "relative": "SVG_矢量/06_ema_slow_vs_ours.svg",
+          "bytes": 132466,
+          "sha256": "a510258e43e2aadeb8134819e459edb4c24dc7985186bc84e35f0507d31bfe50"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\07_adajepa_same_vs_ours.svg",
+          "relative": "SVG_矢量/07_adajepa_same_vs_ours.svg",
+          "bytes": 131920,
+          "sha256": "5227104dacf80fe27f5f42d409170a284901027a6f439f67e5ab3fceac66c786"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\SVG_矢量\\08_test_seed_comparison.svg",
+          "relative": "SVG_矢量/08_test_seed_comparison.svg",
+          "bytes": 81361,
+          "sha256": "6f458884b359bb93d08655f94ddc25e7672778c4d9aff9dfb423913d1326259d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\verification.json",
+          "relative": "verification.json",
+          "bytes": 2566,
+          "sha256": "530a462cdf7e74cf1d66f33a08ed7dc18a0fee6b6508caecfb5c3ed1efa362e2"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\七形状域_继承与EMA消融图表.pdf",
+          "relative": "七形状域_继承与EMA消融图表.pdf",
+          "bytes": 69969,
+          "sha256": "0a77feebf9f6c8f3319b182e33840799561d1235aa113016c126b5abe973b3da"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\图表索引.html",
+          "relative": "图表索引.html",
+          "bytes": 6040,
+          "sha256": "9e9dfdc920fdd687a0e38ab1d874c1cdea177653626be490a9f45c3a8158db74"
+        }
+      ],
+      "excluded_files": [],
+      "figures": [
+        {
+          "number": 1,
+          "title": "Shape GD ablation - overall outcomes",
+          "caption": "Overall held-out success and mean all-episode MPC steps, including failures."
+        },
+        {
+          "number": 2,
+          "title": "Held-out success by shape",
+          "caption": "Per-shape comparison with equal episode counts and test-seed standard deviations."
+        },
+        {
+          "number": 3,
+          "title": "Mean MPC steps by shape",
+          "caption": "Per-shape comparison with equal episode counts and test-seed standard deviations."
+        },
+        {
+          "number": 4,
+          "title": "Cumulative success across MPC steps",
+          "caption": "Cumulative success probability up to each MPC step; failures stay in the denominator."
+        },
+        {
+          "number": 5,
+          "title": "Naive inheritance versus Ours - seven shapes",
+          "caption": "Separate per-shape cumulative curves for Naive inheritance and the original full Ours."
+        },
+        {
+          "number": 6,
+          "title": "Slow-parameter EMA versus Ours - seven shapes",
+          "caption": "Separate per-shape cumulative curves for Slow-parameter EMA and the original full Ours."
+        },
+        {
+          "number": 7,
+          "title": "AdaJEPA versus Ours - seven shapes",
+          "caption": "Separate per-shape cumulative curves for AdaJEPA and the original full Ours."
+        },
+        {
+          "number": 8,
+          "title": "Results by held-out test seed",
+          "caption": "Raw success and MPC means for each held-out test seed; no error bars."
+        }
+      ],
+      "html_links": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_继承与EMA消融图表_20261104\\图表索引.html",
+          "local_link_count": 35,
+          "absolute_links": [],
+          "unresolved_local_links": [],
+          "relative_links_outside_this_report": [],
+          "links_to_excluded_duplicate_files": []
+        }
+      ]
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104",
+      "name": "七形状域_消融核心四图_20261104",
+      "description": "历史 2026-11-04：同四组，3 张第五轮独立测试图及1张学习阶段曲线；误差棒是测试种子 SD。",
+      "all_file_count": 28,
+      "all_bytes": 5617467,
+      "selected_file_count": 28,
+      "selected_bytes": 5617467,
+      "extension_counts": {
+        ".json": 6,
+        ".csv": 2,
+        ".pdf": 5,
+        ".png": 8,
+        ".txt": 1,
+        ".py": 1,
+        ".svg": 4,
+        ".html": 1
+      },
+      "selected_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\data\\budget_success_rates.json",
+          "relative": "data/budget_success_rates.json",
+          "bytes": 918,
+          "sha256": "04a255d6ac1000618e6f29c2f836c6d669d10a15135c93a5c261746fe1b6bd00"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\data\\heldout_episode_data.json",
+          "relative": "data/heldout_episode_data.json",
+          "bytes": 1630680,
+          "sha256": "e03c39c10700c442a98da0336fc5f8fa7121c90383f76c3678cb50d0fcae3b6b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\data\\heldout_episodes.csv",
+          "relative": "data/heldout_episodes.csv",
+          "bytes": 121687,
+          "sha256": "659befd7db8bd5283bfc3dfc04bded5dba4a421b38c92f49d451ff51604c6190"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\data\\learning_round_audit.json",
+          "relative": "data/learning_round_audit.json",
+          "bytes": 923308,
+          "sha256": "ab4647fff34ccd46090ef5097b729190f486fb3c96bf20d9d41252da8e36d4b5"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\data\\learning_round_metrics.csv",
+          "relative": "data/learning_round_metrics.csv",
+          "bytes": 1088,
+          "sha256": "30057e6b6a316b53ef489cf749b46fdb71fd05fc0b53fb92106a3ee63e6be24e"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\data\\summary.json",
+          "relative": "data/summary.json",
+          "bytes": 948,
+          "sha256": "a29f42ca01d9db6360812da7efb649d60252be2676d89dbb239e31ff58d48837"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\figure_manifest.json",
+          "relative": "figure_manifest.json",
+          "bytes": 1500,
+          "sha256": "a7bcb7bed8453f20fb0eee644aed245992b94dc12b2de1082073432dbaeb7d07"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\figures\\01_overall_performance.pdf",
+          "relative": "figures/01_overall_performance.pdf",
+          "bytes": 16256,
+          "sha256": "ec48a63e535065c3a0f67aa61320940e88ec9c9ad2289a057f9f55512032baba"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\figures\\02_per_shape_performance.pdf",
+          "relative": "figures/02_per_shape_performance.pdf",
+          "bytes": 21619,
+          "sha256": "5f46d89cc5a841d7889e3a9c63f9f82409f9a5ed5241210d242bafe455a791f0"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\figures\\03_mpc_budget_success.pdf",
+          "relative": "figures/03_mpc_budget_success.pdf",
+          "bytes": 22525,
+          "sha256": "5608d4f102cd871f2c9d86a4e7f4d5cf4dbea2a78107f849c1d1b2efb488143c"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\figures\\04_learning_stage_rounds.pdf",
+          "relative": "figures/04_learning_stage_rounds.pdf",
+          "bytes": 21985,
+          "sha256": "1ba6ac14ec1b93031e0bb745a44f7c8376dfec268adeb4c0c1e6a9f6951b8d45"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\PNG_600dpi\\01_overall_performance.png",
+          "relative": "PNG_600dpi/01_overall_performance.png",
+          "bytes": 351234,
+          "sha256": "a5abf9e77e862c9af6a52543588d531abe264cedc80ceccff73bc58d0f08ced4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\PNG_600dpi\\02_per_shape_performance.png",
+          "relative": "PNG_600dpi/02_per_shape_performance.png",
+          "bytes": 605447,
+          "sha256": "dbf25feab16d32855b3e970ce35f6f10d892efab6f3bf879076c1e5600dc77e1"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\PNG_600dpi\\03_mpc_budget_success.png",
+          "relative": "PNG_600dpi/03_mpc_budget_success.png",
+          "bytes": 464685,
+          "sha256": "56ecc6aadca0a7158fea32780ba18c7561e012d08764ebda61320efced6d852f"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\PNG_600dpi\\04_learning_stage_rounds.png",
+          "relative": "PNG_600dpi/04_learning_stage_rounds.png",
+          "bytes": 499361,
+          "sha256": "cbdfbfdf8c45fec7281332c6d5f93096f12a4742891d16a3c84f4b1a003523ba"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\preview\\01_overall_performance.png",
+          "relative": "preview/01_overall_performance.png",
+          "bytes": 95428,
+          "sha256": "92f3b7d43006af9c853d4af9d9887d81560ffc1e7abec59e07f17940e8cb1477"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\preview\\02_per_shape_performance.png",
+          "relative": "preview/02_per_shape_performance.png",
+          "bytes": 147233,
+          "sha256": "cdd234fa0d746818e43abd0d7eb41d948d3d4a3b4ffa9283146387484a9a2645"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\preview\\03_mpc_budget_success.png",
+          "relative": "preview/03_mpc_budget_success.png",
+          "bytes": 129763,
+          "sha256": "374293f13eaab968e27c383775896f551ae31006af303478c9b6ec76f2ca7627"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\preview\\04_learning_stage_rounds.png",
+          "relative": "preview/04_learning_stage_rounds.png",
+          "bytes": 136241,
+          "sha256": "9341f644a3a8891c4383828cb5848f1168505347f8524e1a1fa6e7b90ddf0afa"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\README.txt",
+          "relative": "README.txt",
+          "bytes": 433,
+          "sha256": "69bd19409e1c150da54b5c502c859b758a75be0faad78dbc8cc34ea0f0515e30"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\scripts\\build_figures.py",
+          "relative": "scripts/build_figures.py",
+          "bytes": 15185,
+          "sha256": "b4fc33d9e1274d8f0ca6c0db95f6cf582d9f25d5c21b62ea2dec01e3541b06c7"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\SVG_矢量\\01_overall_performance.svg",
+          "relative": "SVG_矢量/01_overall_performance.svg",
+          "bytes": 77887,
+          "sha256": "12969f84e2a32719c6610380ae34e64468b9ec23057ac0c3c9156f19e3717a26"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\SVG_矢量\\02_per_shape_performance.svg",
+          "relative": "SVG_矢量/02_per_shape_performance.svg",
+          "bytes": 141878,
+          "sha256": "adb92352905a58b9d855ec83f2cdc4d41347373010952f9b22d22be49b5a770f"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\SVG_矢量\\03_mpc_budget_success.svg",
+          "relative": "SVG_矢量/03_mpc_budget_success.svg",
+          "bytes": 66475,
+          "sha256": "602df0f91c5b0d17d571c563799d10e3856dbf2b6302bc0c163ed279c42e50b5"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\SVG_矢量\\04_learning_stage_rounds.svg",
+          "relative": "SVG_矢量/04_learning_stage_rounds.svg",
+          "bytes": 79314,
+          "sha256": "d27556a17f69ce176b553148ed1cfa54a1da2050b30a1704487b5a29024ea932"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\verification.json",
+          "relative": "verification.json",
+          "bytes": 1881,
+          "sha256": "f12b88e91b55c3c6e47e3fff468241c8c1a7125b6381a3f6444ccef3f923ab53"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\七形状域_消融核心四图.pdf",
+          "relative": "七形状域_消融核心四图.pdf",
+          "bytes": 38791,
+          "sha256": "0f1a7eeba6c33836c233f96eea9322c46477788b8716a45f992053a619bb86e5"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\图表索引.html",
+          "relative": "图表索引.html",
+          "bytes": 3717,
+          "sha256": "56b1ce99d1ebbadac7efefd765615bd1b05f9848f6b47b5a209e262e128a5dca"
+        }
+      ],
+      "excluded_files": [],
+      "figures": [
+        {
+          "title": "总体性能：成功率与MPC步数",
+          "caption": "七形状域GD独立测试，各方法1050回合；左为成功率，右为所有回合平均MPC步数，失败计30步。误差棒为三个测试种子的样本标准差，不是学习链的波动。"
+        },
+        {
+          "title": "七形状域性能：成功率与MPC步数",
+          "caption": "每个形状、每种方法150回合。上图显示成功率，下图显示所有回合平均MPC步数；直接展示不同形状的收益与退步，不仅看总体均值。"
+        },
+        {
+          "title": "MPC预算与成功率",
+          "caption": "横轴为允许的MPC步数，纵轴为预算内成功回合占全部回合的比例。曲线从实际记录的第1步开始；第30步终点等于最终成功率。阴影为测试种子间标准差。"
+        },
+        {
+          "title": "五轮学习过程（学习阶段，非逐轮独立测试）",
+          "caption": "仅展示Ours原s100链、朴素继承第1链、EMA的真实学习阶段结果，每轮350回合。每轮学习种子不同，不能据此证明固定测试集上的改善或遗忘；AdaJEPA没有可比的五轮学习日志，故不画水平线。当前三组均仅第5轮有独立测试。"
+        }
+      ],
+      "html_links": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_消融核心四图_20261104\\图表索引.html",
+          "local_link_count": 19,
+          "absolute_links": [],
+          "unresolved_local_links": [],
+          "relative_links_outside_this_report": [],
+          "links_to_excluded_duplicate_files": []
+        }
+      ]
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104",
+      "name": "七形状域_逐项消融对比图_20261104",
+      "description": "历史 2026-11-04：同四组，每个消融一张综合图，共3张；学习曲线不等于逐轮独立测试。",
+      "all_file_count": 22,
+      "all_bytes": 7386549,
+      "selected_file_count": 22,
+      "selected_bytes": 7386549,
+      "extension_counts": {
+        ".json": 5,
+        ".csv": 1,
+        ".pdf": 4,
+        ".png": 6,
+        ".txt": 1,
+        ".py": 1,
+        ".svg": 3,
+        ".html": 1
+      },
+      "selected_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\data\\heldout_episode_data.json",
+          "relative": "data/heldout_episode_data.json",
+          "bytes": 1630680,
+          "sha256": "e03c39c10700c442a98da0336fc5f8fa7121c90383f76c3678cb50d0fcae3b6b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\data\\learning_round_audit.json",
+          "relative": "data/learning_round_audit.json",
+          "bytes": 923308,
+          "sha256": "ab4647fff34ccd46090ef5097b729190f486fb3c96bf20d9d41252da8e36d4b5"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\data\\learning_round_metrics.csv",
+          "relative": "data/learning_round_metrics.csv",
+          "bytes": 1088,
+          "sha256": "30057e6b6a316b53ef489cf749b46fdb71fd05fc0b53fb92106a3ee63e6be24e"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\data\\pairwise_summary.json",
+          "relative": "data/pairwise_summary.json",
+          "bytes": 1822,
+          "sha256": "f311492f089f6dffae04881bc44ef7758f388b2a9127984b529f6c11f9537654"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\figure_manifest.json",
+          "relative": "figure_manifest.json",
+          "bytes": 1323,
+          "sha256": "ad21d595637ce72bf9ccc9a3b09294acf1264d01f614a7b47597696d321ac833"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\figures\\01_naive_vs_ours.pdf",
+          "relative": "figures/01_naive_vs_ours.pdf",
+          "bytes": 29867,
+          "sha256": "86304e968ee3c8b6a9c0b62ebabf1457f33e55dd37d3949e14f384eba989977c"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\figures\\02_ema_slow_vs_ours.pdf",
+          "relative": "figures/02_ema_slow_vs_ours.pdf",
+          "bytes": 29899,
+          "sha256": "1c4db38324bd63949a11c2ad6135d86cfe092390bd7fa7921dacfab0865a0ed2"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\figures\\03_adajepa_same_vs_ours.pdf",
+          "relative": "figures/03_adajepa_same_vs_ours.pdf",
+          "bytes": 27946,
+          "sha256": "08189198dc84d51b501725950ab8d83b7b6c84e9f80d85c0569cd70ded312d0b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\PNG_600dpi\\01_naive_vs_ours.png",
+          "relative": "PNG_600dpi/01_naive_vs_ours.png",
+          "bytes": 1128061,
+          "sha256": "3563f7ce33ddd87df7fea089d94888e33ab1b1b04577daf2de66bdc77c2dee2b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\PNG_600dpi\\02_ema_slow_vs_ours.png",
+          "relative": "PNG_600dpi/02_ema_slow_vs_ours.png",
+          "bytes": 1153661,
+          "sha256": "7d4ba2bb9c709062f5457c3cbd7385291e4020704282137cf106a041205e6fed"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\PNG_600dpi\\03_adajepa_same_vs_ours.png",
+          "relative": "PNG_600dpi/03_adajepa_same_vs_ours.png",
+          "bytes": 974180,
+          "sha256": "4f6c8f8b0290105cc5847b4ad12f6d2c1ea0dbf27d70716bf7c3a6c6c5f6c808"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\preview\\01_naive_vs_ours.png",
+          "relative": "preview/01_naive_vs_ours.png",
+          "bytes": 293131,
+          "sha256": "55ee45ea5ec54114f335df3e47afdad0078294e5ae0a8e0953d6e7ef1fb563b4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\preview\\02_ema_slow_vs_ours.png",
+          "relative": "preview/02_ema_slow_vs_ours.png",
+          "bytes": 300069,
+          "sha256": "f8527bd721889d0f8f7581749419ef3fde8c77625eebef5385b67703a23a3aba"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\preview\\03_adajepa_same_vs_ours.png",
+          "relative": "preview/03_adajepa_same_vs_ours.png",
+          "bytes": 252569,
+          "sha256": "19e821d26c483853de8c52d7396eeea4169a69da0714158a46f7373344955a01"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\README.txt",
+          "relative": "README.txt",
+          "bytes": 425,
+          "sha256": "44c19070f43f37b5ff9e12cf2c46382115f57e394eed08e85387478d11df2962"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\scripts\\build_figures.py",
+          "relative": "scripts/build_figures.py",
+          "bytes": 12780,
+          "sha256": "a491ef6e8494906e2078179ec3ce9bc4fd98562fcb987c5993db5f379fe551c1"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\SVG_矢量\\01_naive_vs_ours.svg",
+          "relative": "SVG_矢量/01_naive_vs_ours.svg",
+          "bytes": 199140,
+          "sha256": "7f1a227bcc8090afc4430d1bb408703f152c228e77eacbdeed8f1186b9db5683"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\SVG_矢量\\02_ema_slow_vs_ours.svg",
+          "relative": "SVG_矢量/02_ema_slow_vs_ours.svg",
+          "bytes": 199286,
+          "sha256": "51506610fa65ca65fa442758aca3ec7601069c65c51b345edd8bbbf01ef7b8eb"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\SVG_矢量\\03_adajepa_same_vs_ours.svg",
+          "relative": "SVG_矢量/03_adajepa_same_vs_ours.svg",
+          "bytes": 171684,
+          "sha256": "ba5c06f6fab0bbe1a7a96aa8bd9245943ad30033bded48ecb907fd47a2d599d3"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\verification.json",
+          "relative": "verification.json",
+          "bytes": 1304,
+          "sha256": "beeefab528c5c4548f1c4f99bcac9595f64555530bf52d0f5c69a0ba54ecaf5d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\七形状域_逐项消融对比.pdf",
+          "relative": "七形状域_逐项消融对比.pdf",
+          "bytes": 51282,
+          "sha256": "6e5962e41fd7eedd8de028d3af6c0728849312723c39b6cd2b53680d4f3ea23b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\图表索引.html",
+          "relative": "图表索引.html",
+          "bytes": 3044,
+          "sha256": "b3a715692a9d97ca0dd9abbfa39a9bbd4a10f2d468a9e68078f9a90fd3209019"
+        }
+      ],
+      "excluded_files": [],
+      "figures": [
+        {
+          "title": "朴素继承 vs Ours",
+          "caption": "朴素继承与Ours一对一比较。各自1050测试回合，展示总体和逐域成功率、全部回合平均MPC及预算曲线。右下角仅为真实学习阶段曲线，不是逐轮独立测试。",
+          "methods": [
+            "naive",
+            "ours"
+          ]
+        },
+        {
+          "title": "慢参数EMA vs Ours",
+          "caption": "慢参数EMA与Ours一对一比较。各自1050测试回合，展示总体和逐域成功率、全部回合平均MPC及预算曲线。右下角仅为真实学习阶段曲线，不是逐轮独立测试。",
+          "methods": [
+            "ema_slow",
+            "ours"
+          ]
+        },
+        {
+          "title": "同权重AdaJEPA vs Ours",
+          "caption": "同权重AdaJEPA与Ours一对一比较。各自1050测试回合，展示总体和逐域成功率、全部回合平均MPC及预算曲线。AdaJEPA每回合恢复相同的预训练权重，无可比五轮学习记录，未绘制虚构学习曲线。",
+          "methods": [
+            "adajepa_same",
+            "ours"
+          ]
+        }
+      ],
+      "html_links": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\图表索引.html",
+          "local_link_count": 14,
+          "absolute_links": [],
+          "unresolved_local_links": [],
+          "relative_links_outside_this_report": [],
+          "links_to_excluded_duplicate_files": []
+        }
+      ]
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\报告\\七形状域消融完整汇总_20261104",
+      "name": "七形状域消融完整汇总_20261104",
+      "description": "历史 2026-11-04：形状消融结果快照，未包含后续 GD 单关读/单关写与 CEM 双关。",
+      "all_file_count": 2,
+      "all_bytes": 72941,
+      "selected_file_count": 2,
+      "selected_bytes": 72941,
+      "extension_counts": {
+        ".html": 1,
+        ".json": 1
+      },
+      "selected_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域消融完整汇总_20261104\\消融结果总览.html",
+          "relative": "消融结果总览.html",
+          "bytes": 5356,
+          "sha256": "bf1f6f0673a63c4960963bde43eca4ac804e739fbfb113c53ca2189823f16df9"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域消融完整汇总_20261104\\消融结果汇总.json",
+          "relative": "消融结果汇总.json",
+          "bytes": 67585,
+          "sha256": "68b55b3deaadbff02cafdfe1bab74b8447c9f71cddb32be6c3c54faaab165a4b"
+        }
+      ],
+      "excluded_files": [],
+      "figures": [],
+      "html_links": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七形状域消融完整汇总_20261104\\消融结果总览.html",
+          "local_link_count": 3,
+          "absolute_links": [],
+          "unresolved_local_links": [],
+          "relative_links_outside_this_report": [
+            "../../outputs/shape_core_gd_singlechain_5round_20261031/消融结果总览.html",
+            "../七视觉域慢学习率最终对比_20261104/最终结果对比.html"
+          ],
+          "links_to_excluded_duplicate_files": []
+        }
+      ]
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105",
+      "name": "消融实验图文报告_20261105",
+      "description": "历史 2026-11-05 15:20：23页图文报告，12张图。结构/继承/EMA/GD双关/六档慢学习率/视觉GD+CEM学习率；GD单关读写、CEM双关仅在跑快照，不能冒称最终完整报告。",
+      "all_file_count": 101,
+      "all_bytes": 39804404,
+      "selected_file_count": 71,
+      "selected_bytes": 27814033,
+      "extension_counts": {
+        ".json": 12,
+        ".py": 7,
+        ".txt": 3,
+        ".csv": 8,
+        ".pdf": 13,
+        ".png": 40,
+        ".svg": 12,
+        ".pyc": 1,
+        ".ps1": 1,
+        ".docx": 2,
+        ".html": 1,
+        ".zip": 1
+      },
+      "selected_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\bundle_info.json",
+          "relative": "bundle_info.json",
+          "bytes": 223,
+          "sha256": "1d6131b17325a95a1fe3915a7bbfe1ae8482e2209a3c1ace837f40c8885f617b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\build_shape_audit.py",
+          "relative": "data/build_shape_audit.py",
+          "bytes": 17763,
+          "sha256": "6e53ff5a27d88403341a780099fe3b749d3f3234aaf222275f675821c030f516"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\build_visual_audit.py",
+          "relative": "data/build_visual_audit.py",
+          "bytes": 15734,
+          "sha256": "a6181d93e7bcc638d96479c30368a1fdaa28b37b6cb6a4129522e5b8cd2b1a5a"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\historical_source_hashes.json",
+          "relative": "data/historical_source_hashes.json",
+          "bytes": 479,
+          "sha256": "a23c76c94aace707935d427f8ffa7a7337555e32ea0f974d3f607f009c7d12ea"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\report_content.json",
+          "relative": "data/report_content.json",
+          "bytes": 65869,
+          "sha256": "4e1ca1690af8568109ca0407c8e9fbc106cee68d76f271e04bcafab79295e7e4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\running_snapshot.json",
+          "relative": "data/running_snapshot.json",
+          "bytes": 5083,
+          "sha256": "3fea399324bed648c5f5e0eb05490a687350db31d0a532f054de72aea1ee0135"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\shape_audit.json",
+          "relative": "data/shape_audit.json",
+          "bytes": 792036,
+          "sha256": "c740777593cfa7da8ad855392f868fb3e9dde58c392acc5632ec224a1b71d9d8"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\shape_audit_notes.txt",
+          "relative": "data/shape_audit_notes.txt",
+          "bytes": 2170,
+          "sha256": "bc97d9417afe43ab361594b25164445f8c0d4202a793daccdde0eedc4bae58a1"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\shape_domain_seed_metrics.csv",
+          "relative": "data/shape_domain_seed_metrics.csv",
+          "bytes": 28438,
+          "sha256": "924f39d0d65ce6e56690ad6e69e78a1b17f762e9ec1cb2b9277a90464b6b45d4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\shape_learning_episodes.csv",
+          "relative": "data/shape_learning_episodes.csv",
+          "bytes": 3741505,
+          "sha256": "ff28fe476cd32b672f50194365d0bba2741a74c1be551ad0e653993746360a46"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\shape_learning_round_metrics.csv",
+          "relative": "data/shape_learning_round_metrics.csv",
+          "bytes": 7655,
+          "sha256": "b711263b8a8d524052c0db125b1fdf1fedfd237ffcb37d015034ab711efc1871"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\shape_method_metrics.csv",
+          "relative": "data/shape_method_metrics.csv",
+          "bytes": 3168,
+          "sha256": "7f01ca627c8464b73b42e20d612c42afbd4512606c7b262dfe024bf38b4adc73"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\shape_test_episodes.csv",
+          "relative": "data/shape_test_episodes.csv",
+          "bytes": 3277894,
+          "sha256": "e29a951b0b347ddc23607d9886df440651bf7f56ee2136e6d1ef52030096027c"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\source_directory_index.json",
+          "relative": "data/source_directory_index.json",
+          "bytes": 1040,
+          "sha256": "76eaf949fdd16879a2c6e4fb7a160e432a6ade4902df38f7757aa543643c510c"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\visual_audit.json",
+          "relative": "data/visual_audit.json",
+          "bytes": 10854858,
+          "sha256": "9d79980630255a0fc812d1901d903b6f92c7b53b8edfc77a08526887859191b4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\visual_episode_details.csv",
+          "relative": "data/visual_episode_details.csv",
+          "bytes": 3066146,
+          "sha256": "79f440fc9bf4f133b7d039ab3531ea99759bb997a0a7ca690b8886be11210bab"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\visual_group_metrics.csv",
+          "relative": "data/visual_group_metrics.csv",
+          "bytes": 1068,
+          "sha256": "cb1b572291eb4caf9438d8f7657032f860407095c5ae1f4920195acb71ae67bc"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\visual_test_seed_details.csv",
+          "relative": "data/visual_test_seed_details.csv",
+          "bytes": 2139,
+          "sha256": "293df3e6c38c9c17a7b5c36bbadb8c04709d82103bb86c3b4c0c7da61cda39f4"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\data\\字段说明.txt",
+          "relative": "data/字段说明.txt",
+          "bytes": 1212,
+          "sha256": "6249430c9a615f1638934f64afef3cd4fafaecb2cdecd3ce86ef6efac98d02ad"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\01_structure_overview.pdf",
+          "relative": "figures/01_structure_overview.pdf",
+          "bytes": 15482,
+          "sha256": "7c8ea3d0753619b140830b849877f5f7480cb00f899dbcefd77bd1d3a5a77eb8"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\01_structure_overview.png",
+          "relative": "figures/01_structure_overview.png",
+          "bytes": 105158,
+          "sha256": "9b4fb72bff7592e12eab18e8f4493fd62c1a398d80889688b875c9e5dfc7477e"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\01_structure_overview.svg",
+          "relative": "figures/01_structure_overview.svg",
+          "bytes": 61967,
+          "sha256": "f7beeeda87efc7458447abcf867db0bcde4bead16d70494a613cc28ea4ef8b31"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\02_naive_s100_vs_ours.pdf",
+          "relative": "figures/02_naive_s100_vs_ours.pdf",
+          "bytes": 16815,
+          "sha256": "a938e7b12df1565808e07e4386c15c456dc6c7dd49f63271f38281e3bd61b3aa"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\02_naive_s100_vs_ours.png",
+          "relative": "figures/02_naive_s100_vs_ours.png",
+          "bytes": 93033,
+          "sha256": "e3cce1e9c94c7ada0fb7ffcc381d38fb0436f69e5bcb2bf46fbd49d896b0352d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\02_naive_s100_vs_ours.svg",
+          "relative": "figures/02_naive_s100_vs_ours.svg",
+          "bytes": 61935,
+          "sha256": "fb27d574b4855a9f5129513a830e25f648c4d3647451161dcd69f076d3a22563"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\03_ema_slow_vs_ours.pdf",
+          "relative": "figures/03_ema_slow_vs_ours.pdf",
+          "bytes": 17235,
+          "sha256": "90d8c948941b379647cc0f2fec1ce5e81d1d1d6e366be432663f4912a394b738"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\03_ema_slow_vs_ours.png",
+          "relative": "figures/03_ema_slow_vs_ours.png",
+          "bytes": 95165,
+          "sha256": "c690d9566d56a8e2db2ec475c2c0f240e5affedbc32ac3e55297cbc66a497de8"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\03_ema_slow_vs_ours.svg",
+          "relative": "figures/03_ema_slow_vs_ours.svg",
+          "bytes": 61999,
+          "sha256": "784dc9dcd4b33fca295c07a272fea4022a45f8af022859f9e06b2e7603b63bbf"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\04_adajepa_same_vs_ours.pdf",
+          "relative": "figures/04_adajepa_same_vs_ours.pdf",
+          "bytes": 16855,
+          "sha256": "b58ef8255635de1c4385e1739aa983f49f75cb03dbd544c0bb028f122de536fc"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\04_adajepa_same_vs_ours.png",
+          "relative": "figures/04_adajepa_same_vs_ours.png",
+          "bytes": 92322,
+          "sha256": "b139d70f3bd6a77ca89d30fc5f6eba319cb5499661f937fcd638c82103a82696"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\04_adajepa_same_vs_ours.svg",
+          "relative": "figures/04_adajepa_same_vs_ours.svg",
+          "bytes": 61162,
+          "sha256": "4ffb099fe3f93e711b26f96123504b7ceb77eb6d2f1c133f24d71f6e7c7852ee"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\05_shared_slow_vs_ours.pdf",
+          "relative": "figures/05_shared_slow_vs_ours.pdf",
+          "bytes": 16962,
+          "sha256": "5bfd9e9ce63bf0519ddf8cb5a9ed18f14ae576c362430d9fdddce32a427bbf39"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\05_shared_slow_vs_ours.png",
+          "relative": "figures/05_shared_slow_vs_ours.png",
+          "bytes": 95553,
+          "sha256": "9eb1a25ed5a4b22c692d617ceec9ce4a0088feed2ce8ccbb2c519983bda404ed"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\05_shared_slow_vs_ours.svg",
+          "relative": "figures/05_shared_slow_vs_ours.svg",
+          "bytes": 61981,
+          "sha256": "3347dad7dfef693411fd7e71444c24058db808a94744b9b26585513916baf6eb"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\06_no_maturity_read_vs_ours.pdf",
+          "relative": "figures/06_no_maturity_read_vs_ours.pdf",
+          "bytes": 17157,
+          "sha256": "0035db304870929c939ba65f6f08742bfe1858213eb9970e4d4bc45a928c74a7"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\06_no_maturity_read_vs_ours.png",
+          "relative": "figures/06_no_maturity_read_vs_ours.png",
+          "bytes": 95280,
+          "sha256": "6e0ef6712335e0fa6b9e9e6f3f8acb19ccc59a658b97ec3ea24d02558cae664d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\06_no_maturity_read_vs_ours.svg",
+          "relative": "figures/06_no_maturity_read_vs_ours.svg",
+          "bytes": 62767,
+          "sha256": "714bda2acb47ea3c005485fdf665d940afab7f78a14ef32a1a704d956726fdbc"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\07_no_familiarity_vs_ours.pdf",
+          "relative": "figures/07_no_familiarity_vs_ours.pdf",
+          "bytes": 17865,
+          "sha256": "1405c473a6622cbb38faba98a1c38fa526d9475f7adacb0373a6a2636b11e7c2"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\07_no_familiarity_vs_ours.png",
+          "relative": "figures/07_no_familiarity_vs_ours.png",
+          "bytes": 94403,
+          "sha256": "0ca433814122c00133a8c9d1859a80fb22e76fd4a2dc52dcf1312606eb909f8c"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\07_no_familiarity_vs_ours.svg",
+          "relative": "figures/07_no_familiarity_vs_ours.svg",
+          "bytes": 63022,
+          "sha256": "bac21f54267b5f223b223c6d8676f5f1c6a9d875f708cdc6cb13a48710e41dc5"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\08_slow_learning_rate.pdf",
+          "relative": "figures/08_slow_learning_rate.pdf",
+          "bytes": 14817,
+          "sha256": "8ee39d150f405a9e0dd61eacfd21c2d016f11850bd9ebe4ec8f53f43b7a3a4af"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\08_slow_learning_rate.png",
+          "relative": "figures/08_slow_learning_rate.png",
+          "bytes": 168071,
+          "sha256": "0c4c507b9b196969f9bd5febdb4090c2ed6ba62cf2d3d8f0079ba4b33892cbdc"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\08_slow_learning_rate.svg",
+          "relative": "figures/08_slow_learning_rate.svg",
+          "bytes": 62015,
+          "sha256": "a5c77cf40ac13d685bea3f9158938fe7d5579c3f38d5de92815419606debef36"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\09_familiarity_domain_changes.pdf",
+          "relative": "figures/09_familiarity_domain_changes.pdf",
+          "bytes": 14844,
+          "sha256": "d9083ea72f45c9b670c19216aef3396992ca1bba9e86f668788fa845b76234ac"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\09_familiarity_domain_changes.png",
+          "relative": "figures/09_familiarity_domain_changes.png",
+          "bytes": 92949,
+          "sha256": "08d58bd8c92241dd68c195fac65e5fa3291f497bcc74ccdb1ae07265423574bc"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\09_familiarity_domain_changes.svg",
+          "relative": "figures/09_familiarity_domain_changes.svg",
+          "bytes": 56692,
+          "sha256": "509539d62faef06e7114e9b727e784d7d9afa480982c8b018c43ef3a3e0b7638"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\10_visual_gd_learning_rate.pdf",
+          "relative": "figures/10_visual_gd_learning_rate.pdf",
+          "bytes": 18043,
+          "sha256": "6dc4506aed95c16d7f78fa508047da73ee48a54bd64175219bd664f4f0c448d7"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\10_visual_gd_learning_rate.png",
+          "relative": "figures/10_visual_gd_learning_rate.png",
+          "bytes": 113130,
+          "sha256": "f31d9ffe01b96dce44c3aea6cba9f49dc5347d3982412e97a12a01bdb225dada"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\10_visual_gd_learning_rate.svg",
+          "relative": "figures/10_visual_gd_learning_rate.svg",
+          "bytes": 67973,
+          "sha256": "39fe0cd2fe48f18a43e1364e8a9bd59a5ed3765a91aa7fa3ac7ceee09534307a"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\11_visual_cem_learning_rate.pdf",
+          "relative": "figures/11_visual_cem_learning_rate.pdf",
+          "bytes": 17991,
+          "sha256": "03c9a5b419fd9eec5db53328221f54475e581bc48250c0b3743219f44169baf1"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\11_visual_cem_learning_rate.png",
+          "relative": "figures/11_visual_cem_learning_rate.png",
+          "bytes": 112875,
+          "sha256": "c8369e9bc83785ed7c09f7416a4b56696c1cf6677b866ec2568dfa68f3bb81ce"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\11_visual_cem_learning_rate.svg",
+          "relative": "figures/11_visual_cem_learning_rate.svg",
+          "bytes": 67941,
+          "sha256": "fd0b2f4b66a6f70227b5c6c0982e78af27da3a936a9097288bcbb3c18036021d"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\12_mpc_budget_success.pdf",
+          "relative": "figures/12_mpc_budget_success.pdf",
+          "bytes": 13730,
+          "sha256": "185766a99007e1501300d8d5b0da95501beaa9da820160996ce7d39214062a31"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\12_mpc_budget_success.png",
+          "relative": "figures/12_mpc_budget_success.png",
+          "bytes": 119587,
+          "sha256": "bb218c75225c9c8dccc8d502907cc8d92d93c1c3524f4bf90b1e17a5d1b8c4b5"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\12_mpc_budget_success.svg",
+          "relative": "figures/12_mpc_budget_success.svg",
+          "bytes": 38264,
+          "sha256": "d46608f9e9b3d6a55419f7185a51293b9049f88e0ac1c5d2894a62fa19d898f3"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\figure_manifest.json",
+          "relative": "figures/figure_manifest.json",
+          "bytes": 178481,
+          "sha256": "d11386c759823e1056353bda67c4b3cb6e29dfce422aa2f5a9712151b0f8795a"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\figure_verification.json",
+          "relative": "figures/figure_verification.json",
+          "bytes": 2874,
+          "sha256": "ab9c5067463ebe34cd02e749a38837bae0781368165ff2699b6d8c3d3f2d103a"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\qa_contact_sheet.png",
+          "relative": "figures/qa_contact_sheet.png",
+          "bytes": 195566,
+          "sha256": "4b4096bfc785855b10815a58ab17e5b74d69cbbc6a8a837b7c55e89f245284e6"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\manifest_sha256.json",
+          "relative": "manifest_sha256.json",
+          "bytes": 11049,
+          "sha256": "3d1c1111f592a7902603060fd092813ddbecb15081531ea839e701294b4e7f7f"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\scripts\\build_report.py",
+          "relative": "scripts/build_report.py",
+          "bytes": 27418,
+          "sha256": "00a8c2fe3def91e4487421e52dfc4649c75d2df3a11a7ebf9670ebf2b4bc2ac2"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\scripts\\build_report_figures.py",
+          "relative": "scripts/build_report_figures.py",
+          "bytes": 16335,
+          "sha256": "d13d2a435290d1720d17178cf4301c2e2acb6d13713ea3ff026a97e883ffb642"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\scripts\\export_word.ps1",
+          "relative": "scripts/export_word.ps1",
+          "bytes": 923,
+          "sha256": "32fbc9d9c11977422dcbdbc6fdd85bfa4142826e219af324da35d52c12e6d6d7"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\scripts\\package_report.py",
+          "relative": "scripts/package_report.py",
+          "bytes": 6816,
+          "sha256": "204f0feb78e481acd70c0b362f56deb5258e60bb3c7cb38c845b825fb42cf01f"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\scripts\\render_word_pdf.py",
+          "relative": "scripts/render_word_pdf.py",
+          "bytes": 1907,
+          "sha256": "223fd8ab6e7ce397ed081bf55307ce7c263c1040bf8e0bb3fbef4af78c829cdb"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\scripts\\report_layout.py",
+          "relative": "scripts/report_layout.py",
+          "bytes": 10801,
+          "sha256": "15028a18a0e2739536bced217fec87b41a12a9f45d22e7a317a5e5a44a967541"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\verification.json",
+          "relative": "verification.json",
+          "bytes": 680,
+          "sha256": "7c27480caee7090978b43ed2cfbc7f1aaa1f0a92b067dc84a533ad8686d325bc"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\~$实验图文报告.docx",
+          "relative": "~$实验图文报告.docx",
+          "bytes": 162,
+          "sha256": "ccbe9020071d07f04afa3d51400e092c5b5c5b9faaa1059d49e88fe3f29d8cea"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\图文报告.html",
+          "relative": "图文报告.html",
+          "bytes": 47553,
+          "sha256": "c1a7e650acb362e7b0185781ba74d50400dda7da707dae79e170ecc3b54d7d59"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\消融实验图文报告.docx",
+          "relative": "消融实验图文报告.docx",
+          "bytes": 1386372,
+          "sha256": "0a66facd671a2c8dd2230b585bef9dd255d7613619d4b3ec6f5224b2a59272c3"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\消融实验图文报告.pdf",
+          "relative": "消融实验图文报告.pdf",
+          "bytes": 1837149,
+          "sha256": "cf139d818545598bb16e34189b2853d0d34c1ba8478840b1ec1f5938a8b89b90"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\阅读说明.txt",
+          "relative": "阅读说明.txt",
+          "bytes": 2427,
+          "sha256": "a995c02219c947372042fa2143d38b6a4e717d7df09aec8418611614278d1e93"
+        }
+      ],
+      "excluded_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\contact_01.png",
+          "relative": "qa/contact_01.png",
+          "bytes": 363751,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\contact_07.png",
+          "relative": "qa/contact_07.png",
+          "bytes": 260963,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\contact_13.png",
+          "relative": "qa/contact_13.png",
+          "bytes": 314204,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\contact_19.png",
+          "relative": "qa/contact_19.png",
+          "bytes": 307117,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-1.png",
+          "relative": "qa/render/page-1.png",
+          "bytes": 312919,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-10.png",
+          "relative": "qa/render/page-10.png",
+          "bytes": 198873,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-11.png",
+          "relative": "qa/render/page-11.png",
+          "bytes": 203691,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-12.png",
+          "relative": "qa/render/page-12.png",
+          "bytes": 355330,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-13.png",
+          "relative": "qa/render/page-13.png",
+          "bytes": 218866,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-14.png",
+          "relative": "qa/render/page-14.png",
+          "bytes": 231159,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-15.png",
+          "relative": "qa/render/page-15.png",
+          "bytes": 235162,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-16.png",
+          "relative": "qa/render/page-16.png",
+          "bytes": 236445,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-17.png",
+          "relative": "qa/render/page-17.png",
+          "bytes": 262202,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-18.png",
+          "relative": "qa/render/page-18.png",
+          "bytes": 235946,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-19.png",
+          "relative": "qa/render/page-19.png",
+          "bytes": 241230,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-2.png",
+          "relative": "qa/render/page-2.png",
+          "bytes": 303276,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-20.png",
+          "relative": "qa/render/page-20.png",
+          "bytes": 246797,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-21.png",
+          "relative": "qa/render/page-21.png",
+          "bytes": 218060,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-22.png",
+          "relative": "qa/render/page-22.png",
+          "bytes": 296033,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-23.png",
+          "relative": "qa/render/page-23.png",
+          "bytes": 288749,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-3.png",
+          "relative": "qa/render/page-3.png",
+          "bytes": 312307,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-4.png",
+          "relative": "qa/render/page-4.png",
+          "bytes": 221995,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-5.png",
+          "relative": "qa/render/page-5.png",
+          "bytes": 213546,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-6.png",
+          "relative": "qa/render/page-6.png",
+          "bytes": 209096,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-7.png",
+          "relative": "qa/render/page-7.png",
+          "bytes": 198236,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-8.png",
+          "relative": "qa/render/page-8.png",
+          "bytes": 207869,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render\\page-9.png",
+          "relative": "qa/render/page-9.png",
+          "bytes": 197934,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\qa\\render_manifest.json",
+          "relative": "qa/render_manifest.json",
+          "bytes": 2228,
+          "reason": "文档渲染 QA 页面，原稿/PDF/图表已保留"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\scripts\\__pycache__\\report_layout.cpython-312.pyc",
+          "relative": "scripts/__pycache__/report_layout.cpython-312.pyc",
+          "bytes": 18612,
+          "reason": "缓存"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\消融报告与数据图表.zip",
+          "relative": "消融报告与数据图表.zip",
+          "bytes": 5077775,
+          "reason": "既有重复压缩包，内容另按目录归档"
+        }
+      ],
+      "figures": [
+        {
+          "id": "01_structure_overview",
+          "title": "主要消融总体对比",
+          "caption": "主要结构与继承方式消融总览。每组 1050 个独立测试回合，均对齐原始形状权重与 s100 学习链设置；朴素继承只取第一链。误差棒为 3 个测试种子的样本标准差。平均 MPC 包含失败回合，失败按 30 步计。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\01_structure_overview.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\01_structure_overview.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\01_structure_overview.svg"
+          },
+          "methods": [
+            "adajepa_same",
+            "naive_s100",
+            "ema_slow",
+            "shared_slow",
+            "no_maturity_read",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "02_naive_s100_vs_ours",
+          "title": "朴素继承与 Ours",
+          "caption": "朴素继承与完整 Ours 的七形状域 GD 独立测试对比，各 1050 回合、每域 150 回合。Ours 为 s100 链，各消融按相同学习种子链比较；AdaJEPA 按回合恢复原始权重。左：成功率；右：全部回合平均 MPC，失败记 30 步。误差棒为 3 个测试种子之间的样本标准差，不是训练重复标准差。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\02_naive_s100_vs_ours.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\02_naive_s100_vs_ours.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\02_naive_s100_vs_ours.svg"
+          },
+          "methods": [
+            "naive_s100",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "03_ema_slow_vs_ours",
+          "title": "慢参数 EMA与 Ours",
+          "caption": "慢参数 EMA与完整 Ours 的七形状域 GD 独立测试对比，各 1050 回合、每域 150 回合。Ours 为 s100 链，各消融按相同学习种子链比较；AdaJEPA 按回合恢复原始权重。左：成功率；右：全部回合平均 MPC，失败记 30 步。误差棒为 3 个测试种子之间的样本标准差，不是训练重复标准差。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\03_ema_slow_vs_ours.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\03_ema_slow_vs_ours.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\03_ema_slow_vs_ours.svg"
+          },
+          "methods": [
+            "ema_slow",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "04_adajepa_same_vs_ours",
+          "title": "同权重 AdaJEPA与 Ours",
+          "caption": "同权重 AdaJEPA与完整 Ours 的七形状域 GD 独立测试对比，各 1050 回合、每域 150 回合。Ours 为 s100 链，各消融按相同学习种子链比较；AdaJEPA 按回合恢复原始权重。左：成功率；右：全部回合平均 MPC，失败记 30 步。误差棒为 3 个测试种子之间的样本标准差，不是训练重复标准差。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\04_adajepa_same_vs_ours.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\04_adajepa_same_vs_ours.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\04_adajepa_same_vs_ours.svg"
+          },
+          "methods": [
+            "adajepa_same",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "05_shared_slow_vs_ours",
+          "title": "单一共享慢学习器与 Ours",
+          "caption": "单一共享慢学习器与完整 Ours 的七形状域 GD 独立测试对比，各 1050 回合、每域 150 回合。Ours 为 s100 链，各消融按相同学习种子链比较；AdaJEPA 按回合恢复原始权重。左：成功率；右：全部回合平均 MPC，失败记 30 步。误差棒为 3 个测试种子之间的样本标准差，不是训练重复标准差。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\05_shared_slow_vs_ours.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\05_shared_slow_vs_ours.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\05_shared_slow_vs_ours.svg"
+          },
+          "methods": [
+            "shared_slow",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "06_no_maturity_read_vs_ours",
+          "title": "关闭成熟度读取限制与 Ours",
+          "caption": "关闭成熟度读取限制与完整 Ours 的七形状域 GD 独立测试对比，各 1050 回合、每域 150 回合。Ours 为 s100 链，各消融按相同学习种子链比较；AdaJEPA 按回合恢复原始权重。左：成功率；右：全部回合平均 MPC，失败记 30 步。误差棒为 3 个测试种子之间的样本标准差，不是训练重复标准差。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\06_no_maturity_read_vs_ours.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\06_no_maturity_read_vs_ours.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\06_no_maturity_read_vs_ours.svg"
+          },
+          "methods": [
+            "no_maturity_read",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "07_no_familiarity_vs_ours",
+          "title": "关闭熟悉度读写保护与 Ours",
+          "caption": "关闭熟悉度读写保护与完整 Ours 的七形状域 GD 独立测试对比，各 1050 回合、每域 150 回合。Ours 为 s100 链，各消融按相同学习种子链比较；AdaJEPA 按回合恢复原始权重。左：成功率；右：全部回合平均 MPC，失败记 30 步。误差棒为 3 个测试种子之间的样本标准差，不是训练重复标准差。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\07_no_familiarity_vs_ours.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\07_no_familiarity_vs_ours.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\07_no_familiarity_vs_ours.svg"
+          },
+          "methods": [
+            "no_familiarity",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "08_slow_learning_rate",
+          "title": "慢学习率敏感性",
+          "caption": "七形状域 GD 慢梯度学习率敏感性。横轴采用真实学习率数值的对数尺度；每个设置为单学习链、1050 个独立测试回合。水平参考线为完整 Ours 的 1e-4 设置。折线表示不同参数设置，不能解释为训练过程。EMA 系数不作为梯度学习率并入本图。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\08_slow_learning_rate.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\08_slow_learning_rate.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\08_slow_learning_rate.svg"
+          },
+          "methods": [
+            "slow_lr_low",
+            "ours_s100",
+            "slow_lr_high",
+            "slow_lr_3e4",
+            "slow_lr_5e4",
+            "slow_lr_1e2"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "09_familiarity_domain_changes",
+          "title": "熟悉度读写保护：逐域变化",
+          "caption": "关闭熟悉度读写保护相对完整 Ours 的变化。成功率正值表示提升，平均 MPC 负值表示改善；蓝色为改善，浅棕色为退步。每域 150 回合，总体 1050 回合，仅一个学习链。该图是描述性差值，不表示统计显著；独立关闭读取/写入以及 CEM 新实验未完成，不纳入本图。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\09_familiarity_domain_changes.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\09_familiarity_domain_changes.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\09_familiarity_domain_changes.svg"
+          },
+          "methods": [
+            "no_familiarity",
+            "ours_s100"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "10_visual_gd_learning_rate",
+          "title": "七视觉域 GD：慢学习率比较",
+          "caption": "七视觉域 GD 的慢学习率 1e-4 与 2e-4 对比。两组均为 3 条独立学习链的第五轮端点，每条链 1050 个独立测试回合，总计每设置 3150 回合、每域 450 回合。误差棒为 3 条学习链的样本标准差；每条链先汇总三个测试种子。平均 MPC 包含失败回合，失败计 30 步。Original/Blur/Noise/Dark/Agent/Object/Goal 对应原始视觉、模糊、椒盐噪声、暗光、红色智能体、红色物体、红色目标。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\10_visual_gd_learning_rate.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\10_visual_gd_learning_rate.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\10_visual_gd_learning_rate.svg"
+          },
+          "methods": [
+            "visual_gd_lr_0.0001",
+            "visual_gd_lr_0.0002"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "11_visual_cem_learning_rate",
+          "title": "七视觉域 CEM：慢学习率比较",
+          "caption": "七视觉域 CEM 的慢学习率 1e-4 与 2e-4 对比。两组均为 3 条独立学习链的第五轮端点，每条链 1050 个独立测试回合，总计每设置 3150 回合、每域 450 回合。误差棒为 3 条学习链的样本标准差；每条链先汇总三个测试种子。平均 MPC 包含失败回合，失败计 30 步。Original/Blur/Noise/Dark/Agent/Object/Goal 对应原始视觉、模糊、椒盐噪声、暗光、红色智能体、红色物体、红色目标。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\11_visual_cem_learning_rate.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\11_visual_cem_learning_rate.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\11_visual_cem_learning_rate.svg"
+          },
+          "methods": [
+            "visual_cem_lr_0.0001",
+            "visual_cem_lr_0.0002"
+          ],
+          "dpi": 300
+        },
+        {
+          "id": "12_mpc_budget_success",
+          "title": "补充：MPC 预算内成功率",
+          "caption": "MPC 预算内成功率，由实际逐回合结果重算：成功且步数不超过预算的回合数，除以全部 1050 个测试回合。Ours 为纯实线、无点，AdaJEPA 为虚线；第 30 步的终点等于各方法最终成功率。朴素继承只取 s100 第一链。",
+          "files": {
+            "png": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\12_mpc_budget_success.png",
+            "pdf": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\12_mpc_budget_success.pdf",
+            "svg": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\figures\\12_mpc_budget_success.svg"
+          },
+          "methods": [
+            "adajepa_same",
+            "naive_s100",
+            "ema_slow",
+            "ours_s100"
+          ],
+          "dpi": 300
+        }
+      ],
+      "html_links": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\消融实验图文报告_20261105\\图文报告.html",
+          "local_link_count": 27,
+          "absolute_links": [],
+          "unresolved_local_links": [],
+          "relative_links_outside_this_report": [],
+          "links_to_excluded_duplicate_files": [
+            "消融报告与数据图表.zip"
+          ]
+        }
+      ]
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\报告\\七视觉域慢学习率最终对比_20261104",
+      "name": "七视觉域慢学习率最终对比_20261104",
+      "description": "视觉 GD 与 CEM 的慢学习率 1e-4/2e-4 最终对比数据与 HTML。",
+      "all_file_count": 2,
+      "all_bytes": 2135265,
+      "selected_file_count": 2,
+      "selected_bytes": 2135265,
+      "extension_counts": {
+        ".json": 1,
+        ".html": 1
+      },
+      "selected_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七视觉域慢学习率最终对比_20261104\\最终对比数据.json",
+          "relative": "最终对比数据.json",
+          "bytes": 2126413,
+          "sha256": "0039cc6c41fb4cb605df83c53d3cc2a6cc02106244fbcea3a0d7e463f9ebdb3b"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\七视觉域慢学习率最终对比_20261104\\最终结果对比.html",
+          "relative": "最终结果对比.html",
+          "bytes": 8852,
+          "sha256": "f4c6e3f031b69b215385ff22eaf4cece48292c702d614c623dbf726d8639cab2"
+        }
+      ],
+      "excluded_files": [],
+      "figures": [],
+      "html_links": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\七视觉域慢学习率最终对比_20261104\\最终结果对比.html",
+          "local_link_count": 3,
+          "absolute_links": [],
+          "unresolved_local_links": [],
+          "relative_links_outside_this_report": [
+            "../GD慢学习率详细对比_20261104/GD详细对比.html",
+            "../../outputs/visual_slow_lr_2e4_3x5_heldout_20261102/progress.html"
+          ],
+          "links_to_excluded_duplicate_files": []
+        }
+      ]
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\报告\\GD慢学习率详细对比_20261104",
+      "name": "GD慢学习率详细对比_20261104",
+      "description": "视觉 GD 的 1e-4/2e-4 逐回合配对、分链、分域详细比较。",
+      "all_file_count": 3,
+      "all_bytes": 4888337,
+      "selected_file_count": 2,
+      "selected_bytes": 4885803,
+      "extension_counts": {
+        ".html": 1,
+        ".json": 1,
+        ".js": 1
+      },
+      "selected_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\GD慢学习率详细对比_20261104\\GD详细对比.html",
+          "relative": "GD详细对比.html",
+          "bytes": 1939072,
+          "sha256": "16f2c290cf563df432dcc4d6e95a596b38f7800516fcc69eaeeddcbdec7c427a"
+        },
+        {
+          "source": "D:\\ADAJEPA\\报告\\GD慢学习率详细对比_20261104\\GD详细配对数据.json",
+          "relative": "GD详细配对数据.json",
+          "bytes": 2946731,
+          "sha256": "92c41d844fbce7a8a0121d1d2310b7981b852571720af236e9ef1353240cd40e"
+        }
+      ],
+      "excluded_files": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\GD慢学习率详细对比_20261104\\ui_check.js",
+          "relative": "ui_check.js",
+          "bytes": 2534,
+          "reason": "本机 UI 检查辅助脚本"
+        }
+      ],
+      "figures": [],
+      "html_links": [
+        {
+          "source": "D:\\ADAJEPA\\报告\\GD慢学习率详细对比_20261104\\GD详细对比.html",
+          "local_link_count": 2,
+          "absolute_links": [],
+          "unresolved_local_links": [],
+          "relative_links_outside_this_report": [
+            "../../outputs/visual_slow_lr_2e4_3x5_heldout_20261102/progress.html"
+          ],
+          "links_to_excluded_duplicate_files": []
+        }
+      ]
+    }
+  ],
+  "latest_shape_split_results": {
+    "source_root": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105",
+    "description": "2026-11-06 完成的 GD 单关读、GD 单关写、CEM 双关最终结果，1050 测试回合/组。仅存在 HTML 表格与 CSV，尚无独立 PDF/PNG/SVG 新图。",
+    "selected_files": [
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\消融最终结果.html",
+        "relative": "消融最终结果.html",
+        "bytes": 3617,
+        "sha256": "2df824dd98185b27cfd20a735fde832ba305fad6aef2bf9b7c729e5c35e82eec"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\独立测试逐回合数据.csv",
+        "relative": "独立测试逐回合数据.csv",
+        "bytes": 137329,
+        "sha256": "9731c80738be95115dbacabf82305c82984f396e340048c8627e78954711e5d2"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\消融结果对比.csv",
+        "relative": "消融结果对比.csv",
+        "bytes": 414,
+        "sha256": "3f525fd3c3c54da9e6a3611ba208a5ab9f26b09e9b7a41411b7d12aea6afb341"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\最终结果核验.json",
+        "relative": "最终结果核验.json",
+        "bytes": 1323,
+        "sha256": "2ad8dfb364bcf1fbb182b84b66cb6d33f4945f8e946d8d0abf0ab537f699c5d6"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\summarize_completed_results.py",
+        "relative": "summarize_completed_results.py",
+        "bytes": 8390,
+        "sha256": "5169867dd93e75c74c6a484796235d397c18cba0076a722d3fced51c49dfe0a5"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\test_summary.json",
+        "relative": "test_summary.json",
+        "bytes": 25235,
+        "sha256": "b46a0fef7f2f2e0c75f3782f2959e1678bff587a1311deddb2b59204f1b6a80a"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\learning_summary.json",
+        "relative": "learning_summary.json",
+        "bytes": 3539,
+        "sha256": "9fcce32153c8b39301e0ce3b9a2b1d7c985fa049e8f7cdfaea704cd313d3e282"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\final_results.json",
+        "relative": "final_results.json",
+        "bytes": 415769,
+        "sha256": "e9b6939fd052092fbfe592b51a326a6cdb703af891dfd4a859d25bea8a4a3626"
+      },
+      {
+        "source": "D:\\ADAJEPA\\outputs\\shape_familiarity_split_gd_singlechain_5round_20261105\\completed_data_recovery_verification.json",
+        "relative": "completed_data_recovery_verification.json",
+        "bytes": 226,
+        "sha256": "56c27afbdbd57e291cd0d2026e4fb4905878c507121262a43109d7e0959b2513"
+      }
+    ]
+  },
+  "other_output_static_summaries": [
+    {
+      "source_root": "D:\\ADAJEPA\\outputs\\shape_core_gd_singlechain_5round_20261031",
+      "static_summary_files": [
+        {
+          "source": "D:\\ADAJEPA\\outputs\\shape_core_gd_singlechain_5round_20261031\\消融结果总览.html",
+          "relative": "消融结果总览.html",
+          "bytes": 4238,
+          "sha256": "0f66abd57742efb6a5c97ef5e75dbb1bf064b71647a1662d6c6753b7123f5e97"
+        }
+      ]
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\outputs\\shape_ema_slow_gd_singlechain_5round_20261101",
+      "static_summary_files": []
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\outputs\\shape_naive_gd_n50_3x5_heldout_20261031",
+      "static_summary_files": []
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\outputs\\shape_slow_lr_3e4_gd_singlechain_5round_20261102",
+      "static_summary_files": []
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\outputs\\shape_slow_lr_extended_gd_singlechain_5round_20261101",
+      "static_summary_files": []
+    },
+    {
+      "source_root": "D:\\ADAJEPA\\outputs\\shape_no_familiarity_gd_singlechain_5round_20261104",
+      "static_summary_files": []
+    }
+  ],
+  "portability_notes": [
+    "所有现有报告 HTML 的 href/src 均无本机绝对链接，但三份汇总报告含 ../ 或 ../../outputs 跨目录链接，需按源目录结构带上被引用文件或在归档副本中重新映射。图文报告 HTML 链接到旧ZIP，若去冗余排除ZIP，需移除此链接或替换为新归档。详见 html_links。",
+    "报告 JSON/CSV 中保留来源绝对路径作为溯源，不代表外部计算机可直接访问。",
+    "继承EMA、核心四图、逐项对比的 build_figures.py 使用本目录 data/，已包含数据时可独立绘图；硬编码 D: 路径主要是依赖 fallback 或缺数据 fallback。应在归档副本中去除不必要 sys.path，并安装 numpy/matplotlib/pypdf。",
+    "图文报告 scripts/build_report_figures.py 第166行强依赖 D:\\ADAJEPA\\报告\\七形状域_逐项消融对比图_20261104\\data\\heldout_episode_data.json；归档副本应将此文件复制到本报告 data 并把读取改为 ROOT/data/heldout_episode_data.json。",
+    "图文报告 data/build_shape_audit.py、build_visual_audit.py 和继承EMA extract_data.py 均依赖原实验目录。原版保留为 provenance；若要跨机重审，应提供打包目录映射/可移植副本。",
+    "图文报告 render_word_pdf.py 依赖 Windows Word 和本机 Poppler/文档技能路径；PDF/DOCX已包含，不应承诺任意机器原样执行该脚本。",
+    "报告原 ZIP 和旧 manifests 保留的是历史数据范围，未包含完整动作/状态 NPZ；必须另提供实验原始数据包。",
+    "当前 2026-11-06 视觉双关实验在跑，不纳入完成结果；已停止视觉 naive n30/n50 仅注明未完成，不纳入最终效果比较。"
+  ],
+  "recommendation": "七个历史报告目录按 selected_files 全部归档，报告/图可额外直接置于分支浏览；追加 latest_shape_split_results，历史报告保持生成时点，勿用11/05运行快照替代11/06最终结果。",
+  "totals": {
+    "selected_report_files": 170,
+    "selected_report_bytes": 54985284,
+    "original_report_bytes": 66978189,
+    "independent_figure_designs": 27
+  }
+}
