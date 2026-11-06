@@ -1,0 +1,41 @@
+{
+  "verified_at": "2026-11-06T10:45:55.987371+08:00",
+  "completed_at": "2026-11-06T03:24:25.851869+08:00",
+  "all_batches_verified": 168,
+  "heldout_episodes_verified": 3150,
+  "readonly_endpoint_hashes_verified": true,
+  "results": [
+    {
+      "optimizer": "GD",
+      "method": "仅关闭读保护",
+      "n": 1050,
+      "successes": 808,
+      "success_rate": 0.7695238095238095,
+      "mpc_steps_all": 12.54,
+      "mpc_steps_success": 7.310643564356436,
+      "delta_success_percentage_points": -4.476190476190478
+    },
+    {
+      "optimizer": "GD",
+      "method": "仅关闭写保护",
+      "n": 1050,
+      "successes": 834,
+      "success_rate": 0.7942857142857143,
+      "mpc_steps_all": 11.755238095238095,
+      "mpc_steps_success": 7.0299760191846525,
+      "delta_success_percentage_points": -2.0000000000000018
+    },
+    {
+      "optimizer": "CEM",
+      "method": "同时关闭读写保护",
+      "n": 1050,
+      "successes": 836,
+      "success_rate": 0.7961904761904762,
+      "mpc_steps_all": 13.12,
+      "mpc_steps_success": 8.799043062200957,
+      "delta_success_percentage_points": 1.0476190476190528
+    }
+  ],
+  "raw_test_episodes": "familiarity_test_episodes_20261106.csv",
+  "scientific_unit": "one learning chain, three heldout test seeds per arm"
+}
