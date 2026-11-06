@@ -12,7 +12,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
-from restyle_paper_figures import LINE_STYLES, PLANNER_LINE_STYLES, set_style
+from restyle_paper_figures import LINE_STYLES, PLANNER_LINE_STYLES, emphasize_ours, set_style
 
 PAPER = Path(__file__).resolve().parents[1]
 DATA = PAPER / 'data'
@@ -83,20 +83,21 @@ def draw_progress(data):
         for planner in ['GD', 'CEM']:
             rows = data[group][planner]
             y = np.array([r['mean'] for r in rows])
-            ax.plot([r['round'] for r in rows], y, ms=3.1, mew=.85, lw=1.45,
+            ax.plot([r['round'] for r in rows], y, ms=3.6, mew=1, lw=2.05,
                     label=planner, **PLANNER_LINE_STYLES[planner])
         ax.set(xticks=range(1, 6), ylim=(35, 85), yticks=[40, 60, 80],
                xlabel='Deployment round')
         ax.set_title(title, fontsize=7.6, pad=5)
     axes[0, 0].set_ylabel('Success (%)', fontsize=7.2)
     handles, labels = axes[0, 0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.55, 1.01),
+    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.55, 1.045),
+               title='SE-JEPA', title_fontproperties={'weight': 'bold', 'size': 7.2},
                ncol=2, frameon=False, fontsize=7.2, handlelength=2, columnspacing=1.2)
     for ax, task, title in zip(axes[1], ['rope', 'granular'],
                                ['(c) Rope', '(d) Granular']):
         rows = data['deform'][task]['passes']
         y = np.array([r['mean'] for r in rows])
-        ax.plot([r['pass'] for r in rows], y, ms=3.2, lw=1.6, label='SE-JEPA',
+        ax.plot([r['pass'] for r in rows], y, ms=3.8, lw=2.15, label='SE-JEPA',
                 **LINE_STYLES['ours'])
         # Stagger the line identifiers because the two Granular references nearly coincide.
         for name, key, marker_x in [('DINO-WM', 'frozen', 1.5), ('AdaJEPA', 'adajepa', 3.5)]:
@@ -113,8 +114,9 @@ def draw_progress(data):
         ax.xaxis.label.set_size(7.1)
         ax.grid(axis='y', color='#E1E5E9', lw=.5, zorder=0)
     handles, labels = axes[1, 0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='lower center', bbox_to_anchor=(.54, -.025),
-               ncol=3, frameon=False, fontsize=7.2, handlelength=2, columnspacing=.86)
+    legend = fig.legend(handles, labels, loc='lower center', bbox_to_anchor=(.54, -.025),
+                        ncol=3, frameon=False, fontsize=7.2, handlelength=2, columnspacing=.86)
+    emphasize_ours(legend)
     fig.savefig(FIG / 'learning_progress.pdf', bbox_inches='tight', pad_inches=.035)
     fig.savefig(FIG / 'learning_progress.png', bbox_inches='tight', pad_inches=.035, dpi=300)
     plt.close(fig)

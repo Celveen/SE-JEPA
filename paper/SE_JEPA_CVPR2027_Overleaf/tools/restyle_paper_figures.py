@@ -39,6 +39,10 @@ PLANNER_LINE_STYLES = {
     'CEM': dict(color='#006FC1', linestyle='-', marker='o'),
 }
 
+def emphasize_ours(legend):
+    for label in legend.get_texts():
+        label.set_fontweight('bold' if label.get_text() == 'SE-JEPA' else 'normal')
+
 
 def set_style():
     plt.rcParams.update({
@@ -102,7 +106,7 @@ def draw_teaser(s):
     for j, (key, label, color) in enumerate(bars):
         ys = [float(values[key][col]) if values[key][col] != '—' else np.nan for _, col in groups]
         xs = np.arange(3) + (j - 2) * width
-        style = dict(edgecolor='#083E7A', linewidth=.85, hatch='//') if key == 'SE-JEPA (Ours)' else {}
+        style = dict(edgecolor='#083E7A', linewidth=1.05, hatch='//') if key == 'SE-JEPA (Ours)' else {}
         ax.bar(xs, ys, width*.92, color=color, label=label, zorder=3, **style)
         if key == 'SE-JEPA (Ours)':
             for x, y in zip(xs, ys):
@@ -113,8 +117,9 @@ def draw_teaser(s):
     ax.tick_params(axis='x', length=0, labelsize=7)
     ax.tick_params(axis='y', labelsize=7)
     ax.grid(axis='y', color='#E1E5E9', lw=.6, zorder=0)
-    ax.legend(frameon=False, ncol=5, fontsize=6.5, loc='upper center',
-              bbox_to_anchor=(.5, 1.20), handlelength=1.0, handletextpad=.35, columnspacing=.64)
+    legend = ax.legend(frameon=False, ncol=5, fontsize=6.5, loc='upper center',
+                       bbox_to_anchor=(.5, 1.20), handlelength=1, handletextpad=.35, columnspacing=.58)
+    emphasize_ours(legend)
     save(fig, 'teaser_bars')
 
 
@@ -159,7 +164,9 @@ def draw_visual_gains(s):
         vals=[s['visual']['by_shape'][planner][d]['ours']['mean']-s['visual']['by_shape'][planner][d]['adajepa']['mean'] for d in doms]
         ax.bar(np.arange(6)+off,vals,.34,label=planner,color=PLANNER_COLORS[planner],zorder=3)
     ax.set_xticks(np.arange(6),labels);ax.set(ylabel='Gain over AdaJEPA (pp)',ylim=(0,40))
-    ax.legend(frameon=False,ncol=2);ax.grid(axis='y',alpha=.16,zorder=0)
+    ax.legend(frameon=False, ncol=2, loc='upper left', title='SE-JEPA',
+              title_fontproperties={'weight': 'bold', 'size': 8}, alignment='left')
+    ax.grid(axis='y',alpha=.16,zorder=0)
     save(fig,'visual_gains')
 
 
@@ -167,6 +174,7 @@ def draw_directions():
     if not (DATA/'cosine_gd.npy').exists():
         return
     fig,axes=plt.subplots(1,2,figsize=(6.8,2.1),constrained_layout=True)
+    fig.suptitle('SE-JEPA', fontweight='bold', fontsize=9)
     for ax,planner in zip(axes,['GD','CEM']):
         values=np.load(DATA/f'cosine_{planner.lower()}.npy')
         ax.hist(values,bins=np.linspace(-1,1,51),weights=np.ones(len(values))/len(values),

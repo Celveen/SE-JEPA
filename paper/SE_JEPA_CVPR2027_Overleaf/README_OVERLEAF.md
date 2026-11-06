@@ -50,12 +50,13 @@ python tools/audit_pusht.py
 python tools/package_overleaf.py
 ```
 
-These optional scripts use NumPy, Matplotlib, and Pillow. The first script
+These optional scripts use NumPy, Matplotlib, Pillow, and PyMuPDF. The first script
 otherwise restores older panels; the later scripts apply the current style
 and original simulator frames. The first-page chart uses blue-gray shades,
-with a bright-blue, dark-outlined and hatched SE-JEPA bar. The main line
-figures use distinct colors, line styles and markers. Simulator pixels and the author's architecture diagram retain
-their original colors.
+with a bright-blue, dark-outlined and hatched SE-JEPA bar. Figures use bold
+method labels for SE-JEPA and regular labels for the baselines. When comparing
+methods, line plots also give SE-JEPA a heavier stroke. GD and CEM share the
+same weight in plots where both planners use SE-JEPA.
 
 DINO-WM, DreamerV3 and IRIS use the episode-verified VIS50 results from the
 `baselines` branch (original paths, immutable commit and checksums in

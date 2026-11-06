@@ -8,16 +8,23 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-from restyle_paper_figures import LINE_STYLES, METHOD_COLORS, TEXT, set_style
+from restyle_deform_rollouts import draw_deform_rollouts
+from restyle_paper_figures import LINE_STYLES, TEXT, emphasize_ours, set_style
 from PIL import Image
 P=Path(__file__).resolve().parents[1]; D=P/'data/revision_assets'; F=P/'figures'
 set_style()
-methods=['frozen','adajepa','ours']; names={'frozen':'Frozen','adajepa':'AdaJEPA','ours':'SE-JEPA'}; colors=METHOD_COLORS
+methods=['frozen','adajepa','ours']; names={'frozen':'Frozen','adajepa':'AdaJEPA','ours':'SE-JEPA'}
 cases={k:json.loads((D/(k+'_case.json')).read_text()) for k in ['shape','visual']}
+def frame_border(ax, emphasized):
+ for spine in ax.spines.values():
+  spine.set_visible(True)
+  spine.set_color(TEXT if emphasized else '#dce1e5')
+  spine.set_linewidth(1.35 if emphasized else .55)
+
 def frame(ax,k,m,step):
  f=D/k/m/(('goal' if step=='goal' else f'step_{step:02d}')+'.png')
  ax.imshow(Image.open(f),interpolation='none');ax.set_xticks([]);ax.set_yticks([])
- for sp in ax.spines.values():sp.set_visible(True);sp.set_color('#dce1e5');sp.set_linewidth(.55)
+ frame_border(ax, m == 'ours' and step not in (0, 'goal'))
 def save(fig,n):
  fig.savefig(F/(n+'.pdf'),bbox_inches='tight',pad_inches=.025)
  fig.savefig(F/(n+'.png'),bbox_inches='tight',pad_inches=.025,dpi=300)
@@ -34,16 +41,18 @@ def draw_planning_efficiency():
         for offset, method in enumerate(methods):
             y = np.mean([summary['curves']['CEM'][d][method]['mean'] for d in domains], axis=0)
             ax.plot(np.arange(1, len(y) + 1), y, label=names[method],
-                    lw=1.8 if method == 'ours' else 1.4, ms=3.3, mew=.85,
+                    lw=2.15 if method == 'ours' else 1.12,
+                    ms=3.8 if method == 'ours' else 3.1, mew=.85,
                     markevery=(offset * 2, 6), **LINE_STYLES[method])
-        ax.set_title(title, loc='left', fontsize=8, fontweight='bold', pad=5)
+        ax.set_title(title, loc='left', fontsize=8, pad=5)
         ax.set(xlim=(1, 30), ylim=(0, 100), yticks=[0, 50, 100], ylabel='Success (%)')
         ax.tick_params(labelsize=7)
         ax.grid(axis='y', color='#E1E5E9', lw=.5)
     axes[1].set(xlabel='MPC replans', xticks=[1, 5, 10, 15, 20, 25, 30])
     handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.54, 1.03),
-               ncol=3, fontsize=7.2, frameon=False, handlelength=2, columnspacing=1.05)
+    legend = fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.54, 1.03),
+                        ncol=3, fontsize=7.2, frameon=False, handlelength=2, columnspacing=1.05)
+    emphasize_ours(legend)
     save(fig, 'planning_efficiency')
 
 if '--planning-only' in sys.argv:
@@ -64,8 +73,7 @@ for row, case in enumerate(selection):
   raw=Image.open(D/case['frames'][panel]['path'])
   ax.imshow(raw.crop(case['display_crop_xyxy']),interpolation='none')
   ax.set_xticks([]);ax.set_yticks([])
-  for sp in ax.spines.values():
-   sp.set_visible(True);sp.set_color('#dce1e5');sp.set_linewidth(.6)
+  frame_border(ax, panel == 'ours')
   if panel in methods:
    result=case['methods'][panel]
    outcome='Success' if result['success'] else 'Failure'
@@ -74,7 +82,8 @@ for row, case in enumerate(selection):
            fontweight='bold' if panel=='ours' else 'normal')
   if row==0:
    title=['Start','Frozen final','AdaJEPA final','SE-JEPA final','Goal image'][col]
-   ax.set_title(title,fontsize=8,pad=5,color=TEXT)
+   ax.set_title(title,fontsize=8,pad=5,color=TEXT,
+                fontweight='bold' if panel=='ours' else 'normal')
   if col==0:
    ax.set_ylabel(case['label'],fontsize=7.5,labelpad=7,color=TEXT)
 fig.text(.54,.025,'Target: object pose in the goal image. The green marker is static.',
@@ -91,10 +100,18 @@ for k in ['shape','visual']:
   for col,t in enumerate([0,2,5,10,20,30,'goal']):
    ax=fig.add_subplot(gs[r,col]);frame(ax,k,m,'goal' if t=='goal' else min(t,n))
    if r==0:ax.set_title('Goal' if t=='goal' else f'Replan {t}',fontsize=7,pad=3)
-   if col==0:ax.set_ylabel(names[m],fontsize=8,color=colors[m])
+   if col==0:ax.set_ylabel(names[m],fontsize=8,color=TEXT,fontweight='bold' if m=='ours' else 'normal')
    if t!='goal' and t>n:ax.patch.set_alpha(.2); ax.text(.5,.02,'held',transform=ax.transAxes,ha='center',fontsize=6,color='#666')
-  ax=fig.add_subplot(loss_grid[0,r]);ax.plot(c['steps'],c['loss'],color=colors[m],lw=1.4);ax.set_title(names[m],fontsize=7,pad=3);ax.set_xlabel('MPC replan',fontsize=7);ax.tick_params(labelsize=6);ax.grid(alpha=.18)
+  ax=fig.add_subplot(loss_grid[0,r])
+  ax.plot(c['steps'], c['loss'], lw=2.15 if m=='ours' else 1.1,
+          ms=3.2 if m=='ours' else 2.5, mew=.75,
+          markevery=max(1, len(c['steps']) // 5), **LINE_STYLES[m])
+  ax.set_title(names[m],fontsize=7,pad=3,fontweight='bold' if m=='ours' else 'normal')
+  ax.set_xlabel('MPC replan',fontsize=7);ax.tick_params(labelsize=6);ax.grid(alpha=.18)
   if r==0:ax.set_ylabel('Latent MSE',fontsize=7)
- fig.suptitle('Unseen square' if k=='shape' else 'Red-agent shift',fontsize=11,fontweight='bold',color=TEXT,y=.99)
+ fig.suptitle('Unseen square' if k=='shape' else 'Red-agent shift',fontsize=11,color=TEXT,y=.99)
  save(fig,k+'_full')
+draw_deform_rollouts(F / 'source/deform_qualitative_original.pdf', F / 'deform_qualitative.pdf')
+if '--rollouts-only' in sys.argv:
+ raise SystemExit(0)
 draw_planning_efficiency()
