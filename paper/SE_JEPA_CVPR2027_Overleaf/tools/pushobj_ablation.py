@@ -96,11 +96,12 @@ def write_ablation_tables(directory, results):
         (r"$5\times10^{-4}$", "slow_lr_5e4"),
         (r"$10^{-2}$", "slow_lr_1e2"),
     ]
-    rows = []
-    for group in (components, learning_rates):
-        if rows:
-            rows.append(r"\midrule")
+    for filename, group in [
+        ("pushobj_component_ablation.tex", components),
+        ("pushobj_learning_rates.tex", [("$10^{-4}$ (default)", "s100"), *learning_rates]),
+    ]:
+        rows = []
         for label, key in group:
             rate, steps = results["GD", key]
             rows.append(f"{label} & {rate:.2f} & {steps:.2f}" + r" \\")
-    (directory / "pushobj_component_ablation.tex").write_text("\n".join(rows) + "\n")
+        (directory / filename).write_text("\n".join(rows) + "\n")

@@ -19,7 +19,7 @@ Table~\ref{tab:shape_domains} reports every held-out shape. \ours gives the larg
 \end{table*}
 
 \subsection{All visual conditions}
-Table~\ref{tab:visual_domains} and Fig.~\ref{fig:visual_gains} break the paired visual results down by condition. \ours improves on all seven conditions with both planners. The largest gains, more than 25 points, appear under red-object and red-goal recoloring, where episodic adaptation has to rediscover the new appearance in every episode.
+Table~\ref{tab:visual_domains} and Fig.~\mainref{fig:condition_gains} break the paired visual results down by condition. \ours improves on all seven conditions with both planners. The largest gains, more than 25 points, appear under red-object and red-goal recoloring, where episodic adaptation has to rediscover the new appearance in every episode.
 
 \begin{table*}[t]
  \centering
@@ -34,13 +34,6 @@ Table~\ref{tab:visual_domains} and Fig.~\ref{fig:visual_gains} break the paired 
  \bottomrule
  \end{tabular}
 \end{table*}
-
-\begin{figure*}[t]
- \centering
- \includegraphics[width=\textwidth]{visual_gains.pdf}
- \caption{Held-out gain of \textbf{\ours} over AdaJEPA for each visual shift, in percentage points.}
- \label{fig:visual_gains}
-\end{figure*}
 
 \subsection{Planning efficiency}
 Figure~\mainref{fig:efficiency_main} plots cumulative held-out success against the number of MPC replans. \ours pulls ahead within the first four replans and keeps the lead for the rest of the budget, showing how the advantage develops before the final 30-replan evaluation.
@@ -83,22 +76,22 @@ Figure~\mainref{fig:deployment} shows the four-pass learning curves in the main 
   \end{tabular}
 \end{table}
 
-\subsection{PushObj component ablations}
+\subsection{Component protocols and learning rates}
 \label{app:component_ablation}
 
 We assign each variant the same initial checkpoint and the same sequence of shapes and goals. The comparison uses the first learning chain for direct weight inheritance and the corresponding chain for the full model. AdaJEPA starts each goal from the common checkpoint. The shared replay variant trains a single slow predictor on stored trajectories. The EMA variant uses an exponential moving average of the fast weights to update a single slow predictor.
 
 \begin{table}[tb]
   \centering
-  \caption{PushObj ablations with GD. Success covers all seven shapes. Mean replans include all 1,050 held-out episodes, with the full budget counted for failures. The lower block varies the full model's slow learning rate.}
-  \label{tab:component_ablation}
+  \caption{Success on all seven held-out PushObj shapes and mean replans as a function of the slow learning rate. All runs use GD and the same stream as the component comparison in Table~\mainref{tab:component_ablation}.}
+  \label{tab:slow_rate}
   \small
   \setlength{\tabcolsep}{4pt}
   \begin{tabular}{@{}lrr@{}}
     \toprule
-    Variant & Success (\%) & Replans\\
+    Slow learning rate & Success (\%) & Replans\\
     \midrule
-    \inputrows{tables/pushobj_component_ablation.tex}
+    \inputrows{tables/pushobj_learning_rates.tex}
     \bottomrule
   \end{tabular}
 \end{table}

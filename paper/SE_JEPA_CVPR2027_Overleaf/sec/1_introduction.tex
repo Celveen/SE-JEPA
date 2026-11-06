@@ -1,11 +1,11 @@
 \section{Introduction}
 \label{sec:intro}
 
-\begin{figure}[t]
+\begin{figure}[!t]
   \centering
-  \includegraphics[width=\linewidth]{teaser_bars.pdf}
-  \caption{\textbf{Held-out planning success.} The top group uses GD. DINO-WM and LeWM use CEM. The star marks \ours with familiarity protection removed from memory reads and writes (Sec.~\ref{sec:ablation}). The other \ours bars use the full method.}
-  \label{fig:teaser_bars}
+  \includegraphics[width=\linewidth]{teaser_combined.pdf}
+  \caption{\textbf{Planning when a shift returns.} The schematic shows how \ours retrieves a predictor learned from earlier encounters. Bars show held-out success with GD and, in a separate group, CEM results for DINO-WM and LeWM. The star marks \ours with both familiarity protections disabled (Sec.~\ref{sec:ablation}).}
+  \label{fig:teaser}
 \end{figure}
 
 Visual world models let an agent plan a push by predicting where the object will end up and comparing that prediction with an image of the goal~\cite{zhou2024dinowm,wang2026straightening,maes2026lewm}. An unfamiliar shape can turn differently under the same push. A change in color can alter how the model encodes a familiar motion. In both cases the model gets feedback as soon as the agent acts. The discrepancy between the predicted and observed motion gives it a chance to improve the next plan.
@@ -14,16 +14,11 @@ AdaJEPA~\cite{wang2026adajepa} uses this feedback to adapt the model during an e
 
 A trajectory contains information that survives a change of goal. It records which motion actually followed each push. Several encounters with the same shape can therefore teach a predictor how that shape moves across a wider range of starts and goals. The challenge is to recognize which encounters belong together when neither the shape nor the onset of a shift is labeled.
 
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=\textwidth]{comparison.pdf}
-  \caption{\textbf{From episodic adaptation to self-evolution.} A frozen world model plans every episode with the same predictor. Single-episode adaptation repairs the predictor during an episode and resets it afterwards. \ours consolidates experience into slow learners by replay and retrieves them when a shift recurs, so experience from earlier episodes can improve later planning. Domain names are for illustration; the method receives no labels.}
-  \label{fig:comparison}
-\end{figure*}
+\ours combines fast adaptation during an episode with slow learning across encounters, inspired by complementary learning systems~\cite{mcclelland1995cls}. It keeps the pretrained model available to the planner and uses that model's errors to decide which trajectories to retain (Fig.~\ref{fig:teaser}, top). It groups trajectories by the direction of their fast updates and by how well one predictor explains their transitions. Each group trains a separate predictor by replay. Before updating that predictor on a new trajectory, \ours tests how well it predicts the observed transitions. Predictors that consistently outperform the pretrained model on these forecasts become candidates for planning.
 
-\ours combines fast adaptation during an episode with slow learning across encounters, inspired by complementary learning systems~\cite{mcclelland1995cls}. It keeps the pretrained model available to the planner and uses that model's errors to decide which trajectories to retain (Fig.~\ref{fig:comparison}). It groups trajectories by the direction of their fast updates and by how well one predictor explains their transitions. Each group trains a separate predictor by replay. Before updating that predictor on a new trajectory, \ours tests how well it predicts the observed transitions. Predictors that consistently outperform the pretrained model on these forecasts become candidates for planning.
+We test what this memory retains by changing the goal after deployment. For instance, an I-shaped object can reappear in a new pose with a different target. The agent must choose a new sequence of pushes, but what it learned about how the object rotates can still guide the search. We fix the learned memory and give the planner fresh targets. It can read a predictor and adapt within the episode as feedback arrives.
 
-We evaluate this memory by giving the agent new goals after deployment. With gradient descent (GD), \ours reaches more held-out goals than episodic adaptation across unseen shapes and visual shifts (Fig.~\ref{fig:teaser_bars}). The gains are especially large when the object or its goal changes color. They also hold with the cross-entropy method (CEM), and both planners need fewer replans on average (Appendix~B).
+With gradient descent (GD), \ours reaches more held-out goals than episodic adaptation across unseen shapes and visual shifts (Fig.~\ref{fig:teaser}, bottom). The gains are especially large when the object or its goal changes color. They also hold with the cross-entropy method (CEM). On both rigid-object tasks, \ours reaches more goals by the midpoint of the CEM replan budget than AdaJEPA reaches by the end (Fig.~\ref{fig:efficiency_main}).
 
 These tasks use ResNet world models trained on manipulation trajectories. Replay also improves a DINO-WM predictor for rope and granular manipulation, bringing the final configuration closer to the goal in both tasks. A rope predictor learned in one pass transfers to previously unseen instances, showing that the experience gained on one set of configurations can guide action on another.
 

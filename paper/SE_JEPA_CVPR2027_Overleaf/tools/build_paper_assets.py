@@ -219,7 +219,7 @@ def save(fig, name):
     fig.savefig(FIG / f"{name}.png", bbox_inches="tight", pad_inches=.04, dpi=160)
     plt.close(fig)
 
-# Fig. 1 uses the same held-out rates as the main table.
+# Legacy CEM panel. The later figure scripts regenerate the chart used in the combined teaser.
 draw_teaser(s)
 
 # Fig. 6: deployment curves sized for one column.

@@ -12,7 +12,7 @@ image links, SVG conversion, or custom fonts are required by Overleaf.
 
 ## Source organization
 
-- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in Appendix D. Section 4.1 describes the evaluation setup; Section 4.5 compares the read and write protections and tests how to carry experience between episodes. Appendix D gives the component and learning-rate results.
+- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in Appendix D. Section 4.1 describes the evaluation setup; Section 4.5 compares the read and write protections and tests how to carry experience between episodes. The main text includes the same-checkpoint component comparison. Appendix D gives the learning-rate sweep.
 - `figures/`: ready-to-compile figures; author-supplied vector originals are
   preserved in `figures/source/`.
 - `tables/`: generated numerical rows.
@@ -44,20 +44,31 @@ python tools/build_paper_assets.py
 python tools/restyle_paper_figures.py
 python tools/build_revision_assets.py
 python tools/build_learning_progress.py
+python tools/build_condition_gains.py
 python tools/audit_pusht.py
 python tools/package_overleaf.py
 ```
 
 These optional scripts use NumPy, Matplotlib, Pillow, and PyMuPDF. The first script
 otherwise restores older panels; the later scripts apply the current style
-and original simulator frames. Figure 1 compares methods in aligned rows
-for two PushObj shape sets and the PushT visual shifts. The top group uses GD;
-DINO-WM and LeWM form a separate CEM reference group. The starred SE-JEPA
-PushObj All bar uses the ablation without familiarity read/write protection;
-the remaining SE-JEPA bars use the full method.
-The editable vector original is `figures/teaser_bars.svg`. To redraw it after
-editing `data/teaser_bars.csv`, run
-`python tools/plot_teaser.py --data data/teaser_bars.csv --output-dir figures`.
+and original simulator frames. Figure 1 combines the recurring-shift schematic and
+the GD and CEM bar chart in one column. The star marks SE-JEPA with both familiarity
+protections disabled for PushObj All. The complete editable SVG is
+`figures/source/teaser_combined.svg`. The author's supplied Illustrator SVG is
+`figures/source/teaser_combined_original.svg`. `main.tex` includes the ready-to-use
+`figures/teaser_combined.pdf`.
+
+To edit the bar data and export the full figure, update `data/teaser_bars.csv` and run:
+
+```sh
+python tools/plot_teaser.py --data data/teaser_bars.csv --output-dir figures
+python tools/combine_teaser.py --template figures/source/teaser_combined.svg --bars-dir figures --output-dir figures
+cp figures/teaser_combined.svg figures/source/teaser_combined.svg
+```
+
+The combined exporter uses CairoSVG and PyMuPDF. `tools/build_condition_gains.py`
+regenerates the main per-condition comparison from the unrounded held-out rates and
+checks each value against the saved success and episode counts.
 Figures use bold
 method labels for SE-JEPA and regular labels for the baselines. When comparing
 methods, line plots also give SE-JEPA a heavier stroke. GD and CEM share the
@@ -82,8 +93,8 @@ in `main.tex`, and reconcile the AI-use statement with all authors' tool use.
 
 ## Current layout and bibliography
 
-The main comparison table is on page 5, the main result figures on pages 5–6,
-and Conclusion with Future work closes the main text on page 7. Result floats
+The main comparison table is on page 5, the main result figures on pages 5–7,
+and Conclusion with Future work closes the eight-page main text on page 8. Result floats
 are declared early in `sec/5_result_floats.tex`; a float barrier before Conclusion
 keeps them ahead of the closing section. The bibliography has 42 cited entries, including the original ResNet paper,
 with primary-source checks recorded in `data/reference_verification.json`.
@@ -93,7 +104,7 @@ RTX 5090 GPUs and 8 NVIDIA A100 GPUs, as supplied by the authors.
 ## Backbone and learning-progress revision
 
 PushObj and PushT use task-trained ResNet-based world models; rope and granular
-use the DINO-WM backbone. Figure 7 in the main text combines five-round unseen
+use the DINO-WM backbone. Figure 6 in the main text combines five-round unseen
 shape and color-shift success with four-pass rope and granular CD. The lines show means. The numerical archive also contains sample SD
 across the three learning chains and SEM over 50 fixed deformable instances. The color plot aggregates only red agent, red object,
 and red goal, using archived successes and counts rather than seven-condition

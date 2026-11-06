@@ -45,3 +45,10 @@
   \caption{\textbf{Deployment experience improves two backbone families.} Top: ResNet-based models, with five rounds of online success on unseen PushObj shapes and three PushT color shifts; curves average three learning chains with targets resampled each round. Bottom: DINO-WM, with four consolidation passes over 50 fixed rope or granular instances; curves show mean CD. The horizontal lines are frozen DINO-WM and AdaJEPA.}
   \label{fig:deployment}
 \end{figure}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{condition_gains.pdf}
+  \caption{\textbf{Where memory improves planning.} Each point is the difference in held-out success between full \ours and AdaJEPA for one planner, in percentage points. Positive values favor \ours. I, square and small tee are the three shapes first encountered during deployment.}
+  \label{fig:condition_gains}
+\end{figure*}

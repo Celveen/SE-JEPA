@@ -16,7 +16,7 @@ Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predicto
   \big\|P_{\phi_k}(x)-z^+\big\|_2^2.
   \label{eq:replay}
 \end{equation}
-Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. Sampling across episodes lets it learn from different contacts and goals in the same domain.
+Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes. The goal image enters when the planner uses this predictor to compare candidate futures.
 
 \subsection{Discovering predictive domains}
 \label{sec:write}
@@ -25,7 +25,7 @@ The frozen reference provides a first test of whether an episode contributes new
 
 For an unfamiliar episode $e$, let $\Delta_e$ denote the fast parameter change. Its direction $u_e=\Delta_e/\|\Delta_e\|_2$ helps identify episodes that call for similar corrections. If the agent retrieved a slow predictor, its domain is the first candidate for the new trajectory. Otherwise, the agent ranks stored domains by the cosine similarity between $u_e$ and each domain's prototype. A candidate accepts the trajectory if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned episodes wait in a pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
 
-As more evidence arrives, two domains merge if each predictor transfers to the other's recent episodes and both outperform the reference. A mature domain can also absorb a smaller group whose trajectories it already predicts well. \supref{A} gives the thresholds and the rules for maintaining each prototype.
+Two contacts with the same object can induce different fast updates. Delaying domain creation gives the planner a way to keep an unusual contact until it sees a similar one again. The pool retains the founding trajectories, so learning can begin with examples from several encounters. As more evidence arrives, two domains merge if each predictor transfers to the other's recent episodes and both outperform the reference. Testing transfer in both directions checks that the proposed merger covers the experience of each group. A mature domain can also absorb a smaller group whose trajectories it already predicts well. \supref{A} gives the thresholds and the rules for maintaining each prototype.
 
 % Queue result displays for the next page, alongside the experiments.
 \input{sec/5_result_floats}
@@ -40,7 +40,7 @@ A slow predictor earns a place in the planner by predicting trajectories it has 
        {\loss_{\mathrm{roll}}(\theta_0;\tau_e)}.
   \label{eq:ratio}
 \end{equation}
-Here $\theta_0$ denotes the weights of $P_0$. A large ratio rejects a write. Accepted episodes leave a record of how accurately the predictor performed before learning from them. A domain becomes eligible for retrieval once its record shows a sustained improvement over the reference (\supref{A}).
+Here $\theta_0$ denotes the weights of $P_0$. Comparing both predictors on the same sequence of pushes makes the reference specific to the encounter. A large error on a difficult turn, for example, can still favor the slow predictor if it forecasts the turn more accurately than $P_0$. A large ratio rejects a write. Accepted episodes leave a record of how well the predictor transferred to a fresh trajectory, since the agent scores each one before replaying it. A domain becomes eligible for retrieval once this record shows a sustained improvement over the reference (\supref{A}).
 
 During the first three replans, the agent compares eligible predictors and $P_0$ on the transitions observed so far, $\mathcal{B}_{e,t}$. It selects the predictor with the lowest recent error,
 \begin{equation}

@@ -16,9 +16,16 @@ Frozen (pretrained) plans with a fixed model. AdaJEPA~\cite{wang2026adajepa} ada
 \subsection{Planning with memory on held-out targets}
 \label{sec:sota}
 
-On shapes absent from pretraining, held-out CEM success is about 15 percentage points higher with \ours than with AdaJEPA (Table~\ref{tab:main}). The gain is larger on these shapes than on the shapes seen in pretraining. On PushT, memory helps most when the object or its goal changes color (\supref{D}). With either GD or CEM, \ours solves more goals and uses fewer replans on average than AdaJEPA (\supref{B}). The CEM success curves separate early in the episode, so the advantage is already visible under a short interaction budget (Fig.~\ref{fig:efficiency_main}).
+\paragraph{Which goals benefit from memory?}
+On shapes absent from pretraining, held-out CEM success is about 15 percentage points higher with \ours than with AdaJEPA (Table~\ref{tab:main}). Figure~\ref{fig:condition_gains} shows how the gain varies by shape and planner. Among the three unseen shapes, both planners gain most on the I shape, followed by the square and the small tee (Table~\ref{tab:shape_domains}). Each shape recurs during deployment, but the agent must bring it to a new pose at test time. What transfers across these goals is the predictor's experience of how pushes move the object. The planning objective still comes from the new goal image.
 
-On rope and granular, replacing the frozen DINO-WM predictor with the consolidated predictor brings both materials closer to their target configurations (Table~\ref{tab:main}). Since fast adaptation is disabled on these tasks, this comparison measures the contribution of replay with the planner and backbone held fixed.
+PushT holds the object geometry fixed and changes how the scene looks. Recoloring the object provides a particularly clear comparison. With CEM, the frozen and episodically adapted models reach the same fraction of red-object goals. With memory, success rises by over thirty percentage points relative to either baseline (Table~\ref{tab:visual_domains}). The red-goal condition also shows a large gain. In both conditions the agent can draw on pushes observed in earlier scenes with that appearance, even though the current episode supplies a different target.
+
+\paragraph{How much interaction does planning require?}
+Figure~\ref{fig:efficiency_main} follows the full model as the replan budget increases. Halfway through the budget, \ours has already solved a larger fraction of goals than AdaJEPA reaches with the full budget. This holds on the seven PushObj shapes and on the seven PushT visual conditions, both with CEM. The curves count every goal presented to each method, including those still unsolved when the budget expires. Earlier successes matter when the controller has a fixed number of pushes to reach the goal. With GD, the same ordering appears in the mean number of replans on both tasks (\supref{B}).
+
+\paragraph{Consolidation on a second backbone.}
+On rope and granular, replacing the frozen DINO-WM predictor with the consolidated predictor brings both materials closer to their target configurations (Table~\ref{tab:main}). The local deformable evaluation gives each planner the same budget of 15 pushes. A lower final CD means the planner uses those pushes to better match the rope's shape or the distribution of particles in the goal. The planner has access to one slow predictor per task and makes no fast updates during an episode. The improvement therefore tests the part of \ours that learns from previous trajectories, using DINOv2 features in place of the ResNet features used on rigid objects.
 
 \subsection{Qualitative results}
 \label{sec:qualitative}
@@ -30,7 +37,7 @@ Figure~\ref{fig:qualitative} shows two episodes in which all three methods start
 
 When targets are resampled each round, both GD and CEM finish deployment with higher online success on unseen shapes and recolored scenes than in the first round (Fig.~\ref{fig:deployment}, top). These curves track performance as memory grows. Table~\ref{tab:main} tests that memory after learning, on independent rigid-object goals.
 
-Revisiting the same rope and granular instances reduces final CD over successive passes (Fig.~\ref{fig:deployment}, bottom). To test whether the rope predictor also transfers, we froze it after its first pass and used it on 91 previously unseen instances. On those instances, mean CD was 47\% lower than with the pretrained DINO-WM predictor (\supref{B}).
+Revisiting the same rope and granular instances reduces final CD over successive passes (Fig.~\ref{fig:deployment}, bottom). To test whether the rope predictor also transfers, we froze it after its first pass and used it on 91 previously unseen instances. On those instances, mean CD was 47\% lower than with the pretrained DINO-WM predictor (\supref{B}). The two evaluations ask different questions about the same learned dynamics. On the repeated stream, changes in final CD show how another pass changes control on the same set of tasks. On the fresh rope instances, both planners start from the same new configurations. The one-pass predictor guides the rope closer to these new goals with its weights fixed throughout the test.
 
 \paragraph{Which encounters use memory?}
 Across seven PushObj rounds, about one episode in four adds experience to a replay buffer, and a similar fraction finishes with a slow predictor. This holds for both planners (\supref{D}). An episode can contribute training data to a domain whose predictor is still awaiting validation. The pretrained model remains available on familiar encounters. On the four shapes seen in pretraining, \ours also improves held-out success over AdaJEPA with both planners (\supref{D}).
@@ -58,4 +65,21 @@ When the pretrained model predicts an episode well, \ours normally uses it for p
 With GD, removing either protection alone lowers success on this stream. Removing both gives the highest GD success among the four settings. With CEM, removing both gives a rate close to the full model's.
 
 \paragraph{What should carry across episodes?}
-On the same seven-shape stream, training a shared slow predictor by replay nearly matches training one predictor per domain. Both replay variants solve more goals than averaging fast weights or carrying them directly into the next episode. They also outperform episodic adaptation from the same pretrained weights. Table~\ref{tab:component_ablation} gives the component comparisons and the slow learning rate sweep.
+Table~\ref{tab:component_ablation} compares ways of retaining experience on the same seven-shape stream. All variants start from the same backbone weights, and each learned state faces the same held-out targets. Reusing the previous episode's final weights solves fewer goals than resetting to the shared checkpoint. Averaging the fast weights across episodes recovers some of those goals. Training a slow predictor on stored transitions gives a larger gain, even when every shape shares that predictor.
+
+\begin{table}[!ht]
+  \centering
+  \caption{What carries across goals? All variants start from the same pretrained weights and use GD. Success and mean replans cover the same 1,050 held-out PushObj goals.}
+  \label{tab:component_ablation}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}lrr@{}}
+    \toprule
+    Update between episodes & Success (\%) & Replans\\
+    \midrule
+    \inputrows{tables/pushobj_component_ablation.tex}
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The difference is most visible on the I shape. With a single slow predictor in each case, replay solves 44 more of the 150 I-shape goals than weight averaging. On the four pretraining shapes, the two totals differ by just one goal. This comparison isolates a practical advantage of retaining trajectories. Replay can revisit the contacts made on one shape after the agent has moved on to another, fitting the predictor to their observed consequences. On this stream the shared replay predictor nearly matches the predictors trained separately for each discovered domain. Appendix~D gives the slow learning rate sweep.

@@ -1,4 +1,4 @@
-"""Draw Figure 1 from its editable, planner-labeled success rates."""
+"""Draw the lower panel of Figure 1 from its editable, planner-labeled success rates."""
 import argparse
 import csv
 from pathlib import Path
