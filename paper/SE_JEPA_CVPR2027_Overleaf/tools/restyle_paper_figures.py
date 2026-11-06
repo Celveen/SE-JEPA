@@ -8,6 +8,7 @@ Raw simulator colors and the author-supplied architecture SVG are preserved.
 Run after build_paper_assets.py, then run build_revision_assets.py.
 """
 from pathlib import Path
+import csv
 import html
 import json
 import re
@@ -15,6 +16,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+from plot_teaser import COLORS as TEASER_COLORS, PANELS as TEASER_PANELS, plot_teaser
 
 PAPER = Path(__file__).resolve().parents[1]
 DATA = PAPER / 'data'
@@ -95,33 +97,14 @@ def final_main_rows(snapshot):
 
 def draw_teaser(s):
     values = final_main_rows(s)
-    # First-page chart: a restrained blue-gray sequence; ours has the highest saturation.
-    bars = [('Frozen', 'Frozen', '#D5DCE2'),
-            ('DINO-WM', 'DINO-WM', '#B8C5D1'),
-            ('LeWM', 'LeWM', '#95AABD'),
-            ('AdaJEPA', 'AdaJEPA', '#6D8EA9'),
-            ('SE-JEPA (Ours)', 'SE-JEPA', '#087AF3')]
-    groups = [('Shapes', 1), ('Unseen shapes', 2), ('Visual shifts', 4)]
-    fig, ax = plt.subplots(figsize=(3.3, 1.72), constrained_layout=True)
-    width = .16
-    for j, (key, label, color) in enumerate(bars):
-        ys = [float(values[key][col]) if values[key][col] != '—' else np.nan for _, col in groups]
-        xs = np.arange(3) + (j - 2) * width
-        style = dict(edgecolor='#083E7A', linewidth=1.05, hatch='//') if key == 'SE-JEPA (Ours)' else {}
-        ax.bar(xs, ys, width*.92, color=color, label=label, zorder=3, **style)
-        if key == 'SE-JEPA (Ours)':
-            for x, y in zip(xs, ys):
-                ax.text(x, y+1.5, f'{y:.1f}', ha='center', fontsize=6.8,
-                        fontweight='bold', color='#083E7A')
-    ax.set_xticks(np.arange(3), [x[0] for x in groups])
-    ax.set_ylim(0, 92); ax.set_ylabel('Success (%)')
-    ax.tick_params(axis='x', length=0, labelsize=7)
-    ax.tick_params(axis='y', labelsize=7)
-    ax.grid(axis='y', color='#E1E5E9', lw=.6, zorder=0)
-    legend = ax.legend(frameon=False, ncol=5, fontsize=6.5, loc='upper center',
-                       bbox_to_anchor=(.5, 1.20), handlelength=1, handletextpad=.35, columnspacing=.58)
-    emphasize_ours(legend)
-    save(fig, 'teaser_bars')
+    path = DATA / 'teaser_bars.csv'
+    with path.open('w', newline='', encoding='utf-8') as stream:
+        writer = csv.writer(stream, lineterminator='\n')
+        writer.writerow(['method', *TEASER_PANELS])
+        for method in TEASER_COLORS:
+            row = values['SE-JEPA (Ours)' if method == 'SE-JEPA' else method]
+            writer.writerow([method, row[1], row[2], row[4]])
+    plot_teaser(path, FIG)
 
 
 def draw_deployment(s, wide=False):

@@ -50,8 +50,13 @@ python tools/package_overleaf.py
 
 These optional scripts use NumPy, Matplotlib, Pillow, and PyMuPDF. The first script
 otherwise restores older panels; the later scripts apply the current style
-and original simulator frames. The first-page chart uses blue-gray shades,
-with a bright-blue, dark-outlined and hatched SE-JEPA bar. Figures use bold
+and original simulator frames. Figure 1 compares methods in aligned rows
+for two PushObj shape sets and the PushT visual shifts, with a common
+success-rate scale and deep blue for SE-JEPA.
+The editable vector original is `figures/teaser_bars.svg`. To redraw it after
+editing `data/teaser_bars.csv`, run
+`python tools/plot_teaser.py --data data/teaser_bars.csv --output-dir figures`.
+Figures use bold
 method labels for SE-JEPA and regular labels for the baselines. When comparing
 methods, line plots also give SE-JEPA a heavier stroke. GD and CEM share the
 same weight in plots where both planners use SE-JEPA.

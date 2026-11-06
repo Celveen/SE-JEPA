@@ -20,6 +20,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+from restyle_paper_figures import draw_teaser
 from vis50 import external_results
 
 PAPER = Path(__file__).resolve().parents[1]
@@ -210,29 +211,8 @@ def save(fig, name):
     fig.savefig(FIG / f"{name}.png", bbox_inches="tight", pad_inches=.04, dpi=160)
     plt.close(fig)
 
-# Fig. 1: page-one summary bars (CEM, same numbers as Table 1).
-table_values = {}
-for row in s["main_rows_html"]:
-    cells = [tex_cell(x) for x in row]
-    table_values[cells[0]] = cells
-bar_methods = [("Frozen", "Frozen", "#c3cbd2"), ("DINO-WM", "DINO-WM", "#a7b6c2"), ("LeWM", "LeWM", "#8aa1b3"),
-               ("AdaJEPA", "AdaJEPA", "#557a9b"), ("SE-JEPA (Ours)", "SE-JEPA", "#087f79")]
-groups = [("Shape shift", 1), ("Unseen shapes", 2), ("Visual shift", 4)]
-fig, axis = plt.subplots(figsize=(3.3, 1.72), constrained_layout=True)
-width = 0.16
-for j, (key, name, color) in enumerate(bar_methods):
-    vals = [float(table_values[key][col]) for _, col in groups]
-    xs = np.arange(len(groups)) + (j - 2) * width
-    bars = axis.bar(xs, vals, width * 0.92, color=color, label=name)
-    if key.startswith("SE-JEPA"):
-        for x, v in zip(xs, vals):
-            axis.text(x, v + 1.5, f"{v:.1f}", ha="center", va="bottom", fontsize=6.5, color=color, fontweight="bold")
-axis.set_xticks(np.arange(len(groups)), [g for g, _ in groups])
-axis.set_ylim(0, 92); axis.set_ylabel("Success (%)", fontsize=8)
-axis.tick_params(axis="x", length=0, labelsize=8); axis.tick_params(axis="y", labelsize=7)
-axis.grid(axis="y", alpha=.18)
-axis.legend(frameon=False, ncol=5, fontsize=6.2, loc="upper center", bbox_to_anchor=(0.5, 1.2), handlelength=1, columnspacing=.7)
-save(fig, "teaser_bars")
+# Fig. 1 uses the same held-out rates as the main table.
+draw_teaser(s)
 
 # Fig. 6: deployment curves sized for one column.
 fig, ax = plt.subplots(1, 2, figsize=(3.3, 1.62), constrained_layout=True)

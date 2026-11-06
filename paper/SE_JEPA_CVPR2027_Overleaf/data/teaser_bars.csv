@@ -1,0 +1,6 @@
+method,pushobj_all,pushobj_unseen,pusht_shift
+Frozen,43.8,36.2,48.3
+DINO-WM,62.0,46.0,57.0
+LeWM,64.0,50.0,40.3
+AdaJEPA,70.4,54.4,60.2
+SE-JEPA,79.1,69.9,76.1
