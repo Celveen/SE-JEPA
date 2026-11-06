@@ -1,10 +1,13 @@
 {
   "date": "2026-11-06",
   "vis50": "GitHub baselines@974c70aaefee43a867840fd118f21f7c39d452e2: episode-verified; see data/vis50/vis50_sources.json",
-  "omitted_pushobj_cells": {
-    "DreamerV3": "No evaluation with the manuscript seven-shape/three-unseen target protocol.",
-    "IRIS": "No evaluation with the manuscript seven-shape/three-unseen target protocol."
+  "published_pushobj": {
+    "source": "https://proceedings.mlr.press/v267/zhou25t.html",
+    "location": "ICML proceedings PDF, Table 4, p. 8; task definition in Appendix A.2, p. 14",
+    "protocol": "Four training shapes, two unseen test shapes; both the agent and object must reach their targets.",
+    "success_percent": {"DreamerV3": 18.0, "IRIS": 14.0, "R3M": 16.0, "DINO CLS": 18.0, "DINO-WM": 34.0},
+    "local_protocol_unreported": ["DreamerV3", "IRIS"]
   },
   "frozen_deformable_reference": "DINO-WM",
-  "published_deformable_values": "Zhou et al., ICML 2025, Table 1; italic in manuscript."
+  "published_deformable_values": "Zhou et al., ICML 2025, Tables 1 and 2; italic in manuscript."
 }

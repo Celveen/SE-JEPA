@@ -8,11 +8,11 @@
   \label{fig:teaser_bars}
 \end{figure}
 
-An agent using a visual world model chooses actions by predicting where they will leave an object and comparing that prediction with an image goal~\cite{zhou2024dinowm,wang2026straightening,maes2026lewm}. An unfamiliar shape can change how the object responds to a push. A change in appearance can alter how the model encodes the same motion. In either case, a controller that relies on the pretrained predictor can choose actions that miss the goal.
+Visual world models let an agent plan a push by predicting where the object will end up and comparing that prediction with an image of the goal~\cite{zhou2024dinowm,wang2026straightening,maes2026lewm}. An unfamiliar shape can turn differently under the same push. A change in color can alter how the model encodes a familiar motion. In both cases the model gets feedback as soon as the agent acts. The discrepancy between the predicted and observed motion gives it a chance to improve the next plan.
 
-An executed push reveals how the scene actually changed. AdaJEPA~\cite{wang2026adajepa} uses this observation to update the predictor before the controller replans. At the next episode, it resets the predictor. If the same object returns with a different goal, the agent has to learn its dynamics again.
+AdaJEPA~\cite{wang2026adajepa} uses this feedback to adapt the model during an episode. It resets the adapted parameters when the episode ends. If the same shape returns with a different target, the agent has to learn how it moves again. Keeping every parameter update also carries over adjustments specific to the preceding trajectory. On a stream of recurring shapes, this rule solves fewer goals than resetting between episodes (Sec.~\ref{sec:diagnosis}).
 
-Can an agent reuse what it learned on the previous encounter? A natural approach is to keep the adapted weights. Yet each update fits the trajectory between one start and one goal. On a stream of pushes with matched targets, successive updates point in nearly orthogonal directions, and carrying all of them forward reduces success relative to resetting the predictor (Sec.~\ref{sec:diagnosis}). The executed trajectories give us another way to retain experience. We can replay pushes from several encounters and fit a predictor that must explain them together.
+A trajectory contains information that survives a change of goal. It records which motion actually followed each push. Several encounters with the same shape can therefore teach a predictor how that shape moves across a wider range of starts and goals. The challenge is to recognize which encounters belong together when neither the shape nor the onset of a shift is labeled.
 
 \begin{figure*}[t]
   \centering
@@ -21,17 +21,11 @@ Can an agent reuse what it learned on the previous encounter? A natural approach
   \label{fig:comparison}
 \end{figure*}
 
-We introduce \ours, a latent world model that pairs within-episode adaptation with slower learning across episodes, inspired by complementary learning systems~\cite{mcclelland1995cls}. The pretrained predictor identifies trajectories it predicts poorly. \ours stores those trajectories in the pretrained encoder's latent space and groups them by fast-update direction and predictive compatibility. Each group trains a slow predictor by replay. A predictor becomes available for planning once it improves on the pretrained reference on incoming trajectories evaluated before training.
+\ours combines fast adaptation during an episode with slow learning across encounters, inspired by complementary learning systems~\cite{mcclelland1995cls}. It keeps the pretrained model available to the planner and uses that model's errors to decide which trajectories to retain (Fig.~\ref{fig:comparison}). It groups trajectories by the direction of their fast updates and by how well one predictor explains their transitions. Each group trains a separate predictor by replay. Before updating that predictor on a new trajectory, \ours tests how well it predicts the observed transitions. Predictors that consistently outperform the pretrained model on these forecasts become candidates for planning.
 
-We evaluate whether this memory helps an agent reach new goals. On PushObj and PushT, \ours improves held-out success with both gradient descent (GD) and the cross-entropy method (CEM), while using fewer replans than episodic adaptation (Fig.~\ref{fig:teaser_bars}). Beyond these task-trained ResNet models, replay also improves a DINO-WM predictor on rope and granular manipulation. A rope predictor trained during a single pass transfers to previously unseen instances.
+We evaluate this memory by giving the agent new goals after deployment. On PushObj and PushT, \ours reaches more held-out goals than episodic adaptation and needs fewer replans on average. These gains hold with both gradient descent (GD) and the cross-entropy method (CEM). The largest gains over episodic adaptation occur on shapes missing from pretraining and when the object or its goal changes color. Figure~\ref{fig:teaser_bars} summarizes CEM success on the rigid-object tasks.
 
-Our contributions are threefold.
-\begin{itemize}
-  \setlength{\itemsep}{1pt}
-  \item A matched-stream experiment measures the planning cost of carrying fast updates across episodes and shows how their directions vary from one encounter to the next.
-  \item \ours discovers which experiences to replay together and tests each resulting predictor on incoming trajectories before using it for control.
-  \item Our evaluation separates gains during deployment from transfer to unseen targets. It tests task-trained ResNet models on rigid objects and a DINO-WM backbone on deformable objects.
-\end{itemize}
+These tasks use ResNet world models trained on manipulation trajectories. Replay also improves a DINO-WM predictor for rope and granular manipulation, bringing the final configuration closer to the goal in both tasks. A rope predictor learned in one pass transfers to previously unseen instances, showing that the experience gained on one set of configurations can guide action on another.
 
 \begin{figure*}[t]
   \centering

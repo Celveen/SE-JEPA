@@ -12,9 +12,7 @@ image links, SVG conversion, or custom fonts are required by Overleaf.
 
 ## Source organization
 
-- `sec/`: abstract, main text, AI-use statement, and appendices. The deployment
-  setting and inheritance diagnosis in `sec/3_problem.tex` are included within
-  the SE-JEPA method section rather than as a separate section.
+- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in Appendix D. Section 4.1 describes the evaluation setup.
 - `figures/`: ready-to-compile figures; author-supplied vector originals are
   preserved in `figures/source/`.
 - `tables/`: generated numerical rows.
@@ -61,8 +59,7 @@ same weight in plots where both planners use SE-JEPA.
 DINO-WM, DreamerV3 and IRIS use the episode-verified VIS50 results from the
 `baselines` branch (original paths, immutable commit and checksums in
 `data/vis50/vis50_sources.json`). The latter two methods use offline predictors
-for CEM. Their PushObj cells are omitted because the published shape evaluation
-has a different target set and success criterion. Italic rope/granular CD entries
+for CEM. The main table reproduces the published two-shape PushObj success rates from Table 4 of Zhou et al. in a dedicated column. Results from our seven-shape protocol occupy separate columns. Italic rope/granular CD entries
 are published measurements; the two local frozen deformable entries refer to
 the same DINO-WM reference. `tools/audit_pusht.py` checks VIS50 and the separate
 paired evaluation against the corresponding main-table cells.
@@ -81,7 +78,7 @@ in `main.tex`, and reconcile the AI-use statement with all authors' tool use.
 The main comparison table is on page 5, the main result figures on pages 5–6,
 and Conclusion with Future work closes the main text on page 7. Result floats
 are declared early in `sec/5_result_floats.tex`; a float barrier before Conclusion
-keeps them ahead of the closing section. The bibliography has 41 cited entries, including the original ResNet paper,
+keeps them ahead of the closing section. The bibliography has 42 cited entries, including the original ResNet paper,
 with primary-source checks recorded in `data/reference_verification.json`.
 Appendix A reports training and evaluation on systems with 8 NVIDIA GeForce
 RTX 5090 GPUs and 8 NVIDIA A100 GPUs, as supplied by the authors.

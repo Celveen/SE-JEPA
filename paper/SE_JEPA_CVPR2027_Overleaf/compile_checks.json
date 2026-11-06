@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T10:36:59+08:00",
+  "checked_at": "2026-11-06T11:07:49+08:00",
   "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 10,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "4623d6344e5178f6a74de86eb5586ee82c5920ecc8df7fcd92c820d5e54d5b69",
+    "pdf_sha256": "c5e8d4a1866130a19be3972775bca58e5bf2d33fd110f3a54c8ae6e4a4fe2efd",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -32,17 +32,17 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "47f81418e244d8297810887e1efce8538c310fc8f742ba5418877781eb0604a1"
+    "pdf_sha256": "06afe6b3a5e96b01429d2767565ff74e587c9e20288f01509830ac7289b70b87"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
     "The appendix includes pages devoted to figures and tables.",
     "Raw simulator frames remain raster; labels and charts are vector."
   ],
-  "main_numbered_equations": 4,
+  "main_numbered_equations": 3,
   "pusht_audit": "data/pusht_audit.json",
   "reporting_overrides": "data/reporting_overrides.json",
-  "bibliography_entries": 41,
+  "bibliography_entries": 42,
   "bibliography_verification": "data/reference_verification.json",
   "abstract_matches_author_source": true,
   "qualitative_selection": "data/revision_assets/selection_manifest.json",
@@ -71,10 +71,11 @@
     "source_manifest": "data/vis50/vis50_sources.json",
     "original_npz_files_checked": 20,
     "episodes_checked": 1000,
-    "pushobj_unreported": [
+    "pushobj_without_local_seven_shape_evaluation": [
       "DreamerV3",
       "IRIS"
-    ]
+    ],
+    "published_pushobj": "ICML 2025, Zhou et al., Table 4 (two unseen shapes); values checked in data/reporting_overrides.json"
   },
   "main_figure_revision": {
     "comparison_unchanged": true,

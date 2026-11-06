@@ -93,12 +93,13 @@ citations = {
     "LeWM": r"LeWM~\cite{maes2026lewm}",
     "DDP-WM": r"DDP-WM~\cite{yin2026ddpwm}",
     "AdaJEPA": r"AdaJEPA~\cite{wang2026adajepa}",
-    "Frozen": "Frozen",
+    "Frozen": "Frozen (pretrained)",
     "SE-JEPA (Ours)": r"\ours",
 }
 rows = []
 order = ["DreamerV3", "IRIS", "R3M", "DINO CLS", "DINO-WM", "LeWM", "DDP-WM", "Frozen", "AdaJEPA", "SE-JEPA (Ours)"]
 vis50 = external_results(DATA / "vis50")
+published_pushobj = json.loads((DATA / "reporting_overrides.json").read_text())["published_pushobj"]["success_percent"]
 for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[0]))):
     label = tex_cell(row[0])
     values = [tex_cell(x) for x in row[1:7]]
@@ -118,7 +119,8 @@ for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[
         rows.append(r"\midrule")
     if label == "SE-JEPA (Ours)":
         values = [r"\textbf{" + v + "}" for v in values]
-    rows.append(citations[label] + " & " + " & ".join(values) + r" \\")
+    literature_cell = r"\textit{%.1f}" % published_pushobj[label] if label in published_pushobj else r"\missing"
+    rows.append(" & ".join([citations[label], literature_cell, *values]) + r" \\")
 (TABLES / "main_rows.tex").write_text("\n".join(rows) + "\n")
 if args.main_table_only:
     raise SystemExit(0)

@@ -1,7 +1,7 @@
 {
   "selection_rule": "Frozen and AdaJEPA both fail at the 30-replan budget; SE-JEPA succeeds. These are selected illustrative examples, not a representative performance estimate.",
   "image_processing": "Original simulator PNG bytes archived below. Display uses the same 168 x 168 crop size for all panels, with a fixed crop box within each example. No pixels recolored, regenerated, or composited.",
-  "goal_interpretation": "The target is the movable object state in goal.png. The green marker remains static in all observations.",
+  "goal_interpretation": "The targets are the pusher position and the object pose in goal.png. The green marker remains static in all observations.",
   "cases": [
     {
       "id": "shape_GD_I",

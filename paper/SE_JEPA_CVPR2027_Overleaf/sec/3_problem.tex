@@ -1,38 +1,10 @@
-\subsection{Deployment setting and motivation}
+\subsection{Motivation}
 \label{sec:problem}
 \label{sec:setting}
-
-An agent receives episodes $e=1,2,\dots$, each with an initial observation $o^e_0$ and a goal image $g^e$. It acts, observes the consequences, and may learn from them. Neither the type nor the onset of a distribution shift is announced; episode boundaries only mark when the scene is reset.
-
-The world model consists of an encoder $E_\psi$ and an action-conditioned predictor $P_\theta$. With history length $h$, the encoder produces $z_t=E_\psi(o_t)$ and the predictor estimates $\hat z_{t+1}=P_\theta(x_t)$ from $x_t=(z_{t-h+1:t},a_{t-h+1:t})$. The observation embedding includes visual features and proprioception. Rolling $P_\theta$ forward under a candidate action sequence, MPC solves
-\begin{equation}
-  a^\star_{t:t+H-1} = \argmin_{a_{t:t+H-1}}
-  \mathcal{J}\big(\hat{z}_{t+1:t+H},\, E_\psi(g)\big),
-  \label{eq:mpc}
-\end{equation}
-executes the first action block, observes the result, and replans. The optimizer is either GD or CEM. \ours leaves $\mathcal{J}$ and the optimizer unchanged; it changes only the predictor that MPC consults.
-
-\paragraph{Why consolidate experience?}
 \label{sec:diagnosis}
 
-Test-time adaptation produces a sequence of fast updates $\Delta_1,\Delta_2,\dots$, one per episode. The direct inheritance rule accumulates a persistent offset, $s_{e+1}=s_e+w\Delta_e$, and starts the next episode from $\theta_0+s_{e+1}$. Here $w=0$ is episodic reset and $w=1$ keeps every update in full.
+Consider two episodes in which the agent pushes the same unfamiliar object toward different goals. The first may reveal how an off-center push rotates the object. That observation can help the agent choose a push in the second episode, even when it approaches the object from a different side. An episodic learner corrects its predictions along the first trajectory~\cite{wang2026adajepa}. Carrying its weights forward assumes that the next trajectory calls for a similar correction.
 
-\begin{table}[t]
-  \centering
-  \caption{\textbf{Keeping the adapted weights hurts.} Success on a matched 100-episode PushObj stream (I, square, T, I, square; 20 episodes each). Wins/losses count episodes solved only by the variant / only by reset.}
-  \label{tab:inheritance}
-  \small
-  \begin{tabular}{lcc}
-    \toprule
-    Accumulation $w$ & Success (\%) $\uparrow$ & Wins / losses\\
-    \midrule
-    $0$ \;(episodic reset) & 62.0 & \missing\\
-    $0.003$ & 64.0 & \phantom{0}7 / \phantom{0}5\\
-    $0.01$ & 59.0 & \phantom{0}5 / \phantom{0}8\\
-    $0.03$ & 54.0 & \phantom{0}4 / 12\\
-    $1$ \;(keep all) & 48.0 & 11 / 25\\
-    \bottomrule
-  \end{tabular}
-\end{table}
+We tested direct weight inheritance on a PushObj stream, giving each variant the same sequence of starts and goals. Starting each episode from the preceding episode's final weights reduced success from 62\% with episodic reset to 48\% (Table~\ref{tab:inheritance}). Consecutive weight updates also point in nearly orthogonal directions (\supref{D}). A trajectory offers a different way to retain what the agent learned. Each executed action and its observed outcome provide a training example that can be revisited alongside contacts from later episodes.
 
-On matched targets, carrying every update forward loses 14 percentage points of success relative to episodic reset (Table~\ref{tab:inheritance}, exact McNemar test, $p=0.029$). Small inheritance weights yield results closer to reset. Consecutive updates are nearly orthogonal on this stream and on a longer stream with both planners (\supref{D}). Each update fits the actions taken around a particular start and goal. We therefore retain the observed transitions and train a predictor jointly on episodes with compatible dynamics.
+\ours keeps a fast model for the current episode and trains a slow predictor on trajectories from multiple encounters (Fig.~\ref{fig:architecture}). The agent receives no labels telling it when a shape or appearance recurs. It groups trajectories by how they change the model and how well a common predictor explains them. When a new goal arrives, the first few actions provide evidence for which predictor to use.

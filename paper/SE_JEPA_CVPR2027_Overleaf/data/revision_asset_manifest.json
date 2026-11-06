@@ -135,7 +135,7 @@
     "data/revision_assets/visual/frozen/step_02.png": "a04def910c93686ff7233df9f511c7d3747a7fec67240894c887866b68e907a4",
     "data/revision_assets/visual/frozen/step_03.png": "765d4f395d0e1cf983708533a93589d226c18634eff5272e392a2e7b728d4b9b",
     "data/revision_assets/visual/frozen/step_17.png": "78e9833e3d07c40aabbe47d6cb7adcc37cd8ebea32c60a91adf312401ca4526f",
-    "data/revision_assets/selection_manifest.json": "e15041a39706913874b59be8399ef5cc019a38f1511407e581bfd9cac5b994f0",
+    "data/revision_assets/selection_manifest.json": "f18761c87e15da5f6b52e439770a4fb3846dbb3f9edd72969aa47d4092f9d01e",
     "data/revision_assets/selected_cases/visual_GD_red_object/ours_trajectory.npz": "571908330a6546835e0eba3133b55714e72bbe5a2621a7475ff4643a8497a728",
     "data/revision_assets/selected_cases/visual_GD_red_object/goal.png": "d4cb2c5c521bda5aece541d7c3b985ac7bfc2734fbdf831702fcb6d48552c864",
     "data/revision_assets/selected_cases/visual_GD_red_object/frozen_trajectory.npz": "530bd0ad55344b1f741726d31bd31065f4c20eefc329e7519c3c368a2d039313",

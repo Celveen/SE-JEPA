@@ -11,15 +11,10 @@ The appendix starts on a separate page after the references. The source includes
 vector figures, selected original simulator frames, numerical snapshots, and
 scripts for rebuilding the figures. Compile `main.tex` with pdfLaTeX and BibTeX.
 
-The 2026-11-05 revision integrates deployment setting and diagnosis into SE-JEPA,
-uses the supplied abstract and architecture figure, expands the bibliography,
-and selects qualitative cases with successful SE-JEPA outcomes where both
-baselines fail. The previously provisional DINO-WM visual results are now verified against
-per-episode VIS50 records. DreamerV3 and IRIS are included, with measured
-PushT results distinguished from published deformable CD values.
+Section 3.1 motivates cross-episode replay using the paired weight-inheritance experiment. Appendix D gives the full diagnostic. Section 4.1 introduces the evaluation protocols. The main table separates the original two-shape PushObj results in Zhou et al. from the seven-shape evaluation in this study, and identifies the fixed baseline as Frozen (pretrained).
 
 The revised layout places the main table on page 5 and all main result figures
-before Conclusion on page 7. The bibliography contains 41 cited references;
+before Conclusion on page 7. The bibliography contains 42 cited references;
 Appendix A records the author-supplied 8-GPU RTX 5090 and A100 compute systems.
 
 The backbone discussion distinguishes task-trained ResNet models on PushObj/PushT

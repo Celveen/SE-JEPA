@@ -3,7 +3,7 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-A push taken to reach one goal can help the planner reach the next. \ours records the observed transition, replays it alongside compatible experience, and uses the resulting predictor once it improves on the pretrained reference on new trajectories. On rigid objects, this memory lets the agent solve more held-out goals with fewer replans under both GD and CEM. On deformable objects, replay improves planning with a DINO-WM backbone and transfers to new rope instances after a single pass.
+\ours lets a visual planner reuse what it learned on earlier encounters. It keeps trajectories that the pretrained predictor struggles to explain, groups compatible experience for replay, and tests the resulting predictors on fresh trajectories before using them for control. With task-trained ResNet models, this memory improves held-out planning success and reduces replans on rigid objects under both GD and CEM. With a DINO-WM backbone, slow consolidation lowers goal error for rope and granular manipulation, and a rope predictor trained in one pass transfers to new instances.
 
 \paragraph{Future work.}
 Longer interaction histories could help label-free routing distinguish domains that respond similarly to the first few actions. Late in deployment, lower prediction error does not always translate into more solved goals. Adapting the planning horizon and action search could help the controller put those improvements to use.

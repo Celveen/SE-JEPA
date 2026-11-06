@@ -1,33 +1,31 @@
 \section{SE-JEPA}
 \label{sec:method}
 
-\ours turns episode-local corrections into reusable planning knowledge through replay in a fixed latent space, label-free domain discovery, and validation before retrieval (Fig.~\ref{fig:architecture}). It keeps the pretrained encoder and predictor $(E_0,P_0)$ as a fixed reference and learns additional predictors from deployment experience. Each discovered domain stores a slow predictor $P_{\phi_k}$, a replay buffer $\replay_k$, an update-direction prototype, and a validation history.
-
 \input{sec/3_problem}
 
 \subsection{Fast adaptation and replay consolidation}
 \label{sec:fast}
 \label{sec:slow}
 
-Within an episode, the fast model follows AdaJEPA: after each replan, one Adam step updates the predictor's last block and encoder head using the recent observed transitions. These changes are reset at the next episode. A retrieved slow predictor can supply a better starting point for this adaptation.
+Each episode begins with the pretrained encoder $E_0$ and predictor $P_0$. To plan toward a goal image, the agent encodes the current observation and the goal, rolls out candidate action sequences with the current predictor, and chooses the sequence with the lowest latent goal cost~\cite{zhou2024dinowm,maes2026lewm}. It executes the first action block. Following AdaJEPA~\cite{wang2026adajepa}, it then takes one Adam step on the prediction loss over recent transitions to update the predictor's last block and the encoder head before replanning. These fast changes last for the episode. During the first few replans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\ref{sec:trust}).
 
-To retain experience across episodes, we re-encode the executed trajectory with the frozen encoder $E_0$. This gives replay a stable coordinate system even as the fast encoder head changes. An accepted trajectory enters its domain's replay, and the slow predictor is trained on sampled transition windows:
+Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predictor $P_{\phi_k}$ for each group $k$ of compatible trajectories, which we call a \emph{predictive domain}. After an episode, the frozen encoder $E_0$ re-encodes the executed trajectory. This puts observations from different episodes in a common latent space even as the fast encoder changes. Once a trajectory is assigned to a domain, the agent adds it to $\replay_k$. The slow predictor trains on windows sampled from that buffer by minimizing
 \begin{equation}
   \loss_k(\phi_k)=
   \mathbb{E}_{(x,z^+)\sim\replay_k}
   \big\|P_{\phi_k}(x)-z^+\big\|_2^2.
   \label{eq:replay}
 \end{equation}
-Here $x$ contains the latent history and executed actions, and $z^+$ is the next observation embedding. Sampling windows from earlier episodes fits their transitions jointly with the new experience. A new slow predictor starts from $P_0$; it learns from replay rather than inheriting the last fast update.
+Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. Sampling across episodes lets it learn from different contacts and goals in the same domain.
 
 \subsection{Discovering predictive domains}
 \label{sec:write}
 
-The reference model determines which episodes enter memory. We measure its newest-frame prediction error over the first three observed transitions and compare their geometric mean with a calibrated familiarity threshold. Episodes already explained by the reference use it as the base for fast adaptation and do not enter persistent replay. Slow learning is thus concentrated on experience that extends the reference model.
+The frozen reference provides a first test of whether an episode contributes new experience. We take the geometric mean of its next-frame prediction errors over the first few observed transitions. When the error falls below a calibrated threshold, the agent uses $P_0$ as the base for fast adaptation and skips the memory write. This reserves replay for episodes the reference predicts poorly.
 
-For other episodes, the fast parameter change $\Delta_e$ provides a direction fingerprint, $u_e=\Delta_e/\|\Delta_e\|_2$. An episode that retrieved a slow predictor first tries to write to that predictor's domain. Otherwise, cosine similarity to the stored direction prototypes proposes a domain, and a prediction-error check tests compatibility. Unmatched episodes wait in a pending pool. An incoming fingerprint aligned with two pending episodes establishes a new domain with those episodes. This discovers groups of compatible predictive experience without shape or appearance labels.
+For an unfamiliar episode $e$, let $\Delta_e$ denote the fast parameter change. Its direction $u_e=\Delta_e/\|\Delta_e\|_2$ helps identify episodes that call for similar corrections. If the agent retrieved a slow predictor, its domain is the first candidate for the new trajectory. Otherwise, the agent ranks stored domains by the cosine similarity between $u_e$ and each domain's prototype. A candidate accepts the trajectory if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned episodes wait in a pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
 
-Domains can also share experience. We merge two domains when each predictor transfers to the other's recent episodes and both improve on the reference. Small immature fragments are absorbed by a mature domain that already predicts them well. Appendix~A specifies the confirmation, merging, and absorption rules.
+As more evidence arrives, two domains merge if each predictor transfers to the other's recent episodes and both outperform the reference. A mature domain can also absorb a smaller group whose trajectories it already predicts well. \supref{A} gives the thresholds and the rules for maintaining each prototype.
 
 % Queue result displays for the next page, alongside the experiments.
 \input{sec/5_result_floats}
@@ -35,22 +33,20 @@ Domains can also share experience. We merge two domains when each predictor tran
 \subsection{Validated retrieval for planning}
 \label{sec:trust}
 
-Before training a slow predictor on an incoming episode, we evaluate its open-loop prediction of that episode's executed trajectory $\tau_e$:
+A slow predictor earns a place in the planner by predicting trajectories it has yet to train on. Before adding trajectory $\tau_e$ to a buffer, the agent rolls out the candidate predictor and the pretrained reference under the actions actually taken. Their open-loop errors in the frozen latent space give the ratio
 \begin{equation}
   r_{e,k}=
   \frac{\loss_{\mathrm{roll}}(\phi_k;\tau_e)}
        {\loss_{\mathrm{roll}}(\theta_0;\tau_e)}.
   \label{eq:ratio}
 \end{equation}
-This prospective measurement checks whether previous experience transfers to the new trajectory. A high ratio rejects the proposed write. To become eligible for retrieval, a slow predictor must build a validation history and outperform the reference on average by a preset margin (\supref{A}).
+Here $\theta_0$ denotes the weights of $P_0$. A large ratio rejects a write. Accepted episodes leave a record of how accurately the predictor performed before learning from them. A domain becomes eligible for retrieval once its record shows a sustained improvement over the reference (\supref{A}).
 
-During the first three replans, the reference and eligible slow predictors are compared on the transitions observed so far:
+During the first three replans, the agent compares eligible predictors and $P_0$ on the transitions observed so far, $\mathcal{B}_{e,t}$. It selects the predictor with the lowest recent error,
 \begin{equation}
   k^\star=\argmin_{k\in\{0\}\cup\mathcal{K}_{\mathrm{eligible}}}
   \loss_{\mathrm{pred}}(\phi_k;\mathcal{B}_{e,t}),
   \qquad \phi_0=\theta_0.
   \label{eq:retrieval}
 \end{equation}
-The selected predictor supplies the base for fast adaptation, retaining the episode's current fast offset. Reference-familiar episodes restrict this choice to $P_0$. Prediction error therefore serves two distinct purposes: prospective validation determines which memories are eligible, and current observations determine which eligible memory to use.
-
-During deployment, replay, slow weights, and domain structure evolve after each episode. Held-out evaluation fixes this memory while retaining retrieval and episode-local adaptation, measuring how the accumulated experience transfers to new targets.
+The selected weights become the base of the fast predictor, preserving the corrections already made in the current episode. For an episode the reference recognizes as familiar, the base stays at $P_0$. Thus past trajectories determine which predictors are eligible, and the current actions and observations determine which one guides planning.

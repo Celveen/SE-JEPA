@@ -86,7 +86,7 @@ for row, case in enumerate(selection):
                 fontweight='bold' if panel=='ours' else 'normal')
   if col==0:
    ax.set_ylabel(case['label'],fontsize=7.5,labelpad=7,color=TEXT)
-fig.text(.54,.025,'Target: object pose in the goal image. The green marker is static.',
+fig.text(.54,.025,'Goal: pusher position and object pose. The green marker is static.',
          ha='center',va='bottom',fontsize=6.5,color=TEXT)
 save(fig,'qualitative')
 if '--qualitative-only' in sys.argv:

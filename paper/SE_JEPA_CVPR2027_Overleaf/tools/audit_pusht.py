@@ -14,13 +14,13 @@ for name,method in [('Frozen','frozen'),('AdaJEPA','adajepa'),('SE-JEPA','v6a')]
  result['methods'][name]=val
  prefix=r'\ours' if name=='SE-JEPA' else name
  line=next(x for x in (P/'tables/main_rows.tex').read_text().splitlines() if x.startswith(prefix))
- cells=line.split('&')[4:7]
+ cells=line.split('&')[5:8]
  for cell,stat,digits in zip(cells,['shift_rate','color_rate','steps'],[1,1,2]):
   num=float(re.search(r'\d+\.\d+',cell).group());assert num==round(val[stat],digits),(name,stat,num,val[stat])
 external = external_results(P/'data/vis50')
 for name, val in external.items():
  line=next(x for x in (P/'tables/main_rows.tex').read_text().splitlines() if x.startswith(name))
- cells=line.split('&')[4:7]
+ cells=line.split('&')[5:8]
  for cell,key,spec in zip(cells,['shift_rate','color_rate','steps'],['.1f','.1f','.2f']):
   assert cell.strip()==format(val[key],spec),(name,key,cell,val[key])
 result['external_VIS50']={'source':'data/vis50/vis50_sources.json','methods':external}

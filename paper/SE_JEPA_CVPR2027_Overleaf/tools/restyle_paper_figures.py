@@ -85,7 +85,8 @@ def final_main_rows(snapshot):
         if key is None:
             continue
         values = []
-        for c in cells[1:]:
+        # The teaser compares runs in this study; the first numeric cell is the published protocol.
+        for c in cells[2:]:
             m = re.search(r'(?<![A-Za-z])\d+(?:\.\d+)?', c)
             values.append(m.group(0) if m else '—')
         rows[key] = [key] + values

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "bibliography": "references.bib",
-  "verified_on": "2026-11-05",
+  "verified_on": "2026-11-06",
   "verification_method": "Metadata checked against primary publisher/proceedings pages, author-hosted papers/project pages, or original arXiv records. Equivalent capitalization and abbreviated middle names are retained.",
-  "reference_count": 41,
+  "reference_count": 42,
   "references": [
     {
       "citation_key": "wang2026adajepa",
@@ -685,6 +685,22 @@
       ],
       "pages": "770--778",
       "relevance": "Original ResNet architecture used by the task-trained PushObj and PushT backbones."
+    },
+    {
+      "citation_key": "zhang2026jepattt",
+      "title_bibtex": "{JEPA-TTT}: Persistent Test-Time Training of Latent World Models for Planning under Dynamics Shifts",
+      "authors_bibtex": "Zhang, Zheyuan and Ye, Suyu and Agarwal, Nakul and Mahjoub, Hossein Nourkhiz and Moradi Pari, Ehsan and Khashabi, Daniel and Shu, Tianmin and Tadiparthi, Vaishnav",
+      "venue": "arXiv preprint arXiv:2610.00722",
+      "year": 2026,
+      "primary_sources": [
+        "https://arxiv.org/abs/2610.00722"
+      ],
+      "verified_fields": [
+        "title",
+        "authors",
+        "venue",
+        "year"
+      ]
     }
   ]
 }
