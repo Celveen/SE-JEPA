@@ -1,0 +1,31 @@
+{
+  "base_commit": "1ac689926e1d9b3ddc40b398c4b36cdd963fbbee",
+  "source_experiments": {
+    "gd": "shape_no_familiarity_gd_singlechain_5round_20261104",
+    "cem": "shape_familiarity_split_gd_singlechain_5round_20261105"
+  },
+  "gd_source_sha256": "4d26ccf6c2f451855167518276b8331314088a9b103728b4d287f8c669180f9c",
+  "gd_published_sha256": "3c25683d719dc4624be38c80067b1296c518b73ab89e76d7b45a3e510b836ecd",
+  "gd_change": "Only tree_hash import moved from core_ablations to standalone ablation_audit; helper function unchanged.",
+  "unchanged_core_sha256": {
+    "planning/continual.py": "9482141707807c194219d5e189ae2a3e89f683142e371a3046eabd2c054d5dcd",
+    "planning/continual_v7.py": "b442a618f03efb11769630efcef48d5f7d3c515d3e08f9ae227cb8bddf1a792d",
+    "planning/continual_merge.py": "61aaf4598f78eb49b556d76f7cfebf05d9979929ea643ea433b14e5bd1639d0d",
+    "planning/adajepa_probe.py": "23fc33d01753552b5afb14fb21036d43bfdcb9947ce2094021a98f5d15cd2b42",
+    "planning/gd.py": "31f6cba35b60660ab68ab9b66e130cc7669cdd2348e627627a154657a849f8c7",
+    "planning/cem.py": "c4791878354d33017934e071c85a3d51266963ab1a3bdc9607190332ed798d88",
+    "conf/cont_plan_gd_pushobj.yaml": "2b4bec984b90583ea6b76fffe8ca714ea74b9bb8f795a0961ad9d0361956a070",
+    "conf/cont_plan_cem_pushobj.yaml": "5eef495e873e4553f4f5b0de066c097f12886dc01484f72466034d820938f8d5"
+  },
+  "new_support_files": [
+    "planning/ablation_audit.py",
+    "conf/ablation_no_familiarity_gd_pushobj.yaml",
+    "conf/ablation_no_familiarity_cem_pushobj.yaml",
+    "scripts/run_no_familiarity_ablation.py",
+    "scripts/validate_no_familiarity_ablation.py"
+  ],
+  "full_experiment_rerun_for_publication": false,
+  "cem_source_sha256": "41ec8e2edee57332118922c1674154b61f22ec2b67ecddf63d232241e379da25",
+  "cem_published_sha256": "79c8edae61a9d1cc0c0c3ff816e9296d447d9ebf8d167fd6033be77f60084a47",
+  "cem_change": "Only trailing blank line removed; all code unchanged."
+}

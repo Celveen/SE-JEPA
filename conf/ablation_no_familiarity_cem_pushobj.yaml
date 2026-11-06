@@ -1,0 +1,38 @@
+# Tested CEM entry point; the split wrapper is fixed to the both-off arm here.
+defaults:
+  - cont_plan_cem_pushobj
+  - _self_
+
+n_evals: 50
+n_plot_samples: 0
+wandb_logging: false
+
+planner:
+  _target_: planning.familiarity_split_ablation.SplitFamiliarityPlanner
+  ablation: no_familiarity
+  continual:
+    familiar_read: false
+    familiar_thr: 0.0
+    w: 0.0
+    write: delta
+    tau: 0.1
+    mature_k: 3
+    mature_ratio: 0.9
+    reject_ratio: 1.2
+    pending_m: 3
+    tau_new: 0.05
+    fp_unit: true
+    merge_eps: 0.5
+    merge_k: 2
+    join_ratio: 0.0
+    learner_win: false
+    absorb_ratio: 0.8
+    absorb_every: 25
+    absorb_frag: 6
+    absorb_pending: false
+    slow_lr: 1e-4
+    slow_steps: 15
+    slow_batch: 8
+    read_only: false
+    save_frames: false
+    save_deltas: false

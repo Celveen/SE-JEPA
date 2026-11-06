@@ -1,5 +1,15 @@
 # AdaJEPA: An Adaptive Latent World Model
 
+## 本分支：同时关闭熟悉度读写保护
+
+本分支提供七形状域 GD / CEM 的 `cls6a_free` 双关闭消融：
+`familiar_read=false`、`familiar_thr=0.0`。其余快慢学习、成熟度、拒绝、合并及吸收机制沿用原实现。
+
+完整机制说明、实验协议、运行命令及验证范围见
+[同时关闭熟悉度读写保护的消融说明](docs/ablation_no_familiarity_read_write.md)。
+两个运行配置为 `ablation_no_familiarity_gd_pushobj` 和 `ablation_no_familiarity_cem_pushobj`；
+便捷入口为 `scripts/run_no_familiarity_ablation.py`。本次提交不新增权重或实验数据。
+
 **Abstract:** Latent world models enable planning from high-dimensional observations by predicting future states in a compact latent space. However, these models are typically kept frozen at test time: when their predictions become inaccurate, planning can fail, especially under test-time distribution shift. To address this, we propose AdaJEPA, an adaptive latent world model that performs test-time adaptation within the closed loop of model predictive control (MPC). After training, AdaJEPA plans and executes the first action chunk, uses the observed next-state transition as a self-supervised adaptation signal, and replans with the updated model. This closed-loop update continuously recalibrates the world model without additional expert demonstrations. Across a range of goal-reaching tasks, AdaJEPA substantially improves planning success with as few as one gradient step per MPC replanning step.
 
 <p align="center">
