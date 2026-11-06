@@ -9,12 +9,12 @@ Each planner has three learned memory states. Every state is evaluated on all th
 \subsection{Visual shifts}
 The paired visual evaluation contains the original T condition, blur, salt-and-pepper noise, darkness, red agent, red object, and red goal. Three five-round learning chains resample targets every round, with 350 episodes per round. Held-out testing uses three target seeds and 50 episodes per condition. Direct checks of source-episode identifiers confirm that held-out sources never occur in the learning streams and that the three test seeds use disjoint sources.
 
-The color-learning curve in Fig.~\mainref{fig:deployment} aggregates red-agent, red-object, and red-goal episodes. For each round and learning chain, it sums successes over the three conditions and divides by 150 episodes, then reports the mean and sample standard deviation of the three chain-level rates. The three conditions share the same 50 source targets within a chain and round.
+The color-learning curve in Fig.~\mainref{fig:deployment} aggregates red-agent, red-object, and red-goal episodes. For each round and learning chain, it sums successes over the three conditions and divides by 150 episodes, and plots the mean of the three chain-level rates. The archived statistics include their sample standard deviation. The three conditions share the same 50 source targets within a chain and round.
 
 The external visual baselines use the established VIS50 collection with planning seed 100. The external comparisons use its six shifted conditions, with 50 paired initial/goal states per condition.
 
 \subsection{Success and interaction counts}
-Rigid-object success follows the environment's goal test: object-position error below 20 simulator units and angular error below $\pi/9$. Each executed model action contains five physical actions, and an episode has at most 30 MPC replans. For episode $i$ with success indicator $S_i$ and first successful replan $T_i$,
+For rigid objects, GD uses 100 optimization steps; CEM uses 10 iterations with 200 samples and 30 elites per iteration. Rigid-object success follows the environment's goal test: object-position error below 20 simulator units and angular error below $\pi/9$. Each executed model action contains five physical actions, and an episode has at most 30 MPC replans. For episode $i$ with success indicator $S_i$ and first successful replan $T_i$,
 \begin{equation}
   \overline{T} = \frac{1}{N}\sum_{i=1}^{N}
   \big[\, S_i T_i + (1-S_i)\, T_{\max} \big], \qquad T_{\max}=30.

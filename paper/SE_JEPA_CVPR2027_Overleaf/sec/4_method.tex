@@ -42,7 +42,7 @@ Before training a slow predictor on an incoming episode, we evaluate its open-lo
        {\loss_{\mathrm{roll}}(\theta_0;\tau_e)}.
   \label{eq:ratio}
 \end{equation}
-This prospective measurement checks whether previous experience transfers to the new trajectory. A ratio above $1.2$ rejects the proposed write. A predictor becomes eligible for retrieval when it has at least three validation measurements and their latest mean is at most $0.9$.
+This prospective measurement checks whether previous experience transfers to the new trajectory. A high ratio rejects the proposed write. To become eligible for retrieval, a slow predictor must build a validation history and outperform the reference on average by a preset margin (\supref{A}).
 
 During the first three replans, the reference and eligible slow predictors are compared on the transitions observed so far:
 \begin{equation}

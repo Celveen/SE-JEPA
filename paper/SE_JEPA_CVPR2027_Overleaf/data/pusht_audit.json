@@ -46,49 +46,39 @@
       "steps": 14.461481481481481
     }
   },
-  "DINO-WM": {
-    "status": "withheld_from_table_pending_author_verification",
-    "snapshot_domains": {
-      "blur": {
-        "rate": 66.0,
-        "count": 50,
-        "mean_mpc_steps": 15.52,
-        "complete": true
+  "external_VIS50": {
+    "source": "data/vis50/vis50_sources.json",
+    "methods": {
+      "DINO-WM": {
+        "shift_successes": 171,
+        "shift_episodes": 300,
+        "color_successes": 98,
+        "color_episodes": 150,
+        "shift_rate": 57.0,
+        "color_rate": 65.33333333333333,
+        "steps": 17.323333333333334,
+        "steps_total": 5197
       },
-      "snp": {
-        "rate": 4.0,
-        "count": 50,
-        "mean_mpc_steps": 29.16,
-        "complete": true
+      "DreamerV3": {
+        "shift_successes": 17,
+        "shift_episodes": 300,
+        "color_successes": 0,
+        "color_episodes": 150,
+        "shift_rate": 5.666666666666667,
+        "color_rate": 0.0,
+        "steps": 28.91,
+        "steps_total": 8673
       },
-      "dark": {
-        "rate": 76.0,
-        "count": 50,
-        "mean_mpc_steps": 12.86,
-        "complete": true
-      },
-      "red_agent": {
-        "rate": 74.0,
-        "count": 50,
-        "mean_mpc_steps": 13.06,
-        "complete": true
-      },
-      "red_object": {
-        "rate": 46.0,
-        "count": 50,
-        "mean_mpc_steps": 19.72,
-        "complete": true
-      },
-      "red_goal": {
-        "rate": 76.0,
-        "count": 50,
-        "mean_mpc_steps": 13.62,
-        "complete": true
+      "IRIS": {
+        "shift_successes": 18,
+        "shift_episodes": 300,
+        "color_successes": 10,
+        "color_episodes": 150,
+        "shift_rate": 6.0,
+        "color_rate": 6.666666666666667,
+        "steps": 28.85333333333333,
+        "steps_total": 8656
       }
-    },
-    "snapshot_shift": 57.0,
-    "snapshot_color": 65.33333333333333,
-    "episode_source_available": false,
-    "teaser": "User requested retaining the old DINO-WM visual bar at 57.0 with normal styling. Raw-episode verification remains pending; table cells stay blank."
+    }
   }
 }

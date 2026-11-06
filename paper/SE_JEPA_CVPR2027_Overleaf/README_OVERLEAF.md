@@ -53,15 +53,18 @@ python tools/package_overleaf.py
 These optional scripts use NumPy, Matplotlib, and Pillow. The first script
 otherwise restores older panels; the later scripts apply the current style
 and original simulator frames. The first-page chart uses blue-gray shades,
-with SE-JEPA the most saturated. Other statistical plots follow the supplied
-Drive palette. Simulator pixels and the author's architecture diagram retain
+with a bright-blue, dark-outlined and hatched SE-JEPA bar. The main line
+figures use distinct colors, line styles and markers. Simulator pixels and the author's architecture diagram retain
 their original colors.
 
-DINO-WM's three PushT main-table cells remain blank pending author confirmation.
-At the author's request its existing first-page bar is displayed normally at
-57.0; this does not constitute verification. The exception is recorded in
-`data/reporting_overrides.json`. Core paired PushT results are checked against
-archived episode data by `tools/audit_pusht.py`.
+DINO-WM, DreamerV3 and IRIS use the episode-verified VIS50 results from the
+`baselines` branch (original paths, immutable commit and checksums in
+`data/vis50/vis50_sources.json`). The latter two methods use offline predictors
+for CEM. Their PushObj cells are omitted because the published shape evaluation
+has a different target set and success criterion. Italic rope/granular CD entries
+are published measurements; the two local frozen deformable entries refer to
+the same DINO-WM reference. `tools/audit_pusht.py` checks VIS50 and the separate
+paired evaluation against the corresponding main-table cells.
 
 The main qualitative comparison selects real examples where Frozen and
 AdaJEPA fail and SE-JEPA succeeds. Selection and source hashes are recorded
@@ -86,9 +89,8 @@ RTX 5090 GPUs and 8 NVIDIA A100 GPUs, as supplied by the authors.
 
 PushObj and PushT use task-trained ResNet-based world models; rope and granular
 use the DINO-WM backbone. Figure 7 in the main text combines five-round unseen
-shape and color-shift success with four-pass rope and granular CD. The top-row
-bands are sample SD across three learning chains; bottom-row bands are SEM
-over 50 fixed instances. The color plot aggregates only red agent, red object,
+shape and color-shift success with four-pass rope and granular CD. The lines show means. The numerical archive also contains sample SD
+across the three learning chains and SEM over 50 fixed deformable instances. The color plot aggregates only red agent, red object,
 and red goal, using archived successes and counts rather than seven-condition
 averages. `tools/build_learning_progress.py` writes its numerical audit to
 `data/learning_progress.json`. The fourth-pass deformable values come from the

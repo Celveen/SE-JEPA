@@ -20,6 +20,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+from vis50 import external_results
 
 PAPER = Path(__file__).resolve().parents[1]
 REPO = PAPER.parent / "CL-JEPA-cudagraph"
@@ -30,6 +31,7 @@ for folder in (DATA, FIG, TABLES):
     folder.mkdir(exist_ok=True)
 parser = argparse.ArgumentParser()
 parser.add_argument("--refresh", action="store_true")
+parser.add_argument("--main-table-only", action="store_true", help="rebuild just the main table")
 args = parser.parse_args()
 
 if args.refresh:
@@ -96,26 +98,30 @@ citations = {
 }
 rows = []
 order = ["DreamerV3", "IRIS", "R3M", "DINO CLS", "DINO-WM", "LeWM", "DDP-WM", "Frozen", "AdaJEPA", "SE-JEPA (Ours)"]
+vis50 = external_results(DATA / "vis50")
 for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[0]))):
     label = tex_cell(row[0])
-    if label in reporting.get("omit_main_methods", []):
-        continue
     values = [tex_cell(x) for x in row[1:7]]
-    if label in reporting.get("pending_visual_methods", []):
-        values[3:6] = [r"\missing"] * 3
+    if label in vis50:
+        record = vis50[label]
+        values[3:6] = [format(record[key], spec) for key, spec in [("shift_rate", ".1f"), ("color_rate", ".1f"), ("steps", ".2f")]]
     if label in ("DreamerV3", "IRIS"):
-        values[:3] = [r"\missing"] * 3  # Cross-protocol cited PushObj results are supplemental only.
+        values[:3] = [r"\missing"] * 3  # Published unseen-shape scores use a different target set and criterion.
     for raw in row[7:9]:
         cell = tex_cell(raw).split(r" $\pm$ ")[0]
         if "引" in raw:  # published DINO-WM-paper value, set in italics
             cell = r"\textit{" + cell + "}"
         values.append(cell)
     if label == "Frozen":
+        # The deformable tasks use the very same frozen DINO-WM reference.
+        values[6:8] = [format(float(s["deform"][task]["DINO-WM"]["cd"]), ".3f") for task in ["rope", "granular"]]
         rows.append(r"\midrule")
     if label == "SE-JEPA (Ours)":
         values = [r"\textbf{" + v + "}" for v in values]
     rows.append(citations[label] + " & " + " & ".join(values) + r" \\")
 (TABLES / "main_rows.tex").write_text("\n".join(rows) + "\n")
+if args.main_table_only:
+    raise SystemExit(0)
 
 rows = []
 for planner in ("GD", "CEM"):

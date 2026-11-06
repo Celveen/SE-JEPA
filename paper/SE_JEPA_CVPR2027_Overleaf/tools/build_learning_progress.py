@@ -1,8 +1,7 @@
 """Plot deployment learning across task-trained ResNet and DINO-WM backbones.
 
-Rigid-object bands: sample SD of three learning-chain success rates.
-Deformable bands: archived standard errors over 50 repeated instances.
-Round/pass indices are deployment consolidation, not pretraining epochs.
+The numerical archive includes sample SD across the three rigid-object chains
+and standard errors for the 50 deformable instances. Curves show the means.
 """
 from pathlib import Path
 import hashlib
@@ -13,7 +12,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
-from restyle_paper_figures import METHOD_COLORS, PLANNER_COLORS, TEXT, set_style
+from restyle_paper_figures import LINE_STYLES, PLANNER_LINE_STYLES, set_style
 
 PAPER = Path(__file__).resolve().parents[1]
 DATA = PAPER / 'data'
@@ -76,49 +75,46 @@ def load_progress():
 
 def draw_progress(data):
     set_style()
-    fig, axes = plt.subplots(2, 2, figsize=(3.35, 3.20))
-    fig.subplots_adjust(left=.155, right=.98, top=.935, bottom=.17,
-                        hspace=.67, wspace=.43)
+    fig, axes = plt.subplots(2, 2, figsize=(3.35, 3.25))
+    fig.subplots_adjust(left=.155, right=.97, top=.81, bottom=.18,
+                        hspace=.91, wspace=.43)
     for ax, group, title in zip(axes[0], ['shape', 'color'],
                                 ['(a) PushObj unseen', '(b) PushT color shifts']):
-        for planner, marker in [('GD', 's'), ('CEM', 'o')]:
+        for planner in ['GD', 'CEM']:
             rows = data[group][planner]
             y = np.array([r['mean'] for r in rows])
-            sd = np.array([r['sd'] for r in rows])
-            ax.plot(range(1, 6), y, marker=marker, color=PLANNER_COLORS[planner],
-                    ms=3, lw=1.35, label=planner)
-            ax.fill_between(range(1, 6), y - sd, y + sd,
-                            color=PLANNER_COLORS[planner], alpha=.15, lw=0)
+            ax.plot([r['round'] for r in rows], y, ms=3.1, mew=.85, lw=1.45,
+                    label=planner, **PLANNER_LINE_STYLES[planner])
         ax.set(xticks=range(1, 6), ylim=(35, 85), yticks=[40, 60, 80],
                xlabel='Deployment round')
-        ax.set_title(title, fontsize=7.1, pad=5)
-    axes[0, 0].set_ylabel('Success (%)', fontsize=7)
-    axes[0, 0].legend(loc='lower left', ncol=2, frameon=False, fontsize=5.9,
-                      handlelength=1.1, columnspacing=.65, borderaxespad=.15)
+        ax.set_title(title, fontsize=7.6, pad=5)
+    axes[0, 0].set_ylabel('Success (%)', fontsize=7.2)
+    handles, labels = axes[0, 0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.55, 1.01),
+               ncol=2, frameon=False, fontsize=7.2, handlelength=2, columnspacing=1.2)
     for ax, task, title in zip(axes[1], ['rope', 'granular'],
                                ['(c) Rope', '(d) Granular']):
         rows = data['deform'][task]['passes']
         y = np.array([r['mean'] for r in rows])
-        se = np.array([r['se'] for r in rows])
-        ax.plot(range(1, 5), y, color=METHOD_COLORS['ours'], marker='o',
-                ms=3, lw=1.7, label='SE-JEPA')
-        ax.fill_between(range(1, 5), y - se, y + se,
-                        color=METHOD_COLORS['ours'], alpha=.20, lw=0)
-        for name, key, style in [('DINO-WM', 'frozen', '--'), ('AdaJEPA', 'adajepa', '-.')]:
-            ax.axhline(data['deform'][task][name], color=METHOD_COLORS[key],
-                       ls=style, lw=1.1, label=name)
-        ax.set(xticks=[1, 2, 3, 4], xlabel='Consolidation pass')
-        ax.set_title(title, fontsize=7.1, pad=5)
+        ax.plot([r['pass'] for r in rows], y, ms=3.2, lw=1.6, label='SE-JEPA',
+                **LINE_STYLES['ours'])
+        # Stagger the line identifiers because the two Granular references nearly coincide.
+        for name, key, marker_x in [('DINO-WM', 'frozen', 1.5), ('AdaJEPA', 'adajepa', 3.5)]:
+            reference = data['deform'][task][name]
+            ax.plot([.85, marker_x, 4.15], [reference] * 3, markevery=[1],
+                    ms=3.5, mew=.85, lw=1.12, label=name, **LINE_STYLES[key])
+        ax.set(xticks=[1, 2, 3, 4], xlim=(.85, 4.15), xlabel='Consolidation pass')
+        ax.set_title(title, fontsize=7.6, pad=5)
         ax.set_ylim((.16, .70) if task == 'rope' else (.18, .33))
         ax.set_yticks([.2, .4, .6] if task == 'rope' else [.20, .25, .30])
-    axes[1, 0].set_ylabel('Chamfer distance', fontsize=7)
+    axes[1, 0].set_ylabel('Chamfer distance', fontsize=7.2)
     for ax in axes.flat:
-        ax.tick_params(labelsize=6.5, length=2.5)
-        ax.xaxis.label.set_size(6.8)
+        ax.tick_params(labelsize=7, length=2.5)
+        ax.xaxis.label.set_size(7.1)
         ax.grid(axis='y', color='#E1E5E9', lw=.5, zorder=0)
     handles, labels = axes[1, 0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='lower center', bbox_to_anchor=(.55, -.025),
-               ncol=3, frameon=False, fontsize=6, handlelength=1.4, columnspacing=.7)
+    fig.legend(handles, labels, loc='lower center', bbox_to_anchor=(.54, -.025),
+               ncol=3, frameon=False, fontsize=7.2, handlelength=2, columnspacing=.86)
     fig.savefig(FIG / 'learning_progress.pdf', bbox_inches='tight', pad_inches=.035)
     fig.savefig(FIG / 'learning_progress.png', bbox_inches='tight', pad_inches=.035, dpi=300)
     plt.close(fig)

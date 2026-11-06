@@ -14,8 +14,9 @@ scripts for rebuilding the figures. Compile `main.tex` with pdfLaTeX and BibTeX.
 The 2026-11-05 revision integrates deployment setting and diagnosis into SE-JEPA,
 uses the supplied abstract and architecture figure, expands the bibliography,
 and selects qualitative cases with successful SE-JEPA outcomes where both
-baselines fail. DINO-WM PushT table entries remain blank awaiting author
-confirmation; its existing first-page bar is retained as requested.
+baselines fail. The previously provisional DINO-WM visual results are now verified against
+per-episode VIS50 records. DreamerV3 and IRIS are included, with measured
+PushT results distinguished from published deformable CD values.
 
 The revised layout places the main table on page 5 and all main result figures
 before Conclusion on page 7. The bibliography contains 41 cited references;

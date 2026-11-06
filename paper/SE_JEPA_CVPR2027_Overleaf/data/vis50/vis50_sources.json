@@ -1,0 +1,209 @@
+{
+  "repository": "https://github.com/Celveen/SE-JEPA",
+  "branch": "baselines",
+  "commit": "974c70aaefee43a867840fd118f21f7c39d452e2",
+  "protocol": "VIS50: one set of 50 initial and goal states evaluated under each condition, seed=100. Shift pools blur, snp, dark and three recolorings. Color pools the three recolorings. Steps use action_len for success and 30 for failure.",
+  "files": [
+    {
+      "method": "DINO-WM",
+      "domain": "blur",
+      "episodes": 50,
+      "successes": 33,
+      "steps": 776,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/blur/final_eval_results.npz",
+      "git_blob": "b115ad2c5fd82bf6027a96d89bee55417c748a70",
+      "sha256": "28ef4e11c2b87cc7092cb7293b7d4a71eb627484f47ad5de79eb6a6d1335fecd"
+    },
+    {
+      "method": "DINO-WM",
+      "domain": "snp",
+      "episodes": 50,
+      "successes": 2,
+      "steps": 1458,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/snp/final_eval_results.npz",
+      "git_blob": "04b3ec3ce3622f9b3df3b72057f3a6d1f4ad71b9",
+      "sha256": "1cf81961a11170385a0d67d7a933e3c76273d2d61298c071723e5e34c10b94cf"
+    },
+    {
+      "method": "DINO-WM",
+      "domain": "dark",
+      "episodes": 50,
+      "successes": 38,
+      "steps": 643,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/dark/final_eval_results.npz",
+      "git_blob": "c98b7467773d9dca53a5f077e9ae561ee84b3867",
+      "sha256": "6dc4dbb268a7d3dc6c59b7dcef06d63ff078fc6a01f9b6127be897ed95d2832f"
+    },
+    {
+      "method": "DINO-WM",
+      "domain": "red_agent",
+      "episodes": 50,
+      "successes": 37,
+      "steps": 653,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_agent/final_eval_results.npz",
+      "git_blob": "1edd9c1f600ce0fd194e1af19f6a86f4ab9b1a43",
+      "sha256": "3ef908880704334dcbc68d74f2a6790dd7e764fe3688d76eb8c67404f0a96b2f"
+    },
+    {
+      "method": "DINO-WM",
+      "domain": "red_object",
+      "episodes": 50,
+      "successes": 23,
+      "steps": 986,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_object/final_eval_results.npz",
+      "git_blob": "36863713c21b5327d6df157dcbaa5a8c9a615c6f",
+      "sha256": "1b5b052d003b5d6be2910cfd8b53dc63509e5ba68a18fbb8521c5a27cf63165e"
+    },
+    {
+      "method": "DINO-WM",
+      "domain": "red_goal",
+      "episodes": 50,
+      "successes": 38,
+      "steps": 681,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_VIS50/red_goal/final_eval_results.npz",
+      "git_blob": "4fe393b68db538118aa0a78a93aaa33ec332772c",
+      "sha256": "4fb3afa81f6c763ceee1ea205a00d078a3728406234ecea07f5028636d81ea0c"
+    },
+    {
+      "method": "DreamerV3",
+      "domain": "default",
+      "episodes": 50,
+      "successes": 5,
+      "steps": 1396,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/default/final_eval_results.npz",
+      "git_blob": "342feeee357b9320e0b6433a454898bf1692d3d9",
+      "sha256": "680b0bdbc2eeb9524371a6dba3ce2595a037511089764b099d9a6afeef9305ef"
+    },
+    {
+      "method": "DreamerV3",
+      "domain": "blur",
+      "episodes": 50,
+      "successes": 6,
+      "steps": 1384,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/blur/final_eval_results.npz",
+      "git_blob": "4a8e9c5e97d2eea873b967bbb59919bcaf867c8e",
+      "sha256": "0b2a6fede94d51bb5f1d73623cd414eee45832535173660abf724177e95eaf99"
+    },
+    {
+      "method": "DreamerV3",
+      "domain": "snp",
+      "episodes": 50,
+      "successes": 7,
+      "steps": 1361,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/snp/final_eval_results.npz",
+      "git_blob": "3b9dc96321d4af181d7fdaa4ca98715bd97c148b",
+      "sha256": "5d8588cc215a1a6d78526a9bb28e9df472998bcade1c822250c314dbc8505794"
+    },
+    {
+      "method": "DreamerV3",
+      "domain": "dark",
+      "episodes": 50,
+      "successes": 4,
+      "steps": 1428,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/dark/final_eval_results.npz",
+      "git_blob": "0458a389e3e9142b0fad8c4392c4eb9b2c491b46",
+      "sha256": "2a9893b68618069a2658618b9e5810f2443e84b9b9c1279b39ad635f866366f0"
+    },
+    {
+      "method": "DreamerV3",
+      "domain": "red_agent",
+      "episodes": 50,
+      "successes": 0,
+      "steps": 1500,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/red_agent/final_eval_results.npz",
+      "git_blob": "fdbc47cb481e53625f61b8bfa107c21f5aa1ae99",
+      "sha256": "02cb832429685c415036b725865ef78354d13778b6b172850236917679b95265"
+    },
+    {
+      "method": "DreamerV3",
+      "domain": "red_object",
+      "episodes": 50,
+      "successes": 0,
+      "steps": 1500,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/red_object/final_eval_results.npz",
+      "git_blob": "cd839af8f798c9b2d29308ef1ca3f0dad93e187e",
+      "sha256": "6ed4f7378c223dcfa480ddd1f6987377041df9dbd2e5ffe0a719df796c357997"
+    },
+    {
+      "method": "DreamerV3",
+      "domain": "red_goal",
+      "episodes": 50,
+      "successes": 0,
+      "steps": 1500,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/red_goal/final_eval_results.npz",
+      "git_blob": "bca0d177353835d483440d1988e4a4798d3d96ae",
+      "sha256": "e02442a23d358fc5ff85cd1698ec3acf1cc8c5a024247c20518caa20b2f0e761"
+    },
+    {
+      "method": "IRIS",
+      "domain": "default",
+      "episodes": 50,
+      "successes": 3,
+      "steps": 1446,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/default/final_eval_results.npz",
+      "git_blob": "4e4f409904cb43a918dfde432cc210c2b9feb9cf",
+      "sha256": "ecf82022eaf8062a6b4e2049885976eee077b221f0f7e3cf1b4397d03e852dd8"
+    },
+    {
+      "method": "IRIS",
+      "domain": "blur",
+      "episodes": 50,
+      "successes": 3,
+      "steps": 1433,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/blur/final_eval_results.npz",
+      "git_blob": "874c1c06fa0a1ebb5100632cff96d48f1e3d44c9",
+      "sha256": "0ab1342e84d13d46d37fecaf798667b907191e1bd9f5c8c928a25eea959fe4c5"
+    },
+    {
+      "method": "IRIS",
+      "domain": "snp",
+      "episodes": 50,
+      "successes": 2,
+      "steps": 1470,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/snp/final_eval_results.npz",
+      "git_blob": "7e31e6b1bd77a83e04d43539011585fde0b4d964",
+      "sha256": "43fc4976bb5d48b4bf5faafe070acc2dbc8b264ece7324a80f75b6e8b1ff8dc4"
+    },
+    {
+      "method": "IRIS",
+      "domain": "dark",
+      "episodes": 50,
+      "successes": 3,
+      "steps": 1451,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/dark/final_eval_results.npz",
+      "git_blob": "9467f5750847fd1a59777fcb774aa4fee62f4644",
+      "sha256": "8919cb55bb4e2ad85e8c11c85f99f377856f91d047c9089eeee794ad476b2f04"
+    },
+    {
+      "method": "IRIS",
+      "domain": "red_agent",
+      "episodes": 50,
+      "successes": 4,
+      "steps": 1428,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/red_agent/final_eval_results.npz",
+      "git_blob": "9c3da119339ac87ef8abe10fbcb1f26fd72a2bfb",
+      "sha256": "6c0298f6f869328ac25e9fa6acbcac4f5496b0d650218ed9c6f0638df002033e"
+    },
+    {
+      "method": "IRIS",
+      "domain": "red_object",
+      "episodes": 50,
+      "successes": 4,
+      "steps": 1415,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/red_object/final_eval_results.npz",
+      "git_blob": "58e6efbe8e8d8a117084802c301a8a01067f765b",
+      "sha256": "7cde75356f00b9e1ef06723c90d8f36a06c3d373fc29ab034f70677dc6edd68e"
+    },
+    {
+      "method": "IRIS",
+      "domain": "red_goal",
+      "episodes": 50,
+      "successes": 2,
+      "steps": 1459,
+      "path": "research_snapshots/2026-11-05/completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/red_goal/final_eval_results.npz",
+      "git_blob": "6e2099432aa137473f1788cf639627533e610716",
+      "sha256": "a75bd786ede2702d5af912ea72001986b30ff21f116c54943780bc3f8679cf93"
+    }
+  ],
+  "csv_sha256": "0704fd3b3cfe394c167d5bee1370ae1975c1af68ed3158141640f49836f77a27"
+}

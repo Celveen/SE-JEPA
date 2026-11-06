@@ -35,6 +35,4 @@ Test-time adaptation produces a sequence of fast updates $\Delta_1,\Delta_2,\dot
   \end{tabular}
 \end{table}
 
-Table~\ref{tab:inheritance} runs this rule on one fixed target order. Keeping every update lowers success by 14 points (exact McNemar test, $p=0.029$), and small coefficients add at most two points (7 wins, 5 losses at $w=0.003$). The update geometry offers a diagnostic clue. The mean cosine between consecutive updates is 0.061 on this stream and 0.018 over 2{,}449 consecutive pairs per planner in a longer seven-round stream (\supref{D}). Each update solves a local problem, around one start state, one goal, and the trajectory the planner happened to take, and these local solutions point in nearly orthogonal directions. This motivates fitting the underlying transitions jointly rather than treating episode-specific parameter changes as reusable solutions.
-
-We therefore consolidate the \emph{transitions} behind fast adaptation into persistent predictors, grouping experience by predictive compatibility.
+On matched targets, carrying every update forward loses 14 percentage points of success relative to episodic reset (Table~\ref{tab:inheritance}, exact McNemar test, $p=0.029$). Small inheritance weights yield results closer to reset. Consecutive updates are nearly orthogonal on this stream and on a longer stream with both planners (\supref{D}). Each update fits the actions taken around a particular start and goal. We therefore retain the observed transitions and train a predictor jointly on episodes with compatible dynamics.

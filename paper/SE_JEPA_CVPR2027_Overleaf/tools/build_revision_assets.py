@@ -8,7 +8,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-from restyle_paper_figures import METHOD_COLORS, METHOD_STYLES, TEXT, set_style
+from restyle_paper_figures import LINE_STYLES, METHOD_COLORS, TEXT, set_style
 from PIL import Image
 P=Path(__file__).resolve().parents[1]; D=P/'data/revision_assets'; F=P/'figures'
 set_style()
@@ -22,6 +22,34 @@ def save(fig,n):
  fig.savefig(F/(n+'.pdf'),bbox_inches='tight',pad_inches=.025)
  fig.savefig(F/(n+'.png'),bbox_inches='tight',pad_inches=.025,dpi=300)
  plt.close(fig)
+
+def draw_planning_efficiency():
+    fig, axes = plt.subplots(2, 1, figsize=(3.35, 3.12), sharex=True)
+    fig.subplots_adjust(left=.17, right=.97, bottom=.13, top=.82, hspace=.58)
+    for ax, key, title in zip(axes, ['shape', 'visual'],
+                              ['PushObj: seven shapes', 'PushT: seven visual conditions']):
+        summary = json.loads((D / f'{key}_summary.json').read_text())
+        domains = summary['groups']['all']
+        # Each domain has equal weight, matching the reported aggregate.
+        for offset, method in enumerate(methods):
+            y = np.mean([summary['curves']['CEM'][d][method]['mean'] for d in domains], axis=0)
+            ax.plot(np.arange(1, len(y) + 1), y, label=names[method],
+                    lw=1.8 if method == 'ours' else 1.4, ms=3.3, mew=.85,
+                    markevery=(offset * 2, 6), **LINE_STYLES[method])
+        ax.set_title(title, loc='left', fontsize=8, fontweight='bold', pad=5)
+        ax.set(xlim=(1, 30), ylim=(0, 100), yticks=[0, 50, 100], ylabel='Success (%)')
+        ax.tick_params(labelsize=7)
+        ax.grid(axis='y', color='#E1E5E9', lw=.5)
+    axes[1].set(xlabel='MPC replans', xticks=[1, 5, 10, 15, 20, 25, 30])
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.54, 1.03),
+               ncol=3, fontsize=7.2, frameon=False, handlelength=2, columnspacing=1.05)
+    save(fig, 'planning_efficiency')
+
+if '--planning-only' in sys.argv:
+    draw_planning_efficiency()
+    raise SystemExit(0)
+
 # Selected failures/successes share pixel-identical initial and goal observations.
 # Equal-size crops enlarge the raw simulator frames without changing their pixels.
 selection=json.loads((D/'selection_manifest.json').read_text())['cases']
@@ -69,13 +97,4 @@ for k in ['shape','visual']:
   if r==0:ax.set_ylabel('Latent MSE',fontsize=7)
  fig.suptitle('Unseen square' if k=='shape' else 'Red-agent shift',fontsize=11,fontweight='bold',color=TEXT,y=.99)
  save(fig,k+'_full')
-# Equal domain weights, matching all-domain aggregate in the supplied summaries.
-fig,axs=plt.subplots(2,1,figsize=(3.3,3.1),sharex=True)
-for ax,k,title in zip(axs,['shape','visual'],['PushObj: seven shapes','PushT: seven visual conditions']):
- s=json.loads((D/(k+'_summary.json')).read_text()); doms=s['groups']['all']
- for m in methods:
-  ys=np.mean([s['curves']['CEM'][d][m]['mean'] for d in doms],axis=0)
-  ax.plot(np.arange(1,len(ys)+1),ys,label=names[m],color=colors[m],lw=2.0 if m=='ours' else 1.3,ls=METHOD_STYLES[m])
-  print(k,m,'final',ys[-1])
- ax.set_title(title,loc='left',fontsize=8,fontweight='bold');ax.set_ylim(0,100);ax.set_yticks([0,50,100]);ax.set_ylabel('Success (%)');ax.grid(alpha=.16);ax.set_xlim(1,30)
-axs[0].legend(loc='lower right',frameon=False,fontsize=6.8);axs[1].set_xlabel('MPC replans');fig.tight_layout(h_pad=.8);save(fig,'planning_efficiency')
+draw_planning_efficiency()

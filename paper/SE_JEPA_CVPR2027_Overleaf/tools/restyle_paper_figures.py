@@ -25,6 +25,19 @@ TEXT = '#263548'
 LABELS = {'frozen': 'Frozen', 'adajepa': 'AdaJEPA', 'ours': 'SE-JEPA'}
 METHOD_STYLES = {'frozen': '--', 'adajepa': '-.', 'ours': '-'}
 METHODS = ['frozen', 'adajepa', 'ours']
+# High-contrast variants for the single-column plots. Markers and dashes
+# carry the same distinctions as hue in grayscale print.
+LINE_STYLES = {
+    'frozen': dict(color='#553A76', linestyle=(0, (4, 2.4)), marker='s',
+                   markerfacecolor='white'),
+    'adajepa': dict(color='#BB4810', linestyle='-.', marker='^',
+                    markerfacecolor='white'),
+    'ours': dict(color='#006FC1', linestyle='-', marker='o'),
+}
+PLANNER_LINE_STYLES = {
+    'GD': dict(color='#BB4810', linestyle='--', marker='s', markerfacecolor='white'),
+    'CEM': dict(color='#006FC1', linestyle='-', marker='o'),
+}
 
 
 def set_style():
@@ -77,33 +90,31 @@ def final_main_rows(snapshot):
 
 def draw_teaser(s):
     values = final_main_rows(s)
-    policy = json.loads((DATA/'reporting_overrides.json').read_text()) if (DATA/'reporting_overrides.json').exists() else {}
-    retained = policy.get('teaser_retained_unverified', {})
-    for name, spec in retained.items():
-        values[name][4] = str(spec['visual_shift'])
     # First-page chart: a restrained blue-gray sequence; ours has the highest saturation.
     bars = [('Frozen', 'Frozen', '#D5DCE2'),
             ('DINO-WM', 'DINO-WM', '#B8C5D1'),
             ('LeWM', 'LeWM', '#95AABD'),
             ('AdaJEPA', 'AdaJEPA', '#6D8EA9'),
-            ('SE-JEPA (Ours)', 'SE-JEPA', '#2374AB')]
+            ('SE-JEPA (Ours)', 'SE-JEPA', '#087AF3')]
     groups = [('Shapes', 1), ('Unseen shapes', 2), ('Visual shifts', 4)]
     fig, ax = plt.subplots(figsize=(3.3, 1.72), constrained_layout=True)
     width = .16
     for j, (key, label, color) in enumerate(bars):
         ys = [float(values[key][col]) if values[key][col] != '—' else np.nan for _, col in groups]
         xs = np.arange(3) + (j - 2) * width
-        patches = ax.bar(xs, ys, width*.92, color=color, label=label, zorder=3)
+        style = dict(edgecolor='#083E7A', linewidth=.85, hatch='//') if key == 'SE-JEPA (Ours)' else {}
+        ax.bar(xs, ys, width*.92, color=color, label=label, zorder=3, **style)
         if key == 'SE-JEPA (Ours)':
             for x, y in zip(xs, ys):
-                ax.text(x, y+1.5, f'{y:.1f}', ha='center', fontsize=6.3, color=TEXT)
+                ax.text(x, y+1.5, f'{y:.1f}', ha='center', fontsize=6.8,
+                        fontweight='bold', color='#083E7A')
     ax.set_xticks(np.arange(3), [x[0] for x in groups])
     ax.set_ylim(0, 92); ax.set_ylabel('Success (%)')
     ax.tick_params(axis='x', length=0, labelsize=7)
     ax.tick_params(axis='y', labelsize=7)
     ax.grid(axis='y', color='#E1E5E9', lw=.6, zorder=0)
-    ax.legend(frameon=False, ncol=5, fontsize=5.7, loc='upper center',
-              bbox_to_anchor=(.5, 1.20), handlelength=1, columnspacing=.6)
+    ax.legend(frameon=False, ncol=5, fontsize=6.5, loc='upper center',
+              bbox_to_anchor=(.5, 1.20), handlelength=1.0, handletextpad=.35, columnspacing=.64)
     save(fig, 'teaser_bars')
 
 

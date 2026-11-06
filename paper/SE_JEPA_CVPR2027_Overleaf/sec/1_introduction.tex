@@ -8,11 +8,11 @@
   \label{fig:teaser_bars}
 \end{figure}
 
-World models let an agent try actions in imagination before committing to them. Latent world models make this practical for visual control: they predict how an encoded scene evolves under candidate actions, and a model-predictive controller (MPC) searches for the action sequence whose predicted outcome matches an image goal~\cite{zhou2024dinowm,wang2026straightening,maes2026lewm}. Planning is only as good as these predictions. When a deployed agent meets an object shape or a visual appearance it was not trained on, prediction errors turn directly into planning failures.
+An agent using a visual world model chooses actions by predicting where they will leave an object and comparing that prediction with an image goal~\cite{zhou2024dinowm,wang2026straightening,maes2026lewm}. An unfamiliar shape can change how the object responds to a push. A change in appearance can alter how the model encodes the same motion. In either case, a controller that relies on the pretrained predictor can choose actions that miss the goal.
 
-Test-time adaptation offers a remedy. AdaJEPA~\cite{wang2026adajepa} treats every executed action as free supervision: the observed transition corrects the predictor before the next replan. This closes a second feedback loop around MPC and recovers much of the lost performance within an episode. The correction, however, is discarded when the episode ends. An agent that pushes the same unfamiliar object a hundred times relearns its dynamics a hundred times.
+An executed push reveals how the scene actually changed. AdaJEPA~\cite{wang2026adajepa} uses this observation to update the predictor before the controller replans. At the next episode, it resets the predictor. If the same object returns with a different goal, the agent has to learn its dynamics again.
 
-We ask whether a world model can instead \emph{remember} what it learns during deployment. The key is to turn local corrections into reusable predictions. A fast update fits a short trajectory around one start and goal; across episodes, these updates point in nearly orthogonal directions. Directly retaining them does not reliably produce a predictor that serves the full stream. On a matched stream, full accumulation lowers success from 62\% to 48\% (Sec.~\ref{sec:diagnosis}). What should persist is the experience behind an update, not the update itself.
+Can an agent reuse what it learned on the previous encounter? A natural approach is to keep the adapted weights. Yet each update fits the trajectory between one start and one goal. On a stream of pushes with matched targets, successive updates point in nearly orthogonal directions, and carrying all of them forward reduces success relative to resetting the predictor (Sec.~\ref{sec:diagnosis}). The executed trajectories give us another way to retain experience. We can replay pushes from several encounters and fit a predictor that must explain them together.
 
 \begin{figure*}[t]
   \centering
@@ -21,16 +21,16 @@ We ask whether a world model can instead \emph{remember} what it learns during d
   \label{fig:comparison}
 \end{figure*}
 
-We introduce \ours, a self-evolving latent world model built on complementary learning systems~\cite{mcclelland1995cls}. A fast system adapts within the episode exactly as AdaJEPA does. A slow system stores the episode's transitions in the fixed latent space of the pretrained encoder and consolidates them into slow predictors by replay, one per domain that the model discovers on its own. Prediction errors and fast-update fingerprints organize this memory without domain supervision. The error of the pretrained predictor tells \ours whether an episode contains anything new. The direction of the fast update tells it which domain the experience belongs to. The error of a slow predictor on episodes it has not yet trained on tells it when that predictor can be trusted for planning. The pretrained model is never modified, so the agent can always fall back to it.
+We introduce \ours, a latent world model that pairs within-episode adaptation with slower learning across episodes, inspired by complementary learning systems~\cite{mcclelland1995cls}. The pretrained predictor identifies trajectories it predicts poorly. \ours stores those trajectories in the pretrained encoder's latent space and groups them by fast-update direction and predictive compatibility. Each group trains a slow predictor by replay. A predictor becomes available for planning once it improves on the pretrained reference on incoming trajectories evaluated before training.
 
-This design connects continual learning directly to visual control. With both gradient descent (GD) and the cross-entropy method (CEM), \ours improves held-out planning on PushObj shapes and PushT visual conditions (Fig.~\ref{fig:teaser_bars}). These gains use task-trained ResNet backbones; slow consolidation also improves DINO-WM on rope and granular manipulation, extending persistent learning to a different visual representation and deformable dynamics. With CEM it reaches 79.1\% success on held-out shapes and 69.9\% on unseen shapes, against 70.4\% and 54.4\% for AdaJEPA; under recoloring of the object or goal its gains exceed 27 points. Its online success improves over deployment rounds, and on deformable objects it reduces Chamfer distance by 49\% (rope) and 27\% (granular) relative to DINO-WM.
+We evaluate whether this memory helps an agent reach new goals. On PushObj and PushT, \ours improves held-out success with both gradient descent (GD) and the cross-entropy method (CEM), while using fewer replans than episodic adaptation (Fig.~\ref{fig:teaser_bars}). Beyond these task-trained ResNet models, replay also improves a DINO-WM predictor on rope and granular manipulation. A rope predictor trained during a single pass transfers to previously unseen instances.
 
-Our contributions are:
+Our contributions are threefold.
 \begin{itemize}
   \setlength{\itemsep}{1pt}
-  \item We identify experience replay as the bridge from episodic adaptation to persistent latent planning, motivated by a matched-stream diagnosis of weight accumulation.
-  \item We propose \ours, which turns transient adaptation into lasting predictive knowledge through replay consolidation, self-discovered domains, and validation before retrieval, using prediction errors and fast-update fingerprints.
-  \item We demonstrate persistent learning with task-trained ResNet and DINO-WM backbones across rigid and deformable manipulation, with higher held-out success and fewer interactions under both GD and CEM on rigid-object tasks.
+  \item A matched-stream experiment measures the planning cost of carrying fast updates across episodes and shows how their directions vary from one encounter to the next.
+  \item \ours discovers which experiences to replay together and tests each resulting predictor on incoming trajectories before using it for control.
+  \item Our evaluation separates gains during deployment from transfer to unseen targets. It tests task-trained ResNet models on rigid objects and a DINO-WM backbone on deformable objects.
 \end{itemize}
 
 \begin{figure*}[t]
