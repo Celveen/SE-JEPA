@@ -8,10 +8,10 @@
 Each episode starts with a scene and an image goal. The planner observes the consequences of its actions and receives no shift labels or task-change signals. We study shape and appearance shifts with ResNet-based world models trained on task trajectories~\cite{he2016resnet}. In \emph{PushObj}, pretraining covers T, L, Z, and plus shapes. Deployment also introduces I, square, and small tee. \emph{PushT} keeps the T shape and changes its appearance through blur, noise, darkness, or recoloring of the agent, object, or goal. We also test replay in two deformable manipulation tasks, \emph{rope} and \emph{granular}, using DINO-WM with pretrained DINOv2 features~\cite{zhou2024dinowm,oquab2024dinov2,lin2020softgym}.
 
 \paragraph{Deployment and evaluation.}
-On PushObj and PushT, each planner runs three learning chains. Targets are resampled over five rounds, with 50 episodes per shape or visual condition in each round. We then fix each learned memory and test it on goals from three new seeds, drawn from source episodes absent from deployment. Retrieval and fast adaptation stay active. We report the fraction of goals reached and the mean number of replans, counting the full budget for failures. On rope and granular, we isolate slow consolidation by training one predictor per task with fast adaptation disabled. The planner revisits the same 50 instances over four passes. We measure Chamfer distance (CD) between the final and goal configurations and test the rope predictor separately on new instances.
+For the standard PushObj and PushT comparisons, each planner runs three learning chains. Targets are resampled over five rounds, with 50 episodes per shape or visual condition in each round. We then fix each learned memory and test it on held-out goals from three new seeds. Retrieval and fast adaptation stay active. We report the fraction of goals reached and the mean number of replans, counting the full budget for failures. On rope and granular, we isolate slow consolidation by training one predictor per task with fast adaptation disabled. The planner revisits the same 50 instances over four passes. We measure Chamfer distance (CD) between the final and goal configurations and test the rope predictor separately on new instances.
 
 \paragraph{Baselines and planners.}
-Frozen (pretrained) plans with a fixed model. AdaJEPA~\cite{wang2026adajepa} adapts within each episode. On rigid objects these two baselines use released task-specific checkpoints and the same held-out targets as \ours. We evaluate both GD and CEM, executing five actions per replan up to a budget of 30 replans. Additional CEM baselines include DINO-WM, LeWM, DDP-WM, and planners using DINOv2 CLS or R3M features~\cite{zhou2024dinowm,maes2026lewm,yin2026ddpwm,oquab2024dinov2,nair2022r3m}. For PushT, we use DreamerV3~\cite{hafner2025dreamerv3} and IRIS~\cite{micheli2023iris} as offline-trained predictors for CEM. Table~\ref{tab:main} identifies published PushObj results from the two-shape evaluation of Zhou et al.~\cite{zhou2024dinowm}. \supref{B} and \supref{C} give the target sets, checkpoints, and planning protocols.
+Frozen (pretrained) plans with a fixed model. AdaJEPA~\cite{wang2026adajepa} adapts within each episode. On rigid objects these two baselines use released task-specific checkpoints and the same held-out targets as \ours. We evaluate both GD and CEM, executing five actions per replan up to a budget of 30 replans. Additional CEM baselines include DINO-WM, LeWM, DDP-WM, and planners using DINOv2 CLS or R3M features~\cite{zhou2024dinowm,maes2026lewm,yin2026ddpwm,oquab2024dinov2,nair2022r3m}. For PushT, we use DreamerV3~\cite{hafner2025dreamerv3} and IRIS~\cite{micheli2023iris} as offline-trained predictors for CEM. The published two-shape PushObj results of Zhou et al.~\cite{zhou2024dinowm} are listed separately in Appendix~C. \supref{B} and \supref{C} give the target sets, checkpoints, and planning protocols.
 
 \subsection{Planning with memory on held-out targets}
 \label{sec:sota}
@@ -34,3 +34,28 @@ Revisiting the same rope and granular instances reduces final CD over successive
 
 \paragraph{Which encounters use memory?}
 Across seven PushObj rounds, about one episode in four adds experience to a replay buffer, and a similar fraction finishes with a slow predictor. This holds for both planners (\supref{D}). An episode can contribute training data to a domain whose predictor is still awaiting validation. The pretrained model remains available on familiar encounters. On the four shapes seen in pretraining, \ours also improves held-out success over AdaJEPA with both planners (\supref{D}).
+
+\subsection{Ablation study}
+\label{sec:ablation}
+
+\paragraph{Reading and writing on familiar episodes.}
+When the pretrained model predicts an episode well, \ours normally uses it for planning and skips the direct replay write. We remove the read and write protections separately and together (Table~\ref{tab:familiarity}). Removing the read protection lets mature slow predictors compete for retrieval. Removing the write protection lets familiar trajectories enter the usual replay selection process. All four settings use the same maturity criterion.
+
+\begin{table}[!ht]
+  \centering
+  \caption{Effect of familiarity protection on PushObj success (\%). Each run uses the same five-round learning stream and 1,050 held-out goals across seven shapes. Dashes indicate configurations with no reported test.}
+  \label{tab:familiarity}
+  \small
+  \begin{tabular}{@{}lrr@{}}
+    \toprule
+    Familiarity protection & GD & CEM\\
+    \midrule
+    \inputrows{tables/familiarity_ablation.tex}
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+With GD, removing either protection alone lowers success on this stream. Removing both gives the highest GD success among the four settings. With CEM, removing both gives a rate close to the full model's.
+
+\paragraph{What should carry across episodes?}
+On the same seven-shape stream, training a shared slow predictor by replay nearly matches training one predictor per domain. Both replay variants solve more goals than averaging fast weights or carrying them directly into the next episode. They also outperform episodic adaptation from the same pretrained weights. Table~\ref{tab:component_ablation} gives the component comparisons and the slow learning rate sweep.

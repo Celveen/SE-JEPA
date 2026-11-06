@@ -1,6 +1,6 @@
-method,pushobj_all,pushobj_unseen,pusht_shift
-Frozen,43.8,36.2,48.3
-DINO-WM,62.0,46.0,57.0
-LeWM,64.0,50.0,40.3
-AdaJEPA,70.4,54.4,60.2
-SE-JEPA,79.1,69.9,76.1
+planner,method,pushobj_all,pushobj_unseen,pusht_shift,pushobj_all_configuration
+GD,Frozen,42.48,32.44,41.56,standard
+GD,AdaJEPA,72.19,55.33,54.89,standard
+GD,SE-JEPA,83.14,72.44,73.63,without familiarity read/write protection
+CEM,DINO-WM,62.0,46.0,57.0,standard
+CEM,LeWM,64.0,50.0,40.3,standard

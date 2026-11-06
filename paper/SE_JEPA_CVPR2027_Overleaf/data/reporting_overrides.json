@@ -1,12 +1,37 @@
 {
   "date": "2026-11-06",
+  "pushobj_no_familiarity_read_write": {
+    "source": "Seven-shape held-out test results in data/ablation/shape_test_batches.csv, with raw NPZ path and SHA-256 for each batch; see data/ablation/sources.json.",
+    "protocol_source": "https://github.com/Celveen/SE-JEPA/blob/3faad041417c6f2a22df2ad62822c34fd075c4bb/docs/ablation_no_familiarity_read_write.md",
+    "configuration": "Familiarity-based read and write protections disabled; maturity screening retained.",
+    "learning_chains_per_planner": 1,
+    "held_out_target_seeds": [
+      2000,
+      2100,
+      2200
+    ],
+    "evaluation_episodes_per_planner": 1050,
+    "cem_all_percent": 79.62,
+    "gd_all_percent": 83.14,
+    "cem_successes": 836,
+    "gd_successes": 873
+  },
   "vis50": "GitHub baselines@974c70aaefee43a867840fd118f21f7c39d452e2: episode-verified; see data/vis50/vis50_sources.json",
   "published_pushobj": {
     "source": "https://proceedings.mlr.press/v267/zhou25t.html",
     "location": "ICML proceedings PDF, Table 4, p. 8; task definition in Appendix A.2, p. 14",
     "protocol": "Four training shapes, two unseen test shapes; both the agent and object must reach their targets.",
-    "success_percent": {"DreamerV3": 18.0, "IRIS": 14.0, "R3M": 16.0, "DINO CLS": 18.0, "DINO-WM": 34.0},
-    "local_protocol_unreported": ["DreamerV3", "IRIS"]
+    "success_percent": {
+      "DreamerV3": 18.0,
+      "IRIS": 14.0,
+      "R3M": 16.0,
+      "DINO CLS": 18.0,
+      "DINO-WM": 34.0
+    },
+    "local_protocol_unreported": [
+      "DreamerV3",
+      "IRIS"
+    ]
   },
   "frozen_deformable_reference": "DINO-WM",
   "published_deformable_values": "Zhou et al., ICML 2025, Tables 1 and 2; italic in manuscript."

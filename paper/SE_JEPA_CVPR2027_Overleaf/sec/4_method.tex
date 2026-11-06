@@ -21,7 +21,7 @@ Here $x$ contains a short history of observation embeddings and executed actions
 \subsection{Discovering predictive domains}
 \label{sec:write}
 
-The frozen reference provides a first test of whether an episode contributes new experience. We take the geometric mean of its next-frame prediction errors over the first few observed transitions. When the error falls below a calibrated threshold, the agent uses $P_0$ as the base for fast adaptation and skips the memory write. This reserves replay for episodes the reference predicts poorly.
+The frozen reference provides a first test of whether an episode contributes new experience. We take the geometric mean of its next-frame prediction errors over the first few observed transitions. When the error falls below a calibrated threshold, the agent uses $P_0$ as the base for fast adaptation and skips the direct memory write for that episode. This reserves new replay entries for episodes the reference predicts poorly.
 
 For an unfamiliar episode $e$, let $\Delta_e$ denote the fast parameter change. Its direction $u_e=\Delta_e/\|\Delta_e\|_2$ helps identify episodes that call for similar corrections. If the agent retrieved a slow predictor, its domain is the first candidate for the new trajectory. Otherwise, the agent ranks stored domains by the cosine similarity between $u_e$ and each domain's prototype. A candidate accepts the trajectory if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned episodes wait in a pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
 

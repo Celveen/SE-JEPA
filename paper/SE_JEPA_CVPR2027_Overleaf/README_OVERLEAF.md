@@ -12,7 +12,7 @@ image links, SVG conversion, or custom fonts are required by Overleaf.
 
 ## Source organization
 
-- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in Appendix D. Section 4.1 describes the evaluation setup.
+- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in Appendix D. Section 4.1 describes the evaluation setup; Section 4.5 compares the read and write protections and tests how to carry experience between episodes. Appendix D gives the component and learning-rate results.
 - `figures/`: ready-to-compile figures; author-supplied vector originals are
   preserved in `figures/source/`.
 - `tables/`: generated numerical rows.
@@ -51,8 +51,10 @@ python tools/package_overleaf.py
 These optional scripts use NumPy, Matplotlib, Pillow, and PyMuPDF. The first script
 otherwise restores older panels; the later scripts apply the current style
 and original simulator frames. Figure 1 compares methods in aligned rows
-for two PushObj shape sets and the PushT visual shifts, with a common
-success-rate scale and deep blue for SE-JEPA.
+for two PushObj shape sets and the PushT visual shifts. The top group uses GD;
+DINO-WM and LeWM form a separate CEM reference group. The starred SE-JEPA
+PushObj All bar uses the ablation without familiarity read/write protection;
+the remaining SE-JEPA bars use the full method.
 The editable vector original is `figures/teaser_bars.svg`. To redraw it after
 editing `data/teaser_bars.csv`, run
 `python tools/plot_teaser.py --data data/teaser_bars.csv --output-dir figures`.
@@ -64,7 +66,7 @@ same weight in plots where both planners use SE-JEPA.
 DINO-WM, DreamerV3 and IRIS use the episode-verified VIS50 results from the
 `baselines` branch (original paths, immutable commit and checksums in
 `data/vis50/vis50_sources.json`). The latter two methods use offline predictors
-for CEM. The main table reproduces the published two-shape PushObj success rates from Table 4 of Zhou et al. in a dedicated column. Results from our seven-shape protocol occupy separate columns. Italic rope/granular CD entries
+for CEM. The main table uses the seven-shape PushObj protocol, including the original three-shape Unseen subset. Appendix C describes the published two-shape results of Zhou et al. separately. The marked SE-JEPA PushObj All cell uses the ablation with both familiarity protections disabled. The independent test records give 836/1,050 successes with CEM and 873/1,050 with GD. The [experiment archive](https://github.com/Celveen/SE-JEPA/tree/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106) includes the evaluation data and condition definitions. Italic rope/granular CD entries
 are published measurements; the two local frozen deformable entries refer to
 the same DINO-WM reference. `tools/audit_pusht.py` checks VIS50 and the separate
 paired evaluation against the corresponding main-table cells.

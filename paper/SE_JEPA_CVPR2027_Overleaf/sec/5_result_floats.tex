@@ -2,15 +2,15 @@
 
 \begin{table*}[!t]
   \centering
-  \caption{\textbf{Goal-conditioned planning with CEM.} Zhou et al.~\cite{zhou2024dinowm} evaluate PushObj on two unseen shapes. Our PushObj evaluation covers seven shapes, including three unseen during pretraining. PushT covers six shifts, including three recolorings. Success is in percent. Steps is the mean replan count, with failures counted as 30. Rope and granular report Chamfer distance. Italics denote published results; bold compares the matched methods below the rule. $^{\mathrm{o}}$: offline PushT adapter; $^{\mathrm{T}}$: T-only checkpoint in our rigid-object runs.}
+  \caption{\textbf{Goal-conditioned planning with CEM.} PushObj covers seven shapes, three unseen during pretraining. PushT covers six visual shifts, including three recolorings. Success rates are percentages. Steps count MPC replans, with failures assigned 30. Italic Chamfer distances (CD) come from Zhou et al.~\cite{zhou2024dinowm}. $^{\mathrm{o}}$ marks offline PushT adapters and $^{\mathrm{T}}$ marks T-only checkpoints. $^{\dagger}$ marks PushObj All with familiarity checks disabled for reads and writes and maturity screening retained. The other \ours entries use the standard task configurations in Appendix~B.}
   \label{tab:main}
   \small
   \setlength{\tabcolsep}{3.5pt}
-  \begin{tabular}{@{}lccccccccc@{}}
+  \begin{tabular}{@{}lcccccccc@{}}
     \toprule
-    & PushObj~\cite{zhou2024dinowm} & \multicolumn{3}{c}{PushObj (this study)} & \multicolumn{3}{c}{PushT visual shifts} & Rope & Granular\\
-    \cmidrule(lr){2-2}\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-9}\cmidrule(lr){10-10}
-    Method & Unseen (2) $\uparrow$ & All (7) $\uparrow$ & Unseen (3) $\uparrow$ & Steps $\downarrow$
+    & \multicolumn{3}{c}{PushObj} & \multicolumn{3}{c}{PushT visual shifts} & Rope & Granular\\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-8}\cmidrule(lr){9-9}
+    Method & All (7) $\uparrow$ & Unseen (3) $\uparrow$ & Steps $\downarrow$
       & Shift (6) $\uparrow$ & Color (3) $\uparrow$ & Steps $\downarrow$ & CD $\downarrow$ & CD $\downarrow$\\
     \midrule
     \inputrows{tables/main_rows.tex}

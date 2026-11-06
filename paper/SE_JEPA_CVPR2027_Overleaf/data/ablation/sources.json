@@ -1,0 +1,63 @@
+{
+  "archive_commit": "3faad041417c6f2a22df2ad62822c34fd075c4bb",
+  "sources": {
+    "tables/batch_results.csv": {
+      "url": "https://github.com/Celveen/SE-JEPA/blob/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106/tables/batch_results.csv",
+      "sha256": "8e1cc6afabee9213680b77aed1eebdea4e79b4461f850e183f2fd436d54a8753"
+    },
+    "preview/familiarity_test_episodes_20261106.csv": {
+      "url": "https://github.com/Celveen/SE-JEPA/blob/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106/preview/familiarity_test_episodes_20261106.csv",
+      "sha256": "9966c886f62079b7ac606676041aa43cb436859cfac4553dd28effd05e761b7e"
+    },
+    "tables/condition_summary.csv": {
+      "url": "https://github.com/Celveen/SE-JEPA/blob/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106/tables/condition_summary.csv",
+      "sha256": "a1c8dd67a89d1bf265310c3dc9b964642a5700ce2ae1b77db24409dfd2f2e68b"
+    },
+    "reference episodes": {
+      "url": "https://github.com/Celveen/SE-JEPA/blob/53c1dffc79362b247b5a2df2d39820270dd51846/reports/shape_shift_figs/data/shape7_episodes.csv",
+      "sha256": "afa67ab6f8014c906c0d16d63ce2ec28a809d4cb4b54342bedbff7ff74426634"
+    },
+    "GD joint gate ablation": {
+      "url": "https://github.com/Celveen/SE-JEPA/blob/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106/packages/06_shape_no_familiarity_gd_singlechain_5round_20261104.zip",
+      "archive_sha256_from_packages_json": "183ea482ffd0cba21a74bbd3a2c802020832c11c6bc2d345cb247e679b5faab3",
+      "batch_hashes": "shape_test_batches.csv includes the 21 independently checked per-NPZ SHA-256 values for GD no_familiarity."
+    }
+  },
+  "local_extracts": {
+    "shape_test_batches.csv": "Original columns, filtered to phase=test, shape protocols and chain=1 (S100 for naive). Each row identifies its archived per-batch NPZ and SHA-256. This file includes the separate GD run with both familiarity checks removed.",
+    "familiarity_test_episodes.csv": "All records from the archive preview, UTF-8 / LF. These three arms provide independent episode-level checks on the batch totals.",
+    "reference_test_episodes.csv": "Historical per-episode table limited to method=ours, unit=s100 or s100b; s100b is the separate CEM repeat.",
+    "gd_joint_test_episodes.csv": "All 1,050 held-out GD no_familiarity episodes re-extracted from successes and action_len in 21 test NPZ files in package 06. Each member SHA-256 was checked. The episode index is its row in the original 50-episode batch. Failed episodes count as 30 replans."
+  },
+  "held_out_protocol": "One learned state per ablation arm; 3 seeds x 7 shapes x 50 episodes. Full GD and CEM use s100, with the separate CEM s100b repeat retained. Mean MPC replans covers all episodes (failures count as 30).",
+  "visual_slow_lr_comparison": {
+    "metric": "All seven PushT conditions, including original T",
+    "unit": "3 learned states x 3 held-out seeds x 7 visual conditions x 50 episodes",
+    "counts": [
+      {
+        "experiment": "visual_shape_protocol_3x5_heldout_20261029",
+        "planner": "CEM",
+        "successes": 2427,
+        "episodes": 3150
+      },
+      {
+        "experiment": "visual_shape_protocol_3x5_heldout_20261029",
+        "planner": "GD",
+        "successes": 2384,
+        "episodes": 3150
+      },
+      {
+        "experiment": "visual_slow_lr_2e4_3x5_heldout_20261102",
+        "planner": "CEM",
+        "successes": 2394,
+        "episodes": 3150
+      },
+      {
+        "experiment": "visual_slow_lr_2e4_3x5_heldout_20261102",
+        "planner": "GD",
+        "successes": 2390,
+        "episodes": 3150
+      }
+    ]
+  }
+}

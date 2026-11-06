@@ -4,7 +4,7 @@
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{teaser_bars.pdf}
-  \caption{\textbf{Deployment experience improves held-out planning.} CEM success on all seven PushObj shapes, the three unseen shapes, and six PushT visual shifts. Evaluation protocols are given in Table~\ref{tab:main}.}
+  \caption{\textbf{Held-out planning success.} The top group uses GD. DINO-WM and LeWM use CEM. The star marks \ours with familiarity protection removed from memory reads and writes (Sec.~\ref{sec:ablation}). The other \ours bars use the full method.}
   \label{fig:teaser_bars}
 \end{figure}
 
@@ -23,7 +23,7 @@ A trajectory contains information that survives a change of goal. It records whi
 
 \ours combines fast adaptation during an episode with slow learning across encounters, inspired by complementary learning systems~\cite{mcclelland1995cls}. It keeps the pretrained model available to the planner and uses that model's errors to decide which trajectories to retain (Fig.~\ref{fig:comparison}). It groups trajectories by the direction of their fast updates and by how well one predictor explains their transitions. Each group trains a separate predictor by replay. Before updating that predictor on a new trajectory, \ours tests how well it predicts the observed transitions. Predictors that consistently outperform the pretrained model on these forecasts become candidates for planning.
 
-We evaluate this memory by giving the agent new goals after deployment. On PushObj and PushT, \ours reaches more held-out goals than episodic adaptation and needs fewer replans on average. These gains hold with both gradient descent (GD) and the cross-entropy method (CEM). The largest gains over episodic adaptation occur on shapes missing from pretraining and when the object or its goal changes color. Figure~\ref{fig:teaser_bars} summarizes CEM success on the rigid-object tasks.
+We evaluate this memory by giving the agent new goals after deployment. With gradient descent (GD), \ours reaches more held-out goals than episodic adaptation across unseen shapes and visual shifts (Fig.~\ref{fig:teaser_bars}). The gains are especially large when the object or its goal changes color. They also hold with the cross-entropy method (CEM), and both planners need fewer replans on average (Appendix~B).
 
 These tasks use ResNet world models trained on manipulation trajectories. Replay also improves a DINO-WM predictor for rope and granular manipulation, bringing the final configuration closer to the goal in both tasks. A rope predictor learned in one pass transfers to previously unseen instances, showing that the experience gained on one set of configurations can guide action on another.
 

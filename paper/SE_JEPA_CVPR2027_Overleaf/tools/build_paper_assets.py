@@ -22,6 +22,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from restyle_paper_figures import draw_teaser
 from vis50 import external_results
+from pushobj_ablation import heldout_results, write_ablation_tables
 
 PAPER = Path(__file__).resolve().parents[1]
 REPO = PAPER.parent / "CL-JEPA-cudagraph"
@@ -32,7 +33,7 @@ for folder in (DATA, FIG, TABLES):
     folder.mkdir(exist_ok=True)
 parser = argparse.ArgumentParser()
 parser.add_argument("--refresh", action="store_true")
-parser.add_argument("--main-table-only", action="store_true", help="rebuild just the main table")
+parser.add_argument("--main-table-only", action="store_true", help="rebuild the main and ablation tables")
 args = parser.parse_args()
 
 if args.refresh:
@@ -71,7 +72,7 @@ else:
     snapshot = json.loads((DATA / "paper_snapshot.json").read_text())
 
 s = snapshot
-reporting = json.loads((DATA / "reporting_overrides.json").read_text()) if (DATA / "reporting_overrides.json").exists() else {}
+reporting = json.loads((DATA / "reporting_overrides.json").read_text())
 domains = ["blur", "snp", "dark", "red_agent", "red_object", "red_goal"]
 labels = ["Blur", "Noise", "Dark", "Red agent", "Red object", "Red goal"]
 methods = ["frozen", "adajepa", "ours"]
@@ -100,7 +101,12 @@ citations = {
 rows = []
 order = ["DreamerV3", "IRIS", "R3M", "DINO CLS", "DINO-WM", "LeWM", "DDP-WM", "Frozen", "AdaJEPA", "SE-JEPA (Ours)"]
 vis50 = external_results(DATA / "vis50")
-published_pushobj = json.loads((DATA / "reporting_overrides.json").read_text())["published_pushobj"]["success_percent"]
+ablation_results = heldout_results(DATA / "ablation")
+for planner in ("GD", "CEM"):
+    rate, _ = ablation_results[planner, "no_familiarity"]
+    recorded = reporting["pushobj_no_familiarity_read_write"][f"{planner.lower()}_all_percent"]
+    if round(rate, 2) != recorded:
+        raise ValueError(f"{planner} display rate {recorded} differs from archived test rate {rate:.2f}")
 for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[0]))):
     label = tex_cell(row[0])
     values = [tex_cell(x) for x in row[1:7]]
@@ -119,10 +125,12 @@ for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[
         values[6:8] = [format(float(s["deform"][task]["DINO-WM"]["cd"]), ".3f") for task in ["rope", "granular"]]
         rows.append(r"\midrule")
     if label == "SE-JEPA (Ours)":
+        values[0] = f'{ablation_results["CEM", "no_familiarity"][0]:.2f}'
         values = [r"\textbf{" + v + "}" for v in values]
-    literature_cell = r"\textit{%.1f}" % published_pushobj[label] if label in published_pushobj else r"\missing"
-    rows.append(" & ".join([citations[label], literature_cell, *values]) + r" \\")
+        values[0] += r"$^{\dagger}$"
+    rows.append(" & ".join([citations[label], *values]) + r" \\")
 (TABLES / "main_rows.tex").write_text("\n".join(rows) + "\n")
+write_ablation_tables(TABLES, ablation_results)
 if args.main_table_only:
     raise SystemExit(0)
 

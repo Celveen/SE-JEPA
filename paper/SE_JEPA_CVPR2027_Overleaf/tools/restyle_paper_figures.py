@@ -9,14 +9,13 @@ Run after build_paper_assets.py, then run build_revision_assets.py.
 """
 from pathlib import Path
 import csv
-import html
 import json
-import re
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-from plot_teaser import COLORS as TEASER_COLORS, PANELS as TEASER_PANELS, plot_teaser
+from plot_teaser import CSV_FIELDS, plot_teaser
+from vis50 import external_results
 
 PAPER = Path(__file__).resolve().parents[1]
 DATA = PAPER / 'data'
@@ -65,45 +64,29 @@ def save(fig, name):
     plt.close(fig)
 
 
-def clean_cell(value):
-    return html.unescape(re.sub(r'<[^>]*>', '', re.sub(r'<sup>.*?</sup>', '', value))).strip()
-
-
-def final_main_rows(snapshot):
-    """Use typeset main-table cells so a later audit propagates to the teaser.
-
-    Falls back to the frozen reporting snapshot for absent rows. We do not edit
-    either source or infer any corrected value in this style-only script.
-    """
-    rows = {clean_cell(r[0]): [clean_cell(c) for c in r] for r in snapshot['main_rows_html']}
-    for line in (PAPER / 'tables/main_rows.tex').read_text().splitlines():
-        if '&' not in line:
-            continue
-        cells = [c.strip() for c in line.split('&')]
-        label = cells[0]
-        key = next((k for k in ['DINO-WM', 'LeWM', 'AdaJEPA', 'Frozen'] if label.startswith(k)), None)
-        if label.startswith(r'\ours'):
-            key = 'SE-JEPA (Ours)'
-        if key is None:
-            continue
-        values = []
-        # The teaser compares runs in this study; the first numeric cell is the published protocol.
-        for c in cells[2:]:
-            m = re.search(r'(?<![A-Za-z])\d+(?:\.\d+)?', c)
-            values.append(m.group(0) if m else '—')
-        rows[key] = [key] + values
-    return rows
-
-
 def draw_teaser(s):
-    values = final_main_rows(s)
+    overrides = json.loads((DATA / 'reporting_overrides.json').read_text())
+    no_familiarity = overrides['pushobj_no_familiarity_read_write']['gd_all_percent']
     path = DATA / 'teaser_bars.csv'
     with path.open('w', newline='', encoding='utf-8') as stream:
         writer = csv.writer(stream, lineterminator='\n')
-        writer.writerow(['method', *TEASER_PANELS])
-        for method in TEASER_COLORS:
-            row = values['SE-JEPA (Ours)' if method == 'SE-JEPA' else method]
-            writer.writerow([method, row[1], row[2], row[4]])
+        writer.writerow(CSV_FIELDS)
+        for key in METHODS:
+            shape = s['shape']['GD'][key]
+            visual = s['visual']['rates']['GD'][key]
+            all_shapes = no_familiarity if key == 'ours' else shape['all']['mean']
+            configuration = 'without familiarity read/write protection' if key == 'ours' else 'standard'
+            writer.writerow(['GD', LABELS[key], f'{all_shapes:.2f}',
+                             f"{shape['unseen']['mean']:.2f}", f"{visual['shifted']['mean']:.2f}",
+                             configuration])
+
+        # These checkpoints were evaluated with CEM, in separate reference runs.
+        main_rows = {row[0]: row for row in s['main_rows_html']}
+        dino_shift = external_results(DATA / 'vis50')['DINO-WM']['shift_rate']
+        for method in ('DINO-WM', 'LeWM'):
+            row = main_rows[method]
+            shifted = f'{dino_shift:.1f}' if method == 'DINO-WM' else row[4]
+            writer.writerow(['CEM', method, row[1], row[2], shifted, 'standard'])
     plot_teaser(path, FIG)
 
 

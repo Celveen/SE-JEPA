@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T12:56:51+08:00",
+  "checked_at": "2026-11-06T15:38:51+08:00",
   "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 10,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "2c433873effffc97b535acd1028bd9b8b67335e11034000af548986aee0eb769",
+    "pdf_sha256": "c0ab4f0b073df63fd89fdf333e7803238a6ea1139f9bc8958da3b8fccacd1a77",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -25,14 +25,16 @@
       "7": 6
     },
     "conclusion_page": 7,
-    "all_main_floats_precede_conclusion": true
+    "all_main_floats_precede_conclusion": true,
+    "familiarity_ablation_page": 7,
+    "component_ablation_page": 14
   },
   "supplement": {
     "pages": 8,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "b537f4f0ed51c21c1d03b9f578d0e1a90901c64fae109ce3237fe54dd6d2fa7a"
+    "pdf_sha256": "471c73364db0666c0c3755c673a9abd90783020e6b76f3627336485888685d2e"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -75,7 +77,7 @@
       "DreamerV3",
       "IRIS"
     ],
-    "published_pushobj": "ICML 2025, Zhou et al., Table 4 (two unseen shapes); values checked in data/reporting_overrides.json"
+    "published_pushobj": "ICML 2025, Zhou et al., Table 4 (two unseen shapes), cited in Appendix C."
   },
   "main_figure_revision": {
     "comparison_unchanged": true,
@@ -95,9 +97,27 @@
       "layout": "Three horizontal bar panels with the same method rows and 0–100 success-rate scale",
       "data": "data/teaser_bars.csv",
       "editable_source": "figures/teaser_bars.svg",
-      "values_checked_against_main_table": 15,
       "ours": "Deep blue, bold method label, diagonal hatch and direct value labels",
-      "bar_value_labels": "All 15 rates are printed to one decimal, 1.5 pt to the right of each bar end. Only SE-JEPA is bold."
+      "bar_value_labels": "Printed outside each bar at CSV precision. PushObj All for SE-JEPA with GD is 83.14% (joint familiarity ablation).",
+      "values_checked": 15,
+      "planner_groups": {
+        "GD": [
+          "Frozen",
+          "AdaJEPA",
+          "SE-JEPA"
+        ],
+        "CEM": [
+          "DINO-WM",
+          "LeWM"
+        ]
+      }
     }
+  },
+  "ablation": {
+    "archive_commit": "3faad041417c6f2a22df2ad62822c34fd075c4bb",
+    "heldout_episodes_per_run": 1050,
+    "scores": "data/reporting_overrides.json",
+    "familiarity_table": "tables/familiarity_ablation.tex",
+    "component_table": "tables/pushobj_component_ablation.tex"
   }
 }

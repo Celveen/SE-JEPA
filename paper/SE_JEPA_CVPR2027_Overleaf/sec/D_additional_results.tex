@@ -83,6 +83,30 @@ Figure~\mainref{fig:deployment} shows the four-pass learning curves in the main 
   \end{tabular}
 \end{table}
 
+\subsection{PushObj component ablations}
+\label{app:component_ablation}
+
+We assign each variant the same initial checkpoint and the same sequence of shapes and goals. The comparison uses the first learning chain for direct weight inheritance and the corresponding chain for the full model. AdaJEPA starts each goal from the common checkpoint. The shared replay variant trains a single slow predictor on stored trajectories. The EMA variant uses an exponential moving average of the fast weights to update a single slow predictor.
+
+\begin{table}[tb]
+  \centering
+  \caption{PushObj ablations with GD. Success covers all seven shapes. Mean replans include all 1,050 held-out episodes, with the full budget counted for failures. The lower block varies the full model's slow learning rate.}
+  \label{tab:component_ablation}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}lrr@{}}
+    \toprule
+    Variant & Success (\%) & Replans\\
+    \midrule
+    \inputrows{tables/pushobj_component_ablation.tex}
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+For GD, disabling only the read protection produced identical held-out rollouts to AdaJEPA from the same checkpoint across all 21 test batches. Removing maturity screening instead allows a slow predictor to compete for retrieval earlier. This differs from the familiarity ablations in Table~\mainref{tab:familiarity}, which change how the agent handles episodes the pretrained model already predicts well. For context, a second CEM run of the full model on the same learning stream reached 80.19\%, compared with 78.57\% in the original run.
+
+On PushT, doubling the slow learning rate from $10^{-4}$ to $2\times10^{-4}$ changes success by $+0.19$ percentage points with GD and $-1.05$ with CEM. These comparisons average three learned states per planner over all seven visual conditions, including the original appearance.
+
 \subsection{Transferring fast weights across goals}
 We tested whether the parameter update from one episode helps on the next. Let $s_e$ be the offset from the pretrained weights at the start of episode $e$, and $\Delta_e$ the fast update in that episode. We set $s_{e+1}=s_e+w\Delta_e$, where $w=0$ resets to the pretrained model and $w=1$ retains the full update. Each variant sees the same 100 PushObj goals in five blocks of 20 (I, square, T, I, square). Keeping the full update loses more goals than it gains relative to reset (Table~\ref{tab:inheritance}, two-sided exact McNemar $p=0.029$). Smaller weights give success rates closer to reset.
 
