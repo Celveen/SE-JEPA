@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T12:52:58+08:00",
+  "checked_at": "2026-11-06T12:56:51+08:00",
   "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 10,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "5ea64b94e1a2e5cd23fb03017aa1d7fde66d4d73715584c58618897ae1ac7cc9",
+    "pdf_sha256": "2c433873effffc97b535acd1028bd9b8b67335e11034000af548986aee0eb769",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -97,7 +97,7 @@
       "editable_source": "figures/teaser_bars.svg",
       "values_checked_against_main_table": 15,
       "ours": "Deep blue, bold method label, diagonal hatch and direct value labels",
-      "bar_value_labels": "All 15 rates are printed to one decimal; only SE-JEPA is bold."
+      "bar_value_labels": "All 15 rates are printed to one decimal, 1.5 pt to the right of each bar end. Only SE-JEPA is bold."
     }
   }
 }

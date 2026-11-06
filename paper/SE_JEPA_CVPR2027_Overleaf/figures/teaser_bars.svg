@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-06T12:52:14.997268</dc:date>
+    <dc:date>2026-11-06T12:55:56.736559</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -30,452 +30,452 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 53.856 97.5744 
-L 109.261917 97.5744 
-L 109.261917 28.512 
-L 53.856 28.512 
+    <path d="M 46.512 97.5744 
+L 97.512 97.5744 
+L 97.512 28.512 
+L 46.512 28.512 
 z
 " style="fill: #ffffff"/>
    </g>
    <g id="line2d_1">
-    <path d="M 53.856 97.5744 
-L 53.856 28.512 
-" clip-path="url(#pc1031ce223)" style="fill: none; stroke: #bbc5cf; stroke-width: 0.6; stroke-linecap: square"/>
+    <path d="M 46.512 97.5744 
+L 46.512 28.512 
+" clip-path="url(#p5eaede3cec)" style="fill: none; stroke: #bbc5cf; stroke-width: 0.6; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
-    <path d="M 81.558959 97.5744 
-L 81.558959 28.512 
-" clip-path="url(#pc1031ce223)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
+    <path d="M 67.762 97.5744 
+L 67.762 28.512 
+" clip-path="url(#p5eaede3cec)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
    </g>
    <g id="line2d_3">
-    <path d="M 109.261917 97.5744 
-L 109.261917 28.512 
-" clip-path="url(#pc1031ce223)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
+    <path d="M 89.012 97.5744 
+L 89.012 28.512 
+" clip-path="url(#p5eaede3cec)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
    </g>
    <g id="pushobj_all-Frozen">
-    <path d="M 53.856 31.757933 
-L 78.123792 31.757933 
-L 78.123792 38.802298 
-L 53.856 38.802298 
+    <path d="M 46.512 31.757933 
+L 65.127 31.757933 
+L 65.127 38.802298 
+L 46.512 38.802298 
 z
-" clip-path="url(#pc1031ce223)" style="fill: #bb7429"/>
+" clip-path="url(#p5eaede3cec)" style="fill: #bb7429"/>
    </g>
    <g id="pushobj_all-DINO-WM">
-    <path d="M 53.856 45.570413 
-L 88.207669 45.570413 
-L 88.207669 52.614778 
-L 53.856 52.614778 
+    <path d="M 46.512 45.570413 
+L 72.862 45.570413 
+L 72.862 52.614778 
+L 46.512 52.614778 
 z
-" clip-path="url(#pc1031ce223)" style="fill: #27829e"/>
+" clip-path="url(#p5eaede3cec)" style="fill: #27829e"/>
    </g>
    <g id="pushobj_all-LeWM">
-    <path d="M 53.856 59.382893 
-L 89.315787 59.382893 
-L 89.315787 66.427258 
-L 53.856 66.427258 
+    <path d="M 46.512 59.382893 
+L 73.712 59.382893 
+L 73.712 66.427258 
+L 46.512 66.427258 
 z
-" clip-path="url(#pc1031ce223)" style="fill: #8866a9"/>
+" clip-path="url(#p5eaede3cec)" style="fill: #8866a9"/>
    </g>
    <g id="pushobj_all-AdaJEPA">
-    <path d="M 53.856 73.195373 
-L 92.861766 73.195373 
-L 92.861766 80.239738 
-L 53.856 80.239738 
+    <path d="M 46.512 73.195373 
+L 76.432 73.195373 
+L 76.432 80.239738 
+L 46.512 80.239738 
 z
-" clip-path="url(#pc1031ce223)" style="fill: #c1544a"/>
+" clip-path="url(#p5eaede3cec)" style="fill: #c1544a"/>
    </g>
    <g id="pushobj_all-SE-JEPA">
-    <path d="M 53.856 85.76473 
-L 97.68208 85.76473 
-L 97.68208 95.295341 
-L 53.856 95.295341 
+    <path d="M 46.512 85.76473 
+L 80.1295 85.76473 
+L 80.1295 95.295341 
+L 46.512 95.295341 
 z
-" clip-path="url(#pc1031ce223)" style="fill: url(#hebd4a4d19e)"/>
+" clip-path="url(#p5eaede3cec)" style="fill: url(#hebd4a4d19e)"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
      <g id="line2d_4"/>
      <g id="text_1">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: start" x="53.856" y="105.361416" transform="rotate(-0 53.856 105.361416)">0</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: start" x="46.512" y="105.361416" transform="rotate(-0 46.512 105.361416)">0</text>
      </g>
     </g>
     <g id="xtick_2">
      <g id="line2d_5"/>
      <g id="text_2">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="81.558959" y="105.361416" transform="rotate(-0 81.558959 105.361416)">50</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="67.762" y="105.361416" transform="rotate(-0 67.762 105.361416)">50</text>
      </g>
     </g>
     <g id="xtick_3">
      <g id="line2d_6"/>
      <g id="text_3">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: end" x="109.261917" y="105.361416" transform="rotate(-0 109.261917 105.361416)">100</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="89.012" y="105.361416" transform="rotate(-0 89.012 105.361416)">100</text>
      </g>
     </g>
    </g>
    <g id="matplotlib.axis_2"/>
    <g id="text_4">
-    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="49.856" y="37.349646" transform="rotate(-0 49.856 37.349646)">Frozen</text>
+    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="42.512" y="37.349646" transform="rotate(-0 42.512 37.349646)">Frozen</text>
    </g>
    <g id="text_5">
     <g id="patch_3">
-     <path d="M 79.425792 38.671896 
-L 94.517104 38.671896 
-L 94.517104 31.888334 
-L 79.425792 31.888334 
+     <path d="M 66.429 38.671896 
+L 81.520312 38.671896 
+L 81.520312 31.888334 
+L 66.429 31.888334 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="79.623792" y="37.101303" transform="rotate(-0 79.623792 37.101303)">43.8</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="66.627" y="37.101303" transform="rotate(-0 66.627 37.101303)">43.8</text>
    </g>
    <g id="text_6">
-    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="49.856" y="51.162126" transform="rotate(-0 49.856 51.162126)">DINO-WM</text>
+    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="42.512" y="51.162126" transform="rotate(-0 42.512 51.162126)">DINO-WM</text>
    </g>
    <g id="text_7">
     <g id="patch_4">
-     <path d="M 89.509669 52.484376 
-L 104.600981 52.484376 
-L 104.600981 45.700814 
-L 89.509669 45.700814 
+     <path d="M 74.164 52.484376 
+L 89.255313 52.484376 
+L 89.255313 45.700814 
+L 74.164 45.700814 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="89.707669" y="50.913783" transform="rotate(-0 89.707669 50.913783)">62.0</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="74.362" y="50.913783" transform="rotate(-0 74.362 50.913783)">62.0</text>
    </g>
    <g id="text_8">
-    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="49.856" y="64.974606" transform="rotate(-0 49.856 64.974606)">LeWM</text>
+    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="42.512" y="64.974606" transform="rotate(-0 42.512 64.974606)">LeWM</text>
    </g>
    <g id="text_9">
     <g id="patch_5">
-     <path d="M 90.617787 66.296856 
-L 105.709099 66.296856 
-L 105.709099 59.513294 
-L 90.617787 59.513294 
+     <path d="M 75.014 66.296856 
+L 90.105312 66.296856 
+L 90.105312 59.513294 
+L 75.014 59.513294 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="90.815787" y="64.726263" transform="rotate(-0 90.815787 64.726263)">64.0</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="75.212" y="64.726263" transform="rotate(-0 75.212 64.726263)">64.0</text>
    </g>
    <g id="text_10">
-    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="49.856" y="78.787086" transform="rotate(-0 49.856 78.787086)">AdaJEPA</text>
+    <text style="fill: #213345; font: 7.5px 'DejaVu Sans'; text-anchor: end" x="42.512" y="78.787086" transform="rotate(-0 42.512 78.787086)">AdaJEPA</text>
    </g>
    <g id="text_11">
     <g id="patch_6">
-     <path d="M 94.163766 80.109336 
-L 109.255078 80.109336 
-L 109.255078 73.325774 
-L 94.163766 73.325774 
+     <path d="M 77.734 80.109336 
+L 92.825312 80.109336 
+L 92.825312 73.325774 
+L 77.734 73.325774 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="94.361766" y="78.538743" transform="rotate(-0 94.361766 78.538743)">70.4</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="77.932" y="78.538743" transform="rotate(-0 77.932 78.538743)">70.4</text>
    </g>
    <g id="text_12">
-    <text style="fill: #104b82; font: 700 7.5px 'DejaVu Sans'; text-anchor: end" x="49.856" y="92.599566" transform="rotate(-0 49.856 92.599566)">SE-JEPA</text>
+    <text style="fill: #104b82; font: 700 7.5px 'DejaVu Sans'; text-anchor: end" x="42.512" y="92.599566" transform="rotate(-0 42.512 92.599566)">SE-JEPA</text>
    </g>
    <g id="text_13">
     <g id="patch_7">
-     <path d="M 79.800643 93.921816 
-L 96.48008 93.921816 
-L 96.48008 87.138254 
-L 79.800643 87.138254 
+     <path d="M 81.4315 93.921816 
+L 98.110937 93.921816 
+L 98.110937 87.138254 
+L 81.4315 87.138254 
 z
-" style="fill: #104b82"/>
+" style="fill: #ffffff"/>
     </g>
-    <text style="fill: #ffffff; font: 700 6.6px 'DejaVu Sans'; text-anchor: end" x="96.28208" y="92.351223" transform="rotate(-0 96.28208 92.351223)">79.1</text>
+    <text style="fill: #104b82; font: 700 6.6px 'DejaVu Sans'; text-anchor: start" x="81.6295" y="92.351223" transform="rotate(-0 81.6295 92.351223)">79.1</text>
    </g>
    <g id="text_14">
-    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(66.689771 16.725877)">PushObj</text>
-    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(62.958216 24.512)">All shapes</text>
+    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(57.142813 16.725877)">PushObj</text>
+    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(53.411258 24.512)">All shapes</text>
    </g>
   </g>
   <g id="axes_2">
    <g id="patch_8">
-    <path d="M 119.789041 97.5744 
-L 175.194959 97.5744 
-L 175.194959 28.512 
-L 119.789041 28.512 
+    <path d="M 112.812 97.5744 
+L 163.812 97.5744 
+L 163.812 28.512 
+L 112.812 28.512 
 z
 " style="fill: #ffffff"/>
    </g>
    <g id="line2d_7">
-    <path d="M 119.789041 97.5744 
-L 119.789041 28.512 
-" clip-path="url(#pa66097cd27)" style="fill: none; stroke: #bbc5cf; stroke-width: 0.6; stroke-linecap: square"/>
+    <path d="M 112.812 97.5744 
+L 112.812 28.512 
+" clip-path="url(#p31280f95bd)" style="fill: none; stroke: #bbc5cf; stroke-width: 0.6; stroke-linecap: square"/>
    </g>
    <g id="line2d_8">
-    <path d="M 147.492 97.5744 
-L 147.492 28.512 
-" clip-path="url(#pa66097cd27)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
+    <path d="M 134.062 97.5744 
+L 134.062 28.512 
+" clip-path="url(#p31280f95bd)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
    </g>
    <g id="line2d_9">
-    <path d="M 175.194959 97.5744 
-L 175.194959 28.512 
-" clip-path="url(#pa66097cd27)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
+    <path d="M 155.312 97.5744 
+L 155.312 28.512 
+" clip-path="url(#p31280f95bd)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
    </g>
    <g id="pushobj_unseen-Frozen">
-    <path d="M 119.789041 31.757933 
-L 139.845983 31.757933 
-L 139.845983 38.802298 
-L 119.789041 38.802298 
+    <path d="M 112.812 31.757933 
+L 128.197 31.757933 
+L 128.197 38.802298 
+L 112.812 38.802298 
 z
-" clip-path="url(#pa66097cd27)" style="fill: #bb7429"/>
+" clip-path="url(#p31280f95bd)" style="fill: #bb7429"/>
    </g>
    <g id="pushobj_unseen-DINO-WM">
-    <path d="M 119.789041 45.570413 
-L 145.275763 45.570413 
-L 145.275763 52.614778 
-L 119.789041 52.614778 
+    <path d="M 112.812 45.570413 
+L 132.362 45.570413 
+L 132.362 52.614778 
+L 112.812 52.614778 
 z
-" clip-path="url(#pa66097cd27)" style="fill: #27829e"/>
+" clip-path="url(#p31280f95bd)" style="fill: #27829e"/>
    </g>
    <g id="pushobj_unseen-LeWM">
-    <path d="M 119.789041 59.382893 
-L 147.492 59.382893 
-L 147.492 66.427258 
-L 119.789041 66.427258 
+    <path d="M 112.812 59.382893 
+L 134.062 59.382893 
+L 134.062 66.427258 
+L 112.812 66.427258 
 z
-" clip-path="url(#pa66097cd27)" style="fill: #8866a9"/>
+" clip-path="url(#p31280f95bd)" style="fill: #8866a9"/>
    </g>
    <g id="pushobj_unseen-AdaJEPA">
-    <path d="M 119.789041 73.195373 
-L 149.92986 73.195373 
-L 149.92986 80.239738 
-L 119.789041 80.239738 
+    <path d="M 112.812 73.195373 
+L 135.932 73.195373 
+L 135.932 80.239738 
+L 112.812 80.239738 
 z
-" clip-path="url(#pa66097cd27)" style="fill: #c1544a"/>
+" clip-path="url(#p31280f95bd)" style="fill: #c1544a"/>
    </g>
    <g id="pushobj_unseen-SE-JEPA">
-    <path d="M 119.789041 85.76473 
-L 158.517778 85.76473 
-L 158.517778 95.295341 
-L 119.789041 95.295341 
+    <path d="M 112.812 85.76473 
+L 142.5195 85.76473 
+L 142.5195 95.295341 
+L 112.812 95.295341 
 z
-" clip-path="url(#pa66097cd27)" style="fill: url(#hebd4a4d19e)"/>
+" clip-path="url(#p31280f95bd)" style="fill: url(#hebd4a4d19e)"/>
    </g>
    <g id="matplotlib.axis_3">
     <g id="xtick_4">
      <g id="line2d_10"/>
      <g id="text_15">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: start" x="119.789041" y="105.361416" transform="rotate(-0 119.789041 105.361416)">0</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: start" x="112.812" y="105.361416" transform="rotate(-0 112.812 105.361416)">0</text>
      </g>
     </g>
     <g id="xtick_5">
      <g id="line2d_11"/>
      <g id="text_16">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="147.492" y="105.361416" transform="rotate(-0 147.492 105.361416)">50</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="134.062" y="105.361416" transform="rotate(-0 134.062 105.361416)">50</text>
      </g>
     </g>
     <g id="xtick_6">
      <g id="line2d_12"/>
      <g id="text_17">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: end" x="175.194959" y="105.361416" transform="rotate(-0 175.194959 105.361416)">100</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="155.312" y="105.361416" transform="rotate(-0 155.312 105.361416)">100</text>
      </g>
     </g>
    </g>
    <g id="matplotlib.axis_4"/>
    <g id="text_18">
     <g id="patch_9">
-     <path d="M 141.147983 38.671896 
-L 156.239296 38.671896 
-L 156.239296 31.888334 
-L 141.147983 31.888334 
+     <path d="M 129.499 38.671896 
+L 144.590312 38.671896 
+L 144.590312 31.888334 
+L 129.499 31.888334 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="141.345983" y="37.101303" transform="rotate(-0 141.345983 37.101303)">36.2</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="129.697" y="37.101303" transform="rotate(-0 129.697 37.101303)">36.2</text>
    </g>
    <g id="text_19">
     <g id="patch_10">
-     <path d="M 146.577763 52.484376 
-L 161.669076 52.484376 
-L 161.669076 45.700814 
-L 146.577763 45.700814 
+     <path d="M 133.664 52.484376 
+L 148.755313 52.484376 
+L 148.755313 45.700814 
+L 133.664 45.700814 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="146.775763" y="50.913783" transform="rotate(-0 146.775763 50.913783)">46.0</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="133.862" y="50.913783" transform="rotate(-0 133.862 50.913783)">46.0</text>
    </g>
    <g id="text_20">
     <g id="patch_11">
-     <path d="M 148.794 66.296856 
-L 163.885312 66.296856 
-L 163.885312 59.513294 
-L 148.794 59.513294 
+     <path d="M 135.364 66.296856 
+L 150.455312 66.296856 
+L 150.455312 59.513294 
+L 135.364 59.513294 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="148.992" y="64.726263" transform="rotate(-0 148.992 64.726263)">50.0</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="135.562" y="64.726263" transform="rotate(-0 135.562 64.726263)">50.0</text>
    </g>
    <g id="text_21">
     <g id="patch_12">
-     <path d="M 151.23186 80.109336 
-L 166.323173 80.109336 
-L 166.323173 73.325774 
-L 151.23186 73.325774 
+     <path d="M 137.234 80.109336 
+L 152.325312 80.109336 
+L 152.325312 73.325774 
+L 137.234 73.325774 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="151.42986" y="78.538743" transform="rotate(-0 151.42986 78.538743)">54.4</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="137.432" y="78.538743" transform="rotate(-0 137.432 78.538743)">54.4</text>
    </g>
    <g id="text_22">
     <g id="patch_13">
-     <path d="M 140.63634 93.921816 
-L 157.315778 93.921816 
-L 157.315778 87.138254 
-L 140.63634 87.138254 
+     <path d="M 143.8215 93.921816 
+L 160.500937 93.921816 
+L 160.500937 87.138254 
+L 143.8215 87.138254 
 z
-" style="fill: #104b82"/>
+" style="fill: #ffffff"/>
     </g>
-    <text style="fill: #ffffff; font: 700 6.6px 'DejaVu Sans'; text-anchor: end" x="157.117778" y="92.351223" transform="rotate(-0 157.117778 92.351223)">69.9</text>
+    <text style="fill: #104b82; font: 700 6.6px 'DejaVu Sans'; text-anchor: start" x="144.0195" y="92.351223" transform="rotate(-0 144.0195 92.351223)">69.9</text>
    </g>
    <g id="text_23">
-    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(132.622812 16.725877)">PushObj</text>
-    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(119.725195 24.512)">Unseen shapes</text>
+    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(123.442812 16.725877)">PushObj</text>
+    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(110.545195 24.512)">Unseen shapes</text>
    </g>
   </g>
   <g id="axes_3">
    <g id="patch_14">
-    <path d="M 185.722083 97.5744 
-L 241.128 97.5744 
-L 241.128 28.512 
-L 185.722083 28.512 
+    <path d="M 179.112 97.5744 
+L 230.112 97.5744 
+L 230.112 28.512 
+L 179.112 28.512 
 z
 " style="fill: #ffffff"/>
    </g>
    <g id="line2d_13">
-    <path d="M 185.722083 97.5744 
-L 185.722083 28.512 
-" clip-path="url(#p9edcdeb0c4)" style="fill: none; stroke: #bbc5cf; stroke-width: 0.6; stroke-linecap: square"/>
+    <path d="M 179.112 97.5744 
+L 179.112 28.512 
+" clip-path="url(#p5a38810341)" style="fill: none; stroke: #bbc5cf; stroke-width: 0.6; stroke-linecap: square"/>
    </g>
    <g id="line2d_14">
-    <path d="M 213.425041 97.5744 
-L 213.425041 28.512 
-" clip-path="url(#p9edcdeb0c4)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
+    <path d="M 200.362 97.5744 
+L 200.362 28.512 
+" clip-path="url(#p5a38810341)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
    </g>
    <g id="line2d_15">
-    <path d="M 241.128 97.5744 
-L 241.128 28.512 
-" clip-path="url(#p9edcdeb0c4)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
+    <path d="M 221.612 97.5744 
+L 221.612 28.512 
+" clip-path="url(#p5a38810341)" style="fill: none; stroke: #dee4ea; stroke-width: 0.4; stroke-linecap: square"/>
    </g>
    <g id="pusht_shift-Frozen">
-    <path d="M 185.722083 31.757933 
-L 212.483141 31.757933 
-L 212.483141 38.802298 
-L 185.722083 38.802298 
+    <path d="M 179.112 31.757933 
+L 199.6395 31.757933 
+L 199.6395 38.802298 
+L 179.112 38.802298 
 z
-" clip-path="url(#p9edcdeb0c4)" style="fill: #bb7429"/>
+" clip-path="url(#p5a38810341)" style="fill: #bb7429"/>
    </g>
    <g id="pusht_shift-DINO-WM">
-    <path d="M 185.722083 45.570413 
-L 217.303456 45.570413 
-L 217.303456 52.614778 
-L 185.722083 52.614778 
+    <path d="M 179.112 45.570413 
+L 203.337 45.570413 
+L 203.337 52.614778 
+L 179.112 52.614778 
 z
-" clip-path="url(#p9edcdeb0c4)" style="fill: #27829e"/>
+" clip-path="url(#p5a38810341)" style="fill: #27829e"/>
    </g>
    <g id="pusht_shift-LeWM">
-    <path d="M 185.722083 59.382893 
-L 208.050667 59.382893 
-L 208.050667 66.427258 
-L 185.722083 66.427258 
+    <path d="M 179.112 59.382893 
+L 196.2395 59.382893 
+L 196.2395 66.427258 
+L 179.112 66.427258 
 z
-" clip-path="url(#p9edcdeb0c4)" style="fill: #8866a9"/>
+" clip-path="url(#p5a38810341)" style="fill: #8866a9"/>
    </g>
    <g id="pusht_shift-AdaJEPA">
-    <path d="M 185.722083 73.195373 
-L 219.076445 73.195373 
-L 219.076445 80.239738 
-L 185.722083 80.239738 
+    <path d="M 179.112 73.195373 
+L 204.697 73.195373 
+L 204.697 80.239738 
+L 179.112 80.239738 
 z
-" clip-path="url(#p9edcdeb0c4)" style="fill: #c1544a"/>
+" clip-path="url(#p5a38810341)" style="fill: #c1544a"/>
    </g>
    <g id="pusht_shift-SE-JEPA">
-    <path d="M 185.722083 85.76473 
-L 227.885986 85.76473 
-L 227.885986 95.295341 
-L 185.722083 95.295341 
+    <path d="M 179.112 85.76473 
+L 211.4545 85.76473 
+L 211.4545 95.295341 
+L 179.112 95.295341 
 z
-" clip-path="url(#p9edcdeb0c4)" style="fill: url(#hebd4a4d19e)"/>
+" clip-path="url(#p5a38810341)" style="fill: url(#hebd4a4d19e)"/>
    </g>
    <g id="matplotlib.axis_5">
     <g id="xtick_7">
      <g id="line2d_16"/>
      <g id="text_24">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: start" x="185.722083" y="105.361416" transform="rotate(-0 185.722083 105.361416)">0</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: start" x="179.112" y="105.361416" transform="rotate(-0 179.112 105.361416)">0</text>
      </g>
     </g>
     <g id="xtick_8">
      <g id="line2d_17"/>
      <g id="text_25">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="213.425041" y="105.361416" transform="rotate(-0 213.425041 105.361416)">50</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="200.362" y="105.361416" transform="rotate(-0 200.362 105.361416)">50</text>
      </g>
     </g>
     <g id="xtick_9">
      <g id="line2d_18"/>
      <g id="text_26">
-      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: end" x="241.128" y="105.361416" transform="rotate(-0 241.128 105.361416)">100</text>
+      <text style="fill: #46566a; font: 6.3px 'DejaVu Sans'; text-anchor: middle" x="221.612" y="105.361416" transform="rotate(-0 221.612 105.361416)">100</text>
      </g>
     </g>
    </g>
    <g id="matplotlib.axis_6"/>
    <g id="text_27">
     <g id="patch_15">
-     <path d="M 213.785141 38.671896 
-L 228.876453 38.671896 
-L 228.876453 31.888334 
-L 213.785141 31.888334 
+     <path d="M 200.9415 38.671896 
+L 216.032813 38.671896 
+L 216.032813 31.888334 
+L 200.9415 31.888334 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="213.983141" y="37.101303" transform="rotate(-0 213.983141 37.101303)">48.3</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="201.1395" y="37.101303" transform="rotate(-0 201.1395 37.101303)">48.3</text>
    </g>
    <g id="text_28">
     <g id="patch_16">
-     <path d="M 218.605456 52.484376 
-L 233.696768 52.484376 
-L 233.696768 45.700814 
-L 218.605456 45.700814 
+     <path d="M 204.639 52.484376 
+L 219.730312 52.484376 
+L 219.730312 45.700814 
+L 204.639 45.700814 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="218.803456" y="50.913783" transform="rotate(-0 218.803456 50.913783)">57.0</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="204.837" y="50.913783" transform="rotate(-0 204.837 50.913783)">57.0</text>
    </g>
    <g id="text_29">
     <g id="patch_17">
-     <path d="M 209.352667 66.296856 
-L 224.44398 66.296856 
-L 224.44398 59.513294 
-L 209.352667 59.513294 
+     <path d="M 197.5415 66.296856 
+L 212.632812 66.296856 
+L 212.632812 59.513294 
+L 197.5415 59.513294 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="209.550667" y="64.726263" transform="rotate(-0 209.550667 64.726263)">40.3</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="197.7395" y="64.726263" transform="rotate(-0 197.7395 64.726263)">40.3</text>
    </g>
    <g id="text_30">
     <g id="patch_18">
-     <path d="M 220.378445 80.109336 
-L 235.469757 80.109336 
-L 235.469757 73.325774 
-L 220.378445 73.325774 
+     <path d="M 205.999 80.109336 
+L 221.090312 80.109336 
+L 221.090312 73.325774 
+L 205.999 73.325774 
 z
 " style="fill: #ffffff"/>
     </g>
-    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="220.576445" y="78.538743" transform="rotate(-0 220.576445 78.538743)">60.2</text>
+    <text style="fill: #213345; font: 6.6px 'DejaVu Sans'; text-anchor: start" x="206.197" y="78.538743" transform="rotate(-0 206.197 78.538743)">60.2</text>
    </g>
    <g id="text_31">
     <g id="patch_19">
-     <path d="M 210.004548 93.921816 
-L 226.683986 93.921816 
-L 226.683986 87.138254 
-L 210.004548 87.138254 
+     <path d="M 212.7565 93.921816 
+L 229.435937 93.921816 
+L 229.435937 87.138254 
+L 212.7565 87.138254 
 z
-" style="fill: #104b82"/>
+" style="fill: #ffffff"/>
     </g>
-    <text style="fill: #ffffff; font: 700 6.6px 'DejaVu Sans'; text-anchor: end" x="226.485986" y="92.351223" transform="rotate(-0 226.485986 92.351223)">76.1</text>
+    <text style="fill: #104b82; font: 700 6.6px 'DejaVu Sans'; text-anchor: start" x="212.9545" y="92.351223" transform="rotate(-0 212.9545 92.351223)">76.1</text>
    </g>
    <g id="text_32">
-    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(202.530932 16.725877)">PushT</text>
-    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(191.588916 24.512)">Visual shifts</text>
+    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(193.717891 16.725877)">PushT</text>
+    <text style="fill: #243446; font: 7.3px 'DejaVu Sans'" transform="translate(182.775875 24.512)">Visual shifts</text>
    </g>
   </g>
   <g id="text_33">
@@ -483,14 +483,14 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pc1031ce223">
-   <rect x="53.856" y="28.512" width="55.405917" height="69.0624"/>
+  <clipPath id="p5eaede3cec">
+   <rect x="46.512" y="28.512" width="51" height="69.0624"/>
   </clipPath>
-  <clipPath id="pa66097cd27">
-   <rect x="119.789041" y="28.512" width="55.405917" height="69.0624"/>
+  <clipPath id="p31280f95bd">
+   <rect x="112.812" y="28.512" width="51" height="69.0624"/>
   </clipPath>
-  <clipPath id="p9edcdeb0c4">
-   <rect x="185.722083" y="28.512" width="55.405917" height="69.0624"/>
+  <clipPath id="p5a38810341">
+   <rect x="179.112" y="28.512" width="51" height="69.0624"/>
   </clipPath>
  </defs>
  <defs>

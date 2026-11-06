@@ -44,15 +44,15 @@ def plot_teaser(data, output_dir):
     output_dir.mkdir(parents=True, exist_ok=True)
     with plt.rc_context(style):
         fig, axes = plt.subplots(1, 3, figsize=(3.4, 1.76), sharey=True)
-        fig.subplots_adjust(left=.22, right=.985, bottom=.23, top=.775, wspace=.19)
+        fig.subplots_adjust(left=.19, right=.94, bottom=.23, top=.775, wspace=.30)
         for i, (ax, (metric, title)) in enumerate(zip(axes, PANELS.items())):
-            ax.set_xlim(0, 100)
+            # The success scale ends at 100; reserve space for the labels beyond it.
+            ax.set_xlim(0, 120)
             ax.set_ylim(len(rows) - .49, -.49)
             ax.set_title(title, fontsize=7.3, color="#243446", pad=4, linespacing=1.13)
             ax.set_xticks([0, 50, 100])
             ax.tick_params(axis="x", length=0, pad=3, labelsize=6.3, colors="#46566A")
             ax.get_xticklabels()[0].set_ha("left")
-            ax.get_xticklabels()[-1].set_ha("right")
             ax.set_yticks([])
             ax.spines[:].set_visible(False)
             for x in (0, 50, 100):
@@ -74,24 +74,12 @@ def plot_teaser(data, output_dir):
                                 ha="right", va="center", fontsize=7.5,
                                 weight="bold" if ours else "normal",
                                 color=COLORS[method] if ours else "#213345")
-                if ours:
-                    # Put a solid patch behind the text to keep the hatch
-                    # from crossing its white letterforms.
-                    ax.annotate(f"{value:.1f}", (value, j), (-1.4, 0),
-                                textcoords="offset points", ha="right", va="center",
-                                fontsize=6.6, weight="bold", color="white",
-                                bbox={"facecolor": COLORS[method], "edgecolor": "none",
-                                      "boxstyle": "square,pad=0.03"})
-                else:
-                    # Leave space to the right for a full label, even if a
-                    # future data edit brings a baseline close to 100%.
-                    inside = value > 71
-                    ax.annotate(f"{value:.1f}", (value, j),
-                                (-1.5 if inside else 1.5, 0), textcoords="offset points",
-                                ha="right" if inside else "left", va="center",
-                                fontsize=6.6, color="#213345",
-                                bbox={"facecolor": "white", "edgecolor": "none",
-                                      "boxstyle": "square,pad=0.03"})
+                ax.annotate(f"{value:.1f}", (value, j), (1.5, 0),
+                            textcoords="offset points", ha="left", va="center",
+                            fontsize=6.6, weight="bold" if ours else "normal",
+                            color=COLORS[method] if ours else "#213345",
+                            bbox={"facecolor": "white", "edgecolor": "none",
+                                  "boxstyle": "square,pad=0.03"})
         fig.text(.602, .045, "Held-out success (%)", ha="center", fontsize=7.2,
                  color="#253648")
         for extension in ("pdf", "svg", "png"):
