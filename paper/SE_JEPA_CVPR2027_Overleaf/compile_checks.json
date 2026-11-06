@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-06T16:40:47+08:00",
+  "checked_at": "2026-11-06T17:42:41+08:00",
   "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "25314f63583b490e3b4b8b64a3dd3019958ce693870823a3740790ec9ce14453",
+    "pdf_sha256": "1df8e10d5feb1212fc02822e623e5728f7d494fcbef561a7c5f6ac8d98076fa0",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -26,7 +26,7 @@
     },
     "conclusion_page": 8,
     "all_main_floats_precede_conclusion": true,
-    "familiarity_ablation_page": 7,
+    "familiarity_ablation_page": 8,
     "component_ablation_page": 8
   },
   "supplement": {
@@ -34,7 +34,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "72da0704ba9feb877460f41d2c013e6453fe9e89a7ac5e738eb990da092d5856"
+    "pdf_sha256": "3ce1f17a00940ddf4daf92c67189cee489c616b3b1e0194a906f02bb2b26dbef"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",

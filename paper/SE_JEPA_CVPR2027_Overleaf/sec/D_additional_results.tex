@@ -133,7 +133,7 @@ The episode logs record the fast-update fingerprint of every episode. Figure~\re
  \label{fig:directions}
 \end{figure*}
 
-\subsection{What \ours chooses to learn}
+\subsection{Memory use across episodes}
 \label{sec:selectivity}
 
 \ours learns selectively. In a seven-round PushObj stream of 2{,}450 episodes per planner, it writes only 25\% (GD) to 27\% (CEM) of episodes to memory; the rest are familiar to the pretrained model, still pending, or rejected by validation. Retrieval is just as targeted: slow predictors plan about one episode in four, and the reference handles the rest.
