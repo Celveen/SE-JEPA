@@ -1,0 +1,22 @@
+{
+  "training_state_rows": 1600000,
+  "test_initial_states": 150,
+  "exact_matches": 0,
+  "target_files": [
+    "pushobj_I.pkl",
+    "pushobj_square.pkl",
+    "pushobj_small_tee.pkl"
+  ],
+  "generation_used_test_targets": false,
+  "training_shapes": [
+    "I",
+    "T",
+    "Z",
+    "square"
+  ],
+  "condition_shape_status": {
+    "I": "seen",
+    "square": "seen",
+    "small_tee": "unseen"
+  }
+}

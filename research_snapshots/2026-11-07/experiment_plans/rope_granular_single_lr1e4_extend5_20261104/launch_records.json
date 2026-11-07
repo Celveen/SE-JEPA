@@ -1,0 +1,24 @@
+[
+  {
+    "object": "rope",
+    "gpu": "5",
+    "pid": 1900397,
+    "started_at": "2026-11-04T02:49:44.653870+00:00",
+    "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_single_lr1e4_extend5_20261104/rope_launcher.log",
+    "initial_state": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/dino_ours/cl_noada_r3/chunk_4/continual_state.pt",
+    "starting_round": 4,
+    "final_round": 5,
+    "slow_lr": 0.0001
+  },
+  {
+    "object": "granular",
+    "gpu": "6",
+    "pid": 1900398,
+    "started_at": "2026-11-04T02:49:44.655722+00:00",
+    "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_single_lr1e4_extend5_20261104/granular_launcher.log",
+    "initial_state": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_cl_single/granular_ref/cl_noada_r3/chunk_4/continual_state.pt",
+    "starting_round": 4,
+    "final_round": 5,
+    "slow_lr": 0.0001
+  }
+]

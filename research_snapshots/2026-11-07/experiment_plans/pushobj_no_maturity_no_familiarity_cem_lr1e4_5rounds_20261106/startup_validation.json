@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-06T05:35:52.640733+00:00",
+  "status": "running",
+  "pid": 600633,
+  "gpu": "4",
+  "planner": "planning.cem.CEMPlanner",
+  "planner_class": "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner",
+  "slow_lr": 0.0001,
+  "familiar_read": false,
+  "familiar_thr": 0,
+  "mature_k_preserved_for_other_logic": 3,
+  "reject_ratio": 1.2,
+  "mpc_eval_calls": 202,
+  "episodes_started": 13,
+  "fast_updates": 202,
+  "first_chunk_targets_match_control": true
+}

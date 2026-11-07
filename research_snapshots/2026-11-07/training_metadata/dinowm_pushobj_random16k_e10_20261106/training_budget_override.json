@@ -1,0 +1,10 @@
+{
+  "original_planned_epochs": 10,
+  "effective_epochs": 3,
+  "evaluation_epoch": 3,
+  "original_directory_preserved": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_random16k_orig_e10_20261106",
+  "evaluation_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_random16k_orig_e3_20261106",
+  "reason": "User revised both random-data DINO-WM runs to three epochs to match the main method",
+  "guard_pid": 1864271,
+  "updated": "2026-11-06T06:20:08+00:00"
+}

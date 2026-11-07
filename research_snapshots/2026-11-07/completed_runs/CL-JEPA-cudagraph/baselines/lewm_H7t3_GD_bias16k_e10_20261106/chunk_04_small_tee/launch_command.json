@@ -1,0 +1,18 @@
+[
+  "/data/zjc/envs/cljepa/bin/python",
+  "-u",
+  "/data/zjc/adaJEPA/experiment_plans/legacy_dinowm_lewm_GD_H7t3_20261106/evaluation/evaluate.py",
+  "ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k",
+  "model_epoch=10",
+  "n_evals=50",
+  "seed=2000",
+  "eval_data_path=/data/zjc/adaJEPA/experiment_plans/legacy_dinowm_lewm_GD_H7t3_20261106/targets/chunk_04_small_tee.pkl",
+  "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_04_small_tee",
+  "planner.continual.tag=small_tee",
+  "audit.planner_kind=gd",
+  "audit.condition=small_tee",
+  "audit.pretraining_shape_status=unseen",
+  "audit.expected_model_epoch=10",
+  "planner.sub_planner.microbatch_size=50",
+  "audit.expected_microbatch_size=50"
+]

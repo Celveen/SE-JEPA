@@ -1,0 +1,10 @@
+{
+  "method": "lewm",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k",
+  "epoch": 10,
+  "microbatch": 50,
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3_GD_bias16k_e10_20261106",
+  "checkpoint_file": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k/checkpoints/model_10.pth",
+  "checkpoint_sha256": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6",
+  "config_sha256": "8a2a8371730b1cc2a7059ec371a65949c3eaefa66442aed84db497f25e3b7c83"
+}

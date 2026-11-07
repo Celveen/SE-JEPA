@@ -1,0 +1,39 @@
+ckpt_base_path: /data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_dino_h1_fs1_e100_seed0
+model_name: null
+model_epoch: latest
+seed: 305
+n_evals: 10
+segments_order: file
+goal_source: dset
+eval_data_path: /data/zjc/adaJEPA/CL-JEPA/data/deformable
+ood_corruption: null
+ood_level: null
+env_kwargs_override:
+  object_name: granular
+goal_H: 5
+n_plot_samples: 10
+decode_for_viz: false
+num_start_frames: 1
+debug_dset_init: false
+objective:
+  _target_: planning.objectives.create_objective_fn
+  alpha: 1
+  base: 2
+  mode: last
+planner:
+  _target_: planning.mpc.MPCPlanner
+  max_iter: 1
+  n_taken_actions: 5
+  resim_from_start: false
+  reuse_actions: true
+  sub_planner:
+    target: planning.cem.CEMPlanner
+    horizon: 5
+    topk: 5
+    num_samples: 30
+    var_scale: 1
+    opt_steps: 1
+    eval_every: -1
+  name: cont_plan_cem_rope
+eval_object_name: granular
+wandb_logging: false

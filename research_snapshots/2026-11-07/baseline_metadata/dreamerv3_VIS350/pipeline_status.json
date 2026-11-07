@@ -1,0 +1,50 @@
+{
+  "method": "dreamerv3",
+  "pid": 78455,
+  "gpu": 7,
+  "epochs": 3,
+  "epochs_per_stage": 3,
+  "conditions": [
+    "default",
+    "blur",
+    "snp",
+    "dark",
+    "red_agent",
+    "red_object",
+    "red_goal"
+  ],
+  "episodes_per_condition": 50,
+  "total_evaluation_episodes": 350,
+  "planning_seed": 100,
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3",
+  "stage": "complete",
+  "started": "2026-11-03T12:37:56+00:00",
+  "updated": "2026-11-03T14:38:07+00:00",
+  "active_child_pid": 1092047,
+  "server_pid": 1091094,
+  "summary": {
+    "episodes": 350,
+    "domain_success_rates": {
+      "default": 0.1,
+      "blur": 0.12,
+      "snp": 0.14,
+      "dark": 0.08,
+      "red_agent": 0.0,
+      "red_object": 0.0,
+      "red_goal": 0.0
+    },
+    "domain_mean_mpc_steps": {
+      "default": 27.92,
+      "blur": 27.68,
+      "snp": 27.22,
+      "dark": 28.56,
+      "red_agent": 30.0,
+      "red_object": 30.0,
+      "red_goal": 30.0
+    },
+    "all_seven_success_rate": 0.06285714285714286,
+    "six_shifts_success_rate": 0.05666666666666667,
+    "six_shifts_mean_mpc_steps": 28.909999999999997
+  },
+  "ended": "2026-11-03T14:38:07+00:00"
+}

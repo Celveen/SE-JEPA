@@ -1,0 +1,26 @@
+[
+  {
+    "task": "pushobj",
+    "pid": 2560354,
+    "command": [
+      "/data/zjc/envs/cljepa/bin/python",
+      "-u",
+      "/data/zjc/adaJEPA/CL-JEPA-cudagraph/scripts/run_dinowm_random_retrain.py",
+      "pushobj",
+      "--gpus",
+      "2,3"
+    ]
+  },
+  {
+    "task": "pusht",
+    "pid": 2560355,
+    "command": [
+      "/data/zjc/envs/cljepa/bin/python",
+      "-u",
+      "/data/zjc/adaJEPA/CL-JEPA-cudagraph/scripts/run_dinowm_random_retrain.py",
+      "pusht",
+      "--gpus",
+      "6,7"
+    ]
+  }
+]

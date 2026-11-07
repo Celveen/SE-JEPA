@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "object": "granular",
+  "gpu": "6",
+  "pid": 3248906,
+  "started_at": "2026-11-03T05:50:10.434696+00:00",
+  "updated_at": "2026-11-03T22:57:20.568667+00:00",
+  "round": 5,
+  "chunk": 4,
+  "current_output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_single_lr2e4_5rounds_20261103/granular/cl_noada/round_05/chunk_04",
+  "completed_chunks": 25,
+  "completed_episodes": 250,
+  "completed_rounds": 5,
+  "summary": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_single_lr2e4_5rounds_20261103/granular/analysis/SUMMARY.md",
+  "ended_at": "2026-11-03T22:57:20.568650+00:00"
+}

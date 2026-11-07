@@ -1,0 +1,12 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3
+- model_epoch=3
+- n_evals=50
+- seed=2000
+- eval_data_path=/data/zjc/adaJEPA/experiment_plans/legacy_dinowm_lewm_GD_H7t3_20261106/targets/chunk_02_square.pkl
+- planner.continual.tag=square
+- audit.planner_kind=gd
+- audit.condition=square
+- audit.pretraining_shape_status=unseen
+- audit.expected_model_epoch=3
+- planner.sub_planner.microbatch_size=8
+- audit.expected_microbatch_size=8

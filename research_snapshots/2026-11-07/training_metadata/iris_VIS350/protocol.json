@@ -1,0 +1,28 @@
+{
+  "method": "IRIS official tokenizer/Transformer with continuous-control adapter",
+  "upstream": "https://github.com/eloialonso/iris",
+  "commit": "24326aaaa283c527f42b89b44cfdecf2665a7a16",
+  "tokenizer": "official config/tokenizer/default.yaml, including LPIPS",
+  "transformer": "official 10 layers, 4 heads, width 256, vocab 512",
+  "adaptations": [
+    "replace discrete action embedding with linear continuous macro-action plus observed proprio input",
+    "add four-dimensional proprio reconstruction head",
+    "omit reward/end losses and actor-critic training"
+  ],
+  "action_encoding": "tanh(physical relative action)",
+  "epochs_per_stage": 3,
+  "stages": [
+    "tokenizer",
+    "world_model"
+  ],
+  "tokenizer_effective_batch": 256,
+  "tokenizer_microbatch": 32,
+  "world_model_batch": 64,
+  "sequence_frames": 4,
+  "frameskip": 5,
+  "diagnostic_only": false,
+  "tokenizer_parameters": 18743683,
+  "tokenizer_trainable_parameters": 4027523,
+  "world_model_parameters": 8517129,
+  "world_model_trainable_parameters": 8384260
+}

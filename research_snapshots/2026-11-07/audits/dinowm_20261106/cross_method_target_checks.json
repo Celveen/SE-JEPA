@@ -1,0 +1,136 @@
+{
+  "dino_cls_VIS50": {
+    "red_agent": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_object": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_goal": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    }
+  },
+  "r3m_VIS50": {
+    "red_agent": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_object": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_goal": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    }
+  },
+  "ddpwm_VIS50": {
+    "red_agent": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_object": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_goal": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    }
+  },
+  "lewm_VIS50": {
+    "red_agent": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_object": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_goal": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    }
+  },
+  "t16k_frozen_VIS50": {
+    "red_agent": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_object": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_goal": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    }
+  },
+  "t16k_adajepa_VIS50": {
+    "red_agent": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_object": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    },
+    "red_goal": {
+      "state_0": true,
+      "state_g": true,
+      "obs_0_pixels_equal": true,
+      "obs_g_pixels_equal": true
+    }
+  },
+  "offline_visual_targets": {
+    "red_agent": {
+      "state_0": true,
+      "state_g": true
+    },
+    "red_object": {
+      "state_0": true,
+      "state_g": true
+    },
+    "red_goal": {
+      "state_0": true,
+      "state_g": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+method: iris
+frameskip: 5
+num_hist: 3
+num_pred: 1
+img_size: 64
+training:
+  epochs: 3
+  seed: 0
+env:
+  name: pushobj
+  dataset:
+    data_path: /data/zjc/adaJEPA/CL-JEPA/data/pushobj_T16k_bias
+planning_backend: scripts/offline_visual/evaluate.py
+parameter_source: official upstream model modules; IRIS continuous-control adapter
+  disclosed in protocol.json

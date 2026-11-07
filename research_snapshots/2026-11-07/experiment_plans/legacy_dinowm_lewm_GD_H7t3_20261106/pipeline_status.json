@@ -1,0 +1,112 @@
+{
+  "pid": 2460494,
+  "gpu": "0",
+  "stage": "complete",
+  "started": "2026-11-06T09:35:12+00:00",
+  "total_jobs": 14,
+  "planned_episodes": 700,
+  "jobs": {
+    "lewm/chunk_00_I": {
+      "status": "complete",
+      "pid": 2460983,
+      "started": "2026-11-06T09:35:13+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T09:39:25+00:00"
+    },
+    "lewm/chunk_01_L": {
+      "status": "complete",
+      "pid": 2564092,
+      "started": "2026-11-06T09:39:25+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T09:43:41+00:00"
+    },
+    "lewm/chunk_02_square": {
+      "status": "complete",
+      "pid": 2771678,
+      "started": "2026-11-06T09:43:41+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T09:47:46+00:00"
+    },
+    "lewm/chunk_03_Z": {
+      "status": "complete",
+      "pid": 2845958,
+      "started": "2026-11-06T09:47:46+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T09:51:55+00:00"
+    },
+    "lewm/chunk_04_small_tee": {
+      "status": "complete",
+      "pid": 2848075,
+      "started": "2026-11-06T09:51:55+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T09:55:54+00:00"
+    },
+    "lewm/chunk_05_plus": {
+      "status": "complete",
+      "pid": 2849774,
+      "started": "2026-11-06T09:55:55+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T09:59:57+00:00"
+    },
+    "lewm/chunk_06_T": {
+      "status": "complete",
+      "pid": 2851655,
+      "started": "2026-11-06T09:59:57+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:04:02+00:00"
+    },
+    "dinowm/chunk_00_I": {
+      "status": "complete",
+      "pid": 2853375,
+      "started": "2026-11-06T10:04:03+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:49:55+00:00"
+    },
+    "dinowm/chunk_01_L": {
+      "status": "complete",
+      "pid": 2871438,
+      "started": "2026-11-06T10:49:55+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:35:44+00:00"
+    },
+    "dinowm/chunk_02_square": {
+      "status": "complete",
+      "pid": 2888196,
+      "started": "2026-11-06T11:35:44+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T12:21:29+00:00"
+    },
+    "dinowm/chunk_03_Z": {
+      "status": "complete",
+      "pid": 2908174,
+      "started": "2026-11-06T12:21:30+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T13:07:24+00:00"
+    },
+    "dinowm/chunk_04_small_tee": {
+      "status": "complete",
+      "pid": 2915750,
+      "started": "2026-11-06T13:07:24+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T13:53:15+00:00"
+    },
+    "dinowm/chunk_05_plus": {
+      "status": "complete",
+      "pid": 2926834,
+      "started": "2026-11-06T13:53:15+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T14:39:00+00:00"
+    },
+    "dinowm/chunk_06_T": {
+      "status": "complete",
+      "pid": 2932101,
+      "started": "2026-11-06T14:39:01+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T15:24:48+00:00"
+    }
+  },
+  "updated": "2026-11-06T15:24:48+00:00",
+  "active_job": "dinowm/chunk_06_T",
+  "active_child_pid": 2932101,
+  "ended": "2026-11-06T15:24:48+00:00"
+}

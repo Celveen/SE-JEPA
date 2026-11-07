@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-06T02:47:32.524406+00:00",
+  "status": "running",
+  "stage": "running_round_1",
+  "gpu": "1",
+  "pid": 2453573,
+  "slow_lr": 0.0001,
+  "familiar_thr": 0,
+  "familiar_read": false,
+  "mature_k": 3,
+  "abs_ratio": 20,
+  "mpc_eval_calls": 6,
+  "cd_values": [
+    "0.7985364198684692",
+    "0.25333166122436523",
+    "0.2482340931892395",
+    "0.12887567281723022",
+    "0.12342913448810577"
+  ],
+  "fast_updates": 5,
+  "first_chunk_targets_match": true
+}

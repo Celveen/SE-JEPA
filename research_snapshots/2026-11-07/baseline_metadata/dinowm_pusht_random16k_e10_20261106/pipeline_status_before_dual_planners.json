@@ -1,0 +1,28 @@
+{
+  "task": "pusht",
+  "pid": 2560355,
+  "gpus": [
+    "6",
+    "7"
+  ],
+  "stage": "training",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pusht_random16k_20261106",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e10_20261106",
+  "code_snapshot": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/code",
+  "epochs": 3,
+  "training_trajectories": 16000,
+  "validation_trajectories": 1600,
+  "max_physical_steps": 150,
+  "physical_steps_per_replan": 25,
+  "max_replans": 6,
+  "planned_episodes": 350,
+  "started": "2026-11-06T03:56:55+00:00",
+  "jobs": {},
+  "updated": "2026-11-06T06:20:09+00:00",
+  "training_pid": 2560995,
+  "requested_training_epochs": 3,
+  "evaluation_epoch": 3,
+  "original_launch_epochs": 10,
+  "epoch_budget_guard_pid": 1864467,
+  "epoch_budget_guard": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/epoch_budget_guard.json"
+}

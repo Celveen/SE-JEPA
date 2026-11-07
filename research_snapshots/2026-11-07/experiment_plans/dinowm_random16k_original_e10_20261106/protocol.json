@@ -1,0 +1,113 @@
+{
+  "name": "dinowm_random16k_original_e3_20261106",
+  "training": {
+    "epochs": 3,
+    "training_trajectories_per_task": 16000,
+    "validation_trajectories_per_task": 1600,
+    "frames_per_trajectory": 100,
+    "batch_size": 32,
+    "world_model_parameters": 52319499,
+    "predictor_lr": 5e-05,
+    "action_proprio_lr": 0.0005,
+    "decoder_lr": 0.0003,
+    "random_action_std_px": 20,
+    "no_contact_or_success_filter": true,
+    "original_planned_epochs": 10,
+    "evaluation_epoch": 3
+  },
+  "pushobj": {
+    "training_shapes": [
+      "I",
+      "square",
+      "Z",
+      "T"
+    ],
+    "test_seed": 2000,
+    "episodes": 300,
+    "gpus": [
+      "2",
+      "3"
+    ],
+    "evaluation_shapes": [
+      "I",
+      "square",
+      "small_tee"
+    ],
+    "comparison_group": "Ours unseen shape group; I and square are seen for this DINO-WM",
+    "seen_for_this_checkpoint": [
+      "I",
+      "square"
+    ],
+    "unseen_for_this_checkpoint": [
+      "small_tee"
+    ],
+    "episodes_per_planner": 150,
+    "planners": [
+      "gd",
+      "cem"
+    ]
+  },
+  "pusht": {
+    "training_shapes": [
+      "T"
+    ],
+    "test_conditions": [
+      "default",
+      "blur",
+      "snp",
+      "dark",
+      "red_agent",
+      "red_object",
+      "red_goal"
+    ],
+    "test_seed": 100,
+    "episodes": 700,
+    "gpus": [
+      "6",
+      "7"
+    ],
+    "episodes_per_planner": 350,
+    "planners": [
+      "gd",
+      "cem"
+    ]
+  },
+  "planning": {
+    "objective": "last",
+    "horizon_model_steps": 5,
+    "frameskip": 5,
+    "execute_physical_steps": 25,
+    "max_replans": 6,
+    "max_physical_steps": 150,
+    "cem_samples": 300,
+    "cem_elites": 30,
+    "cem_iterations": 30,
+    "oracle_optimizer_probes": false,
+    "gd_opt_steps": 100,
+    "gd_lr": 0.1,
+    "gd_optimizer": "adam",
+    "gd_cosine_scheduler": true,
+    "gd_microbatch_size": 1,
+    "evaluation_plan": "evaluation_plan.json"
+  },
+  "explicit_differences_from_paper": [
+    "user requested 16000 random training trajectories for both tasks and 3 epochs (revised from 10)",
+    "random-action collector distribution disclosed because original collector was not released",
+    "PushT paper used noisy expert trajectories; user requested new random trajectories",
+    "user fixed 150 physical-step cap instead of unbounded public-code default",
+    "ground-truth CEM optimizer probes disabled; online salt-pepper noise reproducibly seeded",
+    "BF16 training backend, frozen model evaluation in float32"
+  ],
+  "evaluation_targets": {
+    "pushobj_I.pkl": "456d94fab562990b30545dc6d4385ea4c076c4ad59b4233f00883f096bdb4fd3",
+    "pushobj_square.pkl": "9ee75ba011ba2d52be7f9a08c0922afdfb3a8cab16ea6f35ab066e481d7d2749",
+    "pushobj_small_tee.pkl": "0d714951a3b1a5eaaa625f3bf8f247428e6d174bcc5938a410606d0ca788243d",
+    "pusht_T.pkl": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b"
+  },
+  "original_run_name": "dinowm_random16k_original_e10_20261106",
+  "budget_revision": {
+    "reason": "User requested three epochs to match the main method",
+    "mode": "keep progress; stop after complete epoch 3; evaluate only checkpoint 3",
+    "updated_utc": "2026-11-06T06:23:09+00:00"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "pid": 2460494,
+  "gpu": "0",
+  "command": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/experiment_plans/legacy_dinowm_lewm_GD_H7t3_20261106/run.py",
+    "--gpu",
+    "0"
+  ]
+}

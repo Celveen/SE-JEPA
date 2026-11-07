@@ -1,0 +1,121 @@
+{
+  "dreamerv3": {
+    "task": "PushT VIS350",
+    "training_epochs_per_stage": 3,
+    "complete": true,
+    "pipeline_stage": "complete",
+    "conditions_completed": 7,
+    "episodes_completed": 350,
+    "planned_episodes": 350,
+    "successes": {
+      "default": 5,
+      "blur": 6,
+      "snp": 7,
+      "dark": 4,
+      "red_agent": 0,
+      "red_object": 0,
+      "red_goal": 0
+    },
+    "success_rates_percent": {
+      "default": 10.0,
+      "blur": 12.0,
+      "snp": 14.000000000000002,
+      "dark": 8.0,
+      "red_agent": 0.0,
+      "red_object": 0.0,
+      "red_goal": 0.0
+    },
+    "mean_mpc_steps": {
+      "default": 27.92,
+      "blur": 27.68,
+      "snp": 27.22,
+      "dark": 28.56,
+      "red_agent": 30.0,
+      "red_object": 30.0,
+      "red_goal": 30.0
+    },
+    "all_seven_success_rate_percent": 6.285714285714286,
+    "all_seven_mean_mpc_steps": 28.768571428571427,
+    "six_shift_success_rate_percent": 5.666666666666667,
+    "six_shift_mean_mpc_steps": 28.909999999999997
+  },
+  "iris": {
+    "task": "PushT VIS350",
+    "training_epochs_per_stage": 3,
+    "complete": true,
+    "pipeline_stage": "complete",
+    "conditions_completed": 7,
+    "episodes_completed": 350,
+    "planned_episodes": 350,
+    "successes": {
+      "default": 3,
+      "blur": 3,
+      "snp": 2,
+      "dark": 3,
+      "red_agent": 4,
+      "red_object": 4,
+      "red_goal": 2
+    },
+    "success_rates_percent": {
+      "default": 6.0,
+      "blur": 6.0,
+      "snp": 4.0,
+      "dark": 6.0,
+      "red_agent": 8.0,
+      "red_object": 8.0,
+      "red_goal": 4.0
+    },
+    "mean_mpc_steps": {
+      "default": 28.92,
+      "blur": 28.66,
+      "snp": 29.4,
+      "dark": 29.02,
+      "red_agent": 28.56,
+      "red_object": 28.3,
+      "red_goal": 29.18
+    },
+    "all_seven_success_rate_percent": 6.0,
+    "all_seven_mean_mpc_steps": 28.86285714285714,
+    "six_shift_success_rate_percent": 6.0,
+    "six_shift_mean_mpc_steps": 28.853333333333335
+  },
+  "dinowm": {
+    "task": "PushObj H7t3",
+    "training_epochs_per_stage": 3,
+    "complete": true,
+    "pipeline_stage": "complete",
+    "conditions_completed": 7,
+    "episodes_completed": 350,
+    "planned_episodes": 350,
+    "successes": {
+      "I": 16,
+      "L": 41,
+      "square": 17,
+      "Z": 31,
+      "small_tee": 36,
+      "plus": 39,
+      "T": 37
+    },
+    "success_rates_percent": {
+      "I": 32.0,
+      "L": 82.0,
+      "square": 34.0,
+      "Z": 62.0,
+      "small_tee": 72.0,
+      "plus": 78.0,
+      "T": 74.0
+    },
+    "mean_mpc_steps": {
+      "I": 23.14,
+      "L": 11.54,
+      "square": 23.04,
+      "Z": 16.32,
+      "small_tee": 13.7,
+      "plus": 12.0,
+      "T": 13.32
+    },
+    "all_seven_success_rate_percent": 62.0,
+    "all_seven_mean_mpc_steps": 16.15142857142857,
+    "unseen_success_rate_percent": 46.0
+  }
+}

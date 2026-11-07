@@ -1,0 +1,12 @@
+{
+  "status": "awaiting_round_1_review",
+  "pid": 1921547,
+  "through_round": 1,
+  "gpu": "1",
+  "started_at": "2026-11-04T05:07:12.568768+00:00",
+  "current_chunk": "chunk_09_granular",
+  "current_round": 1,
+  "completed_chunks": 10,
+  "completed_episodes": 100,
+  "ended_at": "2026-11-04T11:06:08.660450+00:00"
+}

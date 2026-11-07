@@ -1,0 +1,79 @@
+{
+  "name": "dinowm_random16k_original_e10_20261106",
+  "training": {
+    "epochs": 10,
+    "training_trajectories_per_task": 16000,
+    "validation_trajectories_per_task": 1600,
+    "frames_per_trajectory": 100,
+    "batch_size": 32,
+    "world_model_parameters": 52319499,
+    "predictor_lr": 5e-05,
+    "action_proprio_lr": 0.0005,
+    "decoder_lr": 0.0003,
+    "random_action_std_px": 20,
+    "no_contact_or_success_filter": true
+  },
+  "pushobj": {
+    "training_shapes": [
+      "I",
+      "square",
+      "Z",
+      "T"
+    ],
+    "unseen_test_shapes": [
+      "L",
+      "+"
+    ],
+    "test_seed": 2000,
+    "episodes": 100,
+    "gpus": [
+      "2",
+      "3"
+    ]
+  },
+  "pusht": {
+    "training_shapes": [
+      "T"
+    ],
+    "test_conditions": [
+      "default",
+      "blur",
+      "snp",
+      "dark",
+      "red_agent",
+      "red_object",
+      "red_goal"
+    ],
+    "test_seed": 100,
+    "episodes": 350,
+    "gpus": [
+      "6",
+      "7"
+    ]
+  },
+  "planning": {
+    "objective": "last",
+    "horizon_model_steps": 5,
+    "frameskip": 5,
+    "execute_physical_steps": 25,
+    "max_replans": 6,
+    "max_physical_steps": 150,
+    "cem_samples": 300,
+    "cem_elites": 30,
+    "cem_iterations": 30,
+    "oracle_optimizer_probes": false
+  },
+  "explicit_differences_from_paper": [
+    "user requested 16000 random training trajectories for both tasks and 10 epochs",
+    "random-action collector distribution disclosed because original collector was not released",
+    "PushT paper used noisy expert trajectories; user requested new random trajectories",
+    "user fixed 150 physical-step cap instead of unbounded public-code default",
+    "ground-truth CEM optimizer probes disabled; online salt-pepper noise reproducibly seeded",
+    "BF16 training backend, frozen model evaluation in float32"
+  ],
+  "evaluation_targets": {
+    "pushobj_L.pkl": "bcca122a4512ca33db7dc3551ed20d2f26efac3ba684172858267220dd97768e",
+    "pushobj_plus.pkl": "79344be87922637d1fd84a26d4ddb2d5bfa87a7ebb6a961c249efb1683c6e030",
+    "pusht_T.pkl": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b"
+  }
+}

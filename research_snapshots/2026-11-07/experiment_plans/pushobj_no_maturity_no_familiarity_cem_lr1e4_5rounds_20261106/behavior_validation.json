@@ -1,0 +1,15 @@
+{
+  "status": "passed_cpu_only",
+  "read_choices": {
+    "full": null,
+    "no_maturity": null,
+    "no_familiarity": "ready",
+    "joint": "too_few_validations"
+  },
+  "write_rules_control_joint": [
+    "familiar",
+    "pending"
+  ],
+  "non_read_maturity_logic_preserved": true,
+  "cem_paired_analysis_rounds_verified": 5
+}

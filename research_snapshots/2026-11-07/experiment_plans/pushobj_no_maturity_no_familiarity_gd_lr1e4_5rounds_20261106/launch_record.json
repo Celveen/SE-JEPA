@@ -1,0 +1,16 @@
+{
+  "pid": 951023,
+  "gpu": "5",
+  "started_at": "2026-11-06T05:47:48.427326+00:00",
+  "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/launcher.log",
+  "planner": "GD",
+  "cuda_graph": true,
+  "slow_lr": 0.0001,
+  "rounds": 5,
+  "episodes": 1750,
+  "read_maturity_gate_removed": true,
+  "familiarity_read_protection": false,
+  "familiarity_write_protection": false,
+  "matching_cem_plan": "/data/zjc/adaJEPA/experiment_plans/pushobj_no_maturity_no_familiarity_cem_lr1e4_5rounds_20261106",
+  "reference_commit": "46088f0422f199168de1c0ffdce0e1061e674c04"
+}

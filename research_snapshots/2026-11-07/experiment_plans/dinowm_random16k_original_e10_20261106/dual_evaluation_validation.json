@@ -1,0 +1,81 @@
+{
+  "checked_beijing": "2026-11-06T16:35:29+08:00",
+  "diagnostics": {
+    "gd": {
+      "episodes": 2,
+      "frozen_weights_unchanged": true,
+      "finite_actions": true,
+      "protocol": {
+        "planner": "gd",
+        "condition": "I",
+        "pretraining_shape_status": "seen",
+        "model_epoch": 1,
+        "frozen_model": true,
+        "model_parameter_gradients_disabled": true,
+        "ground_truth_action_initialization": false,
+        "objective": "last",
+        "model_frameskip": 5,
+        "horizon_model_steps": 5,
+        "executed_model_steps_per_replan": 5,
+        "executed_physical_steps_per_replan": 25,
+        "max_replans": 6,
+        "max_physical_steps": 150,
+        "optimizer_iterations": 3,
+        "episodes": 2,
+        "diagnostic_only": true,
+        "oracle_optimizer_probes": false,
+        "noise_protocol": "identical goal seed; distinct deterministic seed per feedback call",
+        "lr": 0.1,
+        "action_optimizer": "adam",
+        "cosine_scheduler": true,
+        "action_initialization": "zero",
+        "action_noise": 0,
+        "microbatch_size": 1
+      }
+    },
+    "cem": {
+      "episodes": 1,
+      "frozen_weights_unchanged": true,
+      "finite_actions": true,
+      "protocol": {
+        "planner": "cem",
+        "condition": "red_goal",
+        "pretraining_shape_status": "seen",
+        "model_epoch": 1,
+        "frozen_model": true,
+        "model_parameter_gradients_disabled": true,
+        "ground_truth_action_initialization": false,
+        "objective": "last",
+        "model_frameskip": 5,
+        "horizon_model_steps": 5,
+        "executed_model_steps_per_replan": 5,
+        "executed_physical_steps_per_replan": 25,
+        "max_replans": 6,
+        "max_physical_steps": 150,
+        "optimizer_iterations": 2,
+        "episodes": 1,
+        "diagnostic_only": true,
+        "oracle_optimizer_probes": false,
+        "noise_protocol": "identical goal seed; distinct deterministic seed per feedback call",
+        "candidates": 30,
+        "elites": 10
+      }
+    }
+  },
+  "formal_scope": {
+    "pushobj": {
+      "jobs": 6,
+      "episodes": 300,
+      "plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd"
+    },
+    "pusht": {
+      "jobs": 14,
+      "episodes": 700,
+      "plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd"
+    }
+  },
+  "training_snapshot_unchanged": true,
+  "evaluation_snapshot_verified": true,
+  "runner_source_sha256": "06964c6c0993c880ef1eb5f0cf6ec04f060efe19797fdb39832b4b56335e352f",
+  "contract_source_sha256": "9b1f82af180192831fc4f66372a0c927c89824efb5be2a935ed66a1df28d39dd"
+}

@@ -1,0 +1,22 @@
+{
+  "lewm": {
+    "epoch": 10,
+    "microbatch_size": 50,
+    "action_gradient_norm": 1.5889182090759277,
+    "parameters_unchanged": true,
+    "finite_actions": true,
+    "early_and_late_objectives_checked": true,
+    "two_three_step_calls_seconds": 0.7537845242768526,
+    "peak_reserved_GiB": 0.408203125
+  },
+  "dinowm": {
+    "epoch": 3,
+    "microbatch_size": 8,
+    "action_gradient_norm": 10.228601455688477,
+    "parameters_unchanged": true,
+    "finite_actions": true,
+    "early_and_late_objectives_checked": true,
+    "two_three_step_calls_seconds": 1.0916221048682928,
+    "peak_reserved_GiB": 7.126953125
+  }
+}

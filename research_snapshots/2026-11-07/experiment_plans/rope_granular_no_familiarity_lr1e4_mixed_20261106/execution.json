@@ -1,0 +1,11 @@
+{
+  "status": "running",
+  "pid": 3164517,
+  "through_round": 3,
+  "gpu": "1",
+  "started_at": "2026-11-07T06:43:05.002361+00:00",
+  "current_chunk": "chunk_21_granular",
+  "current_round": 3,
+  "completed_chunks": 21,
+  "completed_episodes": 210
+}

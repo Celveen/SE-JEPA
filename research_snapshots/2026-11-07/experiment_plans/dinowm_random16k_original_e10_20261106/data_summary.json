@@ -1,0 +1,52 @@
+{
+  "pushobj": {
+    "train": {
+      "episodes": 16000,
+      "frames": 1600000,
+      "shapes": {
+        "I": 4000,
+        "square": 4000,
+        "Z": 4000,
+        "T": 4000
+      },
+      "episodes_with_contact_fraction": 0.1818125,
+      "state_sha256": "55d58ff09e9263e94d52e4bf9d60f80c5041fafbffbb9f744a7d6abf30a2b71b",
+      "action_sha256": "d32cb37a6b10de907018ae7671ffd16ee03df076924c214373fba829681c1684"
+    },
+    "val": {
+      "episodes": 1600,
+      "frames": 160000,
+      "shapes": {
+        "I": 400,
+        "square": 400,
+        "Z": 400,
+        "T": 400
+      },
+      "episodes_with_contact_fraction": 0.18125,
+      "state_sha256": "cb4d6d707f124c20fbc6567a27e27627991e580cdf6bec835e27818595e4161f",
+      "action_sha256": "1223d1a37513aae1b1052b4e0e3dd5f780e9f746e82077183c83c4e44642989f"
+    }
+  },
+  "pusht": {
+    "train": {
+      "episodes": 16000,
+      "frames": 1600000,
+      "shapes": {
+        "T": 16000
+      },
+      "episodes_with_contact_fraction": 0.1941875,
+      "state_sha256": "4ef92a71b1379a3b51ca4f6e77356307ffbae8ab5c942f67978bd47fed909065",
+      "action_sha256": "2095c3a93f2cba6e99d3434976fe4db0b630110ae4aa6bfde68bb56facd442b1"
+    },
+    "val": {
+      "episodes": 1600,
+      "frames": 160000,
+      "shapes": {
+        "T": 1600
+      },
+      "episodes_with_contact_fraction": 0.205625,
+      "state_sha256": "53e6515c734ac0b11c495899b46b8399ac21c4bffc2e6f4db005a1f2273f07ed",
+      "action_sha256": "a598d5939847a8b53f9e123e70b68fd41423482dbdaa6cd796bd9a1939a7cf31"
+    }
+  }
+}

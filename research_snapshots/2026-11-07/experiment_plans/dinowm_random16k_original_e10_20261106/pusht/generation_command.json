@@ -1,0 +1,15 @@
+[
+  "/data/zjc/envs/cljepa/bin/python",
+  "-u",
+  "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/code/scripts/gen_dinowm_random_dataset.py",
+  "--task",
+  "pusht",
+  "--output",
+  "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pusht_random16k_20261106",
+  "--train",
+  "16000",
+  "--val",
+  "1600",
+  "--workers",
+  "8"
+]

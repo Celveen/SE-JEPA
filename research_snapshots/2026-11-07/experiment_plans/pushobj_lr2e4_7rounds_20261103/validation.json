@@ -1,0 +1,57 @@
+{
+  "status": "passed_cpu_only",
+  "blocks": 49,
+  "unique_source_episodes": 2450,
+  "unique_segment_payloads": 2450,
+  "cross_round_overlap": 0,
+  "heldout_source_episode_overlap": 0,
+  "episodes_per_shape": {
+    "I": 350,
+    "L": 350,
+    "square": 350,
+    "Z": 350,
+    "small_tee": 350,
+    "+": 350,
+    "T": 350
+  },
+  "episodes_per_round": {
+    "1": 350,
+    "2": 350,
+    "3": 350,
+    "4": 350,
+    "5": 350,
+    "6": 350,
+    "7": 350
+  },
+  "differences_from_historical_configs": {
+    "gd": {
+      "seed": [
+        400,
+        3100
+      ],
+      "eval_data_path": [
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t3s400/chunk_00_I.pkl",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t7_disjoint_20261103/chunk_00_I.pkl"
+      ],
+      "planner.continual.slow_lr": [
+        0.0001,
+        0.0002
+      ]
+    },
+    "cem": {
+      "eval_data_path": [
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t3/chunk_00_I.pkl",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t7_disjoint_20261103/chunk_00_I.pkl"
+      ],
+      "planner.continual.slow_lr": [
+        0.0001,
+        0.0002
+      ],
+      "seed": [
+        100,
+        3100
+      ]
+    }
+  },
+  "no_model_or_simulator_executed": true
+}

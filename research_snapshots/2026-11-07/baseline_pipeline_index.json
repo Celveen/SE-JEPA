@@ -1,0 +1,176 @@
+{
+  "ddpwm_H7t3": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 7,
+    "episodes_in_completed_directories": 350,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_00_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_01_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_02_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_03_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_04_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_05_plus",
+      "completed_runs/CL-JEPA-cudagraph/baselines/ddpwm_H7t3/chunk_06_T"
+    ],
+    "metadata": "baseline_metadata/ddpwm_H7t3"
+  },
+  "dino_cls_H7t3_T16k": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 7,
+    "episodes_in_completed_directories": 350,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_H7t3_T16k/chunk_00_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_H7t3_T16k/chunk_01_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_H7t3_T16k/chunk_02_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_H7t3_T16k/chunk_03_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_H7t3_T16k/chunk_04_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_H7t3_T16k/chunk_05_plus",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dino_cls_H7t3_T16k/chunk_06_T"
+    ],
+    "metadata": "baseline_metadata/dino_cls_H7t3_T16k"
+  },
+  "dinowm_H7t3": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 7,
+    "episodes_in_completed_directories": 350,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_00_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_01_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_02_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_03_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_04_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_05_plus",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3/chunk_06_T"
+    ],
+    "metadata": "baseline_metadata/dinowm_H7t3"
+  },
+  "dinowm_H7t3_GD_bias16k_reference_e3_20261106": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 7,
+    "episodes_in_completed_directories": 350,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_00_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_01_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_02_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_03_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_04_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_05_plus",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_06_T"
+    ],
+    "metadata": "baseline_metadata/dinowm_H7t3_GD_bias16k_reference_e3_20261106"
+  },
+  "dinowm_H7t3_official_pusht": {
+    "recorded_stage": "cancelled_for_pushobj_training",
+    "completed_directories_in_snapshot": 0,
+    "episodes_in_completed_directories": 0,
+    "runs": [],
+    "metadata": "baseline_metadata/dinowm_H7t3_official_pusht"
+  },
+  "dinowm_pushobj_random16k_e10_20261106": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 6,
+    "episodes_in_completed_directories": 300,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square"
+    ],
+    "metadata": "baseline_metadata/dinowm_pushobj_random16k_e10_20261106"
+  },
+  "dinowm_pusht_random16k_e10_20261106": {
+    "recorded_stage": "evaluating",
+    "completed_directories_in_snapshot": 12,
+    "episodes_in_completed_directories": 600,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/gd/default",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp"
+    ],
+    "metadata": "baseline_metadata/dinowm_pusht_random16k_e10_20261106"
+  },
+  "dreamerv3_VIS350": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 7,
+    "episodes_in_completed_directories": 350,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/blur",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/dark",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/default",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/red_agent",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/red_goal",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/red_object",
+      "completed_runs/CL-JEPA-cudagraph/baselines/dreamerv3_VIS350/snp"
+    ],
+    "metadata": "baseline_metadata/dreamerv3_VIS350"
+  },
+  "iris_VIS350": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 7,
+    "episodes_in_completed_directories": 350,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/blur",
+      "completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/dark",
+      "completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/default",
+      "completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/red_agent",
+      "completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/red_goal",
+      "completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/red_object",
+      "completed_runs/CL-JEPA-cudagraph/baselines/iris_VIS350/snp"
+    ],
+    "metadata": "baseline_metadata/iris_VIS350"
+  },
+  "lewm_H7t3_GD_bias16k_e10_20261106": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 7,
+    "episodes_in_completed_directories": 350,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_00_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_01_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_02_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_03_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_04_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_05_plus",
+      "completed_runs/CL-JEPA-cudagraph/baselines/lewm_H7t3_GD_bias16k_e10_20261106/chunk_06_T"
+    ],
+    "metadata": "baseline_metadata/lewm_H7t3_GD_bias16k_e10_20261106"
+  },
+  "r3m_H7t3_T16k": {
+    "recorded_stage": "complete",
+    "completed_directories_in_snapshot": 20,
+    "episodes_in_completed_directories": 1000,
+    "runs": [
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_00_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_01_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_02_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_03_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_04_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_05_plus",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_06_T",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_07_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_08_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_09_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_10_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_11_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_12_plus",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_13_T",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_14_I",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_15_L",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_16_square",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_17_Z",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_18_small_tee",
+      "completed_runs/CL-JEPA-cudagraph/baselines/r3m_H7t3_T16k/chunk_19_plus"
+    ],
+    "metadata": "baseline_metadata/r3m_H7t3_T16k"
+  }
+}

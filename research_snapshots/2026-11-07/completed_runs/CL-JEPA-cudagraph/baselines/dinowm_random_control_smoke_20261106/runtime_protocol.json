@@ -1,0 +1,18 @@
+{
+  "planner": "SlowFrozenMPCPlanner",
+  "frozen_model": true,
+  "ground_truth_action_initialization": false,
+  "objective": "last",
+  "model_frameskip": 5,
+  "horizon_model_steps": 5,
+  "executed_model_steps_per_replan": 5,
+  "executed_physical_steps_per_replan": 25,
+  "max_replans": 6,
+  "max_physical_steps": 150,
+  "candidates": 30,
+  "elite_count": 10,
+  "cem_iterations": 2,
+  "oracle_optimizer_probes": false,
+  "noise_protocol": "goal seed unchanged; deterministic distinct seed per online observation call",
+  "episodes": 1
+}

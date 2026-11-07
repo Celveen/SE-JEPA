@@ -1,0 +1,57 @@
+{
+  "method": "lewm",
+  "epoch": 10,
+  "checkpoint_sha256": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6",
+  "planner": "gd",
+  "episodes": 350,
+  "seed": 2000,
+  "by_shape": {
+    "I": {
+      "success_rate": 0.18,
+      "successes": 9,
+      "episodes": 50,
+      "mean_mpc_steps": 25.88
+    },
+    "L": {
+      "success_rate": 0.8,
+      "successes": 40,
+      "episodes": 50,
+      "mean_mpc_steps": 10.8
+    },
+    "square": {
+      "success_rate": 0.4,
+      "successes": 20,
+      "episodes": 50,
+      "mean_mpc_steps": 20.46
+    },
+    "Z": {
+      "success_rate": 0.74,
+      "successes": 37,
+      "episodes": 50,
+      "mean_mpc_steps": 12.44
+    },
+    "small_tee": {
+      "success_rate": 0.72,
+      "successes": 36,
+      "episodes": 50,
+      "mean_mpc_steps": 13.16
+    },
+    "+": {
+      "success_rate": 0.68,
+      "successes": 34,
+      "episodes": 50,
+      "mean_mpc_steps": 13.96
+    },
+    "T": {
+      "success_rate": 0.72,
+      "successes": 36,
+      "episodes": 50,
+      "mean_mpc_steps": 13.04
+    }
+  },
+  "all_success_rate": 0.6057142857142858,
+  "unseen_success_rate": 0.43333333333333335,
+  "seen_success_rate": 0.735,
+  "mean_mpc_steps": 15.677142857142854,
+  "mean_physical_steps": 78.38571428571427
+}

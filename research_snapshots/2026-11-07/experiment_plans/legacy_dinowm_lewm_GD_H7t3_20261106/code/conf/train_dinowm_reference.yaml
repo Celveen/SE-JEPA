@@ -1,0 +1,40 @@
+defaults:
+  - train
+  - override env: pusht
+  - override encoder: dino
+  - _self_
+
+training:
+  seed: 0
+  epochs: 100
+  batch_size: 32
+  save_every_x_epoch: 1
+  save_every_x_iterations: 0
+  straighten: false
+  encoder_lr: 1.0e-6
+  predictor_lr: 5.0e-5
+  action_encoder_lr: 5.0e-4
+  decoder_lr: 3.0e-4
+  mixed_precision: bf16
+  eval_lpips: false
+
+env:
+  name: pushobj
+  dataset:
+    data_path: ${oc.env:DATASET_DIR}/pushobj_bias_16k
+
+action_encoder:
+  use_layernorm: false
+
+proprio_encoder:
+  use_layernorm: false
+
+has_decoder: true
+
+model:
+  train_encoder: false
+  train_predictor: true
+  train_decoder: true
+
+plan_settings:
+  plan_cfg_path: null

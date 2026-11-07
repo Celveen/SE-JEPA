@@ -1,0 +1,10 @@
+{
+  "training_state_rows": 1600000,
+  "test_initial_states": 100,
+  "exact_matches": 0,
+  "target_files": [
+    "pushobj_L.pkl",
+    "pushobj_plus.pkl"
+  ],
+  "generation_used_test_targets": false
+}

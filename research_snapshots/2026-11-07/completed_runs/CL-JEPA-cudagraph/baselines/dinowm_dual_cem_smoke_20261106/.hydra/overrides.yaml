@@ -1,0 +1,16 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_random_smoke_20261106
+- model_epoch=1
+- n_evals=1
+- eval_data_path=/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/targets/pusht_T.pkl
+- seed=100
+- planner.sub_planner.num_samples=30
+- planner.sub_planner.topk=10
+- planner.sub_planner.opt_steps=2
+- audit.expected_opt_steps=2
+- audit.expected_candidates=30
+- audit.expected_elites=10
+- audit.planner_kind=cem
+- audit.condition=red_goal
+- audit.pretraining_shape_status=seen
+- audit.diagnostic_only=true
+- ++env_kwargs_override.goal_color=Red

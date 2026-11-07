@@ -1,0 +1,23 @@
+{
+  "task": "pusht",
+  "pid": 2560355,
+  "gpus": [
+    "6",
+    "7"
+  ],
+  "stage": "training",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pusht_random16k_20261106",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e10_20261106",
+  "code_snapshot": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/code",
+  "epochs": 10,
+  "training_trajectories": 16000,
+  "validation_trajectories": 1600,
+  "max_physical_steps": 150,
+  "physical_steps_per_replan": 25,
+  "max_replans": 6,
+  "planned_episodes": 350,
+  "started": "2026-11-06T03:56:55+00:00",
+  "jobs": {},
+  "updated": "2026-11-06T03:58:07+00:00",
+  "training_pid": 2560995
+}

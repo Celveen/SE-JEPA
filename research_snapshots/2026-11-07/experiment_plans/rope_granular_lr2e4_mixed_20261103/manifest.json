@@ -1,0 +1,3656 @@
+{
+  "status": "authorized_first_round_with_review_gate",
+  "blocks": [
+    {
+      "index": 0,
+      "chunk": "chunk_00_rope",
+      "round": 1,
+      "object": "rope",
+      "n": 10,
+      "seed": 5100,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_00_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 256,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "2075e64f35ae4269fc020c363c1b96c224b44d8e0bd7d8f3127ff868e317e620",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 863,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "cc90dd1e0eef8e8717f628b2c22d9ab40c94b0b4b3e840746c96945f5a01222f",
+          "sample_index": 1,
+          "env_seed": 5101
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 653,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "b65405811f65657ce69faa303e036b69a3eff692e9928f69c52bbe4c57833ee9",
+          "sample_index": 2,
+          "env_seed": 10201
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 284,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "8c04c69e3b2ab214026712c4eb985af96ea5c19d43edfdb4806c52c9164dc225",
+          "sample_index": 3,
+          "env_seed": 15301
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 97,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "04a18378c100bebd24c10b946a1afc2dbfb128af8c6a88139d43f6dc41e8a0d4",
+          "sample_index": 4,
+          "env_seed": 20401
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 574,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "54b41e5f95b4a29265910c674446f52c0d7f0ac137fae351a93db764e3ce0913",
+          "sample_index": 5,
+          "env_seed": 25501
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 761,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "30e1d79815f72d37f34592cf01724a724052002eb13af4249835fdedf18f9aff",
+          "sample_index": 6,
+          "env_seed": 30601
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 80,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "5dfa329d680f6d4a35ec0cd39e7c66c7945387248c9f6987b1636b72f8d31574",
+          "sample_index": 7,
+          "env_seed": 35701
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 97,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "52d3b78bd6678b0067205f54a941a7e43b5dad066bc5542d90b16fe6b7211203",
+          "sample_index": 8,
+          "env_seed": 40801
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 794,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "dc4318310833f3117541ade6d16862ace0b36b6aa2f53ac136ffbd8633fbeed0",
+          "sample_index": 9,
+          "env_seed": 45901
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "chunk": "chunk_01_granular",
+      "round": 1,
+      "object": "granular",
+      "n": 10,
+      "seed": 5101,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_01_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 45,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "b7150fefea6031d8315bbbeb5cee87ea742d72ecade5983ac44b2a8d78845255",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 151,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "0fb7fd572bb62ec9a352936ebca6c4afbcaa6d8ac4e14730c637dc0a65518e72",
+          "sample_index": 1,
+          "env_seed": 5102
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 898,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "cd691fd15e0e4f68c810f086f7b71d143b2d3a9f09627d4465b7cef5f21f2872",
+          "sample_index": 2,
+          "env_seed": 10203
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 55,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "120e82ed8ad87ff9c6e214bded9812513cafbe232418b887c0fc84494392b69a",
+          "sample_index": 3,
+          "env_seed": 15304
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 877,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "75479de7208acd1ff6a241ae0e319ca83c6673fe6eaba95bce633ca6034cec1e",
+          "sample_index": 4,
+          "env_seed": 20405
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 875,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "4c074f0d565f23205920054ae7bedf7f4ba73fbd2aab23bac3837c518e245baa",
+          "sample_index": 5,
+          "env_seed": 25506
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 520,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "49b68a07bbf8c9a985e25be74e0a8ef96b067af31623e6cf8f4cefb3350bc74f",
+          "sample_index": 6,
+          "env_seed": 30607
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 393,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "156016b7e1943c87542bc1833a10c04dd213941ac5f237962d5b640161fcbcb6",
+          "sample_index": 7,
+          "env_seed": 35708
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 806,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "40e74e592572da0f1b4a3e1b3c992636a1dcd87542c9b70d5b85e141d0aad8fd",
+          "sample_index": 8,
+          "env_seed": 40809
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 863,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "c521f4525d222936538c0bc314c3c8db8ef5457db0b1eb84adc62e599a95f3d0",
+          "sample_index": 9,
+          "env_seed": 45910
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "chunk": "chunk_02_rope",
+      "round": 1,
+      "object": "rope",
+      "n": 10,
+      "seed": 5102,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_02_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 454,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "cb763f9203697adc212c4a3d9ff365e148eb4cadc46e7a952556aa9d2bc6a740",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 222,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "cd5c19b4173797e49cf155ef879244de08254de8e34ed105ea32e28e25309cae",
+          "sample_index": 1,
+          "env_seed": 5103
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 776,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "a884c80753dc9fcf2a54d94bb694ed102026d798676fd6a8c78ebf552eebeb0e",
+          "sample_index": 2,
+          "env_seed": 10205
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 2,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "e8dbb7f058c3bd056308160567f01c55c2fe0d1a5316ec2f34350eba77cc905b",
+          "sample_index": 3,
+          "env_seed": 15307
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 806,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "56247d686d59390ea0e0860a640d924e0a6f9ffaf71b3c7407da706b5b4aa777",
+          "sample_index": 4,
+          "env_seed": 20409
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 794,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "82229b3b943b74adbf777a37ffc3e13aca826327e5c6e4de7683ba32e54c53b4",
+          "sample_index": 5,
+          "env_seed": 25511
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 549,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "a3949e82c802df6b3844c871396d3556091fec093ece09eb5d8754970b55f3be",
+          "sample_index": 6,
+          "env_seed": 30613
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 770,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "0cf92f8bafa175e8c2df95b96b153bd39ca2f75378542a1e70fe959b4b6d4f5b",
+          "sample_index": 7,
+          "env_seed": 35715
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 712,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "37bc5bc073bd056d7a9431a80509de2717313437b450f88ba597280f461dccd1",
+          "sample_index": 8,
+          "env_seed": 40817
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 455,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "ff4f052850bdb3a2ed338257fae7200b279d30c16aa442b9279606ba6f88cadb",
+          "sample_index": 9,
+          "env_seed": 45919
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "chunk": "chunk_03_granular",
+      "round": 1,
+      "object": "granular",
+      "n": 10,
+      "seed": 5103,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_03_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 736,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "1c41634e8a76e860e74d78960022c46baa1eaa9a12fe167d2e0662292286d551",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 19,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "bf159ea563cfef4159aeb296440b61ef988ede39088baab345714300e33adbf4",
+          "sample_index": 1,
+          "env_seed": 5104
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 822,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "d0bafbc6c4a813a03a16359964f1c7dd6707fbc8ccb7235fcd916bdb8422aa9f",
+          "sample_index": 2,
+          "env_seed": 10207
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 809,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "86f8192ad23d3731a824a121b5803462adfcf537206f698043c2374269607902",
+          "sample_index": 3,
+          "env_seed": 15310
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 574,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "d9063936665867fc7d712d5a707e7e2ed57ca58bd281e9d5e078edd370c73062",
+          "sample_index": 4,
+          "env_seed": 20413
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 454,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "13e6792476f9d7a9263885af6474d24de7a6fd5b51f4e1a544a4532732b0bd77",
+          "sample_index": 5,
+          "env_seed": 25516
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 393,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "441511489103ba431c507297c6a30bb207a81fe96afc14118505122d80d4ccd1",
+          "sample_index": 6,
+          "env_seed": 30619
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 846,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "0b00737c8581ecef827a89f13e37a9d06900463e32b6634f5ef066b53adddd79",
+          "sample_index": 7,
+          "env_seed": 35722
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 634,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "bc2eaf90ab4cd9154be9927b6d067fa8c495efc526d5ce944096564a40a68716",
+          "sample_index": 8,
+          "env_seed": 40825
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 822,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "2e21084578c8f1e97da0110da9241977ad4d3e76562486ed17d455a49e62d2d1",
+          "sample_index": 9,
+          "env_seed": 45928
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "chunk": "chunk_04_rope",
+      "round": 1,
+      "object": "rope",
+      "n": 10,
+      "seed": 5104,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_04_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 256,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "9124cd8c49ed74c53151dfcf0adc4ad7c77ee7d09496dd3dfd42b387c47899ca",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 918,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "5253b80357388aa041ee59744f03c53f70969520aa1545655475440df76f0d28",
+          "sample_index": 1,
+          "env_seed": 5105
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 566,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "c5e8e91ab36adfb5309d4fd42dd3bc715a8148b326a6cb4d8e4efc0e19908150",
+          "sample_index": 2,
+          "env_seed": 10209
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 224,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "1dd87a3c798fceaaee6757bcb1d8c4bd71ab006c5bbc0e63954ac39b4dde0017",
+          "sample_index": 3,
+          "env_seed": 15313
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 549,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "eda796946bd69dcfa6ec0d71298c529c25df7062e1ec3ac6cafb8c4cd363ed0b",
+          "sample_index": 4,
+          "env_seed": 20417
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 877,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "9c551a7cc1a9a3d634bc74baa0c6469a841c1c7a64816247c664d84d55a97402",
+          "sample_index": 5,
+          "env_seed": 25521
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 643,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "9b52b4416e3627176bd3289b97e819e43c4aabee1da567391c2dd3cef4bf9f09",
+          "sample_index": 6,
+          "env_seed": 30625
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 776,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "c5edcebcb7ecccb3c918365a0c45793c9d23be4033fa547841fafdc05c6da184",
+          "sample_index": 7,
+          "env_seed": 35729
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 559,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "59b9d418f8e8921a5fdfb40970ac8ad4117bea4c7bcd9a8f2fc709931e964c3d",
+          "sample_index": 8,
+          "env_seed": 40833
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 809,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "5db19ae28d240643fc35437f02b13aedc958ba37d5ed49683386e18c32c414e3",
+          "sample_index": 9,
+          "env_seed": 45937
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "chunk": "chunk_05_granular",
+      "round": 1,
+      "object": "granular",
+      "n": 10,
+      "seed": 5105,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_05_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 863,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "ac5778665a21d595e455156b473a5ec7e7587744d31baef265b699d0b77a1f4e",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 520,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "29b63dcebb392e6e768aa13f63651368ed790a984462bc1d9d4f78cc6cf2889f",
+          "sample_index": 1,
+          "env_seed": 5106
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 254,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "cf079a7a57e7773849afde8dc0fde0b679f0280a0cb3ee1a71b69c895c64df41",
+          "sample_index": 2,
+          "env_seed": 10211
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 653,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "440b21a16b306b697500f8562d984e50d8dd10412c3ff9f881f24e1ed6c432de",
+          "sample_index": 3,
+          "env_seed": 15316
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 254,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "a24545d198ef2281141ec21e83b1346fd1e31e1118c32a55fee1b55987c713ad",
+          "sample_index": 4,
+          "env_seed": 20421
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 985,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "c2414a471279da014f7406d3a1b409f3fc58ffe36284e54ad30c8721f8a62add",
+          "sample_index": 5,
+          "env_seed": 25526
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 526,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "6fb67cd0d2fb9c84ef036e114eafffc52d87fd7eb46153c5093d8b5a35c07c5f",
+          "sample_index": 6,
+          "env_seed": 30631
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 7,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "0c7baf2a309adf330854c1cebc2c88e310f9a07115e6d6a70c9127cdd0258a06",
+          "sample_index": 7,
+          "env_seed": 35736
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 284,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "9679bd4e7801f10c14b257e567338c7c0422ee77ff86212ea87d60d62f7bb732",
+          "sample_index": 8,
+          "env_seed": 40841
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 753,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "58fd2c468cd7839573a9c58a95a197a51ed2ab5ac3c10098546d349cf51a06b0",
+          "sample_index": 9,
+          "env_seed": 45946
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "chunk": "chunk_06_rope",
+      "round": 1,
+      "object": "rope",
+      "n": 10,
+      "seed": 5106,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_06_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 559,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "a0c92f3af8eac533fe52c0a171259f4bbf59963a32e38378032eaa2818d90069",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 277,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "eddf6400bc431cdf53879fa7d6b0cc3052ea77592731d4de09ac0c907edfd7c1",
+          "sample_index": 1,
+          "env_seed": 5107
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 465,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "5cf2dbb811e4aaf96a666ed0c7118b0ee8df4221b4da4db9e8a9e53a3cd9f42f",
+          "sample_index": 2,
+          "env_seed": 10213
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 918,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "18b83ca11f2dff03f219c4bd3a5c3cc2efc971ffc3037e340d6ce42d7f52848b",
+          "sample_index": 3,
+          "env_seed": 15319
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 14,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "3067f50b87071eafa7a3704581fb30a8ff9c9e9f811ee4133e57ec9977deb30b",
+          "sample_index": 4,
+          "env_seed": 20425
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 617,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "d399db38d598b70a61dedde4f4809c9f7133e8e8857aa5c2a24dea2c910e50ce",
+          "sample_index": 5,
+          "env_seed": 25531
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 617,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "653fbe5378c7dce64f09b4d0d9ace3913dabb75d04d33f43b176b2aa43a67e3f",
+          "sample_index": 6,
+          "env_seed": 30637
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 293,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "d00ce92d102d547c2261c577e07a484d59ca457d365e2e503f5cbfd41549dec4",
+          "sample_index": 7,
+          "env_seed": 35743
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 574,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "9bf683ddf698236a7cccc0ecd0795c9a2bf15777e23c6cd177ee6ab9f7aefdd4",
+          "sample_index": 8,
+          "env_seed": 40849
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 2,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "764a44e223bed8672b9d57c09229c4d45b974b157549c6106f7257f5703c2c5c",
+          "sample_index": 9,
+          "env_seed": 45955
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "chunk": "chunk_07_granular",
+      "round": 1,
+      "object": "granular",
+      "n": 10,
+      "seed": 5107,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_07_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 19,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "7ea04b3a55682ba0b5500a8b2205a82afa9494caa4b1c41aa593886937fff504",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 55,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "1e7da9fb57e0b4cbaab16d31dcd64c3bceee0e4caa4249628f08cd05b5459157",
+          "sample_index": 1,
+          "env_seed": 5108
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 97,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "7383e49984d873e8e6015a9973873e374ad124e67fb3bd7f90877826a93f3ff8",
+          "sample_index": 2,
+          "env_seed": 10215
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 809,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "f5ea7249cee8ccd2aeceb04eceeb2529c968bb088e5b21a59de2ba9d948c9182",
+          "sample_index": 3,
+          "env_seed": 15322
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 104,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "05fbed265d6b61cbede22b88f35ca0104fd2166acd2144fb1c23d77eb0c6d4f0",
+          "sample_index": 4,
+          "env_seed": 20429
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 97,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "4f211c495179bec9110c6350bd450ffbbf9b739f7b652dd5ca57b6398cc941b9",
+          "sample_index": 5,
+          "env_seed": 25536
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 877,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "1e8aac3fe3fed5d34337c6291463325add8d30e1d15ed3d4bf41f1a94071be91",
+          "sample_index": 6,
+          "env_seed": 30643
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 754,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "d2b73741e736e43551b99b7c3c026b8bf946cbc1051981e2236e89d7ed703309",
+          "sample_index": 7,
+          "env_seed": 35750
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 966,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "5adc0b84d628c6f14e543993f73b41b47069d2a092eb163100b49b0fd1e30d9e",
+          "sample_index": 8,
+          "env_seed": 40857
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 284,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "23a43862927c20a47ed2c7d43838e5be6a033d38ba883013072a509464659a93",
+          "sample_index": 9,
+          "env_seed": 45964
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "chunk": "chunk_08_rope",
+      "round": 1,
+      "object": "rope",
+      "n": 10,
+      "seed": 5108,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_08_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 222,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "bc1c32a0a0615087936019e3df6f9c5e82851b53d612827d6145f5bf18b249df",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 770,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "08706905f624b115d99db487e3fee4e4c7ba220515d882df7141daeac338322a",
+          "sample_index": 1,
+          "env_seed": 5109
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 454,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "098fc5b4113822e5c942a810b8ed3d09eda5bb2f4e49952c87f5d31785dace75",
+          "sample_index": 2,
+          "env_seed": 10217
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 14,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "1e25542b33de14e3cfc36bce6f0939e126c41555b4b9e7d6e06ea589917d7fa5",
+          "sample_index": 3,
+          "env_seed": 15325
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 566,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "cbe2197a692cdee5815b276fd2fb9b468ff4f356d1358650a46df28f46f1a60e",
+          "sample_index": 4,
+          "env_seed": 20433
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 643,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "2ff84797ed4496215c3ef4bdae08ac3ea2e215065abeeeae24b164492985780c",
+          "sample_index": 5,
+          "env_seed": 25541
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 761,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "2726dac5664432fdf6a28ba42b8b5148e01c3d8dbcd8e711b602baddb0ecb6c9",
+          "sample_index": 6,
+          "env_seed": 30649
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 894,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "3919b6b6f19d58d31f90b212ccb0d975a7f18bc3bee3993eaa0d18c8b3d111cb",
+          "sample_index": 7,
+          "env_seed": 35757
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 754,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "26dbf693598790b49828785b45652506f89b3c4bc69037c902806e852b841a55",
+          "sample_index": 8,
+          "env_seed": 40865
+        },
+        {
+          "object": "rope",
+          "round": 1,
+          "trajectory": 358,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "12a789c35ab427aba8022fdae0dba9707c6b937afb3047c5710f645fcf4a7773",
+          "sample_index": 9,
+          "env_seed": 45973
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "chunk": "chunk_09_granular",
+      "round": 1,
+      "object": "granular",
+      "n": 10,
+      "seed": 5109,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_09_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 806,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "6efe7b2202a930f0d9c72151cabd2dffb9778789ef99e23d11c2e959a8fdc324",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 653,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "050f05f9c6f58e25ff81a211e91d8aa068d1a2c9418a814e694de14788b761ea",
+          "sample_index": 1,
+          "env_seed": 5110
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 45,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "eb29e5c5a865d8c04bf9c0c3c2ec626024ef0a9ab5ad234e26a537ee45590fec",
+          "sample_index": 2,
+          "env_seed": 10219
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 794,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "893a885690a9d9427a510844c99f8e4ff0fce3d41ceec304ab34582e695c8889",
+          "sample_index": 3,
+          "env_seed": 15328
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 527,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "4a7183d531fd5ff1bf53273ff817f18d7fa94ef15747055498247ccd18de9159",
+          "sample_index": 4,
+          "env_seed": 20437
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 634,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "3f3524f183db1abac99b52438a484890338bd2bad74616cf44b74649db0d8b47",
+          "sample_index": 5,
+          "env_seed": 25546
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 395,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "7a60948d499e8e41f14436841b346503341b4103973477771fad7d5d12469f16",
+          "sample_index": 6,
+          "env_seed": 30655
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 115,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "10ad0249021ea50437435fa16a51f449f2ea95202552a0a38d672cc008de5cdb",
+          "sample_index": 7,
+          "env_seed": 35764
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 7,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "f33eba39ae7416af89415f9daab649d23dda22018c19314a3800f147f97e3971",
+          "sample_index": 8,
+          "env_seed": 40873
+        },
+        {
+          "object": "granular",
+          "round": 1,
+          "trajectory": 846,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "0f2ba81f81feee7131d05270dc7fbe97df29733a3e0778862df7ad03f4aec270",
+          "sample_index": 9,
+          "env_seed": 45982
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "chunk": "chunk_10_rope",
+      "round": 2,
+      "object": "rope",
+      "n": 10,
+      "seed": 5110,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_10_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 753,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "42e71ba8d312a11cce5ce6b23b0e804b1d2070e7fe20896b996376f75c02c46b",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 129,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "db84b049101647852506d39daf08805b348d5841f9891aecb78357d5dce51bd1",
+          "sample_index": 1,
+          "env_seed": 5111
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 462,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "a8e7bc62592076e57809625b2cda25f7b66fdd5ec3ceaae9f2b8a75acd0fb111",
+          "sample_index": 2,
+          "env_seed": 10221
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 598,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "cc6725312a938e9b7959f55019298d4315d06ceeb540f9d85d54a41505155836",
+          "sample_index": 3,
+          "env_seed": 15331
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 330,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "7f7baa055316f5a6bcc6cf4055d205f0295cd947b8a8489fa493a6a0238a63a1",
+          "sample_index": 4,
+          "env_seed": 20441
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 966,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "b0b1af252add3253edafdd2cc837dc7921de9ceecea14fba88f55d0d80de507a",
+          "sample_index": 5,
+          "env_seed": 25551
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 19,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "cd30fc3e05eb61091692a68bf025e255a189296e10c60217f4a4658ef7093443",
+          "sample_index": 6,
+          "env_seed": 30661
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 431,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "bd011221a9f4042c82b9c5f2cba81db122f5c3fda7a31e0683aa1dbb2e53f7cc",
+          "sample_index": 7,
+          "env_seed": 35771
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 966,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "a349770c2dd05df7156d0518d05ba3f17f287b6eb7e8486299d244f449854c01",
+          "sample_index": 8,
+          "env_seed": 40881
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 665,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "aee37f311e3e74b22de7200069a3f73088959d5b75f6bd9786c4092dfbdc65ae",
+          "sample_index": 9,
+          "env_seed": 45991
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "chunk": "chunk_11_granular",
+      "round": 2,
+      "object": "granular",
+      "n": 10,
+      "seed": 5111,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_11_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 96,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "7897b2872bd6abf841e30e14af38bd77e64c497660cacc3f66df91613afa5827",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 579,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "0c8dc812e8233828d0a4879a573265071834dd861054da49d3bfce6b0986c48b",
+          "sample_index": 1,
+          "env_seed": 5112
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 335,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "dfe43f6c9b9b69a86e8fdf00206a327f4adf8e7481a3040edf4add9c6df6f283",
+          "sample_index": 2,
+          "env_seed": 10223
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 462,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "5376973640606a5cc363605f50645f35fd2b5b8644cbffe6ad0f74130f8db706",
+          "sample_index": 3,
+          "env_seed": 15334
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 747,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "f229f695dc2e268fb553e7978869d26634c69d3ebfd0180460db1a244ea979b9",
+          "sample_index": 4,
+          "env_seed": 20445
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 318,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "bcc6b1b775994b0b92d8e51b8525e96011bae72578d7796980ae60876c950ef0",
+          "sample_index": 5,
+          "env_seed": 25556
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 572,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "20ade2391851744de450880d3efead56615f352165d2a9c6933487c70be5cd83",
+          "sample_index": 6,
+          "env_seed": 30667
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 761,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "fc348a0a31b5e9a1c717aae8b9d3f9f04932c0e3d3235165a33b159eecaf4739",
+          "sample_index": 7,
+          "env_seed": 35778
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 675,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "a26614298ce67446c7877edc6f4536c333196d3a93c6425e1ba81cf967d3f843",
+          "sample_index": 8,
+          "env_seed": 40889
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 465,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "b75adec162bfa62dc41ec1ef9cf628932c59a26c6570b518a48182b947281175",
+          "sample_index": 9,
+          "env_seed": 46000
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "chunk": "chunk_12_rope",
+      "round": 2,
+      "object": "rope",
+      "n": 10,
+      "seed": 5112,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_12_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 526,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "37669f97eaa5e46cc61197241d4ac8512bae63507d62131c74fe77031098e6c6",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 527,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "65c9d6bb104b8f5056ff2a3c0b2ce835f1bcc5d91dc9a2271538441f23722dd9",
+          "sample_index": 1,
+          "env_seed": 5113
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 96,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "9bb11b08b600f9b2d280dfb52505c6a1cb9fbf506eca37207a2325ed48321b76",
+          "sample_index": 2,
+          "env_seed": 10225
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 254,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "f14c0366664f9b1f89a35d89ab3c326c15212fb71726d162e9eaa9dde3f5959e",
+          "sample_index": 3,
+          "env_seed": 15337
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 710,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "a22dcd5407edddb61b28df1de1c305e006b750d0298c1d507eb4f079ee1d275b",
+          "sample_index": 4,
+          "env_seed": 20449
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 115,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "8b5aca0b8aa7dad71635b5889eb365476c972b4dc4ca875dabbdf866519560ea",
+          "sample_index": 5,
+          "env_seed": 25561
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 556,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "73afad61a7272a969bdf5004f87fea9a4370ab2441cd0cfdf40ea50a58053512",
+          "sample_index": 6,
+          "env_seed": 30673
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 318,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "b5d6e424a6c597e61d334de526a9b4203c065d1d2c892f5bc802da866198f525",
+          "sample_index": 7,
+          "env_seed": 35785
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 104,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "91c5d0e90bc816a6a8623232f5b026c2ba41928a35740476bad544f118f08171",
+          "sample_index": 8,
+          "env_seed": 40897
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 466,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "d1e7d0d9aba8b5250a2d6dc98d1dd04a7289269e99a809d4640b6502df5097ee",
+          "sample_index": 9,
+          "env_seed": 46009
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "chunk": "chunk_13_granular",
+      "round": 2,
+      "object": "granular",
+      "n": 10,
+      "seed": 5113,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_13_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 481,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "45c18f882e94bf2e068f2f871cc348b0c2b2e79afe8ac38385edec94b55e097b",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 894,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "8feb9190de9f8af441970343282cf3b9d7f2a2c381ced8bccd20725da5c613d1",
+          "sample_index": 1,
+          "env_seed": 5114
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 435,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "5e5e266073add08f9ff4aaa0ee0170d91657fb287d8c67a25e83177916f5b55c",
+          "sample_index": 2,
+          "env_seed": 10227
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 96,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "8e0e87845164ad943fa6ffeaf6dd7badf2969134cc21861e087ae8af36356764",
+          "sample_index": 3,
+          "env_seed": 15340
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 617,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "458d42c6804e74563298b08fe32d99ecb42fd2f3f05461b43cd35225c090ac1c",
+          "sample_index": 4,
+          "env_seed": 20453
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 219,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "100a66a42d0f56df8a072a51a90c92763ae22d0378cb508efaf7abd8579fd859",
+          "sample_index": 5,
+          "env_seed": 25566
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 598,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "b110197828d7b420ff7157c79d9eb50568f2d5f30763400ce04bd46cb42c0e48",
+          "sample_index": 6,
+          "env_seed": 30679
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 90,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "b26541fb89c1784bdc163a0011681a315a43dfd90164477fa08c1917149ae59e",
+          "sample_index": 7,
+          "env_seed": 35792
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 400,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "03fd47ababf8a423244a917b352768ff9fbb8d9934dde7132692552fa85fd572",
+          "sample_index": 8,
+          "env_seed": 40905
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 870,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "1eb2f83dbaf86bef0486e4abaf26b5b5477ef7e17ac176bc1f34fa3e9c898acb",
+          "sample_index": 9,
+          "env_seed": 46018
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "chunk": "chunk_14_rope",
+      "round": 2,
+      "object": "rope",
+      "n": 10,
+      "seed": 5114,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_14_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 519,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "ddd1364ff102db2f0b3f48b8a5430fbd6aedb2a64cdec2e5b0c7ed3531c9c339",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 330,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "1c505c0f57ae6414f795b20df143217a1f5a2aa9943496caac0484822083199e",
+          "sample_index": 1,
+          "env_seed": 5115
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 318,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "f4492b81cefbbee84e2a2ddc77e50e3c510ac74b72d4c3469e2baec40bde7459",
+          "sample_index": 2,
+          "env_seed": 10229
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 395,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "a2f730a5c3c9eea7f091f8686b69305ebc898a8dbe930889548243bf58c8fb03",
+          "sample_index": 3,
+          "env_seed": 15343
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 520,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "4f7538a464b61728107a63d4ccf039240d05c79e86ca761c8cd723f3b86ca760",
+          "sample_index": 4,
+          "env_seed": 20457
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 898,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "fe055b2ef25f304f941001a843bc56b76343e9d0ab4a071f703c51326e7d4c44",
+          "sample_index": 5,
+          "env_seed": 25571
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 395,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "75c8ac837c541f74002657655aba6100c6cd8d392434de1b3a103344f5721bc9",
+          "sample_index": 6,
+          "env_seed": 30685
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 822,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "6baf7ff208046540546239d175855889db67434c9dee54df2bf54602a6952255",
+          "sample_index": 7,
+          "env_seed": 35799
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 462,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "a4ccf1f29e311cbc7093943a69878262b75e9a1179f4814371cc4576c7a40bbd",
+          "sample_index": 8,
+          "env_seed": 40913
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 104,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "2f62d7c527739995c3224b651d62805489b78d41598684ba8373ff847b6cefa9",
+          "sample_index": 9,
+          "env_seed": 46027
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "chunk": "chunk_15_granular",
+      "round": 2,
+      "object": "granular",
+      "n": 10,
+      "seed": 5115,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_15_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 712,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "76ea6d644b16909a4abf9f76a2067a4a378e6d2e8f217a30ee021610117d351b",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 462,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "a7601a23c625c9aec87e9f07a8d6fa7d1637d4e1853c433986cb123543a06a68",
+          "sample_index": 1,
+          "env_seed": 5116
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 481,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "8b452a2b28bcc2cfd915b04953430198417c7d58e839601aa786ef6c2f902fc1",
+          "sample_index": 2,
+          "env_seed": 10231
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 662,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "0d536f140613935f61a6850758f5dcfc9425d27cc41141fb5ce88043cfb4d67a",
+          "sample_index": 3,
+          "env_seed": 15346
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 465,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "b6a5c43e52314c78e7b54916991c17e76ea574bc0699c65bf3ba8f6ea84c4752",
+          "sample_index": 4,
+          "env_seed": 20461
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 870,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "97b647027a0f8aa10ac98cab71047feae14105090d6549a2e82f74e530e54025",
+          "sample_index": 5,
+          "env_seed": 25576
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 638,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "2cdcb43af2de7729299e765913a7b4be51e55cd758cc7eaeccb966d9b0a4b088",
+          "sample_index": 6,
+          "env_seed": 30691
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 330,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "d1d6da705aa8d1c8a3aa5e06a7193101ce6e809145d0038efe9bb157d0b329db",
+          "sample_index": 7,
+          "env_seed": 35806
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 761,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "f195e04d738bd17ca61fda13033abbadcc7bde89ab8c7a63353d10c7ba24ae24",
+          "sample_index": 8,
+          "env_seed": 40921
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 579,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "c1374146404ee28cdbe8584e26f023ae0bf862367e9f430a9af94fd690a87e0f",
+          "sample_index": 9,
+          "env_seed": 46036
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "chunk": "chunk_16_rope",
+      "round": 2,
+      "object": "rope",
+      "n": 10,
+      "seed": 5116,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_16_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 969,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "33ee2d00523f857f11dd711924a818d3cb5d3cfa802b672eeaea6aa71fa8dd00",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 736,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "b4f412fe79d9114813e51142530fa1bbfa417a95380c79bf443ff9e835fe018e",
+          "sample_index": 1,
+          "env_seed": 5117
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 557,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "94d688dcc7535345e258611cc98f7ebc3b047d165409ab2cdc2aa02b65acba49",
+          "sample_index": 2,
+          "env_seed": 10233
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 96,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "7afb9bb1703c5fe90130bf9bb23756a805362c26da38b20b8aded0c7ae0f3f76",
+          "sample_index": 3,
+          "env_seed": 15349
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 105,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "6065185c03c209001b6a2d7299e5490edd718381c264371eb254c448c4040a08",
+          "sample_index": 4,
+          "env_seed": 20465
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 822,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "e3c66628c3260e713b73c4f11366d4ebb4588f92e230826d866342f7e0ef9995",
+          "sample_index": 5,
+          "env_seed": 25581
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 753,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "2163397b8230777f407d9e538b1af511bbcb07885d559158c346a9f27ffa3b21",
+          "sample_index": 6,
+          "env_seed": 30697
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 634,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "72cbc51324378d27ee3c552dbf3c8f9da027a7875bf3bc2958a6cd0120d1d6e5",
+          "sample_index": 7,
+          "env_seed": 35813
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 557,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "5dee54058513a108789278b5669f538bb9f975094ef64ea98008aa72744c1a18",
+          "sample_index": 8,
+          "env_seed": 40929
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 875,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "a7f0d045c7a28258a36f74ddb62d45544e272e6c2c30e521391104245549ec5f",
+          "sample_index": 9,
+          "env_seed": 46045
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "chunk": "chunk_17_granular",
+      "round": 2,
+      "object": "granular",
+      "n": 10,
+      "seed": 5117,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_17_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 643,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "f2e2a2a1b32e16070621655d454943ec45c608ce2b2a7fe3af8ec4eea3e63f6b",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 557,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "f2faf1988e560eed136937bd0a0052f70b08c27617327bf30292c321a4909746",
+          "sample_index": 1,
+          "env_seed": 5118
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 557,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "0e746db95276615c136582c3a7fab1dd48a69177f653c558777e86f87bc79e97",
+          "sample_index": 2,
+          "env_seed": 10235
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 232,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "8b650c03dfb7670e11de3083778cd780319d96c406594af571128ea3f617fa07",
+          "sample_index": 3,
+          "env_seed": 15352
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 918,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "d91598000ebaa75edc68bfe252852ffec5661d6728abd45bfa2669ae57aec951",
+          "sample_index": 4,
+          "env_seed": 20469
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 232,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "ec4e7b0f6068d57a827f4b5e801824c001ca38d6784cc74e115faf439b966f83",
+          "sample_index": 5,
+          "env_seed": 25586
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 219,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "ac645e0f14963a41e67708688c9724633842479b390f10684df15536fad6ca89",
+          "sample_index": 6,
+          "env_seed": 30703
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 90,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "1d94949b4bc1f752345152c77cb32d50bc175eebf03e7df60f7787487fb3e61b",
+          "sample_index": 7,
+          "env_seed": 35820
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 710,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "36367b99ecf1f0ef6d40d60b77d3a6026aa47f5bfb6fd9be8cb7a8c06f9be1d9",
+          "sample_index": 8,
+          "env_seed": 40937
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 643,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "e19c115a840f68e7f352033810317f4e82bb4123ef3f3b14b965a5a12bafe0c0",
+          "sample_index": 9,
+          "env_seed": 46054
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "chunk": "chunk_18_rope",
+      "round": 2,
+      "object": "rope",
+      "n": 10,
+      "seed": 5118,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_18_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 539,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "ed2df07428ecb65b4d35c0b20942ed8c3a7df59cea71c96d69eca78e33fae7a4",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 105,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "c5e5a33793d514ca7e60a60d936f5aea653251693a3ed047926747ecb49c0ee8",
+          "sample_index": 1,
+          "env_seed": 5119
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 431,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "de856d71b921fc089134c6506fda581fa6fc7aedc75a1f928c9932ad45119ad9",
+          "sample_index": 2,
+          "env_seed": 10237
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 736,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "02646c09cd0c51663c9d436938f0389721ee00d8e5019f180e55f506104d9771",
+          "sample_index": 3,
+          "env_seed": 15355
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 665,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "b27b91fd83389f1ffd7655ad072fdc3de88d5efeeea85ea5292099af32926d12",
+          "sample_index": 4,
+          "env_seed": 20473
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 898,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "9a9b4ce4a9c0c5a05e93b10b4f91473fe9dc1630b8bb880ab810d769d3dd3910",
+          "sample_index": 5,
+          "env_seed": 25591
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 520,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "7fdf71c66019bb854a08bbd02480215c171d70dd1b3eedeae11f960ce164b58a",
+          "sample_index": 6,
+          "env_seed": 30709
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 70,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "4330ea8ca9be0fd0507bcb847c23372bc27270b2df484f1daeda6dffaa150ea4",
+          "sample_index": 7,
+          "env_seed": 35827
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 481,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "a9b7db64bbb931a374510e3fa9ad8914dc46d96dede9a02bf4ffd85976539c74",
+          "sample_index": 8,
+          "env_seed": 40945
+        },
+        {
+          "object": "rope",
+          "round": 2,
+          "trajectory": 875,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "73dc1aa89411ef074a59a2e4504a6c7cd3235f07c7b7468696f3b99502070763",
+          "sample_index": 9,
+          "env_seed": 46063
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "chunk": "chunk_19_granular",
+      "round": 2,
+      "object": "granular",
+      "n": 10,
+      "seed": 5119,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_19_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 969,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "9c70fe2e06b0a10aa5b4eaf4686ad1cf9b7e4e8e11bed2d4c2fab3988e33c445",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 598,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "935a0b47963e3226f4885519e26ace67bb5d0e240ebf431958bdda3bd2963b45",
+          "sample_index": 1,
+          "env_seed": 5120
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 61,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "755c0d267fb1ace77a9edc34e3179078028ae0d430582f33e4a86e61b63a2726",
+          "sample_index": 2,
+          "env_seed": 10239
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 710,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "dcac417a2c050a2d6de9949f5dd44895b55fe1002cf035f1f64ad87e651d96b3",
+          "sample_index": 3,
+          "env_seed": 15358
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 894,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "25b2f2a7ad5a8cb0bbb1a63cc6fe58580b1cc5a09e2cc4644c9ba87b5b908f6b",
+          "sample_index": 4,
+          "env_seed": 20477
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 224,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "c9dea82d396c1562817486cecad82d19ad77f33eb407b8c8653beb14625a54b4",
+          "sample_index": 5,
+          "env_seed": 25596
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 14,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "8510afb014b6cd4b64f07f5c7ed9d916b97662f67e6ea31fc8d02ec8cbb5ce9e",
+          "sample_index": 6,
+          "env_seed": 30715
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 675,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "8ee6ecf76e2adadf59e694669be0c19db2b044c76f2d6c31361fe18c06f8beab",
+          "sample_index": 7,
+          "env_seed": 35834
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 559,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "04de34bea1acdd413b1608f4ee5204a362b0e78b7da54b95e0778939c98bcb37",
+          "sample_index": 8,
+          "env_seed": 40953
+        },
+        {
+          "object": "granular",
+          "round": 2,
+          "trajectory": 330,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "461d1c26d87d6aef1d599d6721c9cdefe65c5caa088637edc914826941d16777",
+          "sample_index": 9,
+          "env_seed": 46072
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "chunk": "chunk_20_rope",
+      "round": 3,
+      "object": "rope",
+      "n": 10,
+      "seed": 5120,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_20_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 393,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "ce7bce650c13f6a9822933f3054214ec1552c13b3d0800dc1daf18ca067ca3aa",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 435,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "f1ca6c44098f9f25c8ec487c5bdcb0a381f083e71b09427b406408248c453632",
+          "sample_index": 1,
+          "env_seed": 5121
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 335,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "3043c72517fd5bdc2edf196b4cdc48acd0e6201d4f5bad2b47d4ffd4502242ae",
+          "sample_index": 2,
+          "env_seed": 10241
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 90,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "c905d5572d6f9d9197ca913340134444fc7e5df4d2acdc936aecf7c9af77076f",
+          "sample_index": 3,
+          "env_seed": 15361
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 240,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "dd2c7a4a437eee8a851d61a7d52ae44cfe65e7cfd517b137333f75c424911cbb",
+          "sample_index": 4,
+          "env_seed": 20481
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 602,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "8013bee1bacdb09340f03d3cb4602bec3baf6ee4b93e2a9b0c40b2126b71d874",
+          "sample_index": 5,
+          "env_seed": 25601
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 435,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "291f21ad34b40a1a7a33154289e36c549a24d35c811bf7e8c417f0c92ab0e8a8",
+          "sample_index": 6,
+          "env_seed": 30721
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 554,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "d9e45dfae5100d57a7ce954b3e285e359dc32d8829f8cac80f9d5fc21c306732",
+          "sample_index": 7,
+          "env_seed": 35841
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 630,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "9a9a8c93e1354db08db149c05a77b1e63e069f6e94fb99054b2e460ae44b222a",
+          "sample_index": 8,
+          "env_seed": 40961
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 61,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "55e47bcbc0afe0f580ce0bae93f31384100bdc7537998040c5a786a37193d6a4",
+          "sample_index": 9,
+          "env_seed": 46081
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "chunk": "chunk_21_granular",
+      "round": 3,
+      "object": "granular",
+      "n": 10,
+      "seed": 5121,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_21_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 441,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "373f76e0446d59a27c30e405c3a20d3733b675fe7f555fef61a9ade262ed1810",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 466,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "3efe3f613d5279405346c9686254679bc8f12415c4a1a4c9d30cf2df90cc1885",
+          "sample_index": 1,
+          "env_seed": 5122
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 129,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "29f6179ffee985d52e3248b17972b721000d7a6620af630a30b4b623c5d3a49e",
+          "sample_index": 2,
+          "env_seed": 10243
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 156,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "c13eb69ee7c783901226c04104f4224d0e5b5d4937605e39b73c69728452fe31",
+          "sample_index": 3,
+          "env_seed": 15364
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 105,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "6181f79185299f695c8e2a5d8415f2935f1247f7cba721aa95b865e2ae4a7dd5",
+          "sample_index": 4,
+          "env_seed": 20485
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 111,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "81ee6a8dcaebb36f9b2f81042928910e65d93c6e4c568547f37b3854bde28519",
+          "sample_index": 5,
+          "env_seed": 25606
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 2,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "7823b93286c8c4f02bbbb7407a2a08d315721f955935b0b04afa97d717484963",
+          "sample_index": 6,
+          "env_seed": 30727
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 293,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "26bc7befd4a480d30c6b3847aee8b222a4c29439a5f26295f01f10f73301f250",
+          "sample_index": 7,
+          "env_seed": 35848
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 70,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "27c63f510482ad7ea29c11dea251d899710d238ad0b0ed99c3a5899921589236",
+          "sample_index": 8,
+          "env_seed": 40969
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 519,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "4d7f45780b1b20ef4d7eb1faf8e0c7fb3840ad411a7f812847efad9f34114b8c",
+          "sample_index": 9,
+          "env_seed": 46090
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "chunk": "chunk_22_rope",
+      "round": 3,
+      "object": "rope",
+      "n": 10,
+      "seed": 5122,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_22_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 741,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "aaaabeef6266bf87bb2ed648e60bd29ff7f05302063543aa87429ba87ba6846b",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 13,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "4df1ec5403bbbd39c2c70de4ea52843a83cda59773fad609915041d5d5c52b2b",
+          "sample_index": 1,
+          "env_seed": 5123
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 870,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "1dd5a72400ef6e8096cc97a2c76bf5ffc4e43605b94a8d870573110985f285fd",
+          "sample_index": 2,
+          "env_seed": 10245
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 572,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "b22340a066c1e96b0dd88932ff8ac50a3df7dde1f18b29312afa2ac11f096d9e",
+          "sample_index": 3,
+          "env_seed": 15367
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 675,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "f1db15e1b7e3b717e1869f349ff49f78593ca3a238d7b08c082d1c8177e65682",
+          "sample_index": 4,
+          "env_seed": 20489
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 156,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "64b5d86e8b1249c3515fb01114a6958d2de20898e88ae86d426c343a348fb4b8",
+          "sample_index": 5,
+          "env_seed": 25611
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 240,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "c7594a04228efaec13194a32d3faceada9884bfcd55c48b423f07a6c486e2894",
+          "sample_index": 6,
+          "env_seed": 30733
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 151,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "355b0bb4dd30b77d1f1484dea156181591580084d3c3a4d1c44a67f726f2a364",
+          "sample_index": 7,
+          "env_seed": 35855
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 846,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "db3b196d0b324256fcd882c918a75494322dcc9f18fff6136e11580d9f1952ac",
+          "sample_index": 8,
+          "env_seed": 40977
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 741,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "11ab38f54823e0dbdf7fa5f589dc5fb166613d5a06db41b8590515537ca93a43",
+          "sample_index": 9,
+          "env_seed": 46099
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "chunk": "chunk_23_granular",
+      "round": 3,
+      "object": "granular",
+      "n": 10,
+      "seed": 5123,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_23_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 554,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "b71437be2408270b549cdc414628bd2027eaad3d1422149dd495fa0d066c01e7",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 358,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "5cc2bd028c9217715c79ad4a49902b3fa02ec06bcac22391628f4a85817ace5d",
+          "sample_index": 1,
+          "env_seed": 5124
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 277,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "27a24bc4296de42b10d2a7525a961220dd74458abd699e164d0ac0fee7379dd3",
+          "sample_index": 2,
+          "env_seed": 10247
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 222,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "4480d4e96be92ac7e72cd0a54a98bf42fd7e63fb2aa39a4fc675ed1a6152f670",
+          "sample_index": 3,
+          "env_seed": 15370
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 776,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "a6d1f91f90770e418829e3dfed344539a0b9f5f535f18763f013dffc5bd95f98",
+          "sample_index": 4,
+          "env_seed": 20493
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 665,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "1b4045ec5d44fd96ed76ed67ea236c1334f12ba53b61d33af4a54e1699c5851a",
+          "sample_index": 5,
+          "env_seed": 25616
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 156,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "dcf70ec9893a152f616dd48b20573d2d6fb41624c8f7f93b84614ca1a2fab53a",
+          "sample_index": 6,
+          "env_seed": 30739
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 105,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "5ee60dc0387e346090e81c0fe178997c6f87173cd4d453a7b00659f92d32f068",
+          "sample_index": 7,
+          "env_seed": 35862
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 741,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "e89b422305318bb6e4b594f92b9b8ed3c0defa66471fdb047a6f44fbcf59351f",
+          "sample_index": 8,
+          "env_seed": 40985
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 455,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "a8f616a8a518011212b1679421ab8c640d29622621445ee4613fb935ddeac86b",
+          "sample_index": 9,
+          "env_seed": 46108
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "chunk": "chunk_24_rope",
+      "round": 3,
+      "object": "rope",
+      "n": 10,
+      "seed": 5124,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_24_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 55,
+          "offset": 7,
+          "goal_H": 5,
+          "source_sha256": "dc112755d0c32508bb433184eea5b24e92083ec9d1d47af01e1074e3d9a62ab3",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 400,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "65d82f1c051833b6c654098df192f5080ee2dd8f9cf4ed8fa85593d04d598bf0",
+          "sample_index": 1,
+          "env_seed": 5125
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 747,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "f0847f9f9613578c9893d935a8b8b58183bd0b42d0dd0fe7a31471cda2a676b4",
+          "sample_index": 2,
+          "env_seed": 10249
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 232,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "2505a8019b0adc21e0e8add069a7ccaf068842d669d8853a05815a25b0adf9ec",
+          "sample_index": 3,
+          "env_seed": 15373
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 55,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "1247688200673cb21c6b424bb0993de7277aa335727c27f0b634805e87660d10",
+          "sample_index": 4,
+          "env_seed": 20497
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 675,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "80af434e5f3ff316b1b0f2d8fbedd789a01eba1c1be4db6ae50eb7f04f3f19c7",
+          "sample_index": 5,
+          "env_seed": 25621
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 111,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "f01ee0033ff710bb0ff1b28ac522883bfd19b76c4148c52b0de466c980d53b0c",
+          "sample_index": 6,
+          "env_seed": 30745
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 985,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "4190fcd67d2d76343822c1b0a6fec5bdfe238c4babba95fa6618af950f410612",
+          "sample_index": 7,
+          "env_seed": 35869
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 621,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "5110cdb4a0ad1b0fd4a9f01970e0a632ec5d38d4f1bd2c5823e8da1208bb65cf",
+          "sample_index": 8,
+          "env_seed": 40993
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 61,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "dba30536f3fb0bda3d7fc00cc0863949f575a1005243492796d022865b13c1e3",
+          "sample_index": 9,
+          "env_seed": 46117
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "chunk": "chunk_25_granular",
+      "round": 3,
+      "object": "granular",
+      "n": 10,
+      "seed": 5125,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_25_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 621,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "16005b03d4761b25e6e3fb33f560f7dc3619efc2459d9d92d88c963e8a420d0e",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 519,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "e64f2265b3e36be8950b1bd70f4858d57a4b3ece43191b3a6a54e027fcc9417a",
+          "sample_index": 1,
+          "env_seed": 5126
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 466,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "47a9331b3da16fe287d4edf0005a095d360557581e796face4ef07d17abb14e5",
+          "sample_index": 2,
+          "env_seed": 10251
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 129,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "938b4d1f01563c8f013d23772d09a3a38d9f7afbc9ca33ae017593ca4869b48d",
+          "sample_index": 3,
+          "env_seed": 15376
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 146,
+          "offset": 3,
+          "goal_H": 5,
+          "source_sha256": "2cd30806b0ffec40dd9bebe57f289377be50c19f6cf91503cf85b68f0ebcfdfe",
+          "sample_index": 4,
+          "env_seed": 20501
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 256,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "af883c80ad915a0f1f019aa31997829204d476815367621e38a8fef7723bea78",
+          "sample_index": 5,
+          "env_seed": 25626
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 146,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "65ee0229642a8bd4bf33b95518cfafafe5b1f525985d6cc8712b63c296f9fedf",
+          "sample_index": 6,
+          "env_seed": 30751
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 80,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "92b32d71c2b100a21b8bcdce6e4c1ee1fe11208054cd5eb70c116d252d189e44",
+          "sample_index": 7,
+          "env_seed": 35876
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 566,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "2fb21f8cfcfd66d038279b6bdf73ead654c2a3616da16bcb3bf50c34baeae4f9",
+          "sample_index": 8,
+          "env_seed": 41001
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 2,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "faa6fa1c551f9696e21410cb3afd545ee1705d74a0f9e7360929daf65fef65b2",
+          "sample_index": 9,
+          "env_seed": 46126
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "chunk": "chunk_26_rope",
+      "round": 3,
+      "object": "rope",
+      "n": 10,
+      "seed": 5126,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_26_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 461,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "c7df48dfa292330da71d666b2ecda83beea82f872a28351f26a2f05105d92449",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 579,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "13829ffa2fb1fd7ebb7d4a61977e0a394c39a84866e13eaf53c99d86e1b5bf80",
+          "sample_index": 1,
+          "env_seed": 5127
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 219,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "3915a585f649d2ca9146c4c2043dfbeccd59847ea9371ce53441b607d9721d4d",
+          "sample_index": 2,
+          "env_seed": 10253
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 90,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "c6162fa7e776d867e2fb57a245a01b843577cc4f7d9ceb3bb0e846b08f842e26",
+          "sample_index": 3,
+          "env_seed": 15379
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 579,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "16ea391f78a0c63189065a1d20b52255e16eb75f31de8cca068c983c8aa2b9d1",
+          "sample_index": 4,
+          "env_seed": 20505
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 441,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "a1f23ca47571fdf65a1d65e46c29696ef4e87362e630bcb523b0a46bc5920a2b",
+          "sample_index": 5,
+          "env_seed": 25631
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 7,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "004db6b0ff8e4b085bab312fbc87b1a0212d42a15b35967bda7bfcbc943fdfce",
+          "sample_index": 6,
+          "env_seed": 30757
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 45,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "0a4fed83e623056649d7d4257dee292241ebd2e35537233108c8ee021ebdd1fe",
+          "sample_index": 7,
+          "env_seed": 35883
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 45,
+          "offset": 14,
+          "goal_H": 5,
+          "source_sha256": "9aceafa768e55e150175c191539d9b7077ad7f31b7bfaee79b8fbe9a8cbd057e",
+          "sample_index": 8,
+          "env_seed": 41009
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 7,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "198877d763ee55f0044ac98b92bf5850a4bae6b49ab4c47923c6ae82256edf52",
+          "sample_index": 9,
+          "env_seed": 46135
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "chunk": "chunk_27_granular",
+      "round": 3,
+      "object": "granular",
+      "n": 10,
+      "seed": 5127,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_27_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 13,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "0fe1aa11a53dba80114113d0760b072326e7ea0c86b7391fc9567214da00c13b",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 111,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "e96b9aaa9aac5cee6c26dec1e10cb3d129f341b33944f18dc069d02308a7099b",
+          "sample_index": 1,
+          "env_seed": 5128
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 70,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "49cbe448f37e7ce928020bfd043f7c2bfdf80f41cec779e88bd0b83244f45a5f",
+          "sample_index": 2,
+          "env_seed": 10255
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 222,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "e1f7b6217c1d9fb623ac443b2a0b944eea1302ae172ddfb3681813a2ba6859f4",
+          "sample_index": 3,
+          "env_seed": 15382
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 602,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "2f40fe1894eb552320a1b735cb7bf8be71dcdfd4606593afc663bef23d44ef7f",
+          "sample_index": 4,
+          "env_seed": 20509
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 770,
+          "offset": 0,
+          "goal_H": 5,
+          "source_sha256": "8ac362921381fa054b0e0c9532a61c7691ffd1ff89f5fa5886aec4682f12cccc",
+          "sample_index": 5,
+          "env_seed": 25636
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 431,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "2e2af620a30882ef8881fd2602f8cec9f8096b10b12154cbea924ac11bb95663",
+          "sample_index": 6,
+          "env_seed": 30763
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 539,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "17df25bb962a8f80c5cf2d6a638bba75f1e63488042763ade71413a0b28601da",
+          "sample_index": 7,
+          "env_seed": 35890
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 776,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "b692c8fb382cb7d013a22a6b8e4ef5a7cc78107f1794c9396e7062479ba5b42e",
+          "sample_index": 8,
+          "env_seed": 41017
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 556,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "8d3d1bc2ba98b75fb1d961af56f6837e64b36d8e28c6734f38cd54d06b7ddb2c",
+          "sample_index": 9,
+          "env_seed": 46144
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "chunk": "chunk_28_rope",
+      "round": 3,
+      "object": "rope",
+      "n": 10,
+      "seed": 5128,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_28_rope.pkl",
+      "samples": [
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 572,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "c10280752559dbb461435b4fa7d5f2d2a33d604e71a949f8532a6fbc89c3d3ef",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 581,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "5fcf72c6492e6299564c3b39dcad676f9e8e16faa7e66534289d143c16978d7b",
+          "sample_index": 1,
+          "env_seed": 5129
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 146,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "1cf893b6eb451dc7d1a1fddfd159c2bf5a9fe4f3fc393f4ff80f6368afb9672d",
+          "sample_index": 2,
+          "env_seed": 10257
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 630,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "6919ec4a5a3858b2214955b28eb68d8101747e8bd9d4aff21667881af978035c",
+          "sample_index": 3,
+          "env_seed": 15385
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 581,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "60ce728fd3fa378103edb2a64947247da8f427c1956f001cdfd3c193c2f7a5d7",
+          "sample_index": 4,
+          "env_seed": 20513
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 638,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "bc3cd07218d4d3fb428af36e8ac549832b270cb034305567d048b51f35f588b8",
+          "sample_index": 5,
+          "env_seed": 25641
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 621,
+          "offset": 9,
+          "goal_H": 5,
+          "source_sha256": "5c56aa42c0d65117d9d006445d7353b951d0ed1c3d19cd3f8dbf9c358c1aea7e",
+          "sample_index": 6,
+          "env_seed": 30769
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 13,
+          "offset": 4,
+          "goal_H": 5,
+          "source_sha256": "9dce6020afd8031b60c53ebcf5aaf0052fda023a579a0b892802161e351d4116",
+          "sample_index": 7,
+          "env_seed": 35897
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 662,
+          "offset": 12,
+          "goal_H": 5,
+          "source_sha256": "2eed1559ce36f6e60550904e1705dbf86d2b3eef16a339e153eaa53fe876e470",
+          "sample_index": 8,
+          "env_seed": 41025
+        },
+        {
+          "object": "rope",
+          "round": 3,
+          "trajectory": 232,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "b38d53d7a167a4ebde25d211c02b4789cf8f38cc0ad3c436150eaf5b0f4c1e5a",
+          "sample_index": 9,
+          "env_seed": 46153
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "chunk": "chunk_29_granular",
+      "round": 3,
+      "object": "granular",
+      "n": 10,
+      "seed": 5129,
+      "target": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/targets/chunk_29_granular.pkl",
+      "samples": [
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 665,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "146d4dcd7cbecf4d4c4866b8fc8272c3887e793988c42ec2153e35c50fcc2b0d",
+          "sample_index": 0,
+          "env_seed": 1
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 358,
+          "offset": 5,
+          "goal_H": 5,
+          "source_sha256": "748fc9033837a5e0c1a4356c4662614e19994924cd8f60c86dfe8f54ea613db7",
+          "sample_index": 1,
+          "env_seed": 5130
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 630,
+          "offset": 10,
+          "goal_H": 5,
+          "source_sha256": "857ca68a55f89e6044b1e1529cc0b7d0679177e1c6aa49ec965f3720aefd4d0c",
+          "sample_index": 2,
+          "env_seed": 10259
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 461,
+          "offset": 8,
+          "goal_H": 5,
+          "source_sha256": "1d7d0c62d3f1cbd98146df1a6ed1641d42eec28480983755fb789d5d009a6e8f",
+          "sample_index": 3,
+          "env_seed": 15388
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 539,
+          "offset": 13,
+          "goal_H": 5,
+          "source_sha256": "b7f97996c5046e0580fe3b3de577818691e379686710bbc20fddb32fec17a122",
+          "sample_index": 4,
+          "env_seed": 20517
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 602,
+          "offset": 1,
+          "goal_H": 5,
+          "source_sha256": "af1ffb77a336d590073f31a95b3c4d72d5c3c013d36a22997cc3915bdb1ca3bc",
+          "sample_index": 5,
+          "env_seed": 25646
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 240,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "4fea1d586bcfb4802d01d1f4354fd0075c5f2b5fe5df9a61201557bbd055de10",
+          "sample_index": 6,
+          "env_seed": 30775
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 581,
+          "offset": 2,
+          "goal_H": 5,
+          "source_sha256": "d38ab9e156bb37feb6f64677109514dc699fecda28ec1ff6336c5440bee461f1",
+          "sample_index": 7,
+          "env_seed": 35904
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 549,
+          "offset": 6,
+          "goal_H": 5,
+          "source_sha256": "7178744d524ae9284c246968150dd16c1415643496886f2df505215b93be7b38",
+          "sample_index": 8,
+          "env_seed": 41033
+        },
+        {
+          "object": "granular",
+          "round": 3,
+          "trajectory": 566,
+          "offset": 11,
+          "goal_H": 5,
+          "source_sha256": "3771cf2d459b3fa61e52a08d4cc6e6716450b605378407e874ba0d4463d9c20f",
+          "sample_index": 9,
+          "env_seed": 46162
+        }
+      ]
+    }
+  ],
+  "sampling": "three disjoint validation-trajectory groups; 50 distinct 5-push windows per object per round",
+  "round_trajectory_groups": {
+    "rope": [
+      [
+        776,
+        256,
+        293,
+        894,
+        653,
+        2,
+        877,
+        222,
+        794,
+        712,
+        559,
+        918,
+        80,
+        549,
+        97,
+        358,
+        277,
+        770,
+        224,
+        806,
+        809,
+        617,
+        566,
+        574,
+        761,
+        754,
+        465,
+        454,
+        284,
+        455,
+        643,
+        863,
+        14
+      ],
+      [
+        395,
+        556,
+        481,
+        466,
+        710,
+        966,
+        527,
+        736,
+        822,
+        526,
+        105,
+        129,
+        115,
+        462,
+        753,
+        318,
+        539,
+        431,
+        875,
+        96,
+        519,
+        598,
+        898,
+        254,
+        520,
+        969,
+        634,
+        70,
+        19,
+        104,
+        557,
+        665,
+        330
+      ],
+      [
+        602,
+        232,
+        156,
+        461,
+        90,
+        985,
+        435,
+        581,
+        151,
+        747,
+        146,
+        7,
+        554,
+        400,
+        741,
+        441,
+        335,
+        621,
+        572,
+        13,
+        579,
+        846,
+        219,
+        662,
+        111,
+        393,
+        55,
+        870,
+        240,
+        61,
+        638,
+        630,
+        45,
+        675
+      ]
+    ],
+    "granular": [
+      [
+        284,
+        863,
+        806,
+        115,
+        753,
+        846,
+        526,
+        794,
+        754,
+        393,
+        898,
+        104,
+        527,
+        45,
+        822,
+        877,
+        634,
+        653,
+        395,
+        809,
+        520,
+        736,
+        55,
+        97,
+        19,
+        454,
+        985,
+        966,
+        151,
+        875,
+        7,
+        254,
+        574
+      ],
+      [
+        643,
+        710,
+        712,
+        318,
+        232,
+        465,
+        918,
+        90,
+        598,
+        969,
+        61,
+        579,
+        572,
+        662,
+        481,
+        559,
+        435,
+        224,
+        557,
+        14,
+        894,
+        747,
+        617,
+        761,
+        400,
+        462,
+        330,
+        638,
+        335,
+        675,
+        870,
+        96,
+        219
+      ],
+      [
+        549,
+        111,
+        455,
+        741,
+        554,
+        566,
+        602,
+        519,
+        539,
+        13,
+        105,
+        431,
+        222,
+        630,
+        621,
+        461,
+        556,
+        146,
+        156,
+        240,
+        2,
+        80,
+        466,
+        256,
+        358,
+        665,
+        70,
+        776,
+        129,
+        293,
+        441,
+        581,
+        277,
+        770
+      ]
+    ]
+  },
+  "source_meta": {
+    "rope": {
+      "states_shape": [
+        1000,
+        20,
+        1965,
+        4
+      ],
+      "actions_shape": [
+        1000,
+        20,
+        4
+      ],
+      "validation_trajectories": 100,
+      "split_seed": 42,
+      "split_ratio": 0.9,
+      "files": {
+        "states.pth": {
+          "path": "/data/zjc/adaJEPA/CL-JEPA/data/deformable/rope/states.pth",
+          "size": 628801111,
+          "mtime_ns": 1736373779000000000
+        },
+        "actions.pth": {
+          "path": "/data/zjc/adaJEPA/CL-JEPA/data/deformable/rope/actions.pth",
+          "size": 641180,
+          "mtime_ns": 1736373779000000000
+        }
+      }
+    },
+    "granular": {
+      "states_shape": [
+        1000,
+        20,
+        12774,
+        4
+      ],
+      "actions_shape": [
+        1000,
+        20,
+        4
+      ],
+      "validation_trajectories": 100,
+      "split_seed": 42,
+      "split_ratio": 0.9,
+      "files": {
+        "states.pth": {
+          "path": "/data/zjc/adaJEPA/CL-JEPA/data/deformable/granular/states.pth",
+          "size": 4087681111,
+          "mtime_ns": 1736373718000000000
+        },
+        "actions.pth": {
+          "path": "/data/zjc/adaJEPA/CL-JEPA/data/deformable/granular/actions.pth",
+          "size": 641180,
+          "mtime_ns": 1736373718000000000
+        }
+      }
+    }
+  },
+  "source_data": "/data/zjc/adaJEPA/CL-JEPA/data/deformable",
+  "root": "/data/zjc/adaJEPA/CL-JEPA-cudagraph",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/rope_dino_h1_fs1_e100_seed0",
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr2e4_mixed_20261103",
+  "commit": "b7da4fc6f00aba1b47e065ded548a1088e38cc48",
+  "planner": "cem",
+  "arm": "cls6a_free_with_abs_ratio_20",
+  "slow_lr": 0.0002,
+  "rounds": 3,
+  "episodes_per_round": 100,
+  "total_episodes": 300,
+  "generator_gpus": {
+    "rope": "4",
+    "granular": "6"
+  },
+  "chain_gpu": "4",
+  "keep_state_indices": [
+    9,
+    19,
+    29
+  ],
+  "generation_shards": [
+    {
+      "object": "rope",
+      "shard": 0,
+      "gpu": "4"
+    },
+    {
+      "object": "rope",
+      "shard": 1,
+      "gpu": "5"
+    },
+    {
+      "object": "granular",
+      "shard": 0,
+      "gpu": "6"
+    },
+    {
+      "object": "granular",
+      "shard": 1,
+      "gpu": "7"
+    }
+  ],
+  "first_round_policy": "Stop after 100 samples, analyze domains and performance, continue only if all conservative checks pass"
+}

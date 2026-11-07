@@ -1,0 +1,34 @@
+{
+  "method": "r3m",
+  "gpus": [
+    "4",
+    "5"
+  ],
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/r3m_T16k_e10",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/pushobj_T16k_bias",
+  "evaluation_scope": "T-only checkpoint transferred to H7t3",
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k",
+  "train_command": null,
+  "test_seeds": [
+    2000
+  ],
+  "episodes_per_shape": 50,
+  "planned_episodes": 350,
+  "total_chunks": 7,
+  "already_complete": 7,
+  "missing_chunks": [],
+  "first_evaluation": null,
+  "pid": 3100343,
+  "started": "2026-11-03T04:46:17+00:00",
+  "stage": "complete",
+  "jobs": {},
+  "updated": "2026-11-03T04:46:17+00:00",
+  "failures": [],
+  "summary": {
+    "complete_chunks": 7,
+    "episodes": 350,
+    "success_rate": 0.18857142857142858,
+    "unseen_success_rate": 0.18
+  },
+  "ended": "2026-11-03T04:46:17+00:00"
+}

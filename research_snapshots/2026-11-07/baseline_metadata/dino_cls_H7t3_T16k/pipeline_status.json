@@ -1,0 +1,65 @@
+{
+  "method": "dino_cls",
+  "gpus": [
+    "2",
+    "3"
+  ],
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dino_cls_T16k_e10",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/pushobj_T16k_bias",
+  "evaluation_scope": "T-only checkpoint transferred to H7t3",
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k",
+  "train_command": null,
+  "test_seeds": [
+    2000
+  ],
+  "episodes_per_shape": 50,
+  "planned_episodes": 350,
+  "total_chunks": 7,
+  "already_complete": 6,
+  "missing_chunks": [
+    "chunk_06_T"
+  ],
+  "first_evaluation": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/plan.py",
+    "--config-name",
+    "cont_plan_gd_pushobj.yaml",
+    "ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/dino_cls_T16k_e10",
+    "model_epoch=latest",
+    "eval_data_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_06_T.pkl",
+    "n_evals=50",
+    "+wandb_logging=false",
+    "planner.continual.w=0",
+    "planner.continual.tag=T",
+    "planner.continual.state_in=null",
+    "planner._target_=planning.continual.SlowFrozenMPCPlanner",
+    "planner.sub_planner.target=planning.cem.CEMPlanner",
+    "+planner.sub_planner.topk=30",
+    "+planner.sub_planner.num_samples=200",
+    "planner.sub_planner.opt_steps=10",
+    "seed=2000",
+    "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dino_cls_H7t3_T16k/chunk_06_T"
+  ],
+  "pid": 3100605,
+  "started": "2026-11-03T04:57:39+00:00",
+  "stage": "complete",
+  "jobs": {
+    "chunk_06_T": {
+      "gpu": "2",
+      "status": "complete",
+      "started": "2026-11-03T04:57:39+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T05:30:50+00:00"
+    }
+  },
+  "updated": "2026-11-03T05:30:50+00:00",
+  "failures": [],
+  "summary": {
+    "complete_chunks": 7,
+    "episodes": 350,
+    "success_rate": 0.14857142857142858,
+    "unseen_success_rate": 0.1
+  },
+  "ended": "2026-11-03T05:30:50+00:00"
+}

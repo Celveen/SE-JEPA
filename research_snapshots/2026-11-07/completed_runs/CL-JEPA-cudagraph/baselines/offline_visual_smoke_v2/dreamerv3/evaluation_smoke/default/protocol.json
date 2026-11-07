@@ -1,0 +1,23 @@
+{
+  "method": "dreamerv3",
+  "checkpoint_directory": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/offline_visual_smoke_v2/dreamerv3",
+  "checkpoint_sha256": "f804980b906d87832fc06e9c63153c90d00baeb08d746db8d44120567edd5dec",
+  "target_sha256": "99b834f7c3b1bca54f391b55058c7a579aac83d6bc5edea95ca9eb9925d24d7c",
+  "episodes": 1,
+  "planning_seed": 100,
+  "episode_planning_seed": "100 + sample index",
+  "environment_seed": "1 + 100 * sample index",
+  "cem_action_clipping": false,
+  "model_action_encoding": "tanh(physical relative action)",
+  "frameskip": 5,
+  "objective": "decoded RGB MSE in [-1,1] plus normalized proprio MSE; staged terminal/full-horizon objective",
+  "noise": "fresh per-MPC noise; realized seeds recorded",
+  "CEM": {
+    "samples": 200,
+    "topk": 30,
+    "iterations": 10,
+    "model_horizon": 5,
+    "max_replans": 1
+  },
+  "diagnostic_only": true
+}

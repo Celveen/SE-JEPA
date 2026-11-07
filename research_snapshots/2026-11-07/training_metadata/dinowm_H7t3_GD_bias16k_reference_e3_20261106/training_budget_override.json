@@ -1,0 +1,9 @@
+{
+  "original_planned_epochs": 100,
+  "effective_epochs": 3,
+  "evaluation_epoch": 3,
+  "reason": "User requested the same three-epoch training budget as the main method",
+  "original_directory_preserved": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e100",
+  "evaluation_path": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3",
+  "updated": "2026-11-03T14:26:05+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "training_padded_state_rows": 3936000,
+  "heldout_initial_states": 350,
+  "exact_initial_state_matches": 5,
+  "matched_indices": [
+    64,
+    145,
+    172,
+    261,
+    270
+  ],
+  "scope": "Exact-state screen only; test targets lack source_index provenance for a complete source-identity proof."
+}

@@ -1,0 +1,112 @@
+{
+  "dinowm_pusht_official": {
+    "checkpoint_epoch": 2,
+    "component_parameter_counts": {
+      "predictor": 20122600,
+      "decoder": 10140163,
+      "proprio_encoder": 50,
+      "action_encoder": 110,
+      "encoder": 22056576
+    },
+    "encoder_input_side": 196,
+    "visual_token_count": 196,
+    "official_vs_local_rollout_max_abs_error": {
+      "visual": 0.0,
+      "proprio": 0.0
+    },
+    "strict_state_dict_loads": true,
+    "extra_projector": false,
+    "candidate_count": 16,
+    "terminal_candidate_order": [
+      5,
+      6,
+      3,
+      0,
+      1,
+      14,
+      13,
+      9,
+      4,
+      2,
+      8,
+      12,
+      11,
+      15,
+      10,
+      7
+    ],
+    "staged_candidate_order": [
+      6,
+      5,
+      0,
+      3,
+      14,
+      1,
+      4,
+      12,
+      9,
+      13,
+      8,
+      15,
+      2,
+      10,
+      11,
+      7
+    ]
+  },
+  "dinowm_pushobj_bias16k_reference_e3": {
+    "checkpoint_epoch": 3,
+    "component_parameter_counts": {
+      "predictor": 20122600,
+      "decoder": 10140163,
+      "proprio_encoder": 50,
+      "action_encoder": 110,
+      "encoder": 22056576
+    },
+    "encoder_input_side": 196,
+    "visual_token_count": 196,
+    "official_vs_local_rollout_max_abs_error": {
+      "visual": 0.0,
+      "proprio": 0.0
+    },
+    "strict_state_dict_loads": true,
+    "extra_projector": false,
+    "candidate_count": 16,
+    "terminal_candidate_order": [
+      6,
+      3,
+      5,
+      0,
+      14,
+      1,
+      12,
+      9,
+      4,
+      13,
+      2,
+      8,
+      11,
+      15,
+      10,
+      7
+    ],
+    "staged_candidate_order": [
+      6,
+      0,
+      5,
+      3,
+      12,
+      1,
+      14,
+      4,
+      9,
+      8,
+      2,
+      15,
+      10,
+      13,
+      11,
+      7
+    ]
+  }
+}

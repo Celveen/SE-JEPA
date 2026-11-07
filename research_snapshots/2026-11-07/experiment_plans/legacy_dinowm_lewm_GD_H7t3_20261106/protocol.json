@@ -1,0 +1,56 @@
+{
+  "scope": "Existing checkpoint GD counterpart to the archived seven-shape CEM evaluations",
+  "models": [
+    {
+      "method": "lewm",
+      "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k",
+      "epoch": 10,
+      "microbatch": 50,
+      "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3_GD_bias16k_e10_20261106",
+      "checkpoint_file": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_bias16k/checkpoints/model_10.pth",
+      "checkpoint_sha256": "077d55daa795c627a9eca3d7e3a86ba7b98a843f6043a7e61b67a17bba8805a6",
+      "config_sha256": "8a2a8371730b1cc2a7059ec371a65949c3eaefa66442aed84db497f25e3b7c83"
+    },
+    {
+      "method": "dinowm",
+      "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3",
+      "epoch": 3,
+      "microbatch": 8,
+      "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106",
+      "checkpoint_file": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3/checkpoints/model_3.pth",
+      "checkpoint_sha256": "91134c87e679936b369f3829d8752a62c4510853fee7ec710e25f449c679006f",
+      "config_sha256": "5824a10702db68bdf767929558d1dda5829a57328e29df8d5d40f1c980e3ff56"
+    }
+  ],
+  "seed": 2000,
+  "episodes_per_shape": 50,
+  "episodes_per_model": 350,
+  "total_episodes": 700,
+  "objective": "staged",
+  "physical_steps_per_replan": 5,
+  "max_replans": 30,
+  "max_physical_steps": 150,
+  "horizon_model_steps": 5,
+  "gd": {
+    "steps": 100,
+    "lr": 0.1,
+    "optimizer": "adam",
+    "cosine_scheduler": true,
+    "initialization": "zero physical action",
+    "action_noise": 0,
+    "cuda_graph": false
+  },
+  "training_shapes": [
+    "T",
+    "L",
+    "Z",
+    "+"
+  ],
+  "unseen_shapes": [
+    "I",
+    "square",
+    "small_tee"
+  ],
+  "new_training": false,
+  "gpu": "0"
+}

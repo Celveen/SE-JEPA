@@ -1,0 +1,7 @@
+- ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_random_smoke_20261106
+- model_epoch=1
+- n_evals=1
+- eval_data_path=/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/targets/pushobj_L.pkl
+- seed=2000
+- planner.sub_planner.opt_steps=2
+- +wandb_logging=false

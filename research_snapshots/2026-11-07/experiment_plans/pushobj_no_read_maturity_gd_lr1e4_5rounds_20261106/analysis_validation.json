@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "source": "real control results",
+  "rounds_checked": 5,
+  "self_comparison_success_difference": 0,
+  "self_comparison_mpc_difference": 0,
+  "read_gate_tests_passed": 4
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "paired_gain_checks": [
+    "known_positive_gain",
+    "identical_rounds_zero_gain"
+  ],
+  "historical_round1_reextraction": {
+    "rope": {
+      "n": 50,
+      "mean_cd": 0.46890196062624456,
+      "successes": 37,
+      "val_ratio_geomean": 0.6685746695520275
+    },
+    "granular": {
+      "n": 50,
+      "mean_cd": 0.25694493353366854,
+      "successes": 16,
+      "val_ratio_geomean": 0.8886476092459396
+    }
+  },
+  "unchanged_target_ids_order_seeds_across_5_rounds": true,
+  "chain_links_checked": 50
+}

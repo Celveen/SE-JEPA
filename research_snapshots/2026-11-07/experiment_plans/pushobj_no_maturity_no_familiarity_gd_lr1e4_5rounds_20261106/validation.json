@@ -1,0 +1,825 @@
+{
+  "status": "passed_cpu_only",
+  "configs_composed": 35,
+  "joint_rule_matches_cem": true,
+  "targets_match_cem_and_gd_control": true,
+  "implementation_hash_unchanged": true,
+  "behavior_tests_reused_from": "/data/zjc/adaJEPA/experiment_plans/pushobj_no_maturity_no_familiarity_cem_lr1e4_5rounds_20261106/behavior_validation.json",
+  "differences": [
+    {
+      "chunk": "chunk_00_I",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_00_I.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_00_I.pkl"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_01_L",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_01_L.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_01_L.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_00_I/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_00_I/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_02_square",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_02_square.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_02_square.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_01_L/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_01_L/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_03_Z",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_03_Z.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_03_Z.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_02_square/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_02_square/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_04_small_tee",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_04_small_tee.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_04_small_tee.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_03_Z/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_03_Z/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_05_plus",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_05_plus.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_05_plus.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_04_small_tee/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_04_small_tee/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_06_T",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_06_T.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_06_T.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_05_plus/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_05_plus/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_07_I",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_07_I.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_07_I.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_06_T/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_06_T/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_08_L",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_08_L.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_08_L.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_07_I/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_07_I/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_09_square",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_09_square.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_09_square.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_08_L/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_08_L/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_10_Z",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_10_Z.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_10_Z.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_09_square/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_09_square/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_11_small_tee",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_11_small_tee.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_11_small_tee.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_10_Z/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_10_Z/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_12_plus",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_12_plus.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_12_plus.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_11_small_tee/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_11_small_tee/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_13_T",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_13_T.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_13_T.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_12_plus/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_12_plus/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_14_I",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_14_I.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_14_I.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_13_T/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_13_T/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_15_L",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_15_L.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_15_L.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_14_I/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_14_I/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_16_square",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_16_square.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_16_square.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_15_L/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_15_L/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_17_Z",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_17_Z.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_17_Z.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_16_square/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_16_square/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_18_small_tee",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_18_small_tee.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_18_small_tee.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_17_Z/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_17_Z/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_19_plus",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_19_plus.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_19_plus.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_18_small_tee/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_18_small_tee/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_20_T",
+      "differences": {
+        "eval_data_path": [
+          "/data/zjc/adaJEPA/CL-JEPA/data/cont_streams/S7t3/chunk_20_T.pkl",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/S7t5/chunk_20_T.pkl"
+        ],
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_19_plus/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_19_plus/continual_state.pt"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_21_I",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_20_T/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_20_T/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_22_L",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_21_I/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_21_I/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_23_square",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_22_L/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_22_L/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_24_Z",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_23_square/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_23_square/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_25_small_tee",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_24_Z/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_24_Z/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_26_plus",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_25_small_tee/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_25_small_tee/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_27_T",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_26_plus/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_26_plus/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_28_I",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_27_T/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_27_T/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_29_L",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_28_I/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_28_I/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_30_square",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_29_L/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_29_L/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_31_Z",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_30_square/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_30_square/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_32_small_tee",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_31_Z/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_31_Z/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_33_plus",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_32_small_tee/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_32_small_tee/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "chunk": "chunk_34_T",
+      "differences": {
+        "planner.continual.state_in": [
+          "/data/zjc/adaJEPA/CL-JEPA/eval_outputs/cont_S7t3/cls6a_free/chunk_33_plus/continual_state.pt",
+          "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_maturity_no_familiarity_gd_lr1e4_5rounds_20261106/cls6a_free/chunk_33_plus/continual_state.pt"
+        ],
+        "planner._target_": [
+          "planning.continual_v7.CLSv7MPCPlanner",
+          "planning.continual_ablation.CLSv7NoReadMaturityMPCPlanner"
+        ],
+        "planner.continual.familiar_thr": [
+          0.0146,
+          0
+        ],
+        "planner.continual.familiar_read": [
+          true,
+          false
+        ]
+      }
+    }
+  ]
+}

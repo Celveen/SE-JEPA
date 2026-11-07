@@ -1,0 +1,10 @@
+{
+  "epoch": 3,
+  "next_batch": 0,
+  "updates": 76554,
+  "epochs": 3,
+  "stages": [
+    "tokenizer",
+    "world_model"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed_cpu_only",
+  "configs_composed": 35,
+  "byte_identical_target_files": 35,
+  "episodes": 1750,
+  "logical_intervention": "read maturity filtering only",
+  "retained_mature_k": 3,
+  "retained_mature_ratio": 0.9,
+  "cuda_graph": true,
+  "reference_first_21_chunks_eager": true
+}

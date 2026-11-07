@@ -1,0 +1,210 @@
+{
+  "method": "r3m",
+  "gpus": [
+    "4",
+    "5"
+  ],
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/r3m_T16k_e10",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/pushobj_T16k_bias",
+  "evaluation_scope": "T-only checkpoint transferred to H7t3",
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k",
+  "train_command": null,
+  "total_chunks": 21,
+  "already_complete": 0,
+  "missing_chunks": [
+    "chunk_00_I",
+    "chunk_01_L",
+    "chunk_02_square",
+    "chunk_03_Z",
+    "chunk_04_small_tee",
+    "chunk_05_plus",
+    "chunk_06_T",
+    "chunk_07_I",
+    "chunk_08_L",
+    "chunk_09_square",
+    "chunk_10_Z",
+    "chunk_11_small_tee",
+    "chunk_12_plus",
+    "chunk_13_T",
+    "chunk_14_I",
+    "chunk_15_L",
+    "chunk_16_square",
+    "chunk_17_Z",
+    "chunk_18_small_tee",
+    "chunk_19_plus",
+    "chunk_20_T"
+  ],
+  "first_evaluation": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/plan.py",
+    "--config-name",
+    "cont_plan_gd_pushobj.yaml",
+    "ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/r3m_T16k_e10",
+    "model_epoch=latest",
+    "eval_data_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_00_I.pkl",
+    "n_evals=50",
+    "+wandb_logging=false",
+    "planner.continual.w=0",
+    "planner.continual.tag=I",
+    "planner.continual.state_in=null",
+    "planner._target_=planning.continual.SlowFrozenMPCPlanner",
+    "planner.sub_planner.target=planning.cem.CEMPlanner",
+    "+planner.sub_planner.topk=30",
+    "+planner.sub_planner.num_samples=200",
+    "planner.sub_planner.opt_steps=10",
+    "seed=2000",
+    "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/r3m_H7t3_T16k/chunk_00_I"
+  ],
+  "pid": 3080700,
+  "started": "2026-11-03T03:16:57+00:00",
+  "stage": "evaluating",
+  "jobs": {
+    "chunk_00_I": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T03:16:57+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:24:55+00:00"
+    },
+    "chunk_01_L": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T03:16:57+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:25:11+00:00"
+    },
+    "chunk_02_square": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T03:24:55+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:32:44+00:00"
+    },
+    "chunk_03_Z": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T03:25:11+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:32:59+00:00"
+    },
+    "chunk_04_small_tee": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T03:32:44+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:40:32+00:00"
+    },
+    "chunk_05_plus": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T03:32:59+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:40:44+00:00"
+    },
+    "chunk_06_T": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T03:40:32+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:48:21+00:00"
+    },
+    "chunk_07_I": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T03:40:44+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:48:27+00:00"
+    },
+    "chunk_08_L": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T03:48:21+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:56:11+00:00"
+    },
+    "chunk_09_square": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T03:48:27+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T03:56:10+00:00"
+    },
+    "chunk_11_small_tee": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T03:56:10+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:03:57+00:00"
+    },
+    "chunk_10_Z": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T03:56:11+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:03:59+00:00"
+    },
+    "chunk_13_T": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T04:03:57+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:11:44+00:00"
+    },
+    "chunk_12_plus": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T04:03:59+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:11:46+00:00"
+    },
+    "chunk_15_L": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T04:11:44+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:19:30+00:00"
+    },
+    "chunk_14_I": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T04:11:46+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:19:45+00:00"
+    },
+    "chunk_17_Z": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T04:19:30+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:27:18+00:00"
+    },
+    "chunk_16_square": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T04:19:45+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:27:34+00:00"
+    },
+    "chunk_19_plus": {
+      "gpu": "5",
+      "status": "complete",
+      "started": "2026-11-03T04:27:18+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:35:07+00:00"
+    },
+    "chunk_18_small_tee": {
+      "gpu": "4",
+      "status": "complete",
+      "started": "2026-11-03T04:27:34+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-03T04:35:22+00:00"
+    },
+    "chunk_20_T": {
+      "gpu": "4",
+      "status": "running",
+      "started": "2026-11-03T04:35:22+00:00"
+    }
+  },
+  "updated": "2026-11-03T04:35:22+00:00"
+}

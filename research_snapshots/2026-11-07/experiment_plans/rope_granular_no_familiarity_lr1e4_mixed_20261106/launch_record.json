@@ -1,0 +1,13 @@
+{
+  "pid": 2453573,
+  "gpu": "1",
+  "started_at": "2026-11-06T02:42:20.153581+00:00",
+  "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_no_familiarity_lr1e4_mixed_20261106/pipeline_launcher.log",
+  "slow_lr": 0.0001,
+  "rounds": 3,
+  "episodes": 300,
+  "familiar_thr": 0,
+  "familiar_read": false,
+  "initial_state": null,
+  "performance_based_early_stop": false
+}

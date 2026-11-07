@@ -1,0 +1,10 @@
+{
+  "method": "dinowm",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3",
+  "epoch": 3,
+  "microbatch": 8,
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106",
+  "checkpoint_file": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3/checkpoints/model_3.pth",
+  "checkpoint_sha256": "91134c87e679936b369f3829d8752a62c4510853fee7ec710e25f449c679006f",
+  "config_sha256": "5824a10702db68bdf767929558d1dda5829a57328e29df8d5d40f1c980e3ff56"
+}

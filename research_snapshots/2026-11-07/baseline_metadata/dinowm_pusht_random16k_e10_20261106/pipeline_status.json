@@ -1,0 +1,153 @@
+{
+  "task": "pusht",
+  "pid": 1864467,
+  "gpus": [
+    "6",
+    "7"
+  ],
+  "stage": "evaluating",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pusht_random16k_20261106",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e3_20261106",
+  "code_snapshot": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/code",
+  "epochs": 3,
+  "evaluation_epoch": 3,
+  "evaluation_only": true,
+  "training_trajectories": 16000,
+  "validation_trajectories": 1600,
+  "max_physical_steps": 150,
+  "physical_steps_per_replan": 25,
+  "max_replans": 6,
+  "planners": [
+    "gd",
+    "cem"
+  ],
+  "episodes_per_planner": 350,
+  "planned_episodes": 700,
+  "evaluation_plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+  "started": "2026-11-06T09:45:06+00:00",
+  "jobs": {
+    "gd/blur": {
+      "status": "complete",
+      "pid": 2844484,
+      "gpu": "7",
+      "started": "2026-11-06T09:45:07+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:17:11+00:00"
+    },
+    "gd/default": {
+      "status": "complete",
+      "pid": 2844485,
+      "gpu": "6",
+      "started": "2026-11-06T09:45:07+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:17:11+00:00"
+    },
+    "gd/snp": {
+      "status": "complete",
+      "pid": 2859187,
+      "gpu": "6",
+      "started": "2026-11-06T10:17:11+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:49:24+00:00"
+    },
+    "gd/dark": {
+      "status": "complete",
+      "pid": 2859193,
+      "gpu": "7",
+      "started": "2026-11-06T10:17:11+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:48:55+00:00"
+    },
+    "gd/red_object": {
+      "status": "complete",
+      "pid": 2870912,
+      "gpu": "7",
+      "started": "2026-11-06T10:48:55+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:20:35+00:00"
+    },
+    "gd/red_agent": {
+      "status": "complete",
+      "pid": 2871197,
+      "gpu": "6",
+      "started": "2026-11-06T10:49:24+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:21:36+00:00"
+    },
+    "cem/default": {
+      "status": "complete",
+      "pid": 2881488,
+      "gpu": "7",
+      "started": "2026-11-06T11:20:35+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T17:56:50+00:00"
+    },
+    "gd/red_goal": {
+      "status": "complete",
+      "pid": 2882081,
+      "gpu": "6",
+      "started": "2026-11-06T11:21:36+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:53:41+00:00"
+    },
+    "cem/blur": {
+      "status": "complete",
+      "pid": 2896135,
+      "gpu": "6",
+      "started": "2026-11-06T11:53:41+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T18:33:13+00:00"
+    },
+    "cem/snp": {
+      "status": "complete",
+      "pid": 3009641,
+      "gpu": "7",
+      "started": "2026-11-06T17:56:50+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T00:32:51+00:00"
+    },
+    "cem/dark": {
+      "status": "complete",
+      "pid": 3017245,
+      "gpu": "6",
+      "started": "2026-11-06T18:33:13+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T01:12:25+00:00"
+    },
+    "cem/red_agent": {
+      "status": "complete",
+      "pid": 3087673,
+      "gpu": "7",
+      "started": "2026-11-07T00:32:51+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T07:08:58+00:00"
+    },
+    "cem/red_object": {
+      "status": "running",
+      "pid": 3095193,
+      "gpu": "6",
+      "started": "2026-11-07T01:12:25+00:00",
+      "pretraining_shape_status": "seen"
+    },
+    "cem/red_goal": {
+      "status": "running",
+      "pid": 3170229,
+      "gpu": "7",
+      "started": "2026-11-07T07:08:58+00:00",
+      "pretraining_shape_status": "seen"
+    }
+  },
+  "updated": "2026-11-07T07:08:58+00:00"
+}

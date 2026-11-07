@@ -1,0 +1,36 @@
+{
+  "official_commit": "0a9492fa12044b852ae9e001cc74604b79c8bb0c",
+  "official_pusht_checkpoint_sha256": "e909f0cec958fc0b49a79f2e85730ae6b5f83dee61a224705f91883eb3bb74c5",
+  "official_pusht_checkpoint_matches_download_receipt": true,
+  "saved_action_replay_episodes": 500,
+  "saved_action_replay_mismatches": 0,
+  "initial_successes_by_run": {
+    "eval_outputs/baselines/dinowm_H7t3/chunk_00_I": 1,
+    "eval_outputs/baselines/dinowm_H7t3/chunk_01_L": 1
+  },
+  "color_successes": {
+    "red_agent": 37,
+    "red_object": 23,
+    "red_goal": 38
+  },
+  "color_episodes": 150,
+  "color_mean_percent": 65.33333333333333,
+  "official_test_shapes_from_figure5": [
+    "L",
+    "+"
+  ],
+  "local_pretrain_shapes": [
+    "T",
+    "L",
+    "Z",
+    "+"
+  ],
+  "local_unseen_shapes": [
+    "I",
+    "square",
+    "small_tee"
+  ],
+  "official_replan_physical_steps": 25,
+  "local_replan_physical_steps": 5,
+  "training_vs_test_source_identity_proof": "incomplete: test source_index provenance unavailable"
+}

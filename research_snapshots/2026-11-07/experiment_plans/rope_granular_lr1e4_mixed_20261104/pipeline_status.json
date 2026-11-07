@@ -1,0 +1,102 @@
+{
+  "status": "needs_review",
+  "pid": 1921543,
+  "gpu": "1",
+  "slow_lr": 0.0001,
+  "started_at": "2026-11-04T05:07:12.367541+00:00",
+  "stage": "stopped_after_round_1",
+  "updated_at": "2026-11-04T11:06:13.146363+00:00",
+  "round": 1,
+  "completed_rounds": 1,
+  "last_performance": {
+    "rope": {
+      "n": 50,
+      "initial_cd_mean": 1.7271848054176306,
+      "final_cd_mean": 0.5102407985925674,
+      "final_cd_median": 0.30540473759174347,
+      "final_cd_max": 2.82464599609375,
+      "mean_cd_improvement": 1.2169440068250628,
+      "improved_samples": 48,
+      "successes": 34,
+      "threshold": 0.5,
+      "read_counts": {
+        "None": 30,
+        "d0": 20
+      },
+      "write_counts": {
+        "None": 26,
+        "d0": 24
+      },
+      "write_rules": {
+        "pending": 2,
+        "new_from_pending": 1,
+        "direction": 3,
+        "familiar": 24,
+        "learner": 20
+      }
+    },
+    "granular": {
+      "n": 50,
+      "initial_cd_mean": 0.5562700887966339,
+      "final_cd_mean": 0.5056765335798263,
+      "final_cd_median": 0.42951205372810364,
+      "final_cd_max": 1.1224000453948975,
+      "mean_cd_improvement": 0.05059355521680749,
+      "improved_samples": 32,
+      "successes": 0,
+      "threshold": 0.2,
+      "read_counts": {
+        "d0": 6,
+        "d1": 44
+      },
+      "write_counts": {
+        "None": 2,
+        "d1": 48
+      },
+      "write_rules": {
+        "pending": 2,
+        "new_from_pending": 1,
+        "abs_join": 3,
+        "learner": 44
+      }
+    }
+  },
+  "last_domains": {
+    "d0": {
+      "n": 26,
+      "tags": {
+        "rope": 26
+      },
+      "learner": true,
+      "mature": true,
+      "val_last": [
+        0.6564928365105817,
+        0.6011499860339747,
+        0.48412783433959933
+      ]
+    },
+    "d1": {
+      "n": 50,
+      "tags": {
+        "granular": 50
+      },
+      "learner": true,
+      "mature": true,
+      "val_last": [
+        0.145832232142084,
+        0.1722031565745822,
+        0.15927430656266134
+      ]
+    }
+  },
+  "checks": {
+    "complete_100_samples": true,
+    "no_runtime_or_numerical_error": true,
+    "exactly_two_active_domains": true,
+    "domains_are_pure_rope_and_granular": true,
+    "both_domains_have_mature_learners": true,
+    "both_objects_improve_mean_cd": true,
+    "both_objects_have_successes": false
+  },
+  "ended_at": "2026-11-04T11:06:13.146344+00:00"
+}

@@ -1,0 +1,52 @@
+# LeWM baseline on rope (train_lewm.py). Model and training follow le-wm (config/train/lewm.yaml, config/train/model/lewm.yaml);
+# the env/dataset block is the one our own world model for this task was trained with.
+saved_folder: /data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_rope
+img_size: 224
+frameskip: 1
+num_hist: 1
+num_pred: 1
+num_action_repeat: 1
+model:
+  _target_: models.lewm.LeWMWorldModel
+  history_size: 1
+  img_size: 224
+  patch_size: 14
+  embed_dim: 192
+  pred_depth: 6
+  pred_heads: 16
+  pred_mlp_dim: 2048
+  pred_dim_head: 64
+  pred_dropout: 0.1
+  proj_hidden_dim: 2048
+training:
+  seed: 0
+  epochs: 100
+  batch_size: 128
+  lr: 5.0e-05
+  weight_decay: 0.001
+  grad_clip: 1.0
+  sigreg_weight: 0.09
+  sigreg:
+    knots: 17
+    num_proj: 1024
+  num_workers: 24
+  log_every: 200
+  val_batches: 100
+  bn_batches: 200  # BatchNorm statistics re-estimated at the end of each epoch (train_lewm.recalibrate_bn)
+env:
+  name: deformable_env
+  args: []
+  kwargs:
+    object_name: rope
+  load_dir: ''
+  dataset:
+    _target_: datasets.deformable_env_dset.load_deformable_dset_slice_train_val
+    n_rollout: null
+    normalize_action: true
+    data_path: /data/zjc/adaJEPA/CL-JEPA/data/deformable
+    object_name: rope
+    split_ratio: 0.9
+    transform:
+      _target_: datasets.img_transforms.default_transform
+      img_size: 224
+  decoder_path: null

@@ -1,0 +1,68 @@
+{
+  "method": "ddpwm",
+  "gpus": [
+    "6",
+    "7"
+  ],
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_bias16k",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/pushobj_bias_16k",
+  "evaluation_scope": "PushObj checkpoint evaluated on H7t3",
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3",
+  "train_command": null,
+  "total_chunks": 21,
+  "already_complete": 7,
+  "missing_chunks": [
+    "chunk_07_I",
+    "chunk_08_L",
+    "chunk_09_square",
+    "chunk_10_Z",
+    "chunk_11_small_tee",
+    "chunk_12_plus",
+    "chunk_13_T",
+    "chunk_14_I",
+    "chunk_15_L",
+    "chunk_16_square",
+    "chunk_17_Z",
+    "chunk_18_small_tee",
+    "chunk_19_plus",
+    "chunk_20_T"
+  ],
+  "first_evaluation": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/plan.py",
+    "--config-name",
+    "cont_plan_gd_pushobj.yaml",
+    "ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/ddpwm_bias16k",
+    "model_epoch=latest",
+    "eval_data_path=/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_07_I.pkl",
+    "n_evals=50",
+    "+wandb_logging=false",
+    "planner.continual.w=0",
+    "planner.continual.tag=I",
+    "planner.continual.state_in=null",
+    "planner._target_=planning.continual.SlowFrozenMPCPlanner",
+    "planner.sub_planner.target=planning.cem.CEMPlanner",
+    "+planner.sub_planner.topk=30",
+    "+planner.sub_planner.num_samples=200",
+    "planner.sub_planner.opt_steps=10",
+    "seed=2100",
+    "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/ddpwm_H7t3/chunk_07_I"
+  ],
+  "pid": 3080701,
+  "started": "2026-11-03T03:16:57+00:00",
+  "stage": "evaluating",
+  "jobs": {
+    "chunk_07_I": {
+      "gpu": "6",
+      "status": "running",
+      "started": "2026-11-03T03:16:57+00:00"
+    },
+    "chunk_08_L": {
+      "gpu": "7",
+      "status": "running",
+      "started": "2026-11-03T03:16:57+00:00"
+    }
+  },
+  "updated": "2026-11-03T03:16:57+00:00"
+}

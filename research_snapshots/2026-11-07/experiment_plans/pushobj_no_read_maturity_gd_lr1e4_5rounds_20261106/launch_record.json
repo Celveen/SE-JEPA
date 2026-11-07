@@ -1,0 +1,12 @@
+{
+  "pid": 2441649,
+  "gpu": "0",
+  "started_at": "2026-11-06T02:08:12.106442+00:00",
+  "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/pushobj_no_read_maturity_gd_lr1e4_5rounds_20261106/launcher.log",
+  "slow_lr": 0.0001,
+  "planner": "GD",
+  "cuda_graph": true,
+  "rounds": 5,
+  "episodes": 1750,
+  "intervention": "Remove maturity filtering only from read candidates; retain original maturity checks for all other mechanisms"
+}

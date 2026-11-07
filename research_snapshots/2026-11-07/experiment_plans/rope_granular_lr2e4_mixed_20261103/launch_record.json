@@ -1,0 +1,13 @@
+{
+  "pid": 3102156,
+  "started_at": "2026-11-03T04:51:32.657283+00:00",
+  "launcher_log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr2e4_mixed_20261103/pipeline_launcher.log",
+  "authorization": "User approved CEM, GPUs 4\u20137, review after round 1 before continuation",
+  "chain_gpu": "4",
+  "target_gpus": [
+    "4",
+    "5",
+    "6",
+    "7"
+  ]
+}

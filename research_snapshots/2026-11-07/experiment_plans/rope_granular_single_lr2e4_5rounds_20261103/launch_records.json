@@ -1,0 +1,16 @@
+[
+  {
+    "object": "rope",
+    "gpu": "5",
+    "pid": 3248905,
+    "started_at": "2026-11-03T05:50:10.298341+00:00",
+    "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_single_lr2e4_5rounds_20261103/rope_launcher.log"
+  },
+  {
+    "object": "granular",
+    "gpu": "6",
+    "pid": 3248906,
+    "started_at": "2026-11-03T05:50:10.300537+00:00",
+    "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_single_lr2e4_5rounds_20261103/granular_launcher.log"
+  }
+]

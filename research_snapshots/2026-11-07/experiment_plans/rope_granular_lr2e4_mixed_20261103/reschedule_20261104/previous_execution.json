@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "pid": 1853049,
+  "through_round": 2,
+  "gpu": "4",
+  "started_at": "2026-11-03T21:02:04.782204+00:00",
+  "current_chunk": "chunk_19_granular",
+  "current_round": 2,
+  "completed_chunks": 20,
+  "completed_episodes": 200,
+  "ended_at": "2026-11-04T03:20:09.358140+00:00"
+}

@@ -1,0 +1,131 @@
+{
+  "status": "running",
+  "pid": 3102156,
+  "started_at": "2026-11-03T04:51:32.693869+00:00",
+  "stage": "waiting_for_free_devices",
+  "updated_at": "2026-11-04T05:06:49.743661+00:00",
+  "round": 2,
+  "generation_workers": [
+    {
+      "pid": 1846473,
+      "gpu": "4",
+      "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr2e4_mixed_20261103/pipeline_logs/targets_r2_rope_s0_gpu4.log"
+    },
+    {
+      "pid": 1846474,
+      "gpu": "5",
+      "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr2e4_mixed_20261103/pipeline_logs/targets_r2_rope_s1_gpu5.log"
+    },
+    {
+      "pid": 1846475,
+      "gpu": "6",
+      "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr2e4_mixed_20261103/pipeline_logs/targets_r2_granular_s0_gpu6.log"
+    },
+    {
+      "pid": 1846476,
+      "gpu": "7",
+      "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr2e4_mixed_20261103/pipeline_logs/targets_r2_granular_s1_gpu7.log"
+    }
+  ],
+  "gpu": "4",
+  "round_1_review": "/data/zjc/adaJEPA/experiment_plans/rope_granular_lr2e4_mixed_20261103/round_1_review.md",
+  "round_1_checks": {
+    "complete_100_samples": true,
+    "no_runtime_or_numerical_error": true,
+    "exactly_two_active_domains": true,
+    "domains_are_pure_rope_and_granular": true,
+    "both_domains_have_mature_learners": true,
+    "both_objects_improve_mean_cd": true,
+    "both_objects_have_successes": true
+  },
+  "round_1_performance": {
+    "rope": {
+      "n": 50,
+      "initial_cd_mean": 1.7271848054176306,
+      "final_cd_mean": 0.5978655245155096,
+      "final_cd_median": 0.38657738268375397,
+      "final_cd_max": 2.6674461364746094,
+      "mean_cd_improvement": 1.1293192809021206,
+      "improved_samples": 45,
+      "successes": 30,
+      "threshold": 0.5,
+      "read_counts": {
+        "None": 28,
+        "d0": 22
+      },
+      "write_counts": {
+        "None": 25,
+        "d0": 25
+      },
+      "write_rules": {
+        "pending": 2,
+        "new_from_pending": 1,
+        "direction": 3,
+        "familiar": 22,
+        "learner": 21,
+        "rejected": 1
+      }
+    },
+    "granular": {
+      "n": 50,
+      "initial_cd_mean": 0.5562700887966339,
+      "final_cd_mean": 0.47128746449947356,
+      "final_cd_median": 0.403364360332489,
+      "final_cd_max": 1.0400763750076294,
+      "mean_cd_improvement": 0.08498262429716026,
+      "improved_samples": 37,
+      "successes": 1,
+      "threshold": 0.2,
+      "read_counts": {
+        "None": 3,
+        "d0": 3,
+        "d1": 44
+      },
+      "write_counts": {
+        "None": 2,
+        "d1": 48
+      },
+      "write_rules": {
+        "pending": 2,
+        "new_from_pending": 1,
+        "direction": 1,
+        "abs_join": 2,
+        "learner": 44
+      }
+    }
+  },
+  "round_1_domains": {
+    "d0": {
+      "n": 27,
+      "tags": {
+        "rope": 27
+      },
+      "learner": true,
+      "mature": true,
+      "val_last": [
+        0.43761154181568623,
+        0.5034120817587802,
+        0.5059423127606799
+      ]
+    },
+    "d1": {
+      "n": 50,
+      "tags": {
+        "granular": 50
+      },
+      "learner": true,
+      "mature": true,
+      "val_last": [
+        0.16087401338436366,
+        0.12406276626775112,
+        0.13342829647586046
+      ]
+    }
+  },
+  "requested_gpus": [
+    "4",
+    "5",
+    "6",
+    "7"
+  ]
+}

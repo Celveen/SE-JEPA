@@ -1,0 +1,122 @@
+{
+  "method": "dinowm",
+  "pid": 2460494,
+  "gpu": "0",
+  "stage": "complete",
+  "planned_episodes": 350,
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_bias16k_reference_e3",
+  "epoch": 3,
+  "planner": "gd",
+  "jobs": {
+    "chunk_00_I": {
+      "status": "complete",
+      "pid": 2853375,
+      "started": "2026-11-06T10:04:03+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:49:55+00:00"
+    },
+    "chunk_01_L": {
+      "status": "complete",
+      "pid": 2871438,
+      "started": "2026-11-06T10:49:55+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:35:44+00:00"
+    },
+    "chunk_02_square": {
+      "status": "complete",
+      "pid": 2888196,
+      "started": "2026-11-06T11:35:44+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T12:21:29+00:00"
+    },
+    "chunk_03_Z": {
+      "status": "complete",
+      "pid": 2908174,
+      "started": "2026-11-06T12:21:30+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T13:07:24+00:00"
+    },
+    "chunk_04_small_tee": {
+      "status": "complete",
+      "pid": 2915750,
+      "started": "2026-11-06T13:07:24+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T13:53:15+00:00"
+    },
+    "chunk_05_plus": {
+      "status": "complete",
+      "pid": 2926834,
+      "started": "2026-11-06T13:53:15+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T14:39:00+00:00"
+    },
+    "chunk_06_T": {
+      "status": "complete",
+      "pid": 2932101,
+      "started": "2026-11-06T14:39:01+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-06T15:24:48+00:00"
+    }
+  },
+  "updated": "2026-11-06T15:24:48+00:00",
+  "active_child_pid": 2932101,
+  "current_shape": "T",
+  "summary": {
+    "method": "dinowm",
+    "epoch": 3,
+    "checkpoint_sha256": "91134c87e679936b369f3829d8752a62c4510853fee7ec710e25f449c679006f",
+    "planner": "gd",
+    "episodes": 350,
+    "seed": 2000,
+    "by_shape": {
+      "I": {
+        "success_rate": 0.18,
+        "successes": 9,
+        "episodes": 50,
+        "mean_mpc_steps": 25.68
+      },
+      "L": {
+        "success_rate": 0.72,
+        "successes": 36,
+        "episodes": 50,
+        "mean_mpc_steps": 12.66
+      },
+      "square": {
+        "success_rate": 0.3,
+        "successes": 15,
+        "episodes": 50,
+        "mean_mpc_steps": 22.78
+      },
+      "Z": {
+        "success_rate": 0.46,
+        "successes": 23,
+        "episodes": 50,
+        "mean_mpc_steps": 19.08
+      },
+      "small_tee": {
+        "success_rate": 0.6,
+        "successes": 30,
+        "episodes": 50,
+        "mean_mpc_steps": 15.3
+      },
+      "+": {
+        "success_rate": 0.56,
+        "successes": 28,
+        "episodes": 50,
+        "mean_mpc_steps": 16.78
+      },
+      "T": {
+        "success_rate": 0.62,
+        "successes": 31,
+        "episodes": 50,
+        "mean_mpc_steps": 15.44
+      }
+    },
+    "all_success_rate": 0.49142857142857144,
+    "unseen_success_rate": 0.36000000000000004,
+    "seen_success_rate": 0.59,
+    "mean_mpc_steps": 18.245714285714286,
+    "mean_physical_steps": 91.22857142857143
+  },
+  "ended": "2026-11-06T15:24:48+00:00"
+}

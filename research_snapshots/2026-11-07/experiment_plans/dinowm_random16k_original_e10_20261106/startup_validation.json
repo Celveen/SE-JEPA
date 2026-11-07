@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-11-06T04:12:12+00:00",
+  "tasks": {
+    "pushobj": {
+      "training_pid": 2560994,
+      "gpus": [
+        "2",
+        "3"
+      ],
+      "stage": "training",
+      "epochs": 10,
+      "training_data": "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pushobj_random16k_20261106",
+      "heldout_exact_initial_state_matches": 0
+    },
+    "pusht": {
+      "training_pid": 2560995,
+      "gpus": [
+        "6",
+        "7"
+      ],
+      "stage": "training",
+      "epochs": 10,
+      "training_data": "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pusht_random16k_20261106",
+      "heldout_exact_initial_state_matches": 0
+    }
+  },
+  "full_300_candidate_diagnostic": {
+    "episodes": 1,
+    "max_replans": 6,
+    "physical_steps_per_replan": 25,
+    "cem_iterations_for_smoke": 2,
+    "peak_reserved_GiB": 23.744140625,
+    "frozen_weights_unchanged": true
+  }
+}

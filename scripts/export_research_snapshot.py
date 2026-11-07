@@ -77,7 +77,8 @@ def main():
             path = directory / name
             if path.exists():
                 entries.append(store_file(path, relative / (name + ".gz"), compressed=True))
-        for name in ["protocol.json", "run_metadata.json"]:
+        for name in ["protocol.json", "run_metadata.json", "runtime_protocol.json",
+                     "launch_command.json", "checkpoint_identity.json", "frozen_weights_check.json"]:
             path = directory / name
             if path.exists():
                 entries.append(store_file(path, relative / name, role="run_protocol"))
@@ -150,6 +151,8 @@ def main():
         (ROOT / "eval_outputs/rope_cl_single/paper/data", Path("paper_data/deformable"), {".csv"}),
         (paper / "drive_materials", Path("paper_data/drive_materials"), {".json", ".csv", ".txt", ".md", ".png"}),
         (paper / "structure_assets", Path("plots"), {".png"}),
+        (ROOT / "reports/dinowm_audit_20261106", Path("audits/dinowm_20261106"),
+         {".py", ".json", ".yaml", ".yml", ".md", ".csv", ".txt", ".png"}),
     ]
     for source, destination, suffixes in collections:
         for path in sorted(source.rglob("*")):
@@ -225,6 +228,48 @@ def main():
         if complete and method == "dinowm":
             item["unseen_success_rate_percent"] = float(np.mean([rates[d] for d in ["I", "square", "small_tee"]]))
         latest[method] = item
+
+    # Preserve every pipeline's metadata, including the new dual-planner runs.
+    # Completed chunks are selected above; a pipeline status is only a timestamped
+    # observation and must not turn unfinished conditions into completed results.
+    stored_paths = {entry["path"] for entry in files}
+
+    def store_unique(source, relative, role, compressed=False):
+        if relative.as_posix() not in stored_paths:
+            files.append(store_file(source, relative, compressed=compressed, role=role))
+            stored_paths.add(relative.as_posix())
+
+    pipeline_index = {}
+    for folder in sorted((ROOT / "eval_outputs/baselines").iterdir()):
+        if not folder.is_dir() or folder.is_symlink():
+            continue
+        status_path = folder / "pipeline_status.json"
+        if not status_path.exists():
+            continue
+        for path in sorted(folder.iterdir()):
+            if path.is_file() and path.suffix in {".json", ".yaml", ".yml", ".patch", ".txt"}:
+                store_unique(path, Path("baseline_metadata") / folder.name / path.name,
+                             "pipeline_metadata")
+        status = json.loads((output / "baseline_metadata" / folder.name / "pipeline_status.json").read_text())
+        selected = [run for run in runs if Path(run["source"]).is_relative_to(folder)]
+        pipeline_index[folder.name] = {
+            "recorded_stage": status.get("stage"),
+            "completed_directories_in_snapshot": len(selected),
+            "episodes_in_completed_directories": sum(run["episodes"] for run in selected),
+            "runs": [run["directory"] for run in selected],
+            "metadata": f"baseline_metadata/{folder.name}",
+        }
+        checkpoint_value = status.get("checkpoint")
+        if checkpoint_value:
+            checkpoint = Path(checkpoint_value)
+            if checkpoint.is_dir():
+                for path in sorted(checkpoint.iterdir()):
+                    if path.is_file() and path.suffix in {".json", ".jsonl", ".yaml", ".yml"}:
+                        compressed = path.suffix == ".jsonl"
+                        store_unique(path, Path("training_metadata") / folder.name /
+                                     (path.name + (".gz" if compressed else "")),
+                                     "training_metadata", compressed)
+    (output / "baseline_pipeline_index.json").write_text(json.dumps(pipeline_index, indent=2))
     (output / "latest_baseline_results.json").write_text(json.dumps(latest, indent=2))
     (output / "unavailable_sources.json").write_text(json.dumps(unavailable, indent=2))
     sizes = sum(entry["bytes"] for entry in files)
@@ -251,9 +296,11 @@ This snapshot archives {len(runs)} completed evaluation directories ({sizes / 2*
 - Newly running experiments may contribute completed chunks only. A completed chunk does not imply that its entire experiment has finished.
 - New visual experiments use resampled learning targets and an independent held-out set. Existing VIS50 baselines use their recorded targets/noise protocol. Their sources remain distinct.
 - Existing Rope/Granular paper data are the earlier version, pending the author's newer data. Legacy environment `successes` for deformable tasks are not the paper's CD-threshold success metric; use CD summaries rather than treating those raw flags as paper SR.
-- The new DreamerV3 and IRIS scope is original T plus six visual shifts, seven conditions x 50 episodes. New DINO-WM evaluation uses seven PushObj shapes x 50 episodes, seed 2000.
-- The effective training budget is three epochs per stage. IRIS has separate tokenizer/dynamics stages. DINO-WM uses the full 52.32M model and fixed epoch 3; historical e100 paths/configs do not change that effective budget.
-- Pipeline state and training records are preserved under baseline_metadata/ and training_metadata/. The current complete baseline aggregates are in latest_baseline_results.json; historical_baseline_tables.md is source history, not the latest aggregate.
+- DreamerV3 and IRIS cover original T plus six visual shifts, seven conditions x 50 episodes. Legacy DINO-WM and LeWM GD comparisons cover seven PushObj shapes x 50 episodes, seed 2000, using the same weights and targets as their prior CEM evaluations (staged / 5 physical steps / 30 replans).
+- Random16k DINO-WM uses fixed epoch 3 and separate GD/CEM evaluations (last / 25 physical steps / 6 replans). PushObj covers I, square, small_tee, 150 episodes per planner; I and square are training-seen for these weights, and only small_tee is unseen. PushT covers seven visual conditions, 350 episodes per planner. Never merge these with the legacy seven-shape protocol.
+- The effective training budget for the new DINO-WM, DreamerV3 and each IRIS stage is three epochs. Historical DINO-WM e100/e10 paths do not change the effective epoch-3 budget. The reused legacy LeWM checkpoint remains epoch 10.
+- Pipeline state and training records are preserved under baseline_metadata/ and training_metadata/. baseline_pipeline_index.json lists all archived pipelines and completed chunks. latest_baseline_results.json retains the earlier DreamerV3/IRIS/DINO-WM CEM aggregate schema; newly added runs have their summaries under baseline_metadata/. A partial pipeline has no all-condition final score. historical_baseline_tables.md is source history, not the latest aggregate.
+- See experiment_plans/baseline_results_20261107_1351.md for the newly completed GD/CEM results and audits/dinowm_20261106/ for the DINO-WM implementation and replay audit. Status files describe the export time, not a live process guarantee.
 - experiment_plans/ and analyses/ preserve new seven-round PushObj and Rope/Granular experiments, including stopped/partial mixed streams. A stopped run is not silently relabeled complete.
 
 ## Reuse

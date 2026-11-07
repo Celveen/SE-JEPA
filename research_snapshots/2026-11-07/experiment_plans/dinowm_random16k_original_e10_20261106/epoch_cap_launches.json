@@ -1,0 +1,28 @@
+[
+  {
+    "task": "pushobj",
+    "pid": 1864271,
+    "command": [
+      "/data/zjc/envs/cljepa/bin/python",
+      "-u",
+      "/data/zjc/adaJEPA/CL-JEPA-cudagraph/scripts/cap_dinowm_random_epochs.py",
+      "--run-root",
+      "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106",
+      "--epochs",
+      "3"
+    ]
+  },
+  {
+    "task": "pusht",
+    "pid": 1864467,
+    "command": [
+      "/data/zjc/envs/cljepa/bin/python",
+      "-u",
+      "/data/zjc/adaJEPA/CL-JEPA-cudagraph/scripts/cap_dinowm_random_epochs.py",
+      "--run-root",
+      "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106",
+      "--epochs",
+      "3"
+    ]
+  }
+]
