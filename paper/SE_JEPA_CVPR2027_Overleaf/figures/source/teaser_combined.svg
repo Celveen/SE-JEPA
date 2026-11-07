@@ -229,8 +229,7 @@
     <text style="font-size: 6.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213345" x="89.509474" y="70.7465" transform="rotate(-0 89.509474 70.7465)">60.57</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #213345" transform="translate(23.769812 82.234744)">One-round</text>
-    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #213345" transform="translate(12.990906 90.636658)">adaptive JEPA</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213345" x="60.872" y="86.435701" transform="rotate(-0 60.872 86.435701)">adaJEPA</text>
    </g>
    <g id="text_11">
     <g id="patch_6">

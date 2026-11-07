@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07T03:48:29-08:00",
+  "checked_at": "2026-11-07T05:39:16-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "faca5d396e5ee64fa6e3070700ba1aa1ba6b36c446a05fc6bb1d8c53dd58d675",
+    "pdf_sha256": "adbf15e9ae8f28fbb53c21521efe9fbfcf15123cc9bf8b291d96d9822ccc278a",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -103,7 +103,7 @@
           "Frozen",
           "DINO-WM",
           "LeWM",
-          "One-round adaptive JEPA",
+          "adaJEPA",
           "SE-JEPA"
         ]
       },
@@ -112,7 +112,8 @@
       "pushobj_baseline_provenance": "data/reporting_overrides.json#figure_1_pushobj_gd",
       "pusht_shift_provenance": "Three paired GD results, cross-checked against the six shifted conditions in Drive test_summary.json.",
       "ordering": "Ascending PushObj success, with SE-JEPA at the bottom. The ordering also holds for all available Unseen and PushT values.",
-      "episodic_baseline_label": "One-round adaptive JEPA"
+      "episodic_baseline_label": "adaJEPA (lower chart); One-round adaptive JEPA (upper schematic)",
+      "upper_schematic_unchanged": true
     },
     "condition_gains": {
       "source": "data/condition_gains.csv",

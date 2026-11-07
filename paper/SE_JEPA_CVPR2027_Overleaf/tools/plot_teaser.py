@@ -15,7 +15,7 @@ COLORS = {
     "DINO-WM": "#27829E",
     "LeWM": "#8866A9",
 }
-LABELS = {"AdaJEPA": "One-round\nadaptive JEPA"}
+LABELS = {"AdaJEPA": "adaJEPA"}
 PANELS = {
     "pushobj_all": "PushObj\nAll shapes",
     "pushobj_unseen": "PushObj\nUnseen shapes",

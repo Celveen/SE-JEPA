@@ -56,7 +56,8 @@ the held-out GD results in one column. SE-JEPA uses the three-chain GD
 mean. DINO-WM and LeWM use the seven-shape PushObj results for seed 2000.
 The PushT panel uses the paired visual evaluation of Frozen, AdaJEPA, and
 SE-JEPA. Methods are ordered by increasing PushObj success. The episode-local
-baseline is labeled One-round adaptive JEPA in both panels of Figure 1.
+baseline is labeled adaJEPA in the lower chart and One-round adaptive JEPA
+in the upper schematic of Figure 1.
 The complete editable SVG is
 `figures/source/teaser_combined.svg`. The author's supplied Illustrator SVG is
 `figures/source/teaser_combined_original.svg`. `main.tex` includes the ready-to-use

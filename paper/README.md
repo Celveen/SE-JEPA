@@ -3,7 +3,8 @@
 This directory contains the CVPR-format review manuscript and its Overleaf source.
 
 - [Combined paper and appendix (PDF)](main.pdf)
-- [Overleaf upload archive](SE_JEPA_CVPR2027_Overleaf.zip)
+- [Clean Overleaf upload archive (42 files)](SE_JEPA_CVPR2027_Overleaf_Clean.zip)
+- [Full research source archive with data and scripts](SE_JEPA_CVPR2027_Overleaf.zip)
 - [Figure 1 combined editable SVG, original artwork, chart data and rebuilding scripts](SE_JEPA_Figure1_Source.zip)
 - [Editable source](SE_JEPA_CVPR2027_Overleaf/main.tex)
 - [Build and data notes](SE_JEPA_CVPR2027_Overleaf/README_OVERLEAF.md)
