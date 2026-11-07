@@ -87,10 +87,10 @@ def tex_cell(value):
     return html.unescape(value).strip().replace(" ± ", r" $\pm$ ")
 
 citations = {
-    "DreamerV3": r"DreamerV3$^{\mathrm{o}}$~\cite{hafner2025dreamerv3}",
-    "IRIS": r"IRIS$^{\mathrm{o}}$~\cite{micheli2023iris}",
-    "R3M": r"R3M$^{\mathrm{T}}$~\cite{nair2022r3m}",
-    "DINO CLS": r"DINO CLS$^{\mathrm{T}}$",
+    "DreamerV3": r"DreamerV3~\cite{hafner2025dreamerv3}",
+    "IRIS": r"IRIS~\cite{micheli2023iris}",
+    "R3M": r"R3M~\cite{nair2022r3m}",
+    "DINO CLS": r"DINO CLS~\cite{oquab2024dinov2}",
     "DINO-WM": r"DINO-WM~\cite{zhou2024dinowm}",
     "LeWM": r"LeWM~\cite{maes2026lewm}",
     "DDP-WM": r"DDP-WM~\cite{yin2026ddpwm}",
@@ -113,21 +113,19 @@ for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[
     if label in vis50:
         record = vis50[label]
         values[3:6] = [format(record[key], spec) for key, spec in [("shift_rate", ".1f"), ("color_rate", ".1f"), ("steps", ".2f")]]
-    if label in ("DreamerV3", "IRIS"):
-        values[:3] = [r"\missing"] * 3  # Published unseen-shape scores use a different target set and criterion.
+    if label in reporting["published_pushobj"]["local_protocol_unreported"]:
+        published_rate = reporting["published_pushobj"]["success_percent"][label]
+        values[:3] = [r"\missing", f"{published_rate:.1f}", r"\missing"]
     for raw in row[7:9]:
         cell = tex_cell(raw).split(r" $\pm$ ")[0]
-        if "引" in raw:  # published DINO-WM-paper value, set in italics
-            cell = r"\textit{" + cell + "}"
         values.append(cell)
     if label == "Frozen":
         # The deformable tasks use the very same frozen DINO-WM reference.
         values[6:8] = [format(float(s["deform"][task]["DINO-WM"]["cd"]), ".3f") for task in ["rope", "granular"]]
         rows.append(r"\midrule")
     if label == "SE-JEPA (Ours)":
-        values[0] = f'{ablation_results["CEM", "no_familiarity"][0]:.2f}'
+        values[0] = f'{s["shape"]["CEM"]["ours"]["all"]["mean"]:.1f}'
         values = [r"\textbf{" + v + "}" for v in values]
-        values[0] += r"$^{\dagger}$"
     rows.append(" & ".join([citations[label], *values]) + r" \\")
 (TABLES / "main_rows.tex").write_text("\n".join(rows) + "\n")
 write_ablation_tables(TABLES, ablation_results)

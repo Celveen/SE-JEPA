@@ -83,7 +83,7 @@ def write_ablation_tables(directory, results):
 
     components = [
         (r"Full \ours ($10^{-4}$)", "s100"),
-        ("AdaJEPA, same backbone weights", "adajepa_same"),
+        ("Episodic reset", "adajepa_same"),
         ("Inherit fast weights", "naive"),
         ("Shared slow predictor (EMA)", "ema_slow"),
         ("Shared slow predictor (replay)", "shared_slow"),

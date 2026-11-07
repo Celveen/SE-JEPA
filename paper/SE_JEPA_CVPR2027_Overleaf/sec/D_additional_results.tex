@@ -81,50 +81,36 @@ Figure~\mainref{fig:deployment} shows the four-pass learning curves in the main 
 
 We assign each variant the same initial checkpoint and the same sequence of shapes and goals. The comparison uses the first learning chain for direct weight inheritance and the corresponding chain for the full model. AdaJEPA starts each goal from the common checkpoint. The shared replay variant trains a single slow predictor on stored trajectories. The EMA variant uses an exponential moving average of the fast weights to update a single slow predictor.
 
-\begin{table}[tb]
+Table~\mainref{tab:component_ablation} reports the fixed-rate sweep.
+
+\begin{table}[!ht]
   \centering
-  \caption{Success on all seven held-out PushObj shapes and mean replans as a function of the slow learning rate. All runs use GD and the same stream as the component comparison in Table~\mainref{tab:component_ablation}.}
-  \label{tab:slow_rate}
+  \caption{Effect of familiarity protection on PushObj success (\%). Each run uses the same five-round learning stream and 1,050 held-out goals across seven shapes. Dashes indicate configurations with no reported test.}
+  \label{tab:familiarity}
   \small
-  \setlength{\tabcolsep}{4pt}
   \begin{tabular}{@{}lrr@{}}
     \toprule
-    Slow learning rate & Success (\%) & Replans\\
+    Familiarity protection & GD & CEM\\
     \midrule
-    \inputrows{tables/pushobj_learning_rates.tex}
+    \inputrows{tables/familiarity_ablation.tex}
     \bottomrule
   \end{tabular}
 \end{table}
 
-For GD, disabling only the read protection produced identical held-out rollouts to AdaJEPA from the same checkpoint across all 21 test batches. Removing maturity screening instead allows a slow predictor to compete for retrieval earlier. This differs from the familiarity ablations in Table~\mainref{tab:familiarity}, which change how the agent handles episodes the pretrained model already predicts well. For context, a second CEM run of the full model on the same learning stream reached 80.19\%, compared with 78.57\% in the original run.
+
+For GD, disabling only the read protection produced identical held-out rollouts to AdaJEPA from the same checkpoint across all 21 test batches. Removing maturity screening instead allows a slow predictor to compete for retrieval earlier. This differs from the familiarity ablations in Table~\ref{tab:familiarity}, which change how the agent handles episodes the pretrained model already predicts well. For context, a second CEM run of the full model on the same learning stream reached 80.19\%, compared with 78.57\% in the original run.
 
 On PushT, doubling the slow learning rate from $10^{-4}$ to $2\times10^{-4}$ changes success by $+0.19$ percentage points with GD and $-1.05$ with CEM. These comparisons average three learned states per planner over all seven visual conditions, including the original appearance.
 
 \subsection{Transferring fast weights across goals}
-We tested whether the parameter update from one episode helps on the next. Let $s_e$ be the offset from the pretrained weights at the start of episode $e$, and $\Delta_e$ the fast update in that episode. We set $s_{e+1}=s_e+w\Delta_e$, where $w=0$ resets to the pretrained model and $w=1$ retains the full update. Each variant sees the same 100 PushObj goals in five blocks of 20 (I, square, T, I, square). Keeping the full update loses more goals than it gains relative to reset (Table~\ref{tab:inheritance}, two-sided exact McNemar $p=0.029$). Smaller weights give success rates closer to reset.
+We tested whether the parameter update from one episode helps on the next. Let $s_e$ be the offset from the pretrained weights at the start of episode $e$, and $\Delta_e$ the fast update in that episode. We set $s_{e+1}=s_e+w\Delta_e$, where $w=0$ resets to the pretrained model and $w=1$ retains the full update. Each variant sees the same 100 PushObj goals in five blocks of 20 (I, square, T, I, square). Keeping the full update loses more goals than it gains relative to reset (Table~\mainref{tab:inheritance}, two-sided exact McNemar $p=0.029$). Smaller weights give success rates closer to reset.
 
-\begin{table}[t]
-  \centering
-  \caption{Fraction of each fast update retained between episodes. Wins and losses count goals reached only by that variant and only by episodic reset, respectively.}
-  \label{tab:inheritance}
-  \small
-  \begin{tabular}{lcc}
-    \toprule
-    Accumulation $w$ & Success (\%) $\uparrow$ & Wins / losses\\
-    \midrule
-    $0$ \;(episodic reset) & 62.0 & \missing\\
-    $0.003$ & 64.0 & \phantom{0}7 / \phantom{0}5\\
-    $0.01$ & 59.0 & \phantom{0}5 / \phantom{0}8\\
-    $0.03$ & 54.0 & \phantom{0}4 / 12\\
-    $1$ \;(keep all) & 48.0 & 11 / 25\\
-    \bottomrule
-  \end{tabular}
-\end{table}
+
 
 \subsection{A seven-round shape stream}
 A second PushObj stream runs seven rounds with a slow learning rate of $2\times10^{-4}$, one chain per planner. Each round has 50 episodes per shape, drawn without replacement and excluding the held-out sources, for 2{,}450 episodes per planner. Online success rises from 70.6\% in the first round to 78.6\% in the seventh with GD, and from 72.3\% to 78.3\% with CEM.
 
-The episode logs record the fast-update fingerprint of every episode. Figure~\ref{fig:directions} shows the cosine between consecutive fingerprints: the mean is 0.018 for both planners, and most of the mass lies near zero. These measurements support consolidating transition data rather than accumulating episode-specific parameter updates (Sec.~\mainref{sec:diagnosis}).
+The episode logs record the fast-update fingerprint of every episode. Figure~\ref{fig:directions} shows the cosine between consecutive fingerprints: the mean is 0.018 for both planners. Absolute cosine is below 0.1 for 96.3\% of GD pairs and 96.8\% of CEM pairs. These are descriptive statistics from one sequential stream per planner. These measurements support consolidating transition data rather than accumulating episode-specific parameter updates (Sec.~\mainref{sec:diagnosis}).
 
 \begin{figure*}[t]
  \centering

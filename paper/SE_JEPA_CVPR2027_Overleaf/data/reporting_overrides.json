@@ -1,5 +1,27 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
+  "figure_1_pushobj_gd": {
+    "commit": "eec0ba00fbb945c4dc70bd4804035f845b67a463",
+    "directory": "research_snapshots/2026-11-07/baseline_metadata",
+    "test_seed": 2000,
+    "unseen_shapes": [
+      "I",
+      "square",
+      "small_tee"
+    ],
+    "episodes_all": 350,
+    "episodes_unseen": 150,
+    "DINO-WM": {
+      "summary": "dinowm_H7t3_GD_bias16k_reference_e3_20261106/summary.json",
+      "successes_all": 172,
+      "successes_unseen": 54
+    },
+    "LeWM": {
+      "summary": "lewm_H7t3_GD_bias16k_e10_20261106/summary.json",
+      "successes_all": 212,
+      "successes_unseen": 65
+    }
+  },
   "pushobj_no_familiarity_read_write": {
     "source": "Seven-shape held-out test results in data/ablation/shape_test_batches.csv, with raw NPZ path and SHA-256 for each batch; see data/ablation/sources.json.",
     "protocol_source": "https://github.com/Celveen/SE-JEPA/blob/3faad041417c6f2a22df2ad62822c34fd075c4bb/docs/ablation_no_familiarity_read_write.md",
@@ -34,5 +56,26 @@
     ]
   },
   "frozen_deformable_reference": "DINO-WM",
-  "published_deformable_values": "Zhou et al., ICML 2025, Tables 1 and 2; italic in manuscript."
+  "published_deformable_values": "DreamerV3 and IRIS from Zhou et al., ICML 2025, Table 1. R3M and DINO CLS from Table 2.",
+  "unseen_rope_audit": {
+    "source": "https://drive.google.com/file/d/1vU5bYWjScjMUICU_lVvPmaG_JPOEF07g/view",
+    "file": "data/drive_reference/rope_unseen_final_cd.csv",
+    "sha256": "86b8286bd72f0bf69d0365b0969855ae79f455082bea1b22c785f33a3c3cf599",
+    "instances": 91,
+    "reference_mean_cd": 0.663811912087912,
+    "one_pass_mean_cd": 0.34938763736263734,
+    "instances_with_lower_cd": 56,
+    "mean_paired_cd_reduction": 0.31442427472527473,
+    "bootstrap": {
+      "method": "Paired percentile bootstrap over instances",
+      "resamples": 20000,
+      "seed": 20261107,
+      "numpy_generator": "default_rng (PCG64)",
+      "confidence": 0.95,
+      "mean_reduction_interval": [
+        0.16234869,
+        0.47001494
+      ]
+    }
+  }
 }

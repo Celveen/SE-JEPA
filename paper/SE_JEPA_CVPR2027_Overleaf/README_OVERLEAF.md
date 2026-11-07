@@ -12,7 +12,7 @@ image links, SVG conversion, or custom fonts are required by Overleaf.
 
 ## Source organization
 
-- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in Appendix D. Section 4.1 describes the evaluation setup; Section 4.5 compares the read and write protections and tests how to carry experience between episodes. The main text includes the same-checkpoint component comparison. Appendix D gives the learning-rate sweep.
+- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in main Table 2. Section 4.1 describes the evaluation setup; Section 4.5 compares the read and write protections and tests how to carry experience between episodes. The main text includes the same-checkpoint component comparison. Main Table 3 reports the same-checkpoint components and fixed slow learning rates. Appendix D gives the familiarity ablation and protocol details.
 - `figures/`: ready-to-compile figures; author-supplied vector originals are
   preserved in `figures/source/`.
 - `tables/`: generated numerical rows.
@@ -52,8 +52,12 @@ python tools/package_overleaf.py
 These optional scripts use NumPy, Matplotlib, Pillow, and PyMuPDF. The first script
 otherwise restores older panels; the later scripts apply the current style
 and original simulator frames. Figure 1 combines the recurring-shift schematic and
-the GD and CEM bar chart in one column. The star marks SE-JEPA with both familiarity
-protections disabled for PushObj All. The complete editable SVG is
+the held-out GD results in one column. SE-JEPA uses the three-chain GD
+mean. DINO-WM and LeWM use the seven-shape PushObj results for seed 2000.
+The PushT panel uses the paired visual evaluation of Frozen, AdaJEPA, and
+SE-JEPA. Methods are ordered by increasing PushObj success. The episode-local
+baseline is labeled One-round adaptive JEPA in both panels of Figure 1.
+The complete editable SVG is
 `figures/source/teaser_combined.svg`. The author's supplied Illustrator SVG is
 `figures/source/teaser_combined_original.svg`. `main.tex` includes the ready-to-use
 `figures/teaser_combined.pdf`.
@@ -77,10 +81,19 @@ same weight in plots where both planners use SE-JEPA.
 DINO-WM, DreamerV3 and IRIS use the episode-verified VIS50 results from the
 `baselines` branch (original paths, immutable commit and checksums in
 `data/vis50/vis50_sources.json`). The latter two methods use offline predictors
-for CEM. The main table uses the seven-shape PushObj protocol, including the original three-shape Unseen subset. Appendix C describes the published two-shape results of Zhou et al. separately. The marked SE-JEPA PushObj All cell uses the ablation with both familiarity protections disabled. The independent test records give 836/1,050 successes with CEM and 873/1,050 with GD. The [experiment archive](https://github.com/Celveen/SE-JEPA/tree/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106) includes the evaluation data and condition definitions. Italic rope/granular CD entries
-are published measurements; the two local frozen deformable entries refer to
-the same DINO-WM reference. `tools/audit_pusht.py` checks VIS50 and the separate
-paired evaluation against the corresponding main-table cells.
+for CEM. The main table uses the reported three-state SE-JEPA result for
+PushObj All. The DreamerV3 and IRIS PushObj Unseen scores use the published
+two-shape protocol of Zhou et al. Their paper also supplies the rope and
+granular CDs for DreamerV3, IRIS, R3M, and DINO CLS. The two local frozen
+deformable entries refer to the same DINO-WM model. Section 4.1 and
+Appendix C describe these protocols. `tools/audit_pusht.py` checks the
+corresponding main-table cells against the visual evaluations.
+
+The joint familiarity ablation gives 836/1,050 successes with CEM and
+873/1,050 with GD. [Ablation archive](https://github.com/Celveen/SE-JEPA/tree/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106)
+
+Figure 1 source counts are recorded in `data/reporting_overrides.json`.
+[GD baseline archive](https://github.com/Celveen/SE-JEPA/tree/eec0ba00fbb945c4dc70bd4804035f845b67a463/research_snapshots/2026-11-07/baseline_metadata)
 
 The main qualitative comparison selects real examples where Frozen and
 AdaJEPA fail and SE-JEPA succeeds. Selection and source hashes are recorded

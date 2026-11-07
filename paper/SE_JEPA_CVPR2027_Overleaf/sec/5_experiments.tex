@@ -8,10 +8,12 @@
 Each episode starts with a scene and an image goal. The planner observes the consequences of its actions and receives no shift labels or task-change signals. We study shape and appearance shifts with ResNet-based world models trained on task trajectories~\cite{he2016resnet}. In \emph{PushObj}, pretraining covers T, L, Z, and plus shapes. Deployment also introduces I, square, and small tee. \emph{PushT} keeps the T shape and changes its appearance through blur, noise, darkness, or recoloring of the agent, object, or goal. We also test replay in two deformable manipulation tasks, \emph{rope} and \emph{granular}, using DINO-WM with pretrained DINOv2 features~\cite{zhou2024dinowm,oquab2024dinov2,lin2020softgym}.
 
 \paragraph{Deployment and evaluation.}
-For the standard PushObj and PushT comparisons, each planner runs three learning chains. Targets are resampled over five rounds, with 50 episodes per shape or visual condition in each round. We then fix each learned memory and test it on held-out goals from three new seeds. Retrieval and fast adaptation stay active. We report the fraction of goals reached and the mean number of replans, counting the full budget for failures. On rope and granular, we isolate slow consolidation by training one predictor per task with fast adaptation disabled. The planner revisits the same 50 instances over four passes. We measure Chamfer distance (CD) between the final and goal configurations and test the rope predictor separately on new instances.
+For the standard PushObj and PushT comparisons, we evaluate three learned memory states per planner. Targets are resampled over five rounds, with 50 episodes per shape or visual condition in each round. We then fix each learned memory and test it on held-out goals from three new seeds. Retrieval and fast adaptation stay active. We report the fraction of goals reached and the mean number of replans, counting the full budget for failures. On rope and granular, we isolate slow consolidation by training one predictor per task with fast adaptation disabled. The planner revisits the same 50 instances over four passes. We measure Chamfer distance (CD) between the final and goal configurations and test the rope predictor separately on new instances.
 
 \paragraph{Baselines and planners.}
-Frozen (pretrained) plans with a fixed model. AdaJEPA~\cite{wang2026adajepa} adapts within each episode. On rigid objects these two baselines use released task-specific checkpoints and the same held-out targets as \ours. We evaluate both GD and CEM, executing five actions per replan up to a budget of 30 replans. Additional CEM baselines include DINO-WM, LeWM, DDP-WM, and planners using DINOv2 CLS or R3M features~\cite{zhou2024dinowm,maes2026lewm,yin2026ddpwm,oquab2024dinov2,nair2022r3m}. For PushT, we use DreamerV3~\cite{hafner2025dreamerv3} and IRIS~\cite{micheli2023iris} as offline-trained predictors for CEM. The published two-shape PushObj results of Zhou et al.~\cite{zhou2024dinowm} are listed separately in Appendix~C. \supref{B} and \supref{C} give the target sets, checkpoints, and planning protocols.
+Frozen (pretrained) plans with a fixed model. AdaJEPA~\cite{wang2026adajepa} adapts within each episode. On rigid objects these two baselines use released task-specific checkpoints and the same held-out targets as \ours. We evaluate both GD and CEM, executing five actions per replan up to a budget of 30 replans. Additional baselines include DINO-WM, LeWM, DDP-WM, and planners using DINOv2 CLS or R3M features~\cite{zhou2024dinowm,maes2026lewm,yin2026ddpwm,oquab2024dinov2,nair2022r3m}. DINO CLS and R3M use T-only checkpoints. On PushT, CEM uses DreamerV3~\cite{hafner2025dreamerv3} and IRIS~\cite{micheli2023iris} as offline-trained predictors.
+
+Table~\ref{tab:main} takes the DreamerV3 and IRIS Unseen scores and the rope and granular CDs for DreamerV3, IRIS, R3M, and DINO CLS from Zhou et al.~\cite{zhou2024dinowm}. Their PushObj evaluation uses two unseen shapes and requires both the pusher and the object to reach their targets. Our evaluation covers three unseen shapes. Their deformable evaluation uses ten instances per task. \supref{B} and \supref{C} detail the protocols.
 
 \subsection{Planning with memory on held-out targets}
 \label{sec:sota}
@@ -37,7 +39,7 @@ Figure~\ref{fig:qualitative} shows two episodes in which all three methods start
 
 When targets are resampled each round, both GD and CEM finish deployment with higher online success on unseen shapes and recolored scenes than in the first round (Fig.~\ref{fig:deployment}, top). These curves track performance as memory grows. Table~\ref{tab:main} tests that memory after learning, on independent rigid-object goals.
 
-Revisiting the same rope and granular instances reduces final CD over successive passes (Fig.~\ref{fig:deployment}, bottom). To test whether the rope predictor also transfers, we froze it after its first pass and used it on 91 previously unseen instances. On those instances, mean CD was 47\% lower than with the pretrained DINO-WM predictor (\supref{B}). The repeated stream measures the benefit of further replay on the same instances. The transfer test pairs the two predictors on new starting configurations and goals, with weights fixed throughout evaluation.
+Revisiting the same rope and granular instances reduces final CD over successive passes (Fig.~\ref{fig:deployment}, bottom). To test whether the rope predictor also transfers, we froze it after its first pass and used it on 91 previously unseen instances. Mean CD fell from 0.664 to 0.349, a 47\% reduction relative to pretrained DINO-WM. The paired bootstrap 95\% interval for the mean reduction is [0.162, 0.470] (\supref{B}). The transfer test pairs the two predictors on new starting configurations and goals, with weights fixed throughout evaluation.
 
 \paragraph{Selective writing and retrieval.}
 Across seven PushObj rounds, about one episode in four adds experience to a replay buffer, and a similar fraction finishes with a slow predictor. This holds for both planners (\supref{D}). An episode can contribute training data to a domain whose predictor is still awaiting validation. The pretrained model remains available on familiar encounters. On the four shapes seen in pretraining, \ours also improves held-out success over AdaJEPA with both planners (\supref{D}).
@@ -45,41 +47,47 @@ Across seven PushObj rounds, about one episode in four adds experience to a repl
 \subsection{Ablation study}
 \label{sec:ablation}
 
-\paragraph{Reading and writing on familiar episodes.}
-When the pretrained model predicts an episode well, \ours normally uses it for planning and skips the direct replay write. We remove the read and write protections separately and together (Table~\ref{tab:familiarity}). Removing the read protection lets mature slow predictors compete for retrieval. Removing the write protection lets familiar trajectories enter the usual replay selection process. All four settings use the same maturity criterion.
+\paragraph{Accumulating fast updates across episodes.}
+Near-orthogonal update directions motivate testing whether a fixed fraction of each update transfers to the next goal. We compare $s_{e+1}=s_e+w\Delta_e$, where $s_e$ is the starting offset from the pretrained weights and $\Delta_e$ is the episode's fast update. Every setting receives the same 100 goals in five ordered blocks (I, square, T, I, square). Resetting between episodes reaches 62\% of goals. Full inheritance reaches 48\%, losing 25 reset successes and recovering 11 (Table~\ref{tab:inheritance}, exact McNemar $p=0.029$). The smallest tested coefficient reaches 64\%, while larger coefficients progressively reduce success. Thus the degradation depends on how strongly past updates are accumulated.
 
 \begin{table}[!ht]
   \centering
-  \caption{Effect of familiarity protection on PushObj success (\%). Each run uses the same five-round learning stream and 1,050 held-out goals across seven shapes. Dashes indicate configurations with no reported test.}
-  \label{tab:familiarity}
+  \caption{\textbf{Fast-update accumulation on 100 matched goals.} The coefficient $w$ scales the update retained between episodes. Wins and losses are relative to episodic reset.}
+  \label{tab:inheritance}
   \small
+  \setlength{\tabcolsep}{4pt}
   \begin{tabular}{@{}lrr@{}}
     \toprule
-    Familiarity protection & GD & CEM\\
+    Accumulation $w$ & Success (\%) & Wins / losses\\
     \midrule
-    \inputrows{tables/familiarity_ablation.tex}
+    \inputrows{tables/fast_accumulation.tex}
     \bottomrule
   \end{tabular}
 \end{table}
 
-With GD, removing either protection alone lowers success on this stream. Removing both gives the highest GD success among the four settings. With CEM, removing both gives a rate close to the full model's.
-
-\paragraph{Replay and weight inheritance.}
-Table~\ref{tab:component_ablation} compares ways of retaining experience on the same seven-shape stream. All variants start from the same backbone weights, and each learned state faces the same held-out targets. Reusing the previous episode's final weights solves fewer goals than resetting to the shared checkpoint. Averaging the fast weights across episodes recovers some of those goals. Training a slow predictor on stored transitions gives a larger gain, even when every shape shares that predictor.
+\paragraph{Replay and fixed learning rates.}
+Table~\ref{tab:component_ablation} compares retention mechanisms on the seven-shape stream. Each variant starts from the same backbone checkpoint and is tested on the same 1,050 held-out goals. Direct weight inheritance reaches 64.67\%, compared with 76.95\% for episodic reset and 81.43\% for the full model. A shared slow predictor trained by replay reaches 81.24\%, exceeding fast-weight averaging by 5.52 points. The gap is concentrated on the unseen I shape, where replay solves 44 additional goals out of 150. The four pretraining shapes differ by one solved goal.
 
 \begin{table}[!ht]
   \centering
-  \caption{Effect of the update rule on held-out planning. All variants start from the same pretrained weights and plan with GD. Success and mean replans cover the same 1,050 PushObj goals.}
+  \caption{\textbf{Retention mechanism and fixed slow learning rate.} GD results on the same 1,050 held-out PushObj goals, with one learned state per variant. All variants share the initial checkpoint and learning stream.}
   \label{tab:component_ablation}
   \small
   \setlength{\tabcolsep}{4pt}
   \begin{tabular}{@{}lrr@{}}
     \toprule
-    Update between episodes & Success (\%) & Replans\\
+    Method or slow learning rate & Success (\%) & Replans\\
     \midrule
     \inputrows{tables/pushobj_component_ablation.tex}
+    \midrule
+    \multicolumn{3}{@{}l}{Full \ours with a fixed slow learning rate}\\
+    \inputrows{tables/pushobj_learning_rates.tex}
     \bottomrule
   \end{tabular}
 \end{table}
 
-The difference is most visible on the I shape. With a single slow predictor in each case, replay solves 44 more of the 150 I-shape goals than weight averaging. On the four pretraining shapes, the two totals differ by just one goal. This comparison isolates a practical advantage of retaining trajectories. Replay can revisit the contacts made on one shape after the agent has moved on to another, fitting the predictor to their observed consequences. On this stream the shared replay predictor nearly matches the predictors trained separately for each discovered domain. Appendix~D gives the slow learning rate sweep.
+The fixed-rate sweep reaches 79.62--82.38\% for learning rates from $5\times10^{-5}$ to $3\times10^{-4}$. At $10^{-2}$, success falls to 76.95\%. The deployed system uses $10^{-4}$. These held-out results complement the online accumulation diagnostic above. Appendix~D specifies the per-variant protocols and the visual-task learning-rate comparison.
+
+\paragraph{Reading and writing on familiar episodes.}
+The full model normally uses the pretrained predictor on familiar episodes and skips their direct replay write. We remove the read and write protections separately and together, retaining the same maturity criterion (Appendix~D). With GD, removing either protection alone lowers success on this stream. Removing both reaches 83.14\% with GD and 79.62\% with CEM. This comparison uses one learning chain per planner.
+

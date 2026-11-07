@@ -1,5 +1,9 @@
 # 作者交接说明（不进入论文 PDF）
 
+**正文证据与图 1 修订（2026-11-07）**：图 1 按成功率升序排列，SE-JEPA 放在最下面，图内 episodic baseline 显示为 One-round adaptive JEPA。正文表 2 报告 100 个匹配目标的固定累积系数与朴素继承；正文表 3 报告同起点 1,050 个目标的组件及固定慢学习率消融。熟悉度门控表移至附录 D。正文第 3.1 节给出各 2,449 对更新指纹的余弦统计。正文第 4.4 节给出 91 个新绳索实例的配对 bootstrap 区间，原始 CSV 和参数见 data/reporting_overrides.json。按作者本轮要求，正文和附录省去 CEM 重跑说明。
+
+**图 1 和主表更新（2026-11-07）**：图 1 统一使用 GD。PushObj 的 DINO-WM 和 LeWM 采用 seed 2000 实测结果，出处和计数见 data/reporting_overrides.json。PushT 使用配对视觉留出测试。SE-JEPA 恢复完整配置三链均值，GD All 为 81.59%，CEM 主表 All 为 79.1%。熟悉度消融结果列在表 2。主表的 DreamerV3 和 IRIS Unseen、四个基线的变形 CD 采用 Zhou et al. 的文献结果，正文第 4.1 节和附录 C 说明评估差异。
+
 **本轮合并单栏图与扩写（2026-11-06）**：图 1 使用作者合并 SVG 的示意图与核验后的 GD/CEM 柱状图。原稿和采用版均收入 figures/source。正文共 8 页，第 7 页按形状和外观拆分完整模型相对 AdaJEPA 的收益，第 8 页表 3 按同一初始权重比较跨回合更新方式。附录 D 收入学习率扫描。
 
 **上一轮消融核对（2026-11-06）**：正文实验新增 Ablation study。作者确认，七形状 PushObj 的 79.62%（CEM）和 83.14%（GD）均来自**关闭熟悉度读保护和写保护、保留成熟度筛选**的实验。每个规划器分别学习一条链；第五轮末态固定后测试 3 个种子、共 1,050 回合。GitHub [协议文档](https://github.com/Celveen/SE-JEPA/blob/46088f0422f199168de1c0ffdce0e1061e674c04/docs/ablation_no_familiarity_read_write.md)给出干预、验证及样本设置；两项成功率已由[新归档的独立测试数据](https://github.com/Celveen/SE-JEPA/tree/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106)复核：CEM 836/1,050，GD 873/1,050。正文表 2 列出 GD 分别关闭读保护、写保护的结果；附录 D 给出同起点组件对照和学习率扫描。主表只替换 SE-JEPA 的 CEM All，原三种 Unseen 和 Steps 等保持原配置。首页图的 GD All 采用 83.14%，另两项为完整方法；DINO-WM、LeWM 的 CEM 结果独立分组。原来单独的文献两形状列已删除，出处见附录 C。后文旧记录是历史，不适用于这两个新结果。

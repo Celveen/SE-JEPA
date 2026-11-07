@@ -2,7 +2,7 @@
 
 \begin{table*}[!t]
   \centering
-  \caption{\textbf{Goal-conditioned planning with CEM.} PushObj covers seven shapes, three unseen during pretraining. PushT covers six visual shifts, including three recolorings. Success rates are percentages. Steps count MPC replans, with failures assigned 30. Italic Chamfer distances (CD) come from Zhou et al.~\cite{zhou2024dinowm}. $^{\mathrm{o}}$ marks offline PushT adapters and $^{\mathrm{T}}$ marks T-only checkpoints. $^{\dagger}$ marks PushObj All with familiarity checks disabled for reads and writes and maturity screening retained. The other \ours entries use the standard task configurations in Appendix~B.}
+  \caption{\textbf{Goal-conditioned planning with CEM.} Our PushObj evaluation covers seven shapes, three unseen during pretraining. PushT covers six visual shifts, including three recolorings. Success rates are percentages. Steps count MPC replans, with failures assigned 30. Section~\ref{sec:setup} describes the published Unseen and Chamfer distance (CD) results.}
   \label{tab:main}
   \small
   \setlength{\tabcolsep}{3.5pt}
@@ -10,7 +10,7 @@
     \toprule
     & \multicolumn{3}{c}{PushObj} & \multicolumn{3}{c}{PushT visual shifts} & Rope & Granular\\
     \cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-8}\cmidrule(lr){9-9}
-    Method & All (7) $\uparrow$ & Unseen (3) $\uparrow$ & Steps $\downarrow$
+    Method & All (7) $\uparrow$ & Unseen $\uparrow$ & Steps $\downarrow$
       & Shift (6) $\uparrow$ & Color (3) $\uparrow$ & Steps $\downarrow$ & CD $\downarrow$ & CD $\downarrow$\\
     \midrule
     \inputrows{tables/main_rows.tex}

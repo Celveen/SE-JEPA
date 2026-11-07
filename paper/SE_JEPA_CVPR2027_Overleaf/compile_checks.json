@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-06T17:42:41+08:00",
-  "compiler": "Tectonic/XeTeX (desktop bundled engine), cached packages",
+  "checked_at": "2026-11-07T03:48:29-08:00",
+  "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "1df8e10d5feb1212fc02822e623e5728f7d494fcbef561a7c5f6ac8d98076fa0",
+    "pdf_sha256": "faca5d396e5ee64fa6e3070700ba1aa1ba6b36c446a05fc6bb1d8c53dd58d675",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -26,15 +26,16 @@
     },
     "conclusion_page": 8,
     "all_main_floats_precede_conclusion": true,
-    "familiarity_ablation_page": 8,
-    "component_ablation_page": 8
+    "familiarity_ablation_page": 15,
+    "component_ablation_page": 8,
+    "inheritance_ablation_page": 8
   },
   "supplement": {
     "pages": 8,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "3ce1f17a00940ddf4daf92c67189cee489c616b3b1e0194a906f02bb2b26dbef"
+    "pdf_sha256": "c664f0ba97d2feae69efcdda1e58348aa23f652589c114c0074454b39f6810df"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -77,7 +78,7 @@
       "DreamerV3",
       "IRIS"
     ],
-    "published_pushobj": "ICML 2025, Zhou et al., Table 4 (two unseen shapes), cited in Appendix C."
+    "published_pushobj": "ICML 2025, Zhou et al., Table 4. The main table includes DreamerV3 and IRIS two-shape scores. Section 4.1 and Appendix C describe the protocol."
   },
   "main_figure_revision": {
     "progress_and_efficiency_means_only": true,
@@ -91,25 +92,27 @@
       10
     ],
     "teaser": {
-      "layout": "Single column: the supplied recurring-shift schematic above the planner-labeled chart.",
+      "layout": "Single column: the supplied recurring-shift schematic above the GD chart.",
       "data": "data/teaser_bars.csv",
       "editable_source": "figures/source/teaser_combined.svg",
       "ours": "Deep blue, bold method label, diagonal hatch and direct value labels",
-      "bar_value_labels": "Printed outside each bar at CSV precision. PushObj All for SE-JEPA with GD is 83.14% (joint familiarity ablation).",
-      "values_checked": 15,
+      "bar_value_labels": "Printed at CSV precision. SE-JEPA PushObj All uses the original three-chain mean (81.59%).",
+      "values_checked": 13,
       "planner_groups": {
         "GD": [
           "Frozen",
-          "AdaJEPA",
-          "SE-JEPA"
-        ],
-        "CEM": [
           "DINO-WM",
-          "LeWM"
+          "LeWM",
+          "One-round adaptive JEPA",
+          "SE-JEPA"
         ]
       },
       "author_input": "figures/source/teaser_combined_original.svg",
-      "bar_panel": "figures/teaser_bars.svg"
+      "bar_panel": "figures/teaser_bars.svg",
+      "pushobj_baseline_provenance": "data/reporting_overrides.json#figure_1_pushobj_gd",
+      "pusht_shift_provenance": "Three paired GD results, cross-checked against the six shifted conditions in Drive test_summary.json.",
+      "ordering": "Ascending PushObj success, with SE-JEPA at the bottom. The ordering also holds for all available Unseen and PushT values.",
+      "episodic_baseline_label": "One-round adaptive JEPA"
     },
     "condition_gains": {
       "source": "data/condition_gains.csv",
@@ -124,6 +127,9 @@
     "scores": "data/reporting_overrides.json",
     "familiarity_table": "tables/familiarity_ablation.tex",
     "component_table": "tables/pushobj_component_ablation.tex",
-    "slow_rate_table": "tables/pushobj_learning_rates.tex"
-  }
+    "slow_rate_table": "tables/pushobj_learning_rates.tex",
+    "fast_accumulation_table": "tables/fast_accumulation.tex",
+    "fast_accumulation_source": "data/matched_accumulation_source.md"
+  },
+  "unseen_rope_audit": "data/reporting_overrides.json#unseen_rope_audit"
 }
