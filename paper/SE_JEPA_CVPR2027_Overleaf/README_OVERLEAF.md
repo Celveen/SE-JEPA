@@ -197,7 +197,7 @@ held-out unseen-shape comparison in the main text refers to the paired appendix
 table, not the online row. The exact-state overlap audit is archived alongside
 the online results and noted in Appendix B.
 
-## Matched DINO-WM example in Figure 3
+## Matched DINO-WM examples in Figure 3
 
 Figure 3 uses 90% of the text width and no longer includes the in-panel Goal
 explanation. The I-shape row adds DINO-WM GD on the same initial and goal states;
@@ -205,6 +205,18 @@ its failure at 30 replans agrees with the archived result. The source actions
 were replayed in the original simulator. Both endpoint reference images match
 the existing case, and the same procedure reproduces all 31 Frozen frames and
 states exactly. Original results, simulator sources, frames and a portable
-`replay.py` are retained in `data/revision_assets/dinowm_shape_I/`. Its provenance
-file records dependency versions and checksums. The clean upload contains only
-the updated figure PDF; no simulator dependencies are needed for Overleaf.
+`replay.py` are retained in `data/revision_assets/dinowm_shape_I/`.
+
+The red-object row now uses an exactly matched target shared by DINO-WM GD
+(sample 31) and the mixed 14-domain experiment (sample 30). Frozen and AdaJEPA
+use seed 100 and the official shape-shift checkpoint; SE-JEPA uses round five
+of chain two. This is a selected mixed-stream illustration, not a replacement
+for the standard visual benchmark. All three baselines fail within 150 executed
+environment steps, while SE-JEPA succeeds after 30. The visual DINO-WM run
+executes 25 steps per replan and the others five, so both figure rows now label
+environment steps. The CEM main-table step units are unchanged.
+
+`data/revision_assets/dinowm_visual_mixed/` stores the visual replay and matching
+audit. Provenance files record source hashes and validation; the earlier visual
+case remains in `selected_cases/visual_GD_red_object/`. The clean upload contains
+only the updated figure PDF; no simulator dependencies are needed for Overleaf.

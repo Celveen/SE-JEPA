@@ -43,7 +43,9 @@ The main-table PushObj CEM row is 80.4% All, 73.1% Unseen, and 12.99 replans,
 from the selected three fifth-round online streams. Paired post-learning
 evaluations remain separately reported in Appendix B.
 
-Figure 3 is slightly smaller and adds a DINO-WM GD outcome on the identical
-I-shape target, reconstructed from the original executed actions. The Goal
-explanatory line has been removed. The replay matches the existing start/goal
-images and exactly reproduces the archived Frozen trajectory as a control.
+Figure 3 is slightly smaller and includes DINO-WM GD in both rows, with exact
+initial/goal matching across all four methods. The I-shape case uses the paired
+shape evaluation; the red-object case comes from the mixed 14-domain stream.
+Labels count executed environment steps because the visual DINO-WM run uses
+a different replanning frequency. The original red-object case remains archived.
+The Goal explanatory line has been removed.

@@ -1,5 +1,5 @@
 {
-  "selection_rule": "Frozen and AdaJEPA both fail at the 30-replan budget; SE-JEPA succeeds. These are selected illustrative examples, not a representative performance estimate. The I-shape panel additionally includes DINO-WM on the identical archived target; it also fails at the 30-replan budget.",
+  "selection_rule": "Selected illustrative GD episodes with all three baselines failing and SE-JEPA succeeding under the same 150-environment-step budget. The visual row uses an exactly matched target from the mixed14 stream and an external DINO-WM evaluation. These are outcome-selected illustrations, not representative performance estimates.",
   "image_processing": "Original simulator PNG bytes archived below. Display uses the same 168 x 168 crop size for all panels, with a fixed crop box within each example. No pixels recolored, regenerated, or composited.",
   "goal_interpretation": "The targets are the pusher position and the object pose in goal.png. The green marker remains static in all observations.",
   "cases": [
@@ -75,21 +75,24 @@
             2.2879037857055664,
             -29.54634666442871,
             -72.18672180175781
-          ]
+          ],
+          "physical_steps": 150
         },
         "adajepa": {
           "success": false,
           "n_steps": 30,
           "source": "CL-JEPA-cudagraph/eval_outputs/cmp_gd_official/w0/chunk_00_I",
           "frames_origin": "frames saved during the run (episode_frames.npz)",
-          "different_pixels_from_goal": 2777
+          "different_pixels_from_goal": 2777,
+          "physical_steps": 150
         },
         "ours": {
           "success": true,
           "n_steps": 6,
           "source": "CL-JEPA-cudagraph/eval_outputs/cmp_gd_v6a_s100/cls6a_free/chunk_00_I",
           "frames_origin": "frames saved during the run (episode_frames.npz)",
-          "different_pixels_from_goal": 1018
+          "different_pixels_from_goal": 1018,
+          "physical_steps": 30
         },
         "dinowm": {
           "success": false,
@@ -111,7 +114,8 @@
             44.26256561279297,
             -133.45907592773438
           ],
-          "provenance": "dinowm_shape_I/replay_provenance.json"
+          "provenance": "dinowm_shape_I/replay_provenance.json",
+          "physical_steps": 150
         }
       },
       "validation": {
@@ -123,148 +127,163 @@
       }
     },
     {
-      "id": "visual_GD_red_object",
+      "id": "visual_mixed14_GD_red_object",
       "task": "PushT",
       "domain": "red_object",
       "planner": "GD",
-      "seed": 2000,
-      "sample_idx": 0,
       "label": "Red object (GD)",
-      "source_metadata": "tmp/drive/visual/data/trajectories.json",
-      "source_metadata_sha256": "1eafc7b8bb2850939dd7e004424b7730e5148fb8c2e2d59c562684e3e6a66191",
+      "protocol": "Selected mixed14 online target; DINO-WM has the same state pair in its separate visual evaluation",
+      "selection": "Shared target from mixed14 index30 and DINO-WM visual GD index31. Chosen because all three baselines fail while SE-JEPA round5 chain2 succeeds. This is an illustrative mixed-stream online case, not the previous held-out red-object case.",
       "original_image_size": [
         224,
         224
       ],
       "display_crop_xyxy": [
-        15,
-        0,
-        183,
-        168
+        5,
+        18,
+        173,
+        186
       ],
       "frames": {
         "start": {
-          "path": "selected_cases/visual_GD_red_object/start.png",
-          "source_path": "tmp/drive/visual/replay/GD/red_object/ours/step_00.png",
-          "sha256": "ef86efa5e5b92fd7ac747bdb39236bbf99f034f86e303d0577358da42906fb23"
-        },
-        "frozen": {
-          "path": "selected_cases/visual_GD_red_object/frozen.png",
-          "source_path": "tmp/drive/visual/replay/GD/red_object/frozen/step_30.png",
-          "sha256": "396af778726907349bec79378193e345337ae3a1250347728d879a1103b2f900"
-        },
-        "adajepa": {
-          "path": "selected_cases/visual_GD_red_object/adajepa.png",
-          "source_path": "tmp/drive/visual/replay/GD/red_object/adajepa/step_30.png",
-          "sha256": "e57877c3d4bd4a2a00489ee0b51b07ed7fdbd528bb2b21f7e8d3908a837f5a4c"
-        },
-        "ours": {
-          "path": "selected_cases/visual_GD_red_object/ours.png",
-          "source_path": "tmp/drive/visual/replay/GD/red_object/ours/step_07.png",
-          "sha256": "88d7254c9e3bc06e24097c343bfbad748ed11e3d0b8f20e4a6cb14fde7a8badc"
+          "path": "dinowm_visual_mixed/start.png",
+          "sha256": "a8940305ed4d280ef42a8706d5ef153b85adf029d4b75c163c974b81de2d8d6d",
+          "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
         },
         "goal": {
-          "path": "selected_cases/visual_GD_red_object/goal.png",
-          "source_path": "tmp/drive/visual/replay/GD/red_object/ours/goal.png",
-          "sha256": "d4cb2c5c521bda5aece541d7c3b985ac7bfc2734fbdf831702fcb6d48552c864"
+          "path": "dinowm_visual_mixed/goal.png",
+          "sha256": "77e002c589b4e90e619dd09783b5287b4b2f53fac17327475677939a6ce48435",
+          "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
+        },
+        "frozen": {
+          "path": "dinowm_visual_mixed/frames/frozen/final.png",
+          "sha256": "8e13b992f4e78d1f314eb5e0822eb6f175a5c935596dc35bef0a2167e2f7f199",
+          "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
+        },
+        "dinowm": {
+          "path": "dinowm_visual_mixed/frames/dinowm/final.png",
+          "sha256": "bafb93be700be740f9ea2b93a0cf9dc4de29b2a9aea50d10f9a653e3ac9ab066",
+          "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
+        },
+        "adajepa": {
+          "path": "dinowm_visual_mixed/frames/adajepa/final.png",
+          "sha256": "d6ac06f1b0076a337bce45e5d016c39b50d4065680c5cc592205bd080684b307",
+          "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
+        },
+        "ours": {
+          "path": "dinowm_visual_mixed/frames/ours/final.png",
+          "sha256": "70513215e25f952228f5d47c78c7c827e3ca6a19925bc2d2ad5f6b9c47e4c71d",
+          "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
         }
       },
       "methods": {
         "frozen": {
           "success": false,
           "n_steps": 30,
-          "source": "/home/tyy/jepa/runs/visual_shape_protocol_3x5_heldout_20261029/results/test/GD/frozen/chain_0/seed_2000/red_object",
-          "frames_origin": "original actions replayed in original simulator",
-          "different_pixels_from_goal": 2343,
+          "physical_steps": 150,
+          "source_sample_idx": 30,
+          "source_seed": 100,
+          "source": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/raw_data/mixed_official_shape_baselines_3seeds_20261024/results/GD/frozen/seed_100/red_object",
+          "source_npz_sha256": "7927b1c6cf8cde4eb0aa32c5a17b63517e4ba6fd9fb400539d9e5104774c867c",
+          "config_sha256": "1dc146277c61efb2500fac7580e0592625153104bf58fc81715763b5046f3ae0",
+          "frames_origin": "Original simulator replay of the recorded executed actions, truncated at the archived action_len",
           "trajectory": {
-            "path": "selected_cases/visual_GD_red_object/frozen_trajectory.npz",
-            "source_path": "tmp/drive/visual/replay/GD/red_object/frozen/trajectory.npz",
-            "sha256": "530bd0ad55344b1f741726d31bd31065f4c20eefc329e7519c3c368a2d039313"
+            "path": "dinowm_visual_mixed/frames/frozen/trajectory.npz",
+            "sha256": "72d580928d12ab7152bf4bec297400c88fd94afdb9d7bc84e2ff4c4f264d6163"
           },
+          "provenance": "dinowm_visual_mixed/replay_provenance.json",
           "final_state": [
-            140.63914489746094,
-            127.864501953125,
-            200.46865844726562,
-            64.87841796875,
-            1.3104735612869263,
-            -112.2442626953125,
-            43.86762237548828
-          ],
-          "goal_state": [
-            180.0693359375,
-            149.34506225585938,
-            127.21359252929688,
-            149.65927124023438,
-            4.106085777282715,
-            -129.6856231689453,
-            57.22537612915039
+            120.47264099121094,
+            136.15249633789062,
+            203.9336395263672,
+            288.427734375,
+            2.466477394104004,
+            -129.85513305664062,
+            74.0256118774414
+          ]
+        },
+        "dinowm": {
+          "success": false,
+          "n_steps": 6,
+          "physical_steps": 150,
+          "source_sample_idx": 31,
+          "source_seed": 100,
+          "source": "/tmp/se-jepa-revision-check/nov8/npz/dinowm/red_object",
+          "source_npz_sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66",
+          "config_sha256": "f01718809f29ee6575c87b7315ee1b32bd3b39bcbd0ddd3f4541001d8ca6b717",
+          "frames_origin": "Original simulator replay of the recorded executed actions, truncated at the archived action_len",
+          "trajectory": {
+            "path": "dinowm_visual_mixed/frames/dinowm/trajectory.npz",
+            "sha256": "96d19cf1889068ea4868bc76e60961d8eaa384a8ddd1bc8c5bf63c2c5616f828"
+          },
+          "provenance": "dinowm_visual_mixed/replay_provenance.json",
+          "final_state": [
+            108.44717407226562,
+            170.0530548095703,
+            184.26930236816406,
+            242.6904296875,
+            3.0242276191711426,
+            -76.20191192626953,
+            87.2528305053711
           ]
         },
         "adajepa": {
           "success": false,
           "n_steps": 30,
-          "source": "/home/tyy/jepa/runs/visual_shape_protocol_3x5_heldout_20261029/results/test/GD/adajepa/chain_0/seed_2000/red_object",
-          "frames_origin": "original actions replayed in original simulator",
-          "different_pixels_from_goal": 2131,
+          "physical_steps": 150,
+          "source_sample_idx": 30,
+          "source_seed": 100,
+          "source": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/raw_data/mixed_official_shape_baselines_3seeds_20261024/results/GD/adajepa/seed_100/red_object",
+          "source_npz_sha256": "225ae6f46f1dde2d9bef7b9d7ac0e6099d45ad1dcc9284f62abefa8146201951",
+          "config_sha256": "fce2b912d7cf350c31efeddc355b8b78b37548793c554fa1f3da9a047286a1da",
+          "frames_origin": "Original simulator replay of the recorded executed actions, truncated at the archived action_len",
           "trajectory": {
-            "path": "selected_cases/visual_GD_red_object/adajepa_trajectory.npz",
-            "source_path": "tmp/drive/visual/replay/GD/red_object/adajepa/trajectory.npz",
-            "sha256": "4ec20f529c8d8b8ed56c3b48f895ec255b729e80ba4baedf230b67acf49b970e"
+            "path": "dinowm_visual_mixed/frames/adajepa/trajectory.npz",
+            "sha256": "b8837f28d8213bb2f4cab743040604473a37bcaa910e1aa41e11d695336e341c"
           },
+          "provenance": "dinowm_visual_mixed/replay_provenance.json",
           "final_state": [
-            170.46902465820312,
-            132.7671356201172,
-            208.70240783691406,
-            48.053611755371094,
-            0.7542321681976318,
-            -85.93962097167969,
-            41.290958404541016
-          ],
-          "goal_state": [
-            180.0693359375,
-            149.34506225585938,
-            127.21359252929688,
-            149.65927124023438,
-            4.106085777282715,
-            -129.6856231689453,
-            57.22537612915039
+            99.25321197509766,
+            132.0576934814453,
+            181.5701141357422,
+            260.79888916015625,
+            2.2200510501861572,
+            -52.03180694580078,
+            109.7825927734375
           ]
         },
         "ours": {
           "success": true,
-          "n_steps": 7,
-          "source": "/home/tyy/jepa/runs/visual_shape_protocol_3x5_heldout_20261029/results/test/GD/v6a/chain_1/seed_2000/red_object",
-          "frames_origin": "original actions replayed in original simulator",
-          "different_pixels_from_goal": 804,
+          "n_steps": 6,
+          "physical_steps": 30,
+          "source_sample_idx": 30,
+          "source_seed": 1000,
+          "source": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/raw_data/mixed_cls6a_14domains_roundseeds100_500_20261024/results/GD/v6a/repeat_2/chunk_61_r5_red_object",
+          "source_npz_sha256": "029478ef8f06ee55c147cfec798718e25f8e6ab56a5a73486023df388203ccb1",
+          "config_sha256": "f186522ae49fbd38f7d1ae88bc150400fb7709f015290131173e3fbe5cff1c46",
+          "frames_origin": "Original simulator replay of the recorded executed actions, truncated at the archived action_len",
           "trajectory": {
-            "path": "selected_cases/visual_GD_red_object/ours_trajectory.npz",
-            "source_path": "tmp/drive/visual/replay/GD/red_object/ours/trajectory.npz",
-            "sha256": "571908330a6546835e0eba3133b55714e72bbe5a2621a7475ff4643a8497a728"
+            "path": "dinowm_visual_mixed/frames/ours/trajectory.npz",
+            "sha256": "4b55bf3bf48da70e943d859e1a40ad0eb4306cfade49a60ba1776d0e56d4eff8"
           },
+          "provenance": "dinowm_visual_mixed/replay_provenance.json",
           "final_state": [
-            180.6249542236328,
-            153.6031951904297,
-            128.27015686035156,
-            163.60377502441406,
-            3.9333863258361816,
-            -129.83935546875,
-            44.110721588134766
-          ],
-          "goal_state": [
-            180.0693359375,
-            149.34506225585938,
-            127.21359252929688,
-            149.65927124023438,
-            4.106085777282715,
-            -129.6856231689453,
-            57.22537612915039
+            122.32572174072266,
+            169.7255859375,
+            178.921630859375,
+            247.1135711669922,
+            2.200624704360962,
+            -112.72456359863281,
+            69.51356506347656
           ]
         }
       },
       "validation": {
         "step_00.png_identical_across_methods": true,
         "goal.png_identical_across_methods": true,
-        "crop_preserves_all_colored_foreground": true
+        "crop_preserves_all_colored_foreground": true,
+        "raw_initial_and_goal_states_identical_across_methods": true,
+        "simulator_checked_against_existing_visual_frozen_trajectory": true
       }
     }
   ]

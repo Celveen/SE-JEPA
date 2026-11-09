@@ -1,0 +1,50 @@
+ckpt_base_path: /home/tyy/jepa/runs/mixed_official_shape_baselines_3seeds_20261024/official/pushobj_shape_shift
+model_name: null
+model_epoch: latest
+seed: 100
+n_evals: 50
+goal_source: segments
+eval_data_path: /home/tyy/jepa/runs/mixed_official_shape_baselines_3seeds_20261024/stream/visual_red_object.pkl
+ood_corruption: null
+ood_level: null
+env_kwargs_override:
+  color: Red
+goal_H: 25
+n_plot_samples: 0
+decode_for_viz: false
+num_start_frames: 1
+debug_dset_init: false
+objective:
+  _target_: planning.cuda_graph_objectives.create_objective_fn
+  alpha: 1
+  base: 2
+  mode: staged
+planner:
+  _target_: planning.official_baseline_logging.LoggedAdaJEPAPlanner
+  max_iter: 30
+  n_taken_actions: 5
+  adapt:
+    lr: 0
+    steps: 0
+    optimizer: adam
+    finetune_every: 1
+    replay_buffer: recent5
+    finetune_encoder: true
+    encoder_lr: 0
+    last_layer_only: true
+    encoder_last_layer_only: true
+  reuse_actions: true
+  sub_planner:
+    target: planning.cuda_graph_gd.CUDAGraphGDPlanner
+    lr: 0.1
+    sample_type: zero
+    action_noise: 0
+    horizon: 25
+    var_scale: 1
+    opt_steps: 100
+    eval_every: -1
+  name: adajepa_plan_gd_pushobj
+segments_order: file
+wandb_logging: false
+ood_noise_seed: 20261019
+ood_noise_pair_across_seeds: true

@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "frozen": {
+      "sample_idx": 30,
+      "seed": 100,
+      "physical_steps_per_mpc_replan": 5,
+      "max_physical_budget": 150,
+      "original_source_directory": "/Users/qianxinyao/Downloads/\u5341\u56db\u57df_\u6743\u91cd\u6570\u636e\u56fe\u8868_20261030/raw_data/mixed_official_shape_baselines_3seeds_20261024/results/GD/frozen/seed_100/red_object",
+      "source_npz_sha256": "7927b1c6cf8cde4eb0aa32c5a17b63517e4ba6fd9fb400539d9e5104774c867c",
+      "config_sha256": "1dc146277c61efb2500fac7580e0592625153104bf58fc81715763b5046f3ae0"
+    },
+    "adajepa": {
+      "sample_idx": 30,
+      "seed": 100,
+      "physical_steps_per_mpc_replan": 5,
+      "max_physical_budget": 150,
+      "original_source_directory": "/Users/qianxinyao/Downloads/\u5341\u56db\u57df_\u6743\u91cd\u6570\u636e\u56fe\u8868_20261030/raw_data/mixed_official_shape_baselines_3seeds_20261024/results/GD/adajepa/seed_100/red_object",
+      "source_npz_sha256": "225ae6f46f1dde2d9bef7b9d7ac0e6099d45ad1dcc9284f62abefa8146201951",
+      "config_sha256": "fce2b912d7cf350c31efeddc355b8b78b37548793c554fa1f3da9a047286a1da"
+    },
+    "ours": {
+      "sample_idx": 30,
+      "seed": 1000,
+      "physical_steps_per_mpc_replan": 5,
+      "max_physical_budget": 150,
+      "original_source_directory": "/Users/qianxinyao/Downloads/\u5341\u56db\u57df_\u6743\u91cd\u6570\u636e\u56fe\u8868_20261030/raw_data/mixed_cls6a_14domains_roundseeds100_500_20261024/results/GD/v6a/repeat_2/chunk_61_r5_red_object",
+      "source_npz_sha256": "029478ef8f06ee55c147cfec798718e25f8e6ab56a5a73486023df388203ccb1",
+      "config_sha256": "f186522ae49fbd38f7d1ae88bc150400fb7709f015290131173e3fbe5cff1c46"
+    },
+    "dinowm": {
+      "sample_idx": 31,
+      "seed": 100,
+      "physical_steps_per_mpc_replan": 25,
+      "max_physical_budget": 150,
+      "original_source_directory": "/tmp/se-jepa-revision-check/nov8/npz/dinowm/red_object",
+      "source_npz_sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66",
+      "config_sha256": "f01718809f29ee6575c87b7315ee1b32bd3b39bcbd0ddd3f4541001d8ca6b717",
+      "source_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+      "source_repository_path": "research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_object"
+    }
+  },
+  "source_simulator_commit": "eec0ba00fbb945c4dc70bd4804035f845b67a463",
+  "domain": "red_object",
+  "shape": "T",
+  "object_color": "Red",
+  "selection": "Shared target from mixed14 index30 and DINO-WM visual GD index31. Chosen because all three baselines fail while SE-JEPA round5 chain2 succeeds. This is an illustrative mixed-stream online case, not the previous held-out red-object case.",
+  "official_baseline_checkpoint": "official/pushobj_shape_shift",
+  "ours_checkpoint": "pushobj_bias_16k_e3; mixed14 GD repeat_2/chunk_61_r5_red_object",
+  "control": "Existing held-out red_object GD seed2000 sample0 Frozen trajectory; all31 states available, and archived start/final/goal image frames."
+}

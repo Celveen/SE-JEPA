@@ -21,7 +21,7 @@
 \begin{figure*}[!t]
   \centering
   \includegraphics[width=.9\textwidth]{qualitative.pdf}
-  \caption{\textbf{Persistent memory resolves planning failures.} Selected GD examples on an unseen I shape (top) and red-object shift (bottom). Frozen and AdaJEPA exhaust 30 replans in both cases; DINO-WM also fails on I. \textbf{\ours} succeeds in six and seven replans, respectively. Each row shares the same start and goal; DINO-WM's frame replays its recorded simulator actions.}
+  \caption{\textbf{Persistent memory resolves planning failures.} Selected GD episodes: unseen I (top) and a red-object condition from the 14-domain stream (bottom). Each row shares the same start and goal. All three baselines exhaust 150 environment steps; \textbf{\ours} succeeds in 30. Frames come from saved runs or original-simulator action replay. Appendix~E details the planning frequencies and mixed-stream protocol.}
   \label{fig:qualitative}
 \end{figure*}
 

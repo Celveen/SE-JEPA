@@ -1,0 +1,9 @@
+{
+  "original": "plan_targets.pkl",
+  "archive": "plan_targets.pkl.gz",
+  "sha256": "52eadda056b542196b7021cd19869c1b3fee9ca18507276cc489ea9209c349c4",
+  "original_bytes": 15068088,
+  "archive_bytes": 284428,
+  "verified_lossless": true,
+  "created": "2026-10-24T03:09:52.743234+08:00"
+}

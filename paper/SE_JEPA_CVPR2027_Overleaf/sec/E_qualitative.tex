@@ -2,7 +2,11 @@
 \label{app:qualitative}
 
 \subsection{Rigid-object planning sequences}
-Figure~\mainref{fig:qualitative} selects an unseen-I and a red-object episode where Frozen and AdaJEPA fail and \ours succeeds under GD. The I example also includes DINO-WM, which fails after 30 replans on the identical target. Its final frame comes from replaying the recorded actions in the original simulator. The start and goal renderings match the existing case pixel for pixel; the same replay procedure exactly reproduces all 31 archived Frozen frames and states. These selected examples illustrate planning behavior; aggregate success uses the complete evaluation sets.
+Figure~\mainref{fig:qualitative} selects two GD episodes where Frozen, DINO-WM, and AdaJEPA fail and \ours succeeds. The unseen-I example uses the paired shape evaluation. Its DINO-WM frame replays recorded actions; the same procedure exactly reproduces all 31 archived Frozen frames and states.
+
+The red-object example comes from round five of the 14-domain stream (\ours chain two, sample 30), matched exactly in both initial and goal state to DINO-WM sample 31. Frozen and AdaJEPA use their seed-100 runs and the official shape-shift checkpoint; \ours uses the mixed-stream checkpoint and accumulated memory described in Appendix~D. All four final frames replay the original actions. This selected illustration combines different initialization and adaptation protocols, rather than forming a same-checkpoint ablation.
+
+For both rows, Figure~\mainref{fig:qualitative} counts executed environment steps under a common 150-step budget. DINO-WM executes 25 steps per replan in the visual example; the other runs execute five. All three baselines fail at the budget, while \ours succeeds after 30 steps (six replans). The examples were selected for these outcomes; aggregate success uses the complete evaluation sets.
 
 Figures~\ref{fig:full_shape} and~\ref{fig:full_visual} show the square and red-agent CEM examples from the original execution archive. Both use the first held-out target of test seed 2000. We retain the full frame strips, termination markers, prediction-loss curves, and explanatory notes. The label Ours denotes \ours; Replay identifies frames reconstructed in the original simulator from the recorded actions. Gray frames hold the terminal state after success.
 
@@ -48,4 +52,4 @@ The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \
 \end{figure*}
 
 \subsection{Reproducibility}
-All quantitative results use archived episode records. Source manifests record the simulator images, outcome annotations, checksums, and crop bounds. Appendix~D specifies the mixed-stream online protocol and checkpoint provenance separately from the held-out evaluations. Code, configurations, and learned states will be released.
+Source manifests link archived episode records, simulator images, outcomes, checksums, and crops. Appendix~D specifies mixed-stream protocols and checkpoint provenance. Code, configurations, and learned states will be released.
