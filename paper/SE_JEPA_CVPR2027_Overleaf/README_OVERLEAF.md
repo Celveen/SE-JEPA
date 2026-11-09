@@ -159,7 +159,11 @@ five numbered equations, including familiarity and fingerprint similarity.
 Main Section 4.5 (page 7) and Figure 8 (page 8) present continual improvement
 with one memory spanning seven shape domains and seven visual conditions.
 The three-panel figure shows five-round overall, shape and visual success,
-with means and sample SD across three chains. Appendix D retains Tables 8–9
+averaging GD and CEM equally. Frozen and AdaJEPA are horizontal references
+from their archived evaluations. Shading gives sample SD across six actual
+planner-by-chain or planner-by-seed outcomes; the baselines were not run for
+five continual rounds. `data/mixed14_planner_average.json` records these
+aggregates and the original audit checksum. Appendix D retains Tables 8–9
 (overall and per-domain outcomes) and the detailed experimental protocol. This is online adaptation on repeated target pairs, separate from the
 held-out benchmarks. The mixed-stream Frozen/AdaJEPA baselines use the official
 shape-shift checkpoint, while SE-JEPA uses the TLZ+ epoch-3 checkpoint.
@@ -192,3 +196,15 @@ online and baseline evaluation target sets. The approximately 15-point
 held-out unseen-shape comparison in the main text refers to the paired appendix
 table, not the online row. The exact-state overlap audit is archived alongside
 the online results and noted in Appendix B.
+
+## Matched DINO-WM example in Figure 3
+
+Figure 3 uses 90% of the text width and no longer includes the in-panel Goal
+explanation. The I-shape row adds DINO-WM GD on the same initial and goal states;
+its failure at 30 replans agrees with the archived result. The source actions
+were replayed in the original simulator. Both endpoint reference images match
+the existing case, and the same procedure reproduces all 31 Frozen frames and
+states exactly. Original results, simulator sources, frames and a portable
+`replay.py` are retained in `data/revision_assets/dinowm_shape_I/`. Its provenance
+file records dependency versions and checksums. The clean upload contains only
+the updated figure PDF; no simulator dependencies are needed for Overleaf.

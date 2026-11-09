@@ -1,5 +1,5 @@
 {
-  "selection_rule": "Frozen and AdaJEPA both fail at the 30-replan budget; SE-JEPA succeeds. These are selected illustrative examples, not a representative performance estimate.",
+  "selection_rule": "Frozen and AdaJEPA both fail at the 30-replan budget; SE-JEPA succeeds. These are selected illustrative examples, not a representative performance estimate. The I-shape panel additionally includes DINO-WM on the identical archived target; it also fails at the 30-replan budget.",
   "image_processing": "Original simulator PNG bytes archived below. Display uses the same 168 x 168 crop size for all panels, with a fixed crop box within each example. No pixels recolored, regenerated, or composited.",
   "goal_interpretation": "The targets are the pusher position and the object pose in goal.png. The green marker remains static in all observations.",
   "cases": [
@@ -48,6 +48,11 @@
           "path": "selected_cases/shape_GD_I/goal.png",
           "source_path": "tmp/drive/shape/shape_shift_figs/replay/GD/I/ours/goal.png",
           "sha256": "bc24229d6d3adc0dd1409421d34b8285e6f01d0e4abb33b3de6c1d7f69f35bfa"
+        },
+        "dinowm": {
+          "path": "dinowm_shape_I/frames/step_30.png",
+          "source_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_00_I/final_eval_results.npz",
+          "sha256": "ce7a981dded99af41492a21226460dd480e89a7a3393583d369418da23e55538"
         }
       },
       "methods": {
@@ -85,12 +90,36 @@
           "source": "CL-JEPA-cudagraph/eval_outputs/cmp_gd_v6a_s100/cls6a_free/chunk_00_I",
           "frames_origin": "frames saved during the run (episode_frames.npz)",
           "different_pixels_from_goal": 1018
+        },
+        "dinowm": {
+          "success": false,
+          "n_steps": 30,
+          "source_commit": "eec0ba00fbb945c4dc70bd4804035f845b67a463",
+          "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_H7t3_GD_bias16k_reference_e3_20261106/chunk_00_I",
+          "frames_origin": "Original simulator replay of the archived DINO-WM actions",
+          "checkpoint": "dinowm_pushobj_bias16k_reference_e3, epoch 3",
+          "trajectory": {
+            "path": "dinowm_shape_I/dinowm_I_GD_replay.npz",
+            "sha256": "036357d466bb364354a577ec153aca2aef327dfdc1728ea92ae509bcf5033a81"
+          },
+          "final_state": [
+            263.8955993652344,
+            93.16508483886719,
+            345.1468811035156,
+            95.97740173339844,
+            2.155750036239624,
+            44.26256561279297,
+            -133.45907592773438
+          ],
+          "provenance": "dinowm_shape_I/replay_provenance.json"
         }
       },
       "validation": {
         "step_00.png_identical_across_methods": true,
         "goal.png_identical_across_methods": true,
-        "crop_preserves_all_colored_foreground": true
+        "crop_preserves_all_colored_foreground": true,
+        "dinowm_start_and_goal_pixel_identical": true,
+        "dinowm_simulator_checked_against_frozen_full_trajectory": true
       }
     },
     {

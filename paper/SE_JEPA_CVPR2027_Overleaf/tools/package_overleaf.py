@@ -15,7 +15,7 @@ files = [root / name for name in (
 for directory, suffixes in [
     ("sec", {".tex"}), ("tables", {".tex"}),
     ("figures", {".pdf", ".png", ".svg"}),
-    ("data", {".json", ".npy", ".npz", ".md", ".csv", ".png", ".txt"}),
+    ("data", {".json", ".npy", ".npz", ".md", ".csv", ".png", ".txt", ".py", ".yaml"}),
     ("tools", {".py"}),
 ]:
     files.extend(p for p in (root / directory).rglob("*") if p.is_file() and p.suffix in suffixes)

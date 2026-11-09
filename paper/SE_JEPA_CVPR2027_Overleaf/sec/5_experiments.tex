@@ -32,7 +32,7 @@ With the same 15-push budget, the consolidated DINO-WM predictor lowers final CD
 \subsection{Qualitative results}
 \label{sec:qualitative}
 
-With matched starts and goals, \ours solves unseen-I and red-object episodes that both baselines miss (Fig.~\ref{fig:qualitative}). The slow predictor alone also moves rope and particles closer to their target configurations (Fig.~\ref{fig:deform_qualitative}). \supref{E} gives full trajectories and explains their planning outcomes and prediction-loss curves.
+With matched starts and goals, \ours solves unseen-I and red-object episodes that Frozen and AdaJEPA miss; DINO-WM also fails on the I target (Fig.~\ref{fig:qualitative}). The slow predictor alone also moves rope and particles closer to their target configurations (Fig.~\ref{fig:deform_qualitative}). \supref{E} gives full trajectories and explains their planning outcomes and prediction-loss curves.
 
 \subsection{Learning over deployment}
 \label{sec:deployment}
@@ -49,7 +49,7 @@ Across seven PushObj rounds, about one episode in four writes to replay, and a s
 
 We combine seven PushObj shapes and seven PushT visual conditions in one 14-domain stream. Each of three chains per planner starts with an empty memory and carries it through all domains for five rounds, with 50 episodes per domain per round. Targets repeat, while adaptation and memory updates remain active.
 
-Figure~\ref{fig:mixed14_learning} shows sustained improvement in this mixed stream. Overall online success rises from 65.6\% to 75.1\% with GD and from 65.0\% to 75.8\% with CEM: gains of 9.6 and 10.8 percentage points. Both families improve from the first to fifth round. Final shape success reaches 81.1\% and 82.9\%, and visual success reaches 69.1\% and 68.7\%, respectively. Thus one evolving memory supports recurring geometric and appearance changes across task families, without resetting between them. Appendix~D gives per-domain outcomes and comparisons with differently initialized baselines.
+Figure~\ref{fig:mixed14_learning} averages GD and CEM equally. Overall online success rises from 65.3\% to 75.5\%, a gain of 10.2 percentage points. Shape success increases from 73.4\% to 82.0\%, and visual success from 57.2\% to 68.9\%. Fifth-round overall success exceeds the AdaJEPA and Frozen references of 65.2\% and 38.2\%, respectively. These baseline comparisons use different initializations and adaptation exposure (Appendix~D). The within-system gains show that one evolving memory supports recurring geometric and appearance changes across task families, without resetting between them. Appendix~D retains per-planner and per-domain outcomes.
 
 \subsection{Ablation study}
 \label{sec:ablation}

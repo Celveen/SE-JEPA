@@ -2,7 +2,7 @@
 \label{app:qualitative}
 
 \subsection{Rigid-object planning sequences}
-Figure~\mainref{fig:qualitative} selects an unseen-I and a red-object episode where both baselines fail and \ours succeeds under GD. All methods share the initial and goal observations. These examples illustrate planning behavior; aggregate success uses the complete held-out sets.
+Figure~\mainref{fig:qualitative} selects an unseen-I and a red-object episode where Frozen and AdaJEPA fail and \ours succeeds under GD. The I example also includes DINO-WM, which fails after 30 replans on the identical target. Its final frame comes from replaying the recorded actions in the original simulator. The start and goal renderings match the existing case pixel for pixel; the same replay procedure exactly reproduces all 31 archived Frozen frames and states. These selected examples illustrate planning behavior; aggregate success uses the complete evaluation sets.
 
 Figures~\ref{fig:full_shape} and~\ref{fig:full_visual} show the square and red-agent CEM examples from the original execution archive. Both use the first held-out target of test seed 2000. We retain the full frame strips, termination markers, prediction-loss curves, and explanatory notes. The label Ours denotes \ours; Replay identifies frames reconstructed in the original simulator from the recorded actions. Gray frames hold the terminal state after success.
 

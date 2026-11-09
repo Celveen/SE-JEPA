@@ -31,8 +31,9 @@ accuracy and behavioral performance become decoupled later in deployment.
 
 The mixed 14-domain experiment has a dedicated main-text Section 4.5 on page 7
 and a three-panel Figure 8 on page 8, covering overall, shape and visual
-five-round learning. Main-text success gains are 9.6 points with GD and 10.8
-with CEM. Appendix D retains Tables 8–9 and the detailed protocol, including
+five-round learning. Figure 8 averages GD and CEM equally and adds Frozen
+and AdaJEPA as horizontal references. Overall SE-JEPA success increases from
+65.3% to 75.5%; the detailed tables retain the individual planner results. Appendix D retains Tables 8–9 and the detailed protocol, including
 repeated targets and the baseline initialization differences.
 Appendix E includes all four original reference panels, two additional
 deformable cases, and their explanatory text. The original loss curves and
@@ -41,3 +42,8 @@ notes are preserved. The clean Overleaf archive contains 49 files and 15 figures
 The main-table PushObj CEM row is 80.4% All, 73.1% Unseen, and 12.99 replans,
 from the selected three fifth-round online streams. Paired post-learning
 evaluations remain separately reported in Appendix B.
+
+Figure 3 is slightly smaller and adds a DINO-WM GD outcome on the identical
+I-shape target, reconstructed from the original executed actions. The Goal
+explanatory line has been removed. The replay matches the existing start/goal
+images and exactly reproduces the archived Frozen trajectory as a control.

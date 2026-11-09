@@ -20,8 +20,8 @@
 
 \begin{figure*}[!t]
   \centering
-  \includegraphics[width=\textwidth]{qualitative.pdf}
-  \caption{\textbf{Persistent memory resolves failures of episodic adaptation.} Selected GD examples on an unseen I shape (top) and red-object shift (bottom). Frozen and AdaJEPA exhaust 30 replans in both cases; \textbf{\ours} succeeds in six and seven, respectively. Each row shares the same start and goal. The goal image specifies the pusher position and object pose; the green marker is static.}
+  \includegraphics[width=.9\textwidth]{qualitative.pdf}
+  \caption{\textbf{Persistent memory resolves planning failures.} Selected GD examples on an unseen I shape (top) and red-object shift (bottom). Frozen and AdaJEPA exhaust 30 replans in both cases; DINO-WM also fails on I. \textbf{\ours} succeeds in six and seven replans, respectively. Each row shares the same start and goal; DINO-WM's frame replays its recorded simulator actions.}
   \label{fig:qualitative}
 \end{figure*}
 
@@ -56,6 +56,6 @@
 \begin{figure*}[!t]
   \centering
   \includegraphics[width=\textwidth]{mixed14_learning.pdf}
-  \caption{\textbf{One memory learns across 14 domains and two task families.} Five-round online success on seven PushObj shapes and seven PushT visual conditions, with no memory reset. Targets repeat and adaptation remains active. Lines show means and shading one sample SD across three chains (2,100 episodes per planner per round).}
+  \caption{\textbf{One memory learns across 14 domains and two task families.} All methods average GD and CEM equally. \ours learns online over five rounds without memory reset; targets repeat. Frozen and AdaJEPA are horizontal references from their archived evaluations. Shading shows one sample SD across six runs (two planners, three chains or seeds each). Baseline initializations and adaptation exposure differ (Appendix~D).}
   \label{fig:mixed14_learning}
 \end{figure*}

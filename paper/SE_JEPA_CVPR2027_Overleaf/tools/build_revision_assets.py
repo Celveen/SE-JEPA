@@ -64,32 +64,33 @@ if '--planning-only' in sys.argv:
 # Selected failures/successes share pixel-identical initial and goal observations.
 # Equal-size crops enlarge the raw simulator frames without changing their pixels.
 selection=json.loads((D/'selection_manifest.json').read_text())['cases']
-fig, axes = plt.subplots(len(selection), 5, figsize=(7, 2.55))
-fig.subplots_adjust(left=.085, right=.995, top=.87, bottom=.15, wspace=.04, hspace=.33)
+fig = plt.figure(figsize=(7, 2.55))
+rows = fig.add_gridspec(len(selection), 1, left=.085, right=.995,
+                       top=.87, bottom=.12, hspace=.68)
+panel_titles={'start':'Start','frozen':'Frozen final','dinowm':'DINO-WM final',
+              'adajepa':'AdaJEPA final','ours':'SE-JEPA final','goal':'Goal image'}
 for row, case in enumerate(selection):
  assert not case['methods']['frozen']['success']
  assert not case['methods']['adajepa']['success']
  assert case['methods']['ours']['success']
- for col, panel in enumerate(['start','frozen','adajepa','ours','goal']):
-  ax=axes[row,col]
+ panels=['start','frozen'] + (['dinowm'] if 'dinowm' in case['methods'] else []) + ['adajepa','ours','goal']
+ cells=rows[row].subgridspec(1,len(panels),wspace=.04)
+ for col, panel in enumerate(panels):
+  ax=fig.add_subplot(cells[col])
   raw=Image.open(D/case['frames'][panel]['path'])
   ax.imshow(raw.crop(case['display_crop_xyxy']),interpolation='none')
   ax.set_xticks([]);ax.set_yticks([])
   frame_border(ax, panel == 'ours')
-  if panel in methods:
+  if panel in case['methods']:
    result=case['methods'][panel]
    outcome='Success' if result['success'] else 'Failure'
    ax.text(.5,-.06,f"{outcome} / {result['n_steps']} replans",transform=ax.transAxes,
            ha='center',va='top',fontsize=6.5,color=TEXT,
            fontweight='bold' if panel=='ours' else 'normal')
-  if row==0:
-   title=['Start','Frozen final','AdaJEPA final','SE-JEPA final','Goal image'][col]
-   ax.set_title(title,fontsize=8,pad=5,color=TEXT,
-                fontweight='bold' if panel=='ours' else 'normal')
+  ax.set_title(panel_titles[panel],fontsize=8,pad=5,color=TEXT,
+               fontweight='bold' if panel=='ours' else 'normal')
   if col==0:
    ax.set_ylabel(case['label'],fontsize=7.5,labelpad=7,color=TEXT)
-fig.text(.54,.025,'Goal: pusher position and object pose. The green marker is static.',
-         ha='center',va='bottom',fontsize=6.5,color=TEXT)
 save(fig,'qualitative')
 if '--qualitative-only' in sys.argv:
  raise SystemExit(0)

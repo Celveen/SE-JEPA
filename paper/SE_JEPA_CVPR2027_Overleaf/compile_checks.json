@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T01:06:48-08:00",
+  "checked_at": "2026-11-09T01:39:33-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "33c031a8279cad0f9e0b0b592ceb7c4d2695b0d129145212d32033b59224a47e",
+    "pdf_sha256": "8c26d7eb2c19dcddde65a2368c9180c5ea0acdff67665ff3b8d22d60eb49ede7",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -36,7 +36,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "49821a7c3d7f1e5b7c9808c99e6872aa7c38336603f591e9b95fce751bfa3605"
+    "pdf_sha256": "3bdccf4d7f643f06cd1f88b9c88ba1863d08eac5a5c8e8b162153c791888411a"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -135,6 +135,17 @@
         "data/revision_assets/visual_summary.json"
       ],
       "official_baseline_audit": "data/checkpoint_audit.json"
+    },
+    "qualitative": {
+      "figure": "figures/qualitative.pdf",
+      "text_width_fraction": 0.9,
+      "goal_explanatory_line_removed": true,
+      "dino_wm_case": "PushObj I / GD / seed 2000 / sample 0",
+      "dino_wm_provenance": "data/revision_assets/dinowm_shape_I/replay_provenance.json",
+      "matched_initial_and_goal_pixels": true,
+      "frozen_control_frames_and_states_exact": 31,
+      "dino_wm_success": false,
+      "dino_wm_replans": 30
     }
   },
   "ablation": {
@@ -195,7 +206,10 @@
     "placement": "Main Section 4.5 and Figure 8; detailed comparison tables in Appendix D",
     "main_section": "4.5",
     "main_section_page": 7,
-    "plot_layout": "Full-width, three panels: all domains, shapes, visual conditions; means and sample SD across three chains"
+    "plot_layout": "Three panels; SE-JEPA, AdaJEPA and Frozen each average GD and CEM equally",
+    "plot_aggregation_source": "data/mixed14_planner_average.json",
+    "baseline_lines": "Horizontal archived evaluation references; not five-round trajectories",
+    "plot_uncertainty": "Sample SD across six actual planner-by-chain or planner-by-seed success rates"
   },
   "clean_upload_files": 49,
   "pushobj_cem_main": {
@@ -215,5 +229,6 @@
     "paired_post_learning_tables_unchanged": true,
     "table_caption_states_protocol_difference": true,
     "source_and_table_checked": true
-  }
+  },
+  "qualitative_source_hashes_verified": true
 }
