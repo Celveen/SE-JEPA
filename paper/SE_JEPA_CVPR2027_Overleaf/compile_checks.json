@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-08T22:01:36-08:00",
+  "checked_at": "2026-11-08T23:19:52-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
-    "pages": 19,
+    "pages": 20,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "208cedefcf8891c1ff6ea39b2bb8481920f4df4779d6facfb983ca75661eeda8",
+    "pdf_sha256": "a91c48114618436b1e708285f67340a29c07b8fc1f44e5f44fb07db4c8964539",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -26,16 +26,16 @@
     },
     "conclusion_page": 8,
     "all_main_floats_precede_conclusion": true,
-    "familiarity_ablation_page": 15,
+    "familiarity_ablation_page": 17,
     "component_ablation_page": 8,
     "inheritance_ablation_page": 8
   },
   "supplement": {
-    "pages": 10,
+    "pages": 12,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "48ddac582b184717882d60f90803cb2abc88883ff0f1d70bc011e5058b38f61c"
+    "pdf_sha256": "3a3239bddd6e70416140bf3e06b3591a5d8bd75199482fecfeb80efba0a77214"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -92,8 +92,8 @@
       4,
       5,
       6,
-      9,
-      10
+      8,
+      9
     ],
     "teaser": {
       "layout": "Single column: the supplied recurring-shift schematic above the GD chart.",
@@ -149,24 +149,49 @@
   "unseen_rope_audit": "data/reporting_overrides.json#unseen_rope_audit",
   "official_checkpoint_audit": "data/checkpoint_audit.json",
   "appendix_rollouts": {
-    "source_manifest": "data/revision_assets/deform_rollout_sources.json",
-    "new_cases": 4,
-    "new_figures": {
-      "rope": {
+    "source_manifest": "data/revision_assets/reference_rollout_sources.json",
+    "requested_reference_cases": 4,
+    "additional_cases": 2,
+    "source_format": "Native Drive PDFs, cropped by panel; original text, curves, and simulator pixels preserved",
+    "figures": {
+      "fig:full_shape": {
+        "number": 10,
+        "page": 18
+      },
+      "fig:full_visual": {
         "number": 11,
         "page": 18
       },
-      "granular": {
+      "fig:deform_reference": {
         "number": 12,
         "page": 19
+      },
+      "fig:deform_additional": {
+        "number": 13,
+        "page": 20
       }
     },
-    "original_image_placements_verified": 84,
     "rendered_pages_checked": [
-      16,
       17,
       18,
-      19
+      19,
+      20
     ]
-  }
+  },
+  "mixed14": {
+    "source": "data/mixed14_audit.json",
+    "verified_npz_files": 588,
+    "episodes": 29400,
+    "verified_state_links": 414,
+    "state_audits": 420,
+    "chains": 6,
+    "rounds_per_chain": 5,
+    "shared_memory_across_both_families": true,
+    "official_adajepa_checkpoint": "pushobj_shape_shift",
+    "evaluation": "Online learning with repeated targets; distinct from held-out benchmarks",
+    "figure_page": 15,
+    "summary_table_page": 16,
+    "domain_table_page": 16
+  },
+  "clean_upload_files": 49
 }

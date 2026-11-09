@@ -33,7 +33,8 @@
     "Figure3 rigid qualitative cases",
     "Figure5 GD curves",
     "Figure7 gains",
-    "Appendix per-domain rates and qualitative cases"
+    "Appendix per-domain rates and qualitative cases",
+    "Appendix mixed 14-domain comparison"
   ],
   "controlled_ablation_exception": "Table3 Episodic reset deliberately shares our pretrained checkpoint with the other ablations; it is not labeled as the official-checkpoint AdaJEPA benchmark.",
   "deformable_scope": "Rope and granular left unchanged per author instruction on 2026-11-08.",
@@ -46,5 +47,12 @@
     "data/revision_assets/shape_case.json": "1854830480573e718fee954f17c9c873e797fb65219970271a031b7e28e0b71e",
     "data/revision_assets/visual_case.json": "43e2596b766bb2494d7b6f0619eeea6fa55afc5c49d3b9c4afad965e158e6834",
     "data/pusht_audit.json": "e1b938201e2142f554ea78fa84af680ae037e0564314afb5678f9507855320fc"
+  },
+  "Mixed14": {
+    "checkpoint": "official/pushobj_shape_shift",
+    "recorded_checkpoint_sha256": "6a0a75a94eefa4ca1e261cd1010c2c886e1465ce77035ec8a802eb75db3ead95",
+    "scope": "Frozen and AdaJEPA, all seven visual and seven shape blocks, GD and CEM",
+    "source": "data/mixed14_audit.json#checkpoint_provenance",
+    "comparison_scope": "Baselines reset from the official shape-shift checkpoint; SE-JEPA starts from the custom TLZ+ epoch-3 checkpoint and carries memory. Online repeated-target comparison, not a same-checkpoint ablation."
   }
 }

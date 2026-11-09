@@ -46,6 +46,8 @@ python tools/build_revision_assets.py
 python tools/build_learning_progress.py
 python tools/build_condition_gains.py
 python tools/build_deform_appendix.py
+python tools/build_reference_rollouts.py
+python tools/build_mixed14_assets.py
 python tools/audit_pusht.py
 python tools/package_overleaf.py
 ```
@@ -104,13 +106,15 @@ The main qualitative comparison selects real examples where Frozen and
 AdaJEPA fail and SE-JEPA succeeds. Selection and source hashes are recorded
 with the assets. Rope/Granular examples are from the third pass, while their
 main-table aggregate results are from the fourth pass; the caption distinguishes
-these. The appendix includes the square and red-agent trajectories and four
-complete deformable sequences (two rope and two granular). The latter retain all
-84 original frame placements, runtime CD annotations, and success markers from
-the native Drive PDFs; only the Ours labels are changed to SE-JEPA. Sources,
-hashes, and the decoded-image checks are in
-`data/revision_assets/deform_rollout_sources.json`. Run
-`tools/build_deform_appendix.py` to reproduce these label-only edits.
+these. The appendix retains the four supplied reference panels: square, red-agent,
+rope example 1, and granular example 2. It also keeps rope example 2 and granular
+example 1. All six panels come from native Drive PDFs, preserving the original
+frames, labels, loss curves and explanatory notes. The deformable cases are
+cropped at their original panel boundaries; the rigid-object panels retain their
+complete frame strips and vector loss curves. `tools/build_reference_rollouts.py`
+reproduces them, with source hashes, image checks and crop bounds in
+`data/revision_assets/reference_rollout_sources.json`. The older reformatted
+views remain in the research archive but are excluded from the clean upload.
 
 Before camera-ready release, supply author details, change the review option
 in `main.tex`, and reconcile the AI-use statement with all authors' tool use.
@@ -147,3 +151,25 @@ The same-checkpoint ablation is labeled Episodic reset. Rope/granular values
 remain unchanged at the author's request. Figure 5 now uses GD curves and
 Figure 6 marks Success (%) up and Chamfer distance down. The main method has
 five numbered equations, including familiarity and fingerprint similarity.
+
+
+## Mixed 14-domain stream and original reference panels
+
+The main text, Introduction, and Conclusion now describe continual improvement
+with one memory spanning seven shape domains and seven visual conditions.
+Appendix D adds Figure 8 (five-round curves) and Tables 8–9 (overall and per-domain
+outcomes). This is online adaptation on repeated target pairs, separate from the
+held-out benchmarks. The mixed-stream Frozen/AdaJEPA baselines use the official
+shape-shift checkpoint, while SE-JEPA uses the TLZ+ epoch-3 checkpoint.
+
+`data/mixed14_audit.json` records an independent recomputation of all 588 result
+files (29,400 episodes), 420 state audits and 414 consecutive state links. It
+contains all plot/table values and source checksums. Reproduce it using
+`python tools/verify_mixed14.py /path/to/the/supplied/mixed14/archive`, then run
+`tools/build_mixed14_assets.py`. The supplied eight-page report is preserved as
+`figures/source/mixed14_author_report.pdf`; raw experiment archives and model
+weights are not added to the Overleaf bundle.
+
+The combined paper has 20 pages, including eight pages of main text. Appendix E
+restores the reference panels' full narrative, explaining successful replans,
+final CD, action-replay provenance and the interpretation of prediction losses.

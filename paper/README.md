@@ -3,7 +3,7 @@
 This directory contains the CVPR-format review manuscript and its Overleaf source.
 
 - [Combined paper and appendix (PDF)](main.pdf)
-- [Clean Overleaf upload archive (44 files)](SE_JEPA_CVPR2027_Overleaf_Clean.zip)
+- [Clean Overleaf upload archive (49 files)](SE_JEPA_CVPR2027_Overleaf_Clean.zip)
 - [Full research source archive with data and scripts](SE_JEPA_CVPR2027_Overleaf.zip)
 - [Figure 1 combined editable SVG, original artwork, chart data and rebuilding scripts](SE_JEPA_Figure1_Source.zip)
 - [Editable source](SE_JEPA_CVPR2027_Overleaf/main.tex)
@@ -19,7 +19,7 @@ The revised layout places the main table on page 5 and all main result figures
 before Conclusion on page 8. Figure 7 shows the goal-success gains for each shape and visual shift in a
 single-column, vertically stacked layout. The appendix adds four complete
 rope/granular rollout examples from the original Drive PDFs; the combined
-manuscript has 19 pages, including eight main-text pages. The bibliography contains 42 cited references;
+manuscript has 20 pages, including eight main-text pages. The bibliography contains 42 cited references;
 Appendix A records the author-supplied 8-GPU RTX 5090 and A100 compute systems.
 
 The backbone discussion distinguishes task-trained ResNet models on PushObj/PushT
@@ -28,3 +28,10 @@ and color-shift success together with four-pass rope/granular CD. Its archived
 counts and uncertainty definitions are in `data/learning_progress.json` within
 the source project. Future work includes improving planning as prediction
 accuracy and behavioral performance become decoupled later in deployment.
+
+The mixed 14-domain experiment now appears in the Introduction, deployment
+results, Conclusion, and Appendix D. Figure 8 and Tables 8–9 report the audited
+five-round online stream and distinguish it from held-out evaluation.
+Appendix E includes all four original reference panels, two additional
+deformable cases, and their explanatory text. The original loss curves and
+notes are preserved. The clean Overleaf archive contains 49 files and 15 figures.

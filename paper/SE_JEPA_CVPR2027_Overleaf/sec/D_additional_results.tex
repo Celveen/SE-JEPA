@@ -35,6 +35,56 @@ Table~\ref{tab:visual_domains} and Fig.~\mainref{fig:condition_gains} break the 
  \end{tabular}
 \end{table*}
 
+\subsection{One memory across fourteen domains}
+\label{app:mixed14}
+
+This experiment places seven PushObj shapes and seven PushT visual conditions in one continual stream. The 14 domains form two recurring families, rather than all shape--appearance combinations. Each round presents all seven visual conditions followed by all seven shapes, with the shape order alternating between rounds. One memory state carries through every domain and round. Three chains per planner start with an empty memory and run for five rounds, with 50 episodes per domain per round. The same initial/goal pairs recur throughout; the changing seeds control run randomness. Thus the curves measure online learning on repeated targets, complementing the independent held-out evaluations in the main paper.
+
+\paragraph{Improvement across both families.}
+Figure~\ref{fig:mixed14_learning} follows the shared memory over deployment. Overall success increases by 9.6 percentage points with GD and 10.8 with CEM from the first to fifth round. Both families benefit: GD improves from 56.8\% to 69.1\% on visual conditions and from 74.4\% to 81.1\% on shapes; CEM improves from 57.6\% to 68.7\% and from 72.4\% to 82.9\%, respectively. Experience remains useful after intervening domains, allowing one evolving memory to support both appearance changes and geometric changes.
+
+\begin{figure*}[t]
+ \centering
+ \includegraphics[width=\textwidth]{mixed14_learning.pdf}
+ \caption{\textbf{Continual learning with one memory across 14 domains.} Online success over five rounds, aggregated across three chains per planner. Each round contains 2,100 episodes per planner across the three chains (1,050 per family). Lines show means; shading is one sample standard deviation across chains. Targets repeat across rounds, and adaptation remains active. The domain families share a persistent memory within each chain.}
+ \label{fig:mixed14_learning}
+\end{figure*}
+
+\paragraph{Final-round planning outcomes.}
+Table~\ref{tab:mixed14_summary} compares the fifth round of \ours with the archived Frozen and AdaJEPA baselines. \ours reaches 75.1\% (GD) and 75.8\% (CEM), with higher success in both families and fewer replans overall. Relative to AdaJEPA, the observed overall gaps are 10.0 and 10.4 percentage points, while all-episode replans decrease by 18.8\% and 17.6\%. These gains combine a higher fraction of solved goals with a lower interaction cost. Table~\ref{tab:mixed14_domains} reports every domain: \ours exceeds AdaJEPA in 12 of 14 domains with GD, and in 13 with CEM, tying on noise.
+
+The baseline runs use the official shape-shift checkpoint released with AdaJEPA for both domain families and reset each episode. \ours uses our TLZ+ epoch-3 checkpoint and retains learned memory across episodes. Initial/goal pairs are matched, but initialization and adaptation exposure differ; these are system-level comparisons. The within-system learning curves establish continued improvement in a mixed stream. An isolated cross-family transfer effect would require an additional controlled comparison.
+
+\begin{table*}[t]
+ \centering
+ \caption{\textbf{Mixed 14-domain online results.} Success (\%) and all-episode MPC replans, mean $\pm$ sample SD across three chains (\ours, round five) or three seeds (baselines). Each row has 2,100 episodes, split equally between the two families. Failed episodes count as 30 replans. The checkpoint and learning protocols are described above.}
+ \label{tab:mixed14_summary}
+ \small
+ \begin{tabular}{llcccc}
+ \toprule
+ Planner & Method & All success $\uparrow$ & Shape success $\uparrow$ & Visual success $\uparrow$ & Replans $\downarrow$\\
+ \midrule
+ \inputrows{tables/mixed14_summary.tex}
+ \bottomrule
+ \end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+ \centering
+ \caption{\textbf{Mixed-stream success (\%) for every domain.} Each entry averages 150 episodes under the protocol of Table~\ref{tab:mixed14_summary}. Original appearance and the T-shape block use different target sets and are retained as separate domains.}
+ \label{tab:mixed14_domains}
+ \small
+ \begin{tabular}{llrrrrrr}
+ \toprule
+ & & \multicolumn{3}{c}{GD} & \multicolumn{3}{c}{CEM}\\
+ \cmidrule(lr){3-5}\cmidrule(lr){6-8}
+ Family & Domain & Frozen & AdaJEPA & \ours & Frozen & AdaJEPA & \ours\\
+ \midrule
+ \inputrows{tables/mixed14_domains.tex}
+ \bottomrule
+ \end{tabular}
+\end{table*}
+
 \subsection{Planning efficiency}
 Figure~\mainref{fig:efficiency_main} plots cumulative held-out success against the number of MPC replans. \ours pulls ahead within the first four replans and keeps the lead for the rest of the budget, showing how the advantage develops before the final 30-replan evaluation.
 

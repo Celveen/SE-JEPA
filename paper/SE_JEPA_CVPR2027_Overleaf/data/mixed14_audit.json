@@ -1,0 +1,2175 @@
+{
+  "source_root": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030",
+  "source_pdf": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/figures/十四域_8页/十四域_图表合集.pdf",
+  "status": "raw_outcomes_verified",
+  "independent_validation": {
+    "empty_chain_starts": 6,
+    "state_provenance_files": 420,
+    "npz_files": 588,
+    "episodes": 29400,
+    "successes": 19375,
+    "consecutive_state_hash_links": 414
+  },
+  "protocol": {
+    "domain_order": [
+      "default",
+      "blur",
+      "snp1",
+      "dark",
+      "red_agent",
+      "red_object",
+      "red_goal",
+      "I",
+      "L",
+      "square",
+      "Z",
+      "small_tee",
+      "plus",
+      "T"
+    ],
+    "round_domain_orders": [
+      [
+        "default",
+        "blur",
+        "snp1",
+        "dark",
+        "red_agent",
+        "red_object",
+        "red_goal",
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ],
+      [
+        "default",
+        "blur",
+        "snp1",
+        "dark",
+        "red_agent",
+        "red_object",
+        "red_goal",
+        "square",
+        "T",
+        "I",
+        "plus",
+        "L",
+        "small_tee",
+        "Z"
+      ],
+      [
+        "default",
+        "blur",
+        "snp1",
+        "dark",
+        "red_agent",
+        "red_object",
+        "red_goal",
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ],
+      [
+        "default",
+        "blur",
+        "snp1",
+        "dark",
+        "red_agent",
+        "red_object",
+        "red_goal",
+        "square",
+        "T",
+        "I",
+        "plus",
+        "L",
+        "small_tee",
+        "Z"
+      ],
+      [
+        "default",
+        "blur",
+        "snp1",
+        "dark",
+        "red_agent",
+        "red_object",
+        "red_goal",
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ]
+    ],
+    "target_pairing": "Reuse original visual 50 targets and each original shape-specific 50 targets, paired across GD/CEM and all rounds. Visual default and shape T are retained as separate blocks with different target sets.",
+    "state_policy": "Three independent repetitions per planner. Empty library at the beginning of every repetition; inherit only within its 14 domains and five local rounds. Retain each completed chain final state.",
+    "seed_schedule": [
+      [
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      [
+        600,
+        700,
+        800,
+        900,
+        1000
+      ],
+      [
+        1100,
+        1200,
+        1300,
+        1400,
+        1500
+      ]
+    ],
+    "episodes_per_domain_per_round": 50,
+    "rounds": 5,
+    "repetitions": 3,
+    "checkpoint_description": "PushObj TLZ+ four shapes, 4000 trajectories each, 16000 total, epoch 3; inner directory under the user-specified path"
+  },
+  "statistical_unit": "Sample SD over 3 independently initialized continual chains, or 3 baseline random seeds. Fixed target pairs are reused across all rounds and chains. No held-out evaluation.",
+  "checkpoint_provenance": {
+    "mixed_cls6a_14domains_roundseeds100_500_20261024": {
+      "checkpoint": "/home/tyy/jepa/unzip_20261015122252576_adajepa_cls4_v4_inference_20261015_8d9a59/pushobj_bias_16k_e3/pushobj_bias_16k_e3",
+      "original_checkpoint": "/home/tyy/jepa/unzip_20261015122252576_adajepa_cls4_v4_inference_20261015_8d9a59/pushobj_bias_16k_e3/pushobj_bias_16k_e3",
+      "original_checkpoint_sha256": "6ac64a6230d3e7918c4df3bdc5d71ecd36dc2537685dec111cfa937d9bde5947",
+      "checkpoint_sha256": "6ac64a6230d3e7918c4df3bdc5d71ecd36dc2537685dec111cfa937d9bde5947",
+      "checkpoint_epoch": 3,
+      "checkpoint_modules": {
+        "epoch": "int",
+        "encoder": "SmallResNetGeM",
+        "encoder_optimizer": "dict",
+        "predictor": "ViTPredictor",
+        "predictor_optimizer": "dict",
+        "action_encoder": "ProprioceptiveEmbedding",
+        "proprio_encoder": "ProprioceptiveEmbedding",
+        "decoder": "VQVAE"
+      },
+      "checkpoint_by_method": {
+        "v6a": "/home/tyy/jepa/unzip_20261015122252576_adajepa_cls4_v4_inference_20261015_8d9a59/pushobj_bias_16k_e3/pushobj_bias_16k_e3"
+      },
+      "checkpoint_requested": "/home/tyy/jepa/unzip_20261015122252576_adajepa_cls4_v4_inference_20261015_8d9a59/pushobj_bias_16k_e3",
+      "checkpoint_description": "PushObj TLZ+ four shapes, 4000 trajectories each, 16000 total, epoch 3; inner directory under the user-specified path"
+    },
+    "mixed_official_shape_baselines_3seeds_20261024": {
+      "checkpoint": "/home/tyy/jepa/runs/mixed_official_shape_baselines_3seeds_20261024/official/pushobj_shape_shift",
+      "checkpoint_description": "Official AdaJEPA pushobj_shape_shift release",
+      "checkpoint_comparison_note": "The v6a arm uses user-specified TLZ+ epoch-3 weights; these baseline arms use official shape weights, as explicitly requested. Report this difference with results.",
+      "checkpoint_sha256": "6a0a75a94eefa4ca1e261cd1010c2c886e1465ce77035ec8a802eb75db3ead95",
+      "checkpoint_provenance": {
+        "name": "pushobj_shape_shift.zip",
+        "bytes": 382577198,
+        "sha256": "d7dc41750e81dccfb759d40a074bf5a4555a2f95e453ef8a03705eb6799c1f62",
+        "source": "https://drive.google.com/file/d/1tlwPmQ4CPCRDIaP0bFtsvZH_NK5t03XT/view",
+        "origin": "https://github.com/agentic-learning-ai-lab/adajepa"
+      }
+    }
+  },
+  "round_curves": {
+    "GD": {
+      "all": [
+        {
+          "episodes": 2100,
+          "successes": 1377,
+          "mean_pct": 65.57142857142857,
+          "sd_pct": 1.0785477764672475,
+          "unit_rates_pct": [
+            66.71428571428571,
+            65.42857142857143,
+            64.57142857142857
+          ],
+          "mean_replans": 15.387142857142857,
+          "sd_replans": 0.2935948895734966
+        },
+        {
+          "episodes": 2100,
+          "successes": 1443,
+          "mean_pct": 68.71428571428571,
+          "sd_pct": 1.491472358415796,
+          "unit_rates_pct": [
+            70.42857142857143,
+            67.71428571428571,
+            68.0
+          ],
+          "mean_replans": 14.662857142857144,
+          "sd_replans": 0.3389870866241941
+        },
+        {
+          "episodes": 2100,
+          "successes": 1512,
+          "mean_pct": 72.0,
+          "sd_pct": 0.9999999999999959,
+          "unit_rates_pct": [
+            70.85714285714286,
+            72.71428571428571,
+            72.42857142857143
+          ],
+          "mean_replans": 13.866190476190477,
+          "sd_replans": 0.16626345784617197
+        },
+        {
+          "episodes": 2100,
+          "successes": 1573,
+          "mean_pct": 74.90476190476191,
+          "sd_pct": 0.7867957924694453,
+          "unit_rates_pct": [
+            75.42857142857143,
+            75.28571428571429,
+            74.0
+          ],
+          "mean_replans": 13.029047619047619,
+          "sd_replans": 0.14067137368402205
+        },
+        {
+          "episodes": 2100,
+          "successes": 1578,
+          "mean_pct": 75.14285714285714,
+          "sd_pct": 1.3627702877384982,
+          "unit_rates_pct": [
+            75.28571428571429,
+            73.71428571428571,
+            76.42857142857143
+          ],
+          "mean_replans": 13.026666666666667,
+          "sd_replans": 0.3172275734127372
+        }
+      ],
+      "visual": [
+        {
+          "episodes": 1050,
+          "successes": 596,
+          "mean_pct": 56.76190476190476,
+          "sd_pct": 1.9023794624226809,
+          "unit_rates_pct": [
+            58.857142857142854,
+            56.285714285714285,
+            55.142857142857146
+          ],
+          "mean_replans": 17.694285714285716,
+          "sd_replans": 0.473251885298702
+        },
+        {
+          "episodes": 1050,
+          "successes": 635,
+          "mean_pct": 60.476190476190474,
+          "sd_pct": 0.32991443953692784,
+          "unit_rates_pct": [
+            60.285714285714285,
+            60.285714285714285,
+            60.857142857142854
+          ],
+          "mean_replans": 16.944761904761904,
+          "sd_replans": 0.08448322298531485
+        },
+        {
+          "episodes": 1050,
+          "successes": 674,
+          "mean_pct": 64.19047619047619,
+          "sd_pct": 1.9023794624226833,
+          "unit_rates_pct": [
+            62.0,
+            65.42857142857143,
+            65.14285714285714
+          ],
+          "mean_replans": 15.935238095238095,
+          "sd_replans": 0.4679292928736682
+        },
+        {
+          "episodes": 1050,
+          "successes": 721,
+          "mean_pct": 68.66666666666667,
+          "sd_pct": 1.5735915849388915,
+          "unit_rates_pct": [
+            70.28571428571429,
+            68.57142857142857,
+            67.14285714285714
+          ],
+          "mean_replans": 14.725714285714286,
+          "sd_replans": 0.17858857060579353
+        },
+        {
+          "episodes": 1050,
+          "successes": 726,
+          "mean_pct": 69.14285714285714,
+          "sd_pct": 1.5907898179514395,
+          "unit_rates_pct": [
+            67.71428571428571,
+            68.85714285714286,
+            70.85714285714286
+          ],
+          "mean_replans": 14.694285714285714,
+          "sd_replans": 0.4179249029308926
+        }
+      ],
+      "shape": [
+        {
+          "episodes": 1050,
+          "successes": 781,
+          "mean_pct": 74.38095238095238,
+          "sd_pct": 0.32991443953692784,
+          "unit_rates_pct": [
+            74.57142857142857,
+            74.57142857142857,
+            74.0
+          ],
+          "mean_replans": 13.08,
+          "sd_replans": 0.11880355935023905
+        },
+        {
+          "episodes": 1050,
+          "successes": 808,
+          "mean_pct": 76.95238095238095,
+          "sd_pct": 3.1341871756008266,
+          "unit_rates_pct": [
+            80.57142857142857,
+            75.14285714285714,
+            75.14285714285714
+          ],
+          "mean_replans": 12.380952380952381,
+          "sd_replans": 0.6032384260302524
+        },
+        {
+          "episodes": 1050,
+          "successes": 838,
+          "mean_pct": 79.80952380952381,
+          "sd_pct": 0.16495721976846803,
+          "unit_rates_pct": [
+            79.71428571428571,
+            80.0,
+            79.71428571428571
+          ],
+          "mean_replans": 11.797142857142857,
+          "sd_replans": 0.20609092504949186
+        },
+        {
+          "episodes": 1050,
+          "successes": 852,
+          "mean_pct": 81.14285714285714,
+          "sd_pct": 0.7559289460184545,
+          "unit_rates_pct": [
+            80.57142857142857,
+            82.0,
+            80.85714285714286
+          ],
+          "mean_replans": 11.332380952380952,
+          "sd_replans": 0.15686555619730047
+        },
+        {
+          "episodes": 1050,
+          "successes": 852,
+          "mean_pct": 81.14285714285714,
+          "sd_pct": 2.267786838055366,
+          "unit_rates_pct": [
+            82.85714285714286,
+            78.57142857142857,
+            82.0
+          ],
+          "mean_replans": 11.359047619047619,
+          "sd_replans": 0.6467900857047716
+        }
+      ]
+    },
+    "CEM": {
+      "all": [
+        {
+          "episodes": 2100,
+          "successes": 1365,
+          "mean_pct": 65.0,
+          "sd_pct": 1.0,
+          "unit_rates_pct": [
+            66.0,
+            65.0,
+            64.0
+          ],
+          "mean_replans": 16.94238095238095,
+          "sd_replans": 0.18472446847047957
+        },
+        {
+          "episodes": 2100,
+          "successes": 1475,
+          "mean_pct": 70.23809523809524,
+          "sd_pct": 1.643374659689279,
+          "unit_rates_pct": [
+            68.57142857142857,
+            71.85714285714286,
+            70.28571428571429
+          ],
+          "mean_replans": 15.55952380952381,
+          "sd_replans": 0.20653770389265913
+        },
+        {
+          "episodes": 2100,
+          "successes": 1549,
+          "mean_pct": 73.76190476190476,
+          "sd_pct": 0.6441785361175596,
+          "unit_rates_pct": [
+            73.71428571428571,
+            73.14285714285714,
+            74.42857142857143
+          ],
+          "mean_replans": 14.73047619047619,
+          "sd_replans": 0.19448169387297304
+        },
+        {
+          "episodes": 2100,
+          "successes": 1569,
+          "mean_pct": 74.71428571428572,
+          "sd_pct": 1.0301575072754259,
+          "unit_rates_pct": [
+            74.42857142857143,
+            75.85714285714286,
+            73.85714285714286
+          ],
+          "mean_replans": 14.380952380952381,
+          "sd_replans": 0.19411932651122152
+        },
+        {
+          "episodes": 2100,
+          "successes": 1591,
+          "mean_pct": 75.76190476190476,
+          "sd_pct": 0.837066468154614,
+          "unit_rates_pct": [
+            75.42857142857143,
+            76.71428571428571,
+            75.14285714285714
+          ],
+          "mean_replans": 14.24,
+          "sd_replans": 0.1782053390253578
+        }
+      ],
+      "visual": [
+        {
+          "episodes": 1050,
+          "successes": 605,
+          "mean_pct": 57.61904761904762,
+          "sd_pct": 0.9184429296183775,
+          "unit_rates_pct": [
+            58.0,
+            56.57142857142857,
+            58.285714285714285
+          ],
+          "mean_replans": 18.596190476190475,
+          "sd_replans": 0.18998030689206372
+        },
+        {
+          "episodes": 1050,
+          "successes": 659,
+          "mean_pct": 62.76190476190476,
+          "sd_pct": 3.4086724129853883,
+          "unit_rates_pct": [
+            58.857142857142854,
+            65.14285714285714,
+            64.28571428571429
+          ],
+          "mean_replans": 17.174285714285713,
+          "sd_replans": 0.6491878757025464
+        },
+        {
+          "episodes": 1050,
+          "successes": 709,
+          "mean_pct": 67.52380952380952,
+          "sd_pct": 1.4093951035189252,
+          "unit_rates_pct": [
+            66.57142857142857,
+            66.85714285714286,
+            69.14285714285714
+          ],
+          "mean_replans": 16.144761904761904,
+          "sd_replans": 0.5218673952560101
+        },
+        {
+          "episodes": 1050,
+          "successes": 731,
+          "mean_pct": 69.61904761904762,
+          "sd_pct": 1.4380637019563283,
+          "unit_rates_pct": [
+            68.28571428571429,
+            71.14285714285714,
+            69.42857142857143
+          ],
+          "mean_replans": 15.497142857142858,
+          "sd_replans": 0.4805693901774344
+        },
+        {
+          "episodes": 1050,
+          "successes": 721,
+          "mean_pct": 68.66666666666667,
+          "sd_pct": 1.9023794624226869,
+          "unit_rates_pct": [
+            69.14285714285714,
+            70.28571428571429,
+            66.57142857142857
+          ],
+          "mean_replans": 15.895238095238096,
+          "sd_replans": 0.4030934801525532
+        }
+      ],
+      "shape": [
+        {
+          "episodes": 1050,
+          "successes": 760,
+          "mean_pct": 72.38095238095238,
+          "sd_pct": 2.327007947213455,
+          "unit_rates_pct": [
+            74.0,
+            73.42857142857143,
+            69.71428571428571
+          ],
+          "mean_replans": 15.288571428571428,
+          "sd_replans": 0.47286361670147536
+        },
+        {
+          "episodes": 1050,
+          "successes": 816,
+          "mean_pct": 77.71428571428572,
+          "sd_pct": 1.2453996981544753,
+          "unit_rates_pct": [
+            78.28571428571429,
+            78.57142857142857,
+            76.28571428571429
+          ],
+          "mean_replans": 13.944761904761904,
+          "sd_replans": 0.38376580159804613
+        },
+        {
+          "episodes": 1050,
+          "successes": 840,
+          "mean_pct": 80.0,
+          "sd_pct": 0.7559289460184572,
+          "unit_rates_pct": [
+            80.85714285714286,
+            79.42857142857143,
+            79.71428571428571
+          ],
+          "mean_replans": 13.316190476190476,
+          "sd_replans": 0.22789781693993105
+        },
+        {
+          "episodes": 1050,
+          "successes": 838,
+          "mean_pct": 79.80952380952381,
+          "sd_pct": 1.3196577581477114,
+          "unit_rates_pct": [
+            80.57142857142857,
+            80.57142857142857,
+            78.28571428571429
+          ],
+          "mean_replans": 13.264761904761905,
+          "sd_replans": 0.09233184752850578
+        },
+        {
+          "episodes": 1050,
+          "successes": 870,
+          "mean_pct": 82.85714285714285,
+          "sd_pct": 1.0301575072754259,
+          "unit_rates_pct": [
+            81.71428571428571,
+            83.14285714285714,
+            83.71428571428571
+          ],
+          "mean_replans": 12.584761904761905,
+          "sd_replans": 0.17069685107226334
+        }
+      ]
+    }
+  },
+  "final_comparison": [
+    {
+      "planner": "GD",
+      "method": "frozen",
+      "all": {
+        "episodes": 2100,
+        "successes": 792,
+        "mean_pct": 37.714285714285715,
+        "sd_pct": 0.0,
+        "unit_rates_pct": [
+          37.714285714285715,
+          37.714285714285715,
+          37.714285714285715
+        ],
+        "mean_replans": 21.291428571428572,
+        "sd_replans": 0.0
+      },
+      "visual": {
+        "episodes": 1050,
+        "successes": 351,
+        "mean_pct": 33.42857142857143,
+        "sd_pct": 0.0,
+        "unit_rates_pct": [
+          33.42857142857143,
+          33.42857142857143,
+          33.42857142857143
+        ],
+        "mean_replans": 22.274285714285714,
+        "sd_replans": 0.0
+      },
+      "shape": {
+        "episodes": 1050,
+        "successes": 441,
+        "mean_pct": 42.0,
+        "sd_pct": 0.0,
+        "unit_rates_pct": [
+          42.0,
+          42.0,
+          42.0
+        ],
+        "mean_replans": 20.30857142857143,
+        "sd_replans": 0.0
+      }
+    },
+    {
+      "planner": "GD",
+      "method": "adajepa",
+      "all": {
+        "episodes": 2100,
+        "successes": 1367,
+        "mean_pct": 65.0952380952381,
+        "sd_pct": 0.7046975517594603,
+        "unit_rates_pct": [
+          65.42857142857143,
+          64.28571428571429,
+          65.57142857142857
+        ],
+        "mean_replans": 16.035238095238096,
+        "sd_replans": 0.06905090304177329
+      },
+      "visual": {
+        "episodes": 1050,
+        "successes": 611,
+        "mean_pct": 58.19047619047619,
+        "sd_pct": 0.7190318509781641,
+        "unit_rates_pct": [
+          58.857142857142854,
+          57.42857142857143,
+          58.285714285714285
+        ],
+        "mean_replans": 17.562857142857144,
+        "sd_replans": 0.11414276774536188
+      },
+      "shape": {
+        "episodes": 1050,
+        "successes": 756,
+        "mean_pct": 72.0,
+        "sd_pct": 0.8571428571428612,
+        "unit_rates_pct": [
+          72.0,
+          71.14285714285714,
+          72.85714285714286
+        ],
+        "mean_replans": 14.507619047619048,
+        "sd_replans": 0.21673520632297857
+      }
+    },
+    {
+      "planner": "GD",
+      "method": "v6a",
+      "all": {
+        "episodes": 2100,
+        "successes": 1578,
+        "mean_pct": 75.14285714285714,
+        "sd_pct": 1.3627702877384982,
+        "unit_rates_pct": [
+          75.28571428571429,
+          73.71428571428571,
+          76.42857142857143
+        ],
+        "mean_replans": 13.026666666666667,
+        "sd_replans": 0.3172275734127372
+      },
+      "visual": {
+        "episodes": 1050,
+        "successes": 726,
+        "mean_pct": 69.14285714285714,
+        "sd_pct": 1.5907898179514395,
+        "unit_rates_pct": [
+          67.71428571428571,
+          68.85714285714286,
+          70.85714285714286
+        ],
+        "mean_replans": 14.694285714285714,
+        "sd_replans": 0.4179249029308926
+      },
+      "shape": {
+        "episodes": 1050,
+        "successes": 852,
+        "mean_pct": 81.14285714285714,
+        "sd_pct": 2.267786838055366,
+        "unit_rates_pct": [
+          82.85714285714286,
+          78.57142857142857,
+          82.0
+        ],
+        "mean_replans": 11.359047619047619,
+        "sd_replans": 0.6467900857047716
+      }
+    },
+    {
+      "planner": "CEM",
+      "method": "frozen",
+      "all": {
+        "episodes": 2100,
+        "successes": 811,
+        "mean_pct": 38.61904761904762,
+        "sd_pct": 0.8728715609439696,
+        "unit_rates_pct": [
+          39.57142857142857,
+          38.42857142857143,
+          37.857142857142854
+        ],
+        "mean_replans": 21.93095238095238,
+        "sd_replans": 0.32589698301367426
+      },
+      "visual": {
+        "episodes": 1050,
+        "successes": 349,
+        "mean_pct": 33.23809523809524,
+        "sd_pct": 2.463336601214774,
+        "unit_rates_pct": [
+          35.42857142857143,
+          33.714285714285715,
+          30.571428571428573
+        ],
+        "mean_replans": 23.05238095238095,
+        "sd_replans": 0.7574518686578919
+      },
+      "shape": {
+        "episodes": 1050,
+        "successes": 462,
+        "mean_pct": 44.0,
+        "sd_pct": 1.0301575072754259,
+        "unit_rates_pct": [
+          43.714285714285715,
+          43.142857142857146,
+          45.142857142857146
+        ],
+        "mean_replans": 20.80952380952381,
+        "sd_replans": 0.3087080826154524
+      }
+    },
+    {
+      "planner": "CEM",
+      "method": "adajepa",
+      "all": {
+        "episodes": 2100,
+        "successes": 1373,
+        "mean_pct": 65.38095238095238,
+        "sd_pct": 0.704697551759465,
+        "unit_rates_pct": [
+          64.57142857142857,
+          65.71428571428571,
+          65.85714285714286
+        ],
+        "mean_replans": 17.28,
+        "sd_replans": 0.2518786555920463
+      },
+      "visual": {
+        "episodes": 1050,
+        "successes": 619,
+        "mean_pct": 58.952380952380956,
+        "sd_pct": 1.350233036072173,
+        "unit_rates_pct": [
+          57.42857142857143,
+          60.0,
+          59.42857142857143
+        ],
+        "mean_replans": 18.584761904761905,
+        "sd_replans": 0.3242112354161516
+      },
+      "shape": {
+        "episodes": 1050,
+        "successes": 754,
+        "mean_pct": 71.80952380952381,
+        "sd_pct": 0.4364357804719879,
+        "unit_rates_pct": [
+          71.71428571428571,
+          71.42857142857143,
+          72.28571428571429
+        ],
+        "mean_replans": 15.975238095238094,
+        "sd_replans": 0.2942903374579057
+      }
+    },
+    {
+      "planner": "CEM",
+      "method": "v6a",
+      "all": {
+        "episodes": 2100,
+        "successes": 1591,
+        "mean_pct": 75.76190476190476,
+        "sd_pct": 0.837066468154614,
+        "unit_rates_pct": [
+          75.42857142857143,
+          76.71428571428571,
+          75.14285714285714
+        ],
+        "mean_replans": 14.24,
+        "sd_replans": 0.1782053390253578
+      },
+      "visual": {
+        "episodes": 1050,
+        "successes": 721,
+        "mean_pct": 68.66666666666667,
+        "sd_pct": 1.9023794624226869,
+        "unit_rates_pct": [
+          69.14285714285714,
+          70.28571428571429,
+          66.57142857142857
+        ],
+        "mean_replans": 15.895238095238096,
+        "sd_replans": 0.4030934801525532
+      },
+      "shape": {
+        "episodes": 1050,
+        "successes": 870,
+        "mean_pct": 82.85714285714285,
+        "sd_pct": 1.0301575072754259,
+        "unit_rates_pct": [
+          81.71428571428571,
+          83.14285714285714,
+          83.71428571428571
+        ],
+        "mean_replans": 12.584761904761905,
+        "sd_replans": 0.17069685107226334
+      }
+    }
+  ],
+  "final_by_domain": {
+    "GD": {
+      "default": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 75,
+          "mean_pct": 50.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            50.0,
+            50.0,
+            50.0
+          ],
+          "mean_replans": 18.7,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 106,
+          "mean_pct": 70.66666666666667,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            70.0,
+            72.0,
+            70.0
+          ],
+          "mean_replans": 14.24,
+          "sd_replans": 0.5011985634456667
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 118,
+          "mean_pct": 78.66666666666667,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            78.0,
+            78.0,
+            80.0
+          ],
+          "mean_replans": 12.38,
+          "sd_replans": 0.481248376620639
+        }
+      },
+      "blur": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 48,
+          "mean_pct": 32.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            32.0,
+            32.0,
+            32.0
+          ],
+          "mean_replans": 22.56,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 109,
+          "mean_pct": 72.66666666666667,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            76.0,
+            70.0,
+            72.0
+          ],
+          "mean_replans": 14.813333333333333,
+          "sd_replans": 0.4006661120351127
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 117,
+          "mean_pct": 78.0,
+          "sd_pct": 4.0,
+          "unit_rates_pct": [
+            74.0,
+            78.0,
+            82.0
+          ],
+          "mean_replans": 13.366666666666667,
+          "sd_replans": 0.8085377748338872
+        }
+      },
+      "snp1": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 66,
+          "mean_pct": 44.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            44.0,
+            44.0,
+            44.0
+          ],
+          "mean_replans": 20.16,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 115,
+          "mean_pct": 76.66666666666667,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            80.0,
+            74.0,
+            76.0
+          ],
+          "mean_replans": 14.026666666666667,
+          "sd_replans": 0.33005050118630846
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 118,
+          "mean_pct": 78.66666666666667,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            82.0,
+            76.0,
+            78.0
+          ],
+          "mean_replans": 12.673333333333334,
+          "sd_replans": 0.8821186617078987
+        }
+      },
+      "dark": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 72,
+          "mean_pct": 48.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            48.0,
+            48.0,
+            48.0
+          ],
+          "mean_replans": 18.98,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 108,
+          "mean_pct": 72.0,
+          "sd_pct": 3.4641016151377544,
+          "unit_rates_pct": [
+            70.0,
+            70.0,
+            76.0
+          ],
+          "mean_replans": 14.306666666666667,
+          "sd_replans": 0.66583281184794
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 114,
+          "mean_pct": 76.0,
+          "sd_pct": 2.0,
+          "unit_rates_pct": [
+            76.0,
+            78.0,
+            74.0
+          ],
+          "mean_replans": 12.7,
+          "sd_replans": 0.6352952069707437
+        }
+      },
+      "red_agent": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 54,
+          "mean_pct": 36.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            36.0,
+            36.0,
+            36.0
+          ],
+          "mean_replans": 21.06,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 84,
+          "mean_pct": 56.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            56.0,
+            56.0,
+            56.0
+          ],
+          "mean_replans": 17.466666666666665,
+          "sd_replans": 0.07571877794400407
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 93,
+          "mean_pct": 62.0,
+          "sd_pct": 3.4641016151377544,
+          "unit_rates_pct": [
+            60.0,
+            60.0,
+            66.0
+          ],
+          "mean_replans": 16.066666666666666,
+          "sd_replans": 0.9984654893051292
+        }
+      },
+      "red_object": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 9,
+          "mean_pct": 6.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            6.0,
+            6.0,
+            6.0
+          ],
+          "mean_replans": 28.62,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 20,
+          "mean_pct": 13.333333333333334,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            16.0,
+            12.0,
+            12.0
+          ],
+          "mean_replans": 27.226666666666667,
+          "sd_replans": 0.5441813423237991
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 78,
+          "mean_pct": 52.0,
+          "sd_pct": 4.0,
+          "unit_rates_pct": [
+            48.0,
+            52.0,
+            56.0
+          ],
+          "mean_replans": 18.673333333333332,
+          "sd_replans": 1.2662279942148384
+        }
+      },
+      "red_goal": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 27,
+          "mean_pct": 18.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            18.0,
+            18.0,
+            18.0
+          ],
+          "mean_replans": 25.84,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 69,
+          "mean_pct": 46.0,
+          "sd_pct": 2.0,
+          "unit_rates_pct": [
+            44.0,
+            48.0,
+            46.0
+          ],
+          "mean_replans": 20.86,
+          "sd_replans": 0.5199999999999991
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 88,
+          "mean_pct": 58.666666666666664,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            56.0,
+            60.0,
+            60.0
+          ],
+          "mean_replans": 17.0,
+          "sd_replans": 0.5723635208501675
+        }
+      },
+      "I": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 60,
+          "mean_pct": 40.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            40.0,
+            40.0,
+            40.0
+          ],
+          "mean_replans": 21.14,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 85,
+          "mean_pct": 56.666666666666664,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            58.0,
+            54.0,
+            58.0
+          ],
+          "mean_replans": 19.093333333333334,
+          "sd_replans": 0.3202082655606091
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 124,
+          "mean_pct": 82.66666666666667,
+          "sd_pct": 6.429100507328637,
+          "unit_rates_pct": [
+            90.0,
+            78.0,
+            80.0
+          ],
+          "mean_replans": 10.753333333333332,
+          "sd_replans": 1.3682592346968951
+        }
+      },
+      "L": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 78,
+          "mean_pct": 52.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            52.0,
+            52.0,
+            52.0
+          ],
+          "mean_replans": 17.84,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 125,
+          "mean_pct": 83.33333333333333,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            82.0,
+            84.0,
+            84.0
+          ],
+          "mean_replans": 11.713333333333333,
+          "sd_replans": 0.35232560697930154
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 123,
+          "mean_pct": 82.0,
+          "sd_pct": 2.0,
+          "unit_rates_pct": [
+            84.0,
+            82.0,
+            80.0
+          ],
+          "mean_replans": 11.24,
+          "sd_replans": 0.20297783130184452
+        }
+      },
+      "square": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 21,
+          "mean_pct": 14.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            14.0,
+            14.0,
+            14.0
+          ],
+          "mean_replans": 27.0,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 62,
+          "mean_pct": 41.333333333333336,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            42.0,
+            42.0,
+            40.0
+          ],
+          "mean_replans": 21.599999999999998,
+          "sd_replans": 0.10583005244258338
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 90,
+          "mean_pct": 60.0,
+          "sd_pct": 7.211102550927978,
+          "unit_rates_pct": [
+            62.0,
+            52.0,
+            66.0
+          ],
+          "mean_replans": 16.213333333333335,
+          "sd_replans": 1.6715661319054462
+        }
+      },
+      "Z": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 51,
+          "mean_pct": 34.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            34.0,
+            34.0,
+            34.0
+          ],
+          "mean_replans": 22.14,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 118,
+          "mean_pct": 78.66666666666667,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            76.0,
+            80.0,
+            80.0
+          ],
+          "mean_replans": 13.38,
+          "sd_replans": 0.8901685233707152
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 119,
+          "mean_pct": 79.33333333333333,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            78.0,
+            82.0,
+            78.0
+          ],
+          "mean_replans": 11.84,
+          "sd_replans": 0.08717797887081365
+        }
+      },
+      "small_tee": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 78,
+          "mean_pct": 52.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            52.0,
+            52.0,
+            52.0
+          ],
+          "mean_replans": 17.98,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 118,
+          "mean_pct": 78.66666666666667,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            78.0,
+            76.0,
+            82.0
+          ],
+          "mean_replans": 12.78,
+          "sd_replans": 0.9042123644365851
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 114,
+          "mean_pct": 76.0,
+          "sd_pct": 7.211102550927978,
+          "unit_rates_pct": [
+            78.0,
+            68.0,
+            82.0
+          ],
+          "mean_replans": 12.693333333333333,
+          "sd_replans": 1.987192324193442
+        }
+      },
+      "plus": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 81,
+          "mean_pct": 54.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            54.0,
+            54.0,
+            54.0
+          ],
+          "mean_replans": 17.22,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 127,
+          "mean_pct": 84.66666666666667,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            86.0,
+            82.0,
+            86.0
+          ],
+          "mean_replans": 10.766666666666667,
+          "sd_replans": 0.563678395304746
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 141,
+          "mean_pct": 94.0,
+          "sd_pct": 2.0,
+          "unit_rates_pct": [
+            92.0,
+            94.0,
+            96.0
+          ],
+          "mean_replans": 8.633333333333333,
+          "sd_replans": 0.5352880844305558
+        }
+      },
+      "T": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 72,
+          "mean_pct": 48.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            48.0,
+            48.0,
+            48.0
+          ],
+          "mean_replans": 18.84,
+          "sd_replans": 0.0
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 121,
+          "mean_pct": 80.66666666666667,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            82.0,
+            80.0,
+            80.0
+          ],
+          "mean_replans": 12.22,
+          "sd_replans": 0.124899959967968
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 141,
+          "mean_pct": 94.0,
+          "sd_pct": 2.0,
+          "unit_rates_pct": [
+            96.0,
+            94.0,
+            92.0
+          ],
+          "mean_replans": 8.14,
+          "sd_replans": 0.317490157327751
+        }
+      }
+    },
+    "CEM": {
+      "default": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 70,
+          "mean_pct": 46.666666666666664,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            48.0,
+            46.0,
+            46.0
+          ],
+          "mean_replans": 20.12,
+          "sd_replans": 0.7794870107962029
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 108,
+          "mean_pct": 72.0,
+          "sd_pct": 5.291502622129181,
+          "unit_rates_pct": [
+            68.0,
+            70.0,
+            78.0
+          ],
+          "mean_replans": 15.219999999999999,
+          "sd_replans": 1.0535653752852738
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 117,
+          "mean_pct": 78.0,
+          "sd_pct": 5.291502622129181,
+          "unit_rates_pct": [
+            76.0,
+            84.0,
+            74.0
+          ],
+          "mean_replans": 13.506666666666666,
+          "sd_replans": 0.8285730706059258
+        }
+      },
+      "blur": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 46,
+          "mean_pct": 30.666666666666668,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            30.0,
+            32.0,
+            30.0
+          ],
+          "mean_replans": 23.606666666666666,
+          "sd_replans": 0.11015141094572173
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 105,
+          "mean_pct": 70.0,
+          "sd_pct": 0.0,
+          "unit_rates_pct": [
+            70.0,
+            70.0,
+            70.0
+          ],
+          "mean_replans": 16.82,
+          "sd_replans": 0.2905167809266799
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 109,
+          "mean_pct": 72.66666666666667,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            72.0,
+            72.0,
+            74.0
+          ],
+          "mean_replans": 15.48,
+          "sd_replans": 0.1637070554374492
+        }
+      },
+      "snp1": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 62,
+          "mean_pct": 41.333333333333336,
+          "sd_pct": 5.773502691896257,
+          "unit_rates_pct": [
+            38.0,
+            48.0,
+            38.0
+          ],
+          "mean_replans": 21.686666666666667,
+          "sd_replans": 1.6186825919040868
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 110,
+          "mean_pct": 73.33333333333333,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            72.0,
+            74.0,
+            74.0
+          ],
+          "mean_replans": 16.226666666666667,
+          "sd_replans": 0.6242862591258391
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 110,
+          "mean_pct": 73.33333333333333,
+          "sd_pct": 6.429100507328637,
+          "unit_rates_pct": [
+            76.0,
+            78.0,
+            66.0
+          ],
+          "mean_replans": 15.593333333333334,
+          "sd_replans": 1.8946591602009413
+        }
+      },
+      "dark": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 73,
+          "mean_pct": 48.666666666666664,
+          "sd_pct": 7.023769168568492,
+          "unit_rates_pct": [
+            56.0,
+            48.0,
+            42.0
+          ],
+          "mean_replans": 20.2,
+          "sd_replans": 1.6824981426438488
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 110,
+          "mean_pct": 73.33333333333333,
+          "sd_pct": 4.163331998932265,
+          "unit_rates_pct": [
+            70.0,
+            78.0,
+            72.0
+          ],
+          "mean_replans": 16.053333333333335,
+          "sd_replans": 0.6721111019268565
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 112,
+          "mean_pct": 74.66666666666667,
+          "sd_pct": 7.023769168568492,
+          "unit_rates_pct": [
+            82.0,
+            74.0,
+            68.0
+          ],
+          "mean_replans": 14.426666666666666,
+          "sd_replans": 0.8533072912692901
+        }
+      },
+      "red_agent": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 57,
+          "mean_pct": 38.0,
+          "sd_pct": 5.291502622129181,
+          "unit_rates_pct": [
+            42.0,
+            40.0,
+            32.0
+          ],
+          "mean_replans": 21.12,
+          "sd_replans": 1.350111106539014
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 85,
+          "mean_pct": 56.666666666666664,
+          "sd_pct": 4.163331998932265,
+          "unit_rates_pct": [
+            60.0,
+            52.0,
+            58.0
+          ],
+          "mean_replans": 18.0,
+          "sd_replans": 0.5827520913733389
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 107,
+          "mean_pct": 71.33333333333333,
+          "sd_pct": 6.110100926607787,
+          "unit_rates_pct": [
+            66.0,
+            70.0,
+            78.0
+          ],
+          "mean_replans": 15.173333333333334,
+          "sd_replans": 1.0848655830716236
+        }
+      },
+      "red_object": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 9,
+          "mean_pct": 6.0,
+          "sd_pct": 4.0,
+          "unit_rates_pct": [
+            6.0,
+            2.0,
+            10.0
+          ],
+          "mean_replans": 28.613333333333333,
+          "sd_replans": 0.8612394169644887
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 32,
+          "mean_pct": 21.333333333333332,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            18.0,
+            24.0,
+            22.0
+          ],
+          "mean_replans": 26.2,
+          "sd_replans": 0.8301807032206905
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 76,
+          "mean_pct": 50.666666666666664,
+          "sd_pct": 7.023769168568492,
+          "unit_rates_pct": [
+            58.0,
+            50.0,
+            44.0
+          ],
+          "mean_replans": 19.733333333333334,
+          "sd_replans": 0.802080627701065
+        }
+      },
+      "red_goal": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 32,
+          "mean_pct": 21.333333333333332,
+          "sd_pct": 6.110100926607787,
+          "unit_rates_pct": [
+            28.0,
+            20.0,
+            16.0
+          ],
+          "mean_replans": 26.02,
+          "sd_replans": 1.7445916427634303
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 69,
+          "mean_pct": 46.0,
+          "sd_pct": 5.291502622129181,
+          "unit_rates_pct": [
+            44.0,
+            52.0,
+            42.0
+          ],
+          "mean_replans": 21.573333333333334,
+          "sd_replans": 0.8909171304522853
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 90,
+          "mean_pct": 60.0,
+          "sd_pct": 5.291502622129181,
+          "unit_rates_pct": [
+            54.0,
+            64.0,
+            62.0
+          ],
+          "mean_replans": 17.35333333333333,
+          "sd_replans": 0.7489548272982381
+        }
+      },
+      "I": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 39,
+          "mean_pct": 26.0,
+          "sd_pct": 2.0,
+          "unit_rates_pct": [
+            24.0,
+            28.0,
+            26.0
+          ],
+          "mean_replans": 24.506666666666668,
+          "sd_replans": 0.5804595880277401
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 81,
+          "mean_pct": 54.0,
+          "sd_pct": 3.4641016151377544,
+          "unit_rates_pct": [
+            52.0,
+            58.0,
+            52.0
+          ],
+          "mean_replans": 19.573333333333334,
+          "sd_replans": 0.7072010558061497
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 132,
+          "mean_pct": 88.0,
+          "sd_pct": 2.0,
+          "unit_rates_pct": [
+            86.0,
+            88.0,
+            90.0
+          ],
+          "mean_replans": 10.606666666666667,
+          "sd_replans": 0.3407834111768548
+        }
+      },
+      "L": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 74,
+          "mean_pct": 49.333333333333336,
+          "sd_pct": 4.163331998932265,
+          "unit_rates_pct": [
+            48.0,
+            54.0,
+            46.0
+          ],
+          "mean_replans": 20.493333333333332,
+          "sd_replans": 0.6992376801441225
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 124,
+          "mean_pct": 82.66666666666667,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            80.0,
+            84.0,
+            84.0
+          ],
+          "mean_replans": 14.28,
+          "sd_replans": 0.6761656601750786
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 135,
+          "mean_pct": 90.0,
+          "sd_pct": 4.0,
+          "unit_rates_pct": [
+            90.0,
+            94.0,
+            86.0
+          ],
+          "mean_replans": 11.86,
+          "sd_replans": 0.17088007490635063
+        }
+      },
+      "square": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 40,
+          "mean_pct": 26.666666666666668,
+          "sd_pct": 4.163331998932265,
+          "unit_rates_pct": [
+            30.0,
+            22.0,
+            28.0
+          ],
+          "mean_replans": 24.18,
+          "sd_replans": 0.6584831053261734
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 58,
+          "mean_pct": 38.666666666666664,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            40.0,
+            38.0,
+            38.0
+          ],
+          "mean_replans": 22.466666666666665,
+          "sd_replans": 0.2802379940931154
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 89,
+          "mean_pct": 59.333333333333336,
+          "sd_pct": 8.082903768654761,
+          "unit_rates_pct": [
+            58.0,
+            52.0,
+            68.0
+          ],
+          "mean_replans": 16.846666666666668,
+          "sd_replans": 1.3407957836051443
+        }
+      },
+      "Z": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 64,
+          "mean_pct": 42.666666666666664,
+          "sd_pct": 4.163331998932265,
+          "unit_rates_pct": [
+            44.0,
+            38.0,
+            46.0
+          ],
+          "mean_replans": 20.973333333333333,
+          "sd_replans": 0.9984654893051292
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 118,
+          "mean_pct": 78.66666666666667,
+          "sd_pct": 4.163331998932265,
+          "unit_rates_pct": [
+            74.0,
+            80.0,
+            82.0
+          ],
+          "mean_replans": 14.686666666666667,
+          "sd_replans": 1.0735610524480357
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 125,
+          "mean_pct": 83.33333333333333,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            80.0,
+            86.0,
+            84.0
+          ],
+          "mean_replans": 12.326666666666666,
+          "sd_replans": 0.7710598766200544
+        }
+      },
+      "small_tee": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 85,
+          "mean_pct": 56.666666666666664,
+          "sd_pct": 4.163331998932265,
+          "unit_rates_pct": [
+            60.0,
+            52.0,
+            58.0
+          ],
+          "mean_replans": 18.273333333333333,
+          "sd_replans": 1.1973860418984899
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 120,
+          "mean_pct": 80.0,
+          "sd_pct": 4.0,
+          "unit_rates_pct": [
+            80.0,
+            76.0,
+            84.0
+          ],
+          "mean_replans": 14.08,
+          "sd_replans": 0.623858958419289
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 122,
+          "mean_pct": 81.33333333333333,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            80.0,
+            84.0,
+            80.0
+          ],
+          "mean_replans": 12.906666666666666,
+          "sd_replans": 0.48387326164330824
+        }
+      },
+      "plus": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 70,
+          "mean_pct": 46.666666666666664,
+          "sd_pct": 2.309401076758503,
+          "unit_rates_pct": [
+            44.0,
+            48.0,
+            48.0
+          ],
+          "mean_replans": 20.12666666666667,
+          "sd_replans": 0.5205125678918164
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 122,
+          "mean_pct": 81.33333333333333,
+          "sd_pct": 6.110100926607787,
+          "unit_rates_pct": [
+            88.0,
+            76.0,
+            80.0
+          ],
+          "mean_replans": 14.606666666666667,
+          "sd_replans": 0.8607748447377703
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 130,
+          "mean_pct": 86.66666666666667,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            90.0,
+            86.0,
+            84.0
+          ],
+          "mean_replans": 12.626666666666667,
+          "sd_replans": 0.7145161533046913
+        }
+      },
+      "T": {
+        "frozen": {
+          "episodes": 150,
+          "successes": 90,
+          "mean_pct": 60.0,
+          "sd_pct": 4.0,
+          "unit_rates_pct": [
+            56.0,
+            60.0,
+            64.0
+          ],
+          "mean_replans": 17.113333333333333,
+          "sd_replans": 0.5672154205708223
+        },
+        "adajepa": {
+          "episodes": 150,
+          "successes": 131,
+          "mean_pct": 87.33333333333333,
+          "sd_pct": 1.1547005383792515,
+          "unit_rates_pct": [
+            88.0,
+            88.0,
+            86.0
+          ],
+          "mean_replans": 12.133333333333333,
+          "sd_replans": 0.4119870548128096
+        },
+        "v6a": {
+          "episodes": 150,
+          "successes": 137,
+          "mean_pct": 91.33333333333333,
+          "sd_pct": 3.0550504633038935,
+          "unit_rates_pct": [
+            88.0,
+            92.0,
+            94.0
+          ],
+          "mean_replans": 10.92,
+          "sd_replans": 0.6581793068761737
+        }
+      }
+    }
+  },
+  "page_mapping": {
+    "final_comparison": 1,
+    "round1_to3_pooled": 2,
+    "final_per_domain": 3,
+    "five_round_curves": 4,
+    "replans_summary": 5,
+    "improvement_vs_baselines": 6,
+    "replans_per_domain": 7,
+    "replans_table": 8
+  },
+  "supported_claims": [
+    "One continual memory is carried across all seven visual and seven shape domains for five rounds; six chains start empty, 414 consecutive state hashes and 420 state audits match.",
+    "Overall online success improves monotonically in the three-chain aggregate across all five rounds for GD and CEM.",
+    "Both geometric-shift and visual-shift families improve from the first to fifth round.",
+    "AdaJEPA and Frozen use the official pushobj_shape_shift checkpoint in this experiment, including its visual-domain blocks."
+  ],
+  "claim_limits": [
+    "Targets are repeated, not new held-out targets; the seeds vary run randomness and do not imply independent goal draws.",
+    "This is a 7+7 mixed stream, not all 7x7 combinations of object geometry and visual conditions.",
+    "One state persists across both families, but no isolated cross-family transfer control establishes causal positive transfer.",
+    "All domains remain in the planar pushing simulator; prefer cross-domain or mixed geometric-and-visual-shift learning over broad multi-task generalization.",
+    "Method initialization and adaptation exposure differ: SE-JEPA uses the custom TLZ+ epoch-3 model and persistent learning; baselines use official shape-shift weights and reset per episode.",
+    "Aggregate five-round improvement does not mean every individual chain improves at every round, nor that every domain exceeds AdaJEPA."
+  ],
+  "proposed_main_text": "A single continual memory also spans a mixed stream of seven visual conditions and seven object geometries. Across three five-round chains, online success rises from 65.6% to 75.1% with GD and from 65.0% to 75.8% with CEM, with gains in both domain families. This repeated-target experiment demonstrates continued improvement under alternating geometric and visual shifts.",
+  "short_protocol_note": "Three independent continual chains revisit fixed targets over five rounds (50 episodes per domain per round). SE-JEPA starts from our TLZ+ model; AdaJEPA and Frozen use the official shape-shift checkpoint. Round-5 results are online; initialization and adaptation exposure differ.",
+  "source_files": [
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/figures/十四域_8页/十四域_图表合集.pdf",
+      "relative_path": "figures/十四域_8页/十四域_图表合集.pdf",
+      "bytes": 172710,
+      "sha256": "a14ede91bb3506e53bde26bb5fac2b7ac157c31ba3eac4de066c6be5ed9c6f4f"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/analysis/mixed14_summary.json",
+      "relative_path": "analysis/mixed14_summary.json",
+      "bytes": 232605,
+      "sha256": "ffd7c13b70565e26ccc823272cc6c7143a763f3417bd3d2bcd3de57bc63ff0e0"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/analysis/mixed14_ours_final_results.json",
+      "relative_path": "analysis/mixed14_ours_final_results.json",
+      "bytes": 9511100,
+      "sha256": "a41336078b0cc2ab26e543a5e9d47640b76fc41c55c9666f05b9b9292fbe999c"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/analysis/mixed14_baseline_final_results.json",
+      "relative_path": "analysis/mixed14_baseline_final_results.json",
+      "bytes": 329117,
+      "sha256": "a11feefce7d376123dea48c55e39c8bb384dca0b5e5d3bf0a47619bb6fa425d1"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/raw_data/mixed_cls6a_14domains_roundseeds100_500_20261024/final_results.json",
+      "relative_path": "raw_data/mixed_cls6a_14domains_roundseeds100_500_20261024/final_results.json",
+      "bytes": 9511100,
+      "sha256": "a41336078b0cc2ab26e543a5e9d47640b76fc41c55c9666f05b9b9292fbe999c"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/raw_data/mixed_official_shape_baselines_3seeds_20261024/final_results.json",
+      "relative_path": "raw_data/mixed_official_shape_baselines_3seeds_20261024/final_results.json",
+      "bytes": 329117,
+      "sha256": "a11feefce7d376123dea48c55e39c8bb384dca0b5e5d3bf0a47619bb6fa425d1"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/verification/formal_batches.json",
+      "relative_path": "verification/formal_batches.json",
+      "bytes": 207211,
+      "sha256": "e8f04ec8a42555b5dba616e659bda52780a1ca761ade0a7ca610a5d1ead47da4"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/figures/十四域_8页/English_captions.txt",
+      "relative_path": "figures/十四域_8页/English_captions.txt",
+      "bytes": 3395,
+      "sha256": "4fd7caf9802803498d335a85083fe3c03c17dc6b62bd72fbf255f5e8e055bb07"
+    },
+    {
+      "path": "/Users/qianxinyao/Downloads/十四域_权重数据图表_20261030/weights/base_checkpoint_requirements.json",
+      "relative_path": "weights/base_checkpoint_requirements.json",
+      "bytes": 2291,
+      "sha256": "7d9682a1f197498dd1bfe0225162ff3f6afbb4f5f50ec168c911ee40e769cec5"
+    }
+  ],
+  "verification_code": {
+    "path": "/Users/qianxinyao/Downloads/LC/Se-JEPA paper/paper/SE_JEPA_CVPR2027_Overleaf/tools/verify_mixed14.py",
+    "sha256": "35cbfda3adc2bc32e2472ce1caaccb7700810dcd821081b1058a7d441cfec4c5",
+    "bytes": 10139
+  },
+  "domain_comparison_summary": {
+    "GD": {
+      "wins": 12,
+      "ties": 0,
+      "losses": 2,
+      "winning_domains": [
+        "default",
+        "blur",
+        "snp1",
+        "dark",
+        "red_agent",
+        "red_object",
+        "red_goal",
+        "I",
+        "square",
+        "Z",
+        "plus",
+        "T"
+      ],
+      "tied_domains": [],
+      "lower_domains": [
+        "L",
+        "small_tee"
+      ],
+      "delta_pp": {
+        "default": 8.0,
+        "blur": 5.333333333333329,
+        "snp1": 2.0,
+        "dark": 4.0,
+        "red_agent": 6.0,
+        "red_object": 38.666666666666664,
+        "red_goal": 12.666666666666664,
+        "I": 26.000000000000007,
+        "L": -1.3333333333333286,
+        "square": 18.666666666666664,
+        "Z": 0.6666666666666572,
+        "small_tee": -2.6666666666666714,
+        "plus": 9.333333333333329,
+        "T": 13.333333333333329
+      },
+      "largest_gain_domain": "red_object",
+      "red_object_gain_pp": 38.666666666666664
+    },
+    "CEM": {
+      "wins": 13,
+      "ties": 1,
+      "losses": 0,
+      "winning_domains": [
+        "default",
+        "blur",
+        "dark",
+        "red_agent",
+        "red_object",
+        "red_goal",
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ],
+      "tied_domains": [
+        "snp1"
+      ],
+      "lower_domains": [],
+      "delta_pp": {
+        "default": 6.0,
+        "blur": 2.6666666666666714,
+        "snp1": 0.0,
+        "dark": 1.3333333333333428,
+        "red_agent": 14.666666666666664,
+        "red_object": 29.333333333333332,
+        "red_goal": 14.0,
+        "I": 34.0,
+        "L": 7.333333333333329,
+        "square": 20.66666666666667,
+        "Z": 4.666666666666657,
+        "small_tee": 1.3333333333333286,
+        "plus": 5.333333333333343,
+        "T": 4.0
+      },
+      "largest_gain_domain": "I",
+      "red_object_gain_pp": 29.333333333333332
+    }
+  }
+}
