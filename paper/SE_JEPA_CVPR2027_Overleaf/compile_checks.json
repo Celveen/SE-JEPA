@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T02:19:01-08:00",
+  "checked_at": "2026-11-09T02:27:35-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "c7365aaa3f4ad97644a68a9d047c9fd0905fdfe333dc0a022c19fd6936942cde",
+    "pdf_sha256": "5764025dd738523123fe7ffeda69c8506310032eb16c7e87a69d26b044a497e9",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -36,7 +36,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "31cc5f9af9362a798ccaea3bb90748144879b55430e3103317ea4a43c2c8cbfa"
+    "pdf_sha256": "51a7ead5c21fae091792494d6a9c306ad1e24c4ed270531fbf0126ccf22bb101"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -141,9 +141,7 @@
       "text_width_fraction": 0.9,
       "layout": "Two rows, six columns each; all four methods in both rows",
       "goal_explanatory_line_removed": true,
-      "displayed_step_unit": "Executed environment actions",
-      "common_budget_per_case": 150,
-      "ours_success_steps_per_case": 30,
+      "displayed_step_unit": "MPC replans",
       "dino_wm_cases": {
         "shape": {
           "case": "Paired PushObj I / GD / seed 2000 / sample 0",
@@ -160,7 +158,12 @@
       },
       "matched_initial_and_goal_pixels": true,
       "original_visual_example_archived": true,
-      "main_cem_step_units_unchanged": true
+      "main_cem_step_units_unchanged": true,
+      "common_environment_action_budget": 150,
+      "ours_success_mpc_replans_per_case": 6,
+      "visual_dino_failure_mpc_replans": 6,
+      "other_baseline_failure_mpc_replans": 30,
+      "caption_explains_visual_dino_replanning_frequency": true
     }
   },
   "ablation": {

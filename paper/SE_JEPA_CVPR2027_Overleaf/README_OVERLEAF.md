@@ -213,8 +213,10 @@ use seed 100 and the official shape-shift checkpoint; SE-JEPA uses round five
 of chain two. This is a selected mixed-stream illustration, not a replacement
 for the standard visual benchmark. All three baselines fail within 150 executed
 environment steps, while SE-JEPA succeeds after 30. The visual DINO-WM run
-executes 25 steps per replan and the others five, so both figure rows now label
-environment steps. The CEM main-table step units are unchanged.
+executes 25 steps per replan and the others five. Both figure rows label actual
+MPC replans: visual DINO-WM fails at six, other baselines fail at 30, and
+SE-JEPA succeeds at six in both examples. The caption states the frequency
+difference. The CEM main-table step units are unchanged.
 
 `data/revision_assets/dinowm_visual_mixed/` stores the visual replay and matching
 audit. Provenance files record source hashes and validation; the earlier visual

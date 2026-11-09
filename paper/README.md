@@ -46,6 +46,7 @@ evaluations remain separately reported in Appendix B.
 Figure 3 is slightly smaller and includes DINO-WM GD in both rows, with exact
 initial/goal matching across all four methods. The I-shape case uses the paired
 shape evaluation; the red-object case comes from the mixed 14-domain stream.
-Labels count executed environment steps because the visual DINO-WM run uses
-a different replanning frequency. The original red-object case remains archived.
+Labels count MPC replans, matching the main table's unit. Visual DINO-WM fails
+after six replans of 25 actions; the other failed runs use 30 replans of five
+actions. The caption explains this frequency difference. The original red-object case remains archived.
 The Goal explanatory line has been removed.

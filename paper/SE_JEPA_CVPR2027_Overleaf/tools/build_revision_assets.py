@@ -84,7 +84,7 @@ for row, case in enumerate(selection):
   if panel in case['methods']:
    result=case['methods'][panel]
    outcome='Success' if result['success'] else 'Failure'
-   ax.text(.5,-.06,f"{outcome} / {result['physical_steps']} steps",transform=ax.transAxes,
+   ax.text(.5,-.06,f"{outcome} / {result['n_steps']} replans",transform=ax.transAxes,
            ha='center',va='top',fontsize=6.5,color=TEXT,
            fontweight='bold' if panel=='ours' else 'normal')
   ax.set_title(panel_titles[panel],fontsize=8,pad=5,color=TEXT,

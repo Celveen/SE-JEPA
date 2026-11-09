@@ -21,7 +21,7 @@
 \begin{figure*}[!t]
   \centering
   \includegraphics[width=.9\textwidth]{qualitative.pdf}
-  \caption{\textbf{Persistent memory resolves planning failures.} Selected GD episodes: unseen I (top) and a red-object condition from the 14-domain stream (bottom). Each row shares the same start and goal. All three baselines exhaust 150 environment steps; \textbf{\ours} succeeds in 30. Frames come from saved runs or original-simulator action replay. Appendix~E details the planning frequencies and mixed-stream protocol.}
+  \caption{\textbf{Persistent memory resolves planning failures.} Selected GD episodes: unseen I (top) and mixed-stream red object (bottom), with matched starts and goals. Labels count MPC replans; \textbf{\ours} succeeds in six. Visual DINO-WM allows six replans of 25 actions; the other runs allow 30 replans of five actions. Appendix~E details the mixed-stream and replay protocols.}
   \label{fig:qualitative}
 \end{figure*}
 
