@@ -181,5 +181,23 @@
       }
     },
     "verified_episodes": 700
+  },
+  "pushobj_cem_main": {
+    "metric": "Fifth-round online learning performance",
+    "selected_chains": [
+      "cont_S7t3_cem",
+      "cont_S7t3b_cem",
+      "cont_S7t3s700_cem"
+    ],
+    "source": "data/pushobj_cem_online/audit.json",
+    "all_successes": 844,
+    "all_episodes": 1050,
+    "all_percent": 80.38095238095238,
+    "unseen_successes": 329,
+    "unseen_episodes": 450,
+    "unseen_percent": 73.11111111111111,
+    "mean_replans": 12.994285714285715,
+    "baseline_protocol": "Existing baseline entries use separate benchmark evaluations; this online row is not their matched-target comparison.",
+    "paired_evaluation_retained": "tables/paired_planners.tex"
   }
 }

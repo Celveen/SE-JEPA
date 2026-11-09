@@ -1,0 +1,1665 @@
+{
+  "status": "21_online_NPZ_and_42_official_baseline_NPZ_independently_verified",
+  "protocol": "Fifth-round online learning performance, seven shapes x 50 episodes per chain. Adaptation and memory writing remain active. Not H7t3 held-out performance.",
+  "selected_chains": [
+    "cont_S7t3_cem",
+    "cont_S7t3b_cem",
+    "cont_S7t3s700_cem"
+  ],
+  "summary": {
+    "all": {
+      "episodes": 1050,
+      "successes": 844,
+      "mean_pct": 80.38095238095238,
+      "sd_pct": 1.7457431218879407,
+      "mean_replans": 12.994285714285715,
+      "sd_replans": 0.3494135027705244,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 350,
+          "successes": 288,
+          "rate_pct": 82.28571428571429,
+          "mean_replans": 12.594285714285714
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 350,
+          "successes": 280,
+          "rate_pct": 80.0,
+          "mean_replans": 13.24
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 350,
+          "successes": 276,
+          "rate_pct": 78.85714285714286,
+          "mean_replans": 13.148571428571428
+        }
+      ]
+    },
+    "seen": {
+      "episodes": 600,
+      "successes": 515,
+      "mean_pct": 85.83333333333333,
+      "sd_pct": 1.0408329997330663,
+      "mean_replans": 11.956666666666667,
+      "sd_replans": 0.56480822704112,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 200,
+          "successes": 170,
+          "rate_pct": 85.0,
+          "mean_replans": 12.305
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 200,
+          "successes": 171,
+          "rate_pct": 85.5,
+          "mean_replans": 12.26
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 200,
+          "successes": 174,
+          "rate_pct": 87.0,
+          "mean_replans": 11.305
+        }
+      ]
+    },
+    "unseen": {
+      "episodes": 450,
+      "successes": 329,
+      "mean_pct": 73.11111111111111,
+      "sd_pct": 5.347204184673764,
+      "mean_replans": 14.377777777777778,
+      "sd_replans": 1.3214526238337254,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 150,
+          "successes": 118,
+          "rate_pct": 78.66666666666667,
+          "mean_replans": 12.98
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 150,
+          "successes": 109,
+          "rate_pct": 72.66666666666667,
+          "mean_replans": 14.546666666666667
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 150,
+          "successes": 102,
+          "rate_pct": 68.0,
+          "mean_replans": 15.606666666666667
+        }
+      ]
+    }
+  },
+  "per_shape": {
+    "I": {
+      "episodes": 150,
+      "successes": 120,
+      "mean_pct": 80.0,
+      "sd_pct": 7.211102550927978,
+      "mean_replans": 12.806666666666667,
+      "sd_replans": 1.9095898337950317,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 50,
+          "successes": 43,
+          "rate_pct": 86.0,
+          "mean_replans": 11.12
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 50,
+          "successes": 41,
+          "rate_pct": 82.0,
+          "mean_replans": 12.42
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 50,
+          "successes": 36,
+          "rate_pct": 72.0,
+          "mean_replans": 14.88
+        }
+      ]
+    },
+    "L": {
+      "episodes": 150,
+      "successes": 128,
+      "mean_pct": 85.33333333333333,
+      "sd_pct": 6.110100926607787,
+      "mean_replans": 12.126666666666667,
+      "sd_replans": 1.7304719972693385,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 50,
+          "successes": 42,
+          "rate_pct": 84.0,
+          "mean_replans": 12.5
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 50,
+          "successes": 40,
+          "rate_pct": 80.0,
+          "mean_replans": 13.64
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 50,
+          "successes": 46,
+          "rate_pct": 92.0,
+          "mean_replans": 10.24
+        }
+      ]
+    },
+    "square": {
+      "episodes": 150,
+      "successes": 94,
+      "mean_pct": 62.666666666666664,
+      "sd_pct": 8.32666399786453,
+      "mean_replans": 16.439999999999998,
+      "sd_replans": 2.003297281982881,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 50,
+          "successes": 36,
+          "rate_pct": 72.0,
+          "mean_replans": 14.2
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 50,
+          "successes": 30,
+          "rate_pct": 60.0,
+          "mean_replans": 17.06
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 50,
+          "successes": 28,
+          "rate_pct": 56.0,
+          "mean_replans": 18.06
+        }
+      ]
+    },
+    "Z": {
+      "episodes": 150,
+      "successes": 128,
+      "mean_pct": 85.33333333333333,
+      "sd_pct": 3.0550504633038935,
+      "mean_replans": 11.986666666666666,
+      "sd_replans": 1.0630772941481408,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 50,
+          "successes": 41,
+          "rate_pct": 82.0,
+          "mean_replans": 13.0
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 50,
+          "successes": 43,
+          "rate_pct": 86.0,
+          "mean_replans": 12.08
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 50,
+          "successes": 44,
+          "rate_pct": 88.0,
+          "mean_replans": 10.88
+        }
+      ]
+    },
+    "small_tee": {
+      "episodes": 150,
+      "successes": 115,
+      "mean_pct": 76.66666666666667,
+      "sd_pct": 1.1547005383792515,
+      "mean_replans": 13.886666666666667,
+      "sd_replans": 0.27006172134038836,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 50,
+          "successes": 39,
+          "rate_pct": 78.0,
+          "mean_replans": 13.62
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 50,
+          "successes": 38,
+          "rate_pct": 76.0,
+          "mean_replans": 14.16
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 50,
+          "successes": 38,
+          "rate_pct": 76.0,
+          "mean_replans": 13.88
+        }
+      ]
+    },
+    "plus": {
+      "episodes": 150,
+      "successes": 127,
+      "mean_pct": 84.66666666666667,
+      "sd_pct": 5.773502691896257,
+      "mean_replans": 12.58,
+      "sd_replans": 1.1793218390244458,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 50,
+          "successes": 44,
+          "rate_pct": 88.0,
+          "mean_replans": 12.12
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 50,
+          "successes": 44,
+          "rate_pct": 88.0,
+          "mean_replans": 11.7
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 50,
+          "successes": 39,
+          "rate_pct": 78.0,
+          "mean_replans": 13.92
+        }
+      ]
+    },
+    "T": {
+      "episodes": 150,
+      "successes": 132,
+      "mean_pct": 88.0,
+      "sd_pct": 2.0,
+      "mean_replans": 11.133333333333333,
+      "sd_replans": 0.8256714439371953,
+      "units": [
+        {
+          "chain": "cont_S7t3_cem",
+          "episodes": 50,
+          "successes": 43,
+          "rate_pct": 86.0,
+          "mean_replans": 11.6
+        },
+        {
+          "chain": "cont_S7t3b_cem",
+          "episodes": 50,
+          "successes": 44,
+          "rate_pct": 88.0,
+          "mean_replans": 11.62
+        },
+        {
+          "chain": "cont_S7t3s700_cem",
+          "episodes": 50,
+          "successes": 45,
+          "rate_pct": 90.0,
+          "mean_replans": 10.18
+        }
+      ]
+    }
+  },
+  "raw_rows": [
+    {
+      "chain": "cont_S7t3_cem",
+      "shape": "I",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 43,
+      "replans_sum": 556.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_28_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "7166999f7280d39424f8b0ace7a6986ca48bd8b1",
+        "sha256": "f203c87555d7347ea72d410066c9716dc544844590c93a4cb665ed3cb05d9407",
+        "bytes": 24407
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        15,
+        25,
+        30,
+        33,
+        35,
+        38,
+        41,
+        41,
+        41,
+        41,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "chain": "cont_S7t3_cem",
+      "shape": "L",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 42,
+      "replans_sum": 625.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_29_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "3bbb0d4186d78924a184e201260fe04ac027e7d6",
+        "sha256": "c3c073c1dec56bdc880285df444738fd65f67590ec2fbce13654c6a186b4c1b8",
+        "bytes": 26988
+      },
+      "success_counts_by_mpc_step": [
+        1,
+        1,
+        1,
+        2,
+        4,
+        9,
+        24,
+        27,
+        30,
+        32,
+        33,
+        36,
+        38,
+        38,
+        38,
+        38,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        41,
+        41,
+        42,
+        42
+      ]
+    },
+    {
+      "chain": "cont_S7t3_cem",
+      "shape": "square",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 36,
+      "replans_sum": 710.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_30_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "ed1aedd2dbf3683438644c727b50e8015fc79a87",
+        "sha256": "4490047f944546fdb9a27ad06f29621a77c83c810edacda5ac693e660f3528c1",
+        "bytes": 30072
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        1,
+        2,
+        8,
+        13,
+        17,
+        23,
+        28,
+        29,
+        30,
+        31,
+        33,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36,
+        36
+      ]
+    },
+    {
+      "chain": "cont_S7t3_cem",
+      "shape": "Z",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 41,
+      "replans_sum": 650.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_31_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "a7c50031b5a1e9bad812bcd5193573ecca1da6b4",
+        "sha256": "0af84e63e4f7f7ccf09094fca8881cb786fc4c2f49156ff5ede06a8943a1a0f0",
+        "bytes": 27862
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        9,
+        17,
+        22,
+        24,
+        27,
+        31,
+        34,
+        34,
+        37,
+        37,
+        39,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41
+      ]
+    },
+    {
+      "chain": "cont_S7t3_cem",
+      "shape": "small_tee",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 39,
+      "replans_sum": 681.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_32_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "6972fae0006f1e7d8a8bdb8d719683d9378450a7",
+        "sha256": "f87e96748f5b018c197f98ae7d4c3a9296866b4f6f648c973bc171e2e817e4e8",
+        "bytes": 29083
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        3,
+        4,
+        8,
+        17,
+        25,
+        29,
+        32,
+        32,
+        32,
+        35,
+        36,
+        36,
+        36,
+        36,
+        36,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        39
+      ]
+    },
+    {
+      "chain": "cont_S7t3_cem",
+      "shape": "plus",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 44,
+      "replans_sum": 606.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_33_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "b994cae7ad0cd162132557e11d7695729fbf321f",
+        "sha256": "4df0351b33611777ab02d98f3ce75da0446162a17f475dcef4865efbf3fa7924",
+        "bytes": 26258
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        1,
+        6,
+        11,
+        17,
+        23,
+        29,
+        33,
+        34,
+        36,
+        37,
+        38,
+        39,
+        39,
+        40,
+        40,
+        41,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        44,
+        44
+      ]
+    },
+    {
+      "chain": "cont_S7t3_cem",
+      "shape": "T",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 43,
+      "replans_sum": 580.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_34_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "fb5cd2559e00badecc9cb3d11e209129037da8a8",
+        "sha256": "3f94937481ce9c63e855eceacff7dc9ab4895ee2e84bc32787e4c7a3235cccce",
+        "bytes": 25299
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        2,
+        2,
+        6,
+        12,
+        23,
+        30,
+        33,
+        34,
+        38,
+        38,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "chain": "cont_S7t3b_cem",
+      "shape": "I",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 41,
+      "replans_sum": 621.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_28_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "2fef438136b63273372f06d35c5f57e5f5e339e2",
+        "sha256": "9999471336116a8e73b811a39da98c7022a35f2682b90a637daab1a8edc810be",
+        "bytes": 26791
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        2,
+        3,
+        12,
+        24,
+        29,
+        30,
+        32,
+        33,
+        34,
+        35,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41,
+        41
+      ]
+    },
+    {
+      "chain": "cont_S7t3b_cem",
+      "shape": "L",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 40,
+      "replans_sum": 682.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_29_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "481da0c69c0683dd786c182a0b2268c615a1e2a0",
+        "sha256": "1bcd1e426470bdbc21411979d8946febc4c3324b77e1dd7c129edd0be2cfea5f",
+        "bytes": 29069
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        14,
+        20,
+        21,
+        23,
+        26,
+        30,
+        32,
+        34,
+        34,
+        36,
+        37,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39,
+        39,
+        39,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ]
+    },
+    {
+      "chain": "cont_S7t3b_cem",
+      "shape": "square",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 30,
+      "replans_sum": 853.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_30_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "0e84e287acfb1b25b5e4fb7d0cdcf4ef247dc495",
+        "sha256": "9cd6f4669c49ccdaf4e1ddadf4ec3dbca2fd4fc3ce2d6d1ecffd58e5c6c16fcb",
+        "bytes": 35341
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        9,
+        16,
+        21,
+        22,
+        25,
+        26,
+        27,
+        28,
+        28,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        29,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ]
+    },
+    {
+      "chain": "cont_S7t3b_cem",
+      "shape": "Z",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 43,
+      "replans_sum": 604.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_31_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "3eb5b2afba2e5450fd005c66f6cf51a5fa4a4d6b",
+        "sha256": "1845e84139d918f6e03c97596f6f4a002a54b789ea9fef194c41f1afb96a9272",
+        "bytes": 26197
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        9,
+        17,
+        26,
+        30,
+        33,
+        33,
+        36,
+        36,
+        38,
+        40,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        43,
+        43,
+        43
+      ]
+    },
+    {
+      "chain": "cont_S7t3b_cem",
+      "shape": "small_tee",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 38,
+      "replans_sum": 708.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_32_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "cb2deee1929cff2ed44eb4134a21d1e72610769e",
+        "sha256": "6cc5b199469d6f4c731055d7d037f8627dd2882f6148606ef4fc3402b4b68826",
+        "bytes": 30066
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        24,
+        28,
+        30,
+        31,
+        32,
+        34,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        36,
+        36,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38
+      ]
+    },
+    {
+      "chain": "cont_S7t3b_cem",
+      "shape": "plus",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 44,
+      "replans_sum": 585.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_33_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "e07fb3cae23ddcb2d9a033336485aa950e6529eb",
+        "sha256": "5cd95c1c11e5ac85d0f4d7aacb818ac497e0f4adbc20804cef286d7f21a52e21",
+        "bytes": 25458
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        3,
+        9,
+        14,
+        21,
+        25,
+        32,
+        33,
+        35,
+        35,
+        35,
+        36,
+        38,
+        41,
+        41,
+        42,
+        42,
+        42,
+        42,
+        42,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ]
+    },
+    {
+      "chain": "cont_S7t3b_cem",
+      "shape": "T",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 44,
+      "replans_sum": 581.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_34_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "b3ea94bba05cc05de147e35b193c259ad10b87d8",
+        "sha256": "d01c6223d34d8ea6d9b2711978e63aa989545ac202281ad1e871f95168336b04",
+        "bytes": 25319
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        2,
+        4,
+        9,
+        18,
+        27,
+        31,
+        32,
+        34,
+        37,
+        39,
+        39,
+        40,
+        41,
+        42,
+        42,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ]
+    },
+    {
+      "chain": "cont_S7t3s700_cem",
+      "shape": "I",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 36,
+      "replans_sum": 744.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_28_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "f739a571a116291a4435055ca1b001346b620bc2",
+        "sha256": "047ed9d76bfb2f585ab19085176786dc7626ddda13a6fe9bd3287f8b85aba95e",
+        "bytes": 31322
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        9,
+        17,
+        23,
+        29,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36
+      ]
+    },
+    {
+      "chain": "cont_S7t3s700_cem",
+      "shape": "L",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 46,
+      "replans_sum": 512.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_29_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "96b4b7a973ef52e01f00432ec22f701c04962ea4",
+        "sha256": "3daff1080e2da71b6b926094bb5f404d2e17691b0bc57d5ceabf59de1f332cbe",
+        "bytes": 22818
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        1,
+        1,
+        5,
+        13,
+        21,
+        28,
+        35,
+        37,
+        40,
+        41,
+        42,
+        43,
+        43,
+        43,
+        45,
+        45,
+        45,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46,
+        46
+      ]
+    },
+    {
+      "chain": "cont_S7t3s700_cem",
+      "shape": "square",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 28,
+      "replans_sum": 903.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_30_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "ea9efec7dfabc6f5826c4cc7dbbc913fc07e89f8",
+        "sha256": "dc1e5d22362735ce8d1fcde1336ebb19b57b67a3a5fed97394e40454c4da75cc",
+        "bytes": 37198
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        7,
+        12,
+        17,
+        21,
+        22,
+        24,
+        25,
+        25,
+        26,
+        27,
+        27,
+        27,
+        27,
+        27,
+        27,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28,
+        28
+      ]
+    },
+    {
+      "chain": "cont_S7t3s700_cem",
+      "shape": "Z",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 44,
+      "replans_sum": 544.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_31_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "9d02acc88bd87f62595f044394df5154b2c7a4b0",
+        "sha256": "557b71bed67f2dd5d5ba32178214c11380eb026ec375aefe9acb4d754576471c",
+        "bytes": 23975
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        1,
+        3,
+        7,
+        14,
+        23,
+        27,
+        33,
+        36,
+        38,
+        39,
+        40,
+        40,
+        42,
+        43,
+        43,
+        43,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ]
+    },
+    {
+      "chain": "cont_S7t3s700_cem",
+      "shape": "small_tee",
+      "group": "unseen",
+      "episodes": 50,
+      "successes": 38,
+      "replans_sum": 694.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_32_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "c704392f31c070e55a4a70781d2a40bbd613dedc",
+        "sha256": "4ac6bfe6f0c86d6618dbd4401e15d2d3813b55cf0955216485effec079b1035b",
+        "bytes": 29469
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        6,
+        14,
+        24,
+        29,
+        29,
+        33,
+        33,
+        33,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38
+      ]
+    },
+    {
+      "chain": "cont_S7t3s700_cem",
+      "shape": "plus",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 39,
+      "replans_sum": 696.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_33_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "106c73e14d6f3bdcfadcbd773c5d625a0044a5c8",
+        "sha256": "3b68127342b41048a5c28e5579075a67f55c8c0730f1b0e12ce019cea34f1d4c",
+        "bytes": 29592
+      },
+      "success_counts_by_mpc_step": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        9,
+        19,
+        27,
+        30,
+        31,
+        31,
+        33,
+        33,
+        34,
+        34,
+        34,
+        35,
+        36,
+        36,
+        37,
+        37,
+        37,
+        38,
+        38,
+        38,
+        38,
+        38,
+        38,
+        39,
+        39
+      ]
+    },
+    {
+      "chain": "cont_S7t3s700_cem",
+      "shape": "T",
+      "group": "seen",
+      "episodes": 50,
+      "successes": 45,
+      "replans_sum": 509.0,
+      "source": {
+        "path": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_34_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "64377d26df46205e85903292b2a00c74e7be226c",
+        "sha256": "ef2ebe970038ba7875b5039590cc0506ec9924f48d5d2e22c9abfab26981bc0b",
+        "bytes": 22674
+      },
+      "success_counts_by_mpc_step": [
+        1,
+        1,
+        3,
+        6,
+        10,
+        14,
+        20,
+        28,
+        31,
+        35,
+        40,
+        42,
+        43,
+        44,
+        44,
+        44,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ]
+    }
+  ],
+  "statistical_unit": "Sample standard deviation across the three selected online learning chains, not across H7t3 test seeds.",
+  "source_commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+  "source_branch": "results-shape-v6a",
+  "same_target_rerun_verified": {
+    "I": true,
+    "L": true,
+    "square": true,
+    "Z": true,
+    "small_tee": true,
+    "plus": true,
+    "T": true
+  },
+  "official_baseline_check": {
+    "available_official_runs": {
+      "cmp_cem_frozen_official": {
+        "episodes": 1050,
+        "successes": 460
+      },
+      "cmp_cem_official": {
+        "episodes": 1050,
+        "successes": 739
+      }
+    },
+    "online_target_intersections_with_official_baselines": {
+      "cmp_cem_frozen_official": {
+        "I": 0,
+        "L": 1,
+        "square": 0,
+        "Z": 1,
+        "small_tee": 0,
+        "plus": 1,
+        "T": 0
+      },
+      "cmp_cem_official": {
+        "I": 0,
+        "L": 1,
+        "square": 0,
+        "Z": 1,
+        "small_tee": 0,
+        "plus": 1,
+        "T": 0
+      }
+    },
+    "conclusion": "The archived official Frozen/AdaJEPA runs are H7t3 evaluations with different initial/goal sets from the selected online fifth round. They are not paired controls for this online row. Three incidental exact initial/goal pairs overlap (one each for L, Z, and plus); do not describe the sets as fully disjoint without further source-trajectory audit.",
+    "matched_custom_w0_config_lines": [
+      "ckpt_base_path: /data/zjc/adaJEPA/CL-JEPA/checkpoints/pushobj_bias_16k_e3_seed0",
+      "model_name: null"
+    ],
+    "source_files": [
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_00_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "563e5798f5cd00b460888f66b9bc8412dad156d4",
+        "sha256": "d32ce427968fdbc212eb9b97aefc7b59dfdfad31088b299df4a344af102bc54e",
+        "bytes": 48858
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_01_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "6201ae7214a12dd554cbbf58ee9b9de600cea896",
+        "sha256": "33e0cb76c3994b759022de32152a761e4ef34bfa251e4c02196ec23f67926798",
+        "bytes": 41162
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_02_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "78c2da31dc12d1d6141526d572dd4f10518410eb",
+        "sha256": "53f3be3edf3d2568a7dcc0d40f7a57a755844b49a564378c6b3f9ad4f39988b2",
+        "bytes": 51555
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_03_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "66083671a1f865ab94013ec6e196f042d9b974ff",
+        "sha256": "11a89f3e4182006fdb2ca2ecd7df6d55ebc3442f30693564674dac4734d4ba16",
+        "bytes": 44152
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_04_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "c45a6eee3d35a318579354a3b7abbde7ed235bec",
+        "sha256": "b52e976d08465faa443ddc407919ec2c57580ea79924f54848c6bdb49a302230",
+        "bytes": 39363
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_05_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "ae53b2383b891db591063e1d8578ab1e5b2fd1b0",
+        "sha256": "b7abd6def4ff0c98afdb5aa302284bd227e848d0994449a4200e2b67b42bbc6f",
+        "bytes": 43231
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_06_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "57618169311bbd854807fbb2da4090cb86233ef3",
+        "sha256": "7ebbdefcbb6b57c6bf48247f32608c0edddfd2f0c9efb6db62aac92614763010",
+        "bytes": 31822
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_07_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "0bcccd99177547c7592fddb9fa4862db732bcefe",
+        "sha256": "245b3decda694497c5e70f9804e4f4765d67c6cd326fcc12ddc13398b2e23c10",
+        "bytes": 47372
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_08_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "edadad6d7a1d84f620141f8bb1c2ada9c7150214",
+        "sha256": "39d97f5d7c6adf5b45a13a6688d1f5ca4714f43ac9c6a6f031595472f6188c54",
+        "bytes": 36451
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_09_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "cbd704333d237eb5ebad9df98f233c43d2275f1a",
+        "sha256": "8817684ab3e4fcf325d8ee926dd3ee0879b42aae2ca9055f9a3313d877c99ac4",
+        "bytes": 48763
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_10_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "a7f36aa9fa6beda5d225d74c5bdc353b85857d33",
+        "sha256": "01548131948791fe4ede270262303fbb31900f048ff3250d6e95ef9c97d503e4",
+        "bytes": 42208
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_11_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "7c93d15b3cc8c22249da9b001fedef9b3d64552b",
+        "sha256": "a8efafb419264dbc6d6b0f9755e2989f780fdf6adee348046420ea21e2fe39f5",
+        "bytes": 40805
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_12_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "d77658840c9943ac208d440d95796a021cfd2284",
+        "sha256": "e3fbd13ab5b2b82ad9106ee09482f5a2cbf41f5e782f3f86d51b8bdb2b26e219",
+        "bytes": 41155
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_13_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "2498a8db5ebe53fc2250004e25e72b9eee9f65d0",
+        "sha256": "18c9e04ed1459ff2b49f3fabdf5ba3547a35026d6238aa5aa3bb219a8d9bef6d",
+        "bytes": 34920
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_14_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "ab1067ba5bd76fce45bb22ca43233800389a3fff",
+        "sha256": "982cb0c5c525125f4f0cdd0684dd0cce59bdfd9eed2554be3b633e1619b30308",
+        "bytes": 46463
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_15_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "af27c94cea1d3807b11d565e9a2d43e9d2c3ee60",
+        "sha256": "9de7b5bc70415e0dbff5f64303b0ca5a1db3634cbe4447067f3da8052fcf6a4a",
+        "bytes": 41375
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_16_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "23ed9fc69c0b6a3442abaf84f0f6e6d24e0c600f",
+        "sha256": "7adbea7dac769fe497717d8a41e4cefbb1b484ba2f33fceacad965834b6ebb78",
+        "bytes": 52206
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_17_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "42738811934173f2f862a7d11d0324a91e6608b3",
+        "sha256": "ca7a08154c28d9e625b3ab6702eaad0107547284a649886ad320776917becfca",
+        "bytes": 47212
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_18_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "f767f5dbf0284cd2efbdde452451d09974b423af",
+        "sha256": "dd9dba133094f392353f60de27404f412fa1dc60aa6b14f81a753ade985f958d",
+        "bytes": 36895
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_19_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "cdb9e9705cb2ef0ba7246ac93424abd779cc4728",
+        "sha256": "218262e151e2e3c718cf33911df13eee7d70d145948696564919b0439a883767",
+        "bytes": 43495
+      },
+      {
+        "path": "eval_outputs/cmp_cem_frozen_official/w0/chunk_20_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "132162b36cff7eb3f56b2a7f45367336f3a26d03",
+        "sha256": "3d25c80ded04fb36045c0ee4191faeac1301d7e34da02bac35d00f41a7dd6c10",
+        "bytes": 38556
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_00_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "0a277b61faab1128cc15f32d950297e216d3a43a",
+        "sha256": "60583c6be5a061ba2a1c18980209416a3fcbc64c3c5fdf25fdea1aca116e5ec9",
+        "bytes": 43560
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_01_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "f0abbf2be780c0a52edcd7b0a0ea4012d87ce026",
+        "sha256": "ed4cb7f76b7fa21b21424c1f4685eb9acfee99c07253be3ea6e46599c7737715",
+        "bytes": 28535
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_02_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "fcdf0f13db2ab2f9d96dcf46013b20a0141068cf",
+        "sha256": "5f198f761a574f33a4f72e141ffdfe565897fa471273aee3b92c93aaab7ce462",
+        "bytes": 42129
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_03_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "708d3799ab5bb5a7461a5f226f1685f1cfc36b8e",
+        "sha256": "2b860eaa9187e544008e4f720a0cb8a7ee4322479b31975d03a36c16445b015d",
+        "bytes": 30002
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_04_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "099732aac58c3312f301a06cce4ba9b5b77104cb",
+        "sha256": "c1f50b0cba19862286f1882ad020c5ea7341d9eee5fab78cc18f6615b520636e",
+        "bytes": 33873
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_05_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "6fa69534101da685811744832ca59f0284981dcd",
+        "sha256": "ec09f360b3ff2521be117af053cdd2b1b5359234fdd32136bf09161b1acd2455",
+        "bytes": 29794
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_06_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "576c3984c8e685120daa875b3101abcd81aef2ec",
+        "sha256": "a8b2dec1bac6cdfc39f80db9afcb11963012a78980a7a263890ba260d2c27862",
+        "bytes": 27363
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_07_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "8d9369d69c0a2bcb419f2021e211133a1d178a2e",
+        "sha256": "eeec24d00f5e1a4c55444b2aa2b1bf51e52e7ded119250aa91987f93f250e522",
+        "bytes": 38852
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_08_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "9f92b440c4f9f9a9f0c2eb121f4ffc6f6b14c5dc",
+        "sha256": "8bca1112567de0af84bd021384e6069056b023443353d619dd71d1e3636fcd62",
+        "bytes": 30466
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_09_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "b3d93c5e65ecfd27bdcb88bdaae4d2d345bba3e3",
+        "sha256": "6bce3e161c4ff11065b3183c5544b9397ced04ec47f5e22e28f4afbcb2932ce7",
+        "bytes": 42745
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_10_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "a36ab1fd405786c3ec5e502e4fb8bf9d276149d0",
+        "sha256": "2863928083d2c70a1cebf04d277f63f547cfecd5f91f4ba2a37fdc939a67bd08",
+        "bytes": 26280
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_11_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "07ce2845df87a43c56bd356050dbefee9ccd16de",
+        "sha256": "6876d44b9011d4be9984899446bbc2c0fbd616fc497648d1fc272d158259988e",
+        "bytes": 33322
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_12_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "1c52706ee10801d869c2fbc52ca942f8f488b2b5",
+        "sha256": "727243ed1b0416f8c641a3af950248c5b041c86b8bb4067b5d5337e3fef76ca3",
+        "bytes": 31090
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_13_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "7f41a41de16fd32caba5d62fda2f333bd6e1f7be",
+        "sha256": "68bffa4797c1b1f33de1a064aab413e2a518470052d1d6c263260554083e6f9c",
+        "bytes": 26532
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_14_I/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "4b7b7d2384bbcd0bae64d75463d67736a1b23975",
+        "sha256": "53ff5237fec7073ae45758832921a7f54220e315deb41b95c4d27116e21658c1",
+        "bytes": 41512
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_15_L/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "67a20bdcd988427b5967da81bd652879f5a599ca",
+        "sha256": "2a70c575bae277f5729954674384e4fc10881af47d4f1072a81100d95f1854ae",
+        "bytes": 29752
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_16_square/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "3ca277be5cb170b1f5163277e8187ee14146961a",
+        "sha256": "153a49616682a23e1f8af7a1fb5778b8157609b4c0c92a6fac1ede0d45b77240",
+        "bytes": 44773
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_17_Z/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "3088646b4f41fe56dc148e344de4d5c08238c573",
+        "sha256": "3f7f7a5829599c6944654928860cbab93cb0bccc7caab960d089e04cd7cca650",
+        "bytes": 30528
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_18_small_tee/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "688938b01b213b2f4338a932aba6ba7580940920",
+        "sha256": "48b07133a8622d943d838ad50390535dc0d9e1998b7f6cba8141e4a7b8fe338d",
+        "bytes": 31300
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_19_plus/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "7a1150206b5594a76607ae4526561e41e7c3e830",
+        "sha256": "ba8c92df76dffc1cff7f429a6619cc9bb11a3415bb08aa0742c9aaf3fb53218d",
+        "bytes": 31634
+      },
+      {
+        "path": "eval_outputs/cmp_cem_official/w0/chunk_20_T/final_eval_results.npz",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "c089d6deaca10e1e86a66065ccc55e5da12b68a7",
+        "sha256": "a339ed6b3d49903ac41e1ce3cb1d6474999e4e769eeacf7bdbee0bee7779bfa6",
+        "bytes": 27903
+      },
+      {
+        "path": "eval_outputs/cont_S7t3_cem/w0/chunk_28_I/.hydra/config.yaml",
+        "commit": "53c1dffc79362b247b5a2df2d39820270dd51846",
+        "git_blob_sha": "ac80060f546d475d2af5d3d8d956a7ad47229e55",
+        "sha256": "de7143af2b082671c55cceb18a5d64bb049a9ab4dc3c3093a40f247db40cef0f",
+        "bytes": 2031
+      }
+    ]
+  },
+  "required_reporting_note": "The selected SE-JEPA CEM PushObj row reports online fifth-round outcomes, whereas the existing baseline rows report held-out outcomes. Do not describe their gaps as paired, equal-exposure, or common-test-set comparisons."
+}

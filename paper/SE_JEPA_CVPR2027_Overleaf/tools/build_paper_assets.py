@@ -23,6 +23,7 @@ from PIL import Image, ImageDraw, ImageFont
 from restyle_paper_figures import draw_teaser
 from vis50 import external_results
 from pushobj_ablation import heldout_results, write_ablation_tables
+from pushobj_online import verified_online_results
 
 PAPER = Path(__file__).resolve().parents[1]
 REPO = PAPER.parent / "CL-JEPA-cudagraph"
@@ -73,6 +74,7 @@ else:
 
 s = snapshot
 reporting = json.loads((DATA / "reporting_overrides.json").read_text())
+online_cem = verified_online_results(DATA / "pushobj_cem_online")
 domains = ["blur", "snp", "dark", "red_agent", "red_object", "red_goal"]
 labels = ["Blur", "Noise", "Dark", "Red agent", "Red object", "Red goal"]
 methods = ["frozen", "adajepa", "ours"]
@@ -124,7 +126,12 @@ for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[
         values[6:8] = [format(float(s["deform"][task]["DINO-WM"]["cd"]), ".3f") for task in ["rope", "granular"]]
         rows.append(r"\midrule")
     if label == "SE-JEPA (Ours)":
-        values[0] = f'{s["shape"]["CEM"]["ours"]["all"]["mean"]:.1f}'
+        # This row reports online round five; paired post-learning results
+        # remain in paired_planners.tex and the per-shape evaluation table.
+        online = online_cem["summary"]
+        values[:3] = [f'{online["all"]["mean_pct"]:.1f}',
+                      f'{online["unseen"]["mean_pct"]:.1f}',
+                      f'{online["all"]["mean_replans"]:.2f}']
         values = [r"\textbf{" + v + "}" for v in values]
     rows.append(" & ".join([citations[label], *values]) + r" \\")
 (TABLES / "main_rows.tex").write_text("\n".join(rows) + "\n")

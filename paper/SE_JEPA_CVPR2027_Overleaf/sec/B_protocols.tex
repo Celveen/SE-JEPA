@@ -2,9 +2,11 @@
 \label{app:protocols}
 
 \subsection{Shape shifts}
-The shape learning stream has five deployment rounds over seven shapes, with 50 episodes per shape in every round. The held-out benchmark uses target seeds 2000, 2100, and 2200, each with 350 episodes. I, square, and small tee are unseen in pretraining; T, L, Z, and plus are seen.
+The shape learning stream has five deployment rounds over seven shapes, with 50 episodes per shape in every round. The post-learning benchmark uses target seeds 2000, 2100, and 2200, each with 350 episodes. I, square, and small tee are unseen in pretraining; T, L, Z, and plus are seen.
 
-For the paired planner comparison in Table~\ref{tab:planners}, each planner has three learned memory states. Every state is evaluated on all three held-out seeds. For each seed we average over episodes and states, then compute the standard deviation across seed-level means. The CEM states are S7t3, S7t3b, and S7t3s700. The \ours PushObj entries in Table~\mainref{tab:main} use these CEM states. Figure~\mainref{fig:teaser} uses the paired GD results for Frozen, AdaJEPA, and \ours. The local external PushObj baselines use seed 2000. AdaJEPA uses its official released PushObj checkpoint for both planners.
+For the paired planner comparison in Table~\ref{tab:planners}, each planner has three learned memory states. Every state is evaluated on all three test seeds. For each seed we average over episodes and states, then compute the standard deviation across seed-level means. The CEM states are S7t3, S7t3b, and S7t3s700. Figure~\mainref{fig:teaser} uses the paired GD results for Frozen, AdaJEPA, and \ours. The local external PushObj baselines use seed 2000. AdaJEPA uses its official released PushObj checkpoint for both planners.
+
+The \ours PushObj entries in Table~\mainref{tab:main} instead summarize the fifth online round of these three CEM chains, with learning and memory writing active. Their success rates are 82.29\%, 80.00\%, and 78.86\%, averaging 80.38\%. Across 1,050 episodes, they reach 844 goals overall and 329 of the 450 goals on unseen shapes. Their initial/goal sets differ from the official baseline evaluation sets. The shape learning and test-seed streams are not strictly disjoint: an exact-state check found three shared initial/goal pairs between the selected fifth-round streams and the test set.
 
 \subsection{Visual shifts}
 The paired visual evaluation contains the original T condition, blur, salt-and-pepper noise, darkness, red agent, red object, and red goal. Three five-round learning chains resample targets every round, with 350 episodes per round. Held-out testing uses three target seeds and 50 episodes per condition. Direct checks of source-episode identifiers confirm that held-out sources never occur in the learning streams and that the three test seeds use disjoint sources.
@@ -28,7 +30,7 @@ Rope and granular each use one slow predictor, a DINO-WM backbone, and 50 instan
 
 \begin{table*}[t]
  \centering
- \caption{Both planners on the paired held-out sets. Shape All and Unseen use held-out PushObj targets. Visual All averages seven conditions and Shift six; visual Steps averages all seven conditions.}
+ \caption{Both planners on the paired post-learning evaluation sets. Shape All and Unseen use the separate PushObj test-seed streams. Visual All averages seven conditions and Shift six; visual Steps averages all seven conditions.}
  \label{tab:planners}
  \small
  \begin{tabular}{llcccccc}

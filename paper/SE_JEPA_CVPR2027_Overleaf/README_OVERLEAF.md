@@ -88,8 +88,9 @@ same weight in plots where both planners use SE-JEPA.
 DINO-WM, DreamerV3 and IRIS use the episode-verified VIS50 results from the
 `baselines` branch (original paths, immutable commit and checksums in
 `data/vis50/vis50_sources.json`). The latter two methods use offline predictors
-for CEM. The main table uses the reported three-state SE-JEPA result for
-PushObj All. The DreamerV3 and IRIS PushObj Unseen scores use the published
+for CEM. The SE-JEPA PushObj cells in the main table use fifth-round online CEM
+performance across S7t3, S7t3b, and S7t3s700 (80.4% All, 73.1% Unseen,
+12.99 replans). The DreamerV3 and IRIS PushObj Unseen scores use the published
 two-shape protocol of Zhou et al. Their paper also supplies the rope and
 granular CDs for DreamerV3, IRIS, R3M, and DINO CLS. The two local frozen
 deformable entries refer to the same DINO-WM model. Section 4.1 and
@@ -170,6 +171,23 @@ contains all plot/table values and source checksums. Reproduce it using
 `figures/source/mixed14_author_report.pdf`; raw experiment archives and model
 weights are not added to the Overleaf bundle.
 
-The combined paper has 20 pages, including eight pages of main text. Appendix E
+The combined paper has 21 pages, including eight pages of main text. Appendix E
 restores the reference panels' full narrative, explaining successful replans,
 final CD, action-replay provenance and the interpretation of prediction losses.
+
+
+## PushObj CEM main-table reporting
+
+The main table reports the selected fifth-round online learning results:
+288/350, 280/350, and 276/350 successes, pooling to 844/1,050 (80.38%).
+Unseen shapes contribute 329/450 (73.11%); all-episode mean replans are 12.99,
+counting failures as 30. `data/pushobj_cem_online/audit.json` records the 21
+source NPZ files and immutable Git hashes. `tools/pushobj_online.py` rechecks
+these bundled files whenever `tools/build_paper_assets.py` regenerates the table.
+
+The paired post-learning tables and Figure 7 retain their separate evaluation
+results (CEM All 79.08%). The main caption and Appendix B identify the different
+online and baseline evaluation target sets. The approximately 15-point
+held-out unseen-shape comparison in the main text refers to the paired appendix
+table, not the online row. The exact-state overlap audit is archived alongside
+the online results and noted in Appendix B.

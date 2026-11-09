@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-08T23:19:52-08:00",
+  "checked_at": "2026-11-09T00:08:09-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
-    "pages": 20,
+    "pages": 21,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "a91c48114618436b1e708285f67340a29c07b8fc1f44e5f44fb07db4c8964539",
+    "pdf_sha256": "7e9244e189277965c4e427967a833d4c710fec5b85c974b1f4f497e1d2787583",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -26,7 +26,7 @@
     },
     "conclusion_page": 8,
     "all_main_floats_precede_conclusion": true,
-    "familiarity_ablation_page": 17,
+    "familiarity_ablation_page": 19,
     "component_ablation_page": 8,
     "inheritance_ablation_page": 8
   },
@@ -35,7 +35,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "3a3239bddd6e70416140bf3e06b3591a5d8bd75199482fecfeb80efba0a77214"
+    "pdf_sha256": "ecacbd55e05a0956aaaef9cde7149686b8efc11afb2bf9692ee8e4155c3c10d7"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -164,18 +164,17 @@
       },
       "fig:deform_reference": {
         "number": 12,
-        "page": 19
+        "page": 20
       },
       "fig:deform_additional": {
         "number": 13,
-        "page": 20
+        "page": 21
       }
     },
     "rendered_pages_checked": [
-      17,
       18,
-      19,
-      20
+      20,
+      21
     ]
   },
   "mixed14": {
@@ -189,9 +188,27 @@
     "shared_memory_across_both_families": true,
     "official_adajepa_checkpoint": "pushobj_shape_shift",
     "evaluation": "Online learning with repeated targets; distinct from held-out benchmarks",
-    "figure_page": 15,
+    "figure_page": 16,
     "summary_table_page": 16,
-    "domain_table_page": 16
+    "domain_table_page": 17
   },
-  "clean_upload_files": 49
+  "clean_upload_files": 49,
+  "pushobj_cem_main": {
+    "source": "data/pushobj_cem_online/audit.json",
+    "protocol": "Fifth-round online performance",
+    "raw_files_verified": 21,
+    "episodes": 1050,
+    "successes": 844,
+    "all_percent": 80.38095238095238,
+    "unseen_percent": 73.11111111111111,
+    "mean_replans": 12.994285714285715,
+    "displayed_cells": [
+      "80.4",
+      "73.1",
+      "12.99"
+    ],
+    "paired_post_learning_tables_unchanged": true,
+    "table_caption_states_protocol_difference": true,
+    "source_and_table_checked": true
+  }
 }

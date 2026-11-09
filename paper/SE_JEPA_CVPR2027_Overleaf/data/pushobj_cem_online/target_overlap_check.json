@@ -1,0 +1,86 @@
+{
+  "checked_online_rounds": [
+    5
+  ],
+  "earlier_rounds_available_locally": false,
+  "exact_shape_and_14_state_values_confirmed": true,
+  "unique_overlapping_pairs": 3,
+  "online_overlapping_occurrences": 4,
+  "h7t3_counts": {
+    "cmp_cem_official": {
+      "executed_episodes": 1050,
+      "unique_shape_state_pairs": 950,
+      "overlapping_unique_pairs": 3,
+      "overlapping_episode_occurrences": 3
+    },
+    "cmp_cem_frozen_official": {
+      "executed_episodes": 1050,
+      "unique_shape_state_pairs": 950,
+      "overlapping_unique_pairs": 3,
+      "overlapping_episode_occurrences": 3
+    }
+  },
+  "cases": [
+    {
+      "shape": "plus",
+      "online": "eval_outputs/cont_S7t3_cem/cls6a_free/chunk_33_plus/final_eval_results.npz",
+      "online_index": 11,
+      "test": "eval_outputs/cmp_cem_official/w0/chunk_05_plus/final_eval_results.npz",
+      "test_index": 23,
+      "state0_shape": [
+        7
+      ],
+      "goal_shape": [
+        7
+      ],
+      "nonzero_components": 12,
+      "max_abs_difference": 0.0
+    },
+    {
+      "shape": "plus",
+      "online": "eval_outputs/cont_S7t3b_cem/cls6a_free/chunk_33_plus/final_eval_results.npz",
+      "online_index": 11,
+      "test": "eval_outputs/cmp_cem_official/w0/chunk_05_plus/final_eval_results.npz",
+      "test_index": 23,
+      "state0_shape": [
+        7
+      ],
+      "goal_shape": [
+        7
+      ],
+      "nonzero_components": 12,
+      "max_abs_difference": 0.0
+    },
+    {
+      "shape": "L",
+      "online": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_29_L/final_eval_results.npz",
+      "online_index": 15,
+      "test": "eval_outputs/cmp_cem_official/w0/chunk_08_L/final_eval_results.npz",
+      "test_index": 41,
+      "state0_shape": [
+        7
+      ],
+      "goal_shape": [
+        7
+      ],
+      "nonzero_components": 12,
+      "max_abs_difference": 0.0
+    },
+    {
+      "shape": "Z",
+      "online": "eval_outputs/cont_S7t3s700_cem/cls6a_free/chunk_31_Z/final_eval_results.npz",
+      "online_index": 48,
+      "test": "eval_outputs/cmp_cem_official/w0/chunk_03_Z/final_eval_results.npz",
+      "test_index": 23,
+      "state0_shape": [
+        7
+      ],
+      "goal_shape": [
+        7
+      ],
+      "nonzero_components": 12,
+      "max_abs_difference": 0.0
+    }
+  ],
+  "protocol_sentence": "PushObj comparison evaluations use separate test-seed streams; the archived learning and evaluation target sets are not strictly disjoint."
+}
