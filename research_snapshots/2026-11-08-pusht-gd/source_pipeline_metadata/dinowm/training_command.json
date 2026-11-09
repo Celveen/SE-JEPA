@@ -1,0 +1,17 @@
+[
+  "/data/zjc/envs/cljepa/bin/python",
+  "-u",
+  "-m",
+  "torch.distributed.run",
+  "--standalone",
+  "--nproc_per_node",
+  "2",
+  "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/code/train.py",
+  "--config-name",
+  "train_dinowm_random16k_e10",
+  "env.dataset.data_path=/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pusht_random16k_20261106",
+  "training.epochs=10",
+  "training.batch_size=32",
+  "env.num_workers=4",
+  "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e10_20261106"
+]

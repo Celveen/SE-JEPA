@@ -1,0 +1,77 @@
+{
+  "method": "lewm",
+  "task": "pusht",
+  "planner": "gd",
+  "pid": 3308975,
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k",
+  "epoch": 10,
+  "seed": 100,
+  "gpus": [
+    "2",
+    "3"
+  ],
+  "stage": "complete",
+  "started": "2026-11-08T12:23:09+00:00",
+  "planned_episodes": 350,
+  "jobs": {
+    "default": {
+      "status": "complete",
+      "gpu": "2",
+      "pid": 3308980,
+      "started": "2026-11-08T12:23:09+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-08T12:27:13+00:00"
+    },
+    "blur": {
+      "status": "complete",
+      "gpu": "3",
+      "pid": 3308981,
+      "started": "2026-11-08T12:23:09+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-08T12:27:29+00:00"
+    },
+    "snp": {
+      "status": "complete",
+      "gpu": "2",
+      "pid": 3309804,
+      "started": "2026-11-08T12:27:14+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-08T12:31:44+00:00"
+    },
+    "dark": {
+      "status": "complete",
+      "gpu": "3",
+      "pid": 3309904,
+      "started": "2026-11-08T12:27:30+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-08T12:32:06+00:00"
+    },
+    "red_agent": {
+      "status": "complete",
+      "gpu": "2",
+      "pid": 3310466,
+      "started": "2026-11-08T12:31:45+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-08T12:35:54+00:00"
+    },
+    "red_object": {
+      "status": "complete",
+      "gpu": "3",
+      "pid": 3310571,
+      "started": "2026-11-08T12:32:06+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-08T12:36:10+00:00"
+    },
+    "red_goal": {
+      "status": "complete",
+      "gpu": "2",
+      "pid": 3311011,
+      "started": "2026-11-08T12:35:55+00:00",
+      "exit_code": 0,
+      "ended": "2026-11-08T12:39:54+00:00"
+    }
+  },
+  "updated": "2026-11-08T12:39:54+00:00",
+  "episodes_completed": 350,
+  "ended": "2026-11-08T12:39:54+00:00"
+}

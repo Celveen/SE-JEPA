@@ -1,0 +1,14 @@
+{
+  "pid": 3308975,
+  "started_utc": "2026-11-08T12:23:09.204103+00:00",
+  "command": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/experiment_plans/lewm_pusht_GD_T16k_e10_20261108/run.py"
+  ],
+  "gpus": [
+    2,
+    3
+  ],
+  "planned_episodes": 350
+}

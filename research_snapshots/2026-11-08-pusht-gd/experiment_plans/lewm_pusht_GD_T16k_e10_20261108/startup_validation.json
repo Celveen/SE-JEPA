@@ -1,0 +1,85 @@
+{
+  "checked_utc": "2026-11-08T12:24:26.597609+00:00",
+  "conditions_checked_at_startup": {
+    "default": {
+      "target_states_match_existing_CEM": {
+        "state_0": true,
+        "state_g": true
+      },
+      "episodes": 50,
+      "runtime_protocol": {
+        "planner": "gd",
+        "condition": "default",
+        "pretraining_shape_status": "seen",
+        "model_epoch": 10,
+        "frozen_model": true,
+        "model_parameter_gradients_disabled": true,
+        "ground_truth_action_initialization": false,
+        "objective": "staged",
+        "model_frameskip": 5,
+        "horizon_model_steps": 5,
+        "executed_model_steps_per_replan": 1,
+        "executed_physical_steps_per_replan": 5,
+        "max_replans": 30,
+        "max_physical_steps": 150,
+        "optimizer_iterations": 100,
+        "episodes": 50,
+        "diagnostic_only": false,
+        "oracle_optimizer_probes": false,
+        "noise_protocol": "identical goal seed; distinct deterministic seed per feedback call",
+        "lr": 0.1,
+        "action_optimizer": "adam",
+        "cosine_scheduler": true,
+        "action_initialization": "zero",
+        "action_noise": 0,
+        "microbatch_size": 50
+      }
+    },
+    "blur": {
+      "target_states_match_existing_CEM": {
+        "state_0": true,
+        "state_g": true
+      },
+      "episodes": 50,
+      "runtime_protocol": {
+        "planner": "gd",
+        "condition": "blur",
+        "pretraining_shape_status": "seen",
+        "model_epoch": 10,
+        "frozen_model": true,
+        "model_parameter_gradients_disabled": true,
+        "ground_truth_action_initialization": false,
+        "objective": "staged",
+        "model_frameskip": 5,
+        "horizon_model_steps": 5,
+        "executed_model_steps_per_replan": 1,
+        "executed_physical_steps_per_replan": 5,
+        "max_replans": 30,
+        "max_physical_steps": 150,
+        "optimizer_iterations": 100,
+        "episodes": 50,
+        "diagnostic_only": false,
+        "oracle_optimizer_probes": false,
+        "noise_protocol": "identical goal seed; distinct deterministic seed per feedback call",
+        "lr": 0.1,
+        "action_optimizer": "adam",
+        "cosine_scheduler": true,
+        "action_initialization": "zero",
+        "action_noise": 0,
+        "microbatch_size": 50
+      }
+    }
+  },
+  "gradient_check": {
+    "lewm": {
+      "epoch": 10,
+      "microbatch_size": 50,
+      "action_gradient_norm": 2.219524383544922,
+      "parameters_unchanged": true,
+      "finite_actions": true,
+      "early_and_late_objectives_checked": true,
+      "two_three_step_calls_seconds": 0.6225676890462637,
+      "peak_reserved_GiB": 0.408203125
+    }
+  }
+}

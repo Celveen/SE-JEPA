@@ -1,0 +1,50 @@
+{
+  "method": "lewm",
+  "task": "pusht",
+  "planner": "gd",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k",
+  "epoch": 10,
+  "training_shapes": [
+    "T"
+  ],
+  "new_training": false,
+  "conditions": [
+    "default",
+    "blur",
+    "snp",
+    "dark",
+    "red_agent",
+    "red_object",
+    "red_goal"
+  ],
+  "seed": 100,
+  "episodes_per_condition": 50,
+  "planned_episodes": 350,
+  "gpus": [
+    "2",
+    "3"
+  ],
+  "objective": "staged",
+  "horizon_model_steps": 5,
+  "frameskip": 5,
+  "physical_steps_per_replan": 5,
+  "max_replans": 30,
+  "max_physical_steps": 150,
+  "gd": {
+    "iterations": 100,
+    "lr": 0.1,
+    "optimizer": "adam",
+    "cosine_scheduler": true,
+    "initialization": "zero physical action",
+    "reuse_actions": true,
+    "action_noise": 0,
+    "microbatch_size": 50,
+    "cuda_graph": false
+  },
+  "model_frozen": true,
+  "online_learning": false,
+  "noise_protocol": "Fixed goal seed; deterministic distinct seed per feedback call, recorded in JSONL",
+  "noise_comparison_note": "Prior CEM feedback noise seeds were not recorded; identical noisy pixels across planners are not claimed.",
+  "reference": "Existing LeWM VIS50 CEM weights/targets/controller; original T additionally evaluated.",
+  "comparison_note": "New random16k DINO-WM uses a different last/25/6 controller; report separately."
+}

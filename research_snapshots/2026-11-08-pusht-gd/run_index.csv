@@ -1,0 +1,15 @@
+directory,source,method,condition,episodes,recorded_success_rate,final_log_matches_results,frozen_weights_unchanged
+completed_runs/dinowm/default,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default,dinowm,default,50,0.5,True,True
+completed_runs/dinowm/blur,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur,dinowm,blur,50,0.44,True,True
+completed_runs/dinowm/snp,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp,dinowm,snp,50,0.08,True,True
+completed_runs/dinowm/dark,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark,dinowm,dark,50,0.5,True,True
+completed_runs/dinowm/red_agent,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent,dinowm,red_agent,50,0.44,True,True
+completed_runs/dinowm/red_object,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object,dinowm,red_object,50,0.36,True,True
+completed_runs/dinowm/red_goal,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal,dinowm,red_goal,50,0.46,True,True
+completed_runs/lewm/default,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/default,lewm,default,50,0.64,True,True
+completed_runs/lewm/blur,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/blur,lewm,blur,50,0.62,True,True
+completed_runs/lewm/snp,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/snp,lewm,snp,50,0.62,True,True
+completed_runs/lewm/dark,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/dark,lewm,dark,50,0.58,True,True
+completed_runs/lewm/red_agent,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/red_agent,lewm,red_agent,50,0.04,True,True
+completed_runs/lewm/red_object,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/red_object,lewm,red_object,50,0.16,True,True
+completed_runs/lewm/red_goal,/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/red_goal,lewm,red_goal,50,0.34,True,True

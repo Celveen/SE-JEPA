@@ -1,0 +1,28 @@
+defaults:
+  - cont_plan_gd_pushobj
+  - _self_
+
+goal_H: 25
+num_start_frames: 1
+debug_dset_init: false
+decode_for_viz: false
+objective:
+  mode: last
+  alpha: 1
+  base: 2
+planner:
+  _target_: planning.continual.SlowFrozenMPCPlanner
+  max_iter: 6
+  n_taken_actions: 25
+  reuse_actions: true
+  continual:
+    w: 0
+    state_in: null
+  sub_planner:
+    target: planning.cem.CEMPlanner
+    horizon: 25
+    num_samples: 300
+    topk: 30
+    opt_steps: 30
+    eval_every: -1
+    cuda_graph: false

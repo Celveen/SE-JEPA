@@ -1,0 +1,9 @@
+{
+  "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/VIS50/targets_T.pkl",
+  "path": "/data/zjc/adaJEPA/experiment_plans/lewm_pusht_GD_T16k_e10_20261108/targets_T.pkl",
+  "sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+  "episodes": 50,
+  "shape": "T",
+  "evaluation_seed": 100,
+  "identical_to_prior_VIS50": true
+}

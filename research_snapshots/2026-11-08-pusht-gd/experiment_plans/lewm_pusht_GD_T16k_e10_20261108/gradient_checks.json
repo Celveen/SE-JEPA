@@ -1,0 +1,12 @@
+{
+  "lewm": {
+    "epoch": 10,
+    "microbatch_size": 50,
+    "action_gradient_norm": 2.219524383544922,
+    "parameters_unchanged": true,
+    "finite_actions": true,
+    "early_and_late_objectives_checked": true,
+    "two_three_step_calls_seconds": 0.6225676890462637,
+    "peak_reserved_GiB": 0.408203125
+  }
+}

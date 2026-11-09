@@ -1,0 +1,168 @@
+hydra:
+  run:
+    dir: /data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/blur
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  launcher:
+    _target_: hydra._internal.core_plugins.basic_launcher.BasicLauncher
+  sweeper:
+    _target_: hydra._internal.core_plugins.basic_sweeper.BasicSweeper
+    max_batch_size: null
+    params: null
+  help:
+    app_name: ${hydra.job.name}
+    header: '${hydra.help.app_name} is powered by Hydra.
+
+      '
+    footer: 'Powered by Hydra (https://hydra.cc)
+
+      Use --hydra-help to view Hydra specific help
+
+      '
+    template: '${hydra.help.header}
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (group=option)
+
+
+      $APP_CONFIG_GROUPS
+
+
+      == Config ==
+
+      Override anything in the config (foo.bar=value)
+
+
+      $CONFIG
+
+
+      ${hydra.help.footer}
+
+      '
+  hydra_help:
+    template: 'Hydra (${hydra.runtime.version})
+
+      See https://hydra.cc for more info.
+
+
+      == Flags ==
+
+      $FLAGS_HELP
+
+
+      == Configuration groups ==
+
+      Compose your configuration from those groups (For example, append hydra/job_logging=disabled
+      to command line)
+
+
+      $HYDRA_CONFIG_GROUPS
+
+
+      Use ''--cfg hydra'' to Show the Hydra config.
+
+      '
+    hydra_help: ???
+  hydra_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][HYDRA] %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+    root:
+      level: INFO
+      handlers:
+      - console
+    loggers:
+      logging_example:
+        level: DEBUG
+    disable_existing_loggers: false
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        formatter: simple
+        filename: ${hydra.runtime.output_dir}/${hydra.job.name}.log
+    root:
+      level: INFO
+      handlers:
+      - console
+      - file
+    disable_existing_loggers: false
+  env: {}
+  mode: RUN
+  searchpath: []
+  callbacks: {}
+  output_subdir: .hydra
+  overrides:
+    hydra:
+    - hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/blur
+    - hydra.mode=RUN
+    task:
+    - ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k
+    - model_epoch=10
+    - n_evals=50
+    - seed=100
+    - eval_data_path=/data/zjc/adaJEPA/experiment_plans/lewm_pusht_GD_T16k_e10_20261108/targets_T.pkl
+    - planner.continual.tag=blur
+    - audit.planner_kind=gd
+    - audit.condition=blur
+    - audit.pretraining_shape_status=seen
+    - audit.expected_model_epoch=10
+    - planner.sub_planner.microbatch_size=50
+    - audit.expected_microbatch_size=50
+    - ood_corruption=blur
+  job:
+    name: evaluate
+    chdir: null
+    override_dirname: audit.condition=blur,audit.expected_microbatch_size=50,audit.expected_model_epoch=10,audit.planner_kind=gd,audit.pretraining_shape_status=seen,ckpt_base_path=/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k,eval_data_path=/data/zjc/adaJEPA/experiment_plans/lewm_pusht_GD_T16k_e10_20261108/targets_T.pkl,model_epoch=10,n_evals=50,ood_corruption=blur,planner.continual.tag=blur,planner.sub_planner.microbatch_size=50,seed=100
+    id: ???
+    num: ???
+    config_name: plan
+    env_set: {}
+    env_copy: []
+    config:
+      override_dirname:
+        kv_sep: '='
+        item_sep: ','
+        exclude_keys: []
+  runtime:
+    version: 1.2.0
+    version_base: '1.1'
+    cwd: /data/zjc/adaJEPA/experiment_plans/lewm_pusht_GD_T16k_e10_20261108/code
+    config_sources:
+    - path: hydra.conf
+      schema: pkg
+      provider: hydra
+    - path: /data/zjc/adaJEPA/experiment_plans/lewm_pusht_GD_T16k_e10_20261108/evaluation/conf
+      schema: file
+      provider: main
+    - path: ''
+      schema: structured
+      provider: schema
+    output_dir: /data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_pusht_GD_T16k_e10_20261108/blur
+    choices:
+      hydra/env: default
+      hydra/callbacks: null
+      hydra/job_logging: default
+      hydra/hydra_logging: default
+      hydra/hydra_help: default
+      hydra/help: default
+      hydra/sweeper: basic
+      hydra/launcher: basic
+      hydra/output: default
+  verbose: false

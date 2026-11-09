@@ -1,0 +1,9 @@
+{
+  "training_state_rows": 1600000,
+  "test_initial_states": 50,
+  "exact_matches": 0,
+  "target_files": [
+    "pusht_T.pkl"
+  ],
+  "generation_used_test_targets": false
+}

@@ -1,0 +1,8 @@
+{
+  "requested_epochs": 3,
+  "previous_epochs": 10,
+  "controller_source_sha256": "1b4911893019ad0e973f290244720a47c4738d3fa06c8b9262af3c5936a6835c",
+  "guard_source_sha256": "83a5126cd60324ffd61c864ed60a54d8ac76edc3bfdefbc09de8814cfcb197cb",
+  "checkpoint_gate_and_process_isolation_tests_passed": 4,
+  "frozen_training_and_planning_code_unchanged": true
+}

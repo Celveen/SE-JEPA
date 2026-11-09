@@ -1,0 +1,154 @@
+{
+  "sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+  "plan": {
+    "revision": "same_test_shapes_dual_planners_20261106_v1",
+    "controller": {
+      "objective": "last",
+      "physical_steps_per_replan": 25,
+      "max_replans": 6,
+      "max_physical_steps": 150
+    },
+    "planners": {
+      "gd": {
+        "target": "gd_microbatch.GDMicrobatchPlanner",
+        "opt_steps": 100,
+        "lr": 0.1,
+        "optimizer": "adam",
+        "cosine_scheduler": true,
+        "microbatch_size": 1
+      },
+      "cem": {
+        "target": "planning.cem.CEMPlanner",
+        "num_samples": 300,
+        "topk": 30,
+        "opt_steps": 30
+      }
+    },
+    "tasks": {
+      "pushobj": {
+        "seed": 2000,
+        "episodes_per_condition": 50,
+        "episodes_per_planner": 150,
+        "total_episodes": 300,
+        "conditions": [
+          {
+            "name": "I",
+            "target": "pushobj_I.pkl",
+            "shape": "I",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "456d94fab562990b30545dc6d4385ea4c076c4ad59b4233f00883f096bdb4fd3",
+            "overrides": []
+          },
+          {
+            "name": "square",
+            "target": "pushobj_square.pkl",
+            "shape": "square",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "9ee75ba011ba2d52be7f9a08c0922afdfb3a8cab16ea6f35ab066e481d7d2749",
+            "overrides": []
+          },
+          {
+            "name": "small_tee",
+            "target": "pushobj_small_tee.pkl",
+            "shape": "small_tee",
+            "pretraining_shape_status": "unseen",
+            "target_sha256": "0d714951a3b1a5eaaa625f3bf8f247428e6d174bcc5938a410606d0ca788243d",
+            "overrides": []
+          }
+        ],
+        "group_label": "same three shapes as Ours unseen group; I/square are seen by this DINO-WM",
+        "training_shapes": [
+          "I",
+          "square",
+          "Z",
+          "T"
+        ],
+        "true_unseen_evaluated_shapes": [
+          "small_tee"
+        ]
+      },
+      "pusht": {
+        "seed": 100,
+        "episodes_per_condition": 50,
+        "episodes_per_planner": 350,
+        "total_episodes": 700,
+        "conditions": [
+          {
+            "name": "default",
+            "target": "pusht_T.pkl",
+            "shape": "T",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+            "overrides": []
+          },
+          {
+            "name": "blur",
+            "target": "pusht_T.pkl",
+            "shape": "T",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+            "overrides": [
+              "ood_corruption=blur",
+              "ood_level=2.0"
+            ]
+          },
+          {
+            "name": "snp",
+            "target": "pusht_T.pkl",
+            "shape": "T",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+            "overrides": [
+              "ood_corruption=snp1",
+              "ood_level=0.01"
+            ]
+          },
+          {
+            "name": "dark",
+            "target": "pusht_T.pkl",
+            "shape": "T",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+            "overrides": [
+              "ood_corruption=dark",
+              "ood_level=0.9"
+            ]
+          },
+          {
+            "name": "red_agent",
+            "target": "pusht_T.pkl",
+            "shape": "T",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+            "overrides": [
+              "++env_kwargs_override.agent_color=Red"
+            ]
+          },
+          {
+            "name": "red_object",
+            "target": "pusht_T.pkl",
+            "shape": "T",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+            "overrides": [
+              "++env_kwargs_override.color=Red"
+            ]
+          },
+          {
+            "name": "red_goal",
+            "target": "pusht_T.pkl",
+            "shape": "T",
+            "pretraining_shape_status": "seen",
+            "target_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+            "overrides": [
+              "++env_kwargs_override.goal_color=Red"
+            ]
+          }
+        ],
+        "training_shapes": [
+          "T"
+        ]
+      }
+    }
+  }
+}

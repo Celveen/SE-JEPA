@@ -1,0 +1,12 @@
+{
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k",
+  "epoch": 10,
+  "checkpoint_file": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/lewm_pushobj_T16k/checkpoints/model_10.pth",
+  "checkpoint_sha256": "58622a668c8c73395659a804bc96f162eeb821bcb95e906a6370518296b3bda6",
+  "config_sha256": "5f85a8f766f71bf5ee7624960e9ddaa5a866d51c955cbae94d44b52a80b933f6",
+  "latest_file_sha256": "c56c155fb02e204b56ffa3aca3cf0bf8afa54e41853c81be6019716d5fa07260",
+  "latest_tensor_identical": true,
+  "training_shapes": [
+    "T"
+  ]
+}

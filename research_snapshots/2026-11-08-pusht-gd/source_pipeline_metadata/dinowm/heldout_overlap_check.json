@@ -1,0 +1,21 @@
+{
+  "training_state_rows": 1600000,
+  "test_initial_states": 50,
+  "exact_matches": 0,
+  "target_files": [
+    "pusht_T.pkl"
+  ],
+  "generation_used_test_targets": false,
+  "training_shapes": [
+    "T"
+  ],
+  "condition_shape_status": {
+    "default": "seen",
+    "blur": "seen",
+    "snp": "seen",
+    "dark": "seen",
+    "red_agent": "seen",
+    "red_object": "seen",
+    "red_goal": "seen"
+  }
+}
