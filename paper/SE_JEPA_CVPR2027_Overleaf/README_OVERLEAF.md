@@ -108,8 +108,9 @@ AdaJEPA fail and SE-JEPA succeeds. Selection and source hashes are recorded
 with the assets. Rope/Granular examples are from the third pass, while their
 main-table aggregate results are from the fourth pass; the caption distinguishes
 these. The appendix retains the four supplied reference panels: square, red-agent,
-rope example 1, and granular example 2. It also keeps rope example 2 and granular
-example 1. All six panels come from native Drive PDFs, preserving the original
+rope example 1, and granular example 2. The two additional deformable cases
+have been removed from the manuscript. All four retained panels come from native
+Drive PDFs, preserving the original
 frames, labels, loss curves and explanatory notes. The deformable cases are
 cropped at their original panel boundaries; the rigid-object panels retain their
 complete frame strips and vector loss curves. `tools/build_reference_rollouts.py`
@@ -176,7 +177,7 @@ contains all plot/table values and source checksums. Reproduce it using
 `figures/source/mixed14_author_report.pdf`; raw experiment archives and model
 weights are not added to the Overleaf bundle.
 
-The combined paper has 20 pages, including eight pages of main text. Appendix E
+The combined paper has 19 pages, including eight pages of main text. Appendix E
 restores the reference panels' full narrative, explaining successful replans,
 final CD, action-replay provenance and the interpretation of prediction losses.
 
@@ -222,3 +223,10 @@ difference. The CEM main-table step units are unchanged.
 audit. Provenance files record source hashes and validation; the earlier visual
 case remains in `selected_cases/visual_GD_red_object/`. The clean upload contains
 only the updated figure PDF; no simulator dependencies are needed for Overleaf.
+
+## Pending DINO-WM visual rerun
+The visual case in Figure 3 still reports its actual six-replan result. A real
+30-replan / five-actions-per-replan rerun is pending on the experiment server.
+The exact task, original launch/configuration, target states and return-artifact
+requirements are in `data/revision_assets/dinowm_visual_mixed/rerun_30mpc/`.
+No synthetic trajectory extension or quantitative table change has been made.

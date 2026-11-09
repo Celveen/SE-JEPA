@@ -6,8 +6,8 @@ SE-JEPA is round 5, chain/repeat 2, and this is selected online-stream evidence.
 It replaces the previous qualitative held-out example only; it does not change
 any quantitative data. Frozen and AdaJEPA use official/pushobj_shape_shift.
 
-Display counts must use physical environment steps to avoid confusing different
-MPC granularities: Frozen/AdaJEPA 150 steps (30 replans), DINO-WM 150 steps
+Figure 3 labels MPC replans and explains the different action frequencies.
+The physical environment action counts are: Frozen/AdaJEPA 150 steps (30 replans), DINO-WM 150 steps
 (6 replans), SE-JEPA 30 steps (6 replans). All share the 150-step maximum budget.
 Raw action_len is in 5-physical-step model slots, not uniformly in MPC replans.
 
@@ -31,3 +31,7 @@ Copy this folder to data/revision_assets/dinowm_visual_mixed to use the
 selection_fragment.json paths. All six display images use the common crop in
 that fragment; it preserves every colored foreground pixel. Full 224x224 native
 frames, original NPZ files, configs, hashes and replay trajectories remain here.
+
+A genuine rerun with 30 replans of five actions is pending. See
+rerun_30mpc/SERVER_TASK.txt and expected_target.json. The existing images and
+results remain the original six-replan trajectory until new evidence arrives.

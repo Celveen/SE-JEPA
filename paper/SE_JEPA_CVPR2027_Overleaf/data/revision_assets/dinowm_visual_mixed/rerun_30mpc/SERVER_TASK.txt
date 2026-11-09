@@ -1,0 +1,54 @@
+请在原 DINO-WM 实验服务器实际完成以下单样本评测，并交付完整记录。
+
+任务：论文 Figure 3 下排 red_object 视觉样本，冻结 DINO-WM + GD，从同一起点重新规划，最多 30 次 MPC，每次执行 5 个环境动作，总预算仍为 150 个环境动作。不是继续旧轨迹，也不是把原来的 6 次重新标成 30 次。正常成功判据触发就停止，真实成功或失败都接受，不搜索种子、不挑结果。
+
+一、锁定资料和环境
+论文仓库：https://github.com/Celveen/SE-JEPA
+论文分支：codex/paper-revision-2026-11-05
+本任务所在目录：
+paper/SE_JEPA_CVPR2027_Overleaf/data/revision_assets/dinowm_visual_mixed/rerun_30mpc/
+它的父目录包含 matching_audit.json、inputs.json 和 raw/dinowm/。
+原实验结果来源 commit：d4f6cb491ac19d0224485b056fe5b24aa8e50f94
+原结果目录：research_snapshots/2026-11-08-pusht-gd/completed_runs/dinowm/red_object/
+
+原启动环境：/data/zjc/envs/cljepa/bin/python
+原入口：/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/evaluation_dual/evaluate.py
+原 DINO-WM 权重目录：/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e3_20261106
+model_epoch=3
+原目标文件：/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/targets/pusht_T.pkl
+
+先核对这些路径、GPU和原运行依赖。原目录名含 e10，但实际配置和运行审计均为 epoch 3；按实际 checkpoint 和配置执行。权重不可替换成 SE-JEPA/ResNet 权重。若路径已迁移，查找对应的原文件并核验来源，不任取同名权重。记录实际权重 SHA256、训练配置和代码版本。保持模型冻结，但动作变量必须可求梯度。
+请读取父目录 raw/dinowm/config.yaml、dino_launch_command.json、dino_runtime_protocol.json，复用原 DINO 适配器与 GD runner，而非盲用仓库根目录的通用 plan.py。
+
+二、只选定这一个目标
+原 DINO-WM 批次 n_evals=50、seed=100、segments_order=file。
+要的是零基索引 31（第 32 个），它与 mixed14 的零基索引 30 严格匹配。
+是红色 T 形物体：env_kwargs_override.color=Red；pusher 保持原颜色，不是 redAgent 样本。
+expected_target.json 给出原 NPZ 中 float32 初始/目标状态、样本索引和哈希。
+
+须从原 pusht_T.pkl 按原管线提取对应 segment，保持原 traj_len、shape、actions 与目标生成方法。执行前把生成的 state_0、state_g 与原 final_eval_results.npz 的第 31 项逐元素核验，同时检查起始图和目标图。
+不能仅把 n_evals 改为 1 而仍读取原整份目标文件，那会运行第 0 个样本。
+保留 seed=100 及原样本的 episode/environment/goal seed 映射。检查原 evaluate.py 的实现：若按 seed * 原索引 + 1 生成，则本例应保留 3101，不能因为筛选成单例就变为 1；其他 RNG/反馈轮次 seed 也须按原实现记录。不要根据推测硬编码，核对实际 runner。
+若单例筛选需要改代码，请在独立评测副本或小 wrapper 中实现并交付补丁，不覆盖原实验脚本、原结果或改变样本选择规则。
+
+三、规划参数
+以原 resolved config 为基准，只改变重规划频率和次数上限：
+  planner.max_iter=30
+  planner.n_taken_actions=5
+  audit.expected_replans=30
+  audit.expected_physical_steps=5
+
+保持：GD、冻结 DINO-WM、last objective、lr=0.1、opt_steps=100、sample_type=zero、action_noise=0、microbatch_size=1、cuda_graph=false、原动作 Adam/cosine scheduler、reuse_actions=true。
+保持原预测 horizon=25 环境动作（frameskip=5，即 5 个模型步）。不要把 horizon 改成 30，不要把 n_taken_actions 误当成模型步：每次应执行 1 个模型动作块=5 个环境动作，执行后重新观测并重新优化。原来是每次执行 5 个模型动作块=25 个环境动作。
+保持原数据归一化、目标渲染、成功判据、最大执行预算及其余参数。禁止 ground-truth action initialization、在线模型适应、历史学习器状态加载或 oracle probe。
+保存运行前后的参数哈希，验证权重没有更新。审计新运行日志确实最多执行 30 次优化/反馈调用、每次最多 5 个环境动作，总数不超过 150。
+
+四、交付
+放入独立目录，例如 eval_outputs/qualitative/dinowm_red_object_idx31_gd_30mpc/：
+1. final_eval_results.npz（successes、actions、action_len、state_0、state_g，沿用原结构）；明确 action_len 的单位，另存实际 MPC 次数和环境动作数。
+2. start.png、goal.png、final.png，以及每次 MPC 后的全部原始模拟器 PNG、状态轨迹。真实新动作可在原模拟器回放生成图像，须标明生成方式。
+3. resolved_config.yaml、完整启动命令、代码版本/补丁、环境版本、checkpoint SHA256、模型冻结检查、目标一致性检查和完整运行日志。
+4. summary.json：原索引 31、原 seed 和实际各类 seed、success、实际 replans、environment_steps、最大预算、终止原因与上述证据路径。
+5. 简短结果说明；失败就如实报告，成功就报告首次达到成功时的真实次数。保存所有本次尝试；技术失败重试需说明原因。
+
+完成后把结果目录打包并给出路径；若本服务器具有仓库推送权限，可归档到一个独立结果分支并返回 commit/路径，不覆盖论文分支已有改动。此次只需这个单样本；不要改主表或已有整批成功率。论文编辑端收到结果后再更新图 3 图片、标签和图注。

@@ -29,9 +29,9 @@ On the unseen square, \ours reaches the goal after five replans, compared with e
 The plotted loss is prediction MSE over up to five recent transitions in the visual and proprioceptive latents, excluding action dimensions. Each curve is evaluated with its own method's weights, so absolute loss levels are not directly comparable across methods. The curves describe within-method evolution; simulator task success provides the shared measure of control performance. In particular, AdaJEPA reduces its prediction loss on the red-agent episode but still misses the target, whereas \ours achieves the desired configuration.
 
 \subsection{Deformable rollout sequences}
-Figures~\ref{fig:deform_reference} and~\ref{fig:deform_additional} show four complete deformable sequences: two rope and two granular instances. Each row contains the start, every third push, and the goal within the same 15-push budget. These instances come from the repeated 50-instance stream and were selected where both baselines fail and the consolidated predictor succeeds. The examples use the third-pass slow predictor without within-episode adaptation; Table~\mainref{tab:main} reports fourth-pass aggregates. DINO-WM frames replay recorded actions in FleX; AdaJEPA and \ours frames were saved during planning. Final CD values and success markers are retained from the original logs.
+Figure~\ref{fig:deform_reference} shows two complete deformable sequences: rope example 1 and granular example 2. Each row contains the start, every third push, and the goal within the same 15-push budget. These instances come from the repeated 50-instance stream and were selected where both baselines fail and the consolidated predictor succeeds. The examples use the third-pass slow predictor without within-episode adaptation; Table~\mainref{tab:main} reports fourth-pass aggregates. DINO-WM frames replay recorded actions in FleX; AdaJEPA and \ours frames were saved during planning. Final CD values and success markers are retained from the original logs.
 
-The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \ours reaches 0.31 and the target success threshold. In granular example 2, final CD is 0.33 for both baselines and 0.14 for \ours. The additional rope and granular examples finish at 0.24 and 0.14 with \ours. The sequences show how replayed experience improves the geometry of the final configuration under a common action budget, even with fast adaptation disabled.
+The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \ours reaches 0.31 and the target success threshold. In granular example 2, final CD is 0.33 for both baselines and 0.14 for \ours. The sequences show how replayed experience improves the geometry of the final configuration under a common action budget, even with fast adaptation disabled.
 
 \begin{figure*}[p]
  \centering
@@ -42,14 +42,6 @@ The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \
  \label{fig:deform_reference}
 \end{figure*}
 
-\begin{figure*}[p]
- \centering
- \includegraphics[width=\textwidth]{additional_rope.pdf}
- \par\medskip
- \includegraphics[width=\textwidth]{additional_granular.pdf}
- \caption{\textbf{Additional complete deformable sequences.} Top: rope example 2, with final CD 1.00 for DINO-WM, 1.33 for AdaJEPA, and 0.24 for \ours. Bottom: granular example 1, with final CD 0.28, 0.30, and 0.14, respectively. The same third-pass state, 15-push budget, and frame provenance apply as in Fig.~\ref{fig:deform_reference}.}
- \label{fig:deform_additional}
-\end{figure*}
 
 \subsection{Reproducibility}
 Source manifests link archived episode records, simulator images, outcomes, checksums, and crops. Appendix~D specifies mixed-stream protocols and checkpoint provenance. Code, configurations, and learned states will be released.

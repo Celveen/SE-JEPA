@@ -1,0 +1,34 @@
+{
+  "status": "pending_real_model_rerun",
+  "source_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "original_sample_index_zero_based": 31,
+  "mixed14_sample_index_zero_based": 30,
+  "original_batch_seed": 100,
+  "state_dtype": "float32",
+  "state_0": [
+    127.82195281982422,
+    297.2082214355469,
+    184.26930236816406,
+    242.6904296875,
+    3.0242276191711426,
+    0.0,
+    0.0
+  ],
+  "state_g": [
+    112.9758529663086,
+    175.059326171875,
+    182.89158630371094,
+    244.77618408203125,
+    2.0504229068756104,
+    -74.14501190185547,
+    91.63215637207031
+  ],
+  "target_pair_float32_sha256": "217741a1bf87c56389aa1628fe7e2db26581c48d4d24498a0ddc7813b1fa8824",
+  "original_npz_sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66",
+  "requested_max_mpc_replans": 30,
+  "requested_environment_actions_per_replan": 5,
+  "max_environment_actions": 150,
+  "original_max_replans": 6,
+  "original_environment_actions_per_replan": 25,
+  "seed_note": "Preserve original per-episode seed mapping; verify in original runner before selecting a single episode."
+}

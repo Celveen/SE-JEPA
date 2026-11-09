@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-09T02:27:35-08:00",
+  "checked_at": "2026-11-09T04:04:30-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
-    "pages": 20,
+    "pages": 19,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "5764025dd738523123fe7ffeda69c8506310032eb16c7e87a69d26b044a497e9",
+    "pdf_sha256": "f1bc159e4b7c3c670fba2a9c2682e01e0e208e73b130377e94bc07fcfecc64e0",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -32,11 +32,11 @@
     "inheritance_ablation_page": 8
   },
   "supplement": {
-    "pages": 11,
+    "pages": 10,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "51a7ead5c21fae091792494d6a9c306ad1e24c4ed270531fbf0126ccf22bb101"
+    "pdf_sha256": "dddd99eedf8ac60d2704a94dd8c30121d2fbb0e8658b416133d9400f74b9fae7"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -163,7 +163,14 @@
       "ours_success_mpc_replans_per_case": 6,
       "visual_dino_failure_mpc_replans": 6,
       "other_baseline_failure_mpc_replans": 30,
-      "caption_explains_visual_dino_replanning_frequency": true
+      "caption_explains_visual_dino_replanning_frequency": true,
+      "pending_visual_rerun": {
+        "status": "awaiting_server_run",
+        "max_mpc_replans": 30,
+        "actions_per_replan": 5,
+        "task": "data/revision_assets/dinowm_visual_mixed/rerun_30mpc/SERVER_TASK.txt",
+        "current_result_unchanged": true
+      }
     }
   },
   "ablation": {
@@ -181,7 +188,7 @@
   "appendix_rollouts": {
     "source_manifest": "data/revision_assets/reference_rollout_sources.json",
     "requested_reference_cases": 4,
-    "additional_cases": 2,
+    "additional_cases": 0,
     "source_format": "Native Drive PDFs, cropped by panel; original text, curves, and simulator pixels preserved",
     "figures": {
       "fig:full_shape": {
@@ -195,17 +202,13 @@
       "fig:deform_reference": {
         "number": 12,
         "page": 19
-      },
-      "fig:deform_additional": {
-        "number": 13,
-        "page": 20
       }
     },
     "rendered_pages_checked": [
       18,
-      19,
-      20
-    ]
+      19
+    ],
+    "removed_final_figure_number": 13
   },
   "mixed14": {
     "source": "data/mixed14_audit.json",
@@ -229,7 +232,7 @@
     "baseline_lines": "Horizontal archived evaluation references; not five-round trajectories",
     "plot_uncertainty": "Sample SD across six actual planner-by-chain or planner-by-seed success rates"
   },
-  "clean_upload_files": 49,
+  "clean_upload_files": 47,
   "pushobj_cem_main": {
     "source": "data/pushobj_cem_online/audit.json",
     "protocol": "Fifth-round online performance",

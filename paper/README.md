@@ -3,7 +3,7 @@
 This directory contains the CVPR-format review manuscript and its Overleaf source.
 
 - [Combined paper and appendix (PDF)](main.pdf)
-- [Clean Overleaf upload archive (49 files)](SE_JEPA_CVPR2027_Overleaf_Clean.zip)
+- [Clean Overleaf upload archive (47 files)](SE_JEPA_CVPR2027_Overleaf_Clean.zip)
 - [Full research source archive with data and scripts](SE_JEPA_CVPR2027_Overleaf.zip)
 - [Figure 1 combined editable SVG, original artwork, chart data and rebuilding scripts](SE_JEPA_Figure1_Source.zip)
 - [Editable source](SE_JEPA_CVPR2027_Overleaf/main.tex)
@@ -17,9 +17,9 @@ Section 3.1 motivates cross-episode replay using the paired weight-inheritance e
 
 The revised layout places the main table on page 5 and all main result figures
 before Conclusion on page 8. Figure 7 shows the goal-success gains for each shape and visual shift in a
-single-column, vertically stacked layout. The appendix adds four complete
+single-column, vertically stacked layout. The appendix adds two complete
 rope/granular rollout examples from the original Drive PDFs; the combined
-manuscript has 20 pages, including eight main-text pages. The bibliography contains 42 cited references;
+manuscript has 19 pages, including eight main-text pages. The bibliography contains 42 cited references;
 Appendix A records the author-supplied 8-GPU RTX 5090 and A100 compute systems.
 
 The backbone discussion distinguishes task-trained ResNet models on PushObj/PushT
@@ -35,9 +35,9 @@ five-round learning. Figure 8 averages GD and CEM equally and adds Frozen
 and AdaJEPA as horizontal references. Overall SE-JEPA success increases from
 65.3% to 75.5%; the detailed tables retain the individual planner results. Appendix D retains Tables 8–9 and the detailed protocol, including
 repeated targets and the baseline initialization differences.
-Appendix E includes all four original reference panels, two additional
-deformable cases, and their explanatory text. The original loss curves and
-notes are preserved. The clean Overleaf archive contains 49 files and 15 figures.
+Appendix E includes all four original reference panels and their explanatory
+text. The final extra deformable figure has been removed at the author’s request. The original loss curves and
+notes are preserved. The clean Overleaf archive contains 47 files and 13 figures.
 
 The main-table PushObj CEM row is 80.4% All, 73.1% Unseen, and 12.99 replans,
 from the selected three fifth-round online streams. Paired post-learning
@@ -50,3 +50,9 @@ Labels count MPC replans, matching the main table's unit. Visual DINO-WM fails
 after six replans of 25 actions; the other failed runs use 30 replans of five
 actions. The caption explains this frequency difference. The original red-object case remains archived.
 The Goal explanatory line has been removed.
+
+A real 30-replan DINO-WM visual rerun is pending on the original experiment
+server. The [handoff package](DINO_WM_Figure3_30MPC_Handoff.zip) contains the
+exact target, original configuration and launch command, plus a Chinese task
+description. Figure 3 retains the actual archived result until this run is
+available; no result has been fabricated or extrapolated.
