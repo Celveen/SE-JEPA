@@ -52,3 +52,10 @@
   \caption{\textbf{Planning gains by shape and visual condition.} PushObj (top) and PushT (bottom). Each point gives full \ours minus AdaJEPA held-out success, in percentage points. Positive values favor \ours. I, square and small tee are unseen during pretraining.}
   \label{fig:condition_gains}
 \end{figure}
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=\textwidth]{mixed14_learning.pdf}
+  \caption{\textbf{One memory learns across 14 domains and two task families.} Five-round online success on seven PushObj shapes and seven PushT visual conditions, with no memory reset. Targets repeat and adaptation remains active. Lines show means and shading one sample SD across three chains (2,100 episodes per planner per round).}
+  \label{fig:mixed14_learning}
+\end{figure*}

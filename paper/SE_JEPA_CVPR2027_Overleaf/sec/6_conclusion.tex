@@ -1,9 +1,9 @@
 % Keep the closing section together when the preceding column is nearly full.
-\Needspace{25\baselineskip}
+\Needspace{20\baselineskip}
 \section{Conclusion}
 \label{sec:conclusion}
 
-\ours lets a visual planner reuse what it learned on earlier encounters. It keeps trajectories that the pretrained predictor struggles to explain, groups compatible experience for replay, and tests the resulting predictors on fresh trajectories before using them for control. With task-trained ResNet models, this memory improves held-out planning success and reduces replans on rigid objects under both GD and CEM. The same memory mechanism also improves online planning as shape and appearance domains recur together in a mixed-task stream. With a DINO-WM backbone, slow consolidation lowers goal error for rope and granular manipulation, and a rope predictor trained in one pass transfers to new instances.
+\ours makes deployment experience reusable through selective trajectory storage, replay, and validated predictor retrieval. With task-trained ResNet models, it improves held-out success and replan efficiency under GD and CEM, and continues learning across 14 recurring shape and appearance domains with one memory. With DINO-WM, slow consolidation reduces deformable goal error, and a rope predictor trained in one pass transfers to new instances.
 
 \paragraph{Future work.}
-Two objects can respond alike to an initial push and diverge at the next contact. A longer interaction history, or a short probe chosen to distinguish candidate predictors, could help route these episodes. We also observed that, late in deployment, prediction error can keep falling after planning success levels off. One way to study this gap is to test whether a more accurate predictor ranks candidate pushes in a better order near the goal. That test could guide the choice of planning horizon and how much search to spend on the final contacts.
+Longer histories or diagnostic pushes could distinguish dynamics with similar initial contacts. Studying how prediction accuracy affects near-goal action ranking could address the late-deployment gap between falling prediction error and plateauing planning success.

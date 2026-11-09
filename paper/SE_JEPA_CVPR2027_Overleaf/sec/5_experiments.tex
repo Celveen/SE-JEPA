@@ -5,10 +5,10 @@
 \label{sec:setup}
 
 \paragraph{Tasks and backbones.}
-Each episode starts with a scene and an image goal. The planner observes the consequences of its actions and receives no shift labels or task-change signals. We study shape and appearance shifts with ResNet-based world models trained on task trajectories~\cite{he2016resnet}. In \emph{PushObj}, pretraining covers T, L, Z, and plus shapes. Deployment also introduces I, square, and small tee. \emph{PushT} keeps the T shape and changes its appearance through blur, noise, darkness, or recoloring of the agent, object, or goal. We also test replay in two deformable manipulation tasks, \emph{rope} and \emph{granular}, using DINO-WM with pretrained DINOv2 features~\cite{zhou2024dinowm,oquab2024dinov2,lin2020softgym}.
+The planner receives an image goal but no shift labels or task-change signals. We study shape and appearance shifts with task-trained ResNet world models~\cite{he2016resnet}. \emph{PushObj} pretraining covers T, L, Z, and plus shapes; deployment also introduces I, square, and small tee. \emph{PushT} keeps the T shape and changes appearance through blur, noise, darkness, or recoloring of the agent, object, or goal. Deformable tasks, \emph{rope} and \emph{granular}, use DINO-WM with pretrained DINOv2 features~\cite{zhou2024dinowm,oquab2024dinov2,lin2020softgym}.
 
 \paragraph{Deployment and evaluation.}
-For the standard PushObj and PushT comparisons, we evaluate three learned memory states per planner. Targets are resampled over five rounds, with 50 episodes per shape or visual condition in each round. Table~\ref{tab:main} reports fifth-round online PushObj results for \ours. We also fix each learned memory and evaluate it on separate test-seed streams. Retrieval and fast adaptation stay active. We report the fraction of goals reached and the mean number of replans, counting the full budget for failures. On rope and granular, we isolate slow consolidation by training one predictor per task with fast adaptation disabled. The planner revisits the same 50 instances over four passes. We measure Chamfer distance (CD) between the final and goal configurations and test the rope predictor separately on new instances.
+The separate-task PushObj and PushT comparisons use three learned states per planner and five rounds, resampling 50 targets per condition per round. Table~\ref{tab:main} reports fifth-round online PushObj results for \ours. We also fix each learned memory and evaluate separate test-seed streams, keeping retrieval and fast adaptation active. We report success and mean replans, counting the full budget for failures. Rope and granular isolate slow consolidation: one predictor per task revisits 50 fixed instances over four passes, with fast adaptation disabled. We measure final Chamfer distance (CD) to the goal and separately test rope on new instances.
 
 \paragraph{Baselines and planners.}
 Frozen (pretrained) plans with a fixed model. AdaJEPA~\cite{wang2026adajepa} adapts within each episode. In the separate-task benchmarks, these two baselines use AdaJEPA's official task-specific checkpoints and the same targets as \ours in the paired evaluation of Appendix~B. We evaluate both GD and CEM, executing five actions per replan up to a budget of 30 replans. Additional baselines include DINO-WM, LeWM, DDP-WM, and planners using DINOv2 CLS or R3M features~\cite{zhou2024dinowm,maes2026lewm,yin2026ddpwm,oquab2024dinov2,nair2022r3m}. DINO CLS and R3M use T-only checkpoints. On PushT, CEM uses DreamerV3~\cite{hafner2025dreamerv3} and IRIS~\cite{micheli2023iris} as offline-trained predictors.
@@ -19,33 +19,37 @@ Table~\ref{tab:main} takes the DreamerV3 and IRIS Unseen scores and the rope and
 \label{sec:sota}
 
 \paragraph{Generalization across shapes and appearances.}
-On shapes absent from pretraining, held-out CEM success is about 15 percentage points higher with \ours than with AdaJEPA (Table~\ref{tab:planners}). Figure~\ref{fig:condition_gains} shows how the gain varies by shape and planner. Among the three unseen shapes, both planners gain most on the I shape, followed by the square and the small tee (Table~\ref{tab:shape_domains}). Each shape recurs during deployment, but the agent must bring it to the specified test pose. The predictor can reuse the dynamics learned from earlier pushes as the planner searches for an action sequence that reaches the new goal.
+On shapes absent from pretraining, held-out CEM success is about 15 percentage points higher with \ours than with AdaJEPA (Table~\ref{tab:planners}). Both planners gain most on I, followed by square and small tee (Fig.~\ref{fig:condition_gains}; Table~\ref{tab:shape_domains}). Each shape recurs during deployment; the predictor reuses its dynamics to plan toward the specified test pose.
 
-PushT holds the object geometry fixed and changes how the scene looks. Recoloring the object provides a particularly clear comparison. With CEM, the frozen and episodically adapted models reach the same fraction of red-object goals. With memory, success rises by over thirty percentage points relative to either baseline (Table~\ref{tab:visual_domains}). The red-goal condition also shows a large gain. In both conditions the agent can draw on pushes observed in earlier scenes with that appearance, even though the current episode supplies a different target.
+On PushT, CEM success under the red-object shift rises by over thirty percentage points relative to both Frozen and AdaJEPA, which tie on this condition (Table~\ref{tab:visual_domains}). Red-goal recoloring also shows a large gain. Memory makes earlier pushes under the same appearance available for planning toward a different target.
 
 \paragraph{Planning efficiency.}
-Figure~\ref{fig:efficiency_main} follows the full model as the replan budget increases. Halfway through the budget, \ours has already solved a larger fraction of goals than AdaJEPA reaches with the full budget. This holds on the seven PushObj shapes and on the seven PushT visual conditions, both with GD. The curves count every goal presented to each method, including those still unsolved when the budget expires. Earlier successes matter when the controller has a fixed number of pushes to reach the goal. With CEM, the same ordering appears in the mean number of replans on both tasks (\supref{B}).
+Halfway through the GD replan budget, \ours solves more goals than AdaJEPA reaches with the full budget, on both the seven shapes and seven visual conditions (Fig.~\ref{fig:efficiency_main}). Curves include all goals, including failures. CEM gives the same ordering in mean replans on both tasks (\supref{B}).
 
 \paragraph{Consolidation on a second backbone.}
-On rope and granular, replacing the frozen DINO-WM predictor with the consolidated predictor brings both materials closer to their target configurations (Table~\ref{tab:main}). The local deformable evaluation gives each planner the same budget of 15 pushes. A lower final CD means the planner uses those pushes to better match the rope's shape or the distribution of particles in the goal. The planner has access to one slow predictor per task and makes no fast updates during an episode. The improvement therefore tests the part of \ours that learns from previous trajectories, using DINOv2 features in place of the ResNet features used on rigid objects.
+With the same 15-push budget, the consolidated DINO-WM predictor lowers final CD on both rope and granular (Table~\ref{tab:main}). No fast updates occur within an episode, so the improvement isolates learning from prior trajectories. It also extends replay from task-trained ResNet features to pretrained DINOv2 features.
 
 \subsection{Qualitative results}
 \label{sec:qualitative}
 
-Figure~\ref{fig:qualitative} shows two episodes in which all three methods start from the same scene and aim for the same goal. On the unseen I shape, \ours reaches a pose that both baselines miss. In the red-object episode, the baselines leave the T at the wrong orientation, while \ours turns it into the goal pose. Figure~\ref{fig:deform_qualitative} shows the final rope and particle configurations after the executed pushes. With the slow predictor alone, the planner moves the rope toward its target shape and the particles toward the goal distribution. \supref{E} gives additional trajectories.
+With matched starts and goals, \ours solves unseen-I and red-object episodes that both baselines miss (Fig.~\ref{fig:qualitative}). The slow predictor alone also moves rope and particles closer to their target configurations (Fig.~\ref{fig:deform_qualitative}). \supref{E} gives full trajectories and explains their planning outcomes and prediction-loss curves.
 
 \subsection{Learning over deployment}
 \label{sec:deployment}
 
-When targets are resampled each round, both GD and CEM finish deployment with higher online success on unseen shapes and recolored scenes than in the first round (Fig.~\ref{fig:deployment}, top). These curves track performance as memory grows. Table~\ref{tab:main} reports the fifth-round online PushObj result; Appendix~B gives the paired evaluations after learning.
+With targets resampled each round, both GD and CEM improve online success on unseen shapes and recolored scenes from the first to final round (Fig.~\ref{fig:deployment}, top). Table~\ref{tab:main} reports fifth-round online PushObj results; Appendix~B gives paired evaluations after learning.
 
-Revisiting the same rope and granular instances reduces final CD over successive passes (Fig.~\ref{fig:deployment}, bottom). To test whether the rope predictor also transfers, we froze it after its first pass and used it on 91 previously unseen instances. Mean CD fell from 0.664 to 0.349, a 47\% reduction relative to pretrained DINO-WM. The paired bootstrap 95\% interval for the mean reduction is [0.162, 0.470] (\supref{B}). The transfer test pairs the two predictors on new starting configurations and goals, with weights fixed throughout evaluation.
-
-\paragraph{A shared memory across task and shift families.}
-We also run a single continual memory over 14 domains: seven PushObj shapes and seven PushT visual conditions. Across five rounds on repeated targets, online success rises from 65.6\% to 75.1\% with GD and from 65.0\% to 75.8\% with CEM, averaged over three chains. Thus memory remains useful when geometric and appearance changes recur within the same deployment stream, extending continual adaptation across both task families. Appendix~D gives the learning curves, baseline comparisons, and protocol.
+Revisiting rope and granular reduces CD over successive passes (Fig.~\ref{fig:deployment}, bottom). After one rope pass, we froze the predictor and tested 91 new instances. Mean CD fell from pretrained DINO-WM's 0.664 to 0.349, a 47\% reduction; the paired bootstrap 95\% interval for the mean reduction is [0.162, 0.470] (\supref{B}). Both predictors use the same new starts and goals, with weights fixed.
 
 \paragraph{Selective writing and retrieval.}
-Across seven PushObj rounds, about one episode in four adds experience to a replay buffer, and a similar fraction finishes with a slow predictor. This holds for both planners (\supref{D}). An episode can contribute training data to a domain whose predictor is still awaiting validation. The pretrained model remains available on familiar encounters. On the four shapes seen in pretraining, \ours also improves held-out success over AdaJEPA with both planners (\supref{D}).
+Across seven PushObj rounds, about one episode in four writes to replay, and a similar fraction finishes with a slow predictor. The pretrained model remains available on familiar encounters; both planners also improve over AdaJEPA on the four pretraining shapes (\supref{D}).
+
+\subsection{One memory across task and shift families}
+\label{sec:mixed14}
+
+We combine seven PushObj shapes and seven PushT visual conditions in one 14-domain stream. Each of three chains per planner starts with an empty memory and carries it through all domains for five rounds, with 50 episodes per domain per round. Targets repeat, while adaptation and memory updates remain active.
+
+Figure~\ref{fig:mixed14_learning} shows sustained improvement in this mixed stream. Overall online success rises from 65.6\% to 75.1\% with GD and from 65.0\% to 75.8\% with CEM: gains of 9.6 and 10.8 percentage points. Both families improve from the first to fifth round. Final shape success reaches 81.1\% and 82.9\%, and visual success reaches 69.1\% and 68.7\%, respectively. Thus one evolving memory supports recurring geometric and appearance changes across task families, without resetting between them. Appendix~D gives per-domain outcomes and comparisons with differently initialized baselines.
 
 \subsection{Ablation study}
 \label{sec:ablation}
@@ -73,7 +77,7 @@ Table~\ref{tab:component_ablation} compares retention mechanisms on the seven-sh
 
 \begin{table}[!ht]
   \centering
-  \caption{\textbf{Retention mechanism and fixed slow learning rate.} GD results on the same 1,050 held-out PushObj goals, with one learned state per variant. All variants share the initial checkpoint and learning stream.}
+  \caption{\textbf{Retention mechanisms and fixed slow learning rates.} GD on 1,050 matched held-out PushObj goals. Variants share the initial checkpoint and learning stream, with one learned state each.}
   \label{tab:component_ablation}
   \small
   \setlength{\tabcolsep}{4pt}

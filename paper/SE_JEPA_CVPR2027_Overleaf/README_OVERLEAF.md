@@ -122,7 +122,7 @@ in `main.tex`, and reconcile the AI-use statement with all authors' tool use.
 
 ## Current layout and bibliography
 
-The main comparison table is on page 5, the main result figures on pages 5–7,
+The main comparison table is on page 5, the main result figures on pages 5–8,
 and Conclusion with Future work closes the eight-page main text on page 8. Result floats
 are declared early in `sec/5_result_floats.tex`; a float barrier before Conclusion
 keeps them ahead of the closing section. The bibliography has 42 cited entries, including the original ResNet paper,
@@ -156,10 +156,11 @@ five numbered equations, including familiarity and fingerprint similarity.
 
 ## Mixed 14-domain stream and original reference panels
 
-The main text, Introduction, and Conclusion now describe continual improvement
+Main Section 4.5 (page 7) and Figure 8 (page 8) present continual improvement
 with one memory spanning seven shape domains and seven visual conditions.
-Appendix D adds Figure 8 (five-round curves) and Tables 8–9 (overall and per-domain
-outcomes). This is online adaptation on repeated target pairs, separate from the
+The three-panel figure shows five-round overall, shape and visual success,
+with means and sample SD across three chains. Appendix D retains Tables 8–9
+(overall and per-domain outcomes) and the detailed experimental protocol. This is online adaptation on repeated target pairs, separate from the
 held-out benchmarks. The mixed-stream Frozen/AdaJEPA baselines use the official
 shape-shift checkpoint, while SE-JEPA uses the TLZ+ epoch-3 checkpoint.
 
@@ -171,7 +172,7 @@ contains all plot/table values and source checksums. Reproduce it using
 `figures/source/mixed14_author_report.pdf`; raw experiment archives and model
 weights are not added to the Overleaf bundle.
 
-The combined paper has 21 pages, including eight pages of main text. Appendix E
+The combined paper has 20 pages, including eight pages of main text. Appendix E
 restores the reference panels' full narrative, explaining successful replans,
 final CD, action-replay provenance and the interpretation of prediction losses.
 

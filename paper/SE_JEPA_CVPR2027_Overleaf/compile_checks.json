@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-09T00:08:09-08:00",
+  "checked_at": "2026-11-09T01:06:48-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
-    "pages": 21,
+    "pages": 20,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "7e9244e189277965c4e427967a833d4c710fec5b85c974b1f4f497e1d2787583",
+    "pdf_sha256": "33c031a8279cad0f9e0b0b592ceb7c4d2695b0d129145212d32033b59224a47e",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -22,20 +22,21 @@
       "4": 6,
       "5": 6,
       "6": 6,
-      "7": 7
+      "7": 7,
+      "8": 8
     },
     "conclusion_page": 8,
     "all_main_floats_precede_conclusion": true,
-    "familiarity_ablation_page": 19,
+    "familiarity_ablation_page": 17,
     "component_ablation_page": 8,
     "inheritance_ablation_page": 8
   },
   "supplement": {
-    "pages": 12,
+    "pages": 11,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "ecacbd55e05a0956aaaef9cde7149686b8efc11afb2bf9692ee8e4155c3c10d7"
+    "pdf_sha256": "49821a7c3d7f1e5b7c9808c99e6872aa7c38336603f591e9b95fce751bfa3605"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -164,17 +165,17 @@
       },
       "fig:deform_reference": {
         "number": 12,
-        "page": 20
+        "page": 19
       },
       "fig:deform_additional": {
         "number": 13,
-        "page": 21
+        "page": 20
       }
     },
     "rendered_pages_checked": [
       18,
-      20,
-      21
+      19,
+      20
     ]
   },
   "mixed14": {
@@ -188,9 +189,13 @@
     "shared_memory_across_both_families": true,
     "official_adajepa_checkpoint": "pushobj_shape_shift",
     "evaluation": "Online learning with repeated targets; distinct from held-out benchmarks",
-    "figure_page": 16,
+    "figure_page": 8,
     "summary_table_page": 16,
-    "domain_table_page": 17
+    "domain_table_page": 16,
+    "placement": "Main Section 4.5 and Figure 8; detailed comparison tables in Appendix D",
+    "main_section": "4.5",
+    "main_section_page": 7,
+    "plot_layout": "Full-width, three panels: all domains, shapes, visual conditions; means and sample SD across three chains"
   },
   "clean_upload_files": 49,
   "pushobj_cem_main": {

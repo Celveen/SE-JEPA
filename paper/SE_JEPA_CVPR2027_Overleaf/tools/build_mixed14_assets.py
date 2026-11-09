@@ -25,8 +25,8 @@ def main():
     data = json.loads((ROOT / "data/mixed14_audit.json").read_text())
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8,
                          "pdf.fonttype": 42, "axes.unicode_minus": True})
-    fig, axes = plt.subplots(1, 3, figsize=(6.8, 2.5), sharey=True)
-    fig.subplots_adjust(left=.075, right=.99, top=.73, bottom=.22, wspace=.2)
+    fig, axes = plt.subplots(1, 3, figsize=(6.8, 2.05), sharey=True)
+    fig.subplots_adjust(left=.075, right=.99, top=.75, bottom=.22, wspace=.2)
     styles = {"GD": {"color": "#B64E14", "linestyle": "--", "marker": "s"},
               "CEM": {"color": "#0072B2", "linestyle": "-", "marker": "o"}}
     for ax, (key, title) in zip(axes, [("all", "All 14 domains"),
@@ -42,7 +42,7 @@ def main():
             ax.plot(range(1, 6), y, label=planner, lw=1.8, ms=3.4,
                     markerfacecolor="white" if planner == "GD" else style["color"], **style)
         ax.set_title(title, fontsize=8, pad=7)
-        ax.set(xlim=(.85, 5.15), ylim=(40, 100), xticks=range(1, 6), yticks=[40, 60, 80, 100])
+        ax.set(xlim=(.85, 5.15), ylim=(50, 90), xticks=range(1, 6), yticks=[50, 60, 70, 80, 90])
         ax.grid(axis="y", color="#E8EDF1", linewidth=.7)
         ax.spines[["top", "right"]].set_visible(False)
         ax.spines[["left", "bottom"]].set_color("#8A98A3")
@@ -50,7 +50,7 @@ def main():
     axes[0].set_ylabel("Online success (%) ↑")
     fig.supxlabel("Continual-adaptation round", x=.54, y=.035, fontsize=8)
     fig.legend(*axes[0].get_legend_handles_labels(), loc="upper center", ncol=2,
-               bbox_to_anchor=(.57, 1.02), title="SE-JEPA", frameon=False,
+               bbox_to_anchor=(.57, 1.05), title="SE-JEPA", frameon=False,
                title_fontproperties={"weight": "bold", "size": 8.5})
     fig.savefig(ROOT / "figures/mixed14_learning.pdf", metadata={"CreationDate": None})
     plt.close(fig)
