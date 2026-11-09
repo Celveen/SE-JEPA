@@ -45,6 +45,7 @@ python tools/restyle_paper_figures.py
 python tools/build_revision_assets.py
 python tools/build_learning_progress.py
 python tools/build_condition_gains.py
+python tools/build_deform_appendix.py
 python tools/audit_pusht.py
 python tools/package_overleaf.py
 ```
@@ -75,7 +76,8 @@ cp figures/teaser_combined.svg figures/source/teaser_combined.svg
 
 The combined exporter uses CairoSVG and PyMuPDF. `tools/build_condition_gains.py`
 regenerates the main per-condition comparison from the unrounded held-out rates and
-checks each value against the saved success and episode counts.
+checks each value against the saved success and episode counts. Figure 7 uses a
+single-column layout with PushObj above PushT.
 Figures use bold
 method labels for SE-JEPA and regular labels for the baselines. When comparing
 methods, line plots also give SE-JEPA a heavier stroke. GD and CEM share the
@@ -102,7 +104,13 @@ The main qualitative comparison selects real examples where Frozen and
 AdaJEPA fail and SE-JEPA succeeds. Selection and source hashes are recorded
 with the assets. Rope/Granular examples are from the third pass, while their
 main-table aggregate results are from the fourth pass; the caption distinguishes
-these. The appendix retains additional complete trajectories.
+these. The appendix includes the square and red-agent trajectories and four
+complete deformable sequences (two rope and two granular). The latter retain all
+84 original frame placements, runtime CD annotations, and success markers from
+the native Drive PDFs; only the Ours labels are changed to SE-JEPA. Sources,
+hashes, and the decoded-image checks are in
+`data/revision_assets/deform_rollout_sources.json`. Run
+`tools/build_deform_appendix.py` to reproduce these label-only edits.
 
 Before camera-ready release, supply author details, change the review option
 in `main.tex`, and reconcile the AI-use statement with all authors' tool use.

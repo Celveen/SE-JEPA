@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-08T21:21:01-08:00",
+  "checked_at": "2026-11-08T22:01:36-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
-    "pages": 17,
+    "pages": 19,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "ac543de102fa5a30cd6f3853461c70aad3e5280cb9205e18a959691f3b75b897",
+    "pdf_sha256": "208cedefcf8891c1ff6ea39b2bb8481920f4df4779d6facfb983ca75661eeda8",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -31,11 +31,11 @@
     "inheritance_ablation_page": 8
   },
   "supplement": {
-    "pages": 8,
+    "pages": 10,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "e1e71c5564511effb35682a08debc3e17cff95692d1f8ebed993f9474224435f"
+    "pdf_sha256": "48ddac582b184717882d60f90803cb2abc88883ff0f1d70bc011e5058b38f61c"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -124,7 +124,8 @@
       "source": "data/condition_gains.csv",
       "figure": "figures/condition_gains.pdf",
       "values_checked": 26,
-      "protocol": "Full SE-JEPA versus episodic AdaJEPA with GD and CEM, per condition."
+      "protocol": "Full SE-JEPA versus episodic AdaJEPA with GD and CEM, per condition.",
+      "layout": "Single column, PushObj above PushT, shared success-gain axis"
     },
     "planning_efficiency": {
       "planner": "GD",
@@ -146,5 +147,26 @@
     "fast_accumulation_source": "data/matched_accumulation_source.md"
   },
   "unseen_rope_audit": "data/reporting_overrides.json#unseen_rope_audit",
-  "official_checkpoint_audit": "data/checkpoint_audit.json"
+  "official_checkpoint_audit": "data/checkpoint_audit.json",
+  "appendix_rollouts": {
+    "source_manifest": "data/revision_assets/deform_rollout_sources.json",
+    "new_cases": 4,
+    "new_figures": {
+      "rope": {
+        "number": 11,
+        "page": 18
+      },
+      "granular": {
+        "number": 12,
+        "page": 19
+      }
+    },
+    "original_image_placements_verified": 84,
+    "rendered_pages_checked": [
+      16,
+      17,
+      18,
+      19
+    ]
+  }
 }

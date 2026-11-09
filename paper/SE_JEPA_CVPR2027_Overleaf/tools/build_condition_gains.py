@@ -30,10 +30,10 @@ def main():
     with csv_path.open("w", newline="") as stream:
         writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(["task", "condition", "planner", "ours_percent", "adajepa_percent", "gain_pp"])
-        plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8,
+        plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 7.4,
                              "pdf.fonttype": 42, "axes.unicode_minus": True})
-        fig, axes = plt.subplots(1, 2, figsize=(6.8, 2.28), sharex=True)
-        fig.subplots_adjust(left=.109, right=.982, top=.83, bottom=.21, wspace=.47)
+        fig, axes = plt.subplots(2, 1, figsize=(3.35, 3.9), sharex=True)
+        fig.subplots_adjust(left=.255, right=.97, top=.87, bottom=.14, hspace=.37)
         for ax, (task, (key, conditions)) in zip(axes, PANELS.items()):
             for row, (condition, _) in enumerate(conditions):
                 values = []
@@ -44,13 +44,13 @@ def main():
                     writer.writerow([task, condition, planner, ours, ada, gain])
                     y = row + style["offset"]
                     values.append((gain, y))
-                    ax.plot(gain, y, marker=style["marker"], markersize=5.2,
+                    ax.plot(gain, y, marker=style["marker"], markersize=4.4,
                             markerfacecolor=style["color"] if planner == "GD" else "white",
                             markeredgecolor=style["color"], markeredgewidth=1.25,
                             linestyle="none", label=planner if row == 0 else "", zorder=3)
                 ax.plot(*zip(*values), color="#A4AFB8", linewidth=1, zorder=2)
             ax.set_yticks(range(len(conditions)), labels=[label for _, label in conditions])
-            ax.set_ylim(6.55, -.55)
+            ax.set_ylim(len(conditions) - .45, -.55)
             ax.set_xlim(-4.0, 36)
             ax.set_xticks([0, 10, 20, 30])
             ax.axvline(0, color="#596977", lw=1.05)
@@ -59,12 +59,12 @@ def main():
             ax.tick_params(axis="both", length=0, pad=3.2, colors="#24323F")
             for spine in ax.spines.values():
                 spine.set_visible(False)
-            ax.set_title(task, loc="left", fontweight="bold", fontsize=9, pad=4)
+            ax.set_title(task, loc="left", fontweight="bold", fontsize=7.8, pad=4)
         fig.legend(*axes[0].get_legend_handles_labels(), loc="upper right",
-                   bbox_to_anchor=(.982, .998), frameon=False, ncol=2,
+                   bbox_to_anchor=(.98, .998), frameon=False, ncol=2,
                    handletextpad=.25, columnspacing=.9, borderpad=.1)
-        fig.supxlabel("Held-out success gain of SE-JEPA over AdaJEPA (percentage points)",
-                      x=.52, y=.015, fontsize=8.2)
+        fig.supxlabel("Held-out success gain over AdaJEPA\n(percentage points)",
+                      x=.58, y=.015, fontsize=7.3)
         fig.savefig(ROOT / "figures/condition_gains.pdf", metadata={"CreationDate": None})
         plt.close(fig)
 
