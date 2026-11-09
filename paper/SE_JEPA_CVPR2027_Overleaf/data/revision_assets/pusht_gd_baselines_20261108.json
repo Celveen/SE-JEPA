@@ -1,0 +1,142 @@
+{
+  "dinowm": {
+    "task": "pusht",
+    "planner": "gd",
+    "epoch": 3,
+    "seed": 100,
+    "episodes": 350,
+    "conditions": {
+      "default": {
+        "episodes": 50,
+        "successes": 25,
+        "success_rate": 0.5,
+        "mean_mpc_replans": 3.58,
+        "mean_physical_steps": 89.5
+      },
+      "blur": {
+        "episodes": 50,
+        "successes": 22,
+        "success_rate": 0.44,
+        "mean_mpc_replans": 3.9,
+        "mean_physical_steps": 97.5
+      },
+      "snp": {
+        "episodes": 50,
+        "successes": 4,
+        "success_rate": 0.08,
+        "mean_mpc_replans": 5.68,
+        "mean_physical_steps": 142.0
+      },
+      "dark": {
+        "episodes": 50,
+        "successes": 25,
+        "success_rate": 0.5,
+        "mean_mpc_replans": 3.58,
+        "mean_physical_steps": 89.5
+      },
+      "red_agent": {
+        "episodes": 50,
+        "successes": 22,
+        "success_rate": 0.44,
+        "mean_mpc_replans": 3.86,
+        "mean_physical_steps": 96.5
+      },
+      "red_object": {
+        "episodes": 50,
+        "successes": 18,
+        "success_rate": 0.36,
+        "mean_mpc_replans": 4.28,
+        "mean_physical_steps": 107.0
+      },
+      "red_goal": {
+        "episodes": 50,
+        "successes": 23,
+        "success_rate": 0.46,
+        "mean_mpc_replans": 3.82,
+        "mean_physical_steps": 95.5
+      }
+    },
+    "training_shapes": [
+      "T"
+    ],
+    "objective": "last",
+    "physical_steps_per_replan": 25,
+    "max_replans": 6,
+    "max_physical_steps": 150,
+    "seven_condition_success_rate": 0.39714285714285713,
+    "six_shift_success_rate": 0.37999999999999995,
+    "color_success_rate": 0.42,
+    "mean_mpc_replans": 4.1000000000000005,
+    "mean_physical_steps": 102.5
+  },
+  "lewm": {
+    "task": "pusht",
+    "planner": "gd",
+    "epoch": 10,
+    "seed": 100,
+    "episodes": 350,
+    "conditions": {
+      "default": {
+        "episodes": 50,
+        "successes": 32,
+        "success_rate": 0.64,
+        "mean_mpc_replans": 14.8,
+        "mean_physical_steps": 74.0
+      },
+      "blur": {
+        "episodes": 50,
+        "successes": 31,
+        "success_rate": 0.62,
+        "mean_mpc_replans": 15.8,
+        "mean_physical_steps": 79.0
+      },
+      "snp": {
+        "episodes": 50,
+        "successes": 31,
+        "success_rate": 0.62,
+        "mean_mpc_replans": 15.44,
+        "mean_physical_steps": 77.2
+      },
+      "dark": {
+        "episodes": 50,
+        "successes": 29,
+        "success_rate": 0.58,
+        "mean_mpc_replans": 16.36,
+        "mean_physical_steps": 81.8
+      },
+      "red_agent": {
+        "episodes": 50,
+        "successes": 2,
+        "success_rate": 0.04,
+        "mean_mpc_replans": 28.88,
+        "mean_physical_steps": 144.4
+      },
+      "red_object": {
+        "episodes": 50,
+        "successes": 8,
+        "success_rate": 0.16,
+        "mean_mpc_replans": 26.2,
+        "mean_physical_steps": 131.0
+      },
+      "red_goal": {
+        "episodes": 50,
+        "successes": 17,
+        "success_rate": 0.34,
+        "mean_mpc_replans": 23.14,
+        "mean_physical_steps": 115.7
+      }
+    },
+    "training_shapes": [
+      "T"
+    ],
+    "objective": "staged",
+    "physical_steps_per_replan": 5,
+    "max_replans": 30,
+    "max_physical_steps": 150,
+    "seven_condition_success_rate": 0.42857142857142855,
+    "six_shift_success_rate": 0.3933333333333333,
+    "color_success_rate": 0.18000000000000002,
+    "mean_mpc_replans": 20.08857142857143,
+    "mean_physical_steps": 100.44285714285715
+  }
+}

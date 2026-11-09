@@ -21,9 +21,21 @@ Here $x$ contains a short history of observation embeddings and executed actions
 \subsection{Discovering predictive domains}
 \label{sec:write}
 
-The frozen reference provides a first test of whether an episode contributes new experience. We take the geometric mean of its next-frame prediction errors over the first few observed transitions. When the error falls below a calibrated threshold, the agent uses $P_0$ as the base for fast adaptation and skips the direct memory write for that episode. This reserves new replay entries for episodes the reference predicts poorly.
+The frozen reference first tests whether an episode contributes new experience. Let $\ell^{(0)}_{e,t}$ be its next-frame prediction error, and $\mathcal{I}_e$ index up to the first three observed transitions. Their geometric mean is
+\begin{equation}
+  F_e=\exp\!\left(\frac{1}{|\mathcal{I}_e|}
+  \sum_{t\in\mathcal{I}_e}\log\ell^{(0)}_{e,t}\right).
+  \label{eq:familiarity}
+\end{equation}
+If $F_e<\tau_f$, the calibrated familiarity threshold, the agent keeps $P_0$ as its adaptation base and skips the episode's direct memory write. Replay thus receives episodes the reference predicts poorly.
 
-For an unfamiliar episode $e$, let $\Delta_e$ denote the fast parameter change. Its direction $u_e=\Delta_e/\|\Delta_e\|_2$ helps identify episodes that call for similar corrections. If the agent retrieved a slow predictor, its domain is the first candidate for the new trajectory. Otherwise, the agent ranks stored domains by the cosine similarity between $u_e$ and each domain's prototype. A candidate accepts the trajectory if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned episodes wait in a pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
+For an unfamiliar episode, $\Delta_e$ concatenates the fast predictor and encoder-head changes. Its normalized direction and similarity to domain $k$ are
+\begin{equation}
+  u_e=\frac{\Delta_e}{\|\Delta_e\|_2},
+  \qquad s(e,k)=u_e^\top c_k,
+  \label{eq:fingerprint}
+\end{equation}
+where $c_k$ is the domain's unit-length prototype. The retrieved domain is the first write candidate; otherwise, candidates are ranked by $s(e,k)$. A candidate accepts the trajectory if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned episodes wait in a pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
 
 Two contacts with the same object can induce different fast updates. Delaying domain creation gives the planner a way to keep an unusual contact until it sees a similar one again. The pool retains the founding trajectories, so learning can begin with examples from several encounters. As more evidence arrives, two domains merge if each predictor transfers to the other's recent episodes and both outperform the reference. Testing transfer in both directions checks that the proposed merger covers the experience of each group. A mature domain can also absorb a smaller group whose trajectories it already predicts well. \supref{A} gives the thresholds and the rules for maintaining each prototype.
 

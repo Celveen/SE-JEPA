@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07T05:39:16-08:00",
+  "checked_at": "2026-11-08T21:21:01-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "adbf15e9ae8f28fbb53c21521efe9fbfcf15123cc9bf8b291d96d9822ccc278a",
+    "pdf_sha256": "ac543de102fa5a30cd6f3853461c70aad3e5280cb9205e18a959691f3b75b897",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -35,14 +35,14 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "c664f0ba97d2feae69efcdda1e58348aa23f652589c114c0074454b39f6810df"
+    "pdf_sha256": "e1e71c5564511effb35682a08debc3e17cff95692d1f8ebed993f9474224435f"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
     "The appendix includes pages devoted to figures and tables.",
     "Raw simulator frames remain raster; labels and charts are vector."
   ],
-  "main_numbered_equations": 3,
+  "main_numbered_equations": 5,
   "pusht_audit": "data/pusht_audit.json",
   "reporting_overrides": "data/reporting_overrides.json",
   "bibliography_entries": 42,
@@ -63,7 +63,11 @@
     "color_counts_match_independent_audit": true,
     "shape_rounds": 5,
     "color_rounds": 5,
-    "deform_passes": 4
+    "deform_passes": 4,
+    "metric_directions": {
+      "success": "higher is better",
+      "Chamfer distance": "lower is better"
+    }
   },
   "backbones": {
     "PushObj/PushT": "Task-trained ResNet-based world models",
@@ -97,7 +101,7 @@
       "editable_source": "figures/source/teaser_combined.svg",
       "ours": "Deep blue, bold method label, diagonal hatch and direct value labels",
       "bar_value_labels": "Printed at CSV precision. SE-JEPA PushObj All uses the original three-chain mean (81.59%).",
-      "values_checked": 13,
+      "values_checked": 15,
       "planner_groups": {
         "GD": [
           "Frozen",
@@ -111,15 +115,24 @@
       "bar_panel": "figures/teaser_bars.svg",
       "pushobj_baseline_provenance": "data/reporting_overrides.json#figure_1_pushobj_gd",
       "pusht_shift_provenance": "Three paired GD results, cross-checked against the six shifted conditions in Drive test_summary.json.",
-      "ordering": "Ascending PushObj success, with SE-JEPA at the bottom. The ordering also holds for all available Unseen and PushT values.",
+      "ordering": "Ascending all-shape PushObj success; shared method order in all panels, SE-JEPA at bottom.",
       "episodic_baseline_label": "adaJEPA (lower chart); One-round adaptive JEPA (upper schematic)",
-      "upper_schematic_unchanged": true
+      "upper_schematic_unchanged": true,
+      "pusht_baseline_provenance": "data/reporting_overrides.json#figure_1_pusht_gd"
     },
     "condition_gains": {
       "source": "data/condition_gains.csv",
       "figure": "figures/condition_gains.pdf",
       "values_checked": 26,
       "protocol": "Full SE-JEPA versus episodic AdaJEPA with GD and CEM, per condition."
+    },
+    "planning_efficiency": {
+      "planner": "GD",
+      "sources": [
+        "data/revision_assets/shape_summary.json",
+        "data/revision_assets/visual_summary.json"
+      ],
+      "official_baseline_audit": "data/checkpoint_audit.json"
     }
   },
   "ablation": {
@@ -132,5 +145,6 @@
     "fast_accumulation_table": "tables/fast_accumulation.tex",
     "fast_accumulation_source": "data/matched_accumulation_source.md"
   },
-  "unseen_rope_audit": "data/reporting_overrides.json#unseen_rope_audit"
+  "unseen_rope_audit": "data/reporting_overrides.json#unseen_rope_audit",
+  "official_checkpoint_audit": "data/checkpoint_audit.json"
 }

@@ -4,7 +4,7 @@
 \begin{figure}[!t]
   \centering
   \includegraphics[width=\linewidth]{teaser_combined.pdf}
-  \caption{\textbf{Planning when a shift returns.} The schematic shows how \ours retrieves a predictor learned from earlier encounters. Bars show held-out GD success, ordered from low to high. One-round adaptive JEPA uses episode-local adaptation~\cite{wang2026adajepa}. On PushObj, DINO-WM and LeWM are evaluated on 50 targets per shape. \ours reports the mean over three learning chains.}
+  \caption{\textbf{Planning when a shift returns.} The schematic shows how \ours retrieves a predictor learned from earlier encounters. Bars show held-out GD success, ordered by all-shape PushObj success. One-round adaptive JEPA uses episode-local adaptation~\cite{wang2026adajepa}. DINO-WM and LeWM use 50 targets per shape or visual condition. \ours reports the mean over three learning chains.}
   \label{fig:teaser}
 \end{figure}
 
@@ -16,7 +16,7 @@ Replaying past interactions can adapt a single predictor to a sustained change i
 
 Before a slow predictor learns from an incoming trajectory, \ours compares its forecasts with those of the pretrained predictor on the actions actually taken. A record of better forecasts makes the slow predictor eligible for use. Early observations in a later episode then let the planner choose among eligible predictors and the pretrained reference (Fig.~\ref{fig:teaser}, top). The planner uses the selected predictor to score candidate actions in the usual way. This lets the model reuse experience across goals while leaving the choice of action optimizer open.
 
-We evaluate reuse by fixing the learned memory and testing it on fresh goals. On PushObj and PushT, the full method improves held-out planning across changes in shape and appearance with task-trained ResNet models. The gains hold with gradient descent (GD, Fig.~\ref{fig:teaser}, bottom) and with the cross-entropy method (CEM). On both tasks, \ours reaches more goals by the midpoint of the CEM replan budget than AdaJEPA does by the end (Fig.~\ref{fig:efficiency_main}).
+We evaluate reuse by fixing the learned memory and testing it on fresh goals. On PushObj and PushT, the full method improves held-out planning across changes in shape and appearance with task-trained ResNet models. The gains hold with gradient descent (GD, Fig.~\ref{fig:teaser}, bottom) and with the cross-entropy method (CEM). On both tasks, \ours reaches more goals by the midpoint of the GD replan budget than AdaJEPA does by the end (Fig.~\ref{fig:efficiency_main}).
 
 Rope and granular manipulation test the replay mechanism with a different representation and different dynamics. Using DINO-WM~\cite{zhou2024dinowm}, we train one slow predictor per material by replay and use it directly for planning. Both materials finish closer to their target configurations under the same action budget. On previously unseen rope instances, a predictor frozen after one deployment pass reduces mean Chamfer distance to the goal by 47\% relative to the pretrained model (Appendix~B).
 

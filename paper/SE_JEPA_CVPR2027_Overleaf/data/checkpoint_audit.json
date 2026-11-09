@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-08",
+  "scope": [
+    "PushObj",
+    "PushT"
+  ],
+  "evidence_level": "Archived protocol/README checkpoint identity and routed result summaries; not a new evaluation run.",
+  "official_origin": "https://github.com/agentic-learning-ai-lab/adajepa",
+  "PushObj": {
+    "checkpoint": "checkpoints/pushobj_shape_shift",
+    "evidence": "data/drive_reference/shape_readme.txt explicitly identifies Frozen and AdaJEPA as sharing the official checkpoint.",
+    "GD_percent": {
+      "All": 72.19047619047619,
+      "Unseen": 55.333333333333336
+    },
+    "official_comparison_runs": [
+      "cmp_gd_official",
+      "cmp_cem_official"
+    ]
+  },
+  "PushT": {
+    "checkpoint": "official/pusht_visual_shift",
+    "checkpoint_download": "https://drive.google.com/file/d/1xExDiHn0rJ5zfQ4A50wkObjPvaE3pjGm/view",
+    "recorded_checkpoint_sha256": "9098082f1d40bfa7b4f4884571db30a0fed4a0aa26ad7dab8db11415437b8b32",
+    "recorded_archive_sha256": "d43cedce1729f0c36a5681dab2a06354db68d754e27d3cdc97bb7d45fca9f899",
+    "GD_shift_percent": 54.888888888888886,
+    "CEM_shift_percent": 60.22222222222222,
+    "comparison_scope": "v6a uses pushobj_T16k_bias_e3; AdaJEPA and frozen use official visual checkpoint. This is a comparison across checkpoint conditions, not a same-checkpoint method ablation."
+  },
+  "coverage": [
+    "Figure1 GD bars",
+    "Table1 CEM rows",
+    "Figure3 rigid qualitative cases",
+    "Figure5 GD curves",
+    "Figure7 gains",
+    "Appendix per-domain rates and qualitative cases"
+  ],
+  "controlled_ablation_exception": "Table3 Episodic reset deliberately shares our pretrained checkpoint with the other ablations; it is not labeled as the official-checkpoint AdaJEPA benchmark.",
+  "deformable_scope": "Rope and granular left unchanged per author instruction on 2026-11-08.",
+  "source_sha256": {
+    "data/drive_reference/shape_readme.txt": "e2ca845d4a183bf0e89499f55db767fddde2135bc4e6d23ccb4f0bb27d7e9947",
+    "data/revision_assets/visual_protocol.json": "abe743e6c29a5c0b05fc6fdd91a1e142a570e83375e8cb55b59f2e610879f57b",
+    "data/revision_assets/shape_summary.json": "7a0f2de0e8ab22bdd714207ff157a9d1d794f49f784719ebaec05fe28d4e012e",
+    "data/revision_assets/visual_summary.json": "bdf6c65a6f1bc923917bd78a24c911223b43e00e2642be3948cf5c38159ea5b1",
+    "data/revision_assets/selection_manifest.json": "f18761c87e15da5f6b52e439770a4fb3846dbb3f9edd72969aa47d4092f9d01e",
+    "data/revision_assets/shape_case.json": "1854830480573e718fee954f17c9c873e797fb65219970271a031b7e28e0b71e",
+    "data/revision_assets/visual_case.json": "43e2596b766bb2494d7b6f0619eeea6fa55afc5c49d3b9c4afad965e158e6834",
+    "data/pusht_audit.json": "e1b938201e2142f554ea78fa84af680ae037e0564314afb5678f9507855320fc"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "figure_1_pushobj_gd": {
     "commit": "eec0ba00fbb945c4dc70bd4804035f845b67a463",
     "directory": "research_snapshots/2026-11-07/baseline_metadata",
@@ -77,5 +77,109 @@
         0.47001494
       ]
     }
+  },
+  "figure_1_pusht_gd": {
+    "commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+    "source_path": "research_snapshots/2026-11-08-pusht-gd/gd_results.json",
+    "local_file": "data/revision_assets/pusht_gd_baselines_20261108.json",
+    "source_sha256": "0b46685dd63bbb99da54b2f4118550e02530868b34d6054e44308a1a33f228a2",
+    "planning_seed": 100,
+    "metric": "Six shifted conditions, excluding default T",
+    "physical_step_cap": 150,
+    "methods": {
+      "DINO-WM": {
+        "successes": 114,
+        "episodes": 300,
+        "success_percent": 38.0,
+        "checkpoint_epoch": 3,
+        "physical_steps_per_replan": 25,
+        "max_replans": 6
+      },
+      "LeWM": {
+        "successes": 118,
+        "episodes": 300,
+        "success_percent": 39.33333333333333,
+        "checkpoint_epoch": 10,
+        "physical_steps_per_replan": 5,
+        "max_replans": 30
+      }
+    },
+    "raw_npz_audit": {
+      "dinowm": {
+        "default": {
+          "successes": 25,
+          "episodes": 50,
+          "sha256": "74002a6b17f028025ab263b6eb7544b8b2e7e726bbca6ed2ac1ad6f45985b5d0"
+        },
+        "blur": {
+          "successes": 22,
+          "episodes": 50,
+          "sha256": "5ef6d4e3f39f60e65d8ae8305e6121f6d057ba9c28a5d4196f7fab8f8b13033e"
+        },
+        "snp": {
+          "successes": 4,
+          "episodes": 50,
+          "sha256": "6adcb5b523a25aa9f14868b7726c9afe68b66d58407194888585448d95f3a334"
+        },
+        "dark": {
+          "successes": 25,
+          "episodes": 50,
+          "sha256": "84dd92b9bafe2ebb1d9b0dffd5a486a325e62ed3925c69bed4b56166476cd36b"
+        },
+        "red_agent": {
+          "successes": 22,
+          "episodes": 50,
+          "sha256": "ac969758e8a7aa18c628f47d8c0139868358a592a6647f0ae5827717ee0ac033"
+        },
+        "red_object": {
+          "successes": 18,
+          "episodes": 50,
+          "sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66"
+        },
+        "red_goal": {
+          "successes": 23,
+          "episodes": 50,
+          "sha256": "478389d9a82dcf9f8b45b5d169b6f5588da61c32606ae0555d8fef807b969502"
+        }
+      },
+      "lewm": {
+        "default": {
+          "successes": 32,
+          "episodes": 50,
+          "sha256": "bb6e478b2459d3c6b0968db2521d6347774fbe47ef73a3566a7123b8250eaf45"
+        },
+        "blur": {
+          "successes": 31,
+          "episodes": 50,
+          "sha256": "161c02361757f9edb3634697396604ad5fd99e802411353051d2d14e1822e0ab"
+        },
+        "snp": {
+          "successes": 31,
+          "episodes": 50,
+          "sha256": "bf85fe852eea5a25226f9e523ceb1289b5ea89b711799a6b294ade7f622f7bca"
+        },
+        "dark": {
+          "successes": 29,
+          "episodes": 50,
+          "sha256": "14c73218063d9658e5a23b78c60827478cce5d12806f65cd42782e9beb04b593"
+        },
+        "red_agent": {
+          "successes": 2,
+          "episodes": 50,
+          "sha256": "cd175211d07310b66a418438b35136dda3ffa2dee79d3e79dc28a24007cb916a"
+        },
+        "red_object": {
+          "successes": 8,
+          "episodes": 50,
+          "sha256": "dbab9c88051ef4f111f0defd5f87bc85cf97d85f0bae5a57ff98e6e665293cfe"
+        },
+        "red_goal": {
+          "successes": 17,
+          "episodes": 50,
+          "sha256": "33f8409f0efe30a4acc90a74c4dbb4106bec7729df2b5398e8542a2fafa86519"
+        }
+      }
+    },
+    "verified_episodes": 700
   }
 }

@@ -55,7 +55,9 @@ and original simulator frames. Figure 1 combines the recurring-shift schematic a
 the held-out GD results in one column. SE-JEPA uses the three-chain GD
 mean. DINO-WM and LeWM use the seven-shape PushObj results for seed 2000.
 The PushT panel uses the paired visual evaluation of Frozen, AdaJEPA, and
-SE-JEPA. Methods are ordered by increasing PushObj success. The episode-local
+SE-JEPA, plus the November 8 GD baseline archive: DINO-WM 114/300 (38.00%)
+and LeWM 118/300 (39.33%) across six shifts. All 14 baseline NPZ files were
+checked against the archived hashes and counts. Methods are ordered by increasing PushObj success. The episode-local
 baseline is labeled adaJEPA in the lower chart and One-round adaptive JEPA
 in the upper schematic of Figure 1.
 The complete editable SVG is
@@ -128,3 +130,12 @@ existing manuscript snapshot; the archived Drive qualitative package remains
 at the third pass. The Future work observation about later prediction/behavior
 saturation was provided by the authors and is not presented as a new quantified
 experiment.
+
+## November 8 checkpoint and GD revision
+
+PushObj and PushT AdaJEPA benchmarks use their official released checkpoints;
+`data/checkpoint_audit.json` records the provenance and routed result sources.
+The same-checkpoint ablation is labeled Episodic reset. Rope/granular values
+remain unchanged at the author's request. Figure 5 now uses GD curves and
+Figure 6 marks Success (%) up and Chamfer distance down. The main method has
+five numbered equations, including familiarity and fingerprint similarity.

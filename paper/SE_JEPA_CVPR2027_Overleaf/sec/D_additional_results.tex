@@ -79,7 +79,7 @@ Figure~\mainref{fig:deployment} shows the four-pass learning curves in the main 
 \subsection{Component protocols and learning rates}
 \label{app:component_ablation}
 
-We assign each variant the same initial checkpoint and the same sequence of shapes and goals. The comparison uses the first learning chain for direct weight inheritance and the corresponding chain for the full model. AdaJEPA starts each goal from the common checkpoint. The shared replay variant trains a single slow predictor on stored trajectories. The EMA variant uses an exponential moving average of the fast weights to update a single slow predictor.
+We assign each variant the same initial checkpoint and the same sequence of shapes and goals. The comparison uses the first learning chain for direct weight inheritance and the corresponding chain for the full model. The episodic-reset variant starts each goal from the common checkpoint. The shared replay variant trains a single slow predictor on stored trajectories. The EMA variant uses an exponential moving average of the fast weights to update a single slow predictor.
 
 Table~\mainref{tab:component_ablation} reports the fixed-rate sweep.
 
@@ -98,7 +98,7 @@ Table~\mainref{tab:component_ablation} reports the fixed-rate sweep.
 \end{table}
 
 
-For GD, disabling only the read protection produced identical held-out rollouts to AdaJEPA from the same checkpoint across all 21 test batches. Removing maturity screening instead allows a slow predictor to compete for retrieval earlier. This differs from the familiarity ablations in Table~\ref{tab:familiarity}, which change how the agent handles episodes the pretrained model already predicts well. For context, a second CEM run of the full model on the same learning stream reached 80.19\%, compared with 78.57\% in the original run.
+For GD, disabling only the read protection produced identical held-out rollouts to episodic reset from the same checkpoint across all 21 test batches. Removing maturity screening instead allows a slow predictor to compete for retrieval earlier. This differs from the familiarity ablations in Table~\ref{tab:familiarity}, which change how the agent handles episodes the pretrained model already predicts well. For context, a second CEM run of the full model on the same learning stream reached 80.19\%, compared with 78.57\% in the original run.
 
 On PushT, doubling the slow learning rate from $10^{-4}$ to $2\times10^{-4}$ changes success by $+0.19$ percentage points with GD and $-1.05$ with CEM. These comparisons average three learned states per planner over all seven visual conditions, including the original appearance.
 

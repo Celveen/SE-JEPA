@@ -38,8 +38,10 @@ def draw_planning_efficiency():
         summary = json.loads((D / f'{key}_summary.json').read_text())
         domains = summary['groups']['all']
         # Each domain has equal weight, matching the reported aggregate.
+        # Frozen and AdaJEPA use the released task-specific checkpoints;
+        # see drive_reference/shape_readme.txt and visual_protocol.json.
         for offset, method in enumerate(methods):
-            y = np.mean([summary['curves']['CEM'][d][method]['mean'] for d in domains], axis=0)
+            y = np.mean([summary['curves']['GD'][d][method]['mean'] for d in domains], axis=0)
             ax.plot(np.arange(1, len(y) + 1), y, label=names[method],
                     lw=2.15 if method == 'ours' else 1.12,
                     ms=3.8 if method == 'ours' else 3.1, mew=.85,

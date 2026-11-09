@@ -1,3 +1,5 @@
+**2026-11-08 更新**：图1补齐DINO-WM/LeWM的PushT GD六偏移均值38.00/39.33，14份NPZ逐项核验。PushObj/PushT主比较使用AdaJEPA官方权重，证据见data/checkpoint_audit.json；同起点消融称Episodic reset。按作者澄清，rope/granular不替换。图5改用官方基线GD曲线；图6指标标升降箭头；正文公式增至5个。
+
 # 作者交接说明（不进入论文 PDF）
 
 **正文证据与图 1 修订（2026-11-07）**：图 1 按成功率升序排列，SE-JEPA 放在最下面，上方结构示意中的 episodic baseline 显示为 One-round adaptive JEPA，下方柱状图按作者最新要求标为 adaJEPA。正文表 2 报告 100 个匹配目标的固定累积系数与朴素继承；正文表 3 报告同起点 1,050 个目标的组件及固定慢学习率消融。熟悉度门控表移至附录 D。正文第 3.1 节给出各 2,449 对更新指纹的余弦统计。正文第 4.4 节给出 91 个新绳索实例的配对 bootstrap 区间，原始 CSV 和参数见 data/reporting_overrides.json。按作者本轮要求，正文和附录省去 CEM 重跑说明。

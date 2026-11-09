@@ -88,7 +88,7 @@ def draw_progress(data):
         ax.set(xticks=range(1, 6), ylim=(35, 85), yticks=[40, 60, 80],
                xlabel='Deployment round')
         ax.set_title(title, fontsize=7.6, pad=5)
-    axes[0, 0].set_ylabel('Success (%)', fontsize=7.2)
+    axes[0, 0].set_ylabel('Success (%) ↑', fontsize=7.2)
     handles, labels = axes[0, 0].get_legend_handles_labels()
     fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(.55, 1.045),
                title='SE-JEPA', title_fontproperties={'weight': 'bold', 'size': 7.2},
@@ -108,7 +108,7 @@ def draw_progress(data):
         ax.set_title(title, fontsize=7.6, pad=5)
         ax.set_ylim((.16, .70) if task == 'rope' else (.18, .33))
         ax.set_yticks([.2, .4, .6] if task == 'rope' else [.20, .25, .30])
-    axes[1, 0].set_ylabel('Chamfer distance', fontsize=7.2)
+    axes[1, 0].set_ylabel('Chamfer distance ↓', fontsize=7.2)
     for ax in axes.flat:
         ax.tick_params(labelsize=7, length=2.5)
         ax.xaxis.label.set_size(7.1)
