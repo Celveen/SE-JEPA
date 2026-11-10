@@ -3,7 +3,7 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-\ours makes deployment experience reusable through selective trajectory storage, replay, and validated predictor retrieval. With task-trained ResNet models, it improves held-out success and replan efficiency under GD and CEM, and continues learning across 14 recurring shape and appearance domains with one memory. With DINO-WM, slow consolidation reduces deformable goal error, and a rope predictor trained in one pass transfers to new instances.
+\ours reuses deployment experience through selective trajectory storage, replay, and validated retrieval. It improves held-out planning with GD and CEM and learns across 14 recurring shape and appearance domains with one memory. Consolidation also reduces deformable goal error with DINO-WM, and a rope predictor trained in one pass transfers to new instances.
 
 \paragraph{Future work.}
-Longer histories, diagnostic pushes, and better near-goal action ranking may improve planning.
+The maturity gate could better balance premature retrieval against delayed reuse by calibrating eligibility to uncertainty and planning outcomes. Longer histories and diagnostic pushes could distinguish similar dynamics, while better near-goal action ranking could turn prediction gains into completed goals. Longer deployment streams would test memory scalability.

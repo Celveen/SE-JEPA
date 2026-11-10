@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "figures": 42,
+  "combined_pdf_pages": 42,
+  "unique_test_evaluations": 53550,
+  "unique_conditions": 51,
+  "summary_records": 57,
+  "derived_three_chain_pooled_records": 6,
+  "raw_test_npz": 966,
+  "CEM_experiment_rows": 0,
+  "families": {
+    "shape": {
+      "unique_test_evaluations": 21000,
+      "unique_conditions": 20,
+      "raw_npz": 315
+    },
+    "visual": {
+      "unique_test_evaluations": 32550,
+      "unique_conditions": 31,
+      "raw_npz": 651
+    }
+  },
+  "five_panel_figures": 3,
+  "six_panel_figures": 39,
+  "source_checks": "All 51 unique GD conditions match retained episode success counts and mean MPC.",
+  "known_limit": "Historical shape Ours and official reference baselines retain per-episode CSV without complete original actions/state tensors."
+}

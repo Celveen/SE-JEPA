@@ -12,7 +12,7 @@ image links, SVG conversion, or custom fonts are required by Overleaf.
 
 ## Source organization
 
-- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in main Table 2. Section 4.1 describes the evaluation setup; Section 4.5 compares the read and write protections and tests how to carry experience between episodes. The main text includes the same-checkpoint component comparison. Main Table 3 reports the same-checkpoint components and fixed slow learning rates. Appendix D gives the familiarity ablation and protocol details.
+- `sec/`: abstract, main text, AI-use statement, and appendices. Section 3.1 motivates cross-episode replay, with the paired weight-inheritance diagnostic in main Table 2. Section 4.1 describes the evaluation setup; Section 4.6 compares the read and write protections and tests how to carry experience between episodes. The main text includes the same-checkpoint component comparison. Main Table 3 reports the same-checkpoint components and fixed slow learning rates. Appendix D gives the familiarity ablation and protocol details.
 - `figures/`: ready-to-compile figures; author-supplied vector originals are
   preserved in `figures/source/`.
 - `tables/`: generated numerical rows.
@@ -177,7 +177,7 @@ contains all plot/table values and source checksums. Reproduce it using
 `figures/source/mixed14_author_report.pdf`; raw experiment archives and model
 weights are not added to the Overleaf bundle.
 
-The combined paper has 19 pages, including eight pages of main text. Appendix E
+The combined paper has 20 pages, including eight pages of main text. Appendix E
 restores the reference panels' full narrative, explaining successful replans,
 final CD, action-replay provenance and the interpretation of prediction losses.
 
@@ -247,3 +247,22 @@ mean cosine 0.018, matched-goal success 62% to 48%, paired held-out gains of
 15.41–18.74 percentage points and maximum CD reduction 48.58%. These round to
 the supplied claims; no wording or numbers were changed. See
 `data/abstract_results_audit.json` for exact values and source checksums.
+
+
+## 2026-11-10 GD ablation supplement
+Table 3 now covers PushObj chain 1 and PushT chains 1/2, including retention,
+maturity/familiarity gates and fixed slow learning rates. Appendix D adds per-chain
+success/replans and three-chain inheritance comparisons. All 51 GD conditions
+(53,550 evaluations, including repeated test targets) were recomputed from retained
+episode CSVs; 966 available raw NPZ batches were checked against the source hashes
+and CSV records. Visual initial/goal states agree in all 21 seed/domain groups.
+Historical PushObj full-model CSVs lack original state tensors; this audit limit is
+stated in Appendix D. The shared visual episodic-reset evaluation is not counted
+as an independent repeat for each learning chain. Data and audit:
+`data/gd_ablation_20261110/`; reproduction: `tools/build_gd_ablation.py`.
+
+The default remains the original 1e-4 slow learning rate and maturity gate. The
+main text discusses the observed gate trade-off; future work proposes calibrating
+eligibility to uncertainty and planning outcomes. The main paper occupies 8 pages,
+with about 1.5 body-text lines left below the final paragraph. The complete PDF is
+20 pages. Official CVPR style, geometry and fonts are unchanged.

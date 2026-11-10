@@ -1,0 +1,17 @@
+Full \ours & 81.43 / 11.37 & 74.38 / 13.54 & 76.57 / 12.93 & 76.10 / 13.17 \\
+Episodic reset & 76.95 / 12.54 & 65.90 / 15.47 & 65.90 / 15.47 & 65.90 / 15.47 \\
+Inherit fast weights & 64.67 / 16.12 & 29.14 / 24.82 & 40.19 / 22.33 & 25.81 / 25.38 \\
+Shared predictor: EMA & 75.71 / 12.84 & 66.10 / 15.42 & 66.29 / 15.30 & \missing \\
+Shared predictor: replay & 81.24 / 11.41 & 76.19 / 13.11 & 75.14 / 13.26 & \missing \\
+No maturity screening & 80.86 / 11.46 & 76.95 / 12.90 & 78.10 / 12.63 & \missing \\
+No familiar-read protection & 76.95 / 12.54 & 74.67 / 13.43 & 76.19 / 13.16 & \missing \\
+No familiar-write protection & 79.43 / 11.76 & 71.62 / 13.98 & 73.81 / 13.66 & \missing \\
+Neither familiarity protection & 83.14 / 10.90 & 72.76 / 13.87 & 73.14 / 13.47 & 71.05 / 14.30 \\
+\midrule
+\multicolumn{5}{@{}l}{Full \ours: fixed slow learning rate}\\
+$5\times10^{-5}$ & 79.62 / 11.79 & 75.24 / 13.36 & 73.05 / 13.65 & \missing \\
+$10^{-4}$ (default) & 81.43 / 11.37 & 74.38 / 13.54 & 76.57 / 12.93 & 76.10 / 13.17 \\
+$2\times10^{-4}$ & 82.38 / 11.26 & 74.86 / 13.35 & 76.86 / 12.86 & 75.90 / 13.07 \\
+$3\times10^{-4}$ & 80.57 / 11.72 & 74.29 / 13.66 & 78.10 / 12.78 & \missing \\
+$5\times10^{-4}$ & 78.38 / 12.40 & 71.62 / 14.29 & 74.38 / 13.53 & \missing \\
+$10^{-2}$ & 76.95 / 12.54 & \missing & \missing & \missing \\

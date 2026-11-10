@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-09T21:06:07-08:00",
+  "checked_at": "2026-11-09T21:28:17-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
-    "pages": 19,
+    "pages": 20,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "85a2f16e4d1b6cf9de8646dca6aff53d0b273e018bf46a0f465a8db984024cf9",
+    "pdf_sha256": "71179f1b22dbf63f375ccd26273e4caeef15bf4cefdb33da71ef592ee9d2218e",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -29,14 +29,20 @@
     "all_main_floats_precede_conclusion": true,
     "familiarity_ablation_page": 17,
     "component_ablation_page": 8,
-    "inheritance_ablation_page": 7
+    "inheritance_ablation_page": 7,
+    "last_page_trailing_blank_lines": 1.43,
+    "last_page_body_bottom_y_points": {
+      "left": 713.402099609375,
+      "right": 696.3313598632812
+    },
+    "last_page_blank_measurement": "Right-column final body ink relative to full left-column body ink, divided by the unchanged 12pt baseline."
   },
   "supplement": {
-    "pages": 10,
+    "pages": 11,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "fa792f2b665d696f9a6893fddf44e97146ea80766b5a13bffd1b7fd27b270b55"
+    "pdf_sha256": "c3afb5bc07701c2598a3b48199a4e9b1b23184bef42dd070af859ea18bb623be"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -194,20 +200,20 @@
     "figures": {
       "fig:full_shape": {
         "number": 10,
-        "page": 18
+        "page": 19
       },
       "fig:full_visual": {
         "number": 11,
-        "page": 18
+        "page": 19
       },
       "fig:deform_reference": {
         "number": 12,
-        "page": 19
+        "page": 20
       }
     },
     "rendered_pages_checked": [
-      18,
-      19
+      19,
+      20
     ],
     "removed_final_figure_number": 13
   },
@@ -241,7 +247,7 @@
       "placement": "One row below the three learning panels"
     }
   },
-  "clean_upload_files": 47,
+  "clean_upload_files": 48,
   "pushobj_cem_main": {
     "source": "data/pushobj_cem_online/audit.json",
     "protocol": "Fifth-round online performance",
@@ -287,5 +293,30 @@
     ]
   },
   "abstract_author_source": "data/drive_reference/abstract1.md",
-  "abstract_numeric_audit": "data/abstract_results_audit.json"
+  "abstract_numeric_audit": "data/abstract_results_audit.json",
+  "gd_ablation_supplement": {
+    "audit": "data/gd_ablation_20261110/audit.json",
+    "source_audit": "data/gd_ablation_20261110/source_audit.json",
+    "unique_conditions": 51,
+    "evaluations": 53550,
+    "raw_npz_verified": 966,
+    "visual_state_pair_groups": 21,
+    "main_table_columns": [
+      "PushObj C1",
+      "PushT C1",
+      "PushT C2"
+    ],
+    "appendix_tables": {
+      "tab:gd_components_full": {
+        "number": "12",
+        "page": 17
+      },
+      "tab:gd_inheritance_chains": {
+        "number": "13",
+        "page": 17
+      }
+    },
+    "official_benchmark_and_abstract_unchanged": true,
+    "future_work_maturity_calibration_added": true
+  }
 }

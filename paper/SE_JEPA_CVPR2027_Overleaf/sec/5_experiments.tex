@@ -70,29 +70,35 @@ Near-orthogonal update directions motivate testing whether a fixed fraction of e
   \end{tabular}
 \end{table}
 
-\paragraph{Replay and fixed learning rates.}
-Table~\ref{tab:component_ablation} compares retention mechanisms on the seven-shape stream. Each variant starts from the same backbone checkpoint and is tested on the same 1,050 held-out goals. Direct weight inheritance reaches 64.67\%, compared with 76.95\% for episodic reset and 81.43\% for the full model. A shared slow predictor trained by replay reaches 81.24\%, exceeding fast-weight averaging by 5.52 points. The gap is concentrated on the unseen I shape, where replay solves 44 additional goals out of 150. The four pretraining shapes differ by one solved goal.
+\paragraph{Replay rather than parameter averaging.}
+Table~\ref{tab:component_ablation} tests corresponding five-round learning streams from the same task-specific checkpoint, with 1,050 held-out evaluations per state. PushObj uses one chain; PushT repeats the components in two. Episodic reset isolates memory under this common initialization; the main benchmark retains the official AdaJEPA checkpoint.
+
+Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and by 10.10 and 8.86 points on the two PushT chains. On PushObj, replay solves 44 additional unseen-I goals out of 150, while the four pretraining shapes differ by only one solved goal. The full model also exceeds episodic reset in every comparison, supporting retention of transitions rather than episode-specific weight corrections.
 
 \begin{table}[!ht]
   \centering
-  \caption{\textbf{Retention mechanisms and fixed slow learning rates.} GD on 1,050 matched held-out PushObj goals. Variants share the initial checkpoint and learning stream, with one learned state each.}
+  \caption{\textbf{GD component and learning-rate ablations.} Success (\%) on seven domains per task, 1,050 held-out evaluations per cell. C1/C2 denote learning chains. The PushT reset score is one shared evaluation, not an independent run per column. Appendix~D gives replans and additional chains.}
   \label{tab:component_ablation}
   \small
-  \setlength{\tabcolsep}{4pt}
-  \begin{tabular}{@{}lrr@{}}
+  \setlength{\tabcolsep}{2.5pt}
+  \begin{tabular}{@{}lrrr@{}}
     \toprule
-    Method or slow learning rate & Success (\%) & Replans\\
+    & PushObj & \multicolumn{2}{c}{PushT}\\
+    \cmidrule(lr){3-4}
+    Variant & C1 & C1 & C2\\
     \midrule
-    \inputrows{tables/pushobj_component_ablation.tex}
-    \midrule
-    \multicolumn{3}{@{}l}{Full \ours with a fixed slow learning rate}\\
-    \inputrows{tables/pushobj_learning_rates.tex}
+    \inputrows{tables/gd_ablation_main.tex}
     \bottomrule
   \end{tabular}
 \end{table}
 
-The fixed-rate sweep reaches 79.62--82.38\% for learning rates from $5\times10^{-5}$ to $3\times10^{-4}$. At $10^{-2}$, success falls to 76.95\%. The deployed system uses $10^{-4}$. These held-out results complement the online accumulation diagnostic above. Appendix~D specifies the per-variant protocols and the visual-task learning-rate comparison.
+\paragraph{Inheritance across repeated learning chains.}
+Across three chains, inheritance averages 65.94\% success versus 81.59\% for \ours on PushObj, and 31.71\% versus 75.68\% on PushT. The full model leads in every chain. Mean replans, including failures, fall from 15.84 to 11.30 on shapes and from 24.18 to 13.21 on visual conditions (Appendix~D). The advantage thus persists across learned states and improves both completion rate and interaction cost.
 
-\paragraph{Reading and writing on familiar episodes.}
-The full model normally uses the pretrained predictor on familiar episodes and skips their direct replay write. We remove the read and write protections separately and together, retaining the same maturity criterion (Appendix~D). With GD, removing either protection alone lowers success on this stream. Removing both reaches 83.14\% with GD and 79.62\% with CEM. This comparison uses one learning chain per planner.
+\paragraph{Fixed slow learning rates.}
+Rates from $5\times10^{-5}$ to $3\times10^{-4}$ give 79.62--82.38\% on PushObj and 73.05--78.10\% across the two PushT chains. A rate of $5\times10^{-4}$ reduces success in all three comparisons relative to the default $10^{-4}$. Doubling the default changes the three-chain visual mean by only $+0.19$ points. The useful range thus extends beyond one tuned value; faster consolidation does not consistently improve planning.
 
+\paragraph{Maturity and familiarity gates.}
+Removing maturity screening lowers PushObj success from 81.43\% to 80.86\%, but raises PushT success from 74.38\% to 76.95\% and from 76.57\% to 78.10\%. A prediction-error gate may delay useful retrieval as well as filter unreliable predictors, motivating better eligibility calibration.
+
+Familiarity protection instead controls whether familiar episodes use the pretrained base and skip direct replay writes. Disabling either protection alone lowers success in all three comparisons. Disabling both raises PushObj success to 83.14\%, but lowers the three-chain PushT mean from 75.68\% to 72.32\%, with every visual chain declining. These effects depend on the shift family.

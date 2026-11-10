@@ -122,13 +122,48 @@ Figure~\mainref{fig:deployment} shows the four-pass learning curves in the main 
 \subsection{Component protocols and learning rates}
 \label{app:component_ablation}
 
-We assign each variant the same initial checkpoint and the same sequence of shapes and goals. The comparison uses the first learning chain for direct weight inheritance and the corresponding chain for the full model. The episodic-reset variant starts each goal from the common checkpoint. The shared replay variant trains a single slow predictor on stored trajectories. The EMA variant uses an exponential moving average of the fast weights to update a single slow predictor.
+All new component evaluations use GD. Within each task, variants share the initial checkpoint and the five-round learning protocol. Every retained state is the endpoint of its own chain, without replacing it by the best endpoint from another chain. Testing uses seeds 2000, 2100, and 2200, with 50 episodes per seed and domain: 1,050 evaluations for each method and chain. PushT includes the original appearance and six shifts, so these seven-condition means differ from the Shift column in Table~\mainref{tab:main}. Replans average over all episodes, counting failures as 30.
 
-Table~\mainref{tab:component_ablation} reports the fixed-rate sweep.
+The episodic-reset ablation starts each goal from the same checkpoint as the corresponding full model; it is distinct from the official-checkpoint benchmark. The shared-replay variant trains one slow predictor on stored trajectories, while EMA averages fast parameters with mixing coefficient $\alpha=10^{-4}$. This coefficient is not a gradient learning rate. Removing maturity screening changes eligibility for retrieval but retains error-based predictor selection. The familiarity variants separately remove the read restriction, the direct-write restriction, or both, while keeping the maturity criterion.
+
+\begin{table*}[t]
+ \centering
+ \caption{\textbf{Complete GD component results.} Each entry is success (\%) / mean MPC replans over 1,050 held-out evaluations. Each column preserves its own fifth-round endpoint. C1--C3 are learning chains; dashes denote unrun configurations. The single PushT episodic-reset evaluation is reused across columns and is not counted as three independent runs.}
+ \label{tab:gd_components_full}
+ \small
+ \setlength{\tabcolsep}{5pt}
+ \begin{tabular}{@{}lrrrr@{}}
+ \toprule
+ & PushObj & \multicolumn{3}{c}{PushT}\\
+ \cmidrule(lr){3-5}
+ Variant & C1 & C1 & C2 & C3\\
+ \midrule
+ \inputrows{tables/gd_ablation_detailed.tex}
+ \bottomrule
+ \end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+ \centering
+ \caption{\textbf{Three-chain check of direct weight inheritance.} Success is measured on 1,050 held-out evaluations per chain. The mean combines 3,150 evaluations of repeated test targets, not 3,150 distinct physical scenes. Replans include failures.}
+ \label{tab:gd_inheritance_chains}
+ \small
+ \begin{tabular}{@{}llrrrrr@{}}
+ \toprule
+ Task & Method & C1 & C2 & C3 & Mean success $\uparrow$ & Mean replans $\downarrow$\\
+ \midrule
+ \inputrows{tables/gd_inheritance_chains.tex}
+ \bottomrule
+ \end{tabular}
+\end{table*}
+
+Tables~\ref{tab:gd_components_full} and \ref{tab:gd_inheritance_chains} retain all available chains rather than averaging different task families into an artificial replicate. Most visual variants have two learned states; the full model, direct inheritance, doubled learning rate, and removal of both familiarity protections have three. The full model outperforms inheritance in every chain on both tasks. On PushT, the three-chain mean is 75.68\% for the default and 75.87\% for the doubled learning rate, while removal of both familiarity protections reduces it to 72.32\%. The corresponding mean replans are 13.21, 13.09, and 13.88.
+
+The retained episode records reproduce all 51 unique GD evaluation conditions in the supplied archive. Available raw visual initial and goal states agree across methods for each seed and condition. Historical full-model PushObj records retain episode outcomes but not complete state tensors, so their physical-state pairing cannot be independently rechecked from those records alone. Learning-curve measurements are online outcomes and are kept separate from these held-out evaluations. The historical PushObj $10^{-2}$ run is included without implying that a new run or a visual counterpart was performed.
 
 \begin{table}[!ht]
   \centering
-  \caption{Effect of familiarity protection on PushObj success (\%). Each run uses the same five-round learning stream and 1,050 held-out goals across seven shapes. Dashes indicate configurations with no reported test.}
+  \caption{Effect of familiarity protection on PushObj success (\%). Each run uses the same five-round learning stream and 1,050 held-out evaluations across seven shapes. Dashes indicate configurations with no reported test.}
   \label{tab:familiarity}
   \small
   \begin{tabular}{@{}lrr@{}}
@@ -140,10 +175,7 @@ Table~\mainref{tab:component_ablation} reports the fixed-rate sweep.
   \end{tabular}
 \end{table}
 
-
-For GD, disabling only the read protection produced identical held-out rollouts to episodic reset from the same checkpoint across all 21 test batches. Removing maturity screening instead allows a slow predictor to compete for retrieval earlier. This differs from the familiarity ablations in Table~\ref{tab:familiarity}, which change how the agent handles episodes the pretrained model already predicts well. For context, a second CEM run of the full model on the same learning stream reached 80.19\%, compared with 78.57\% in the original run.
-
-On PushT, doubling the slow learning rate from $10^{-4}$ to $2\times10^{-4}$ changes success by $+0.19$ percentage points with GD and $-1.05$ with CEM. These comparisons average three learned states per planner over all seven visual conditions, including the original appearance.
+For GD, disabling only familiar-read protection produces the same held-out outcomes as episodic reset across all 21 PushObj test batches. The GD visual results in Table~\ref{tab:gd_components_full} show that familiarity and maturity screening have distinct effects: the former protects familiar episodes, while the latter controls when learned predictors can compete for retrieval. The CEM familiarity results remain in Table~\ref{tab:familiarity}; a second full-model CEM run on the same learning stream reached 80.19\%, compared with 78.57\% in the original run. Doubling the visual slow learning rate changes three-state mean success by $-1.05$ points with CEM.
 
 \subsection{Transferring fast weights across goals}
 We tested whether the parameter update from one episode helps on the next. Let $s_e$ be the offset from the pretrained weights at the start of episode $e$, and $\Delta_e$ the fast update in that episode. We set $s_{e+1}=s_e+w\Delta_e$, where $w=0$ resets to the pretrained model and $w=1$ retains the full update. Each variant sees the same 100 PushObj goals in five blocks of 20 (I, square, T, I, square). Keeping the full update loses more goals than it gains relative to reset (Table~\mainref{tab:inheritance}, two-sided exact McNemar $p=0.029$). Smaller weights give success rates closer to reset.

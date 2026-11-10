@@ -3,7 +3,7 @@
 This directory contains the CVPR-format review manuscript and its Overleaf source.
 
 - [Combined paper and appendix (PDF)](main.pdf)
-- [Clean Overleaf upload archive (47 files)](SE_JEPA_CVPR2027_Overleaf_Clean.zip)
+- [Clean Overleaf upload archive (48 files)](SE_JEPA_CVPR2027_Overleaf_Clean.zip)
 - [Full research source archive with data and scripts](SE_JEPA_CVPR2027_Overleaf.zip)
 - [Figure 1 combined editable SVG, original artwork, chart data and rebuilding scripts](SE_JEPA_Figure1_Source.zip)
 - [Editable source](SE_JEPA_CVPR2027_Overleaf/main.tex)
@@ -19,7 +19,7 @@ The revised layout places the main table on page 5 and all main result figures
 before Conclusion on page 8. Figure 7 shows the goal-success gains for each shape and visual shift in a
 single-column, vertically stacked layout. The appendix adds two complete
 rope/granular rollout examples from the original Drive PDFs; the combined
-manuscript has 19 pages, including eight main-text pages. The bibliography contains 42 cited references;
+manuscript has 20 pages, including eight main-text pages. The bibliography contains 42 cited references;
 Appendix A records the author-supplied 8-GPU RTX 5090 and A100 compute systems.
 
 The backbone discussion distinguishes task-trained ResNet models on PushObj/PushT
@@ -37,7 +37,7 @@ and AdaJEPA as horizontal references. Overall SE-JEPA success increases from
 repeated targets and the baseline initialization differences.
 Appendix E includes all four original reference panels and their explanatory
 text. The final extra deformable figure has been removed at the author’s request. The original loss curves and
-notes are preserved. The clean Overleaf archive contains 47 files and 13 figures.
+notes are preserved. The clean Overleaf archive contains 48 files and 13 figures.
 
 The main-table PushObj CEM row is 80.4% All, 73.1% Unseen, and 12.99 replans,
 from the selected three fifth-round online streams. Paired post-learning
@@ -64,3 +64,22 @@ The abstract now uses the author’s `abstract1.md` verbatim. Its quantitative
 claims were checked against the paired held-out comparisons, accumulation
 diagnostic and fourth-pass deformable results; see `data/abstract_results_audit.json`.
 Appendix B briefly explains DINO-WM PushT’s Steps conversion (4.41 × 5 = 22.05).
+
+
+## 2026-11-10 GD ablation supplement
+Table 3 now covers PushObj chain 1 and PushT chains 1/2, including retention,
+maturity/familiarity gates and fixed slow learning rates. Appendix D adds per-chain
+success/replans and three-chain inheritance comparisons. All 51 GD conditions
+(53,550 evaluations, including repeated test targets) were recomputed from retained
+episode CSVs; 966 available raw NPZ batches were checked against the source hashes
+and CSV records. Visual initial/goal states agree in all 21 seed/domain groups.
+Historical PushObj full-model CSVs lack original state tensors; this audit limit is
+stated in Appendix D. The shared visual episodic-reset evaluation is not counted
+as an independent repeat for each learning chain. Data and audit:
+`data/gd_ablation_20261110/`; reproduction: `tools/build_gd_ablation.py`.
+
+The default remains the original 1e-4 slow learning rate and maturity gate. The
+main text discusses the observed gate trade-off; future work proposes calibrating
+eligibility to uncertainty and planning outcomes. The main paper occupies 8 pages,
+with about 1.5 body-text lines left below the final paragraph. The complete PDF is
+20 pages. Official CVPR style, geometry and fonts are unchanged.
