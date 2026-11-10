@@ -1,0 +1,9 @@
+{
+  "original_index": 31,
+  "environment_seed": 3101,
+  "target_pair_float32_sha256": "217741a1bf87c56389aa1628fe7e2db26581c48d4d24498a0ddc7813b1fa8824",
+  "states_exact": true,
+  "observation_pixels_exact": true,
+  "start_pixels_match_paper": true,
+  "goal_pixels_match_paper": true
+}

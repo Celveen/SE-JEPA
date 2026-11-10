@@ -1,0 +1,205 @@
+{
+  "pusht": {
+    "epoch": 3,
+    "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+    "controller": {
+      "objective": "last",
+      "physical_steps_per_replan": 25,
+      "max_replans": 6,
+      "max_physical_steps": 150
+    },
+    "by_planner": {
+      "gd": {
+        "episodes": 350,
+        "conditions": {
+          "default": {
+            "episodes": 50,
+            "successes": 25,
+            "success_rate": 0.5,
+            "mean_mpc_replans": 3.58,
+            "mean_environment_actions": 89.5
+          },
+          "blur": {
+            "episodes": 50,
+            "successes": 22,
+            "success_rate": 0.44,
+            "mean_mpc_replans": 3.9,
+            "mean_environment_actions": 97.5
+          },
+          "snp": {
+            "episodes": 50,
+            "successes": 4,
+            "success_rate": 0.08,
+            "mean_mpc_replans": 5.68,
+            "mean_environment_actions": 142.0
+          },
+          "dark": {
+            "episodes": 50,
+            "successes": 25,
+            "success_rate": 0.5,
+            "mean_mpc_replans": 3.58,
+            "mean_environment_actions": 89.5
+          },
+          "red_agent": {
+            "episodes": 50,
+            "successes": 22,
+            "success_rate": 0.44,
+            "mean_mpc_replans": 3.86,
+            "mean_environment_actions": 96.5
+          },
+          "red_object": {
+            "episodes": 50,
+            "successes": 18,
+            "success_rate": 0.36,
+            "mean_mpc_replans": 4.28,
+            "mean_environment_actions": 107.0
+          },
+          "red_goal": {
+            "episodes": 50,
+            "successes": 23,
+            "success_rate": 0.46,
+            "mean_mpc_replans": 3.82,
+            "mean_environment_actions": 95.5
+          }
+        },
+        "mean_success_rate": 0.39714285714285713,
+        "color_success_rate": 0.42,
+        "six_shift_success_rate": 0.37999999999999995
+      },
+      "cem": {
+        "episodes": 350,
+        "conditions": {
+          "default": {
+            "episodes": 50,
+            "successes": 24,
+            "success_rate": 0.48,
+            "mean_mpc_replans": 3.68,
+            "mean_environment_actions": 92.0
+          },
+          "blur": {
+            "episodes": 50,
+            "successes": 20,
+            "success_rate": 0.4,
+            "mean_mpc_replans": 4.1,
+            "mean_environment_actions": 102.5
+          },
+          "snp": {
+            "episodes": 50,
+            "successes": 1,
+            "success_rate": 0.02,
+            "mean_mpc_replans": 5.9,
+            "mean_environment_actions": 147.5
+          },
+          "dark": {
+            "episodes": 50,
+            "successes": 22,
+            "success_rate": 0.44,
+            "mean_mpc_replans": 3.84,
+            "mean_environment_actions": 96.0
+          },
+          "red_agent": {
+            "episodes": 50,
+            "successes": 20,
+            "success_rate": 0.4,
+            "mean_mpc_replans": 4.04,
+            "mean_environment_actions": 101.0
+          },
+          "red_object": {
+            "episodes": 50,
+            "successes": 12,
+            "success_rate": 0.24,
+            "mean_mpc_replans": 4.94,
+            "mean_environment_actions": 123.5
+          },
+          "red_goal": {
+            "episodes": 50,
+            "successes": 24,
+            "success_rate": 0.48,
+            "mean_mpc_replans": 3.64,
+            "mean_environment_actions": 91.0
+          }
+        },
+        "mean_success_rate": 0.3514285714285714,
+        "color_success_rate": 0.37333333333333335,
+        "six_shift_success_rate": 0.33
+      }
+    },
+    "training_shapes": [
+      "T"
+    ],
+    "note": "Same fixed 50 targets across seven conditions; color marker is a reference anchor."
+  },
+  "pushobj": {
+    "epoch": 3,
+    "checkpoint_sha256": "4a7166bc75ff2924cb140845ea1ebc785f2f0def4a9c3e47b55fb9104c85b0c0",
+    "controller": {
+      "objective": "last",
+      "physical_steps_per_replan": 25,
+      "max_replans": 6,
+      "max_physical_steps": 150
+    },
+    "by_planner": {
+      "gd": {
+        "episodes": 150,
+        "conditions": {
+          "I": {
+            "episodes": 50,
+            "successes": 8,
+            "success_rate": 0.16,
+            "mean_mpc_replans": 5.24,
+            "mean_environment_actions": 131.0
+          },
+          "square": {
+            "episodes": 50,
+            "successes": 12,
+            "success_rate": 0.24,
+            "mean_mpc_replans": 4.88,
+            "mean_environment_actions": 122.0
+          },
+          "small_tee": {
+            "episodes": 50,
+            "successes": 28,
+            "success_rate": 0.56,
+            "mean_mpc_replans": 3.28,
+            "mean_environment_actions": 82.0
+          }
+        },
+        "mean_success_rate": 0.32
+      },
+      "cem": {
+        "episodes": 150,
+        "conditions": {
+          "I": {
+            "episodes": 50,
+            "successes": 12,
+            "success_rate": 0.24,
+            "mean_mpc_replans": 4.9,
+            "mean_environment_actions": 122.5
+          },
+          "square": {
+            "episodes": 50,
+            "successes": 20,
+            "success_rate": 0.4,
+            "mean_mpc_replans": 4.16,
+            "mean_environment_actions": 104.0
+          },
+          "small_tee": {
+            "episodes": 50,
+            "successes": 30,
+            "success_rate": 0.6,
+            "mean_mpc_replans": 3.1,
+            "mean_environment_actions": 77.5
+          }
+        },
+        "mean_success_rate": 0.41333333333333333
+      }
+    },
+    "training_shapes": [
+      "I",
+      "square",
+      "Z",
+      "T"
+    ],
+    "note": "PushObj I and square are training-seen; only small_tee is unseen."
+  }
+}

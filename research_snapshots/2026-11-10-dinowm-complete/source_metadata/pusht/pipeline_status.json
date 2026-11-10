@@ -1,0 +1,310 @@
+{
+  "task": "pusht",
+  "pid": 1864467,
+  "gpus": [
+    "6",
+    "7"
+  ],
+  "stage": "complete",
+  "dataset": "/data/zjc/adaJEPA/CL-JEPA/data/dinowm_pusht_random16k_20261106",
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e3_20261106",
+  "code_snapshot": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/code",
+  "epochs": 3,
+  "evaluation_epoch": 3,
+  "evaluation_only": true,
+  "training_trajectories": 16000,
+  "validation_trajectories": 1600,
+  "max_physical_steps": 150,
+  "physical_steps_per_replan": 25,
+  "max_replans": 6,
+  "planners": [
+    "gd",
+    "cem"
+  ],
+  "episodes_per_planner": 350,
+  "planned_episodes": 700,
+  "evaluation_plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+  "started": "2026-11-06T09:45:06+00:00",
+  "jobs": {
+    "gd/blur": {
+      "status": "complete",
+      "pid": 2844484,
+      "gpu": "7",
+      "started": "2026-11-06T09:45:07+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:17:11+00:00"
+    },
+    "gd/default": {
+      "status": "complete",
+      "pid": 2844485,
+      "gpu": "6",
+      "started": "2026-11-06T09:45:07+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:17:11+00:00"
+    },
+    "gd/snp": {
+      "status": "complete",
+      "pid": 2859187,
+      "gpu": "6",
+      "started": "2026-11-06T10:17:11+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:49:24+00:00"
+    },
+    "gd/dark": {
+      "status": "complete",
+      "pid": 2859193,
+      "gpu": "7",
+      "started": "2026-11-06T10:17:11+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T10:48:55+00:00"
+    },
+    "gd/red_object": {
+      "status": "complete",
+      "pid": 2870912,
+      "gpu": "7",
+      "started": "2026-11-06T10:48:55+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:20:35+00:00"
+    },
+    "gd/red_agent": {
+      "status": "complete",
+      "pid": 2871197,
+      "gpu": "6",
+      "started": "2026-11-06T10:49:24+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:21:36+00:00"
+    },
+    "cem/default": {
+      "status": "complete",
+      "pid": 2881488,
+      "gpu": "7",
+      "started": "2026-11-06T11:20:35+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T17:56:50+00:00"
+    },
+    "gd/red_goal": {
+      "status": "complete",
+      "pid": 2882081,
+      "gpu": "6",
+      "started": "2026-11-06T11:21:36+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T11:53:41+00:00"
+    },
+    "cem/blur": {
+      "status": "complete",
+      "pid": 2896135,
+      "gpu": "6",
+      "started": "2026-11-06T11:53:41+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-06T18:33:13+00:00"
+    },
+    "cem/snp": {
+      "status": "complete",
+      "pid": 3009641,
+      "gpu": "7",
+      "started": "2026-11-06T17:56:50+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T00:32:51+00:00"
+    },
+    "cem/dark": {
+      "status": "complete",
+      "pid": 3017245,
+      "gpu": "6",
+      "started": "2026-11-06T18:33:13+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T01:12:25+00:00"
+    },
+    "cem/red_agent": {
+      "status": "complete",
+      "pid": 3087673,
+      "gpu": "7",
+      "started": "2026-11-07T00:32:51+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T07:08:58+00:00"
+    },
+    "cem/red_object": {
+      "status": "complete",
+      "pid": 3095193,
+      "gpu": "6",
+      "started": "2026-11-07T01:12:25+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T07:51:11+00:00"
+    },
+    "cem/red_goal": {
+      "status": "complete",
+      "pid": 3170229,
+      "gpu": "7",
+      "started": "2026-11-07T07:08:58+00:00",
+      "pretraining_shape_status": "seen",
+      "exit_code": 0,
+      "ended": "2026-11-07T13:43:51+00:00"
+    }
+  },
+  "updated": "2026-11-07T13:43:51+00:00",
+  "summary": {
+    "task": "pusht",
+    "episodes": 700,
+    "epoch": 3,
+    "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+    "evaluation_plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+    "controller": {
+      "objective": "last",
+      "physical_steps_per_replan": 25,
+      "max_replans": 6,
+      "max_physical_steps": 150
+    },
+    "by_planner": {
+      "gd": {
+        "conditions": {
+          "default": {
+            "episodes": 50,
+            "successes": 25,
+            "success_rate": 0.5,
+            "mean_mpc_replans": 3.58,
+            "mean_physical_steps": 89.5,
+            "pretraining_shape_status": "seen"
+          },
+          "blur": {
+            "episodes": 50,
+            "successes": 22,
+            "success_rate": 0.44,
+            "mean_mpc_replans": 3.9,
+            "mean_physical_steps": 97.5,
+            "pretraining_shape_status": "seen"
+          },
+          "snp": {
+            "episodes": 50,
+            "successes": 4,
+            "success_rate": 0.08,
+            "mean_mpc_replans": 5.68,
+            "mean_physical_steps": 142.0,
+            "pretraining_shape_status": "seen"
+          },
+          "dark": {
+            "episodes": 50,
+            "successes": 25,
+            "success_rate": 0.5,
+            "mean_mpc_replans": 3.58,
+            "mean_physical_steps": 89.5,
+            "pretraining_shape_status": "seen"
+          },
+          "red_agent": {
+            "episodes": 50,
+            "successes": 22,
+            "success_rate": 0.44,
+            "mean_mpc_replans": 3.86,
+            "mean_physical_steps": 96.5,
+            "pretraining_shape_status": "seen"
+          },
+          "red_object": {
+            "episodes": 50,
+            "successes": 18,
+            "success_rate": 0.36,
+            "mean_mpc_replans": 4.28,
+            "mean_physical_steps": 107.0,
+            "pretraining_shape_status": "seen"
+          },
+          "red_goal": {
+            "episodes": 50,
+            "successes": 23,
+            "success_rate": 0.46,
+            "mean_mpc_replans": 3.82,
+            "mean_physical_steps": 95.5,
+            "pretraining_shape_status": "seen"
+          }
+        },
+        "episodes": 350,
+        "group_success_rate": 0.39714285714285713,
+        "mean_mpc_replans": 4.1000000000000005,
+        "mean_physical_steps": 102.5,
+        "color_success_rate": 0.42,
+        "six_shift_success_rate": 0.37999999999999995
+      },
+      "cem": {
+        "conditions": {
+          "default": {
+            "episodes": 50,
+            "successes": 24,
+            "success_rate": 0.48,
+            "mean_mpc_replans": 3.68,
+            "mean_physical_steps": 92.0,
+            "pretraining_shape_status": "seen"
+          },
+          "blur": {
+            "episodes": 50,
+            "successes": 20,
+            "success_rate": 0.4,
+            "mean_mpc_replans": 4.1,
+            "mean_physical_steps": 102.49999999999999,
+            "pretraining_shape_status": "seen"
+          },
+          "snp": {
+            "episodes": 50,
+            "successes": 1,
+            "success_rate": 0.02,
+            "mean_mpc_replans": 5.9,
+            "mean_physical_steps": 147.5,
+            "pretraining_shape_status": "seen"
+          },
+          "dark": {
+            "episodes": 50,
+            "successes": 22,
+            "success_rate": 0.44,
+            "mean_mpc_replans": 3.84,
+            "mean_physical_steps": 96.0,
+            "pretraining_shape_status": "seen"
+          },
+          "red_agent": {
+            "episodes": 50,
+            "successes": 20,
+            "success_rate": 0.4,
+            "mean_mpc_replans": 4.04,
+            "mean_physical_steps": 101.0,
+            "pretraining_shape_status": "seen"
+          },
+          "red_object": {
+            "episodes": 50,
+            "successes": 12,
+            "success_rate": 0.24,
+            "mean_mpc_replans": 4.94,
+            "mean_physical_steps": 123.50000000000001,
+            "pretraining_shape_status": "seen"
+          },
+          "red_goal": {
+            "episodes": 50,
+            "successes": 24,
+            "success_rate": 0.48,
+            "mean_mpc_replans": 3.64,
+            "mean_physical_steps": 91.0,
+            "pretraining_shape_status": "seen"
+          }
+        },
+        "episodes": 350,
+        "group_success_rate": 0.3514285714285714,
+        "mean_mpc_replans": 4.305714285714286,
+        "mean_physical_steps": 107.64285714285714,
+        "color_success_rate": 0.37333333333333335,
+        "six_shift_success_rate": 0.33
+      }
+    },
+    "training_shapes": [
+      "T"
+    ],
+    "comparison_group_label": "seven visual conditions",
+    "mean_steps_definition": "All episodes; failures use the configured MPC cap and 150 physical steps."
+  },
+  "ended": "2026-11-07T13:43:51+00:00"
+}

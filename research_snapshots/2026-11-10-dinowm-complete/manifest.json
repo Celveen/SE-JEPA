@@ -1,0 +1,1935 @@
+{
+  "created_at": "2026-11-10T04:08:55.398504+00:00",
+  "base_remote_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "completed_batch_directories": 20,
+  "completed_batch_episodes": 1000,
+  "additional_singleton_executions": 1,
+  "files": [
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/final_eval_results.npz",
+      "source_bytes": 37122,
+      "stored_bytes": 37122,
+      "source_sha256": "74002a6b17f028025ab263b6eb7544b8b2e7e726bbca6ed2ac1ad6f45985b5d0",
+      "stored_sha256": "74002a6b17f028025ab263b6eb7544b8b2e7e726bbca6ed2ac1ad6f45985b5d0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/runtime_protocol.json",
+      "source_bytes": 784,
+      "stored_bytes": 784,
+      "source_sha256": "044d2cec9f934d3cdca309ecd7c865fa1d1cbd3bf8aa9a5174465559fad35e73",
+      "stored_sha256": "044d2cec9f934d3cdca309ecd7c865fa1d1cbd3bf8aa9a5174465559fad35e73",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/protocol.json",
+      "source_bytes": 784,
+      "stored_bytes": 784,
+      "source_sha256": "044d2cec9f934d3cdca309ecd7c865fa1d1cbd3bf8aa9a5174465559fad35e73",
+      "stored_sha256": "044d2cec9f934d3cdca309ecd7c865fa1d1cbd3bf8aa9a5174465559fad35e73",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/launch_command.json",
+      "source_bytes": 1221,
+      "stored_bytes": 1221,
+      "source_sha256": "77022c9bd2c5e751691d4cc4cbaba945aa1b822deb8e27a46794fb3257062c01",
+      "stored_sha256": "77022c9bd2c5e751691d4cc4cbaba945aa1b822deb8e27a46794fb3257062c01",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/.hydra/config.yaml",
+      "source_bytes": 2124,
+      "stored_bytes": 2124,
+      "source_sha256": "e5703274f99af18a077662c37cbe0aa9948ab9fba3a29d29cf061e4a649dfae5",
+      "stored_sha256": "e5703274f99af18a077662c37cbe0aa9948ab9fba3a29d29cf061e4a649dfae5",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/.hydra/overrides.yaml",
+      "source_bytes": 869,
+      "stored_bytes": 869,
+      "source_sha256": "e1b52cd5be24dc49486f2c6a3c9a356b14a20679b7025e66093163394a3345ae",
+      "stored_sha256": "e1b52cd5be24dc49486f2c6a3c9a356b14a20679b7025e66093163394a3345ae",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/logs.json",
+      "source_bytes": 1849,
+      "stored_bytes": 492,
+      "source_sha256": "784f7032bf79bbdfa51f55e9fe08fa8e9ba6c567afdc80ca09bd21c2e1f9d832",
+      "stored_sha256": "4bf7d6b79f919b9b9cfc267143b899d4330e8d8be02d44d4caecff900711c2b0",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/default/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/default/console.log",
+      "source_bytes": 935563,
+      "stored_bytes": 67899,
+      "source_sha256": "a8d27a2d84185d68e1634e00b48c271f7b4e8fc7c587a29838b6849840633962",
+      "stored_sha256": "f358747336ffded2794f283a3eb397399e58908f654a6b5141069ce7a0dc1b2f",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/final_eval_results.npz",
+      "source_bytes": 40102,
+      "stored_bytes": 40102,
+      "source_sha256": "5ef6d4e3f39f60e65d8ae8305e6121f6d057ba9c28a5d4196f7fab8f8b13033e",
+      "stored_sha256": "5ef6d4e3f39f60e65d8ae8305e6121f6d057ba9c28a5d4196f7fab8f8b13033e",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/runtime_protocol.json",
+      "source_bytes": 781,
+      "stored_bytes": 781,
+      "source_sha256": "5d68ae32ccd7cf7a797537e6598b386bac25ce62f36ababef618c9023d101778",
+      "stored_sha256": "5d68ae32ccd7cf7a797537e6598b386bac25ce62f36ababef618c9023d101778",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/protocol.json",
+      "source_bytes": 781,
+      "stored_bytes": 781,
+      "source_sha256": "5d68ae32ccd7cf7a797537e6598b386bac25ce62f36ababef618c9023d101778",
+      "stored_sha256": "5d68ae32ccd7cf7a797537e6598b386bac25ce62f36ababef618c9023d101778",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/launch_command.json",
+      "source_bytes": 1256,
+      "stored_bytes": 1256,
+      "source_sha256": "65d7fc70a10c105cc2bfea52c94fbd72088bbd513e0451f05aba27db16df997b",
+      "stored_sha256": "65d7fc70a10c105cc2bfea52c94fbd72088bbd513e0451f05aba27db16df997b",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/.hydra/config.yaml",
+      "source_bytes": 2117,
+      "stored_bytes": 2117,
+      "source_sha256": "53bf4a7cad4f15bd46f4f814961d14fd677fa42075b445a0551d2840bf3003b9",
+      "stored_sha256": "53bf4a7cad4f15bd46f4f814961d14fd677fa42075b445a0551d2840bf3003b9",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/.hydra/overrides.yaml",
+      "source_bytes": 901,
+      "stored_bytes": 901,
+      "source_sha256": "a4237f53b2897d5c66b3b78a0cfa1329e88aff7f45cc897e3ecb0c3f5a17ca8b",
+      "stored_sha256": "a4237f53b2897d5c66b3b78a0cfa1329e88aff7f45cc897e3ecb0c3f5a17ca8b",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/logs.json",
+      "source_bytes": 1841,
+      "stored_bytes": 484,
+      "source_sha256": "ecc37acefa1270569a3154b66ec0183ee174731e2e802b85480dd9835392e4ab",
+      "stored_sha256": "ff59c4b79bb13be49225942426c40a03679c0e9227f18aeead68cdc3e3167348",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/observation_noise_seeds.jsonl.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/observation_noise_seeds.jsonl",
+      "source_bytes": 350,
+      "stored_bytes": 121,
+      "source_sha256": "f6a8832148f54ca256fc171f64ce55a238a4dd5b08a65e17627f6a5277364366",
+      "stored_sha256": "6fd3efc3bb7129041294eb50e1914a81d0abdce4413b2cdc7fe38b64521446fa",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/blur/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/blur/console.log",
+      "source_bytes": 932679,
+      "stored_bytes": 69018,
+      "source_sha256": "9a134a65c8d7a8f5d448e848a91211504315543e38566503e4af8bd0d805441c",
+      "stored_sha256": "e888ea269b74784ad5412d0979f83f47e61fa1b66aeb3b80a249334eab9de1b6",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/final_eval_results.npz",
+      "source_bytes": 56462,
+      "stored_bytes": 56462,
+      "source_sha256": "6adcb5b523a25aa9f14868b7726c9afe68b66d58407194888585448d95f3a334",
+      "stored_sha256": "6adcb5b523a25aa9f14868b7726c9afe68b66d58407194888585448d95f3a334",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/runtime_protocol.json",
+      "source_bytes": 780,
+      "stored_bytes": 780,
+      "source_sha256": "9c6b96b071058426651285c793d578ead6877a51f1e05eabfaeee8999f767a4d",
+      "stored_sha256": "9c6b96b071058426651285c793d578ead6877a51f1e05eabfaeee8999f767a4d",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/protocol.json",
+      "source_bytes": 780,
+      "stored_bytes": 780,
+      "source_sha256": "9c6b96b071058426651285c793d578ead6877a51f1e05eabfaeee8999f767a4d",
+      "stored_sha256": "9c6b96b071058426651285c793d578ead6877a51f1e05eabfaeee8999f767a4d",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/launch_command.json",
+      "source_bytes": 1254,
+      "stored_bytes": 1254,
+      "source_sha256": "a62754df6685c9baa6213a4cc389f1d437a04494a1e35139a3c9cb4f29a04c4c",
+      "stored_sha256": "a62754df6685c9baa6213a4cc389f1d437a04494a1e35139a3c9cb4f29a04c4c",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/.hydra/config.yaml",
+      "source_bytes": 2116,
+      "stored_bytes": 2116,
+      "source_sha256": "0c64817f1d1486dfdfd9b13aa6510a7f0d6a00bec4f5ef78983f02e6a4507204",
+      "stored_sha256": "0c64817f1d1486dfdfd9b13aa6510a7f0d6a00bec4f5ef78983f02e6a4507204",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/.hydra/overrides.yaml",
+      "source_bytes": 900,
+      "stored_bytes": 900,
+      "source_sha256": "6359c6a920a8216fd2f493f5eb86e17dca702940f462acecfb380367cf20009d",
+      "stored_sha256": "6359c6a920a8216fd2f493f5eb86e17dca702940f462acecfb380367cf20009d",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/logs.json",
+      "source_bytes": 1853,
+      "stored_bytes": 516,
+      "source_sha256": "3518aab0fcb94974bb8ea9b7f302beb8046ba0e408e4561388d5c1a0c01ef1d9",
+      "stored_sha256": "1a33167a8f880a1b5164c9c9be74807dd0fa3cb29cea4f0f0781b6ed55c370ad",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/observation_noise_seeds.jsonl.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/observation_noise_seeds.jsonl",
+      "source_bytes": 350,
+      "stored_bytes": 120,
+      "source_sha256": "a0e297a24a0e9843929142fcb12dc76bd7c01c52d718e643c71969ebde1511a0",
+      "stored_sha256": "dddd3c839559b1d9f5a8bb1b245ece3f0445fe2e98c37062f4d331d33c9eac20",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/snp/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/snp/console.log",
+      "source_bytes": 943463,
+      "stored_bytes": 61810,
+      "source_sha256": "c919a831fcdd7f1d4515be03e42b5da75fffa9e46e8eab00f65569c09bdb6112",
+      "stored_sha256": "21dafc0b5e318e056342afdf643e8d46374919f5e31d1cd9836dac719aaca710",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/final_eval_results.npz",
+      "source_bytes": 37180,
+      "stored_bytes": 37180,
+      "source_sha256": "84dd92b9bafe2ebb1d9b0dffd5a486a325e62ed3925c69bed4b56166476cd36b",
+      "stored_sha256": "84dd92b9bafe2ebb1d9b0dffd5a486a325e62ed3925c69bed4b56166476cd36b",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/runtime_protocol.json",
+      "source_bytes": 781,
+      "stored_bytes": 781,
+      "source_sha256": "d9959686bb14cf385af810eb1a533b544b2059d718be62a5aad7312c3a3a5be4",
+      "stored_sha256": "d9959686bb14cf385af810eb1a533b544b2059d718be62a5aad7312c3a3a5be4",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/protocol.json",
+      "source_bytes": 781,
+      "stored_bytes": 781,
+      "source_sha256": "d9959686bb14cf385af810eb1a533b544b2059d718be62a5aad7312c3a3a5be4",
+      "stored_sha256": "d9959686bb14cf385af810eb1a533b544b2059d718be62a5aad7312c3a3a5be4",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/launch_command.json",
+      "source_bytes": 1256,
+      "stored_bytes": 1256,
+      "source_sha256": "2d386d09ab73add5f8ebb9a7292cfe2d019187637c8fe0373a666eee49a50ddf",
+      "stored_sha256": "2d386d09ab73add5f8ebb9a7292cfe2d019187637c8fe0373a666eee49a50ddf",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/.hydra/config.yaml",
+      "source_bytes": 2117,
+      "stored_bytes": 2117,
+      "source_sha256": "df756061c783411f1a0804e5cd948da6387e24b7a3be6662ca30940b60e8c1de",
+      "stored_sha256": "df756061c783411f1a0804e5cd948da6387e24b7a3be6662ca30940b60e8c1de",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/.hydra/overrides.yaml",
+      "source_bytes": 901,
+      "stored_bytes": 901,
+      "source_sha256": "854a109a31c372c8edc7dc98d56ec3aed2cc9c505e5a08dfa1a0f3898ac35d4f",
+      "stored_sha256": "854a109a31c372c8edc7dc98d56ec3aed2cc9c505e5a08dfa1a0f3898ac35d4f",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/logs.json",
+      "source_bytes": 1845,
+      "stored_bytes": 496,
+      "source_sha256": "ebc05b752411719d57039e2b35a568c877a17bbca1e8cd89b422972498120c33",
+      "stored_sha256": "18707da3417b6f4bd774787795e55c0bca8d656178ead04f377bb7ec44e98bc7",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/observation_noise_seeds.jsonl.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/observation_noise_seeds.jsonl",
+      "source_bytes": 350,
+      "stored_bytes": 121,
+      "source_sha256": "de7d0bd441d2e5d24afbe10eafd7ee9638d3a576b87f3669519a4fc91c0a5158",
+      "stored_sha256": "023bb808160504a4206a882ce450c4c037fac21b128207cd0ccb1952c5ee2585",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/dark/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/dark/console.log",
+      "source_bytes": 923492,
+      "stored_bytes": 66049,
+      "source_sha256": "4caff8561d9a2df540bb39508099da340d8cebdcca2d7c4aef3b40652d8b6a74",
+      "stored_sha256": "92ed09be0f64a992b707d05bd82e685f9ddc37082dafaa1216f0ea8ef0cf3e88",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/final_eval_results.npz",
+      "source_bytes": 39701,
+      "stored_bytes": 39701,
+      "source_sha256": "ac969758e8a7aa18c628f47d8c0139868358a592a6647f0ae5827717ee0ac033",
+      "stored_sha256": "ac969758e8a7aa18c628f47d8c0139868358a592a6647f0ae5827717ee0ac033",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/runtime_protocol.json",
+      "source_bytes": 786,
+      "stored_bytes": 786,
+      "source_sha256": "ed7af0f498d90b25ced8f640ebd3b390357b062e114560caef755906d62fd255",
+      "stored_sha256": "ed7af0f498d90b25ced8f640ebd3b390357b062e114560caef755906d62fd255",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/protocol.json",
+      "source_bytes": 786,
+      "stored_bytes": 786,
+      "source_sha256": "ed7af0f498d90b25ced8f640ebd3b390357b062e114560caef755906d62fd255",
+      "stored_sha256": "ed7af0f498d90b25ced8f640ebd3b390357b062e114560caef755906d62fd255",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/launch_command.json",
+      "source_bytes": 1270,
+      "stored_bytes": 1270,
+      "source_sha256": "32b887c24ca22bd40af83d0f74d221cfd07d168b607d1d6b688a714afd3e2d15",
+      "stored_sha256": "32b887c24ca22bd40af83d0f74d221cfd07d168b607d1d6b688a714afd3e2d15",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/.hydra/config.yaml",
+      "source_bytes": 2142,
+      "stored_bytes": 2142,
+      "source_sha256": "0bc64435cdf5fe591cda780df7ae0b019702364d484ad61ede1c188600553798",
+      "stored_sha256": "0bc64435cdf5fe591cda780df7ae0b019702364d484ad61ede1c188600553798",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/.hydra/overrides.yaml",
+      "source_bytes": 913,
+      "stored_bytes": 913,
+      "source_sha256": "981389b21ea90f51e2bb93b004720d07f9cea75e5115e66e3329c057bf23e798",
+      "stored_sha256": "981389b21ea90f51e2bb93b004720d07f9cea75e5115e66e3329c057bf23e798",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/logs.json",
+      "source_bytes": 1852,
+      "stored_bytes": 496,
+      "source_sha256": "4952ce2aaf500a1b01f87da6e68d1b0f81e4f7639c84dcbd0627779eb11e8296",
+      "stored_sha256": "2b9e25662e76d0e26b41415ffb6296b08dbd4e6636b7e1a8dc203010faa60cb3",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_agent/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_agent/console.log",
+      "source_bytes": 941320,
+      "stored_bytes": 58500,
+      "source_sha256": "241d4daa252a19bcb6d720da42c75963be369af5e9498417d2d4de08aaede3a4",
+      "stored_sha256": "c3bffa234bb993c2535f85291c64e6e35fa57824003ba709e5be85ddd6b95721",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/final_eval_results.npz",
+      "source_bytes": 43621,
+      "stored_bytes": 43621,
+      "source_sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66",
+      "stored_sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/runtime_protocol.json",
+      "source_bytes": 787,
+      "stored_bytes": 787,
+      "source_sha256": "139b6f8685efe3afe849e4e7ef3885dc0f94360c3d4c092bc15b22208a22a2a3",
+      "stored_sha256": "139b6f8685efe3afe849e4e7ef3885dc0f94360c3d4c092bc15b22208a22a2a3",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/protocol.json",
+      "source_bytes": 787,
+      "stored_bytes": 787,
+      "source_sha256": "139b6f8685efe3afe849e4e7ef3885dc0f94360c3d4c092bc15b22208a22a2a3",
+      "stored_sha256": "139b6f8685efe3afe849e4e7ef3885dc0f94360c3d4c092bc15b22208a22a2a3",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/launch_command.json",
+      "source_bytes": 1267,
+      "stored_bytes": 1267,
+      "source_sha256": "181893f8048bb4c4f99849326fea2006fe94d6c5b6ce1cb319ae848da133e065",
+      "stored_sha256": "181893f8048bb4c4f99849326fea2006fe94d6c5b6ce1cb319ae848da133e065",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/.hydra/config.yaml",
+      "source_bytes": 2138,
+      "stored_bytes": 2138,
+      "source_sha256": "f01718809f29ee6575c87b7315ee1b32bd3b39bcbd0ddd3f4541001d8ca6b717",
+      "stored_sha256": "f01718809f29ee6575c87b7315ee1b32bd3b39bcbd0ddd3f4541001d8ca6b717",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/.hydra/overrides.yaml",
+      "source_bytes": 909,
+      "stored_bytes": 909,
+      "source_sha256": "b9a59ee6faac13d1cc0e21b3bc5526c7537ba022ac4ab11503133d0194adf1cf",
+      "stored_sha256": "b9a59ee6faac13d1cc0e21b3bc5526c7537ba022ac4ab11503133d0194adf1cf",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/logs.json",
+      "source_bytes": 1859,
+      "stored_bytes": 491,
+      "source_sha256": "3a4d17615a6931d96efcf778d643b1cce0e17eeade9356ce381f887d2d376a0e",
+      "stored_sha256": "c7d4ed70467a94c5301de97f25722d9c20257eb37549363cf393e681473e6abd",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_object/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_object/console.log",
+      "source_bytes": 925809,
+      "stored_bytes": 64204,
+      "source_sha256": "ea82f8c18b688415f0414161274001288b85a0baa197ddbc7c0c2ca86dceb6eb",
+      "stored_sha256": "228e9c2e8701942a5be8f25679adf25300329b2471592e4fe48ec8d50131879b",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/final_eval_results.npz",
+      "source_bytes": 39378,
+      "stored_bytes": 39378,
+      "source_sha256": "478389d9a82dcf9f8b45b5d169b6f5588da61c32606ae0555d8fef807b969502",
+      "stored_sha256": "478389d9a82dcf9f8b45b5d169b6f5588da61c32606ae0555d8fef807b969502",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/runtime_protocol.json",
+      "source_bytes": 785,
+      "stored_bytes": 785,
+      "source_sha256": "4febbb1376a5ffa7b057f97e6a1f0e57a4f0d1323f4afef54f1036ca3a41d325",
+      "stored_sha256": "4febbb1376a5ffa7b057f97e6a1f0e57a4f0d1323f4afef54f1036ca3a41d325",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/protocol.json",
+      "source_bytes": 785,
+      "stored_bytes": 785,
+      "source_sha256": "4febbb1376a5ffa7b057f97e6a1f0e57a4f0d1323f4afef54f1036ca3a41d325",
+      "stored_sha256": "4febbb1376a5ffa7b057f97e6a1f0e57a4f0d1323f4afef54f1036ca3a41d325",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/launch_command.json",
+      "source_bytes": 1266,
+      "stored_bytes": 1266,
+      "source_sha256": "6492f2164e942ad6c0fb927d75e86499ec0fe8e9ead17d0709d36b904222fe8f",
+      "stored_sha256": "6492f2164e942ad6c0fb927d75e86499ec0fe8e9ead17d0709d36b904222fe8f",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/.hydra/config.yaml",
+      "source_bytes": 2139,
+      "stored_bytes": 2139,
+      "source_sha256": "c784556b614cf545db5d30ad7ebae8cb6dbd0dc2049f3a0c1ced6410db7b2604",
+      "stored_sha256": "c784556b614cf545db5d30ad7ebae8cb6dbd0dc2049f3a0c1ced6410db7b2604",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/.hydra/overrides.yaml",
+      "source_bytes": 910,
+      "stored_bytes": 910,
+      "source_sha256": "b677b0355d174fbe3cc2628a4516d15053d84e2269c2977ae21297702bf4d7df",
+      "stored_sha256": "b677b0355d174fbe3cc2628a4516d15053d84e2269c2977ae21297702bf4d7df",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/logs.json",
+      "source_bytes": 1855,
+      "stored_bytes": 495,
+      "source_sha256": "4e3f91ebc943fe8619a4c516317521f82662645683661b09aedd3259e5bc8396",
+      "stored_sha256": "dccf0f78010cce5797e21ea2d8efbf3d52410a0e496c90f98cd17029faa45ca7",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/gd/red_goal/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/gd/red_goal/console.log",
+      "source_bytes": 941040,
+      "stored_bytes": 65213,
+      "source_sha256": "5daec05c9d7368dfbd06da3e8b47994dde49d4aecf2370eb86ad7a4c02b0d93e",
+      "stored_sha256": "2433c80f792115198bf7a8cf4118817d1debdc8e69243ba6a89f36b928efa55a",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/final_eval_results.npz",
+      "source_bytes": 37838,
+      "stored_bytes": 37838,
+      "source_sha256": "3be6a41020c4e9f39a70866f9a832d212168b9cd04078dab125f267af87a1156",
+      "stored_sha256": "3be6a41020c4e9f39a70866f9a832d212168b9cd04078dab125f267af87a1156",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/runtime_protocol.json",
+      "source_bytes": 670,
+      "stored_bytes": 670,
+      "source_sha256": "359146610a3a7be0e6c30b624b005ed75220d9e05a0a0458f9326c5b6268a386",
+      "stored_sha256": "359146610a3a7be0e6c30b624b005ed75220d9e05a0a0458f9326c5b6268a386",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/protocol.json",
+      "source_bytes": 670,
+      "stored_bytes": 670,
+      "source_sha256": "359146610a3a7be0e6c30b624b005ed75220d9e05a0a0458f9326c5b6268a386",
+      "stored_sha256": "359146610a3a7be0e6c30b624b005ed75220d9e05a0a0458f9326c5b6268a386",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/launch_command.json",
+      "source_bytes": 1150,
+      "stored_bytes": 1150,
+      "source_sha256": "8f83e312f3da8406fd7fffb15064f062cac0e858a8ec09cb743f4ed0bee5b35c",
+      "stored_sha256": "8f83e312f3da8406fd7fffb15064f062cac0e858a8ec09cb743f4ed0bee5b35c",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/.hydra/config.yaml",
+      "source_bytes": 2090,
+      "stored_bytes": 2090,
+      "source_sha256": "fd1d85c8e570d9a44b4478030792b1d5627a54568d11e8e2360834eccba39939",
+      "stored_sha256": "fd1d85c8e570d9a44b4478030792b1d5627a54568d11e8e2360834eccba39939",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/.hydra/overrides.yaml",
+      "source_bytes": 800,
+      "stored_bytes": 800,
+      "source_sha256": "803e820c031967ea8b9ba683f6f9ab104d9e5aabae7ebdfc6da7e7c405167f34",
+      "stored_sha256": "803e820c031967ea8b9ba683f6f9ab104d9e5aabae7ebdfc6da7e7c405167f34",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/logs.json",
+      "source_bytes": 1855,
+      "stored_bytes": 505,
+      "source_sha256": "89b1f2538571097e12bbdae15e6571e184eaebf8984319d75a6cc89e1793ac62",
+      "stored_sha256": "60c476cf0d6ed788c704c5d9200f8c746676afebcac724b7e55e355c94d5d807",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/default/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/console.log",
+      "source_bytes": 25666,
+      "stored_bytes": 4769,
+      "source_sha256": "a9c0b59f47b977a51e4c11129c5371f461be22ed12621ea2ea3f94ec46a4bea9",
+      "stored_sha256": "18782fa4a07b74a1704812ffecff1a889edeec3d9c759b638c7f997c1c3ad276",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/final_eval_results.npz",
+      "source_bytes": 41712,
+      "stored_bytes": 41712,
+      "source_sha256": "47b35fdedb51e21a45f7070eeccb0d5ac6d4b6b02cd166dd10d1113422a66fea",
+      "stored_sha256": "47b35fdedb51e21a45f7070eeccb0d5ac6d4b6b02cd166dd10d1113422a66fea",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/runtime_protocol.json",
+      "source_bytes": 667,
+      "stored_bytes": 667,
+      "source_sha256": "5ab4c446242e4567789280087125d7c9262fd56a8f74653b61ffb59603bdd03e",
+      "stored_sha256": "5ab4c446242e4567789280087125d7c9262fd56a8f74653b61ffb59603bdd03e",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/protocol.json",
+      "source_bytes": 667,
+      "stored_bytes": 667,
+      "source_sha256": "5ab4c446242e4567789280087125d7c9262fd56a8f74653b61ffb59603bdd03e",
+      "stored_sha256": "5ab4c446242e4567789280087125d7c9262fd56a8f74653b61ffb59603bdd03e",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/launch_command.json",
+      "source_bytes": 1185,
+      "stored_bytes": 1185,
+      "source_sha256": "f0e026fd1bc2782db112f2c7876f98833ffadf686971eb4016adb3366705dbad",
+      "stored_sha256": "f0e026fd1bc2782db112f2c7876f98833ffadf686971eb4016adb3366705dbad",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/.hydra/config.yaml",
+      "source_bytes": 2083,
+      "stored_bytes": 2083,
+      "source_sha256": "b83ab53b7e4c7320d9872a59d5c795b282882deae8ab2b2395131e607e07bb20",
+      "stored_sha256": "b83ab53b7e4c7320d9872a59d5c795b282882deae8ab2b2395131e607e07bb20",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/.hydra/overrides.yaml",
+      "source_bytes": 832,
+      "stored_bytes": 832,
+      "source_sha256": "c2303358af7f7f17b8cb1a57633335597ce1cf030e4db97c4c780067cc7ec31a",
+      "stored_sha256": "c2303358af7f7f17b8cb1a57633335597ce1cf030e4db97c4c780067cc7ec31a",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/logs.json",
+      "source_bytes": 1840,
+      "stored_bytes": 490,
+      "source_sha256": "d2fe4eedd903f1e24a7849bb51d635072c0237073f8eb98da68811fdc6dbdcc8",
+      "stored_sha256": "32ca81284d6703b040facd963a498176b4927de1546647cf962e04518af4c763",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/observation_noise_seeds.jsonl.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/observation_noise_seeds.jsonl",
+      "source_bytes": 350,
+      "stored_bytes": 121,
+      "source_sha256": "f6a8832148f54ca256fc171f64ce55a238a4dd5b08a65e17627f6a5277364366",
+      "stored_sha256": "6fd3efc3bb7129041294eb50e1914a81d0abdce4413b2cdc7fe38b64521446fa",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/blur/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/console.log",
+      "source_bytes": 25656,
+      "stored_bytes": 4920,
+      "source_sha256": "e7fedec7b154a24ba1e2b274b7b1971621251aa3327538b302738bc261f05e68",
+      "stored_sha256": "93713c1dd0dd47bf8fdd68a129755adea7daed5ec0c351c9a5718987ae108472",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/final_eval_results.npz",
+      "source_bytes": 58186,
+      "stored_bytes": 58186,
+      "source_sha256": "68305753620745c495155c6dd9ce9b9239b8786199d4d8363bb42fd513741fa0",
+      "stored_sha256": "68305753620745c495155c6dd9ce9b9239b8786199d4d8363bb42fd513741fa0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/runtime_protocol.json",
+      "source_bytes": 666,
+      "stored_bytes": 666,
+      "source_sha256": "184666801a4cb4572ae1f37d9e8f97d2ef8517a73b4a2601fb3b4d75c4ffb5d7",
+      "stored_sha256": "184666801a4cb4572ae1f37d9e8f97d2ef8517a73b4a2601fb3b4d75c4ffb5d7",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/protocol.json",
+      "source_bytes": 666,
+      "stored_bytes": 666,
+      "source_sha256": "184666801a4cb4572ae1f37d9e8f97d2ef8517a73b4a2601fb3b4d75c4ffb5d7",
+      "stored_sha256": "184666801a4cb4572ae1f37d9e8f97d2ef8517a73b4a2601fb3b4d75c4ffb5d7",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/launch_command.json",
+      "source_bytes": 1183,
+      "stored_bytes": 1183,
+      "source_sha256": "6167f8a04f3b54bfc21bd7e0a7ef37343c44271bfbcd75a3551fe0fa17fc79bb",
+      "stored_sha256": "6167f8a04f3b54bfc21bd7e0a7ef37343c44271bfbcd75a3551fe0fa17fc79bb",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/.hydra/config.yaml",
+      "source_bytes": 2082,
+      "stored_bytes": 2082,
+      "source_sha256": "ea0b013add957f619cfa751084e79510ed279be1c87e6b038655558a0a23968a",
+      "stored_sha256": "ea0b013add957f619cfa751084e79510ed279be1c87e6b038655558a0a23968a",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/.hydra/overrides.yaml",
+      "source_bytes": 831,
+      "stored_bytes": 831,
+      "source_sha256": "675dd6771f7dbc52331c75fedbff7f81613fb0cd7a3851429c651fe3ca145877",
+      "stored_sha256": "675dd6771f7dbc52331c75fedbff7f81613fb0cd7a3851429c651fe3ca145877",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/logs.json",
+      "source_bytes": 1841,
+      "stored_bytes": 503,
+      "source_sha256": "c8bd5329c288ee722be1e8ba18a6698923a3f7f50d4707bb4c37ee6eef81a47c",
+      "stored_sha256": "61c560d94fbb042866e13e86d508ff9c425eca183398a4156884d3f21d6a17e4",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/observation_noise_seeds.jsonl.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/observation_noise_seeds.jsonl",
+      "source_bytes": 350,
+      "stored_bytes": 120,
+      "source_sha256": "a0e297a24a0e9843929142fcb12dc76bd7c01c52d718e643c71969ebde1511a0",
+      "stored_sha256": "dddd3c839559b1d9f5a8bb1b245ece3f0445fe2e98c37062f4d331d33c9eac20",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/snp/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/console.log",
+      "source_bytes": 25662,
+      "stored_bytes": 5221,
+      "source_sha256": "a505d6a384f97a2e9026804c391216a710c38bbc229c8aaeff1fff9187161143",
+      "stored_sha256": "ea80aa1cacdb1897116d99dacd7f7c540700022376c9293a3eb2c57779d80b12",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/final_eval_results.npz",
+      "source_bytes": 39280,
+      "stored_bytes": 39280,
+      "source_sha256": "0647d9c467b709d9814127d8fb4798a0a3bb7db1191448f129ca6c49c30c9070",
+      "stored_sha256": "0647d9c467b709d9814127d8fb4798a0a3bb7db1191448f129ca6c49c30c9070",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/runtime_protocol.json",
+      "source_bytes": 667,
+      "stored_bytes": 667,
+      "source_sha256": "1e7dbd31ff66fcf54f45c7eed194ea4a4e802e89bc1600836fd9d9bad4061abf",
+      "stored_sha256": "1e7dbd31ff66fcf54f45c7eed194ea4a4e802e89bc1600836fd9d9bad4061abf",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/protocol.json",
+      "source_bytes": 667,
+      "stored_bytes": 667,
+      "source_sha256": "1e7dbd31ff66fcf54f45c7eed194ea4a4e802e89bc1600836fd9d9bad4061abf",
+      "stored_sha256": "1e7dbd31ff66fcf54f45c7eed194ea4a4e802e89bc1600836fd9d9bad4061abf",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/launch_command.json",
+      "source_bytes": 1185,
+      "stored_bytes": 1185,
+      "source_sha256": "b2654acd86f0166aefaa666d40dfe8b991b3671813d311297c3dfdc9f424e178",
+      "stored_sha256": "b2654acd86f0166aefaa666d40dfe8b991b3671813d311297c3dfdc9f424e178",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/.hydra/config.yaml",
+      "source_bytes": 2083,
+      "stored_bytes": 2083,
+      "source_sha256": "3e53e4d95042bfaa6e2fdd8c468529e99077d5a525015e742befbc45e3e993c6",
+      "stored_sha256": "3e53e4d95042bfaa6e2fdd8c468529e99077d5a525015e742befbc45e3e993c6",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/.hydra/overrides.yaml",
+      "source_bytes": 832,
+      "stored_bytes": 832,
+      "source_sha256": "f68d2e8a0861be41c9df5b372c9611474ec657c11e60a2b49aaff4472ffccdf5",
+      "stored_sha256": "f68d2e8a0861be41c9df5b372c9611474ec657c11e60a2b49aaff4472ffccdf5",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/logs.json",
+      "source_bytes": 1853,
+      "stored_bytes": 491,
+      "source_sha256": "ae7fe28bbc6066ad5ddddf5a0b6bd20dea454cb63ad265587946efa490e6baf4",
+      "stored_sha256": "bc3769e22e281f11449fbb60034b645a487c2bf99f1283ab065e29ce7946e1b2",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/observation_noise_seeds.jsonl.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/observation_noise_seeds.jsonl",
+      "source_bytes": 350,
+      "stored_bytes": 121,
+      "source_sha256": "de7d0bd441d2e5d24afbe10eafd7ee9638d3a576b87f3669519a4fc91c0a5158",
+      "stored_sha256": "023bb808160504a4206a882ce450c4c037fac21b128207cd0ccb1952c5ee2585",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/dark/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/console.log",
+      "source_bytes": 25662,
+      "stored_bytes": 4766,
+      "source_sha256": "de6b5d5be77b7e1cb69364370051ca4d6262158f77c97a9a8df24b82d6ab7e35",
+      "stored_sha256": "197de62b03fd459a822e413e5298040933ac6ad86fd2c47f0ba06ed7cc235c6d",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/final_eval_results.npz",
+      "source_bytes": 41132,
+      "stored_bytes": 41132,
+      "source_sha256": "09be6d8c76cfa9d17344e2aae0e746da8c2584044a41be3b796b9469f2476319",
+      "stored_sha256": "09be6d8c76cfa9d17344e2aae0e746da8c2584044a41be3b796b9469f2476319",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/runtime_protocol.json",
+      "source_bytes": 672,
+      "stored_bytes": 672,
+      "source_sha256": "d41703c26b56952cef29e21d32a9b207795be0d27f809cf3c27a706c7111a51e",
+      "stored_sha256": "d41703c26b56952cef29e21d32a9b207795be0d27f809cf3c27a706c7111a51e",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/protocol.json",
+      "source_bytes": 672,
+      "stored_bytes": 672,
+      "source_sha256": "d41703c26b56952cef29e21d32a9b207795be0d27f809cf3c27a706c7111a51e",
+      "stored_sha256": "d41703c26b56952cef29e21d32a9b207795be0d27f809cf3c27a706c7111a51e",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/launch_command.json",
+      "source_bytes": 1199,
+      "stored_bytes": 1199,
+      "source_sha256": "aacccc2b0e2c88eb6f9df419f2199c28bd57b8b62e8fa18e90530f4fa43d1ca8",
+      "stored_sha256": "aacccc2b0e2c88eb6f9df419f2199c28bd57b8b62e8fa18e90530f4fa43d1ca8",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/.hydra/config.yaml",
+      "source_bytes": 2108,
+      "stored_bytes": 2108,
+      "source_sha256": "7068a5502b1c89dae6dca09fedf23288355c39b8d84ace85ddadcb9b9b971f00",
+      "stored_sha256": "7068a5502b1c89dae6dca09fedf23288355c39b8d84ace85ddadcb9b9b971f00",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/.hydra/overrides.yaml",
+      "source_bytes": 844,
+      "stored_bytes": 844,
+      "source_sha256": "f9517d8578013f5c45ac200d578e490fc697d3b297aa3317a1916b46e4cd9b6f",
+      "stored_sha256": "f9517d8578013f5c45ac200d578e490fc697d3b297aa3317a1916b46e4cd9b6f",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/logs.json",
+      "source_bytes": 1853,
+      "stored_bytes": 502,
+      "source_sha256": "785951a134ff6423a8e29aba65debbc21badd7b56b31350ad488516c289e2730",
+      "stored_sha256": "a589134f456efd8825896e5f1c823530b13a278b711b797ae8479ee63e0d951e",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_agent/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/console.log",
+      "source_bytes": 26013,
+      "stored_bytes": 4705,
+      "source_sha256": "440788ef83bb6a85eab39a832787d48c2a59e484747c10b7af6bd6145e8c0bcb",
+      "stored_sha256": "4803d56eb43e1711881e72348cafb9ecbd7973654931427b01d8e447eb768f1d",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/final_eval_results.npz",
+      "source_bytes": 49443,
+      "stored_bytes": 49443,
+      "source_sha256": "c2cf604329b7c17f859f00123708be0e9a345b33b4b454410934cfa91c5e5a3f",
+      "stored_sha256": "c2cf604329b7c17f859f00123708be0e9a345b33b4b454410934cfa91c5e5a3f",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/runtime_protocol.json",
+      "source_bytes": 673,
+      "stored_bytes": 673,
+      "source_sha256": "ee63ce9cbccd4a13637aa3dbc3e9be298c0bb4101d48e75fe4559761b5d96cfc",
+      "stored_sha256": "ee63ce9cbccd4a13637aa3dbc3e9be298c0bb4101d48e75fe4559761b5d96cfc",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/protocol.json",
+      "source_bytes": 673,
+      "stored_bytes": 673,
+      "source_sha256": "ee63ce9cbccd4a13637aa3dbc3e9be298c0bb4101d48e75fe4559761b5d96cfc",
+      "stored_sha256": "ee63ce9cbccd4a13637aa3dbc3e9be298c0bb4101d48e75fe4559761b5d96cfc",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/launch_command.json",
+      "source_bytes": 1196,
+      "stored_bytes": 1196,
+      "source_sha256": "82da4d634fc5707f923ab5cc7989a77f91e6df8e6dc93124ba000126bc6c7518",
+      "stored_sha256": "82da4d634fc5707f923ab5cc7989a77f91e6df8e6dc93124ba000126bc6c7518",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/.hydra/config.yaml",
+      "source_bytes": 2104,
+      "stored_bytes": 2104,
+      "source_sha256": "fa72ff1ee688a137efa0c97600dd2713d2207dfecbb84e8b7dc0e8d255f84b3f",
+      "stored_sha256": "fa72ff1ee688a137efa0c97600dd2713d2207dfecbb84e8b7dc0e8d255f84b3f",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/.hydra/overrides.yaml",
+      "source_bytes": 840,
+      "stored_bytes": 840,
+      "source_sha256": "2672db56d463317aaf326cc0cb5fc0222793c59ede4d8dd3352a08330ff11767",
+      "stored_sha256": "2672db56d463317aaf326cc0cb5fc0222793c59ede4d8dd3352a08330ff11767",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/logs.json",
+      "source_bytes": 1859,
+      "stored_bytes": 496,
+      "source_sha256": "c14ae1b92e113a30b84c3ee9878892421c8c0fdf5741b71f3cd6929072e4aaa7",
+      "stored_sha256": "bdf49c31de7da58adf79210a0ecf8f3f62b244a012641285b91a47f7646e4833",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_object/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_object/console.log",
+      "source_bytes": 25719,
+      "stored_bytes": 5090,
+      "source_sha256": "c9902be3397c5ef165ba982cd74642293782366593b03b9361e68a64ed28881d",
+      "stored_sha256": "47976cfcbe02359bbe4267f1dfc27ab3837e071cc48bbe6f61910bce372be9b0",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/final_eval_results.npz",
+      "source_bytes": 37468,
+      "stored_bytes": 37468,
+      "source_sha256": "399de5a7011debdcbdaff8b4d0163b80e6f69721f82a097b35863c904715d81c",
+      "stored_sha256": "399de5a7011debdcbdaff8b4d0163b80e6f69721f82a097b35863c904715d81c",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/runtime_protocol.json",
+      "source_bytes": 671,
+      "stored_bytes": 671,
+      "source_sha256": "da3928e9897c1b6e64dc9926f7bdc4ee20e4b88c1074f96960a934c2b8e84b69",
+      "stored_sha256": "da3928e9897c1b6e64dc9926f7bdc4ee20e4b88c1074f96960a934c2b8e84b69",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/protocol.json",
+      "source_bytes": 671,
+      "stored_bytes": 671,
+      "source_sha256": "da3928e9897c1b6e64dc9926f7bdc4ee20e4b88c1074f96960a934c2b8e84b69",
+      "stored_sha256": "da3928e9897c1b6e64dc9926f7bdc4ee20e4b88c1074f96960a934c2b8e84b69",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/launch_command.json",
+      "source_bytes": 1195,
+      "stored_bytes": 1195,
+      "source_sha256": "2a9a48fb23fcf06681ba3133dbbccfeb5c8571f1dc8c547164a6e9944126a3de",
+      "stored_sha256": "2a9a48fb23fcf06681ba3133dbbccfeb5c8571f1dc8c547164a6e9944126a3de",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/.hydra/config.yaml",
+      "source_bytes": 2105,
+      "stored_bytes": 2105,
+      "source_sha256": "ef187fcaaa54fd4892d1a12df65df09d280c97eca8071abd4eb7aae2cb0f458e",
+      "stored_sha256": "ef187fcaaa54fd4892d1a12df65df09d280c97eca8071abd4eb7aae2cb0f458e",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/.hydra/overrides.yaml",
+      "source_bytes": 841,
+      "stored_bytes": 841,
+      "source_sha256": "943c7a915b6c5788d8850a3e9d3f3dbb9efd850ad33a903bd19026da915aeb39",
+      "stored_sha256": "943c7a915b6c5788d8850a3e9d3f3dbb9efd850ad33a903bd19026da915aeb39",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/logs.json",
+      "source_bytes": 1858,
+      "stored_bytes": 502,
+      "source_sha256": "1bdcd6f5a4e7a9414999f9209ea385f55bb0bd90f676d957c8bbe3514aee02e9",
+      "stored_sha256": "cb61db3d4d37c47c5d890b49de2713a358f91ad7fa284bed26c9a4778c934fdb",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pusht/cem/red_goal/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_goal/console.log",
+      "source_bytes": 25667,
+      "stored_bytes": 4734,
+      "source_sha256": "b6fffb11347a4dc1a80609bac88b9a94718187d4bc94c3e4308c152e02e5fd4e",
+      "stored_sha256": "875acee32dc3d862fd1b1c32931d75c5f3a31648759d43d8a672b6cbca3465f4",
+      "gzip": true
+    },
+    {
+      "path": "source_metadata/pusht/summary.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/summary.json",
+      "source_bytes": 4518,
+      "stored_bytes": 4518,
+      "source_sha256": "d1b3a19c2ca0c4578e3f5ece20400053d6f928401c6cd91090a94ba35d6a1009",
+      "stored_sha256": "d1b3a19c2ca0c4578e3f5ece20400053d6f928401c6cd91090a94ba35d6a1009",
+      "gzip": false
+    },
+    {
+      "path": "source_metadata/pusht/pipeline_status.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/pipeline_status.json",
+      "source_bytes": 9234,
+      "stored_bytes": 9234,
+      "source_sha256": "f303fd6bbae5335cbe448e0fd9e3d7410fdff5cd9dcb8094ed1fc88c6bae7312",
+      "stored_sha256": "f303fd6bbae5335cbe448e0fd9e3d7410fdff5cd9dcb8094ed1fc88c6bae7312",
+      "gzip": false
+    },
+    {
+      "path": "source_metadata/pusht/epoch_budget_guard.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pusht_random16k_e10_20261106/epoch_budget_guard.json",
+      "source_bytes": 1067,
+      "stored_bytes": 1067,
+      "source_sha256": "50645e2c53887e088c9a6ff4b0605de5d1b949cb1135f9c7e8e88c0adaa3d4b2",
+      "stored_sha256": "50645e2c53887e088c9a6ff4b0605de5d1b949cb1135f9c7e8e88c0adaa3d4b2",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/final_eval_results.npz",
+      "source_bytes": 52448,
+      "stored_bytes": 52448,
+      "source_sha256": "70944346cfc8e7cd80330f7d108d00ccdb16e97abb3ad4c0b32b3b365ada4e61",
+      "stored_sha256": "70944346cfc8e7cd80330f7d108d00ccdb16e97abb3ad4c0b32b3b365ada4e61",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "stored_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/runtime_protocol.json",
+      "source_bytes": 778,
+      "stored_bytes": 778,
+      "source_sha256": "21ccc6342228a5b841446774eb1efd185bf996be1880527b82378bd01db48e60",
+      "stored_sha256": "21ccc6342228a5b841446774eb1efd185bf996be1880527b82378bd01db48e60",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/protocol.json",
+      "source_bytes": 778,
+      "stored_bytes": 778,
+      "source_sha256": "21ccc6342228a5b841446774eb1efd185bf996be1880527b82378bd01db48e60",
+      "stored_sha256": "21ccc6342228a5b841446774eb1efd185bf996be1880527b82378bd01db48e60",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/launch_command.json",
+      "source_bytes": 1210,
+      "stored_bytes": 1210,
+      "source_sha256": "6f09237c87f2ffed43bad9e317a747fb1099ceeb600669ef416dee8d47a219cf",
+      "stored_sha256": "6f09237c87f2ffed43bad9e317a747fb1099ceeb600669ef416dee8d47a219cf",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/.hydra/config.yaml",
+      "source_bytes": 2117,
+      "stored_bytes": 2117,
+      "source_sha256": "65e0d5c7aab5d3249c88399a0b6d8f74a1ab751d08ebaca0a9ef565f71cc7674",
+      "stored_sha256": "65e0d5c7aab5d3249c88399a0b6d8f74a1ab751d08ebaca0a9ef565f71cc7674",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/.hydra/overrides.yaml",
+      "source_bytes": 862,
+      "stored_bytes": 862,
+      "source_sha256": "9f89c08ed791760c73d38c07394acb6fc8ba1641a9495a29c89c44481a3c8825",
+      "stored_sha256": "9f89c08ed791760c73d38c07394acb6fc8ba1641a9495a29c89c44481a3c8825",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/logs.json",
+      "source_bytes": 1844,
+      "stored_bytes": 481,
+      "source_sha256": "7ddaa9f53e75f2291066964405b463f59a9879ff0795e375f6c42e1860336b9a",
+      "stored_sha256": "e4e3e17f822911b24da205b9335c0ba0db03cfc0b047cfb0d49fb76010437841",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/I/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/I/console.log",
+      "source_bytes": 938011,
+      "stored_bytes": 69183,
+      "source_sha256": "0b30ddf7d4d5dc9c58a7e059836af570a3f815f0b387548ee06e6cc465c755bf",
+      "stored_sha256": "50333e5b803823b1925a9d990045047ff9848fa30e86093eafccccf16262d116",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/final_eval_results.npz",
+      "source_bytes": 49256,
+      "stored_bytes": 49256,
+      "source_sha256": "88b3a26b0ccfdce33b8b37b5dbd37ef2a2ae9a1d1efeb546fdaaf74d34cf5a05",
+      "stored_sha256": "88b3a26b0ccfdce33b8b37b5dbd37ef2a2ae9a1d1efeb546fdaaf74d34cf5a05",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "stored_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/runtime_protocol.json",
+      "source_bytes": 783,
+      "stored_bytes": 783,
+      "source_sha256": "50648d0462870137ab70a951f3147d1ff9796b62c9e62da0490377de4b36e867",
+      "stored_sha256": "50648d0462870137ab70a951f3147d1ff9796b62c9e62da0490377de4b36e867",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/protocol.json",
+      "source_bytes": 783,
+      "stored_bytes": 783,
+      "source_sha256": "50648d0462870137ab70a951f3147d1ff9796b62c9e62da0490377de4b36e867",
+      "stored_sha256": "50648d0462870137ab70a951f3147d1ff9796b62c9e62da0490377de4b36e867",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/launch_command.json",
+      "source_bytes": 1230,
+      "stored_bytes": 1230,
+      "source_sha256": "1c927149b40f78e4e8267abf09fd8b0371ef4972a5f545e36d849892f9aa3521",
+      "stored_sha256": "1c927149b40f78e4e8267abf09fd8b0371ef4972a5f545e36d849892f9aa3521",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/.hydra/config.yaml",
+      "source_bytes": 2132,
+      "stored_bytes": 2132,
+      "source_sha256": "981954d4d1d0ccbaa854166ca4a0ab12471cf98ab60b0f028a6ac2c132c734e1",
+      "stored_sha256": "981954d4d1d0ccbaa854166ca4a0ab12471cf98ab60b0f028a6ac2c132c734e1",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/.hydra/overrides.yaml",
+      "source_bytes": 877,
+      "stored_bytes": 877,
+      "source_sha256": "4eec3b61a109817a8017f1825e2d2bc8c8397d3ba28871a13b4eea6f739e3306",
+      "stored_sha256": "4eec3b61a109817a8017f1825e2d2bc8c8397d3ba28871a13b4eea6f739e3306",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/logs.json",
+      "source_bytes": 1856,
+      "stored_bytes": 497,
+      "source_sha256": "9e8e1a6f1ebefd126552deefcdb59c62be280dc5e18a5d35708939385cdeeab5",
+      "stored_sha256": "856a2eb00a2280aa4c255397cb5c1efccaba2016afe5149069856982fb680ed1",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/square/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/square/console.log",
+      "source_bytes": 937363,
+      "stored_bytes": 67752,
+      "source_sha256": "d74198bc51476e192f40e2d44d6abeaedd4d6e2f4eccbc30068f0be4082524be",
+      "stored_sha256": "8ad3661780a54938442f4140cc5f9f76cd747f2be52abaedf0773009f545524d",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/final_eval_results.npz",
+      "source_bytes": 34364,
+      "stored_bytes": 34364,
+      "source_sha256": "edc19defb7580f14f409c3c8d304729d636193f8832f1196e96311bbf9d30e96",
+      "stored_sha256": "edc19defb7580f14f409c3c8d304729d636193f8832f1196e96311bbf9d30e96",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "stored_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/runtime_protocol.json",
+      "source_bytes": 788,
+      "stored_bytes": 788,
+      "source_sha256": "d0f8ceda89942399ea8a35a869156dde36acf2abf29ce197d518de0c97c6c3e8",
+      "stored_sha256": "d0f8ceda89942399ea8a35a869156dde36acf2abf29ce197d518de0c97c6c3e8",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/protocol.json",
+      "source_bytes": 788,
+      "stored_bytes": 788,
+      "source_sha256": "d0f8ceda89942399ea8a35a869156dde36acf2abf29ce197d518de0c97c6c3e8",
+      "stored_sha256": "d0f8ceda89942399ea8a35a869156dde36acf2abf29ce197d518de0c97c6c3e8",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/launch_command.json",
+      "source_bytes": 1244,
+      "stored_bytes": 1244,
+      "source_sha256": "dc59c669809a3fdbde00149dfda9ba66e38efe65d9e5e93341566252abccdea7",
+      "stored_sha256": "dc59c669809a3fdbde00149dfda9ba66e38efe65d9e5e93341566252abccdea7",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/.hydra/config.yaml",
+      "source_bytes": 2143,
+      "stored_bytes": 2143,
+      "source_sha256": "aa4b6195eb0398df1cd858a1a6ec27b44fb7f29baae61a55e7ba8b41ad01174f",
+      "stored_sha256": "aa4b6195eb0398df1cd858a1a6ec27b44fb7f29baae61a55e7ba8b41ad01174f",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/.hydra/overrides.yaml",
+      "source_bytes": 888,
+      "stored_bytes": 888,
+      "source_sha256": "ce81adad52a8ddad0ad3ef3c7be10afb900db52e37daabed818c253d9aedba67",
+      "stored_sha256": "ce81adad52a8ddad0ad3ef3c7be10afb900db52e37daabed818c253d9aedba67",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/logs.json",
+      "source_bytes": 1857,
+      "stored_bytes": 492,
+      "source_sha256": "1047018f83db65380ed68c5776b2291809f054f686bd02bdf0931da9741d8cf4",
+      "stored_sha256": "ca55c7c7aa5a1efa705d4e711111d7f36bc31cc029ba97f754d40b119c6c985b",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/gd/small_tee/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/gd/small_tee/console.log",
+      "source_bytes": 942753,
+      "stored_bytes": 60428,
+      "source_sha256": "96d8fbd3f9f79d543ca7ca9e8e524d9bc9c9715eaec983b08f741cf81135a134",
+      "stored_sha256": "851a9035aadd3e598f0278a35b559262bb50ef1bcca3f769ebcdf7f512c9adc2",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/final_eval_results.npz",
+      "source_bytes": 49033,
+      "stored_bytes": 49033,
+      "source_sha256": "2f7e3e6e15191ce2ee82338f90b10175f3547c647805e2dbe15b7d5af2de26df",
+      "stored_sha256": "2f7e3e6e15191ce2ee82338f90b10175f3547c647805e2dbe15b7d5af2de26df",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "stored_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/runtime_protocol.json",
+      "source_bytes": 664,
+      "stored_bytes": 664,
+      "source_sha256": "52c4ff376b273ef280d7ef3b1cf91d9476879d84376b2f948e9f9c99a7a4159c",
+      "stored_sha256": "52c4ff376b273ef280d7ef3b1cf91d9476879d84376b2f948e9f9c99a7a4159c",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/protocol.json",
+      "source_bytes": 664,
+      "stored_bytes": 664,
+      "source_sha256": "52c4ff376b273ef280d7ef3b1cf91d9476879d84376b2f948e9f9c99a7a4159c",
+      "stored_sha256": "52c4ff376b273ef280d7ef3b1cf91d9476879d84376b2f948e9f9c99a7a4159c",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/launch_command.json",
+      "source_bytes": 1139,
+      "stored_bytes": 1139,
+      "source_sha256": "df90c6f7927a9bfb4e9f7ddbf064ad309a5b4185d9da76ce7e13efc71737667c",
+      "stored_sha256": "df90c6f7927a9bfb4e9f7ddbf064ad309a5b4185d9da76ce7e13efc71737667c",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/.hydra/config.yaml",
+      "source_bytes": 2083,
+      "stored_bytes": 2083,
+      "source_sha256": "61caf1542b6f5926ac54f9fe2fd0c9b9b2921978e7fa42aacd93976ee8f01689",
+      "stored_sha256": "61caf1542b6f5926ac54f9fe2fd0c9b9b2921978e7fa42aacd93976ee8f01689",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/.hydra/overrides.yaml",
+      "source_bytes": 793,
+      "stored_bytes": 793,
+      "source_sha256": "1bba413da4e02aee44d5499df4f6bcdd2d0a6bab6c3c55fd08e9f5eae88c8425",
+      "stored_sha256": "1bba413da4e02aee44d5499df4f6bcdd2d0a6bab6c3c55fd08e9f5eae88c8425",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/logs.json",
+      "source_bytes": 1858,
+      "stored_bytes": 503,
+      "source_sha256": "afee5abf59bffa0fea2f35222cc0f400c844837c1fbb7be7a401db49a59144ec",
+      "stored_sha256": "1573309738bb31a04600c12155aa0217856defe0c9e80e8fc2141eb513d150ea",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/I/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/I/console.log",
+      "source_bytes": 25718,
+      "stored_bytes": 5228,
+      "source_sha256": "1d5f9070478fb4c2af1f1fbe56f42c8960a995853c790710dcbda395bd99ebe5",
+      "stored_sha256": "66154ef7a5cd823017f2a01f26980dcd80d944aaae9f96ced7904881cc1240bc",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/final_eval_results.npz",
+      "source_bytes": 42301,
+      "stored_bytes": 42301,
+      "source_sha256": "0085abed37026ef3dd484905ab1c5827c828327144cff63bc8bf22ecb47f7063",
+      "stored_sha256": "0085abed37026ef3dd484905ab1c5827c828327144cff63bc8bf22ecb47f7063",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "stored_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/runtime_protocol.json",
+      "source_bytes": 669,
+      "stored_bytes": 669,
+      "source_sha256": "c0964a7a5451d2b13555255785b4c53ae99ae9a35ee1626108e6fc75008fba86",
+      "stored_sha256": "c0964a7a5451d2b13555255785b4c53ae99ae9a35ee1626108e6fc75008fba86",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/protocol.json",
+      "source_bytes": 669,
+      "stored_bytes": 669,
+      "source_sha256": "c0964a7a5451d2b13555255785b4c53ae99ae9a35ee1626108e6fc75008fba86",
+      "stored_sha256": "c0964a7a5451d2b13555255785b4c53ae99ae9a35ee1626108e6fc75008fba86",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/launch_command.json",
+      "source_bytes": 1159,
+      "stored_bytes": 1159,
+      "source_sha256": "907790a5b47663772762747ce615f5e130e78abe138022f53b6d51cbb7c356f9",
+      "stored_sha256": "907790a5b47663772762747ce615f5e130e78abe138022f53b6d51cbb7c356f9",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/.hydra/config.yaml",
+      "source_bytes": 2098,
+      "stored_bytes": 2098,
+      "source_sha256": "2d731d40d5d36d237a819c9fbd2c433d4e9b2e5015fe3f792a22e42e816959d7",
+      "stored_sha256": "2d731d40d5d36d237a819c9fbd2c433d4e9b2e5015fe3f792a22e42e816959d7",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/.hydra/overrides.yaml",
+      "source_bytes": 808,
+      "stored_bytes": 808,
+      "source_sha256": "c43f5d69908fcb423908f04e5dfcd752c73b8c28f5d01a828b65e27868591ffc",
+      "stored_sha256": "c43f5d69908fcb423908f04e5dfcd752c73b8c28f5d01a828b65e27868591ffc",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/logs.json",
+      "source_bytes": 1841,
+      "stored_bytes": 496,
+      "source_sha256": "b7457a13a2bb601ae00ed9ef4c2c1cf5535328e2866c258bc593fc52c3fc1ead",
+      "stored_sha256": "9f4aa4a82b6db13bd3874642d7c5e9de359d5dc7381b8802246a337a2dacf41b",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/square/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/square/console.log",
+      "source_bytes": 25717,
+      "stored_bytes": 5008,
+      "source_sha256": "2f6bf53226ffa05298d4fe25df767962b68eacb03c75c2bef8f8350398202ca8",
+      "stored_sha256": "755586bad66f32a044b46e91a67dad767adccc062c294c4b963e039190b6b8d1",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/final_eval_results.npz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/final_eval_results.npz",
+      "source_bytes": 32472,
+      "stored_bytes": 32472,
+      "source_sha256": "48d5535a8fbe7eb2f3973e33634e3d4dc79cb7473be149a9cf8cdac94959e0d1",
+      "stored_sha256": "48d5535a8fbe7eb2f3973e33634e3d4dc79cb7473be149a9cf8cdac94959e0d1",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "stored_sha256": "4f14e1431877ae062e346a5c3e22e95d94649f59fee0b38853cbdd26eae3abf0",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/runtime_protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/runtime_protocol.json",
+      "source_bytes": 674,
+      "stored_bytes": 674,
+      "source_sha256": "8a178430c868adc55fb82cab17cac14231ee8dea127c260df81dd2249495ca3d",
+      "stored_sha256": "8a178430c868adc55fb82cab17cac14231ee8dea127c260df81dd2249495ca3d",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/protocol.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/protocol.json",
+      "source_bytes": 674,
+      "stored_bytes": 674,
+      "source_sha256": "8a178430c868adc55fb82cab17cac14231ee8dea127c260df81dd2249495ca3d",
+      "stored_sha256": "8a178430c868adc55fb82cab17cac14231ee8dea127c260df81dd2249495ca3d",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/launch_command.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/launch_command.json",
+      "source_bytes": 1173,
+      "stored_bytes": 1173,
+      "source_sha256": "d50cf5b6913e496260c082da8016e99546fe4bd5178d232375dc02471c85f48d",
+      "stored_sha256": "d50cf5b6913e496260c082da8016e99546fe4bd5178d232375dc02471c85f48d",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/.hydra/config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/.hydra/config.yaml",
+      "source_bytes": 2109,
+      "stored_bytes": 2109,
+      "source_sha256": "97697373e0703864ab2929707ba6ca64b4c6d791adf0536deb823d0bcddc7193",
+      "stored_sha256": "97697373e0703864ab2929707ba6ca64b4c6d791adf0536deb823d0bcddc7193",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/.hydra/overrides.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/.hydra/overrides.yaml",
+      "source_bytes": 819,
+      "stored_bytes": 819,
+      "source_sha256": "4220c4dfb03a083fa804fa7b65124846f86a61c5bc529418c4718b6185dc2a03",
+      "stored_sha256": "4220c4dfb03a083fa804fa7b65124846f86a61c5bc529418c4718b6185dc2a03",
+      "gzip": false
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/logs.json.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/logs.json",
+      "source_bytes": 1849,
+      "stored_bytes": 498,
+      "source_sha256": "1d29990af511c1d82419ef200a39993c2c120522c9991ca5ee69c1d96d3b1fad",
+      "stored_sha256": "67ffd5e884199cb40438bbdc88e40234cf3df7da50f6e6e224b652a1b84e2b3d",
+      "gzip": true
+    },
+    {
+      "path": "completed_runs/dinowm_pushobj/cem/small_tee/console.log.gz",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/cem/small_tee/console.log",
+      "source_bytes": 26071,
+      "stored_bytes": 4493,
+      "source_sha256": "f616bce45e37f288910f05c3e91f73c77b67d0c23a1ec73b2cd1ec117bef67e2",
+      "stored_sha256": "c5506af712d6981b3d98e98852f1ba902f4a210bbeebfa837387c1b64da442c1",
+      "gzip": true
+    },
+    {
+      "path": "source_metadata/pushobj/summary.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/summary.json",
+      "source_bytes": 2758,
+      "stored_bytes": 2758,
+      "source_sha256": "0726cbaee8747b224847b76a36dc89a8e6ac7bccf7852e4f3db9982d574eb9a5",
+      "stored_sha256": "0726cbaee8747b224847b76a36dc89a8e6ac7bccf7852e4f3db9982d574eb9a5",
+      "gzip": false
+    },
+    {
+      "path": "source_metadata/pushobj/pipeline_status.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/pipeline_status.json",
+      "source_bytes": 5380,
+      "stored_bytes": 5380,
+      "source_sha256": "8ddca94f9d9ffad68c93f5f0e6feff7211ffbf5973bbd173abdcb444a1511155",
+      "stored_sha256": "8ddca94f9d9ffad68c93f5f0e6feff7211ffbf5973bbd173abdcb444a1511155",
+      "gzip": false
+    },
+    {
+      "path": "source_metadata/pushobj/epoch_budget_guard.json",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dinowm_pushobj_random16k_e10_20261106/epoch_budget_guard.json",
+      "source_bytes": 1075,
+      "stored_bytes": 1075,
+      "source_sha256": "5a070808de84caf9ccb3f73aba4fd5b434418f294b8a5c55c78c1ca506c64995",
+      "stored_sha256": "5a070808de84caf9ccb3f73aba4fd5b434418f294b8a5c55c78c1ca506c64995",
+      "gzip": false
+    },
+    {
+      "path": "references/evaluation_plan.json",
+      "source": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/evaluation_plan.json",
+      "source_bytes": 4404,
+      "stored_bytes": 4404,
+      "source_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+      "stored_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+      "gzip": false
+    },
+    {
+      "path": "references/targets/pusht_T.pkl",
+      "source": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/targets/pusht_T.pkl",
+      "source_bytes": 40609,
+      "stored_bytes": 40609,
+      "source_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+      "stored_sha256": "1950b39e5d3ba13b30c14a435a400d84cd3fbe30138cdfed55e98b202d76277b",
+      "gzip": false
+    },
+    {
+      "path": "evaluation_code/gd_microbatch.py",
+      "source": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/evaluation_dual/gd_microbatch.py",
+      "source_bytes": 1353,
+      "stored_bytes": 1353,
+      "source_sha256": "19c11d3f3f55201551b14dd444d5dee549af25d3f052f080c44724b0f9d7b6ef",
+      "stored_sha256": "19c11d3f3f55201551b14dd444d5dee549af25d3f052f080c44724b0f9d7b6ef",
+      "gzip": false
+    },
+    {
+      "path": "evaluation_code/evaluate.py",
+      "source": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/evaluation_dual/evaluate.py",
+      "source_bytes": 5485,
+      "stored_bytes": 5485,
+      "source_sha256": "4f4d7d42f09a3e84ec114d6c0c079f6ece2cbf5cb3ee7582aea26e9c2c7a5dcc",
+      "stored_sha256": "4f4d7d42f09a3e84ec114d6c0c079f6ece2cbf5cb3ee7582aea26e9c2c7a5dcc",
+      "gzip": false
+    },
+    {
+      "path": "evaluation_code/conf/plan.yaml",
+      "source": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/evaluation_dual/conf/plan.yaml",
+      "source_bytes": 1940,
+      "stored_bytes": 1940,
+      "source_sha256": "d080e97d2761a64418aff2ff9a62ebe2d8b4079286b43954657bf7b204c1f47a",
+      "stored_sha256": "d080e97d2761a64418aff2ff9a62ebe2d8b4079286b43954657bf7b204c1f47a",
+      "gzip": false
+    },
+    {
+      "path": "references/dinowm_pusht_training_config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pusht_random16k_orig_e3_20261106/hydra.yaml",
+      "source_bytes": 2298,
+      "stored_bytes": 2298,
+      "source_sha256": "f3a75550ef7f49cf33d69faf7e7513952f1b7654a3ae0be7c1efe3e8a399d54d",
+      "stored_sha256": "f3a75550ef7f49cf33d69faf7e7513952f1b7654a3ae0be7c1efe3e8a399d54d",
+      "gzip": false
+    },
+    {
+      "path": "references/dinowm_pushobj_training_config.yaml",
+      "source": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dinowm_pushobj_random16k_orig_e3_20261106/hydra.yaml",
+      "source_bytes": 2302,
+      "stored_bytes": 2302,
+      "source_sha256": "226cce174e58f11dd196b41db1023006df139de7871a636179deea11ac0af8c3",
+      "stored_sha256": "226cce174e58f11dd196b41db1023006df139de7871a636179deea11ac0af8c3",
+      "gzip": false
+    },
+    {
+      "path": "audits/color_analysis/color_feature_analysis.json",
+      "source": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/color_analysis/color_feature_analysis.json",
+      "source_bytes": 1682,
+      "stored_bytes": 1682,
+      "source_sha256": "6df8ec920e8a47d365f62e29375be4fe08f8b8675eedf70cee90606788da1d77",
+      "stored_sha256": "6df8ec920e8a47d365f62e29375be4fe08f8b8675eedf70cee90606788da1d77",
+      "gzip": false
+    },
+    {
+      "path": "audits/color_analysis/README.md",
+      "source": "/data/zjc/adaJEPA/experiment_plans/dinowm_random16k_original_e10_20261106/color_analysis/README.md",
+      "source_bytes": 1875,
+      "stored_bytes": 1875,
+      "source_sha256": "b40cd2cb865f613d3c8dfa2532077dcef88b5003dbb6186057cbaf6e25ad1ee6",
+      "stored_sha256": "b40cd2cb865f613d3c8dfa2532077dcef88b5003dbb6186057cbaf6e25ad1ee6",
+      "gzip": false
+    },
+    {
+      "path": "audits/prior_dinowm_audit.md",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/reports/dinowm_audit_20261106/REPORT.md",
+      "source_bytes": 10149,
+      "stored_bytes": 10149,
+      "source_sha256": "a2b56ad5c0e01b24bc295d54d903703155e9cb38c20de2b6921beae4253e8b59",
+      "stored_sha256": "a2b56ad5c0e01b24bc295d54d903703155e9cb38c20de2b6921beae4253e8b59",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/full_delivery.zip",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110.zip",
+      "source_bytes": 1383831,
+      "stored_bytes": 1383831,
+      "source_sha256": "6a84db6bbf6796a80dfdf7bba5b11e9087d1c801d40ec709e1425f52dc6987b6",
+      "stored_sha256": "6a84db6bbf6796a80dfdf7bba5b11e9087d1c801d40ec709e1425f52dc6987b6",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/README.md",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/README.md",
+      "source_bytes": 4920,
+      "stored_bytes": 4920,
+      "source_sha256": "903b0b7cdcbcc8d671c59b8a63aa176cc2b11316016c25e3bfcf675546e66d92",
+      "stored_sha256": "903b0b7cdcbcc8d671c59b8a63aa176cc2b11316016c25e3bfcf675546e66d92",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/delivery_manifest.json",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/delivery_manifest.json",
+      "source_bytes": 579,
+      "stored_bytes": 579,
+      "source_sha256": "4efb38f91feac011d783452abd90079f30f24e107c49fe85960ba54de5e7ea01",
+      "stored_sha256": "4efb38f91feac011d783452abd90079f30f24e107c49fe85960ba54de5e7ea01",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/preview_start_final_goal.png",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/preview_start_final_goal.png",
+      "source_bytes": 5975,
+      "stored_bytes": 5975,
+      "source_sha256": "7b8da3ae6316978725d7da38c0bcda2fca13ed2288b330eca9d5ca2cc8cc6808",
+      "stored_sha256": "7b8da3ae6316978725d7da38c0bcda2fca13ed2288b330eca9d5ca2cc8cc6808",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/verification.json",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/verification.json",
+      "source_bytes": 1105,
+      "stored_bytes": 1105,
+      "source_sha256": "65ba33fdc7194df2eec886863e30f3ac0559da85b46057b694e16914a654fcbf",
+      "stored_sha256": "65ba33fdc7194df2eec886863e30f3ac0559da85b46057b694e16914a654fcbf",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/attempt_02/summary.json",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/attempt_02/summary.json",
+      "source_bytes": 3376,
+      "stored_bytes": 3376,
+      "source_sha256": "29fa320281599f2abac9a8d7be8d7fadf9a2100178ed03088e9739a68d62bc87",
+      "stored_sha256": "29fa320281599f2abac9a8d7be8d7fadf9a2100178ed03088e9739a68d62bc87",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/attempt_02/resolved_config.yaml",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/attempt_02/resolved_config.yaml",
+      "source_bytes": 2320,
+      "stored_bytes": 2320,
+      "source_sha256": "d0c3cd8dcb81ecf2e5254708760a4a40757636774e87efab84f012a1fea721f6",
+      "stored_sha256": "d0c3cd8dcb81ecf2e5254708760a4a40757636774e87efab84f012a1fea721f6",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/attempt_02/frozen_weights_check.json",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/attempt_02/frozen_weights_check.json",
+      "source_bytes": 196,
+      "stored_bytes": 196,
+      "source_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "stored_sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/attempt_02/target_check.json",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/attempt_02/target_check.json",
+      "source_bytes": 286,
+      "stored_bytes": 286,
+      "source_sha256": "4102bbf904a4a664506ee81f1485e47cd09832c816673f98d41c36bd48c6f177",
+      "stored_sha256": "4102bbf904a4a664506ee81f1485e47cd09832c816673f98d41c36bd48c6f177",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/attempt_02/start.png",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/attempt_02/start.png",
+      "source_bytes": 2376,
+      "stored_bytes": 2376,
+      "source_sha256": "66d441fb6c50cc472b2164eb0b8ccbe136f4ca83e19f3921b32a870c179f32be",
+      "stored_sha256": "66d441fb6c50cc472b2164eb0b8ccbe136f4ca83e19f3921b32a870c179f32be",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/attempt_02/goal.png",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/attempt_02/goal.png",
+      "source_bytes": 2841,
+      "stored_bytes": 2841,
+      "source_sha256": "7eaac9006dd25ff77646da38044dcdcc30d059f85b977367df930f04f49a81a5",
+      "stored_sha256": "7eaac9006dd25ff77646da38044dcdcc30d059f85b977367df930f04f49a81a5",
+      "gzip": false
+    },
+    {
+      "path": "qualitative/figure3_red_object_idx31_30x5/results/attempt_02/final.png",
+      "source": "/data/zjc/adaJEPA/exports/dinowm_red_object_idx31_gd_30mpc_delivery_20261110/results/attempt_02/final.png",
+      "source_bytes": 2399,
+      "stored_bytes": 2399,
+      "source_sha256": "60b26b1d561f68efa45b653ccf6afb3dce478a5d0259529eb80614a03b5294de",
+      "stored_sha256": "60b26b1d561f68efa45b653ccf6afb3dce478a5d0259529eb80614a03b5294de",
+      "gzip": false
+    }
+  ]
+}

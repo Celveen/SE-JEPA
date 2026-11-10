@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "batch_runs": 20,
+  "episodes": 1000,
+  "singleton_runs": 1,
+  "payloads_manifest_verified": 214,
+  "all_files_checksummed": 217,
+  "new_lewm_content_included": false
+}

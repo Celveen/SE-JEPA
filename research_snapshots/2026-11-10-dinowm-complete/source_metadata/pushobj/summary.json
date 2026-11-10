@@ -1,0 +1,95 @@
+{
+  "task": "pushobj",
+  "episodes": 300,
+  "epoch": 3,
+  "checkpoint_sha256": "4a7166bc75ff2924cb140845ea1ebc785f2f0def4a9c3e47b55fb9104c85b0c0",
+  "evaluation_plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+  "controller": {
+    "objective": "last",
+    "physical_steps_per_replan": 25,
+    "max_replans": 6,
+    "max_physical_steps": 150
+  },
+  "by_planner": {
+    "gd": {
+      "conditions": {
+        "I": {
+          "episodes": 50,
+          "successes": 8,
+          "success_rate": 0.16,
+          "mean_mpc_replans": 5.24,
+          "mean_physical_steps": 131.0,
+          "pretraining_shape_status": "seen"
+        },
+        "square": {
+          "episodes": 50,
+          "successes": 12,
+          "success_rate": 0.24,
+          "mean_mpc_replans": 4.88,
+          "mean_physical_steps": 122.0,
+          "pretraining_shape_status": "seen"
+        },
+        "small_tee": {
+          "episodes": 50,
+          "successes": 28,
+          "success_rate": 0.56,
+          "mean_mpc_replans": 3.28,
+          "mean_physical_steps": 82.0,
+          "pretraining_shape_status": "unseen"
+        }
+      },
+      "episodes": 150,
+      "group_success_rate": 0.32,
+      "mean_mpc_replans": 4.466666666666667,
+      "mean_physical_steps": 111.66666666666667,
+      "true_unseen_shapes_for_this_checkpoint": [
+        "small_tee"
+      ],
+      "true_unseen_success_rate": 0.56
+    },
+    "cem": {
+      "conditions": {
+        "I": {
+          "episodes": 50,
+          "successes": 12,
+          "success_rate": 0.24,
+          "mean_mpc_replans": 4.9,
+          "mean_physical_steps": 122.50000000000001,
+          "pretraining_shape_status": "seen"
+        },
+        "square": {
+          "episodes": 50,
+          "successes": 20,
+          "success_rate": 0.4,
+          "mean_mpc_replans": 4.16,
+          "mean_physical_steps": 104.0,
+          "pretraining_shape_status": "seen"
+        },
+        "small_tee": {
+          "episodes": 50,
+          "successes": 30,
+          "success_rate": 0.6,
+          "mean_mpc_replans": 3.1,
+          "mean_physical_steps": 77.5,
+          "pretraining_shape_status": "unseen"
+        }
+      },
+      "episodes": 150,
+      "group_success_rate": 0.41333333333333333,
+      "mean_mpc_replans": 4.053333333333334,
+      "mean_physical_steps": 101.33333333333333,
+      "true_unseen_shapes_for_this_checkpoint": [
+        "small_tee"
+      ],
+      "true_unseen_success_rate": 0.6
+    }
+  },
+  "training_shapes": [
+    "I",
+    "T",
+    "Z",
+    "square"
+  ],
+  "comparison_group_label": "same three shapes as Ours unseen group; I/square are seen by this DINO-WM",
+  "mean_steps_definition": "All episodes; failures use the configured MPC cap and 150 physical steps."
+}

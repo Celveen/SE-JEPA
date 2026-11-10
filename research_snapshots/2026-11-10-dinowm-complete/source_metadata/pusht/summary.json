@@ -1,0 +1,152 @@
+{
+  "task": "pusht",
+  "episodes": 700,
+  "epoch": 3,
+  "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+  "evaluation_plan_sha256": "43603400c2acf3411693c7e0aa2bee65571af8828cddcd21782d262459b1ffcd",
+  "controller": {
+    "objective": "last",
+    "physical_steps_per_replan": 25,
+    "max_replans": 6,
+    "max_physical_steps": 150
+  },
+  "by_planner": {
+    "gd": {
+      "conditions": {
+        "default": {
+          "episodes": 50,
+          "successes": 25,
+          "success_rate": 0.5,
+          "mean_mpc_replans": 3.58,
+          "mean_physical_steps": 89.5,
+          "pretraining_shape_status": "seen"
+        },
+        "blur": {
+          "episodes": 50,
+          "successes": 22,
+          "success_rate": 0.44,
+          "mean_mpc_replans": 3.9,
+          "mean_physical_steps": 97.5,
+          "pretraining_shape_status": "seen"
+        },
+        "snp": {
+          "episodes": 50,
+          "successes": 4,
+          "success_rate": 0.08,
+          "mean_mpc_replans": 5.68,
+          "mean_physical_steps": 142.0,
+          "pretraining_shape_status": "seen"
+        },
+        "dark": {
+          "episodes": 50,
+          "successes": 25,
+          "success_rate": 0.5,
+          "mean_mpc_replans": 3.58,
+          "mean_physical_steps": 89.5,
+          "pretraining_shape_status": "seen"
+        },
+        "red_agent": {
+          "episodes": 50,
+          "successes": 22,
+          "success_rate": 0.44,
+          "mean_mpc_replans": 3.86,
+          "mean_physical_steps": 96.5,
+          "pretraining_shape_status": "seen"
+        },
+        "red_object": {
+          "episodes": 50,
+          "successes": 18,
+          "success_rate": 0.36,
+          "mean_mpc_replans": 4.28,
+          "mean_physical_steps": 107.0,
+          "pretraining_shape_status": "seen"
+        },
+        "red_goal": {
+          "episodes": 50,
+          "successes": 23,
+          "success_rate": 0.46,
+          "mean_mpc_replans": 3.82,
+          "mean_physical_steps": 95.5,
+          "pretraining_shape_status": "seen"
+        }
+      },
+      "episodes": 350,
+      "group_success_rate": 0.39714285714285713,
+      "mean_mpc_replans": 4.1000000000000005,
+      "mean_physical_steps": 102.5,
+      "color_success_rate": 0.42,
+      "six_shift_success_rate": 0.37999999999999995
+    },
+    "cem": {
+      "conditions": {
+        "default": {
+          "episodes": 50,
+          "successes": 24,
+          "success_rate": 0.48,
+          "mean_mpc_replans": 3.68,
+          "mean_physical_steps": 92.0,
+          "pretraining_shape_status": "seen"
+        },
+        "blur": {
+          "episodes": 50,
+          "successes": 20,
+          "success_rate": 0.4,
+          "mean_mpc_replans": 4.1,
+          "mean_physical_steps": 102.49999999999999,
+          "pretraining_shape_status": "seen"
+        },
+        "snp": {
+          "episodes": 50,
+          "successes": 1,
+          "success_rate": 0.02,
+          "mean_mpc_replans": 5.9,
+          "mean_physical_steps": 147.5,
+          "pretraining_shape_status": "seen"
+        },
+        "dark": {
+          "episodes": 50,
+          "successes": 22,
+          "success_rate": 0.44,
+          "mean_mpc_replans": 3.84,
+          "mean_physical_steps": 96.0,
+          "pretraining_shape_status": "seen"
+        },
+        "red_agent": {
+          "episodes": 50,
+          "successes": 20,
+          "success_rate": 0.4,
+          "mean_mpc_replans": 4.04,
+          "mean_physical_steps": 101.0,
+          "pretraining_shape_status": "seen"
+        },
+        "red_object": {
+          "episodes": 50,
+          "successes": 12,
+          "success_rate": 0.24,
+          "mean_mpc_replans": 4.94,
+          "mean_physical_steps": 123.50000000000001,
+          "pretraining_shape_status": "seen"
+        },
+        "red_goal": {
+          "episodes": 50,
+          "successes": 24,
+          "success_rate": 0.48,
+          "mean_mpc_replans": 3.64,
+          "mean_physical_steps": 91.0,
+          "pretraining_shape_status": "seen"
+        }
+      },
+      "episodes": 350,
+      "group_success_rate": 0.3514285714285714,
+      "mean_mpc_replans": 4.305714285714286,
+      "mean_physical_steps": 107.64285714285714,
+      "color_success_rate": 0.37333333333333335,
+      "six_shift_success_rate": 0.33
+    }
+  },
+  "training_shapes": [
+    "T"
+  ],
+  "comparison_group_label": "seven visual conditions",
+  "mean_steps_definition": "All episodes; failures use the configured MPC cap and 150 physical steps."
+}
