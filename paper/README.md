@@ -50,12 +50,17 @@ The original server delivery and an independent local evidence audit are in
 archived for provenance.
 
 Figure 8 adds a single row of 14 native simulator observations, one per domain,
-above its three learning panels. Frames use episode zero of GD chain two, round
+below its three learning panels. Frames use episode zero of GD chain two, round
 five, without outcome-based selection or image alteration.
 
 Only the DINO-WM PushT CEM cells have been replaced by the random-data epoch-three
-checkpoint: Shift 33.0%, Color 37.3%, mean MPC replans 4.41. PushObj is unchanged.
+checkpoint: Shift 33.0%, Color 37.3%, Steps 22.05 in five-action units. PushObj is unchanged.
 `data/dinowm_pusht_cem_epoch3/` archives the pinned pipeline summary and five
 available raw episode files; the red-object/red-goal values are summary-backed.
 Baseline descriptions have been shortened while retaining checkpoint provenance,
 references and necessary evaluation distinctions.
+
+The abstract now uses the author’s `abstract1.md` verbatim. Its quantitative
+claims were checked against the paired held-out comparisons, accumulation
+diagnostic and fourth-pass deformable results; see `data/abstract_results_audit.json`.
+Appendix B briefly explains DINO-WM PushT’s Steps conversion (4.41 × 5 = 22.05).

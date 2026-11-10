@@ -25,6 +25,8 @@ For the paired rigid-object comparisons, GD uses 100 optimization steps; CEM use
 \end{equation}
 Equivalently, $\overline{T} = T_{\max} - \sum_{t=1}^{T_{\max}-1} F(t)$, where $F(t)$ is the fraction of episodes solved by replan $t$; the cumulative curves in Fig.~\mainref{fig:efficiency_main} visualize $F$.
 
+DINO-WM PushT CEM executes 25 actions per replan; Table~\mainref{tab:main} converts its mean to five-action units, $4.41\times25/5=22.05$, with failures assigned 30 units.
+
 \subsection{Deformable manipulation}
 Rope and granular each use one slow predictor, a DINO-WM backbone, and 50 instances revisited over four passes, with the same targets, order, and planning seeds in every pass. The slow-only variant plans from the slow predictor without fast within-episode updates. CEM uses 300 samples, 30 elites, and 10 iterations, with three MPC iterations of five pushes each. The unseen-rope evaluation freezes the predictor saved after the first pass and tests it on 91 instances absent from the learning stream, against the frozen reference on the same instances. Mean CD falls from 0.664 with the reference to 0.349 with the one-pass predictor. Across the 91 matched instances, the predictor improves CD on 56. A paired percentile bootstrap over instances (20,000 resamples, seed 20261107) gives a 95\% interval of [0.162, 0.470] for the mean CD reduction. The observed mean reduction is 0.314. Two frozen granular episodes with unstable batched particle simulation were rerun individually with identical settings and seeds.
 

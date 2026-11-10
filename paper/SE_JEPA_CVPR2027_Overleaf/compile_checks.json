@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T20:17:05-08:00",
+  "checked_at": "2026-11-09T21:06:07-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "7327dcfc2521fa3471d593786f86e1e58a39613de00293f88b15df11f77ea19a",
+    "pdf_sha256": "85a2f16e4d1b6cf9de8646dca6aff53d0b273e018bf46a0f465a8db984024cf9",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -36,7 +36,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "2496a5b920acd58499ea487d4a23841cb3e68680c472de107123ce5587672ab2"
+    "pdf_sha256": "fa792f2b665d696f9a6893fddf44e97146ea80766b5a13bffd1b7fd27b270b55"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -159,7 +159,7 @@
       },
       "matched_initial_and_goal_pixels": true,
       "original_visual_example_archived": true,
-      "main_cem_step_units_unchanged": true,
+      "main_cem_step_units_unchanged": false,
       "common_environment_action_budget": 150,
       "ours_success_mpc_replans_per_case": 6,
       "visual_dino_failure_mpc_replans": 30,
@@ -170,7 +170,8 @@
         "evidence": "data/revision_assets/dinowm_visual_30mpc/local_audit.json"
       },
       "all_methods_actions_per_replan": 5,
-      "real_visual_rerun_verified": true
+      "real_visual_rerun_verified": true,
+      "figure3_still_counts_actual_mpc_replans": true
     }
   },
   "ablation": {
@@ -227,7 +228,7 @@
     "placement": "Main Section 4.5 and Figure 8; detailed comparison tables in Appendix D",
     "main_section": "4.5",
     "main_section_page": 7,
-    "plot_layout": "One row of 14 native observations above three panels; all methods average GD and CEM equally",
+    "plot_layout": "Three learning panels above one row of 14 native observations; all methods average GD and CEM equally",
     "plot_aggregation_source": "data/mixed14_planner_average.json",
     "baseline_lines": "Horizontal archived evaluation references; not five-round trajectories",
     "plot_uncertainty": "Sample SD across six actual planner-by-chain or planner-by-seed success rates",
@@ -237,7 +238,7 @@
       "frame": "Native saved initial observation",
       "selection": "GD chain 2, round 5, episode 0 of every domain",
       "pixels_unchanged": true,
-      "placement": "One row above the three learning panels"
+      "placement": "One row below the three learning panels"
     }
   },
   "clean_upload_files": 47,
@@ -263,7 +264,11 @@
   "dinowm_pusht_cem": {
     "shift_rate": 33.0,
     "color_rate": 37.333333333333336,
-    "steps": 4.41,
+    "steps": 22.05,
+    "steps_unit": "five-environment-action equivalents",
+    "native_mpc_replans": 4.41,
+    "scale_to_table_steps": 5,
+    "max_table_steps": 30,
     "shift_successes": 99,
     "shift_episodes": 300,
     "color_successes": 56,
@@ -280,5 +285,7 @@
       "red_object",
       "red_goal"
     ]
-  }
+  },
+  "abstract_author_source": "data/drive_reference/abstract1.md",
+  "abstract_numeric_audit": "data/abstract_results_audit.json"
 }

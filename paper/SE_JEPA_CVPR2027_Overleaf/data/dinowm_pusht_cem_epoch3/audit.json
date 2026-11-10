@@ -1,7 +1,11 @@
 {
   "shift_rate": 33.0,
   "color_rate": 37.333333333333336,
-  "steps": 4.41,
+  "steps": 22.05,
+  "steps_unit": "five-environment-action equivalents",
+  "native_mpc_replans": 4.41,
+  "scale_to_table_steps": 5,
+  "max_table_steps": 30,
   "shift_successes": 99,
   "shift_episodes": 300,
   "color_successes": 56,

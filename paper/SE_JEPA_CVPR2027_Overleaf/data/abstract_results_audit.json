@@ -1,0 +1,53 @@
+{
+  "author_source": "data/drive_reference/abstract1.md",
+  "author_source_sha256": "56decac0d88b65ecfb176b4de45569a847f7deb037f8ebbe0fa091ddd93d6910",
+  "text_used_verbatim": true,
+  "tex_only_changes": "Percent signs escaped; abstract environment added.",
+  "heldout_success_gain_pp": {
+    "PushObj_unseen_GD": 17.111111111111107,
+    "PushT_shifted_GD": 18.740740740740733,
+    "PushObj_unseen_CEM": 15.407407407407398,
+    "PushT_shifted_CEM": 15.888888888888893
+  },
+  "heldout_scope": "Paired post-learning PushObj unseen shapes and PushT six visual shifts; both GD and CEM. Not the online PushObj main-table row or the seven-condition visual All rate.",
+  "reported_gain_range_pp": [
+    15,
+    19
+  ],
+  "chamfer_reduction_vs_frozen_percent": {
+    "rope": 48.575420360889645,
+    "granular": 26.731446835473015
+  },
+  "cd_scope": "Fourth-pass main-table slow predictor versus pretrained DINO-WM on the matched 50-instance stream.",
+  "reported_max_cd_reduction_percent": 49,
+  "fingerprint_diagnostic": {
+    "gd": {
+      "episodes": 2450,
+      "cosine_count": 2449,
+      "cosine_mean": 0.018377028814825575,
+      "cosine_median": 0.011860939361425906,
+      "writes": 622,
+      "reads": 630
+    },
+    "cem": {
+      "episodes": 2450,
+      "cosine_count": 2449,
+      "cosine_mean": 0.0180511076652812,
+      "cosine_median": 0.011637380255438307,
+      "writes": 663,
+      "reads": 666
+    }
+  },
+  "inheritance_diagnostic": {
+    "reset_percent": 62,
+    "inherit_percent": 48,
+    "matched_goals": 100,
+    "source": "data/matched_accumulation_source.md"
+  },
+  "sources_sha256": {
+    "data/paper_snapshot.json": "29be26f8e6c61fd87f60927c7e95b9da4e78a3db92a9aead262549e9c47ff135",
+    "data/revision_assets/visual_summary.json": "bdf6c65a6f1bc923917bd78a24c911223b43e00e2642be3948cf5c38159ea5b1",
+    "data/direction_diagnostic.json": "68d75323fccb390e6c9543be96faacab142119475891d58e51a9fad5d3e81053",
+    "data/matched_accumulation_source.md": "6fd3eac9d2737e4be11130deaeada74a00a9c6c2a3f7e135de9d3c65d03388ed"
+  }
+}

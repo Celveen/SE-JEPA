@@ -32,9 +32,10 @@ def verified_pusht_cem(directory):
     n=sum(conditions[x]['episodes'] for x in shifts);k=sum(conditions[x]['successes'] for x in shifts)
     nc=sum(conditions[x]['episodes'] for x in colors);kc=sum(conditions[x]['successes'] for x in colors)
     total=sum(conditions[x]['episodes']*conditions[x]['mean_mpc_replans'] for x in shifts)
-    result={'shift_rate':100*k/n,'color_rate':100*kc/nc,'steps':total/n,'shift_successes':k,'shift_episodes':n,'color_successes':kc,'color_episodes':nc,'mpc_replans_total':int(round(total)),'environment_actions_per_replan':25,'mean_environment_actions':total/n*25,'max_mpc_replans':6,'physical_budget':150,'checkpoint_epoch':3,'checkpoint_sha256':checkpoint['sha256'],'raw_episode_files_checked':len(source['raw_episode_files_available']),'summary_only_conditions':source['summary_only_conditions']}
+    result={'shift_rate':100*k/n,'color_rate':100*kc/nc,'steps':total/n*5,'steps_unit':'five-environment-action equivalents','native_mpc_replans':total/n,'scale_to_table_steps':5,'max_table_steps':30,'shift_successes':k,'shift_episodes':n,'color_successes':kc,'color_episodes':nc,'mpc_replans_total':int(round(total)),'environment_actions_per_replan':25,'mean_environment_actions':total/n*25,'max_mpc_replans':6,'physical_budget':150,'checkpoint_epoch':3,'checkpoint_sha256':checkpoint['sha256'],'raw_episode_files_checked':len(source['raw_episode_files_available']),'summary_only_conditions':source['summary_only_conditions']}
     assert abs(result['shift_rate']/100-summary['by_planner']['cem']['six_shift_success_rate'])<1e-10
     assert abs(result['color_rate']/100-summary['by_planner']['cem']['color_success_rate'])<1e-10
+    assert abs(result['steps']*5-result['mean_environment_actions'])<1e-10
     return result
 
 if __name__=='__main__':

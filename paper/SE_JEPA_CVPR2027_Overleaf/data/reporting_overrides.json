@@ -206,9 +206,11 @@
     "displayed_values": [
       "33.0",
       "37.3",
-      "4.41"
+      "22.05"
     ],
     "pushobj_unchanged": true,
-    "raw_verification_scope": "Five archived conditions; red_object and red_goal use the pinned final pipeline summary."
+    "raw_verification_scope": "Five archived conditions; red_object and red_goal use the pinned final pipeline summary.",
+    "steps_unit": "five-environment-action equivalents",
+    "steps_conversion": "4.41 native MPC replans × 25 environment actions / 5 = 22.05"
   }
 }

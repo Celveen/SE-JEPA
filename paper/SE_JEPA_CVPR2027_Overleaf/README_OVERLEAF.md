@@ -219,7 +219,7 @@ audit and the verbatim server delivery ZIP. The prior six-replan evidence stays
 archived separately and is no longer used in Figure 3.
 
 ## Native observations in the mixed-domain figure
-Figure 8 places 14 native observations in one row above the three learning panels.
+Figure 8 places 14 native observations in one row below the three learning panels.
 Every thumbnail is episode zero from GD chain two, round five. They are extracted
 from the saved initial observations, including actual blur, noise and darkness;
 no new image corruption or simulation is applied. The images illustrate the stream
@@ -228,13 +228,22 @@ identities are in `data/revision_assets/mixed14_observations/manifest.json`.
 
 ## PushT DINO-WM CEM update
 Only PushT is changed: 99/300 shifted goals (33.0%), 56/150 recolored goals
-(37.3%), and 4.41 actual MPC replans. The checkpoint is the new random-data
+(37.3%), and 22.05 five-action units (4.41 native MPC replans × 5). The checkpoint is the new random-data
 epoch-three T-shape model. `tools/dinowm_cem.py` verifies the pinned final pipeline
 summary against five archived raw condition files; red-object and red-goal use
 the final summary because their raw CEM files are absent from that snapshot.
-Full configurations remain in the data archive. The manuscript retains only the
-checkpoint provenance and the standard definition of Steps. PushObj, GD charts,
+Full configurations remain in the data archive. Appendix B briefly explains the conversion; the main table labels Steps
+as five-action units. PushObj, GD charts,
 and the deformable benchmarks are unaffected.
 
 Related-work catalogs and baseline descriptions have been condensed to focus
 space on SE-JEPA, its persistent mixed-domain memory and the main ablations.
+
+## Updated author abstract
+`data/drive_reference/abstract1.md` is the current author-supplied abstract.
+The manuscript reproduces it verbatim apart from TeX escaping. The earlier
+`abstract_supplied.md` remains as a historical source. Numerical checks confirm
+mean cosine 0.018, matched-goal success 62% to 48%, paired held-out gains of
+15.41–18.74 percentage points and maximum CD reduction 48.58%. These round to
+the supplied claims; no wording or numbers were changed. See
+`data/abstract_results_audit.json` for exact values and source checksums.
