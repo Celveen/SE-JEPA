@@ -32,6 +32,5 @@ selection_fragment.json paths. All six display images use the common crop in
 that fragment; it preserves every colored foreground pixel. Full 224x224 native
 frames, original NPZ files, configs, hashes and replay trajectories remain here.
 
-A genuine rerun with 30 replans of five actions is pending. See
-rerun_30mpc/SERVER_TASK.txt and expected_target.json. The existing images and
-results remain the original six-replan trajectory until new evidence arrives.
+This folder preserves the original six-replan replay archive. Figure 3 now uses
+the verified actual 30-replan rerun in ../dinowm_visual_30mpc/.

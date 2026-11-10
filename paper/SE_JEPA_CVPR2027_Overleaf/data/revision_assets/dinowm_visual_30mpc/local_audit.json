@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "delivery_sha256": "6a84db6bbf6796a80dfdf7bba5b11e9087d1c801d40ec709e1425f52dc6987b6",
+  "all_delivery_file_hashes_verified": 460,
+  "raw_image_frames_checked": 151,
+  "mpc_feedbacks_checked": 30,
+  "optimizer_steps_checked": 3000,
+  "exact_original_target": true,
+  "start_and_goal_pixels_match_other_methods": true,
+  "success_recomputed": false,
+  "all_mpc_boundaries_fail_original_success_criterion": true,
+  "model_epoch": 3,
+  "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+  "model_weights_and_buffers_unchanged": true,
+  "checkpoint_hash_scope": "Server receipt; checkpoint binary is not included in delivery.",
+  "new_mpc_replans": 30,
+  "environment_actions": 150,
+  "figure3_only_no_quantitative_table_effect": true
+}

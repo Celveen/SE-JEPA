@@ -199,5 +199,16 @@
     "mean_replans": 12.994285714285715,
     "baseline_protocol": "Existing baseline entries use separate benchmark evaluations; this online row is not their matched-target comparison.",
     "paired_evaluation_retained": "tables/paired_planners.tex"
+  },
+  "dinowm_pusht_cem_epoch3": {
+    "source": "data/dinowm_pusht_cem_epoch3/audit.json",
+    "scope": "DINO-WM main-table PushT CEM cells only",
+    "displayed_values": [
+      "33.0",
+      "37.3",
+      "4.41"
+    ],
+    "pushobj_unchanged": true,
+    "raw_verification_scope": "Five archived conditions; red_object and red_goal use the pinned final pipeline summary."
   }
 }

@@ -2,7 +2,7 @@
 
 \begin{table*}[!t]
   \centering
-  \caption{\textbf{Goal-conditioned planning with CEM.} PushObj covers seven shapes, three unseen in pretraining. The \ours PushObj cells report fifth-round online performance over three chains; baseline cells use separate benchmark evaluations. PushT covers six visual shifts, including three recolorings. Success rates are percentages. Steps count MPC replans, with failures assigned 30. Section~\ref{sec:setup} describes the published Unseen and Chamfer distance (CD) results.}
+  \caption{\textbf{Goal-conditioned planning with CEM.} PushObj covers seven shapes, three unseen in pretraining. The \ours PushObj cells report fifth-round online performance over three chains; baseline cells use separate benchmark evaluations. PushT covers six visual shifts, including three recolorings. Success rates are percentages. Steps count actual MPC replans, with failures assigned each controller's budget limit. Section~\ref{sec:setup} describes the published Unseen and Chamfer distance (CD) results.}
   \label{tab:main}
   \small
   \setlength{\tabcolsep}{3.5pt}
@@ -21,7 +21,7 @@
 \begin{figure*}[!t]
   \centering
   \includegraphics[width=.9\textwidth]{qualitative.pdf}
-  \caption{\textbf{Persistent memory resolves planning failures.} Selected GD episodes: unseen I (top) and mixed-stream red object (bottom), with matched starts and goals. Labels count MPC replans; \textbf{\ours} succeeds in six. Visual DINO-WM allows six replans of 25 actions; the other runs allow 30 replans of five actions. Appendix~E details the mixed-stream and replay protocols.}
+  \caption{\textbf{Persistent memory resolves planning failures.} Selected GD episodes: unseen I (top) and mixed-stream red object (bottom), with matched starts and goals. Labels count MPC replans; \textbf{\ours} succeeds in six. All runs allow 30 replans of five actions each. Appendix~E details the mixed-stream and replay protocols.}
   \label{fig:qualitative}
 \end{figure*}
 
@@ -56,6 +56,6 @@
 \begin{figure*}[!t]
   \centering
   \includegraphics[width=\textwidth]{mixed14_learning.pdf}
-  \caption{\textbf{One memory learns across 14 domains and two task families.} All methods average GD and CEM equally. \ours learns online over five rounds without memory reset; targets repeat. Frozen and AdaJEPA are horizontal references from their archived evaluations. Shading shows one sample SD across six runs (two planners, three chains or seeds each). Baseline initializations and adaptation exposure differ (Appendix~D).}
+  \caption{\textbf{One memory learns across 14 domains and two task families.} Top: recorded observations from each domain. Curves average GD and CEM equally; \ours retains one memory across five rounds with repeated targets. Frozen and AdaJEPA are archived evaluation references. Shading: sample SD across six runs. Initializations and adaptation exposure differ (Appendix~D).}
   \label{fig:mixed14_learning}
 \end{figure*}

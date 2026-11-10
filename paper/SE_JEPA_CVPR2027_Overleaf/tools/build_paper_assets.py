@@ -22,6 +22,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from restyle_paper_figures import draw_teaser
 from vis50 import external_results
+from dinowm_cem import verified_pusht_cem
 from pushobj_ablation import heldout_results, write_ablation_tables
 from pushobj_online import verified_online_results
 
@@ -103,6 +104,7 @@ citations = {
 rows = []
 order = ["DreamerV3", "IRIS", "R3M", "DINO CLS", "DINO-WM", "LeWM", "DDP-WM", "Frozen", "AdaJEPA", "SE-JEPA (Ours)"]
 vis50 = external_results(DATA / "vis50")
+dinowm_pusht_cem = verified_pusht_cem(DATA / "dinowm_pusht_cem_epoch3")
 ablation_results = heldout_results(DATA / "ablation")
 for planner in ("GD", "CEM"):
     rate, _ = ablation_results[planner, "no_familiarity"]
@@ -115,6 +117,8 @@ for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[
     if label in vis50:
         record = vis50[label]
         values[3:6] = [format(record[key], spec) for key, spec in [("shift_rate", ".1f"), ("color_rate", ".1f"), ("steps", ".2f")]]
+    if label == "DINO-WM":
+        values[3:6] = [format(dinowm_pusht_cem[key], spec) for key, spec in [("shift_rate", ".1f"), ("color_rate", ".1f"), ("steps", ".2f")]]
     if label in reporting["published_pushobj"]["local_protocol_unreported"]:
         published_rate = reporting["published_pushobj"]["success_percent"][label]
         values[:3] = [r"\missing", f"{published_rate:.1f}", r"\missing"]

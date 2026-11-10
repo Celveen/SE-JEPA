@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T04:04:30-08:00",
+  "checked_at": "2026-11-09T20:17:05-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "f1bc159e4b7c3c670fba2a9c2682e01e0e208e73b130377e94bc07fcfecc64e0",
+    "pdf_sha256": "7327dcfc2521fa3471d593786f86e1e58a39613de00293f88b15df11f77ea19a",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -29,14 +29,14 @@
     "all_main_floats_precede_conclusion": true,
     "familiarity_ablation_page": 17,
     "component_ablation_page": 8,
-    "inheritance_ablation_page": 8
+    "inheritance_ablation_page": 7
   },
   "supplement": {
     "pages": 10,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "dddd99eedf8ac60d2704a94dd8c30121d2fbb0e8658b416133d9400f74b9fae7"
+    "pdf_sha256": "2496a5b920acd58499ea487d4a23841cb3e68680c472de107123ce5587672ab2"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -83,7 +83,8 @@
       "DreamerV3",
       "IRIS"
     ],
-    "published_pushobj": "ICML 2025, Zhou et al., Table 4. The main table includes DreamerV3 and IRIS two-shape scores. Section 4.1 and Appendix C describe the protocol."
+    "published_pushobj": "ICML 2025, Zhou et al., Table 4. The main table includes DreamerV3 and IRIS two-shape scores. Section 4.1 and Appendix C describe the protocol.",
+    "dinowm_visual_cells_superseded_by": "data/dinowm_pusht_cem_epoch3/audit.json"
   },
   "main_figure_revision": {
     "progress_and_efficiency_means_only": true,
@@ -151,8 +152,8 @@
         },
         "visual": {
           "case": "Mixed14 red-object / GD / exact target intersection",
-          "provenance": "data/revision_assets/dinowm_visual_mixed/replay_provenance.json",
-          "replans": 6,
+          "provenance": "data/revision_assets/dinowm_visual_30mpc/local_audit.json",
+          "replans": 30,
           "physical_steps": 150
         }
       },
@@ -161,16 +162,15 @@
       "main_cem_step_units_unchanged": true,
       "common_environment_action_budget": 150,
       "ours_success_mpc_replans_per_case": 6,
-      "visual_dino_failure_mpc_replans": 6,
+      "visual_dino_failure_mpc_replans": 30,
       "other_baseline_failure_mpc_replans": 30,
-      "caption_explains_visual_dino_replanning_frequency": true,
+      "caption_explains_visual_dino_replanning_frequency": false,
       "pending_visual_rerun": {
-        "status": "awaiting_server_run",
-        "max_mpc_replans": 30,
-        "actions_per_replan": 5,
-        "task": "data/revision_assets/dinowm_visual_mixed/rerun_30mpc/SERVER_TASK.txt",
-        "current_result_unchanged": true
-      }
+        "status": "completed_and_integrated",
+        "evidence": "data/revision_assets/dinowm_visual_30mpc/local_audit.json"
+      },
+      "all_methods_actions_per_replan": 5,
+      "real_visual_rerun_verified": true
     }
   },
   "ablation": {
@@ -222,15 +222,23 @@
     "official_adajepa_checkpoint": "pushobj_shape_shift",
     "evaluation": "Online learning with repeated targets; distinct from held-out benchmarks",
     "figure_page": 8,
-    "summary_table_page": 16,
+    "summary_table_page": 15,
     "domain_table_page": 16,
     "placement": "Main Section 4.5 and Figure 8; detailed comparison tables in Appendix D",
     "main_section": "4.5",
     "main_section_page": 7,
-    "plot_layout": "Three panels; SE-JEPA, AdaJEPA and Frozen each average GD and CEM equally",
+    "plot_layout": "One row of 14 native observations above three panels; all methods average GD and CEM equally",
     "plot_aggregation_source": "data/mixed14_planner_average.json",
     "baseline_lines": "Horizontal archived evaluation references; not five-round trajectories",
-    "plot_uncertainty": "Sample SD across six actual planner-by-chain or planner-by-seed success rates"
+    "plot_uncertainty": "Sample SD across six actual planner-by-chain or planner-by-seed success rates",
+    "observation_strip": {
+      "count": 14,
+      "source": "data/revision_assets/mixed14_observations/manifest.json",
+      "frame": "Native saved initial observation",
+      "selection": "GD chain 2, round 5, episode 0 of every domain",
+      "pixels_unchanged": true,
+      "placement": "One row above the three learning panels"
+    }
   },
   "clean_upload_files": 47,
   "pushobj_cem_main": {
@@ -251,5 +259,26 @@
     "table_caption_states_protocol_difference": true,
     "source_and_table_checked": true
   },
-  "qualitative_source_hashes_verified": true
+  "qualitative_source_hashes_verified": true,
+  "dinowm_pusht_cem": {
+    "shift_rate": 33.0,
+    "color_rate": 37.333333333333336,
+    "steps": 4.41,
+    "shift_successes": 99,
+    "shift_episodes": 300,
+    "color_successes": 56,
+    "color_episodes": 150,
+    "mpc_replans_total": 1323,
+    "environment_actions_per_replan": 25,
+    "mean_environment_actions": 110.25,
+    "max_mpc_replans": 6,
+    "physical_budget": 150,
+    "checkpoint_epoch": 3,
+    "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+    "raw_episode_files_checked": 5,
+    "summary_only_conditions": [
+      "red_object",
+      "red_goal"
+    ]
+  }
 }

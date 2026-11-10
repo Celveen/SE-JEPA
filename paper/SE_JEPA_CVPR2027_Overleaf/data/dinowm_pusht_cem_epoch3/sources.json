@@ -1,0 +1,130 @@
+{
+  "repository": "https://github.com/Celveen/SE-JEPA",
+  "commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "scope": "PushT CEM only; PushObj and deformable cells remain unchanged.",
+  "summary_scope": "Seven conditions, 50 episodes each. Main Shift and Steps exclude default; Color uses three recolorings.",
+  "raw_episode_files_available": [
+    "default",
+    "blur",
+    "snp",
+    "dark",
+    "red_agent"
+  ],
+  "summary_only_conditions": [
+    "red_object",
+    "red_goal"
+  ],
+  "verification_limit": "Raw NPZ counts and steps checked for the five available conditions; red_object and red_goal use the pinned final pipeline summary, not a reconstructed episode list.",
+  "files": [
+    {
+      "local_file": "raw/blur/config.yaml",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/.hydra/config.yaml",
+      "sha256": "b83ab53b7e4c7320d9872a59d5c795b282882deae8ab2b2395131e607e07bb20"
+    },
+    {
+      "local_file": "raw/blur/final_eval_results.npz",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/final_eval_results.npz",
+      "sha256": "47b35fdedb51e21a45f7070eeccb0d5ac6d4b6b02cd166dd10d1113422a66fea"
+    },
+    {
+      "local_file": "raw/blur/frozen_weights_check.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316"
+    },
+    {
+      "local_file": "raw/blur/runtime_protocol.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/blur/runtime_protocol.json",
+      "sha256": "5ab4c446242e4567789280087125d7c9262fd56a8f74653b61ffb59603bdd03e"
+    },
+    {
+      "local_file": "raw/dark/config.yaml",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/.hydra/config.yaml",
+      "sha256": "3e53e4d95042bfaa6e2fdd8c468529e99077d5a525015e742befbc45e3e993c6"
+    },
+    {
+      "local_file": "raw/dark/final_eval_results.npz",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/final_eval_results.npz",
+      "sha256": "0647d9c467b709d9814127d8fb4798a0a3bb7db1191448f129ca6c49c30c9070"
+    },
+    {
+      "local_file": "raw/dark/frozen_weights_check.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316"
+    },
+    {
+      "local_file": "raw/dark/runtime_protocol.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/dark/runtime_protocol.json",
+      "sha256": "1e7dbd31ff66fcf54f45c7eed194ea4a4e802e89bc1600836fd9d9bad4061abf"
+    },
+    {
+      "local_file": "raw/default/config.yaml",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/.hydra/config.yaml",
+      "sha256": "fd1d85c8e570d9a44b4478030792b1d5627a54568d11e8e2360834eccba39939"
+    },
+    {
+      "local_file": "raw/default/final_eval_results.npz",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/final_eval_results.npz",
+      "sha256": "3be6a41020c4e9f39a70866f9a832d212168b9cd04078dab125f267af87a1156"
+    },
+    {
+      "local_file": "raw/default/frozen_weights_check.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316"
+    },
+    {
+      "local_file": "raw/default/runtime_protocol.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/default/runtime_protocol.json",
+      "sha256": "359146610a3a7be0e6c30b624b005ed75220d9e05a0a0458f9326c5b6268a386"
+    },
+    {
+      "local_file": "raw/red_agent/config.yaml",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/.hydra/config.yaml",
+      "sha256": "7068a5502b1c89dae6dca09fedf23288355c39b8d84ace85ddadcb9b9b971f00"
+    },
+    {
+      "local_file": "raw/red_agent/final_eval_results.npz",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/final_eval_results.npz",
+      "sha256": "09be6d8c76cfa9d17344e2aae0e746da8c2584044a41be3b796b9469f2476319"
+    },
+    {
+      "local_file": "raw/red_agent/frozen_weights_check.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316"
+    },
+    {
+      "local_file": "raw/red_agent/runtime_protocol.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/red_agent/runtime_protocol.json",
+      "sha256": "d41703c26b56952cef29e21d32a9b207795be0d27f809cf3c27a706c7111a51e"
+    },
+    {
+      "local_file": "raw/snp/config.yaml",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/.hydra/config.yaml",
+      "sha256": "ea0b013add957f619cfa751084e79510ed279be1c87e6b038655558a0a23968a"
+    },
+    {
+      "local_file": "raw/snp/final_eval_results.npz",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/final_eval_results.npz",
+      "sha256": "68305753620745c495155c6dd9ce9b9239b8786199d4d8363bb42fd513741fa0"
+    },
+    {
+      "local_file": "raw/snp/frozen_weights_check.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/frozen_weights_check.json",
+      "sha256": "8ef3ae1e808215dbca3cc2506ccd55faf8e43468ea4b07aa9e25995a70da9316"
+    },
+    {
+      "local_file": "raw/snp/runtime_protocol.json",
+      "repository_path": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/baselines/dinowm_pusht_random16k_e10_20261106/cem/snp/runtime_protocol.json",
+      "sha256": "184666801a4cb4572ae1f37d9e8f97d2ef8517a73b4a2601fb3b4d75c4ffb5d7"
+    },
+    {
+      "local_file": "pipeline_summary.json",
+      "repository_path": "research_snapshots/2026-11-08-pusht-gd/source_pipeline_metadata/dinowm/summary.json",
+      "sha256": "d1b3a19c2ca0c4578e3f5ece20400053d6f928401c6cd91090a94ba35d6a1009"
+    },
+    {
+      "local_file": "evaluation_checkpoint.json",
+      "repository_path": "research_snapshots/2026-11-07/baseline_metadata/dinowm_pusht_random16k_e10_20261106/evaluation_checkpoint.json",
+      "sha256": "2b2cda403ddcd5ba897a2b4e6b6735b7a56cc6781d1085eeffc43ca598a8feda"
+    }
+  ]
+}

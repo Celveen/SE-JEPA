@@ -1,0 +1,16 @@
+{
+  "status": "verified_delivery",
+  "created_at": "2026-11-10T03:46:03.918269+00:00",
+  "result_attempt": "attempt_02",
+  "summary": "results/attempt_02/summary.json",
+  "success": false,
+  "mpc_replans": 30,
+  "environment_steps": 150,
+  "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
+  "source_branch_commit": "398428a76b93fe3c29d2d75a3746d3bfdf9d10dc",
+  "technical_attempts": 2,
+  "attempts_with_model_planning": 1,
+  "verification": "results/verification.json",
+  "no_main_table_changes": true,
+  "no_paper_branch_changes": true
+}

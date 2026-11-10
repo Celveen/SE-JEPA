@@ -1,0 +1,22 @@
+{
+  "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]",
+  "python_executable": "/data/zjc/envs/cljepa/bin/python",
+  "platform": "Linux-6.8.0-139-generic-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "numpy": "1.26.4",
+    "hydra-core": "1.2.0",
+    "omegaconf": "2.3.0",
+    "gym": "0.23.1",
+    "pygame": "2.5.2",
+    "pymunk": "6.8.0",
+    "opencv-python": "4.6.0.66",
+    "einops": "0.4.1",
+    "Pillow": "10.3.0"
+  },
+  "torch_cuda": "12.8",
+  "cudnn": 90701,
+  "device": "NVIDIA GeForce RTX 5090",
+  "CUDA_VISIBLE_DEVICES": "0"
+}

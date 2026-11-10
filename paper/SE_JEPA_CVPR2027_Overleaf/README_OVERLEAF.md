@@ -208,25 +208,33 @@ the existing case, and the same procedure reproduces all 31 Frozen frames and
 states exactly. Original results, simulator sources, frames and a portable
 `replay.py` are retained in `data/revision_assets/dinowm_shape_I/`.
 
-The red-object row now uses an exactly matched target shared by DINO-WM GD
-(sample 31) and the mixed 14-domain experiment (sample 30). Frozen and AdaJEPA
-use seed 100 and the official shape-shift checkpoint; SE-JEPA uses round five
-of chain two. This is a selected mixed-stream illustration, not a replacement
-for the standard visual benchmark. All three baselines fail within 150 executed
-environment steps, while SE-JEPA succeeds after 30. The visual DINO-WM run
-executes 25 steps per replan and the others five. Both figure rows label actual
-MPC replans: visual DINO-WM fails at six, other baselines fail at 30, and
-SE-JEPA succeeds at six in both examples. The caption states the frequency
-difference. The CEM main-table step units are unchanged.
+The red-object row uses an exactly matched target shared by DINO-WM GD
+(sample 31) and mixed14 (sample 30). Frozen and AdaJEPA use the official shape
+checkpoint; SE-JEPA is round five of chain two. DINO-WM now uses the genuine
+30-MPC rerun from the original epoch-three checkpoint. All three baselines fail
+at 30 replans; SE-JEPA succeeds at six. The 460 delivery-file hashes, 151 frames,
+30 feedback boundaries, seed mapping and original success criterion were checked.
+`data/revision_assets/dinowm_visual_30mpc/` contains selected raw assets, the local
+audit and the verbatim server delivery ZIP. The prior six-replan evidence stays
+archived separately and is no longer used in Figure 3.
 
-`data/revision_assets/dinowm_visual_mixed/` stores the visual replay and matching
-audit. Provenance files record source hashes and validation; the earlier visual
-case remains in `selected_cases/visual_GD_red_object/`. The clean upload contains
-only the updated figure PDF; no simulator dependencies are needed for Overleaf.
+## Native observations in the mixed-domain figure
+Figure 8 places 14 native observations in one row above the three learning panels.
+Every thumbnail is episode zero from GD chain two, round five. They are extracted
+from the saved initial observations, including actual blur, noise and darkness;
+no new image corruption or simulation is applied. The images illustrate the stream
+domains rather than additional performance claims. Their hashes and exact sample
+identities are in `data/revision_assets/mixed14_observations/manifest.json`.
 
-## Pending DINO-WM visual rerun
-The visual case in Figure 3 still reports its actual six-replan result. A real
-30-replan / five-actions-per-replan rerun is pending on the experiment server.
-The exact task, original launch/configuration, target states and return-artifact
-requirements are in `data/revision_assets/dinowm_visual_mixed/rerun_30mpc/`.
-No synthetic trajectory extension or quantitative table change has been made.
+## PushT DINO-WM CEM update
+Only PushT is changed: 99/300 shifted goals (33.0%), 56/150 recolored goals
+(37.3%), and 4.41 actual MPC replans. The checkpoint is the new random-data
+epoch-three T-shape model. `tools/dinowm_cem.py` verifies the pinned final pipeline
+summary against five archived raw condition files; red-object and red-goal use
+the final summary because their raw CEM files are absent from that snapshot.
+Full configurations remain in the data archive. The manuscript retains only the
+checkpoint provenance and the standard definition of Steps. PushObj, GD charts,
+and the deformable benchmarks are unaffected.
+
+Related-work catalogs and baseline descriptions have been condensed to focus
+space on SE-JEPA, its persistent mixed-domain memory and the main ablations.

@@ -161,9 +161,9 @@
           "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
         },
         "dinowm": {
-          "path": "dinowm_visual_mixed/frames/dinowm/final.png",
-          "sha256": "bafb93be700be740f9ea2b93a0cf9dc4de29b2a9aea50d10f9a653e3ac9ab066",
-          "frames_origin": "Original simulator rendering/action replay; source and validation in replay_provenance.json"
+          "path": "dinowm_visual_30mpc/final.png",
+          "sha256": "60b26b1d561f68efa45b653ccf6afb3dce478a5d0259529eb80614a03b5294de",
+          "frames_origin": "Raw original-simulator frame from actual 30-replan frozen-model GD rerun"
         },
         "adajepa": {
           "path": "dinowm_visual_mixed/frames/adajepa/final.png",
@@ -204,27 +204,28 @@
         },
         "dinowm": {
           "success": false,
-          "n_steps": 6,
+          "n_steps": 30,
           "physical_steps": 150,
           "source_sample_idx": 31,
           "source_seed": 100,
-          "source": "/tmp/se-jepa-revision-check/nov8/npz/dinowm/red_object",
-          "source_npz_sha256": "3e3fa13592a29607609e132d63de31550223a9b765131dba613bc96c0bf2db66",
-          "config_sha256": "f01718809f29ee6575c87b7315ee1b32bd3b39bcbd0ddd3f4541001d8ca6b717",
-          "frames_origin": "Original simulator replay of the recorded executed actions, truncated at the archived action_len",
+          "environment_seed": 3101,
+          "source": "dinowm_visual_30mpc/server_delivery.zip",
+          "source_npz_sha256": "343205edb5e524ab91f3c25573162ff7be82b09de2903ac802e20325d569c263",
+          "config_sha256": "d0c3cd8dcb81ecf2e5254708760a4a40757636774e87efab84f012a1fea721f6",
+          "frames_origin": "Real replanning feedback, not an extended old action replay",
           "trajectory": {
-            "path": "dinowm_visual_mixed/frames/dinowm/trajectory.npz",
-            "sha256": "96d19cf1889068ea4868bc76e60961d8eaa384a8ddd1bc8c5bf63c2c5616f828"
+            "path": "dinowm_visual_30mpc/trajectory.npz",
+            "sha256": "e7dc7bb863bfb919138f794e65f8f2c99c28ee0b91b6234384aa93d7998969cf"
           },
-          "provenance": "dinowm_visual_mixed/replay_provenance.json",
+          "provenance": "dinowm_visual_30mpc/local_audit.json",
           "final_state": [
-            108.44717407226562,
-            170.0530548095703,
+            109.87618255615234,
+            162.56405639648438,
             184.26930236816406,
             242.6904296875,
             3.0242276191711426,
-            -76.20191192626953,
-            87.2528305053711
+            -75.54164123535156,
+            55.02398681640625
           ]
         },
         "adajepa": {
@@ -283,7 +284,9 @@
         "goal.png_identical_across_methods": true,
         "crop_preserves_all_colored_foreground": true,
         "raw_initial_and_goal_states_identical_across_methods": true,
-        "simulator_checked_against_existing_visual_frozen_trajectory": true
+        "simulator_checked_against_existing_visual_frozen_trajectory": true,
+        "all_methods_max_replans": 30,
+        "all_methods_environment_actions_per_replan": 5
       }
     }
   ]

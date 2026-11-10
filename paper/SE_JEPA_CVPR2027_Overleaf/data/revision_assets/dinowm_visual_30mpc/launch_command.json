@@ -1,0 +1,5 @@
+[
+  "/data/zjc/envs/cljepa/bin/python",
+  "/data/zjc/adaJEPA/experiment_plans/dinowm_red_object_idx31_gd_30mpc_20261109/evaluation_dual/qualitative.py",
+  "hydra.run.dir=/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/qualitative/dinowm_red_object_idx31_gd_30mpc_20261109/attempt_02"
+]

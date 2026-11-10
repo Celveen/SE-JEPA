@@ -43,16 +43,19 @@ The main-table PushObj CEM row is 80.4% All, 73.1% Unseen, and 12.99 replans,
 from the selected three fifth-round online streams. Paired post-learning
 evaluations remain separately reported in Appendix B.
 
-Figure 3 is slightly smaller and includes DINO-WM GD in both rows, with exact
-initial/goal matching across all four methods. The I-shape case uses the paired
-shape evaluation; the red-object case comes from the mixed 14-domain stream.
-Labels count MPC replans, matching the main table's unit. Visual DINO-WM fails
-after six replans of 25 actions; the other failed runs use 30 replans of five
-actions. The caption explains this frequency difference. The original red-object case remains archived.
-The Goal explanatory line has been removed.
+Figure 3 uses the verified real DINO-WM visual rerun, with matched starts and
+goals. All three baselines fail at 30 MPC replans and SE-JEPA succeeds at six.
+The original server delivery and an independent local evidence audit are in
+`data/revision_assets/dinowm_visual_30mpc/`. The original handoff package remains
+archived for provenance.
 
-A real 30-replan DINO-WM visual rerun is pending on the original experiment
-server. The [handoff package](DINO_WM_Figure3_30MPC_Handoff.zip) contains the
-exact target, original configuration and launch command, plus a Chinese task
-description. Figure 3 retains the actual archived result until this run is
-available; no result has been fabricated or extrapolated.
+Figure 8 adds a single row of 14 native simulator observations, one per domain,
+above its three learning panels. Frames use episode zero of GD chain two, round
+five, without outcome-based selection or image alteration.
+
+Only the DINO-WM PushT CEM cells have been replaced by the random-data epoch-three
+checkpoint: Shift 33.0%, Color 37.3%, mean MPC replans 4.41. PushObj is unchanged.
+`data/dinowm_pusht_cem_epoch3/` archives the pinned pipeline summary and five
+available raw episode files; the red-object/red-goal values are summary-backed.
+Baseline descriptions have been shortened while retaining checkpoint provenance,
+references and necessary evaluation distinctions.

@@ -4,6 +4,7 @@ import hashlib
 import json
 
 import matplotlib.pyplot as plt
+from PIL import Image
 import numpy as np
 
 
@@ -61,8 +62,21 @@ def build_chart(data):
     plotted = chart_data(data)
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8,
                          "pdf.fonttype": 42, "axes.unicode_minus": True})
-    fig, axes = plt.subplots(1, 3, figsize=(6.8, 2.05), sharey=True)
-    fig.subplots_adjust(left=.075, right=.99, top=.75, bottom=.22, wspace=.2)
+    fig, axes = plt.subplots(1, 3, figsize=(6.8, 2.65), sharey=True)
+    fig.subplots_adjust(left=.075, right=.99, top=.59, bottom=.16, wspace=.2)
+    observations = json.loads((ROOT / "data/revision_assets/mixed14_observations/manifest.json").read_text())
+    for i, case in enumerate(observations["cases"]):
+        x = .015 + i * .0695 + (.012 if i >= 7 else 0)
+        ax_image = fig.add_axes([x, .80, .063, .162])
+        path = ROOT / case["image"]
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == case["image_sha256"]
+        ax_image.imshow(Image.open(path), interpolation="none")
+        ax_image.set_xticks([]); ax_image.set_yticks([])
+        for spine in ax_image.spines.values():
+            spine.set_color("#D7DDE2"); spine.set_linewidth(.4)
+        ax_image.set_xlabel(case["label"], fontsize=5.5, labelpad=2)
+    fig.text(.255, .995, "PushObj shapes", ha="center", va="top", fontsize=6.8)
+    fig.text(.754, .995, "PushT appearances", ha="center", va="top", fontsize=6.8)
     styles = {"frozen": {"color": "#553A76", "linestyle": (0, (4, 2.4))},
               "adajepa": {"color": "#BB4810", "linestyle": "-."},
               "v6a": {"color": "#006FC1", "linestyle": "-", "marker": "o"}}
@@ -87,9 +101,9 @@ def build_chart(data):
         ax.spines[["left", "bottom"]].set_color("#8A98A3")
         ax.tick_params(colors="#475563", length=3)
     axes[0].set_ylabel("Success (%) ↑")
-    fig.supxlabel("Continual-adaptation round", x=.54, y=.035, fontsize=8)
+    fig.supxlabel("Continual-adaptation round", x=.54, y=.014, fontsize=8)
     legend = fig.legend(*axes[0].get_legend_handles_labels(), loc="upper center", ncol=3,
-                        bbox_to_anchor=(.54, 1.02), title="GD and CEM averaged", frameon=False,
+                        bbox_to_anchor=(.54, .77), frameon=False,
                         title_fontproperties={"size": 8})
     for label in legend.get_texts():
         label.set_fontweight("bold" if label.get_text() == "SE-JEPA" else "normal")
