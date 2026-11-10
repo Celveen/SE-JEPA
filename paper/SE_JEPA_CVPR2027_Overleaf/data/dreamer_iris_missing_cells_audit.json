@@ -26,5 +26,7 @@
     "published rope/granular CD"
   ],
   "decision": "No compatible seven-shape evaluations located in checked archives. Keep missing cells; do not substitute two-shape success or infer Steps from success rates.",
-  "published_source": "https://proceedings.mlr.press/v267/zhou25t.html"
+  "published_source": "https://proceedings.mlr.press/v267/zhou25t.html",
+  "superseded_by": "data/dreamer_iris_pushobj_20261110/local_audit.json",
+  "current_status": "Resolved by seven-shape CEM evaluation at 31f9b34; all three PushObj columns now use the new evaluation."
 }

@@ -21,6 +21,7 @@ for directory, suffixes in [
     files.extend(p for p in (root / directory).rglob("*") if p.is_file() and p.suffix in suffixes)
 # Preserve the verbatim evidence bundle behind the real Figure 3 rerun.
 files.append(root / "data/revision_assets/dinowm_visual_30mpc/server_delivery.zip")
+files.append(root / "data/dreamer_iris_pushobj_20261110/SHA256SUMS")
 if (root / "compile_checks.json").exists():
     files.append(root / "compile_checks.json")
 files = sorted(set(files))

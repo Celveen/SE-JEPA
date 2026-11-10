@@ -13,7 +13,7 @@ The appendix starts on a separate page after the references. The source includes
 vector figures, selected original simulator frames, numerical snapshots, and
 scripts for rebuilding the figures. Compile `main.tex` with pdfLaTeX and BibTeX.
 
-Section 3.1 motivates cross-episode replay using the paired weight-inheritance experiment. Main Table 2 gives the matched-goal accumulation diagnostic. Section 4.1 and Appendix C describe the evaluation protocols and identify the published PushObj Unseen and deformable results in the main table. Figure 1 pairs the recurring-shift schematic with held-out GD success. Figure 1 uses the three-chain GD mean for SE-JEPA. The main-table SE-JEPA PushObj entries use fifth-round online CEM outcomes, with the selected chains documented in Appendix B. Section 4.6 studies removal of the familiarity checks and compares replay with weight inheritance under a common initial checkpoint. Main Table 3 includes the fixed slow learning rate sweep. [Ablation archive](https://github.com/Celveen/SE-JEPA/tree/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106)
+Section 3.1 motivates cross-episode replay using the paired weight-inheritance experiment. Main Table 2 gives the matched-goal accumulation diagnostic. Section 4.1 and Appendix C describe the evaluation protocols and identify the published deformable results in the main table. Figure 1 pairs the recurring-shift schematic with held-out GD success. Figure 1 uses the three-chain GD mean for SE-JEPA. The main-table SE-JEPA PushObj entries use fifth-round online CEM outcomes, with the selected chains documented in Appendix B. Section 4.6 studies removal of the familiarity checks and compares replay with weight inheritance under a common initial checkpoint. Main Table 3 includes the fixed slow learning rate sweep. [Ablation archive](https://github.com/Celveen/SE-JEPA/tree/3faad041417c6f2a22df2ad62822c34fd075c4bb/experiments/ablation_archive_20261106)
 
 The revised layout places the main table on page 5 and all main result figures
 before Conclusion on page 8. Figure 7 shows the goal-success gains for each shape and visual shift in a
@@ -81,17 +81,34 @@ as an independent repeat for each learning chain. Data and audit:
 The default remains the original 1e-4 slow learning rate and maturity gate. The
 main text discusses the observed gate trade-off; future work proposes calibrating
 eligibility to uncertainty and planning outcomes. The main paper occupies 8 pages,
-with about 1.5 body-text lines left below the final paragraph. The complete PDF is
+with about 2.4 body-text lines left below the final paragraph. The complete PDF is
 20 pages. Official CVPR style, geometry and fonts are unchanged.
 
 The 1e-2 slow-rate row and its discussion have been removed from the displayed
 ablation tables; the sweep now ends at 5e-4. The original evidence remains
-archived. DreamerV3/IRIS PushObj All and Steps are still unavailable for the
-seven-shape protocol; Appendix C explains these dashes. See
-`data/dreamer_iris_missing_cells_audit.json` for the current source review.
+archived. DreamerV3/IRIS PushObj columns are now complete from the new seven-shape
+CEM evaluation. The earlier missing-cell audit is historical; current verification
+is in `data/dreamer_iris_pushobj_20261110/local_audit.json`.
 
 Figure 1's lower GD chart now extends leftward. Figure 2 includes original rope
 and granular robot-arm observations in its test-time task examples. The full
 manuscript review verifies at least 40% final-line width for prose, captions and
 bibliography entries; the original abstract and numerical results are unchanged.
-The main text remains eight pages, with 1.43 lines of trailing space.
+The main text remains eight pages, with 2.43 lines of trailing space.
+
+## DreamerV3/IRIS completion and readability revision
+The main table reports DreamerV3 PushObj 7.1% / 5.3% / 28.36 and IRIS
+2.9% / 2.7% / 29.37 (All / Unseen / Steps). All 700 final-state outcomes,
+action counts, matching targets and 78 source-file hashes were checked.
+The Unseen group is I, square and small tee for both methods. Appendix C
+briefly describes T-only pretraining and frozen offline CEM adapters. Existing
+PushT and deformable results are unchanged; no additional table markers appear.
+`tools/dreamer_iris_pushobj.py` verifies the archived values used by the table
+builder. The pinned source branch is `codex/results-dreamerv3-iris-pushobj-20261110`.
+
+The introduction now develops the recurring-shift problem, episodic relearning,
+failed weight inheritance, trajectory consolidation, validated reuse and the
+supporting experiments. All sections were reviewed for readable professional
+prose; the supplied abstract is unchanged. Primary-paper reading notes are in
+`data/readability_review_20261110.json`. The main text has eight pages with
+2.43 trailing lines; all audited paragraph endings meet the 40% requirement.

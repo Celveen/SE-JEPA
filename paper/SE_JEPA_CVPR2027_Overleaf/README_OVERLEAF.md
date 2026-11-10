@@ -90,9 +90,9 @@ DINO-WM, DreamerV3 and IRIS use the episode-verified VIS50 results from the
 `data/vis50/vis50_sources.json`). The latter two methods use offline predictors
 for CEM. The SE-JEPA PushObj cells in the main table use fifth-round online CEM
 performance across S7t3, S7t3b, and S7t3s700 (80.4% All, 73.1% Unseen,
-12.99 replans). The DreamerV3 and IRIS PushObj Unseen scores use the published
-two-shape protocol of Zhou et al. Their paper also supplies the rope and
-granular CDs for DreamerV3, IRIS, R3M, and DINO CLS. The two local frozen
+12.99 replans). The DreamerV3 and IRIS PushObj columns use the seven-shape CEM evaluation
+at commit 31f9b34, independently checked from all 700 episodes. Zhou et al.
+supply the rope and granular CDs for DreamerV3, IRIS, R3M, and DINO CLS. The two local frozen
 deformable entries refer to the same DINO-WM model. Section 4.1 and
 Appendix C describe these protocols. `tools/audit_pusht.py` checks the
 corresponding main-table cells against the visual evaluations.
@@ -264,14 +264,14 @@ as an independent repeat for each learning chain. Data and audit:
 The default remains the original 1e-4 slow learning rate and maturity gate. The
 main text discusses the observed gate trade-off; future work proposes calibrating
 eligibility to uncertainty and planning outcomes. The main paper occupies 8 pages,
-with about 1.5 body-text lines left below the final paragraph. The complete PDF is
+with about 2.4 body-text lines left below the final paragraph. The complete PDF is
 20 pages. Official CVPR style, geometry and fonts are unchanged.
 
 The 1e-2 slow-rate row and its discussion have been removed from the displayed
 ablation tables; the sweep now ends at 5e-4. The original evidence remains
-archived. DreamerV3/IRIS PushObj All and Steps are still unavailable for the
-seven-shape protocol; Appendix C explains these dashes. See
-`data/dreamer_iris_missing_cells_audit.json` for the current source review.
+archived. DreamerV3/IRIS PushObj columns are now complete from the new seven-shape
+CEM evaluation. The earlier missing-cell audit is historical; current verification
+is in `data/dreamer_iris_pushobj_20261110/local_audit.json`.
 
 ## Figure alignment and paragraph-ending review
 Figure 1 expands its lower chart leftward while preserving the upper schematic
@@ -287,4 +287,21 @@ Headings, displayed equations, algorithm steps and table cells are excluded.
 The author abstract, numerical results, font sizes and page geometry are unchanged.
 Recheck after changing the compiler or text with
 `python tools/audit_paragraph_endings.py main.pdf main.aux report.json`.
-The eight-page main text leaves 1.43 lines beneath the final paragraph.
+The eight-page main text leaves 2.43 lines beneath the final paragraph.
+
+## DreamerV3/IRIS completion and readability revision
+The main table reports DreamerV3 PushObj 7.1% / 5.3% / 28.36 and IRIS
+2.9% / 2.7% / 29.37 (All / Unseen / Steps). All 700 final-state outcomes,
+action counts, matching targets and 78 source-file hashes were checked.
+The Unseen group is I, square and small tee for both methods. Appendix C
+briefly describes T-only pretraining and frozen offline CEM adapters. Existing
+PushT and deformable results are unchanged; no additional table markers appear.
+`tools/dreamer_iris_pushobj.py` verifies the archived values used by the table
+builder. The pinned source branch is `codex/results-dreamerv3-iris-pushobj-20261110`.
+
+The introduction now develops the recurring-shift problem, episodic relearning,
+failed weight inheritance, trajectory consolidation, validated reuse and the
+supporting experiments. All sections were reviewed for readable professional
+prose; the supplied abstract is unchanged. Primary-paper reading notes are in
+`data/readability_review_20261110.json`. The main text has eight pages with
+2.43 trailing lines; all audited paragraph endings meet the 40% requirement.

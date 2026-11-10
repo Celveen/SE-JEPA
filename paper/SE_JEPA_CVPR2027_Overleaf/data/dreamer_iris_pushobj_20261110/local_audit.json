@@ -1,0 +1,40 @@
+{
+  "source_commit": "31f9b34a3b46ef287e9a764b6d1fbef20b9e24f0",
+  "source_branch": "codex/results-dreamerv3-iris-pushobj-20261110",
+  "verified_result_files": 14,
+  "verified_episodes": 700,
+  "source_file_hashes_verified": 78,
+  "success_recomputed_from_final_states": true,
+  "matched_initial_goal_states_between_methods": true,
+  "failure_budget": 30,
+  "actions_per_step": 5,
+  "all_checkpoints_frozen": true,
+  "training_shapes": [
+    "T"
+  ],
+  "main_table_unseen_group": [
+    "I",
+    "square",
+    "small_tee"
+  ],
+  "results": {
+    "DreamerV3": {
+      "episodes": 350,
+      "successes": 25,
+      "all_percent": 7.142857142857142,
+      "unseen_episodes": 150,
+      "unseen_successes": 8,
+      "unseen_percent": 5.333333333333334,
+      "mean_steps": 28.36285714285714
+    },
+    "IRIS": {
+      "episodes": 350,
+      "successes": 10,
+      "all_percent": 2.857142857142857,
+      "unseen_episodes": 150,
+      "unseen_successes": 4,
+      "unseen_percent": 2.666666666666667,
+      "mean_steps": 29.374285714285715
+    }
+  }
+}

@@ -50,10 +50,8 @@
       "DINO CLS": 18.0,
       "DINO-WM": 34.0
     },
-    "local_protocol_unreported": [
-      "DreamerV3",
-      "IRIS"
-    ]
+    "local_protocol_unreported": [],
+    "superseded_for_dreamer_iris": "data/dreamer_iris_pushobj_20261110/local_audit.json"
   },
   "frozen_deformable_reference": "DINO-WM",
   "published_deformable_values": "DreamerV3 and IRIS from Zhou et al., ICML 2025, Table 1. R3M and DINO CLS from Table 2.",
@@ -237,5 +235,15 @@
     ],
     "omitted_display_row": "slow_lr_1e2 (author request; original data retained)"
   },
-  "dreamer_iris_missing_cells_audit": "data/dreamer_iris_missing_cells_audit.json"
+  "dreamer_iris_missing_cells_audit": "data/dreamer_iris_missing_cells_audit.json",
+  "dreamer_iris_pushobj": {
+    "source_commit": "31f9b34a3b46ef287e9a764b6d1fbef20b9e24f0",
+    "audit": "data/dreamer_iris_pushobj_20261110/local_audit.json",
+    "unseen_group": [
+      "I",
+      "square",
+      "small_tee"
+    ],
+    "extra_main_table_markers": false
+  }
 }

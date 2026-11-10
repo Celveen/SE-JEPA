@@ -3,7 +3,7 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-\ours reuses deployment experience through selective trajectory storage, replay, and validated retrieval. It improves held-out planning with GD and CEM and learns across 14 recurring shape and appearance domains with one memory. Consolidation also reduces deformable goal error with DINO-WM, and a rope predictor trained in one pass transfers to new instances.
+\ours consolidates informative deployment trajectories into predictors validated for future planning. It improves held-out success with GD and CEM and learns across 14 shape and visual domains with one memory. Replay also reduces deformable goal error, and a rope predictor learned in one pass generalizes to new instances.
 
 \paragraph{Future work.}
-The maturity gate could better balance premature retrieval against delayed reuse by calibrating eligibility to uncertainty and planning outcomes. Longer histories and diagnostic pushes could distinguish similar dynamics, while better near-goal action ranking could turn prediction gains into completed goals. Longer deployment streams would test memory scalability.
+Prediction uncertainty and planning outcomes could help the maturity gate determine when a learned predictor is ready for use. Longer observation histories and exploratory actions could distinguish similar dynamics. Better action selection near the goal could turn prediction improvements into successful plans. Longer deployment studies should measure memory growth, retrieval latency, and replay cost alongside planning success. Comparing memory compression with retaining every predictor would help identify practical limits on storage and computation. Tests with rare but recurring conditions would also reveal whether compact memories preserve useful experience or discard it before it is needed again.

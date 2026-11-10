@@ -23,6 +23,7 @@ from PIL import Image, ImageDraw, ImageFont
 from restyle_paper_figures import draw_teaser
 from vis50 import external_results
 from dinowm_cem import verified_pusht_cem
+from dreamer_iris_pushobj import verified_pushobj
 from pushobj_ablation import heldout_results, write_ablation_tables
 from pushobj_online import verified_online_results
 
@@ -105,6 +106,7 @@ rows = []
 order = ["DreamerV3", "IRIS", "R3M", "DINO CLS", "DINO-WM", "LeWM", "DDP-WM", "Frozen", "AdaJEPA", "SE-JEPA (Ours)"]
 vis50 = external_results(DATA / "vis50")
 dinowm_pusht_cem = verified_pusht_cem(DATA / "dinowm_pusht_cem_epoch3")
+dreamer_iris = verified_pushobj(DATA / "dreamer_iris_pushobj_20261110")
 ablation_results = heldout_results(DATA / "ablation")
 for planner in ("GD", "CEM"):
     rate, _ = ablation_results[planner, "no_familiarity"]
@@ -122,6 +124,9 @@ for row in sorted(s["main_rows_html"], key=lambda row: order.index(tex_cell(row[
     if label in reporting["published_pushobj"]["local_protocol_unreported"]:
         published_rate = reporting["published_pushobj"]["success_percent"][label]
         values[:3] = [r"\missing", f"{published_rate:.1f}", r"\missing"]
+    if label in dreamer_iris:
+        result = dreamer_iris[label]
+        values[:3] = [format(result[key], spec) for key, spec in [("all_percent", ".1f"), ("unseen_percent", ".1f"), ("mean_steps", ".2f")]]
     for raw in row[7:9]:
         cell = tex_cell(raw).split(r" $\pm$ ")[0]
         values.append(cell)

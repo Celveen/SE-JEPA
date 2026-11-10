@@ -1,0 +1,19 @@
+{
+  "method": "iris",
+  "episodes": 50,
+  "seed": 2000,
+  "training_shapes": [
+    "T"
+  ],
+  "protocol": "T-only offline world model with CEM transferred to PushObj",
+  "by_shape": {
+    "T": {
+      "n": 50,
+      "successes": 3,
+      "success_rate": 0.06,
+      "mean_mpc_steps": 28.68,
+      "mean_physical_actions": 143.4
+    }
+  },
+  "success_rate": 0.06
+}

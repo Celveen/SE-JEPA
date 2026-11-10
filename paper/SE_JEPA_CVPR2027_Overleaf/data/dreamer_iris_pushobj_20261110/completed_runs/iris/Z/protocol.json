@@ -1,0 +1,29 @@
+{
+  "method": "iris",
+  "checkpoint_directory": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+  "checkpoint_sha256": "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+  "target_sha256": "2e4ebcf830e6ad4260fa5a14878108a69bd45e7f0d7f16668f8be87b049ab559",
+  "episodes": 50,
+  "planning_seed": 2000,
+  "episode_planning_seed": "2000 + sample index",
+  "environment_seed": "1 + 2000 * sample index",
+  "cem_action_clipping": false,
+  "model_action_encoding": "tanh(physical relative action)",
+  "frameskip": 5,
+  "objective": "decoded RGB MSE in [-1,1] plus normalized proprio MSE; staged terminal/full-horizon objective",
+  "noise": "none for clean PushObj shapes",
+  "CEM": {
+    "samples": 200,
+    "topk": 30,
+    "iterations": 10,
+    "model_horizon": 5,
+    "max_replans": 30
+  },
+  "diagnostic_only": false,
+  "shape": "Z",
+  "training_shapes": [
+    "T"
+  ],
+  "frozen_model": true,
+  "evaluation_scope": "T-only checkpoint transferred to PushObj"
+}

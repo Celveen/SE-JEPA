@@ -1,0 +1,29 @@
+{
+  "reviewed_sections": "All manuscript prose and captions, including appendices; supplied abstract retained verbatim.",
+  "introduction_structure": [
+    "Recurring deployment encounters and reusable physical knowledge",
+    "Within-episode adaptation leaves repeated relearning",
+    "Empirical failure of direct weight inheritance",
+    "Consolidation of trajectory evidence",
+    "Selective self-supervised storage and validated retrieval",
+    "Held-out and continual-deployment evidence"
+  ],
+  "primary_introductions_read": [
+    {
+      "title": "AdaJEPA",
+      "url": "https://arxiv.org/html/2606.32026v1",
+      "focus": "Connect prediction errors to planning failure and introduce the intervention after the gap."
+    },
+    {
+      "title": "DINO-WM",
+      "url": "https://arxiv.org/html/2411.04983v1",
+      "focus": "Explain why the setting matters before technical design and evaluation."
+    },
+    {
+      "title": "V-JEPA 2",
+      "url": "https://arxiv.org/html/2506.09985v1",
+      "focus": "Start from the desired capability, narrow to the limitation, then present the learning principle."
+    }
+  ],
+  "policy": "Original prose organized around SE-JEPA evidence; no copied source sentences. Numerical claims and protocol distinctions retained."
+}

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T22:53:32-08:00",
+  "checked_at": "2026-11-10T05:02:00-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "7de3417966e7813fee010faaa6f1b9f7005f6e553529aa0b5ab6c0a985c47673",
+    "pdf_sha256": "d0e726b87a2985f734af0a2965a8ed64a780a90ba9739725ddc538afc028afbb",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -30,10 +30,10 @@
     "familiarity_ablation_page": 17,
     "component_ablation_page": 8,
     "inheritance_ablation_page": 7,
-    "last_page_trailing_blank_lines": 1.43,
+    "last_page_trailing_blank_lines": 2.43,
     "last_page_body_bottom_y_points": {
       "left": 713.402099609375,
-      "right": 696.3313598632812
+      "right": 684.376220703125
     },
     "last_page_blank_measurement": "Right-column final body ink relative to full left-column body ink, divided by the unchanged 12pt baseline."
   },
@@ -42,7 +42,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "6982e5b3aea71876f665f831415d809e839a4d547cbecffe9548bc46788bcca6"
+    "pdf_sha256": "1bb4905d26082a8cf2af8e8bf8eaa144d78a38b3f125f14e4ec5ab266a7a631f"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -85,13 +85,10 @@
     "source_manifest": "data/vis50/vis50_sources.json",
     "original_npz_files_checked": 20,
     "episodes_checked": 1000,
-    "pushobj_without_local_seven_shape_evaluation": [
-      "DreamerV3",
-      "IRIS"
-    ],
-    "published_pushobj": "ICML 2025, Zhou et al., Table 4. The main table includes DreamerV3 and IRIS two-shape scores. Section 4.1 and Appendix C describe the protocol.",
+    "pushobj_without_local_seven_shape_evaluation": [],
+    "published_pushobj": "DreamerV3 and IRIS PushObj cells superseded by the verified seven-shape CEM evaluation at 31f9b34.",
     "dinowm_visual_cells_superseded_by": "data/dinowm_pusht_cem_epoch3/audit.json",
-    "missing_cell_recheck": "data/dreamer_iris_missing_cells_audit.json"
+    "missing_cell_recheck": "data/dreamer_iris_pushobj_20261110/local_audit.json"
   },
   "main_figure_revision": {
     "progress_and_efficiency_means_only": true,
@@ -346,5 +343,26 @@
     "figure2_original_simulator_pixels_verified": true,
     "figure2_other_images_unchanged": true,
     "figure2_provenance": "data/revision_assets/architecture_tasks/provenance.json"
+  },
+  "dreamer_iris_pushobj": {
+    "source_commit": "31f9b34a3b46ef287e9a764b6d1fbef20b9e24f0",
+    "audit": "data/dreamer_iris_pushobj_20261110/local_audit.json",
+    "verified_episodes": 700,
+    "only_main_table_columns_changed": [
+      "PushObj All",
+      "PushObj Unseen",
+      "PushObj Steps"
+    ],
+    "no_extra_main_table_markers": true,
+    "checkpoint_and_adapter_scope_documented_in": "Appendix C"
+  },
+  "readability_review": {
+    "record": "data/readability_review_20261110.json",
+    "all_sections_reviewed": true,
+    "supplied_abstract_verbatim": true,
+    "figures_unchanged": true,
+    "other_numeric_results_unchanged": true,
+    "main_text_pages": 8,
+    "trailing_blank_lines": 2.43
   }
 }

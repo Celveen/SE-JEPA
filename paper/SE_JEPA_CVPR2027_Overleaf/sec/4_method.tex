@@ -9,14 +9,14 @@
 
 Each episode begins with the pretrained encoder $E_0$ and predictor $P_0$. To plan toward a goal image, the agent encodes the current observation and the goal, rolls out candidate action sequences with the current predictor, and chooses the sequence with the lowest latent goal cost~\cite{zhou2024dinowm,maes2026lewm}. It executes the first action block. Following AdaJEPA~\cite{wang2026adajepa}, it then takes one Adam step on the prediction loss over recent transitions to update the predictor's last block and the encoder head before replanning. These fast changes last for the episode. During the first few replans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\ref{sec:trust}).
 
-Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predictor $P_{\phi_k}$ for each group $k$ of compatible trajectories, which we call a \emph{predictive domain}. After an episode, the frozen encoder $E_0$ re-encodes the executed trajectory. This puts observations from different episodes in a common latent space even as the fast encoder changes. Once a trajectory is assigned to a domain, the agent adds it to $\replay_k$. The slow predictor trains on windows sampled from that buffer by minimizing
+Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predictor $P_{\phi_k}$ for each group $k$ of compatible trajectories, which we call a \emph{predictive domain}. After an episode, the frozen encoder $E_0$ re-encodes the executed trajectory. This gives replay a consistent latent space despite changes to the fast encoder within episodes. Once a trajectory is assigned to a domain, the agent adds it to $\replay_k$. The slow predictor trains on windows sampled from that buffer by minimizing
 \begin{equation}
   \loss_k(\phi_k)=
   \mathbb{E}_{(x,z^+)\sim\replay_k}
   \big\|P_{\phi_k}(x)-z^+\big\|_2^2.
   \label{eq:replay}
 \end{equation}
-Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes. The goal image enters when the planner uses this predictor to compare candidate futures against the requested target.
+Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes. The planner then uses the predictor to score candidate action sequences by their predicted distance to the goal.
 
 \subsection{Discovering predictive domains}
 \label{sec:write}
@@ -35,9 +35,9 @@ For an unfamiliar episode, $\Delta_e$ concatenates the fast predictor and encode
   \qquad s(e,k)=u_e^\top c_k,
   \label{eq:fingerprint}
 \end{equation}
-where $c_k$ is the domain's unit-length prototype. The retrieved domain is the first write candidate; otherwise, candidates are ranked by $s(e,k)$. A candidate accepts the trajectory if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned episodes wait in a pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
+where $c_k$ is the domain's unit-length prototype. The retrieved domain is the first write candidate; otherwise, candidates are ranked by $s(e,k)$. The trajectory is assigned to a candidate domain if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned trajectories remain in a pending pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
 
-Two contacts with the same object can induce different fast updates. Delaying domain creation gives the planner a way to keep an unusual contact until it sees a similar one again. The pool retains the founding trajectories, so learning can begin with examples from several encounters. As more evidence arrives, two domains merge if each predictor transfers to the other's recent episodes and both outperform the reference. Testing transfer in both directions checks that the proposed merger covers the experience of each group. A mature domain can also absorb a smaller group whose trajectories it already predicts well. \supref{A} gives the thresholds and the rules for maintaining each prototype.
+Two contacts with the same object can induce different fast updates. Delayed domain creation retains unusual interactions until similar evidence arrives. The new predictor can then train on trajectories from several encounters. As more evidence arrives, two domains merge if each predictor transfers to the other's recent episodes and both outperform the reference. This bidirectional check requires the merged domain to model both groups of trajectories. A mature domain can also absorb a smaller group whose trajectories it already predicts well. \supref{A} gives the thresholds and the rules for maintaining each prototype.
 
 % Queue result displays for the next page, alongside the experiments.
 \input{sec/5_result_floats}
@@ -45,14 +45,14 @@ Two contacts with the same object can induce different fast updates. Delaying do
 \subsection{Validated retrieval for planning}
 \label{sec:trust}
 
-A slow predictor earns a place in the planner by predicting trajectories it has yet to train on. Before adding trajectory $\tau_e$ to a buffer, the agent rolls out the candidate predictor and the pretrained reference under the actions actually taken. Their open-loop errors in the frozen latent space give the ratio
+A slow predictor becomes eligible for planning by predicting new trajectories accurately before training on them. Before adding trajectory $\tau_e$ to a buffer, the agent rolls out the candidate predictor and the pretrained reference under the actions actually taken. Their open-loop errors in the frozen latent space give the ratio
 \begin{equation}
   r_{e,k}=
   \frac{\loss_{\mathrm{roll}}(\phi_k;\tau_e)}
        {\loss_{\mathrm{roll}}(\theta_0;\tau_e)}.
   \label{eq:ratio}
 \end{equation}
-Here $\theta_0$ denotes the weights of $P_0$. Comparing both predictors on the same sequence of pushes makes the reference specific to the encounter. A large error on a difficult turn, for example, can still favor the slow predictor if it forecasts the turn more accurately than $P_0$. A large ratio rejects a write. Accepted episodes leave a record of how well the predictor transferred to a fresh trajectory, since the agent scores each one before replaying it. A domain becomes eligible for retrieval once this record shows a sustained improvement over the reference (\supref{A}).
+Here $\theta_0$ denotes the weights of $P_0$. Scoring both predictors on the same actions controls for differences in trajectory difficulty. For example, a difficult turn may cause large errors in both models, yet still provide evidence for the slow predictor if its error is lower. The trajectory is rejected if the ratio exceeds the write threshold. Accepted episodes build a validation history of the predictor's performance on data it had not yet trained on. A domain becomes eligible for retrieval once this record shows a sustained improvement over the reference (\supref{A}).
 
 During the first three replans, the agent compares eligible predictors and $P_0$ on the transitions observed so far, $\mathcal{B}_{e,t}$. It selects the predictor with the lowest recent error,
 \begin{equation}
@@ -61,4 +61,4 @@ During the first three replans, the agent compares eligible predictors and $P_0$
   \qquad \phi_0=\theta_0.
   \label{eq:retrieval}
 \end{equation}
-The selected weights become the base of the fast predictor, preserving the corrections already made in the current episode. For an episode the reference recognizes as familiar, the base stays at $P_0$. Thus past trajectories determine which predictors are eligible, and the current actions and observations determine which one guides planning.
+The selected weights become the base of the fast predictor, preserving the corrections already made in the current episode. For an episode the reference recognizes as familiar, the base stays at $P_0$. Past trajectories therefore determine retrieval eligibility, while current observations determine which predictor guides planning.

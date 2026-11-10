@@ -1,0 +1,15 @@
+method,shape,n,successes,success_rate,mean_mpc_steps,mean_physical_actions
+dreamerv3,I,50,3,0.06,28.72,143.6
+dreamerv3,L,50,3,0.06,28.56,142.8
+dreamerv3,square,50,2,0.04,29.14,145.7
+dreamerv3,Z,50,1,0.02,29.56,147.8
+dreamerv3,small_tee,50,3,0.06,28.74,143.7
+dreamerv3,+,50,4,0.08,28.1,140.5
+dreamerv3,T,50,9,0.18,25.72,128.6
+iris,I,50,1,0.02,29.42,147.1
+iris,L,50,1,0.02,29.64,148.2
+iris,square,50,1,0.02,29.86,149.3
+iris,Z,50,0,0.0,30.0,150.0
+iris,small_tee,50,2,0.04,28.92,144.6
+iris,+,50,2,0.04,29.1,145.5
+iris,T,50,3,0.06,28.68,143.4

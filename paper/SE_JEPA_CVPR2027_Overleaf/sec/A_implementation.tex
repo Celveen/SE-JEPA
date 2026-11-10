@@ -5,9 +5,9 @@
 Model training and evaluation were conducted on systems equipped with $8\times$ NVIDIA GeForce RTX 5090 GPUs and $8\times$ NVIDIA A100 GPUs.
 
 \subsection{Fast and slow learning}
-The label-free rigid-object configuration builds on the episodic adaptation loop of AdaJEPA~\cite{wang2026adajepa}. At every replan, the most recent observed transitions provide a self-supervised next-latent loss. The predictor's last block and the encoder's designated projection/head parameters are adapted with one Adam step. The episode-local predictor and encoder changes are reset at the next episode. A retrieved slow predictor supplies the predictor initialization; it does not replace the frozen reference encoder.
+The label-free rigid-object configuration builds on the episodic adaptation loop of AdaJEPA~\cite{wang2026adajepa}. At every replan, recent observed transitions provide a self-supervised next-state prediction loss. The predictor's last block and the encoder's designated projection/head parameters are adapted with one Adam step. The episode-local predictor and encoder changes are reset at the next episode. A retrieved slow predictor supplies the predictor initialization; it does not replace the frozen reference encoder.
 
-Persistent replay is re-encoded by the reference encoder. Each slow learner is a full predictor copy, initialized from the pretrained predictor rather than from the final fast parameters of its founding episode. For each slow optimization step, up to eight stored episodes are sampled with replacement; each contributes a random window of up to six latent frames. The prediction objective averages one-step observation-feature errors over the available history windows. Action features condition prediction but are not reconstruction targets. Standard writes use 15 Adam steps. Founding a learner after $n$ stored episodes uses $15n$ steps to process the accumulated evidence. Merging likewise adds replay updates for absorbed experience.
+Persistent replay is re-encoded by the reference encoder. Each slow learner is a full predictor copy, initialized from the pretrained predictor rather than from the final fast parameters of the episode that created the domain. For each slow optimization step, up to eight stored episodes are sampled with replacement; each contributes a random window of up to six latent frames. The prediction objective averages one-step observation-feature errors over the available history windows. Actions condition the prediction; the loss is computed only on observation features. Standard writes use 15 Adam steps. Founding a learner after $n$ stored episodes uses $15n$ steps to process the accumulated evidence. Merging likewise adds replay updates for absorbed experience.
 
 \begin{table}[t]
   \centering
@@ -75,7 +75,7 @@ Algorithm~\ref{alg:sejepa} summarizes a learning episode. Familiarity uses the g
     \State Propose a domain using retrieval or an update fingerprint
     \State Reject an incompatible write, or retain pending evidence
     \If{a domain is assigned or newly confirmed}
-      \State Record prospective validation when a learner exists
+      \State Record validation before replay training when a learner exists
       \State Append latent experience; update its slow predictor
       \State Check bidirectional merges and periodic absorption
     \EndIf
@@ -87,7 +87,7 @@ Algorithm~\ref{alg:sejepa} summarizes a learning episode. Familiarity uses the g
 The selected predictor's error is evaluated before it learns from the current episode, so maturity reflects transfer to data the predictor has not fitted. In read-only evaluation, the episode-end write, validation-history update, slow training, merging, and absorption steps are all disabled.
 
 \subsection{Fingerprints and delayed domain founding}
-A fingerprint concatenates the adapted predictor and encoder-head changes and is normalized to unit length. Domain prototypes accumulate normalized fingerprints from episodes planned from the reference; episodes starting from a slow predictor do not redefine that reference-based prototype. If an episode has already read a learner, it preferentially writes to that learner's domain unless the prospective error ratio rejects the write. Otherwise, it tries compatible domain directions in descending cosine order.
+A fingerprint concatenates the adapted predictor and encoder-head changes and is normalized to unit length. Domain prototypes accumulate normalized fingerprints from episodes planned from the reference; episodes starting from a slow predictor do not redefine that reference-based prototype. If an episode retrieved a slow predictor, its trajectory is first considered for that predictor's domain, subject to the error-ratio check before replay. Otherwise, it tries compatible domain directions in descending cosine order.
 
 An unassigned episode enters a pending pool. It confirms a new domain when at least two pending fingerprints align with its own above the new-domain threshold. These members need not be pairwise aligned with one another; the incoming fingerprint is the common reference for this confirmation. The members and the new episode are transferred together to the new replay. No ground-truth shape or appearance category participates in this procedure.
 

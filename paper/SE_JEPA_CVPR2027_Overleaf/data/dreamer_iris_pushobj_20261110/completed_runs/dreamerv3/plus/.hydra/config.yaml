@@ -1,0 +1,11 @@
+ckpt_base_path: /data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3
+model_name: null
+model_epoch: 3
+seed: 2000
+n_evals: 50
+eval_data_path: /data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/plus.npz
+shape: +
+planner:
+  n_taken_actions: 5
+  max_iter: 30
+  backend: official_world_model_rpc

@@ -1,0 +1,7 @@
+{
+  "epoch": 3,
+  "next_batch": 0,
+  "updates": 306225,
+  "epochs": 3,
+  "model": "model_latest.pkl"
+}
