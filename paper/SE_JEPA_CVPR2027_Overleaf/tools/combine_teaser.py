@@ -5,7 +5,6 @@ from pathlib import Path
 import re
 from xml.etree import ElementTree as ET
 
-import cairosvg
 import fitz
 
 
@@ -14,7 +13,7 @@ ET.register_namespace("", NS)
 ET.register_namespace("xlink", "http://www.w3.org/1999/xlink")
 
 
-def combine(template, bars_dir, output_dir):
+def combine(template, bars_dir, output_dir, upper_pdf_path=None):
     svg = ET.parse(template)
     root = svg.getroot()
     panel = root.find(f"{{{NS}}}g[@id='held-out-planning-success']")
@@ -43,14 +42,18 @@ def combine(template, bars_dir, output_dir):
     upper.remove(upper.find(f"{{{NS}}}g[@id='held-out-planning-success']"))
     upper.set("height", f"{chart_y:.5f}pt")
     upper.set("viewBox", f"0 0 {width:g} {chart_y:.5f}")
-    upper_pdf = cairosvg.svg2pdf(bytestring=ET.tostring(upper, encoding="utf-8"))
+    if upper_pdf_path is None:
+        import cairosvg
+        upper_pdf = cairosvg.svg2pdf(bytestring=ET.tostring(upper, encoding="utf-8"))
+    else:
+        upper_pdf = Path(upper_pdf_path).read_bytes()
     output_dir.mkdir(parents=True, exist_ok=True)
     pdf_path = output_dir / "teaser_combined.pdf"
     with fitz.open("pdf", upper_pdf) as top, fitz.open(bars_dir / "teaser_bars.pdf") as bottom, fitz.open() as doc:
         if len(bottom) != 1 or abs(bottom[0].rect.width-width) > .01 or abs(bottom[0].rect.height-chart_height) > .01:
             raise ValueError("The chart PDF and SVG must have the same dimensions.")
         page = doc.new_page(width=width, height=height)
-        page.show_pdf_page(fitz.Rect(0, 0, width, chart_y), top, 0)
+        page.show_pdf_page(fitz.Rect(0, 0, width, chart_y), top, 0, clip=fitz.Rect(0, 0, width, chart_y))
         page.show_pdf_page(fitz.Rect(0, chart_y, width, height), bottom, 0)
         doc.set_metadata({"title": "SE-JEPA: recurring shifts and held-out planning"})
         pdf_path.write_bytes(doc.tobytes(garbage=4, deflate=True))
@@ -62,5 +65,6 @@ if __name__ == "__main__":
     parser.add_argument("--template", type=Path, default=Path("teaser_combined.svg"))
     parser.add_argument("--bars-dir", type=Path, default=Path("."))
     parser.add_argument("--output-dir", type=Path, default=Path("rebuilt"))
+    parser.add_argument("--upper-pdf", type=Path, help="Preserve the native upper panel from an existing combined PDF.")
     args = parser.parse_args()
-    combine(args.template, args.bars_dir, args.output_dir)
+    combine(args.template, args.bars_dir, args.output_dir, args.upper_pdf)

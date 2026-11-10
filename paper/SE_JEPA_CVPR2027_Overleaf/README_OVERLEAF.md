@@ -72,11 +72,11 @@ To edit the bar data and export the full figure, update `data/teaser_bars.csv` a
 
 ```sh
 python tools/plot_teaser.py --data data/teaser_bars.csv --output-dir figures
-python tools/combine_teaser.py --template figures/source/teaser_combined.svg --bars-dir figures --output-dir figures
+python tools/combine_teaser.py --template figures/source/teaser_combined.svg --bars-dir figures --output-dir figures --upper-pdf figures/source/teaser_before_alignment.pdf
 cp figures/teaser_combined.svg figures/source/teaser_combined.svg
 ```
 
-The combined exporter uses CairoSVG and PyMuPDF. `tools/build_condition_gains.py`
+The combined exporter uses PyMuPDF and preserves the native upper panel; CairoSVG is only needed when no native upper PDF is supplied. `tools/build_condition_gains.py`
 regenerates the main per-condition comparison from the unrounded held-out rates and
 checks each value against the saved success and episode counts. Figure 7 uses a
 single-column layout with PushObj above PushT.
@@ -272,3 +272,19 @@ ablation tables; the sweep now ends at 5e-4. The original evidence remains
 archived. DreamerV3/IRIS PushObj All and Steps are still unavailable for the
 seven-shape protocol; Appendix C explains these dashes. See
 `data/dreamer_iris_missing_cells_audit.json` for the current source review.
+
+## Figure alignment and paragraph-ending review
+Figure 1 expands its lower chart leftward while preserving the upper schematic
+pixel for pixel. Figure 2 replaces the Square/T test-time thumbnails with original
+Rope/Granular simulator observations from the existing deformable archive.
+`tools/update_overview_tasks.py` updates the native PDF and editable SVG; source
+image checksums are in `data/revision_assets/architecture_tasks/provenance.json`.
+
+The rendered main PDF passes the 40%-width ending check for 120 prose paragraphs
+and captions plus all 42 bibliography entries. Minor prose edits remove short
+endings; bibliography line breaking is set locally without changing entry text.
+Headings, displayed equations, algorithm steps and table cells are excluded.
+The author abstract, numerical results, font sizes and page geometry are unchanged.
+Recheck after changing the compiler or text with
+`python tools/audit_paragraph_endings.py main.pdf main.aux report.json`.
+The eight-page main text leaves 1.43 lines beneath the final paragraph.

@@ -1,0 +1,2483 @@
+{
+  "pdf": "main.pdf",
+  "checked": 120,
+  "matched": 120,
+  "short": [],
+  "unmatched": [],
+  "paragraphs": [
+    {
+      "file": "0_abstract.tex",
+      "line": 2,
+      "status": "ok",
+      "page": 1,
+      "ratio": 0.6965,
+      "last_line": "keeps improving the longer it is deployed.",
+      "bbox": [
+        58.50000762939453,
+        464.1550598144531,
+        224.60714721679688,
+        474.1177062988281
+      ],
+      "ending": "tance by up to 49\\% relative to the pretrained model, and keeps improving the longer it is deployed.",
+      "kind": "prose"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 7,
+      "status": "ok",
+      "page": 1,
+      "ratio": 0.8852,
+      "last_line": "tion. SE-JEPA reports the mean over three learning chains.",
+      "bbox": [
+        317.25,
+        542.963134765625,
+        528.3634033203125,
+        551.9295043945312
+      ],
+      "ending": "eWM use 50 targets per shape or visual condition. \\ours reports the mean over three learning chains.",
+      "kind": "caption"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 11,
+      "status": "ok",
+      "page": 1,
+      "ratio": 0.6509,
+      "last_line": "conditions recur under a different goal.",
+      "bbox": [
+        58.50000762939453,
+        642.6515502929688,
+        213.72789001464844,
+        652.6141967773438
+      ],
+      "ending": "rsuing one goal, the experience can help it plan when those conditions recur under a different goal.",
+      "kind": "prose"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 13,
+      "status": "ok",
+      "page": 1,
+      "ratio": 0.8171,
+      "last_line": "goal, the plan and the fast weights have changed.",
+      "bbox": [
+        317.25,
+        664.7389526367188,
+        512.1390991210938,
+        674.7015991210938
+      ],
+      "ending": " outcomes remain valid training examples after the goal, the plan and the fast weights have changed.",
+      "kind": "prose"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 15,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.5866,
+      "last_line": "timing of each environmental shift.",
+      "bbox": [
+        58.50000762939453,
+        193.9537811279297,
+        198.39541625976562,
+        203.91641235351562
+      ],
+      "ending": "ions and observations without labels identifying the task or the timing of each environmental shift.",
+      "kind": "prose"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 17,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.9339,
+      "last_line": "gradient-based and sampling-based action optimization.",
+      "bbox": [
+        58.50000762939453,
+        313.50543212890625,
+        281.24468994140625,
+        323.46807861328125
+      ],
+      "ending": "experience across goals while supporting both gradient-based and sampling-based action optimization.",
+      "kind": "prose"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 19,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.5151,
+      "last_line": "ance conditions (Appendix D).",
+      "bbox": [
+        58.50000762939453,
+        445.0122985839844,
+        181.34933471679688,
+        454.9749450683594
+      ],
+      "ending": "ds of a mixed stream containing all fourteen recurring shape and appearance conditions (\\supref{D}).",
+      "kind": "prose"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 21,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.4826,
+      "last_line": "trained model (Appendix B).",
+      "bbox": [
+        58.50000762939453,
+        552.6088256835938,
+        173.60836791992188,
+        562.5714721679688
+      ],
+      "ending": "ass reduces mean Chamfer distance to the goal by 47\\% relative to the pretrained model (Appendix~B).",
+      "kind": "prose"
+    },
+    {
+      "file": "1_introduction.tex",
+      "line": 26,
+      "status": "ok",
+      "page": 3,
+      "ratio": 0.5967,
+      "last_line": "supervision. Test-time examples include rigid objects, rope, and granular material.",
+      "bbox": [
+        58.50000762939453,
+        332.5245361328125,
+        353.8703918457031,
+        341.49090576171875
+      ],
+      "ending": "ents and are not supervision. Test-time examples include rigid objects, rope, and granular material.",
+      "kind": "caption"
+    },
+    {
+      "file": "2_related_work.tex",
+      "line": 5,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.6267,
+      "last_line": "for improving the deployed predictor.",
+      "bbox": [
+        58.50000762939453,
+        653.6926879882812,
+        207.95956420898438,
+        663.6553344726562
+      ],
+      "ending": "age planning, where executed actions provide transition errors for improving the deployed predictor.",
+      "kind": "prose"
+    },
+    {
+      "file": "2_related_work.tex",
+      "line": 8,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.839,
+      "last_line": "ring shifts without receiving task-boundary labels.",
+      "bbox": [
+        317.25,
+        158.08828735351562,
+        517.3397827148438,
+        168.05091857910156
+      ],
+      "ending": "experience can improve the predictor across recurring shifts without receiving task-boundary labels.",
+      "kind": "prose"
+    },
+    {
+      "file": "2_related_work.tex",
+      "line": 11,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.6141,
+      "last_line": "ries scored before any replay update.",
+      "bbox": [
+        317.25,
+        328.767578125,
+        463.7207336425781,
+        338.730224609375
+      ],
+      "ending": "redictors that have improved on the reference on fresh trajectories scored before any replay update.",
+      "kind": "prose"
+    },
+    {
+      "file": "2_related_work.tex",
+      "line": 14,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.4709,
+      "last_line": "ing the pretrained reference.",
+      "bbox": [
+        317.25,
+        463.58135986328125,
+        429.558837890625,
+        473.54400634765625
+      ],
+      "ending": "transitions of each episode to select among eligible predictors, including the pretrained reference.",
+      "kind": "prose"
+    },
+    {
+      "file": "3_problem.tex",
+      "line": 6,
+      "status": "ok",
+      "page": 2,
+      "ratio": 0.7952,
+      "last_line": "the next trajectory calls for a similar correction.",
+      "bbox": [
+        317.25,
+        607.6723022460938,
+        506.89886474609375,
+        617.6349487304688
+      ],
+      "ending": "jepa}. Carrying its weights forward assumes that the next trajectory calls for a similar correction.",
+      "kind": "prose"
+    },
+    {
+      "file": "3_problem.tex",
+      "line": 8,
+      "status": "ok",
+      "page": 3,
+      "ratio": 0.8046,
+      "last_line": "less of whether the episode eventually succeeds.",
+      "bbox": [
+        58.50000762939453,
+        436.6751403808594,
+        250.39047241210938,
+        446.6377868652344
+      ],
+      "ending": "able as soon as the next observation arrives, regardless of whether the episode eventually succeeds.",
+      "kind": "prose"
+    },
+    {
+      "file": "3_problem.tex",
+      "line": 10,
+      "status": "ok",
+      "page": 3,
+      "ratio": 0.829,
+      "last_line": "tions provide evidence for which predictor to use.",
+      "bbox": [
+        58.50000762939453,
+        520.8203735351562,
+        256.2086486816406,
+        530.7830200195312
+      ],
+      "ending": "ns them. When a new goal arrives, the first few actions provide evidence for which predictor to use.",
+      "kind": "prose"
+    },
+    {
+      "file": "4_method.tex",
+      "line": 10,
+      "status": "ok",
+      "page": 3,
+      "ratio": 0.9891,
+      "last_line": "retrieve a slow predictor as a base for adaptation (Sec. 3.4).",
+      "bbox": [
+        58.50000762939453,
+        679.070068359375,
+        294.393310546875,
+        689.03271484375
+      ],
+      "ending": "plans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\\ref{sec:trust}).",
+      "kind": "prose"
+    },
+    {
+      "file": "4_method.tex",
+      "line": 19,
+      "status": "ok",
+      "page": 3,
+      "ratio": 0.7044,
+      "last_line": "didate futures against the requested target.",
+      "bbox": [
+        317.25,
+        594.631591796875,
+        485.2499694824219,
+        604.59423828125
+      ],
+      "ending": "ters when the planner uses this predictor to compare candidate futures against the requested target.",
+      "kind": "prose"
+    },
+    {
+      "file": "4_method.tex",
+      "line": 30,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.4892,
+      "last_line": "cannot yet predict accurately.",
+      "bbox": [
+        58.50000762939453,
+        110.2676010131836,
+        175.16253662109375,
+        120.23023986816406
+      ],
+      "ending": "de's direct memory write. Replay thus receives episodes the reference cannot yet predict accurately.",
+      "kind": "prose"
+    },
+    {
+      "file": "4_method.tex",
+      "line": 38,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.4711,
+      "last_line": "ries establish a new domain.",
+      "bbox": [
+        58.50000762939453,
+        263.02899169921875,
+        170.86865234375,
+        272.99163818359375
+      ],
+      "ending": " direction aligns with those of two waiting episodes, the three trajectories establish a new domain.",
+      "kind": "prose"
+    },
+    {
+      "file": "4_method.tex",
+      "line": 40,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.9328,
+      "last_line": "thresholds and the rules for maintaining each prototype.",
+      "bbox": [
+        58.50000762939453,
+        406.49102783203125,
+        280.9658203125,
+        416.45367431640625
+      ],
+      "ending": "already predicts well. \\supref{A} gives the thresholds and the rules for maintaining each prototype.",
+      "kind": "prose"
+    },
+    {
+      "file": "4_method.tex",
+      "line": 55,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.4709,
+      "last_line": "the reference (Appendix A).",
+      "bbox": [
+        58.50000762939453,
+        643.0556640625,
+        170.80886840820312,
+        653.018310546875
+      ],
+      "ending": "igible for retrieval once this record shows a sustained improvement over the reference (\\supref{A}).",
+      "kind": "prose"
+    },
+    {
+      "file": "4_method.tex",
+      "line": 64,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.8575,
+      "last_line": "observations determine which one guides planning.",
+      "bbox": [
+        317.25,
+        134.17794799804688,
+        521.7631225585938,
+        144.1405792236328
+      ],
+      "ending": "edictors are eligible, and the current actions and observations determine which one guides planning.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 8,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.7691,
+      "last_line": "with pretrained DINOv2 features [20, 26, 42].",
+      "bbox": [
+        316.891357421875,
+        289.8670654296875,
+        500.3222961425781,
+        299.8297119140625
+      ],
+      "ending": "}, use DINO-WM with pretrained DINOv2 features~\\cite{zhou2024dinowm,oquab2024dinov2,lin2020softgym}.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 11,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.6985,
+      "last_line": "and separately test rope on new instances.",
+      "bbox": [
+        317.25,
+        448.198486328125,
+        483.8352966308594,
+        458.1611328125
+      ],
+      "ending": "abled. We measure final Chamfer distance (CD) to the goal and separately test rope on new instances.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 14,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.8446,
+      "last_line": "formable protocols differ from ours (Appendix C).",
+      "bbox": [
+        317.25,
+        570.6644287109375,
+        518.6947021484375,
+        580.6270751953125
+      ],
+      "ending": "dinowm}, whose two-unseen-shape and ten-instance deformable protocols differ from ours (\\supref{C}).",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 20,
+      "status": "ok",
+      "page": 4,
+      "ratio": 0.6262,
+      "last_line": "to plan toward the speciﬁed test pose.",
+      "bbox": [
+        317.25,
+        679.4747314453125,
+        466.59991455078125,
+        689.4373779296875
+      ],
+      "ending": " recurs during deployment; the predictor reuses its dynamics to plan toward the specified test pose.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 22,
+      "status": "ok",
+      "page": 5,
+      "ratio": 0.412,
+      "last_line": "toward a different target.",
+      "bbox": [
+        58.50000762939453,
+        550.0922241210938,
+        156.771484375,
+        560.0548706054688
+      ],
+      "ending": "ory makes earlier pushes under the same appearance available for planning toward a different target.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 25,
+      "status": "ok",
+      "page": 5,
+      "ratio": 0.6451,
+      "last_line": "shapes and visual shifts (Appendix B).",
+      "bbox": [
+        58.50000762939453,
+        638.7210083007812,
+        212.35308837890625,
+        648.6836547851562
+      ],
+      "ending": "ailures. CEM gives the same ordering in mean replans for both shapes and visual shifts (\\supref{B}).",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 28,
+      "status": "ok",
+      "page": 5,
+      "ratio": 0.5429,
+      "last_line": "sentations of deformable scenes.",
+      "bbox": [
+        317.25,
+        538.1370849609375,
+        446.73443603515625,
+        548.0997314453125
+      ],
+      "ending": " replay from task-trained ResNet features to pretrained DINOv2 representations of deformable scenes.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 33,
+      "status": "ok",
+      "page": 5,
+      "ratio": 0.7802,
+      "last_line": "prediction-loss curves throughout each rollout.",
+      "bbox": [
+        317.25,
+        650.6761474609375,
+        503.32232666015625,
+        660.6387939453125
+      ],
+      "ending": " and explains their planning outcomes and associated prediction-loss curves throughout each rollout.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 38,
+      "status": "ok",
+      "page": 6,
+      "ratio": 0.4329,
+      "last_line": "evaluations after learning.",
+      "bbox": [
+        58.50000762939453,
+        628.4010620117188,
+        161.75282287597656,
+        638.3637084960938
+      ],
+      "ending": "ain} reports fifth-round online PushObj results; Appendix~B gives paired evaluations after learning.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 40,
+      "status": "ok",
+      "page": 6,
+      "ratio": 0.676,
+      "last_line": "new starts and goals, with weights ﬁxed.",
+      "bbox": [
+        317.25,
+        665.10400390625,
+        478.4654846191406,
+        675.066650390625
+      ],
+      "ending": " [0.162, 0.470] (\\supref{B}). Both predictors use the same new starts and goals, with weights fixed.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 43,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.8051,
+      "last_line": "shapes represented in pretraining (Appendix D).",
+      "bbox": [
+        58.50000762939453,
+        478.3408508300781,
+        250.51002502441406,
+        488.3034973144531
+      ],
+      "ending": "ers also improve over AdaJEPA across all four object shapes represented in pretraining (\\supref{D}).",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 48,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.5227,
+      "last_line": "memory updates remain active.",
+      "bbox": [
+        58.50000762939453,
+        591.6700439453125,
+        183.17250061035156,
+        601.6326904296875
+      ],
+      "ending": "50 episodes per domain per round. Targets repeat, while adaptation and memory updates remain active.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 50,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.6933,
+      "last_line": "tocols and the outcomes in every domain.",
+      "bbox": [
+        58.50000762939453,
+        703.439453125,
+        223.84996032714844,
+        713.402099609375
+      ],
+      "ending": "ptation exposure differ. Appendix~D gives the evaluation protocols and the outcomes in every domain.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 56,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.4211,
+      "last_line": "updates are accumulated.",
+      "bbox": [
+        317.25,
+        234.8006134033203,
+        417.6733703613281,
+        244.76324462890625
+      ],
+      "ending": "ressively reduce success. Thus the degradation depends on how strongly past updates are accumulated.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 60,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.5926,
+      "last_line": "and losses are relative to episodic reset.",
+      "bbox": [
+        317.25,
+        277.5834655761719,
+        458.578125,
+        286.5498352050781
+      ],
+      "ending": "ent $w$ scales the update retained between episodes. Wins and losses are relative to episodic reset.",
+      "kind": "caption"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 74,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.4358,
+      "last_line": "cial AdaJEPA checkpoint.",
+      "bbox": [
+        317.25,
+        472.5677185058594,
+        421.2001647949219,
+        482.5303649902344
+      ],
+      "ending": "memory under this common initialization; the main benchmark retains the official AdaJEPA checkpoint.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 76,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.9745,
+      "last_line": "transitions rather than episode-speciﬁc weight corrections.",
+      "bbox": [
+        317.25,
+        556.25390625,
+        549.6683959960938,
+        566.216552734375
+      ],
+      "ending": "ery comparison, supporting retention of transitions rather than episode-specific weight corrections.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 80,
+      "status": "ok",
+      "page": 8,
+      "ratio": 0.4469,
+      "last_line": "replans and additional chains.",
+      "bbox": [
+        58.500022888183594,
+        372.3800964355469,
+        165.0833282470703,
+        381.3464660644531
+      ],
+      "ending": "hared evaluation, not an independent run per column. Appendix~D gives replans and additional chains.",
+      "kind": "caption"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 96,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.9292,
+      "last_line": "and improves both completion rate and interaction cost.",
+      "bbox": [
+        317.25,
+        665.712158203125,
+        538.8690185546875,
+        675.6748046875
+      ],
+      "ending": "dvantage thus persists across learned states and improves both completion rate and interaction cost.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 99,
+      "status": "ok",
+      "page": 8,
+      "ratio": 0.6276,
+      "last_line": "tently produce more successful plans.",
+      "bbox": [
+        58.50000762939453,
+        703.439453125,
+        208.18870544433594,
+        713.402099609375
+      ],
+      "ending": "nds beyond one tuned value; larger replay updates do not consistently produce more successful plans.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 102,
+      "status": "ok",
+      "page": 8,
+      "ratio": 0.5314,
+      "last_line": "ing better eligibility calibration.",
+      "bbox": [
+        317.25,
+        389.855712890625,
+        443.99481201171875,
+        399.818359375
+      ],
+      "ending": "useful retrieval as well as filter unreliable predictors, motivating better eligibility calibration.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_experiments.tex",
+      "line": 104,
+      "status": "ok",
+      "page": 8,
+      "ratio": 0.6768,
+      "last_line": "These effects depend on the shift family.",
+      "bbox": [
+        316.941162109375,
+        473.5419006347656,
+        478.3658447265625,
+        483.5045471191406
+      ],
+      "ending": "rom 75.68\\% to 72.32\\%, with every visual chain declining. These effects depend on the shift family.",
+      "kind": "prose"
+    },
+    {
+      "file": "5_result_floats.tex",
+      "line": 5,
+      "status": "ok",
+      "page": 5,
+      "ratio": 0.4885,
+      "last_line": "describes the published Unseen and Chamfer distance (CD) results.",
+      "bbox": [
+        58.50000762939453,
+        105.7434310913086,
+        300.2962951660156,
+        114.70980834960938
+      ],
+      "ending": "pendix~B). Section~\\ref{sec:setup} describes the published Unseen and Chamfer distance (CD) results.",
+      "kind": "caption"
+    },
+    {
+      "file": "5_result_floats.tex",
+      "line": 24,
+      "status": "ok",
+      "page": 5,
+      "ratio": 0.4263,
+      "last_line": "Appendix E details the mixed-stream and replay protocols.",
+      "bbox": [
+        58.177215576171875,
+        481.80712890625,
+        269.21881103515625,
+        490.77349853515625
+      ],
+      "ending": "uns allow 30 replans of five actions each. Appendix~E details the mixed-stream and replay protocols.",
+      "kind": "caption"
+    },
+    {
+      "file": "5_result_floats.tex",
+      "line": 31,
+      "status": "ok",
+      "page": 6,
+      "ratio": 0.7573,
+      "last_line": "DINO-WM frames replay its executed actions. The aggregate fourth-pass results are reported in Table 1.",
+      "bbox": [
+        58.5,
+        271.6927490234375,
+        433.35406494140625,
+        280.6591491699219
+      ],
+      "ending": "replay its executed actions. The aggregate fourth-pass results are reported in Table~\\ref{tab:main}.",
+      "kind": "caption"
+    },
+    {
+      "file": "5_result_floats.tex",
+      "line": 38,
+      "status": "ok",
+      "page": 6,
+      "ratio": 0.8025,
+      "last_line": "shapes (top) and all seven visual conditions (bottom).",
+      "bbox": [
+        58.50000762939453,
+        565.4564208984375,
+        249.90521240234375,
+        574.4227905273438
+      ],
+      "ending": "ld-out success under GD. Curves use all seven shapes (top) and all seven visual conditions (bottom).",
+      "kind": "caption"
+    },
+    {
+      "file": "5_result_floats.tex",
+      "line": 45,
+      "status": "ok",
+      "page": 6,
+      "ratio": 0.6439,
+      "last_line": "lines are frozen DINO-WM and AdaJEPA.",
+      "bbox": [
+        317.2500305175781,
+        633.3300170898438,
+        470.8083190917969,
+        642.29638671875
+      ],
+      "ending": "ope or granular instances; curves show mean CD. The horizontal lines are frozen DINO-WM and AdaJEPA.",
+      "kind": "caption"
+    },
+    {
+      "file": "5_result_floats.tex",
+      "line": 52,
+      "status": "ok",
+      "page": 7,
+      "ratio": 0.5293,
+      "last_line": "backbone’s pretraining trajectories.",
+      "bbox": [
+        58.50000762939453,
+        401.7099609375,
+        184.74658203125,
+        410.67633056640625
+      ],
+      "ending": "values favor \\ours. I, square and small tee are absent from the backbone's pretraining trajectories.",
+      "kind": "caption"
+    },
+    {
+      "file": "5_result_floats.tex",
+      "line": 59,
+      "status": "ok",
+      "page": 8,
+      "ratio": 0.8684,
+      "last_line": "evaluation references. Shading: sample SD across six runs. Initializations and adaptation exposure differ (Appendix D).",
+      "bbox": [
+        58.5,
+        297.6603088378906,
+        488.3570251464844,
+        306.6266784667969
+      ],
+      "ending": "es. Shading: sample SD across six runs. Initializations and adaptation exposure differ (Appendix~D).",
+      "kind": "caption"
+    },
+    {
+      "file": "6_conclusion.tex",
+      "line": 6,
+      "status": "ok",
+      "page": 8,
+      "ratio": 0.4398,
+      "last_line": "transfers to new instances.",
+      "bbox": [
+        317.25,
+        588.1122436523438,
+        422.13665771484375,
+        598.0748901367188
+      ],
+      "ending": "rmable goal error with DINO-WM, and a rope predictor trained in one pass transfers to new instances.",
+      "kind": "prose"
+    },
+    {
+      "file": "6_conclusion.tex",
+      "line": 9,
+      "status": "ok",
+      "page": 8,
+      "ratio": 0.6501,
+      "last_line": "streams would test memory scalability.",
+      "bbox": [
+        317.25,
+        686.3687133789062,
+        472.30859375,
+        696.3313598632812
+      ],
+      "ending": "turn prediction gains into completed goals. Longer deployment streams would test memory scalability.",
+      "kind": "prose"
+    },
+    {
+      "file": "9_llm_statement.tex",
+      "line": 2,
+      "status": "ok",
+      "page": 9,
+      "ratio": 0.9206,
+      "last_line": "citations, code, and ﬁnal veriﬁcation of the manuscript.",
+      "bbox": [
+        58.50000762939453,
+        212.8828125,
+        278.0567321777344,
+        222.84544372558594
+      ],
+      "ending": " take full responsibility for the claims, citations, code, and final verification of the manuscript.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 5,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.9563,
+      "last_line": "GeForce RTX 5090 GPUs and 8× NVIDIA A100 GPUs.",
+      "bbox": [
+        58.50000762939453,
+        142.11619567871094,
+        286.58197021484375,
+        152.4884033203125
+      ],
+      "ending": "cted on systems equipped with $8\\times$ NVIDIA GeForce RTX 5090 GPUs and $8\\times$ NVIDIA A100 GPUs.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 8,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.8004,
+      "last_line": "it does not replace the frozen reference encoder.",
+      "bbox": [
+        58.50000762939453,
+        277.1587829589844,
+        249.38424682617188,
+        287.1214294433594
+      ],
+      "ending": "w predictor supplies the predictor initialization; it does not replace the frozen reference encoder.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 10,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.6641,
+      "last_line": "replay updates for absorbed experience.",
+      "bbox": [
+        58.50000762939453,
+        433.1084289550781,
+        216.8761444091797,
+        443.0710754394531
+      ],
+      "ending": "s to process the accumulated evidence. Merging likewise adds replay updates for absorbed experience.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 14,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.5247,
+      "last_line": "of 2 × 10 for all replay updates.",
+      "bbox": [
+        317.25,
+        115.72734832763672,
+        442.3825378417969,
+        128.5027313232422
+      ],
+      "ending": "ven-round stream in Appendix~D uses a slow learning rate of $2\\times10^{-4}$ for all replay updates.",
+      "kind": "caption"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 48,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.4072,
+      "last_line": "domains are recognized.",
+      "bbox": [
+        58.50000762939453,
+        481.4615783691406,
+        155.6058807373047,
+        491.4242248535156
+      ],
+      "ending": ", and merging and absorption remove redundant predictor copies as compatible domains are recognized.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 51,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.5783,
+      "last_line": "changed to the visual experiments.",
+      "bbox": [
+        58.50000762939453,
+        568.27392578125,
+        196.43276977539062,
+        578.236572265625
+      ],
+      "ending": "hreshold is calibrated once on the shape backbone and transfers unchanged to the visual experiments.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 87,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.7742,
+      "last_line": "merging, and absorption steps are all disabled.",
+      "bbox": [
+        58.50000762939453,
+        628.582275390625,
+        243.1575469970703,
+        638.544921875
+      ],
+      "ending": "end write, validation-history update, slow training, merging, and absorption steps are all disabled.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 90,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.7658,
+      "last_line": "domain directions in descending cosine order.",
+      "bbox": [
+        317.25,
+        485.057861328125,
+        499.8851318359375,
+        495.0205078125
+      ],
+      "ending": "atio rejects the write. Otherwise, it tries compatible domain directions in descending cosine order.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 92,
+      "status": "ok",
+      "page": 11,
+      "ratio": 0.8461,
+      "last_line": "appearance category participates in this procedure.",
+      "bbox": [
+        317.25,
+        581.2970581054688,
+        519.05322265625,
+        591.2597045898438
+      ],
+      "ending": "ther to the new replay. No ground-truth shape or appearance category participates in this procedure.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 99,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.8179,
+      "last_line": "domains remain retired for the rest of the stream.",
+      "bbox": [
+        58.50000762939453,
+        610.761474609375,
+        253.55857849121094,
+        620.72412109375
+      ],
+      "ending": "union of stored experience. Identifiers of merged domains remain retired for the rest of the stream.",
+      "kind": "prose"
+    },
+    {
+      "file": "A_implementation.tex",
+      "line": 101,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.7059,
+      "last_line": "abled in the shape and visual experiments.",
+      "bbox": [
+        58.50000762939453,
+        703.439453125,
+        226.86865234375,
+        713.402099609375
+      ],
+      "ending": " absorption and the additional absolute-error gate are disabled in the shape and visual experiments.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 5,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.8692,
+      "last_line": "are unseen in pretraining; T, L, Z, and plus are seen.",
+      "bbox": [
+        317.25,
+        159.24688720703125,
+        524.5625610351562,
+        169.2095184326172
+      ],
+      "ending": "h with 350 episodes. I, square, and small tee are unseen in pretraining; T, L, Z, and plus are seen.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 7,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.7912,
+      "last_line": "released PushObj checkpoint for both planners.",
+      "bbox": [
+        317.25,
+        267.4226989746094,
+        505.952392578125,
+        277.3853454589844
+      ],
+      "ending": "bj baselines use seed 2000. AdaJEPA uses its official released PushObj checkpoint for both planners.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 9,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.7321,
+      "last_line": "selected ﬁfth-round streams and the test set.",
+      "bbox": [
+        317.25,
+        387.5536804199219,
+        491.84527587890625,
+        397.5163269042969
+      ],
+      "ending": "eck found three shared initial/goal pairs between the selected fifth-round streams and the test set.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 12,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.9444,
+      "last_line": "streams and that the three test seeds use disjoint sources.",
+      "bbox": [
+        317.25,
+        510.4188232421875,
+        542.4853515625,
+        520.3814697265625
+      ],
+      "ending": "-out sources never occur in the learning streams and that the three test seeds use disjoint sources.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 14,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.7185,
+      "last_line": "50 source targets within a chain and round.",
+      "bbox": [
+        317.25,
+        594.684326171875,
+        488.61737060546875,
+        604.64697265625
+      ],
+      "ending": " standard deviation. The three conditions share the same 50 source targets within a chain and round.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 16,
+      "status": "ok",
+      "page": 12,
+      "ratio": 0.4827,
+      "last_line": "tial/goal states per condition.",
+      "bbox": [
+        317.25,
+        643.0842895507812,
+        432.36834716796875,
+        653.0469360351562
+      ],
+      "ending": "ternal comparisons use its six shifted conditions, with 50 paired initial/goal states per condition.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 18,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.5872,
+      "last_line": "released for visual-shift evaluation.",
+      "bbox": [
+        58.50000762939453,
+        122.22277069091797,
+        198.55482482910156,
+        132.18540954589844
+      ],
+      "ending": " in the paired GD/CEM comparisons uses the official checkpoint released for visual-shift evaluation.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 26,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.4718,
+      "last_line": "curves in Fig. 5 visualize F.",
+      "bbox": [
+        58.50000762939453,
+        345.7283935546875,
+        171.0166015625,
+        355.9165954589844
+      ],
+      "ending": "des solved by replan $t$; the cumulative curves in Fig.~\\mainref{fig:efficiency_main} visualize $F$.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 28,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.6343,
+      "last_line": "22.05, with failures assigned 30 units.",
+      "bbox": [
+        58.25094985961914,
+        381.90673828125,
+        209.52154541015625,
+        392.0949401855469
+      ],
+      "ending": "in} converts its mean to five-action units, $4.41\\times25/5=22.05$, with failures assigned 30 units.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 31,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.8263,
+      "last_line": "run individually with identical settings and seeds.",
+      "bbox": [
+        58.50000762939453,
+        623.4832763671875,
+        255.5611114501953,
+        633.4459228515625
+      ],
+      "ending": "with unstable batched particle simulation were rerun individually with identical settings and seeds.",
+      "kind": "prose"
+    },
+    {
+      "file": "B_protocols.tex",
+      "line": 35,
+      "status": "ok",
+      "page": 14,
+      "ratio": 0.6784,
+      "last_line": "Visual All averages seven conditions and Shift six; visual Steps averages all seven conditions.",
+      "bbox": [
+        58.17721939086914,
+        83.82561492919922,
+        393.994873046875,
+        92.7919921875
+      ],
+      "ending": "ams. Visual All averages seven conditions and Shift six; visual Steps averages all seven conditions.",
+      "kind": "caption"
+    },
+    {
+      "file": "C_baselines.tex",
+      "line": 5,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.5946,
+      "last_line": "records are archived with the paper.",
+      "bbox": [
+        317.25,
+        170.04345703125,
+        459.0582275390625,
+        180.00608825683594
+      ],
+      "ending": "O CLS and R3M use T-only checkpoints. Configurations and source records are archived with the paper.",
+      "kind": "prose"
+    },
+    {
+      "file": "C_baselines.tex",
+      "line": 8,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.7062,
+      "last_line": "environment actions allowed for planning.",
+      "bbox": [
+        317.25,
+        280.28851318359375,
+        485.6684875488281,
+        290.25115966796875
+      ],
+      "ending": "ds within each group share targets and the total number of environment actions allowed for planning.",
+      "kind": "prose"
+    },
+    {
+      "file": "C_baselines.tex",
+      "line": 11,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.4513,
+      "last_line": "and unseen-rope protocols.",
+      "bbox": [
+        317.25,
+        414.4438781738281,
+        424.8764343261719,
+        424.4065246582031
+      ],
+      "ending": " same fixed reference on 50 instances. Appendix~B gives the consolidation and unseen-rope protocols.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 5,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.8764,
+      "last_line": "61.1%. It also leads on the seen shapes in aggregate.",
+      "bbox": [
+        317.25,
+        510.1156005859375,
+        526.276123046875,
+        520.0782470703125
+      ],
+      "ending": "(AdaJEPA) to 77.6\\% and square from 46.7\\% to 61.1\\%. It also leads on the seen shapes in aggregate.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 9,
+      "status": "ok",
+      "page": 14,
+      "ratio": 0.9497,
+      "last_line": "Table 6. Held-out success (%) per PushObj shape. I, square, and small tee are unseen in pretraining. All averages the seven shapes.",
+      "bbox": [
+        70.81432342529297,
+        225.29693603515625,
+        540.91259765625,
+        234.26332092285156
+      ],
+      "ending": "er PushObj shape. I, square, and small tee are unseen in pretraining. All averages the seven shapes.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 22,
+      "status": "ok",
+      "page": 13,
+      "ratio": 0.5571,
+      "last_line": "rection again for each new target.",
+      "bbox": [
+        317.25,
+        606.7775268554688,
+        450.1217041015625,
+        616.7401733398438
+      ],
+      "ending": "ng, where episodic adaptation has to learn the same appearance correction again for each new target.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 26,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.9259,
+      "last_line": "Table 7. Held-out visual success (%) per condition on the paired targets. All averages seven conditions; Shift excludes Original.",
+      "bbox": [
+        76.69180297851562,
+        72.8667221069336,
+        535.0350341796875,
+        81.83309936523438
+      ],
+      "ending": "ss (\\%) per condition on the paired targets. All averages seven conditions; Shift excludes Original.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 41,
+      "status": "ok",
+      "page": 14,
+      "ratio": 0.6184,
+      "last_line": "test seeds reported in the main paper.",
+      "bbox": [
+        58.50000762939453,
+        432.2384338378906,
+        205.98696899414062,
+        442.2010803222656
+      ],
+      "ending": "d targets, complementing the evaluations on separate held-out test seeds reported in the main paper.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 44,
+      "status": "ok",
+      "page": 14,
+      "ratio": 0.991,
+      "last_line": "82.9%, respectively, with one memory retained throughout.",
+      "bbox": [
+        58.50000762939453,
+        627.6148071289062,
+        294.86370849609375,
+        637.5774536132812
+      ],
+      "ending": " from 57.6\\% to 68.7\\% and from 72.4\\% to 82.9\\%, respectively, with one memory retained throughout.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 47,
+      "status": "ok",
+      "page": 14,
+      "ratio": 0.4433,
+      "last_line": "with CEM, tying on noise.",
+      "bbox": [
+        316.891357421875,
+        420.28326416015625,
+        422.6148986816406,
+        430.24591064453125
+      ],
+      "ending": "every domain: \\ours exceeds AdaJEPA in 12 of 14 domains with GD, and in 13 with CEM, tying on noise.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 49,
+      "status": "ok",
+      "page": 14,
+      "ratio": 0.8558,
+      "last_line": "would require an additional controlled comparison.",
+      "bbox": [
+        316.891357421875,
+        528.568115234375,
+        520.9960327148438,
+        538.53076171875
+      ],
+      "ending": " stream. An isolated cross-family transfer effect would require an additional controlled comparison.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 53,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.4935,
+      "last_line": "replans. The checkpoint and learning protocols are described above.",
+      "bbox": [
+        58.5,
+        220.48951721191406,
+        302.7978515625,
+        229.45590209960938
+      ],
+      "ending": "ies. Failed episodes count as 30 replans. The checkpoint and learning protocols are described above.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 67,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.6912,
+      "last_line": "appearance and the T-shape block use different target sets and are retained as separate domains.",
+      "bbox": [
+        58.5,
+        83.82561492919922,
+        400.63897705078125,
+        92.7919921875
+      ],
+      "ending": "nal appearance and the T-shape block use different target sets and are retained as separate domains.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 82,
+      "status": "ok",
+      "page": 14,
+      "ratio": 0.7412,
+      "last_line": "tion budget of 30 MPC replans is exhausted.",
+      "bbox": [
+        317.25,
+        616.0037841796875,
+        494.01708984375,
+        625.9664306640625
+      ],
+      "ending": "howing how the advantage develops before the full interaction budget of 30 MPC replans is exhausted.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 89,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.8236,
+      "last_line": "errors after four passes on both deformable tasks.",
+      "bbox": [
+        58.50000762939453,
+        367.65521240234375,
+        254.9334259033203,
+        377.61785888671875
+      ],
+      "ending": "; the two learning rates yield similar final goal errors after four passes on both deformable tasks.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 93,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.568,
+      "last_line": "passes through the same 50 instances.",
+      "bbox": [
+        58.50001525878906,
+        342.8560791015625,
+        193.9729766845703,
+        351.82244873046875
+      ],
+      "ending": "or over 50 instances. \\ours uses its slow predictor after four passes through the same 50 instances.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 107,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.8691,
+      "last_line": "slow learning rates (mean ± standard error, 50 instances).",
+      "bbox": [
+        58.50000762939453,
+        464.2386169433594,
+        265.7781066894531,
+        473.5736083984375
+      ],
+      "ending": " after each consolidation pass at two slow learning rates (mean $\\pm$ standard error, 50 instances).",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 125,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.5541,
+      "last_line": "episodes, counting failures as 30.",
+      "bbox": [
+        58.50000762939453,
+        512.142333984375,
+        190.66439819335938,
+        522.10498046875
+      ],
+      "ending": "hift column in Table~\\mainref{tab:main}. Replans average over all episodes, counting failures as 30.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 127,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.6611,
+      "last_line": "gibility test for slow-predictor maturity.",
+      "bbox": [
+        58.50000762939453,
+        643.6563720703125,
+        216.17872619628906,
+        653.6190185546875
+      ],
+      "ending": "ect-write restriction, or both, while keeping the same eligibility test for slow-predictor maturity.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 131,
+      "status": "ok",
+      "page": 17,
+      "ratio": 0.5892,
+      "last_line": "evaluation is reused across columns and is not counted as three independent runs.",
+      "bbox": [
+        58.500030517578125,
+        94.7845230102539,
+        350.14935302734375,
+        103.75090026855469
+      ],
+      "ending": "shT episodic-reset evaluation is reused across columns and is not counted as three independent runs.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 148,
+      "status": "ok",
+      "page": 17,
+      "ratio": 0.8101,
+      "last_line": "combines 3,150 evaluations of repeated test targets, not 3,150 distinct physical scenes. Replans include failures.",
+      "bbox": [
+        58.50001525878906,
+        345.8448791503906,
+        459.4942932128906,
+        354.8112487792969
+      ],
+      "ending": " evaluations of repeated test targets, not 3,150 distinct physical scenes. Replans include failures.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 160,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.862,
+      "last_line": "sponding mean replans are 13.21, 13.09, and 13.88.",
+      "bbox": [
+        317.25,
+        403.5207214355469,
+        522.839111328125,
+        413.4833679199219
+      ],
+      "ending": "arity protections reduces it to 72.32\\%. The corresponding mean replans are 13.21, 13.09, and 13.88.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 162,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.4446,
+      "last_line": "these held-out evaluations.",
+      "bbox": [
+        317.25,
+        511.1243896484375,
+        423.28240966796875,
+        521.0870361328125
+      ],
+      "ending": "arning-curve measurements are online outcomes and are kept separate from these held-out evaluations.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 166,
+      "status": "ok",
+      "page": 17,
+      "ratio": 0.402,
+      "last_line": "tions with no reported test.",
+      "bbox": [
+        58.50000762939453,
+        485.4721984863281,
+        154.3864288330078,
+        494.4385681152344
+      ],
+      "ending": ",050 held-out evaluations across seven shapes. Dashes indicate configurations with no reported test.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 178,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.7043,
+      "last_line": "mean success by −1.05 points with CEM.",
+      "bbox": [
+        317.25,
+        642.2289428710938,
+        485.2251281738281,
+        652.6011352539062
+      ],
+      "ending": " Doubling the visual slow learning rate changes three-state mean success by $-1.05$ points with CEM.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 181,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.8399,
+      "last_line": "rates closer to those of independent episodic reset.",
+      "bbox": [
+        58.50000762939453,
+        652.5167846679688,
+        258.8188781738281,
+        662.4794311523438
+      ],
+      "ending": "cNemar $p=0.029$). Smaller weights give success rates closer to those of independent episodic reset.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 186,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.6533,
+      "last_line": "with the sampling-based CEM planner.",
+      "bbox": [
+        316.891357421875,
+        370.2943420410156,
+        472.6970520019531,
+        380.2569885253906
+      ],
+      "ending": "und to 78.6\\% in the seventh with GD, and from 72.3\\% to 78.3\\% with the sampling-based CEM planner.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 188,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.7668,
+      "last_line": "episode-speciﬁc parameter updates (Sec. 3.1).",
+      "bbox": [
+        317.25,
+        473.47314453125,
+        500.12249755859375,
+        483.435791015625
+      ],
+      "ending": "ion data rather than accumulating episode-specific parameter updates (Sec.~\\mainref{sec:diagnosis}).",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 193,
+      "status": "ok",
+      "page": 18,
+      "ratio": 0.9478,
+      "last_line": "Figure 9. Cosine similarity between consecutive fast-update ﬁngerprints in the seven-round shape stream (2,449 pairs per planner).",
+      "bbox": [
+        71.43309783935547,
+        235.02395629882812,
+        540.5718994140625,
+        243.99034118652344
+      ],
+      "ending": "en consecutive fast-update fingerprints in the seven-round shape stream (2{,}449 pairs per planner).",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 200,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.5708,
+      "last_line": "handles the remaining encounters.",
+      "bbox": [
+        317.25,
+        612.2158203125,
+        453.3795471191406,
+        622.178466796875
+      ],
+      "ending": "ctors plan about one episode in four, and the pretrained reference handles the remaining encounters.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 202,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.938,
+      "last_line": "for the recurring changes encountered after deployment.",
+      "bbox": [
+        317.25,
+        703.439453125,
+        540.9710693359375,
+        713.402099609375
+      ],
+      "ending": "owing specialized predictors to add capacity for the recurring changes encountered after deployment.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 5,
+      "status": "ok",
+      "page": 17,
+      "ratio": 0.8753,
+      "last_line": "reproduces all 31 archived Frozen frames and states.",
+      "bbox": [
+        58.50000762939453,
+        679.1121826171875,
+        267.2572021484375,
+        689.0748291015625
+      ],
+      "ending": "ys recorded actions; the same procedure exactly reproduces all 31 archived Frozen frames and states.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 7,
+      "status": "ok",
+      "page": 17,
+      "ratio": 0.5302,
+      "last_line": "common pretrained checkpoint.",
+      "bbox": [
+        317.25,
+        573.6825561523438,
+        443.6958923339844,
+        583.6452026367188
+      ],
+      "ending": "ion and adaptation protocols, rather than isolating adaptation under a common pretrained checkpoint.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 9,
+      "status": "ok",
+      "page": 17,
+      "ratio": 0.8706,
+      "last_line": "aggregate success uses the complete evaluation sets.",
+      "bbox": [
+        317.25,
+        638.5609741210938,
+        524.8912963867188,
+        648.5236206054688
+      ],
+      "ending": " The examples were selected for these outcomes; aggregate success uses the complete evaluation sets.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 11,
+      "status": "ok",
+      "page": 18,
+      "ratio": 0.7761,
+      "last_line": "nal state once the episode has reached its goal.",
+      "bbox": [
+        58.50000762939453,
+        291.3538818359375,
+        243.595947265625,
+        301.3165283203125
+      ],
+      "ending": "rom the recorded actions. Gray frames hold the terminal state once the episode has reached its goal.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 13,
+      "status": "ok",
+      "page": 18,
+      "ratio": 0.5395,
+      "last_line": "episode-local adaptation misses.",
+      "bbox": [
+        58.50000762939453,
+        375.6991271972656,
+        187.16751098632812,
+        385.6617736816406
+      ],
+      "ending": "ts of memory: reaching a shared goal sooner and solving a goal that episode-local adaptation misses.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 18,
+      "status": "ok",
+      "page": 19,
+      "ratio": 0.4774,
+      "last_line": "notes specify frame provenance and the prediction-loss deﬁnition.",
+      "bbox": [
+        58.5,
+        300.6848449707031,
+        294.7998046875,
+        309.6512145996094
+      ],
+      "ending": "stop at termination. The in-panel notes specify frame provenance and the prediction-loss definition.",
+      "kind": "caption"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 25,
+      "status": "ok",
+      "page": 19,
+      "ratio": 0.4033,
+      "last_line": "reaching the goal, as the AdaJEPA trajectory illustrates.",
+      "bbox": [
+        58.5,
+        649.7492065429688,
+        258.1363525390625,
+        658.715576171875
+      ],
+      "ending": "g prediction loss alone does not guarantee reaching the goal, as the AdaJEPA trajectory illustrates.",
+      "kind": "caption"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 29,
+      "status": "ok",
+      "page": 18,
+      "ratio": 0.5784,
+      "last_line": "achieves the desired conﬁguration.",
+      "bbox": [
+        58.50000762939453,
+        495.9098815917969,
+        196.4427490234375,
+        505.8725280761719
+      ],
+      "ending": "the red-agent episode but still misses the target, whereas \\ours achieves the desired configuration.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 32,
+      "status": "ok",
+      "page": 18,
+      "ratio": 0.9972,
+      "last_line": "ues and success markers are retained from the original logs.",
+      "bbox": [
+        58.50000762939453,
+        654.9596557617188,
+        296.338134765625,
+        664.9223022460938
+      ],
+      "ending": "were saved during planning. Final CD values and success markers are retained from the original logs.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 34,
+      "status": "ok",
+      "page": 18,
+      "ratio": 0.4892,
+      "last_line": "with fast adaptation disabled.",
+      "bbox": [
+        316.891357421875,
+        291.3538818359375,
+        433.5638122558594,
+        301.3165283203125
+      ],
+      "ending": "eometry of the final configuration under a common action budget, even with fast adaptation disabled.",
+      "kind": "prose"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 41,
+      "status": "ok",
+      "page": 20,
+      "ratio": 0.678,
+      "last_line": "success. SE-JEPA reaches both goals with its consolidated slow predictor; both baselines fail.",
+      "bbox": [
+        58.50001525878906,
+        483.414306640625,
+        394.10247802734375,
+        492.38067626953125
+      ],
+      "ending": "er) and success. \\ours reaches both goals with its consolidated slow predictor; both baselines fail.",
+      "kind": "caption"
+    },
+    {
+      "file": "E_qualitative.tex",
+      "line": 47,
+      "status": "ok",
+      "page": 18,
+      "ratio": 0.8842,
+      "last_line": "learned states, and the supporting evaluation records.",
+      "bbox": [
+        317.25,
+        376.03631591796875,
+        528.1392211914062,
+        385.99896240234375
+      ],
+      "ending": "he release will include code, configurations, learned states, and the supporting evaluation records.",
+      "kind": "prose"
+    }
+  ],
+  "bibliography": {
+    "checked": 42,
+    "short": [],
+    "entries": [
+      {
+        "number": 1,
+        "page": 9,
+        "last_line": "and Pattern Recognition, 2023.2",
+        "last_line_page": 9,
+        "bbox": [
+          78.41924285888672,
+          310.18450927734375,
+          211.50006103515625,
+          319.2428283691406
+        ],
+        "ratio": 0.6089
+      },
+      {
+        "number": 2,
+        "page": 9,
+        "last_line": "arXiv:2506.09985, 2025.1, 2",
+        "last_line_page": 9,
+        "bbox": [
+          78.41924285888672,
+          355.01641845703125,
+          198.8475341796875,
+          364.0747375488281
+        ],
+        "ratio": 0.551
+      },
+      {
+        "number": 3,
+        "page": 9,
+        "last_line": "on Learning Representations, 2022.2",
+        "last_line_page": 9,
+        "bbox": [
+          78.41924285888672,
+          399.8482971191406,
+          225.64785766601562,
+          408.9066162109375
+        ],
+        "ratio": 0.6736
+      },
+      {
+        "number": 4,
+        "page": 9,
+        "last_line": "preprint arXiv:2404.08471, 2024.2",
+        "last_line_page": 9,
+        "bbox": [
+          78.41924285888672,
+          455.6390686035156,
+          217.99151611328125,
+          464.6973876953125
+        ],
+        "ratio": 0.6386
+      },
+      {
+        "number": 5,
+        "page": 9,
+        "last_line": "ence on Computer Vision, 2021.2",
+        "last_line_page": 9,
+        "bbox": [
+          78.41924285888672,
+          511.42987060546875,
+          215.6749725341797,
+          520.4881591796875
+        ],
+        "ratio": 0.628
+      },
+      {
+        "number": 6,
+        "page": 9,
+        "last_line": "Neural Information Processing Systems, 2018. 2",
+        "last_line_page": 9,
+        "bbox": [
+          78.12335205078125,
+          556.2617797851562,
+          259.2403259277344,
+          565.320068359375
+        ],
+        "ratio": 0.8286
+      },
+      {
+        "number": 7,
+        "page": 9,
+        "last_line": "Neural Information Processing Systems, 2020. 2",
+        "last_line_page": 9,
+        "bbox": [
+          78.12335205078125,
+          633.9703369140625,
+          259.2403259277344,
+          643.0286254882812
+        ],
+        "ratio": 0.8286
+      },
+      {
+        "number": 8,
+        "page": 9,
+        "last_line": "preprint arXiv:1803.10122, 2018.2",
+        "last_line_page": 9,
+        "bbox": [
+          78.41924285888672,
+          656.8843994140625,
+          217.99151611328125,
+          665.9426879882812
+        ],
+        "ratio": 0.6386
+      },
+      {
+        "number": 9,
+        "page": 9,
+        "last_line": "Conference on Machine Learning, pages 2555–2565, 2019. 2",
+        "last_line_page": 9,
+        "bbox": [
+          78.12335205078125,
+          701.7162475585938,
+          294.7502136230469,
+          710.7745361328125
+        ],
+        "ratio": 0.9911
+      },
+      {
+        "number": 10,
+        "page": 9,
+        "last_line": "ing Representations, 2020.2",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          107.94291687011719,
+          454.15045166015625,
+          117.00125122070312
+        ],
+        "ratio": 0.5352
+      },
+      {
+        "number": 11,
+        "page": 9,
+        "last_line": "ternational Conference on Learning Representations, 2021.",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          141.81590270996094,
+          550.9708251953125,
+          150.87423706054688
+        ],
+        "ratio": 0.9782
+      },
+      {
+        "number": 12,
+        "page": 9,
+        "last_line": "models.Nature, 2025.2, 5",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          175.68887329101562,
+          456.02740478515625,
+          184.74720764160156
+        ],
+        "ratio": 0.5438
+      },
+      {
+        "number": 13,
+        "page": 9,
+        "last_line": "ing Representations, 2024.2",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          220.520751953125,
+          454.15045166015625,
+          229.57908630371094
+        ],
+        "ratio": 0.5352
+      },
+      {
+        "number": 14,
+        "page": 9,
+        "last_line": "Learning, pages 8387–8406, 2022.2",
+        "last_line_page": 9,
+        "bbox": [
+          336.9181823730469,
+          265.3526611328125,
+          481.6307373046875,
+          274.4109802246094
+        ],
+        "ratio": 0.6621
+      },
+      {
+        "number": 15,
+        "page": 9,
+        "last_line": "pages 770–778, 2016.4",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          310.2764587402344,
+          439.0850524902344,
+          319.2428283691406
+        ],
+        "ratio": 0.4663
+      },
+      {
+        "number": 16,
+        "page": 9,
+        "last_line": "Learning Representations, 2020.2",
+        "last_line_page": 9,
+        "bbox": [
+          336.9181823730469,
+          387.89312744140625,
+          472.7931823730469,
+          396.9514465332031
+        ],
+        "ratio": 0.6216
+      },
+      {
+        "number": 17,
+        "page": 9,
+        "last_line": "Academy of Sciences, 114(13):3521–3526, 2017. 2",
+        "last_line_page": 9,
+        "bbox": [
+          336.6222839355469,
+          465.6017150878906,
+          525.295166015625,
+          474.6600341796875
+        ],
+        "ratio": 0.8632
+      },
+      {
+        "number": 18,
+        "page": 9,
+        "last_line": "gence. OpenReview position paper, 2022. 1, 2",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          488.60772705078125,
+          514.7019653320312,
+          497.5740966796875
+        ],
+        "ratio": 0.8122
+      },
+      {
+        "number": 19,
+        "page": 9,
+        "last_line": "pages 614–629, 2016.2",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          522.4806518554688,
+          439.0850524902344,
+          531.447021484375
+        ],
+        "ratio": 0.4663
+      },
+      {
+        "number": 20,
+        "page": 9,
+        "last_line": "Conference on Robot Learning, pages 432–448, 2021. 4",
+        "last_line_page": 9,
+        "bbox": [
+          336.87335205078125,
+          567.2206420898438,
+          541.6240844726562,
+          576.2789306640625
+        ],
+        "ratio": 0.9367
+      },
+      {
+        "number": 21,
+        "page": 9,
+        "last_line": "ral Information Processing Systems, 2017. 2",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          601.0936279296875,
+          506.0531005859375,
+          610.1519165039062
+        ],
+        "ratio": 0.7727
+      },
+      {
+        "number": 22,
+        "page": 9,
+        "last_line": "preprint arXiv:2603.19312, 2026. 1, 2, 3, 5",
+        "last_line_page": 9,
+        "bbox": [
+          337.16925048828125,
+          645.9254760742188,
+          504.4576721191406,
+          654.9837646484375
+        ],
+        "ratio": 0.7654
+      },
+      {
+        "number": 23,
+        "page": 9,
+        "last_line": "Psychological Review, 102(3):419–457, 1995. 2",
+        "last_line_page": 9,
+        "bbox": [
+          336.8912658691406,
+          701.7162475585938,
+          516.185791015625,
+          710.7745361328125
+        ],
+        "ratio": 0.8203
+      },
+      {
+        "number": 24,
+        "page": 10,
+        "last_line": "Conference on Learning Representations, 2023. 2, 5",
+        "last_line_page": 10,
+        "bbox": [
+          78.12335205078125,
+          96.9840087890625,
+          271.5073547363281,
+          106.04234313964844
+        ],
+        "ratio": 0.8847
+      },
+      {
+        "number": 25,
+        "page": 10,
+        "last_line": "Conference on Robot Learning, pages 892–909, 2023. 2, 5",
+        "last_line_page": 10,
+        "bbox": [
+          78.12335205078125,
+          141.81590270996094,
+          290.2115783691406,
+          150.87423706054688
+        ],
+        "ratio": 0.9703
+      },
+      {
+        "number": 26,
+        "page": 10,
+        "last_line": "ing Research, 2024.2, 4, 5",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          252.4011688232422,
+          195.0330047607422,
+          261.4595031738281
+        ],
+        "ratio": 0.5335
+      },
+      {
+        "number": 27,
+        "page": 10,
+        "last_line": "cessing Systems, 2019.2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          297.23309326171875,
+          182.96400451660156,
+          306.2914123535156
+        ],
+        "ratio": 0.4783
+      },
+      {
+        "number": 28,
+        "page": 10,
+        "last_line": "arXiv preprint arXiv:1606.04671, 2016.2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          342.0649719238281,
+          238.7373809814453,
+          351.123291015625
+        ],
+        "ratio": 0.7335
+      },
+      {
+        "number": 29,
+        "page": 10,
+        "last_line": "ture, 588:604–609, 2020.2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          408.8146667480469,
+          191.3634033203125,
+          417.87298583984375
+        ],
+        "ratio": 0.5167
+      },
+      {
+        "number": 30,
+        "page": 10,
+        "last_line": "ing Representations, 2021.2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          464.6054382324219,
+          195.4004669189453,
+          473.66375732421875
+        ],
+        "ratio": 0.5352
+      },
+      {
+        "number": 31,
+        "page": 10,
+        "last_line": "International Conference on Machine Learning, 2020. 2",
+        "last_line_page": 10,
+        "bbox": [
+          78.26680755615234,
+          509.43731689453125,
+          283.3985595703125,
+          518.49560546875
+        ],
+        "ratio": 0.9385
+      },
+      {
+        "number": 32,
+        "page": 10,
+        "last_line": "preprint arXiv:1807.03748, 2018.2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          543.310302734375,
+          217.99151611328125,
+          552.3685913085938
+        ],
+        "ratio": 0.6386
+      },
+      {
+        "number": 33,
+        "page": 10,
+        "last_line": "on Learning Representations, 2021.2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          588.1422119140625,
+          225.64785766601562,
+          597.2005004882812
+        ],
+        "ratio": 0.6736
+      },
+      {
+        "number": 34,
+        "page": 10,
+        "last_line": "on Computer Vision and Pattern Recognition, 2022. 2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          622.01513671875,
+          276.2944641113281,
+          631.0734252929688
+        ],
+        "ratio": 0.9053
+      },
+      {
+        "number": 35,
+        "page": 10,
+        "last_line": "preprint arXiv:2606.32026, 2026. 1, 2, 3, 4, 5, 11",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          655.8881225585938,
+          265.4332580566406,
+          664.9464111328125
+        ],
+        "ratio": 0.8556
+      },
+      {
+        "number": 36,
+        "page": 10,
+        "last_line": "national Conference on Machine Learning, 2026. 2",
+        "last_line_page": 10,
+        "bbox": [
+          78.41924285888672,
+          700.7200317382812,
+          269.1208801269531,
+          709.7783203125
+        ],
+        "ratio": 0.8725
+      },
+      {
+        "number": 37,
+        "page": 10,
+        "last_line": "tion Processing Systems, 2015.2",
+        "last_line_page": 10,
+        "bbox": [
+          337.16925048828125,
+          118.90182495117188,
+          469.3070983886719,
+          127.96015930175781
+        ],
+        "ratio": 0.6045
+      },
+      {
+        "number": 38,
+        "page": 10,
+        "last_line": "Advances in Neural Information Processing Systems, 2021. 2",
+        "last_line_page": 10,
+        "bbox": [
+          336.6222839355469,
+          152.77479553222656,
+          553.5003051757812,
+          161.8331298828125
+        ],
+        "ratio": 0.9922
+      },
+      {
+        "number": 39,
+        "page": 10,
+        "last_line": "arXiv:2602.01780, 2026.2, 5",
+        "last_line_page": 10,
+        "bbox": [
+          337.16925048828125,
+          197.60667419433594,
+          457.5975341796875,
+          206.66500854492188
+        ],
+        "ratio": 0.551
+      },
+      {
+        "number": 40,
+        "page": 10,
+        "last_line": "Machine Learning, pages 12310–12320, 2021. 2",
+        "last_line_page": 10,
+        "bbox": [
+          336.7926330566406,
+          242.4385528564453,
+          518.6504516601562,
+          251.49688720703125
+        ],
+        "ratio": 0.832
+      },
+      {
+        "number": 41,
+        "page": 10,
+        "last_line": "preprint arXiv:2610.00722, 2026.1, 2",
+        "last_line_page": 10,
+        "bbox": [
+          337.16925048828125,
+          309.1882629394531,
+          486.47259521484375,
+          318.24658203125
+        ],
+        "ratio": 0.6831
+      },
+      {
+        "number": 42,
+        "page": 10,
+        "last_line": "chine Learning, pages 79115–79135, 2025. 1, 2, 3, 4, 5, 13",
+        "last_line_page": 10,
+        "bbox": [
+          337.16925048828125,
+          354.0201416015625,
+          550.691162109375,
+          363.0784606933594
+        ],
+        "ratio": 0.9769
+      }
+    ]
+  },
+  "threshold": 0.4,
+  "scope": "Abstract, body prose, figure/table captions, appendices, and bibliography; excludes headings, equations, algorithms, and table cells."
+}

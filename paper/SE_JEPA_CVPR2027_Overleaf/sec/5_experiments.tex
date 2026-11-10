@@ -22,15 +22,15 @@ On shapes absent from pretraining, held-out CEM success is about 15 percentage p
 On PushT, CEM success under the red-object shift rises by over thirty percentage points relative to both Frozen and AdaJEPA, which tie on this condition (Table~\ref{tab:visual_domains}). Red-goal recoloring also shows a large gain. Memory makes earlier pushes under the same appearance available for planning toward a different target.
 
 \paragraph{Planning efficiency.}
-Halfway through the GD replan budget, \ours solves more goals than AdaJEPA reaches with the full budget, on both the seven shapes and seven visual conditions (Fig.~\ref{fig:efficiency_main}). Curves include all goals, including failures. CEM gives the same ordering in mean replans on both tasks (\supref{B}).
+Halfway through the GD replan budget, \ours solves more goals than AdaJEPA reaches with the full budget, on both the seven shapes and seven visual conditions (Fig.~\ref{fig:efficiency_main}). Curves include all goals, including failures. CEM gives the same ordering in mean replans for both shapes and visual shifts (\supref{B}).
 
 \paragraph{Consolidation on a second backbone.}
-With the same 15-push budget, the consolidated DINO-WM predictor lowers final CD on both rope and granular (Table~\ref{tab:main}). No fast updates occur within an episode, so the improvement isolates learning from prior trajectories. It also extends replay from task-trained ResNet features to pretrained DINOv2 features.
+With the same 15-push budget, the consolidated DINO-WM predictor lowers final CD on both rope and granular (Table~\ref{tab:main}). No fast updates occur within an episode, so the improvement isolates learning from prior trajectories. It also extends replay from task-trained ResNet features to pretrained DINOv2 representations of deformable scenes.
 
 \subsection{Qualitative results}
 \label{sec:qualitative}
 
-With matched starts and goals, \ours solves unseen-I and mixed-stream red-object episodes missed by Frozen, DINO-WM, and AdaJEPA (Fig.~\ref{fig:qualitative}). The slow predictor alone also moves rope and particles closer to their target configurations (Fig.~\ref{fig:deform_qualitative}). \supref{E} gives full trajectories and explains their planning outcomes and prediction-loss curves.
+With matched starts and goals, \ours solves unseen-I and mixed-stream red-object episodes missed by Frozen, DINO-WM, and AdaJEPA (Fig.~\ref{fig:qualitative}). The slow predictor alone also moves rope and particles closer to their target configurations (Fig.~\ref{fig:deform_qualitative}). \supref{E} gives full trajectories and explains their planning outcomes and associated prediction-loss curves throughout each rollout.
 
 \subsection{Learning over deployment}
 \label{sec:deployment}
@@ -40,14 +40,14 @@ With targets resampled each round, both GD and CEM improve online success on uns
 Revisiting rope and granular reduces CD over successive passes (Fig.~\ref{fig:deployment}, bottom). After one rope pass, we froze the predictor and tested 91 new instances. Mean CD fell from pretrained DINO-WM's 0.664 to 0.349, a 47\% reduction; the paired bootstrap 95\% interval for the mean reduction is [0.162, 0.470] (\supref{B}). Both predictors use the same new starts and goals, with weights fixed.
 
 \paragraph{Selective writing and retrieval.}
-Across seven PushObj rounds, about one episode in four writes to replay, and a similar fraction finishes with a slow predictor. The pretrained model remains available on familiar encounters; both planners also improve over AdaJEPA on the four pretraining shapes (\supref{D}).
+Across seven PushObj rounds, about one episode in four writes to replay, and a similar fraction finishes with a slow predictor. The pretrained model remains available on familiar encounters; both planners also improve over AdaJEPA across all four object shapes represented in pretraining (\supref{D}).
 
 \subsection{One memory across task and shift families}
 \label{sec:mixed14}
 
 We combine seven PushObj shapes and seven PushT visual conditions in one 14-domain stream. Each of three chains per planner starts with an empty memory and carries it through all domains for five rounds, with 50 episodes per domain per round. Targets repeat, while adaptation and memory updates remain active.
 
-Averaging GD and CEM equally, online success rises from 65.3\% to 75.5\% (+10.2 points; Fig.~\ref{fig:mixed14_learning}). Both families improve: shapes from 73.4\% to 82.0\% and visual conditions from 57.2\% to 68.9\%. One evolving memory thus supports recurring geometric and appearance shifts across task families without resets. The AdaJEPA and Frozen references reach 65.2\% and 38.2\%; their initialization and adaptation exposure differ. Appendix~D gives the protocols and per-domain outcomes.
+Averaging GD and CEM equally, online success rises from 65.3\% to 75.5\% (+10.2 points; Fig.~\ref{fig:mixed14_learning}). Both families improve: shapes from 73.4\% to 82.0\% and visual conditions from 57.2\% to 68.9\%. One evolving memory thus supports recurring geometric and appearance shifts across task families without resets. The AdaJEPA and Frozen references reach 65.2\% and 38.2\%; their initialization and adaptation exposure differ. Appendix~D gives the evaluation protocols and the outcomes in every domain.
 
 \subsection{Ablation study}
 \label{sec:ablation}
@@ -96,7 +96,7 @@ Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and by 10.10 
 Across three chains, inheritance averages 65.94\% success versus 81.59\% for \ours on PushObj, and 31.71\% versus 75.68\% on PushT. The full model leads in every chain. Mean replans, including failures, fall from 15.84 to 11.30 on shapes and from 24.18 to 13.21 on visual conditions (Appendix~D). The advantage thus persists across learned states and improves both completion rate and interaction cost.
 
 \paragraph{Fixed slow learning rates.}
-Rates from $5\times10^{-5}$ to $3\times10^{-4}$ give 79.62--82.38\% on PushObj and 73.05--78.10\% across the two PushT chains. A rate of $5\times10^{-4}$ reduces success in all three comparisons relative to the default $10^{-4}$. Doubling the default changes the three-chain visual mean by only $+0.19$ points. The useful range thus extends beyond one tuned value; faster consolidation does not consistently improve planning.
+Rates from $5\times10^{-5}$ to $3\times10^{-4}$ give 79.62--82.38\% on PushObj and 73.05--78.10\% across the two PushT chains. A rate of $5\times10^{-4}$ reduces success in all three comparisons relative to the default $10^{-4}$. Doubling the default changes the three-chain visual mean by only $+0.19$ points. The useful range thus extends beyond one tuned value; larger replay updates do not consistently produce more successful plans.
 
 \paragraph{Maturity and familiarity gates.}
 Removing maturity screening lowers PushObj success from 81.43\% to 80.86\%, but raises PushT success from 74.38\% to 76.95\% and from 76.57\% to 78.10\%. A prediction-error gate may delay useful retrieval as well as filter unreliable predictors, motivating better eligibility calibration.

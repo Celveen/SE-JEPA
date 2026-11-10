@@ -46,7 +46,7 @@ def plot_teaser(data, output_dir):
     row_centers = range(len(rows))
     with plt.rc_context(style):
         fig, axes = plt.subplots(1, 3, figsize=(3.4, 1.9), sharey=True)
-        fig.subplots_adjust(left=.265, right=.975, bottom=.21, top=.78, wspace=.32)
+        fig.subplots_adjust(left=.215, right=.975, bottom=.21, top=.78, wspace=.32)
         for i, (ax, (metric, title)) in enumerate(zip(axes, PANELS.items())):
             ax.set_xlim(0, 125)
             ax.set_ylim(row_centers[-1] + .51, -.51)
@@ -84,7 +84,7 @@ def plot_teaser(data, output_dir):
                             bbox={"facecolor": "white", "edgecolor": "none",
                                   "boxstyle": "square,pad=0.03"})
 
-        fig.text(.62, .045, "Held-out GD success (%)", ha="center", fontsize=7.2, color="#253648")
+        fig.text(.595, .045, "Held-out GD success (%)", ha="center", fontsize=7.2, color="#253648")
         for extension in ("pdf", "svg", "png"):
             fig.savefig(output_dir / f"teaser_bars.{extension}", dpi=300)
         plt.close(fig)

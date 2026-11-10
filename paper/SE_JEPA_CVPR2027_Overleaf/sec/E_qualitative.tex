@@ -4,18 +4,18 @@
 \subsection{Rigid-object planning sequences}
 Figure~\mainref{fig:qualitative} selects two GD episodes where Frozen, DINO-WM, and AdaJEPA fail and \ours succeeds. The unseen-I example uses the paired shape evaluation. Its DINO-WM frame replays recorded actions; the same procedure exactly reproduces all 31 archived Frozen frames and states.
 
-The red-object example comes from round five of the 14-domain stream (\ours chain two, sample 30), matched exactly in both initial and goal state to DINO-WM sample 31. Frozen and AdaJEPA use their seed-100 runs and the official shape-shift checkpoint; \ours uses the mixed-stream checkpoint and accumulated memory described in Appendix~D. The DINO-WM final frame comes from a new frozen-model run with 30 MPC replans, preserving the original epoch-three checkpoint, target and seed mapping. The other three final frames replay their original actions. This selected illustration combines different initialization and adaptation protocols, rather than forming a same-checkpoint ablation.
+The red-object example comes from round five of the 14-domain stream (\ours chain two, sample 30), matched exactly in both initial and goal state to DINO-WM sample 31. Frozen and AdaJEPA use their seed-100 runs and the official shape-shift checkpoint; \ours uses the mixed-stream checkpoint and accumulated memory described in Appendix~D. The DINO-WM final frame comes from a new frozen-model run with 30 MPC replans, preserving the original epoch-three checkpoint, target and seed mapping. The other three final frames replay their original actions. This selected illustration combines different initialization and adaptation protocols, rather than isolating adaptation under a common pretrained checkpoint.
 
 Figure~\mainref{fig:qualitative} labels MPC replans. All baseline runs fail after 30 replans of five environment actions, exhausting the same 150-action budget. \ours succeeds after six replans in each row. The examples were selected for these outcomes; aggregate success uses the complete evaluation sets.
 
-Figures~\ref{fig:full_shape} and~\ref{fig:full_visual} show the square and red-agent CEM examples from the original execution archive. Both use the first held-out target of test seed 2000. We retain the full frame strips, termination markers, prediction-loss curves, and explanatory notes. The label Ours denotes \ours; Replay identifies frames reconstructed in the original simulator from the recorded actions. Gray frames hold the terminal state after success.
+Figures~\ref{fig:full_shape} and~\ref{fig:full_visual} show the square and red-agent CEM examples from the original execution archive. Both use the first held-out target of test seed 2000. We retain the full frame strips, termination markers, prediction-loss curves, and explanatory notes. The label Ours denotes \ours; Replay identifies frames reconstructed in the original simulator from the recorded actions. Gray frames hold the terminal state once the episode has reached its goal.
 
 On the unseen square, \ours reaches the goal after five replans, compared with eight for AdaJEPA; Frozen exhausts all 30 replans without success. On the red-agent shift, \ours succeeds at replan ten while both baselines exhaust the budget. These cases show two benefits of memory: reaching a shared goal sooner and solving a goal that episode-local adaptation misses.
 
 \begin{figure*}[!t]
  \centering
  \includegraphics[width=\textwidth]{reference_square.pdf}
- \caption{\textbf{Unseen-square planning under CEM.} The original trajectory strip includes replans 0--13 and 30, followed by the goal. \ours succeeds at replan five and AdaJEPA at replan eight; Frozen fails within 30 replans. Loss traces stop at termination. The in-panel notes specify frame provenance and the loss definition.}
+ \caption{\textbf{Unseen-square planning under CEM.} The original trajectory strip includes replans 0--13 and 30, followed by the goal. \ours succeeds at replan five and AdaJEPA at replan eight; Frozen fails within 30 replans. Loss traces stop at termination. The in-panel notes specify frame provenance and the prediction-loss definition.}
  \label{fig:full_shape}
 \end{figure*}
 
@@ -44,4 +44,4 @@ The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \
 
 
 \subsection{Reproducibility}
-Source manifests link archived episode records, simulator images, outcomes, checksums, and crops. Appendix~D specifies mixed-stream protocols and checkpoint provenance. Code, configurations, and learned states will be released.
+Source manifests link archived episode records, simulator images, outcomes, checksums, and crops. Appendix~D specifies mixed-stream protocols and checkpoint provenance. The release will include code, configurations, learned states, and the supporting evaluation records.

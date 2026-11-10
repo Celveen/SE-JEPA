@@ -1,0 +1,30 @@
+{
+  "source": "figures/source/deform_qualitative_original.pdf",
+  "source_sha256": "437b74d608bb3c245051684d32d5652d39e4561064bbb85687e410ec13a18eab",
+  "selection": "Initial observations from the first rope and granular examples; embedded images extracted verbatim, including robot arm and goal overlays.",
+  "replaced_panels": [
+    "Square",
+    "T"
+  ],
+  "new_panels": [
+    "Rope",
+    "Granular"
+  ],
+  "unchanged_panels": [
+    "I",
+    "L"
+  ],
+  "original_pdf": "figures/source/architecture_before_deform.pdf",
+  "images": {
+    "rope": {
+      "xref": 13,
+      "file": "rope.png",
+      "sha256": "08b7c0835eba5789291f8d645068c66b34889ab79d1d71fa033a77a5ebec424f"
+    },
+    "granular": {
+      "xref": 21,
+      "file": "granular.png",
+      "sha256": "8a36f4792cccc85de7840bd1d86033d7d72d3991a218a216b6f84b0ffa94d485"
+    }
+  }
+}

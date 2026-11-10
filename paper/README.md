@@ -89,3 +89,9 @@ ablation tables; the sweep now ends at 5e-4. The original evidence remains
 archived. DreamerV3/IRIS PushObj All and Steps are still unavailable for the
 seven-shape protocol; Appendix C explains these dashes. See
 `data/dreamer_iris_missing_cells_audit.json` for the current source review.
+
+Figure 1's lower GD chart now extends leftward. Figure 2 includes original rope
+and granular robot-arm observations in its test-time task examples. The full
+manuscript review verifies at least 40% final-line width for prose, captions and
+bibliography entries; the original abstract and numerical results are unchanged.
+The main text remains eight pages, with 1.43 lines of trailing space.

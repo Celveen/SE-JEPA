@@ -16,7 +16,7 @@ Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predicto
   \big\|P_{\phi_k}(x)-z^+\big\|_2^2.
   \label{eq:replay}
 \end{equation}
-Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes. The goal image enters when the planner uses this predictor to compare candidate futures.
+Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes. The goal image enters when the planner uses this predictor to compare candidate futures against the requested target.
 
 \subsection{Discovering predictive domains}
 \label{sec:write}
@@ -27,7 +27,7 @@ The frozen reference first tests whether an episode contributes new experience. 
   \sum_{t\in\mathcal{I}_e}\log\ell^{(0)}_{e,t}\right).
   \label{eq:familiarity}
 \end{equation}
-If $F_e<\tau_f$, the calibrated familiarity threshold, the agent keeps $P_0$ as its adaptation base and skips the episode's direct memory write. Replay thus receives episodes the reference predicts poorly.
+If $F_e<\tau_f$, the calibrated familiarity threshold, the agent keeps $P_0$ as its adaptation base and skips the episode's direct memory write. Replay thus receives episodes the reference cannot yet predict accurately.
 
 For an unfamiliar episode, $\Delta_e$ concatenates the fast predictor and encoder-head changes. Its normalized direction and similarity to domain $k$ are
 \begin{equation}

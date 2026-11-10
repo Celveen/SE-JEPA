@@ -21,7 +21,14 @@
 \input{sec/E_qualitative}
 \clearpage
 {\small
-\bibliographystyle{ieeenat_fullname}
+% Keep bibliography endings substantial without altering entry wording.
+    \let\standardthebibliography\thebibliography
+    \renewcommand{\thebibliography}[1]{%
+      \standardthebibliography{#1}%
+      \tolerance=1000\relax
+      \setlength{\parfillskip}{0pt plus 0.25\linewidth}%
+    }
+    \bibliographystyle{ieeenat_fullname}
 \bibliography{references}
 }
 \end{document}

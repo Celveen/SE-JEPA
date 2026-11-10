@@ -11,7 +11,7 @@ Persistent replay is re-encoded by the reference encoder. Each slow learner is a
 
 \begin{table}[t]
   \centering
-  \caption{Label-free configuration used for PushObj and PushT. The seven-round stream in Appendix~D uses a slow learning rate of $2\times10^{-4}$.}
+  \caption{Label-free configuration used for PushObj and PushT. The seven-round stream in Appendix~D uses a slow learning rate of $2\times10^{-4}$ for all replay updates.}
   \label{tab:hyperparams}
   \small
   \begin{tabular}{lr}
@@ -96,6 +96,6 @@ For a new unfamiliar episode, every existing trained learner is evaluated before
 \begin{equation}
  G_{A\to B}\leq \min\{1,(1+\epsilon_m)G_{A\to A}\},
 \end{equation}
-with the symmetric condition for $B\to A$. Each direction requires two jointly evaluated episodes in the primary configuration. The larger domain retains its learner and incorporates the union of stored experience. Merged identifiers are not reused.
+with the symmetric condition for $B\to A$. Each direction requires two jointly evaluated episodes in the primary configuration. The larger domain retains its learner and incorporates the union of stored experience. Identifiers of merged domains remain retired for the rest of the stream.
 
 Every 25 episodes, small immature domains can be absorbed into a mature predictor that explains their experience with an error ratio at most 0.8. The primary configuration limits absorption to fragments with fewer than six episodes and fewer than three maturity measurements. Pending-pool absorption and the additional absolute-error gate are disabled in the shape and visual experiments.
