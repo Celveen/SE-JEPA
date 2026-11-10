@@ -1,0 +1,64 @@
+/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/__init__.py:7: UserWarning: point_maze envs unavailable (mujoco_py missing): No module named 'mujoco_py'. (HINT: you need to install mujoco_py, and also perform the setup instructions here: https://github.com/openai/mujoco-py/.)
+  warnings.warn(f"point_maze envs unavailable (mujoco_py missing): {_e}")
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pygame/pkgdata.py:25: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import resource_stream, resource_exists
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('mpl_toolkits')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/skimage/util/dtype.py:27: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+iris plus 1 / 50 success False MPC 30 seconds 276.8
+iris plus 2 / 50 success False MPC 30 seconds 275.3
+iris plus 3 / 50 success False MPC 30 seconds 281.3
+iris plus 4 / 50 success False MPC 30 seconds 275.5
+iris plus 5 / 50 success False MPC 30 seconds 275.2
+iris plus 6 / 50 success False MPC 30 seconds 275.2
+iris plus 7 / 50 success False MPC 30 seconds 281.5
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/shapely/set_operations.py:131: RuntimeWarning: divide by zero encountered in intersection
+  return lib.intersection(a, b, **kwargs)
+iris plus 8 / 50 success False MPC 30 seconds 288.9
+iris plus 9 / 50 success False MPC 30 seconds 286.3
+iris plus 10 / 50 success False MPC 30 seconds 280.6
+iris plus 11 / 50 success False MPC 30 seconds 278.4
+iris plus 12 / 50 success False MPC 30 seconds 284.8
+iris plus 13 / 50 success False MPC 30 seconds 288.9
+iris plus 14 / 50 success True MPC 8 seconds 77.3
+iris plus 15 / 50 success True MPC 7 seconds 67.5
+iris plus 16 / 50 success False MPC 30 seconds 281.3
+iris plus 17 / 50 success False MPC 30 seconds 278.3
+iris plus 18 / 50 success False MPC 30 seconds 278.5
+iris plus 19 / 50 success False MPC 30 seconds 277.8
+iris plus 20 / 50 success False MPC 30 seconds 277.6
+iris plus 21 / 50 success False MPC 30 seconds 277.5
+iris plus 22 / 50 success False MPC 30 seconds 277.6
+iris plus 23 / 50 success False MPC 30 seconds 277.5
+iris plus 24 / 50 success False MPC 30 seconds 277.6
+iris plus 25 / 50 success False MPC 30 seconds 277.6
+iris plus 26 / 50 success False MPC 30 seconds 277.6
+iris plus 27 / 50 success False MPC 30 seconds 280.6
+iris plus 28 / 50 success False MPC 30 seconds 277.6
+iris plus 29 / 50 success False MPC 30 seconds 277.8
+iris plus 30 / 50 success False MPC 30 seconds 277.7
+iris plus 31 / 50 success False MPC 30 seconds 278.0
+iris plus 32 / 50 success False MPC 30 seconds 278.5
+iris plus 33 / 50 success False MPC 30 seconds 278.3
+iris plus 34 / 50 success False MPC 30 seconds 278.3
+iris plus 35 / 50 success False MPC 30 seconds 278.4
+iris plus 36 / 50 success False MPC 30 seconds 278.5
+iris plus 37 / 50 success False MPC 30 seconds 278.5
+iris plus 38 / 50 success False MPC 30 seconds 277.5
+iris plus 39 / 50 success False MPC 30 seconds 278.3
+iris plus 40 / 50 success False MPC 30 seconds 277.3
+iris plus 41 / 50 success False MPC 30 seconds 278.2
+iris plus 42 / 50 success False MPC 30 seconds 277.8
+iris plus 43 / 50 success False MPC 30 seconds 277.4
+iris plus 44 / 50 success False MPC 30 seconds 278.1
+iris plus 45 / 50 success False MPC 30 seconds 278.4
+iris plus 46 / 50 success False MPC 30 seconds 278.4
+iris plus 47 / 50 success False MPC 30 seconds 278.3
+iris plus 48 / 50 success False MPC 30 seconds 278.2
+iris plus 49 / 50 success False MPC 30 seconds 277.7
+iris plus 50 / 50 success False MPC 30 seconds 276.3

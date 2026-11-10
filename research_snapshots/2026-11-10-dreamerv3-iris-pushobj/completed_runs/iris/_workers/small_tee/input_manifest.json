@@ -1,0 +1,266 @@
+{
+  "status": "authorized_eight_GPU_launch_preflight",
+  "root": "/data/zjc/adaJEPA/CL-JEPA-cudagraph",
+  "models": {
+    "dreamerv3": {
+      "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3",
+      "epoch": 3,
+      "training_shapes": [
+        "T"
+      ],
+      "checkpoint_sha256": {
+        "model_latest.pkl": "a247115fed112b44e9e2f798e9e1d7bd0e2aeb429b1bed7d7a86f7a93d229368"
+      },
+      "world_model_epochs": 3,
+      "parameters": 135012103
+    },
+    "iris": {
+      "checkpoint": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+      "epoch": 3,
+      "training_shapes": [
+        "T"
+      ],
+      "checkpoint_sha256": {
+        "tokenizer_model.pt": "0bb6df2196c87209a3d760d78d39575e52819094e3ea3062d99289a8bbd67526",
+        "world_model.pt": "66fc0367dee584221ebba439b6a8564efe0b81219732181b6f7b9437bb70c36a"
+      },
+      "tokenizer_epochs": 3,
+      "world_model_epochs": 3,
+      "tokenizer_trainable_parameters": 4027523,
+      "tokenizer_total_parameters_including_training_LPIPS": 18743683,
+      "world_model_total_parameters": 8517129
+    }
+  },
+  "proposed_weight_policy": "User confirmed: reuse existing T-only checkpoints; no new training.",
+  "blocks": [
+    {
+      "shape": "I",
+      "tag": "I",
+      "chunk": "chunk_00_I",
+      "n": 50,
+      "seed": 2000,
+      "target": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/I.npz",
+      "target_sha256": "80d9e822446fcda7ee9ea7b8673bee91338de0ad841f07b9c60d388b86631e9b",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_00_I/plan_targets.pkl",
+      "source_sha256": "2451c9df4364eacf8a2e9498f11847d7caf6daf7d944d0fac3877758c8411749",
+      "segment_source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_00_I.pkl",
+      "segment_sha256": "456d94fab562990b30545dc6d4385ea4c076c4ad59b4233f00883f096bdb4fd3",
+      "state_pair_exactly_matches_existing_baseline": true
+    },
+    {
+      "shape": "L",
+      "tag": "L",
+      "chunk": "chunk_01_L",
+      "n": 50,
+      "seed": 2000,
+      "target": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/L.npz",
+      "target_sha256": "c1bbb4634f4f1b4c4f6fdaf770f266785af5ea3be24aa2fedbaa76f571839747",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_01_L/plan_targets.pkl",
+      "source_sha256": "292d946d8228faedfe694ca09b2ab779a08d3135503169d0b4fb67e37011c7be",
+      "segment_source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_01_L.pkl",
+      "segment_sha256": "bcca122a4512ca33db7dc3551ed20d2f26efac3ba684172858267220dd97768e",
+      "state_pair_exactly_matches_existing_baseline": true
+    },
+    {
+      "shape": "square",
+      "tag": "square",
+      "chunk": "chunk_02_square",
+      "n": 50,
+      "seed": 2000,
+      "target": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/square.npz",
+      "target_sha256": "74172a4eb1efc88c7eba577ea7d5b7cf6dc66eb42ba9d1406a4db1864dc4e62e",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_02_square/plan_targets.pkl",
+      "source_sha256": "6d611347d1b941aae81266b13877091baded4be4712d125788c9f42d9f8eb10a",
+      "segment_source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_02_square.pkl",
+      "segment_sha256": "9ee75ba011ba2d52be7f9a08c0922afdfb3a8cab16ea6f35ab066e481d7d2749",
+      "state_pair_exactly_matches_existing_baseline": true
+    },
+    {
+      "shape": "Z",
+      "tag": "Z",
+      "chunk": "chunk_03_Z",
+      "n": 50,
+      "seed": 2000,
+      "target": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/Z.npz",
+      "target_sha256": "2e4ebcf830e6ad4260fa5a14878108a69bd45e7f0d7f16668f8be87b049ab559",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_03_Z/plan_targets.pkl",
+      "source_sha256": "33f832a92f76132f29444d58178692e3fee2890efc9bf8cee828ee5272e59ed3",
+      "segment_source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_03_Z.pkl",
+      "segment_sha256": "c9c57f4bb48029eb7ffcd88711489f8f2eb52c7d57bcf5aa8459b80afe9897ed",
+      "state_pair_exactly_matches_existing_baseline": true
+    },
+    {
+      "shape": "small_tee",
+      "tag": "small_tee",
+      "chunk": "chunk_04_small_tee",
+      "n": 50,
+      "seed": 2000,
+      "target": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/small_tee.npz",
+      "target_sha256": "5e05d1d8e8117b8214a9dc968d1ac1a1665380773a757531f8791d42975bcee1",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_04_small_tee/plan_targets.pkl",
+      "source_sha256": "66032cb60a09ab9651b10d8faf5a0c4afcf7e32ebd7a8cfe6250db7a5c49a1a7",
+      "segment_source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_04_small_tee.pkl",
+      "segment_sha256": "0d714951a3b1a5eaaa625f3bf8f247428e6d174bcc5938a410606d0ca788243d",
+      "state_pair_exactly_matches_existing_baseline": true
+    },
+    {
+      "shape": "+",
+      "tag": "plus",
+      "chunk": "chunk_05_plus",
+      "n": 50,
+      "seed": 2000,
+      "target": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/plus.npz",
+      "target_sha256": "69e7e403b67f07360bc9d125723681bb5ee012c35346a1e1ba674b177faa7b33",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_05_plus/plan_targets.pkl",
+      "source_sha256": "215c488dc2d1010c3c59f74a123b9ebe569299105ece6f637d26f0a929f81e20",
+      "segment_source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_05_plus.pkl",
+      "segment_sha256": "79344be87922637d1fd84a26d4ddb2d5bfa87a7ebb6a961c249efb1683c6e030",
+      "state_pair_exactly_matches_existing_baseline": true
+    },
+    {
+      "shape": "T",
+      "tag": "T",
+      "chunk": "chunk_06_T",
+      "n": 50,
+      "seed": 2000,
+      "target": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets/T.npz",
+      "target_sha256": "d6e1e08ae4d23471a425183aa93826aa217288541b8d65683206ad745b8f9ca0",
+      "source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/lewm_H7t3/chunk_06_T/plan_targets.pkl",
+      "source_sha256": "acb16d4272ee576785f243e72f4fdd810310e91726d1fe4daf4b9fc837298006",
+      "segment_source": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/data/cont_streams/H7t3/chunk_06_T.pkl",
+      "segment_sha256": "6252c40cc470fba79ca318b77537c9349f68824d211046d1481f95f3e48d2a83",
+      "state_pair_exactly_matches_existing_baseline": true
+    }
+  ],
+  "total_episodes_per_method": 350,
+  "total_episodes": 700,
+  "planning_seed": 2000,
+  "environment_seed_rule": "1 + 2000 * sample_index",
+  "planning_rng_rule": "2000 + sample_index",
+  "CEM": {
+    "samples": 200,
+    "topk": 30,
+    "iterations": 10,
+    "model_horizon": 5
+  },
+  "max_replans": 30,
+  "physical_actions_per_replan": 5,
+  "max_physical_actions": 150,
+  "new_training": false,
+  "source_code_sha256": {
+    "common.py": "d09d698f1d85d22fb567b409d14bf18b637774f7cb8ede7f9d47df84a64293d9",
+    "prepare_data.py": "0038d57591983d9c8cf699417f4642d9b2ac80480baadf78bf184e6bbbf1ba4b",
+    "dreamer_model.py": "78186fe9e5f1cfb8982b9d59719291307de61cdc6aa7c984a3cf8d4ea2c861b7",
+    "train_dreamer.py": "5068858cd61966d3cf385730155f4ff034711425b1804d24f5acc854ba6f8dda",
+    "serve_dreamer.py": "10f632401216819377b5dc6d0c59131c21c4a58ae3dfdb2ed9aafb73af2ce6c8",
+    "iris_model.py": "a14195d96d4bea508b631c67b395bcf33a98f4fb6666438c26fe9200e1472aaf",
+    "train_iris.py": "cfff1e110c5285c0eeaa2cde11993575ab276f1ecb0b28e733feaba197f67539",
+    "serve_iris.py": "82418e10001c1830d8bd7ea23fdfc7104e8572a983073678218fcc5993bac7c0",
+    "evaluate.py": "10bca85f7e210021d4540fbb141cc3cc350be2f59810421ae33c6a833b5f33db",
+    "run_pipeline.py": "218bcbb5ba345c7bcca03111c08207141213e62b82dae6a0226265539d20a6df"
+  },
+  "output_root": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110",
+  "authorization": {
+    "weight_choice": "confirmed by user",
+    "experiment_launch": "confirmed by user: 启动吧; eight-GPU scheme",
+    "experiment_started": false,
+    "recorded_at_UTC": "2026-11-10T06:13:55.118676+00:00"
+  },
+  "training_data": {
+    "path": "/data/zjc/adaJEPA/CL-JEPA/data/pushobj_T16k_bias",
+    "shapes": [
+      "T"
+    ],
+    "train_trajectories": 16000,
+    "val_trajectories": 1000,
+    "train_windows_per_epoch": 1633205,
+    "image_resolution": [
+      64,
+      64
+    ],
+    "window_frames": 4,
+    "frame_stride": 5,
+    "action_bias": true,
+    "note": "Existing clean T-only data with action bias; not the newly generated unbiased random16k."
+  },
+  "objective": "Decoded RGB MSE in [-1,1] + normalized proprio MSE; terminal for first 5 replans, weighted trajectory thereafter.",
+  "success_criterion": "norm(goal[:4]-state[:4]) < 20 and shortest_arc_angle_error < pi/9; includes agent and object positions; checked after each 5-action block.",
+  "proposed_gpus": {
+    "dreamerv3": [
+      0
+    ],
+    "iris": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "disclosures": [
+    "Frozen offline world models + CEM adaptation; no reward supervision, actor-critic, or online learning.",
+    "T is training-seen; six other shapes are unseen for these T-only weights.",
+    "IRIS uses continuous-action/proprio adaptation and argmax token rollout.",
+    "Retains existing DreamerV3/IRIS staged/5-physical-actions/30-replans controller, distinct from newer DINO-WM last/25/6."
+  ],
+  "prepared_code_sha256": {
+    "run.py": "a5dfee0922ce2a13797b81772fdeb5306bd1ae8c9fa8d8ab692fcfc97ca4f595",
+    "run_all.py": "a9782578ba41660feb72d6c88a48b385ebfeb6643f89075f703eb2100b38487e",
+    "validate_preflight.py": "7546ea3e7ed3b02e6a5faef9c84ee8101cebb103fb637419182aa3f01e173330",
+    "code/common.py": "ae1ea76822624f697e354ee59c6597b648f55fc35f1b0614a94e8d6d1901b40f",
+    "code/dreamer_model.py": "78186fe9e5f1cfb8982b9d59719291307de61cdc6aa7c984a3cf8d4ea2c861b7",
+    "code/evaluate.py": "8b3ac3d8e7b8a0d9681f2e01804615dbf0cc6c877f1ffddb96c22536db364690",
+    "code/iris_model.py": "a14195d96d4bea508b631c67b395bcf33a98f4fb6666438c26fe9200e1472aaf",
+    "code/serve_frozen.py": "b9a6973566f84d449a64a1efe26dd0067801109878187fe5a03a348ddb65511c"
+  },
+  "runtime_dependency_sha256": {
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/pusht/pusht_wrapper.py": "939dc7db9ac4f6f5da4ad550fafe96a91a28090e164d1053c4c02c02b57e4cb1",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/pusht/pusht_env.py": "e76a4cf6d1dd143156dcfa25076371c76a238f6d523415ae74a387b7b0919378",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/planning/image_corruption.py": "eeab9dc0549f4c198fb9991d9b608ca6caecdd5ff50c86fd55717be70bb09afd",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/utils.py": "dd9ab7aeac2a70beac4733dccc8dfc3fad4a96803cf7cf1844f79252b1b984d4"
+  },
+  "upstream_commits": {
+    "dreamerv3": "e01491fad6434b2245a3b8ca201dd7faedcc458c",
+    "iris": "24326aaaa283c527f42b89b44cfdecf2665a7a16"
+  },
+  "gpu_assignment": {
+    "dreamerv3": {
+      "gpu": 0,
+      "shapes": [
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ]
+    },
+    "iris": {
+      "1": [
+        "I"
+      ],
+      "2": [
+        "L"
+      ],
+      "3": [
+        "square"
+      ],
+      "4": [
+        "Z"
+      ],
+      "5": [
+        "small_tee"
+      ],
+      "6": [
+        "plus"
+      ],
+      "7": [
+        "T"
+      ]
+    }
+  },
+  "parallelization": "Independent shape episodes, frozen identical checkpoints. Preserve within-shape original sample indices and RNG mapping. No budget change."
+}

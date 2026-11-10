@@ -1,0 +1,761 @@
+{
+  "checked_at": "2026-11-10T06:13:58.210902+00:00",
+  "passed": true,
+  "checks": [
+    "syntax",
+    "identical CEM AST",
+    "identical model scorer sources",
+    "source and target hashes",
+    "checkpoint hashes and completed epochs",
+    "all 350 exact state pairs",
+    "cached images/proprio",
+    "fixed seed mapping",
+    "launcher dry runs",
+    "eight-GPU schedule; each of 700 episodes assigned exactly once",
+    "no output directory"
+  ],
+  "weights": {
+    "dreamerv3": {
+      "epoch": 3,
+      "sha256": {
+        "model_latest.pkl": "a247115fed112b44e9e2f798e9e1d7bd0e2aeb429b1bed7d7a86f7a93d229368"
+      }
+    },
+    "iris": {
+      "epoch": 3,
+      "sha256": {
+        "tokenizer_model.pt": "0bb6df2196c87209a3d760d78d39575e52819094e3ea3062d99289a8bbd67526",
+        "world_model.pt": "66fc0367dee584221ebba439b6a8564efe0b81219732181b6f7b9437bb70c36a"
+      }
+    }
+  },
+  "blocks": [
+    {
+      "shape": "I",
+      "episodes": 50,
+      "state_pairs_exactly_match_reference": true,
+      "cached_images_and_proprio_match": true,
+      "seed_mapping_match": true
+    },
+    {
+      "shape": "L",
+      "episodes": 50,
+      "state_pairs_exactly_match_reference": true,
+      "cached_images_and_proprio_match": true,
+      "seed_mapping_match": true
+    },
+    {
+      "shape": "square",
+      "episodes": 50,
+      "state_pairs_exactly_match_reference": true,
+      "cached_images_and_proprio_match": true,
+      "seed_mapping_match": true
+    },
+    {
+      "shape": "Z",
+      "episodes": 50,
+      "state_pairs_exactly_match_reference": true,
+      "cached_images_and_proprio_match": true,
+      "seed_mapping_match": true
+    },
+    {
+      "shape": "small_tee",
+      "episodes": 50,
+      "state_pairs_exactly_match_reference": true,
+      "cached_images_and_proprio_match": true,
+      "seed_mapping_match": true
+    },
+    {
+      "shape": "+",
+      "episodes": 50,
+      "state_pairs_exactly_match_reference": true,
+      "cached_images_and_proprio_match": true,
+      "seed_mapping_match": true
+    },
+    {
+      "shape": "T",
+      "episodes": 50,
+      "state_pairs_exactly_match_reference": true,
+      "cached_images_and_proprio_match": true,
+      "seed_mapping_match": true
+    }
+  ],
+  "dry_runs": {
+    "dreamerv3": {
+      "dry_run": true,
+      "gpu": "0",
+      "method": "dreamerv3",
+      "domains": [
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/adaJEPA/baselines/dreamerv3-env/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "dreamerv3",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_dreamerv3_206169.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "dreamerv3",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "a247115fed112b44e9e2f798e9e1d7bd0e2aeb429b1bed7d7a86f7a93d229368",
+        "--socket",
+        "/tmp/sejepa_shape_dreamerv3_206169.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/dreamerv3",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T",
+        "--run"
+      ]
+    },
+    "iris": {
+      "dry_run": true,
+      "gpu": "1",
+      "method": "iris",
+      "domains": [
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206170.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206170.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T",
+        "--run"
+      ]
+    },
+    "iris_I": {
+      "dry_run": true,
+      "gpu": "1",
+      "method": "iris",
+      "domains": [
+        "I"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206172.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206172.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "I",
+        "--run"
+      ]
+    },
+    "iris_L": {
+      "dry_run": true,
+      "gpu": "2",
+      "method": "iris",
+      "domains": [
+        "L"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206173.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206173.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "L",
+        "--run"
+      ]
+    },
+    "iris_square": {
+      "dry_run": true,
+      "gpu": "3",
+      "method": "iris",
+      "domains": [
+        "square"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206181.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206181.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "square",
+        "--run"
+      ]
+    },
+    "iris_Z": {
+      "dry_run": true,
+      "gpu": "4",
+      "method": "iris",
+      "domains": [
+        "Z"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206182.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206182.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "Z",
+        "--run"
+      ]
+    },
+    "iris_small_tee": {
+      "dry_run": true,
+      "gpu": "5",
+      "method": "iris",
+      "domains": [
+        "small_tee"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206183.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206183.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "small_tee",
+        "--run"
+      ]
+    },
+    "iris_plus": {
+      "dry_run": true,
+      "gpu": "6",
+      "method": "iris",
+      "domains": [
+        "plus"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206184.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206184.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "plus",
+        "--run"
+      ]
+    },
+    "iris_T": {
+      "dry_run": true,
+      "gpu": "7",
+      "method": "iris",
+      "domains": [
+        "T"
+      ],
+      "training": false,
+      "server_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206185.sock",
+        "--run"
+      ],
+      "evaluation_command": [
+        "/data/zjc/envs/cljepa/bin/python",
+        "-u",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+        "--method",
+        "iris",
+        "--checkpoint-dir",
+        "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+        "--checkpoint-sha256",
+        "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+        "--socket",
+        "/tmp/sejepa_shape_iris_206185.sock",
+        "--output",
+        "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+        "--target-root",
+        "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+        "--seed",
+        "2000",
+        "--episodes",
+        "50",
+        "--samples",
+        "200",
+        "--topk",
+        "30",
+        "--iterations",
+        "10",
+        "--max-replans",
+        "30",
+        "--domains",
+        "T",
+        "--run"
+      ]
+    }
+  },
+  "parallel_plan": {
+    "dry_run": true,
+    "jobs": [
+      {
+        "id": "dreamerv3_all",
+        "method": "dreamerv3",
+        "gpu": "0",
+        "domains": [
+          "I",
+          "L",
+          "square",
+          "Z",
+          "small_tee",
+          "plus",
+          "T"
+        ],
+        "worker": "all",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "dreamerv3",
+          "--gpu",
+          "0",
+          "--domains",
+          "I",
+          "L",
+          "square",
+          "Z",
+          "small_tee",
+          "plus",
+          "T",
+          "--run"
+        ]
+      },
+      {
+        "id": "iris_I",
+        "method": "iris",
+        "gpu": "1",
+        "domains": [
+          "I"
+        ],
+        "worker": "I",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "iris",
+          "--gpu",
+          "1",
+          "--domains",
+          "I",
+          "--run"
+        ]
+      },
+      {
+        "id": "iris_L",
+        "method": "iris",
+        "gpu": "2",
+        "domains": [
+          "L"
+        ],
+        "worker": "L",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "iris",
+          "--gpu",
+          "2",
+          "--domains",
+          "L",
+          "--run"
+        ]
+      },
+      {
+        "id": "iris_square",
+        "method": "iris",
+        "gpu": "3",
+        "domains": [
+          "square"
+        ],
+        "worker": "square",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "iris",
+          "--gpu",
+          "3",
+          "--domains",
+          "square",
+          "--run"
+        ]
+      },
+      {
+        "id": "iris_Z",
+        "method": "iris",
+        "gpu": "4",
+        "domains": [
+          "Z"
+        ],
+        "worker": "Z",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "iris",
+          "--gpu",
+          "4",
+          "--domains",
+          "Z",
+          "--run"
+        ]
+      },
+      {
+        "id": "iris_small_tee",
+        "method": "iris",
+        "gpu": "5",
+        "domains": [
+          "small_tee"
+        ],
+        "worker": "small_tee",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "iris",
+          "--gpu",
+          "5",
+          "--domains",
+          "small_tee",
+          "--run"
+        ]
+      },
+      {
+        "id": "iris_plus",
+        "method": "iris",
+        "gpu": "6",
+        "domains": [
+          "plus"
+        ],
+        "worker": "plus",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "iris",
+          "--gpu",
+          "6",
+          "--domains",
+          "plus",
+          "--run"
+        ]
+      },
+      {
+        "id": "iris_T",
+        "method": "iris",
+        "gpu": "7",
+        "domains": [
+          "T"
+        ],
+        "worker": "T",
+        "command": [
+          "/data/zjc/envs/cljepa/bin/python",
+          "-u",
+          "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run.py",
+          "iris",
+          "--gpu",
+          "7",
+          "--domains",
+          "T",
+          "--run"
+        ]
+      }
+    ],
+    "total_episodes": 700,
+    "training": false
+  },
+  "manifest_sha256": "dd293154eb55b07df2e0e12fd9d175b6eb65c7897120ec59d8b27c3a11a0d3e6",
+  "simulation_run": false,
+  "model_loaded": false,
+  "experiment_started": false,
+  "remaining": "User authorized launch. Next: actual GPU/inference/runtime validation and evaluation."
+}

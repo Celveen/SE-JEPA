@@ -1,0 +1,29 @@
+{
+  "method": "dreamerv3",
+  "checkpoint_directory": "/data/zjc/adaJEPA/CL-JEPA/checkpoints/dreamerv3_T16k_offline_e3",
+  "checkpoint_sha256": "a247115fed112b44e9e2f798e9e1d7bd0e2aeb429b1bed7d7a86f7a93d229368",
+  "target_sha256": "74172a4eb1efc88c7eba577ea7d5b7cf6dc66eb42ba9d1406a4db1864dc4e62e",
+  "episodes": 50,
+  "planning_seed": 2000,
+  "episode_planning_seed": "2000 + sample index",
+  "environment_seed": "1 + 2000 * sample index",
+  "cem_action_clipping": false,
+  "model_action_encoding": "tanh(physical relative action)",
+  "frameskip": 5,
+  "objective": "decoded RGB MSE in [-1,1] plus normalized proprio MSE; staged terminal/full-horizon objective",
+  "noise": "none for clean PushObj shapes",
+  "CEM": {
+    "samples": 200,
+    "topk": 30,
+    "iterations": 10,
+    "model_horizon": 5,
+    "max_replans": 30
+  },
+  "diagnostic_only": false,
+  "shape": "square",
+  "training_shapes": [
+    "T"
+  ],
+  "frozen_model": true,
+  "evaluation_scope": "T-only checkpoint transferred to PushObj"
+}

@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "audited_at_UTC": "2026-11-10T12:24:21.159130+00:00",
+  "episodes": 700,
+  "blocks": [
+    {
+      "method": "dreamerv3",
+      "shape": "I",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "dreamerv3",
+      "shape": "L",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "dreamerv3",
+      "shape": "square",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "dreamerv3",
+      "shape": "Z",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "dreamerv3",
+      "shape": "small_tee",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "dreamerv3",
+      "shape": "+",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "dreamerv3",
+      "shape": "T",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "iris",
+      "shape": "I",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "iris",
+      "shape": "L",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "iris",
+      "shape": "square",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "iris",
+      "shape": "Z",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "iris",
+      "shape": "small_tee",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "iris",
+      "shape": "+",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    },
+    {
+      "method": "iris",
+      "shape": "T",
+      "episodes": 50,
+      "verified_complete": true,
+      "independently_recomputed_success_matches": true,
+      "iteration_logs_match_action_counts": true,
+      "frozen": true
+    }
+  ],
+  "methods": {
+    "dreamerv3": {
+      "episodes": 350,
+      "successes": 25,
+      "all_success_rate": 0.07142857142857142,
+      "T_seen_success_rate": 0.18,
+      "six_unseen_success_rate": 0.05333333333333334,
+      "I_square_small_tee_success_rate": 0.05333333333333334,
+      "mean_mpc_steps": 28.36285714285714,
+      "mean_physical_actions": 141.81428571428572,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 3,
+          "success_rate": 0.06,
+          "mean_mpc_steps": 28.72,
+          "mean_physical_actions": 143.6
+        },
+        "L": {
+          "n": 50,
+          "successes": 3,
+          "success_rate": 0.06,
+          "mean_mpc_steps": 28.56,
+          "mean_physical_actions": 142.8
+        },
+        "square": {
+          "n": 50,
+          "successes": 2,
+          "success_rate": 0.04,
+          "mean_mpc_steps": 29.14,
+          "mean_physical_actions": 145.7
+        },
+        "Z": {
+          "n": 50,
+          "successes": 1,
+          "success_rate": 0.02,
+          "mean_mpc_steps": 29.56,
+          "mean_physical_actions": 147.8
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 3,
+          "success_rate": 0.06,
+          "mean_mpc_steps": 28.74,
+          "mean_physical_actions": 143.7
+        },
+        "+": {
+          "n": 50,
+          "successes": 4,
+          "success_rate": 0.08,
+          "mean_mpc_steps": 28.1,
+          "mean_physical_actions": 140.5
+        },
+        "T": {
+          "n": 50,
+          "successes": 9,
+          "success_rate": 0.18,
+          "mean_mpc_steps": 25.72,
+          "mean_physical_actions": 128.6
+        }
+      }
+    },
+    "iris": {
+      "episodes": 350,
+      "successes": 10,
+      "all_success_rate": 0.02857142857142857,
+      "T_seen_success_rate": 0.06,
+      "six_unseen_success_rate": 0.023333333333333334,
+      "I_square_small_tee_success_rate": 0.02666666666666667,
+      "mean_mpc_steps": 29.374285714285715,
+      "mean_physical_actions": 146.87142857142857,
+      "by_shape": {
+        "I": {
+          "n": 50,
+          "successes": 1,
+          "success_rate": 0.02,
+          "mean_mpc_steps": 29.42,
+          "mean_physical_actions": 147.1
+        },
+        "L": {
+          "n": 50,
+          "successes": 1,
+          "success_rate": 0.02,
+          "mean_mpc_steps": 29.64,
+          "mean_physical_actions": 148.2
+        },
+        "square": {
+          "n": 50,
+          "successes": 1,
+          "success_rate": 0.02,
+          "mean_mpc_steps": 29.86,
+          "mean_physical_actions": 149.3
+        },
+        "Z": {
+          "n": 50,
+          "successes": 0,
+          "success_rate": 0.0,
+          "mean_mpc_steps": 30.0,
+          "mean_physical_actions": 150.0
+        },
+        "small_tee": {
+          "n": 50,
+          "successes": 2,
+          "success_rate": 0.04,
+          "mean_mpc_steps": 28.92,
+          "mean_physical_actions": 144.6
+        },
+        "+": {
+          "n": 50,
+          "successes": 2,
+          "success_rate": 0.04,
+          "mean_mpc_steps": 29.1,
+          "mean_physical_actions": 145.5
+        },
+        "T": {
+          "n": 50,
+          "successes": 3,
+          "success_rate": 0.06,
+          "mean_mpc_steps": 28.68,
+          "mean_physical_actions": 143.4
+        }
+      }
+    }
+  },
+  "frozen_tensor_fingerprints": {
+    "dreamerv3": "52a51fcdcfb39ddf563d7888b6563ba9967172d7cb415810e62ea4954bc17d7e",
+    "iris": "5b416e22dc83c41f6046555b5497d92c0a76d1c62a255452aa4751d28e0a84af"
+  },
+  "elapsed_wall_seconds": 13644.072786,
+  "checks": [
+    "700 saved episode files match final result arrays",
+    "14 x 50 complete targets and fixed seed mapping",
+    "Success independently recomputed from final states",
+    "MPC iteration logs and physical action counts agree",
+    "Checkpoint, target, prepared code and runtime dependency hashes unchanged",
+    "Frozen tensor fingerprints identical before/after and across parallel workers",
+    "All eight jobs exited zero"
+  ]
+}

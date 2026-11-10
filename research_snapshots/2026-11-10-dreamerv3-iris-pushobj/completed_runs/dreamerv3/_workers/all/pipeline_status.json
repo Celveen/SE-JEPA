@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "method": "dreamerv3",
+  "gpu": "0",
+  "gpu_uuid": "GPU-d3179c83-06f6-6c80-534f-78441ae6d0f4",
+  "domains": [
+    "I",
+    "L",
+    "square",
+    "Z",
+    "small_tee",
+    "plus",
+    "T"
+  ],
+  "pid": 206344,
+  "started_at": "2026-11-10T06:14:32.240306+00:00",
+  "updated_at": "2026-11-10T07:00:37.696121+00:00",
+  "server_pid": 206425,
+  "evaluator_pid": 207065,
+  "summary": {
+    "method": "dreamerv3",
+    "episodes": 350,
+    "seed": 2000,
+    "training_shapes": [
+      "T"
+    ],
+    "protocol": "T-only offline world model with CEM transferred to PushObj",
+    "by_shape": {
+      "I": {
+        "n": 50,
+        "successes": 3,
+        "success_rate": 0.06,
+        "mean_mpc_steps": 28.72,
+        "mean_physical_actions": 143.6
+      },
+      "L": {
+        "n": 50,
+        "successes": 3,
+        "success_rate": 0.06,
+        "mean_mpc_steps": 28.56,
+        "mean_physical_actions": 142.8
+      },
+      "square": {
+        "n": 50,
+        "successes": 2,
+        "success_rate": 0.04,
+        "mean_mpc_steps": 29.14,
+        "mean_physical_actions": 145.7
+      },
+      "Z": {
+        "n": 50,
+        "successes": 1,
+        "success_rate": 0.02,
+        "mean_mpc_steps": 29.56,
+        "mean_physical_actions": 147.8
+      },
+      "small_tee": {
+        "n": 50,
+        "successes": 3,
+        "success_rate": 0.06,
+        "mean_mpc_steps": 28.74,
+        "mean_physical_actions": 143.7
+      },
+      "+": {
+        "n": 50,
+        "successes": 4,
+        "success_rate": 0.08,
+        "mean_mpc_steps": 28.1,
+        "mean_physical_actions": 140.5
+      },
+      "T": {
+        "n": 50,
+        "successes": 9,
+        "success_rate": 0.18,
+        "mean_mpc_steps": 25.72,
+        "mean_physical_actions": 128.6
+      }
+    },
+    "success_rate": 0.07142857142857142,
+    "all_success_rate": 0.07142857142857142,
+    "T_seen_success_rate": 0.18,
+    "six_unseen_success_rate": 0.05333333333333334,
+    "I_square_small_tee_success_rate": 0.05333333333333334
+  },
+  "ended_at": "2026-11-10T07:00:37.696079+00:00"
+}

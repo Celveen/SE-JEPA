@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "method": "iris",
+  "gpu": "6",
+  "gpu_uuid": "GPU-ee268d2e-ddbe-44c4-a24e-152fd066c458",
+  "domains": [
+    "plus"
+  ],
+  "pid": 206350,
+  "started_at": "2026-11-10T06:14:31.609200+00:00",
+  "updated_at": "2026-11-10T10:00:09.761668+00:00",
+  "server_pid": 206424,
+  "evaluator_pid": 207054,
+  "summary": {
+    "method": "iris",
+    "episodes": 50,
+    "seed": 2000,
+    "training_shapes": [
+      "T"
+    ],
+    "protocol": "T-only offline world model with CEM transferred to PushObj",
+    "by_shape": {
+      "+": {
+        "n": 50,
+        "successes": 2,
+        "success_rate": 0.04,
+        "mean_mpc_steps": 29.1,
+        "mean_physical_actions": 145.5
+      }
+    },
+    "success_rate": 0.04
+  },
+  "ended_at": "2026-11-10T10:00:09.761640+00:00"
+}

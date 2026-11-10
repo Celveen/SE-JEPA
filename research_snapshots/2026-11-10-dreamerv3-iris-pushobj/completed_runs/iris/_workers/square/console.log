@@ -1,0 +1,62 @@
+/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/__init__.py:7: UserWarning: point_maze envs unavailable (mujoco_py missing): No module named 'mujoco_py'. (HINT: you need to install mujoco_py, and also perform the setup instructions here: https://github.com/openai/mujoco-py/.)
+  warnings.warn(f"point_maze envs unavailable (mujoco_py missing): {_e}")
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pygame/pkgdata.py:25: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import resource_stream, resource_exists
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('mpl_toolkits')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/skimage/util/dtype.py:27: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+iris square 1 / 50 success False MPC 30 seconds 268.2
+iris square 2 / 50 success False MPC 30 seconds 266.9
+iris square 3 / 50 success False MPC 30 seconds 271.6
+iris square 4 / 50 success False MPC 30 seconds 270.7
+iris square 5 / 50 success False MPC 30 seconds 267.5
+iris square 6 / 50 success False MPC 30 seconds 267.1
+iris square 7 / 50 success False MPC 30 seconds 277.1
+iris square 8 / 50 success False MPC 30 seconds 294.6
+iris square 9 / 50 success False MPC 30 seconds 291.1
+iris square 10 / 50 success False MPC 30 seconds 288.1
+iris square 11 / 50 success False MPC 30 seconds 280.5
+iris square 12 / 50 success False MPC 30 seconds 295.7
+iris square 13 / 50 success False MPC 30 seconds 296.6
+iris square 14 / 50 success False MPC 30 seconds 293.6
+iris square 15 / 50 success False MPC 30 seconds 276.0
+iris square 16 / 50 success False MPC 30 seconds 269.7
+iris square 17 / 50 success False MPC 30 seconds 269.8
+iris square 18 / 50 success False MPC 30 seconds 269.9
+iris square 19 / 50 success False MPC 30 seconds 270.1
+iris square 20 / 50 success False MPC 30 seconds 270.0
+iris square 21 / 50 success True MPC 23 seconds 207.0
+iris square 22 / 50 success False MPC 30 seconds 270.0
+iris square 23 / 50 success False MPC 30 seconds 270.0
+iris square 24 / 50 success False MPC 30 seconds 270.9
+iris square 25 / 50 success False MPC 30 seconds 271.5
+iris square 26 / 50 success False MPC 30 seconds 269.7
+iris square 27 / 50 success False MPC 30 seconds 267.5
+iris square 28 / 50 success False MPC 30 seconds 268.3
+iris square 29 / 50 success False MPC 30 seconds 267.5
+iris square 30 / 50 success False MPC 30 seconds 267.5
+iris square 31 / 50 success False MPC 30 seconds 267.5
+iris square 32 / 50 success False MPC 30 seconds 267.5
+iris square 33 / 50 success False MPC 30 seconds 267.4
+iris square 34 / 50 success False MPC 30 seconds 267.4
+iris square 35 / 50 success False MPC 30 seconds 267.6
+iris square 36 / 50 success False MPC 30 seconds 267.4
+iris square 37 / 50 success False MPC 30 seconds 267.4
+iris square 38 / 50 success False MPC 30 seconds 266.5
+iris square 39 / 50 success False MPC 30 seconds 267.0
+iris square 40 / 50 success False MPC 30 seconds 266.2
+iris square 41 / 50 success False MPC 30 seconds 267.1
+iris square 42 / 50 success False MPC 30 seconds 266.1
+iris square 43 / 50 success False MPC 30 seconds 266.7
+iris square 44 / 50 success False MPC 30 seconds 267.3
+iris square 45 / 50 success False MPC 30 seconds 267.0
+iris square 46 / 50 success False MPC 30 seconds 267.1
+iris square 47 / 50 success False MPC 30 seconds 267.1
+iris square 48 / 50 success False MPC 30 seconds 266.4
+iris square 49 / 50 success False MPC 30 seconds 265.6
+iris square 50 / 50 success False MPC 30 seconds 265.8

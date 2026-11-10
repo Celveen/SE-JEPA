@@ -1,0 +1,69 @@
+{
+  "status": "completed",
+  "ended_at": "2026-11-10T10:01:52.493719+00:00",
+  "summary": {
+    "method": "iris",
+    "episodes": 350,
+    "seed": 2000,
+    "training_shapes": [
+      "T"
+    ],
+    "protocol": "T-only offline world model with CEM transferred to PushObj",
+    "by_shape": {
+      "I": {
+        "n": 50,
+        "successes": 1,
+        "success_rate": 0.02,
+        "mean_mpc_steps": 29.42,
+        "mean_physical_actions": 147.1
+      },
+      "L": {
+        "n": 50,
+        "successes": 1,
+        "success_rate": 0.02,
+        "mean_mpc_steps": 29.64,
+        "mean_physical_actions": 148.2
+      },
+      "square": {
+        "n": 50,
+        "successes": 1,
+        "success_rate": 0.02,
+        "mean_mpc_steps": 29.86,
+        "mean_physical_actions": 149.3
+      },
+      "Z": {
+        "n": 50,
+        "successes": 0,
+        "success_rate": 0.0,
+        "mean_mpc_steps": 30.0,
+        "mean_physical_actions": 150.0
+      },
+      "small_tee": {
+        "n": 50,
+        "successes": 2,
+        "success_rate": 0.04,
+        "mean_mpc_steps": 28.92,
+        "mean_physical_actions": 144.6
+      },
+      "+": {
+        "n": 50,
+        "successes": 2,
+        "success_rate": 0.04,
+        "mean_mpc_steps": 29.1,
+        "mean_physical_actions": 145.5
+      },
+      "T": {
+        "n": 50,
+        "successes": 3,
+        "success_rate": 0.06,
+        "mean_mpc_steps": 28.68,
+        "mean_physical_actions": 143.4
+      }
+    },
+    "success_rate": 0.02857142857142857,
+    "all_success_rate": 0.02857142857142857,
+    "T_seen_success_rate": 0.06,
+    "six_unseen_success_rate": 0.023333333333333334,
+    "I_square_small_tee_success_rate": 0.02666666666666667
+  }
+}

@@ -1,0 +1,6 @@
+{"stage": "tokenizer", "epoch": 1, "loss": 0.04945137782488018, "frames": 1024}
+{"stage": "tokenizer", "epoch": 2, "loss": 0.020339226175565273, "frames": 1024}
+{"stage": "tokenizer", "epoch": 3, "loss": 0.012605586322024465, "frames": 1024}
+{"stage": "world_model", "epoch": 1, "loss": 2.2542465180158615, "batches": 32}
+{"stage": "world_model", "epoch": 2, "loss": 2.0223373696208, "batches": 32}
+{"stage": "world_model", "epoch": 3, "loss": 1.9339529722929, "batches": 32}

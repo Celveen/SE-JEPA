@@ -1,0 +1,62 @@
+/data/zjc/adaJEPA/CL-JEPA-cudagraph/env/__init__.py:7: UserWarning: point_maze envs unavailable (mujoco_py missing): No module named 'mujoco_py'. (HINT: you need to install mujoco_py, and also perform the setup instructions here: https://github.com/openai/mujoco-py/.)
+  warnings.warn(f"point_maze envs unavailable (mujoco_py missing): {_e}")
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pygame/pkgdata.py:25: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import resource_stream, resource_exists
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('mpl_toolkits')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/pkg_resources/__init__.py:2825: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/data/zjc/envs/cljepa/lib/python3.10/site-packages/skimage/util/dtype.py:27: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  np.bool8: (False, True),
+iris I 1 / 50 success False MPC 30 seconds 264.4
+iris I 2 / 50 success False MPC 30 seconds 263.2
+iris I 3 / 50 success False MPC 30 seconds 266.4
+iris I 4 / 50 success False MPC 30 seconds 270.1
+iris I 5 / 50 success False MPC 30 seconds 264.3
+iris I 6 / 50 success False MPC 30 seconds 264.0
+iris I 7 / 50 success False MPC 30 seconds 269.8
+iris I 8 / 50 success False MPC 30 seconds 278.1
+iris I 9 / 50 success False MPC 30 seconds 285.2
+iris I 10 / 50 success False MPC 30 seconds 277.3
+iris I 11 / 50 success False MPC 30 seconds 271.5
+iris I 12 / 50 success False MPC 30 seconds 285.2
+iris I 13 / 50 success False MPC 30 seconds 282.0
+iris I 14 / 50 success False MPC 30 seconds 286.1
+iris I 15 / 50 success False MPC 30 seconds 275.2
+iris I 16 / 50 success False MPC 30 seconds 267.6
+iris I 17 / 50 success False MPC 30 seconds 268.3
+iris I 18 / 50 success False MPC 30 seconds 268.5
+iris I 19 / 50 success False MPC 30 seconds 269.1
+iris I 20 / 50 success False MPC 30 seconds 267.9
+iris I 21 / 50 success False MPC 30 seconds 268.9
+iris I 22 / 50 success False MPC 30 seconds 268.7
+iris I 23 / 50 success False MPC 30 seconds 268.9
+iris I 24 / 50 success True MPC 1 seconds 8.9
+iris I 25 / 50 success False MPC 30 seconds 269.0
+iris I 26 / 50 success False MPC 30 seconds 268.8
+iris I 27 / 50 success False MPC 30 seconds 268.4
+iris I 28 / 50 success False MPC 30 seconds 268.5
+iris I 29 / 50 success False MPC 30 seconds 268.3
+iris I 30 / 50 success False MPC 30 seconds 268.5
+iris I 31 / 50 success False MPC 30 seconds 268.4
+iris I 32 / 50 success False MPC 30 seconds 268.5
+iris I 33 / 50 success False MPC 30 seconds 269.1
+iris I 34 / 50 success False MPC 30 seconds 269.2
+iris I 35 / 50 success False MPC 30 seconds 268.1
+iris I 36 / 50 success False MPC 30 seconds 269.2
+iris I 37 / 50 success False MPC 30 seconds 269.3
+iris I 38 / 50 success False MPC 30 seconds 269.3
+iris I 39 / 50 success False MPC 30 seconds 268.8
+iris I 40 / 50 success False MPC 30 seconds 268.0
+iris I 41 / 50 success False MPC 30 seconds 268.0
+iris I 42 / 50 success False MPC 30 seconds 268.8
+iris I 43 / 50 success False MPC 30 seconds 268.0
+iris I 44 / 50 success False MPC 30 seconds 268.0
+iris I 45 / 50 success False MPC 30 seconds 269.2
+iris I 46 / 50 success False MPC 30 seconds 268.4
+iris I 47 / 50 success False MPC 30 seconds 265.0
+iris I 48 / 50 success False MPC 30 seconds 264.0
+iris I 49 / 50 success False MPC 30 seconds 264.3
+iris I 50 / 50 success False MPC 30 seconds 264.1

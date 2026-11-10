@@ -1,0 +1,437 @@
+{
+  "status": "completed",
+  "pid": 206341,
+  "started_at": "2026-11-10T06:14:28.421378+00:00",
+  "planned_episodes": 700,
+  "jobs": {
+    "dreamerv3_all": {
+      "status": "completed",
+      "method": "dreamerv3",
+      "gpu": "0",
+      "domains": [
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ],
+      "pid": 206344,
+      "started_at": "2026-11-10T06:14:28.422753+00:00",
+      "episodes_saved": 350,
+      "worker": {
+        "status": "completed",
+        "method": "dreamerv3",
+        "gpu": "0",
+        "gpu_uuid": "GPU-d3179c83-06f6-6c80-534f-78441ae6d0f4",
+        "domains": [
+          "I",
+          "L",
+          "square",
+          "Z",
+          "small_tee",
+          "plus",
+          "T"
+        ],
+        "pid": 206344,
+        "started_at": "2026-11-10T06:14:32.240306+00:00",
+        "updated_at": "2026-11-10T07:00:37.696121+00:00",
+        "server_pid": 206425,
+        "evaluator_pid": 207065,
+        "summary": {
+          "method": "dreamerv3",
+          "episodes": 350,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "I": {
+              "n": 50,
+              "successes": 3,
+              "success_rate": 0.06,
+              "mean_mpc_steps": 28.72,
+              "mean_physical_actions": 143.6
+            },
+            "L": {
+              "n": 50,
+              "successes": 3,
+              "success_rate": 0.06,
+              "mean_mpc_steps": 28.56,
+              "mean_physical_actions": 142.8
+            },
+            "square": {
+              "n": 50,
+              "successes": 2,
+              "success_rate": 0.04,
+              "mean_mpc_steps": 29.14,
+              "mean_physical_actions": 145.7
+            },
+            "Z": {
+              "n": 50,
+              "successes": 1,
+              "success_rate": 0.02,
+              "mean_mpc_steps": 29.56,
+              "mean_physical_actions": 147.8
+            },
+            "small_tee": {
+              "n": 50,
+              "successes": 3,
+              "success_rate": 0.06,
+              "mean_mpc_steps": 28.74,
+              "mean_physical_actions": 143.7
+            },
+            "+": {
+              "n": 50,
+              "successes": 4,
+              "success_rate": 0.08,
+              "mean_mpc_steps": 28.1,
+              "mean_physical_actions": 140.5
+            },
+            "T": {
+              "n": 50,
+              "successes": 9,
+              "success_rate": 0.18,
+              "mean_mpc_steps": 25.72,
+              "mean_physical_actions": 128.6
+            }
+          },
+          "success_rate": 0.07142857142857142,
+          "all_success_rate": 0.07142857142857142,
+          "T_seen_success_rate": 0.18,
+          "six_unseen_success_rate": 0.05333333333333334,
+          "I_square_small_tee_success_rate": 0.05333333333333334
+        },
+        "ended_at": "2026-11-10T07:00:37.696079+00:00"
+      },
+      "exit_code": 0
+    },
+    "iris_I": {
+      "status": "completed",
+      "method": "iris",
+      "gpu": "1",
+      "domains": [
+        "I"
+      ],
+      "pid": 206345,
+      "started_at": "2026-11-10T06:14:28.423699+00:00",
+      "episodes_saved": 50,
+      "worker": {
+        "status": "completed",
+        "method": "iris",
+        "gpu": "1",
+        "gpu_uuid": "GPU-b52f38f3-ea7b-f374-3cae-5030e681e284",
+        "domains": [
+          "I"
+        ],
+        "pid": 206345,
+        "started_at": "2026-11-10T06:14:31.501684+00:00",
+        "updated_at": "2026-11-10T09:55:10.131790+00:00",
+        "server_pid": 206421,
+        "evaluator_pid": 207041,
+        "summary": {
+          "method": "iris",
+          "episodes": 50,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "I": {
+              "n": 50,
+              "successes": 1,
+              "success_rate": 0.02,
+              "mean_mpc_steps": 29.42,
+              "mean_physical_actions": 147.1
+            }
+          },
+          "success_rate": 0.02
+        },
+        "ended_at": "2026-11-10T09:55:10.131757+00:00"
+      },
+      "exit_code": 0
+    },
+    "iris_L": {
+      "status": "completed",
+      "method": "iris",
+      "gpu": "2",
+      "domains": [
+        "L"
+      ],
+      "pid": 206346,
+      "started_at": "2026-11-10T06:14:28.424848+00:00",
+      "episodes_saved": 50,
+      "worker": {
+        "status": "completed",
+        "method": "iris",
+        "gpu": "2",
+        "gpu_uuid": "GPU-fb969017-5b07-2bf7-2325-3549a5194c46",
+        "domains": [
+          "L"
+        ],
+        "pid": 206346,
+        "started_at": "2026-11-10T06:14:31.534439+00:00",
+        "updated_at": "2026-11-10T09:55:13.193393+00:00",
+        "server_pid": 206422,
+        "evaluator_pid": 207046,
+        "summary": {
+          "method": "iris",
+          "episodes": 50,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "L": {
+              "n": 50,
+              "successes": 1,
+              "success_rate": 0.02,
+              "mean_mpc_steps": 29.64,
+              "mean_physical_actions": 148.2
+            }
+          },
+          "success_rate": 0.02
+        },
+        "ended_at": "2026-11-10T09:55:13.193368+00:00"
+      },
+      "exit_code": 0
+    },
+    "iris_square": {
+      "status": "completed",
+      "method": "iris",
+      "gpu": "3",
+      "domains": [
+        "square"
+      ],
+      "pid": 206347,
+      "started_at": "2026-11-10T06:14:28.425778+00:00",
+      "episodes_saved": 50,
+      "worker": {
+        "status": "completed",
+        "method": "iris",
+        "gpu": "3",
+        "gpu_uuid": "GPU-aa963271-5fe0-011e-06d2-0f2032547ca0",
+        "domains": [
+          "square"
+        ],
+        "pid": 206347,
+        "started_at": "2026-11-10T06:14:31.238319+00:00",
+        "updated_at": "2026-11-10T10:00:05.505088+00:00",
+        "server_pid": 206419,
+        "evaluator_pid": 206875,
+        "summary": {
+          "method": "iris",
+          "episodes": 50,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "square": {
+              "n": 50,
+              "successes": 1,
+              "success_rate": 0.02,
+              "mean_mpc_steps": 29.86,
+              "mean_physical_actions": 149.3
+            }
+          },
+          "success_rate": 0.02
+        },
+        "ended_at": "2026-11-10T10:00:05.505058+00:00"
+      },
+      "exit_code": 0
+    },
+    "iris_Z": {
+      "status": "completed",
+      "method": "iris",
+      "gpu": "4",
+      "domains": [
+        "Z"
+      ],
+      "pid": 206348,
+      "started_at": "2026-11-10T06:14:28.426981+00:00",
+      "episodes_saved": 50,
+      "worker": {
+        "status": "completed",
+        "method": "iris",
+        "gpu": "4",
+        "gpu_uuid": "GPU-36bebbf7-b4c5-c0e0-0594-da464aec8464",
+        "domains": [
+          "Z"
+        ],
+        "pid": 206348,
+        "started_at": "2026-11-10T06:14:30.993822+00:00",
+        "updated_at": "2026-11-10T10:01:15.430711+00:00",
+        "server_pid": 206418,
+        "evaluator_pid": 206549,
+        "summary": {
+          "method": "iris",
+          "episodes": 50,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "Z": {
+              "n": 50,
+              "successes": 0,
+              "success_rate": 0.0,
+              "mean_mpc_steps": 30.0,
+              "mean_physical_actions": 150.0
+            }
+          },
+          "success_rate": 0.0
+        },
+        "ended_at": "2026-11-10T10:01:15.430676+00:00"
+      },
+      "exit_code": 0
+    },
+    "iris_small_tee": {
+      "status": "completed",
+      "method": "iris",
+      "gpu": "5",
+      "domains": [
+        "small_tee"
+      ],
+      "pid": 206349,
+      "started_at": "2026-11-10T06:14:28.427949+00:00",
+      "episodes_saved": 50,
+      "worker": {
+        "status": "completed",
+        "method": "iris",
+        "gpu": "5",
+        "gpu_uuid": "GPU-767b84a9-c547-bd9d-5e5d-3f36e9c55a96",
+        "domains": [
+          "small_tee"
+        ],
+        "pid": 206349,
+        "started_at": "2026-11-10T06:14:31.600015+00:00",
+        "updated_at": "2026-11-10T10:01:48.349222+00:00",
+        "server_pid": 206423,
+        "evaluator_pid": 207053,
+        "summary": {
+          "method": "iris",
+          "episodes": 50,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "small_tee": {
+              "n": 50,
+              "successes": 2,
+              "success_rate": 0.04,
+              "mean_mpc_steps": 28.92,
+              "mean_physical_actions": 144.6
+            }
+          },
+          "success_rate": 0.04
+        },
+        "ended_at": "2026-11-10T10:01:48.349188+00:00"
+      },
+      "exit_code": 0
+    },
+    "iris_plus": {
+      "status": "completed",
+      "method": "iris",
+      "gpu": "6",
+      "domains": [
+        "plus"
+      ],
+      "pid": 206350,
+      "started_at": "2026-11-10T06:14:28.429253+00:00",
+      "episodes_saved": 50,
+      "worker": {
+        "status": "completed",
+        "method": "iris",
+        "gpu": "6",
+        "gpu_uuid": "GPU-ee268d2e-ddbe-44c4-a24e-152fd066c458",
+        "domains": [
+          "plus"
+        ],
+        "pid": 206350,
+        "started_at": "2026-11-10T06:14:31.609200+00:00",
+        "updated_at": "2026-11-10T10:00:09.761668+00:00",
+        "server_pid": 206424,
+        "evaluator_pid": 207054,
+        "summary": {
+          "method": "iris",
+          "episodes": 50,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "+": {
+              "n": 50,
+              "successes": 2,
+              "success_rate": 0.04,
+              "mean_mpc_steps": 29.1,
+              "mean_physical_actions": 145.5
+            }
+          },
+          "success_rate": 0.04
+        },
+        "ended_at": "2026-11-10T10:00:09.761640+00:00"
+      },
+      "exit_code": 0
+    },
+    "iris_T": {
+      "status": "completed",
+      "method": "iris",
+      "gpu": "7",
+      "domains": [
+        "T"
+      ],
+      "pid": 206351,
+      "started_at": "2026-11-10T06:14:28.430201+00:00",
+      "episodes_saved": 50,
+      "worker": {
+        "status": "completed",
+        "method": "iris",
+        "gpu": "7",
+        "gpu_uuid": "GPU-35739ede-7b9b-a545-cd17-888326c13912",
+        "domains": [
+          "T"
+        ],
+        "pid": 206351,
+        "started_at": "2026-11-10T06:14:31.337112+00:00",
+        "updated_at": "2026-11-10T09:49:42.627523+00:00",
+        "server_pid": 206420,
+        "evaluator_pid": 206987,
+        "summary": {
+          "method": "iris",
+          "episodes": 50,
+          "seed": 2000,
+          "training_shapes": [
+            "T"
+          ],
+          "protocol": "T-only offline world model with CEM transferred to PushObj",
+          "by_shape": {
+            "T": {
+              "n": 50,
+              "successes": 3,
+              "success_rate": 0.06,
+              "mean_mpc_steps": 28.68,
+              "mean_physical_actions": 143.4
+            }
+          },
+          "success_rate": 0.06
+        },
+        "ended_at": "2026-11-10T09:49:42.627487+00:00"
+      },
+      "exit_code": 0
+    }
+  },
+  "updated_at": "2026-11-10T10:01:52.494180+00:00",
+  "episodes_saved": 700,
+  "ended_at": "2026-11-10T10:01:52.494164+00:00"
+}

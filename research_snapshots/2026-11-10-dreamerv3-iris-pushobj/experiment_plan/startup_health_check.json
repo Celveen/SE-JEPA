@@ -1,0 +1,210 @@
+{
+  "checked_at_UTC": "2026-11-10T06:15:58.477593+00:00",
+  "all_eight_workers_alive": true,
+  "all_eight_have_actual_MPC_feedback_logs": true,
+  "coordinator_pid": 206341,
+  "jobs": [
+    {
+      "job": "dreamerv3_all",
+      "gpu": "0",
+      "pids": {
+        "pid": 206344,
+        "server_pid": 206425,
+        "evaluator_pid": 207065
+      },
+      "episodes_saved": 7,
+      "progress": [
+        {
+          "shape": "I",
+          "iterations_logged": 273,
+          "latest": {
+            "sample_idx": 9,
+            "step": 3,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.03182537853717804,
+            "state_dist": 237.81130981445312,
+            "noise_seed": 929039509,
+            "elapsed_seconds": 0.7789200730621815
+          }
+        }
+      ]
+    },
+    {
+      "job": "iris_I",
+      "gpu": "1",
+      "pids": {
+        "pid": 206345,
+        "server_pid": 206421,
+        "evaluator_pid": 207041
+      },
+      "episodes_saved": 0,
+      "progress": [
+        {
+          "shape": "I",
+          "iterations_logged": 8,
+          "latest": {
+            "sample_idx": 0,
+            "step": 8,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.06096044182777405,
+            "state_dist": 156.6112823486328,
+            "noise_seed": 2216217947,
+            "elapsed_seconds": 71.1562635852024
+          }
+        }
+      ]
+    },
+    {
+      "job": "iris_L",
+      "gpu": "2",
+      "pids": {
+        "pid": 206346,
+        "server_pid": 206422,
+        "evaluator_pid": 207046
+      },
+      "episodes_saved": 0,
+      "progress": [
+        {
+          "shape": "L",
+          "iterations_logged": 8,
+          "latest": {
+            "sample_idx": 0,
+            "step": 8,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.08003205060958862,
+            "state_dist": 171.21282958984375,
+            "noise_seed": 2234531296,
+            "elapsed_seconds": 71.16885149478912
+          }
+        }
+      ]
+    },
+    {
+      "job": "iris_square",
+      "gpu": "3",
+      "pids": {
+        "pid": 206347,
+        "server_pid": 206419,
+        "evaluator_pid": 206875
+      },
+      "episodes_saved": 0,
+      "progress": [
+        {
+          "shape": "square",
+          "iterations_logged": 8,
+          "latest": {
+            "sample_idx": 0,
+            "step": 8,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.03058980032801628,
+            "state_dist": 61.04036331176758,
+            "noise_seed": 560105116,
+            "elapsed_seconds": 72.12951996643096
+          }
+        }
+      ]
+    },
+    {
+      "job": "iris_Z",
+      "gpu": "4",
+      "pids": {
+        "pid": 206348,
+        "server_pid": 206418,
+        "evaluator_pid": 206549
+      },
+      "episodes_saved": 0,
+      "progress": [
+        {
+          "shape": "Z",
+          "iterations_logged": 8,
+          "latest": {
+            "sample_idx": 0,
+            "step": 8,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.07954207062721252,
+            "state_dist": 182.53956604003906,
+            "noise_seed": 4017232202,
+            "elapsed_seconds": 75.95450314506888
+          }
+        }
+      ]
+    },
+    {
+      "job": "iris_small_tee",
+      "gpu": "5",
+      "pids": {
+        "pid": 206349,
+        "server_pid": 206423,
+        "evaluator_pid": 207053
+      },
+      "episodes_saved": 0,
+      "progress": [
+        {
+          "shape": "small_tee",
+          "iterations_logged": 7,
+          "latest": {
+            "sample_idx": 0,
+            "step": 7,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.0335686132311821,
+            "state_dist": 120.63938903808594,
+            "noise_seed": 598471547,
+            "elapsed_seconds": 68.01314683817327
+          }
+        }
+      ]
+    },
+    {
+      "job": "iris_plus",
+      "gpu": "6",
+      "pids": {
+        "pid": 206350,
+        "server_pid": 206424,
+        "evaluator_pid": 207054
+      },
+      "episodes_saved": 0,
+      "progress": [
+        {
+          "shape": "plus",
+          "iterations_logged": 8,
+          "latest": {
+            "sample_idx": 0,
+            "step": 8,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.2967536747455597,
+            "state_dist": 469.51312255859375,
+            "noise_seed": 2967946175,
+            "elapsed_seconds": 74.37082133442163
+          }
+        }
+      ]
+    },
+    {
+      "job": "iris_T",
+      "gpu": "7",
+      "pids": {
+        "pid": 206351,
+        "server_pid": 206420,
+        "evaluator_pid": 206987
+      },
+      "episodes_saved": 0,
+      "progress": [
+        {
+          "shape": "T",
+          "iterations_logged": 8,
+          "latest": {
+            "sample_idx": 0,
+            "step": 8,
+            "success": false,
+            "goal_pixel_proprio_cost": 0.05929836630821228,
+            "state_dist": 45.472450256347656,
+            "noise_seed": 1053236127,
+            "elapsed_seconds": 72.89939945284277
+          }
+        }
+      ]
+    }
+  ],
+  "total_planned_episodes": 700,
+  "full_results_pending": true
+}

@@ -1,0 +1,49 @@
+{
+  "pid": 206341,
+  "command": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/run_all.py",
+    "--run"
+  ],
+  "started_at_UTC": "2026-11-10T06:14:28.162221+00:00",
+  "output": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110",
+  "gpu_assignment": {
+    "dreamerv3": {
+      "gpu": 0,
+      "shapes": [
+        "I",
+        "L",
+        "square",
+        "Z",
+        "small_tee",
+        "plus",
+        "T"
+      ]
+    },
+    "iris": {
+      "1": [
+        "I"
+      ],
+      "2": [
+        "L"
+      ],
+      "3": [
+        "square"
+      ],
+      "4": [
+        "Z"
+      ],
+      "5": [
+        "small_tee"
+      ],
+      "6": [
+        "plus"
+      ],
+      "7": [
+        "T"
+      ]
+    }
+  },
+  "log": "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/coordinator.log"
+}

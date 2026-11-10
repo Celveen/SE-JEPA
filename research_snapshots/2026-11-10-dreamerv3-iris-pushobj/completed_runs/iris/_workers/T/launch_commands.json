@@ -1,0 +1,49 @@
+{
+  "server": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/serve_frozen.py",
+    "iris",
+    "--checkpoint-dir",
+    "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+    "--socket",
+    "/tmp/sejepa_shape_iris_206351.sock",
+    "--run"
+  ],
+  "evaluator": [
+    "/data/zjc/envs/cljepa/bin/python",
+    "-u",
+    "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/code/evaluate.py",
+    "--method",
+    "iris",
+    "--checkpoint-dir",
+    "/data/zjc/adaJEPA/CL-JEPA/checkpoints/iris_T16k_offline_e3",
+    "--checkpoint-sha256",
+    "420345ccd696fbce81a5954279ac1fa1de812c42d3d9ea6b237cb2f727ba1262",
+    "--socket",
+    "/tmp/sejepa_shape_iris_206351.sock",
+    "--output",
+    "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/baselines/dreamerv3_iris_pushobj_H7t3_Tonly_e3_20261110/iris",
+    "--target-root",
+    "/data/zjc/adaJEPA/experiment_plans/dreamerv3_iris_pushobj_H7t3_proposal_20261110/targets",
+    "--seed",
+    "2000",
+    "--episodes",
+    "50",
+    "--samples",
+    "200",
+    "--topk",
+    "30",
+    "--iterations",
+    "10",
+    "--max-replans",
+    "30",
+    "--domains",
+    "T",
+    "--run"
+  ],
+  "gpu": "7",
+  "domains": [
+    "T"
+  ]
+}
