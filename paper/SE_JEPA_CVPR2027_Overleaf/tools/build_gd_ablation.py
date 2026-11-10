@@ -125,8 +125,7 @@ RATES = [(r'$5\times10^{-5}$','slow_lr_5e5'),
          (r'$10^{-4}$ (default)','ours_lr1e4'),
          (r'$2\times10^{-4}$','slow_lr_2e4'),
          (r'$3\times10^{-4}$','slow_lr_3e4'),
-         (r'$5\times10^{-4}$','slow_lr_5e4'),
-         (r'$10^{-2}$','slow_lr_1e2')]
+         (r'$5\times10^{-4}$','slow_lr_5e4')]
 
 
 def generate(out):

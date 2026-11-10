@@ -266,3 +266,9 @@ main text discusses the observed gate trade-off; future work proposes calibratin
 eligibility to uncertainty and planning outcomes. The main paper occupies 8 pages,
 with about 1.5 body-text lines left below the final paragraph. The complete PDF is
 20 pages. Official CVPR style, geometry and fonts are unchanged.
+
+The 1e-2 slow-rate row and its discussion have been removed from the displayed
+ablation tables; the sweep now ends at 5e-4. The original evidence remains
+archived. DreamerV3/IRIS PushObj All and Steps are still unavailable for the
+seven-shape protocol; Appendix C explains these dashes. See
+`data/dreamer_iris_missing_cells_audit.json` for the current source review.

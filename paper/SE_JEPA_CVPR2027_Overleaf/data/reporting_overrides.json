@@ -227,6 +227,15 @@
     ],
     "visual_reset_shared": true,
     "main_benchmarks_unchanged": true,
-    "no_chain_selection": true
-  }
+    "no_chain_selection": true,
+    "displayed_slow_learning_rates": [
+      5e-05,
+      0.0001,
+      0.0002,
+      0.0003,
+      0.0005
+    ],
+    "omitted_display_row": "slow_lr_1e2 (author request; original data retained)"
+  },
+  "dreamer_iris_missing_cells_audit": "data/dreamer_iris_missing_cells_audit.json"
 }

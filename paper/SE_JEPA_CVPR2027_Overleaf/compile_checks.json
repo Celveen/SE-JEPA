@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T21:28:17-08:00",
+  "checked_at": "2026-11-09T21:47:09-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "71179f1b22dbf63f375ccd26273e4caeef15bf4cefdb33da71ef592ee9d2218e",
+    "pdf_sha256": "80a12138e0cf8c6d676bfcb12a0142964e7aaa792ebcc5183165655459761d60",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -42,7 +42,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "c3afb5bc07701c2598a3b48199a4e9b1b23184bef42dd070af859ea18bb623be"
+    "pdf_sha256": "d8174448a72314678274759c26c6b10b20ee378efda615d0b74f9557d6094aed"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -90,7 +90,8 @@
       "IRIS"
     ],
     "published_pushobj": "ICML 2025, Zhou et al., Table 4. The main table includes DreamerV3 and IRIS two-shape scores. Section 4.1 and Appendix C describe the protocol.",
-    "dinowm_visual_cells_superseded_by": "data/dinowm_pusht_cem_epoch3/audit.json"
+    "dinowm_visual_cells_superseded_by": "data/dinowm_pusht_cem_epoch3/audit.json",
+    "missing_cell_recheck": "data/dreamer_iris_missing_cells_audit.json"
   },
   "main_figure_revision": {
     "progress_and_efficiency_means_only": true,
@@ -317,6 +318,14 @@
       }
     },
     "official_benchmark_and_abstract_unchanged": true,
-    "future_work_maturity_calibration_added": true
+    "future_work_maturity_calibration_added": true,
+    "displayed_slow_learning_rates": [
+      5e-05,
+      0.0001,
+      0.0002,
+      0.0003,
+      0.0005
+    ],
+    "high_rate_1e2_removed_from_manuscript": true
   }
 }

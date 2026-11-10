@@ -1,0 +1,30 @@
+{
+  "checked_branches": {
+    "baselines": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+    "codex/results-dinowm-complete-20261110": "8b5f9f6b3ccef3d7b2e356f8f15a2f6520f67fcd"
+  },
+  "drive_search_terms": [
+    "dreamer",
+    "iris"
+  ],
+  "drive_reference": "https://drive.google.com/file/d/1wcgan7rMcn_3GCkPw4GJqcmTNOuztN7k/view",
+  "missing_cells": {
+    "DreamerV3": [
+      "PushObj seven-shape All success",
+      "PushObj seven-shape Steps"
+    ],
+    "IRIS": [
+      "PushObj seven-shape All success",
+      "PushObj seven-shape Steps"
+    ]
+  },
+  "available_cells_already_reported": [
+    "PushT six-shift success",
+    "PushT color success",
+    "PushT Steps",
+    "published two-shape Unseen success",
+    "published rope/granular CD"
+  ],
+  "decision": "No compatible seven-shape evaluations located in checked archives. Keep missing cells; do not substitute two-shape success or infer Steps from success rates.",
+  "published_source": "https://proceedings.mlr.press/v267/zhou25t.html"
+}
