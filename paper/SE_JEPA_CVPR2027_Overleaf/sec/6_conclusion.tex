@@ -3,7 +3,7 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-\ours consolidates informative deployment trajectories into predictors validated for future planning. It improves held-out success with GD and CEM and learns across 14 shape and visual domains with one memory. Replay also reduces deformable goal error, and a rope predictor learned in one pass generalizes to new instances.
+\ours turns deployment trajectories into predictive memory that improves held-out planning with GD and CEM. One memory handles 14 shape and visual domains; another separates rope from granular while learning both. Replay also generalizes beyond stored experience: a rope predictor learned in one pass reduces goal error on new instances.
 
 \paragraph{Future work.}
-Prediction uncertainty and planning outcomes could help the maturity gate determine when a learned predictor is ready for use. Longer observation histories and exploratory actions could distinguish similar dynamics. Better action selection near the goal could turn prediction improvements into successful plans. Longer deployment studies should measure memory growth, retrieval latency, and replay cost alongside planning success. Comparing memory compression with retaining every predictor would help identify practical limits on storage and computation. Tests with rare but recurring conditions would also reveal whether compact memories preserve useful experience or discard it before it is needed again.
+Prediction uncertainty and planning outcomes could better calibrate the maturity gate. Longer observation histories could distinguish similar dynamics, while improved action selection near the goal could turn prediction gains into successful plans. Longer deployments should measure memory growth, retrieval latency, and replay cost alongside success. Comparing compressed memories with full replay buffers would test whether bounded storage can preserve useful experience \mbox{when rare conditions return.}

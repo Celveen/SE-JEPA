@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T22:58:22-08:00",
+  "checked_at": "2026-11-10T23:35:29-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "d592c8a00695fd0c6ea5034992477bdaa3da357dda0b15f522f632ca74799e51",
+    "pdf_sha256": "6f929ba59174cdb461c2f897580e32036cde33f4b4cd3a4121cbd4c14edd05fb",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -42,7 +42,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "8043fe9dfbc656b858f6dbf7104657595a7e74bd00b825a8e14c5059fefa1e71"
+    "pdf_sha256": "4ee8026036b4b96e56843b738b772e0f2db88a0b6c778456e793508036de76fc"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -57,9 +57,8 @@
   "abstract_matches_author_source": false,
   "qualitative_selection": "data/revision_assets/selection_manifest.json",
   "hardware_statement": {
-    "source": "Author instruction",
+    "source": "Author instruction; RTX 5090 system omitted in the accepted hardware revision",
     "systems": [
-      "8 x NVIDIA GeForce RTX 5090",
       "8 x NVIDIA A100"
     ],
     "scope": "Model training and evaluation"
@@ -131,7 +130,11 @@
       "figure": "figures/condition_gains.pdf",
       "values_checked": 26,
       "protocol": "Full SE-JEPA versus episodic AdaJEPA with GD and CEM, per condition.",
-      "layout": "Single column, PushObj above PushT, shared success-gain axis"
+      "layout": "Single column, PushObj above PushT; compressed vertical margins and row spacing without shrinking text",
+      "canvas_inches": [
+        3.35,
+        2.75
+      ]
     },
     "planning_efficiency": {
       "planner": "GD",
@@ -245,7 +248,7 @@
       "placement": "One row below the three learning panels"
     }
   },
-  "clean_upload_files": 49,
+  "clean_upload_files": 50,
   "pushobj_cem_main": {
     "source": "data/pushobj_cem_online/audit.json",
     "protocol": "Fifth-round online performance",
@@ -306,11 +309,11 @@
     ],
     "appendix_tables": {
       "tab:gd_components_full": {
-        "number": "13",
+        "number": "14",
         "page": 17
       },
       "tab:gd_inheritance_chains": {
-        "number": "14",
+        "number": "15",
         "page": 18
       }
     },
@@ -321,7 +324,7 @@
   },
   "paragraph_endings": {
     "audit": "data/paragraph_layout_audit.json",
-    "prose_and_captions": 125,
+    "prose_and_captions": 127,
     "bibliography_entries": 42,
     "minimum_required_fraction": 0.4,
     "minimum_prose_caption_fraction": 0.402,
@@ -439,7 +442,7 @@
     "audit": "data/deform_mixed_20261110/audit.json",
     "section": "D.6",
     "section_page": 15,
-    "table_number": 12,
+    "table_number": 13,
     "table_page": 17,
     "chains": 1,
     "planner": "CEM",
@@ -457,10 +460,40 @@
     "correct_retrieval_percent": 98.93939393939394,
     "rounds_2_3_correct": 457,
     "rounds_2_3_total": 457,
-    "main_and_bibliography_first_ten_pages_pixel_identical": true,
-    "main_8_page_layout_unchanged": true,
+    "main_and_bibliography_first_ten_pages_pixel_identical": false,
+    "main_8_page_layout_unchanged": false,
     "mixed_protocol_distinguished_from_single_domain": true,
     "low_granular_success_reported": true,
     "all_paragraph_endings_pass": true
+  },
+  "mixed_deformable_main_revision": {
+    "section": "4.5",
+    "page": 7,
+    "table": {
+      "number": "2",
+      "page": 7
+    },
+    "detailed_appendix_table": {
+      "number": "13",
+      "page": 17
+    },
+    "figure_7_canvas_inches": [
+      3.35,
+      2.75
+    ],
+    "previous_figure_7_canvas_inches": [
+      3.35,
+      3.9
+    ],
+    "figure_font_size_unchanged": true,
+    "figure_values_unchanged": true,
+    "experiment_data_unchanged": true,
+    "abstract_unchanged": true,
+    "main_pages": 8,
+    "last_page_blank_lines": 2.43,
+    "paragraphs_checked": 127,
+    "paragraph_minimum_width_fraction": 0.4,
+    "all_paragraph_endings_pass": true,
+    "metric_scope": "Stored-member purity; material-correct slow-predictor selections, excluding frozen-reference choices. Different goal trajectories across rounds; single CEM chain with fast adaptation and absolute-error write check."
   }
 }

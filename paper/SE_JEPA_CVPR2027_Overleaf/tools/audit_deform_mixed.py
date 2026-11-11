@@ -130,7 +130,7 @@ def main():
                         "Purity describes stored members; retrieval accuracy excludes frozen-reference selections.",
                         "Different targets across rounds; no paired Frozen or cross-material positive-transfer comparison."]}
     (DATA / "audit.json").write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
-    table = []
+    table, main_table = [], []
     for row in rows:
         r, g = row["performance"]["rope"], row["performance"]["granular"]
         routing = row["routing_decisions"]
@@ -138,7 +138,9 @@ def main():
         total = correct + routing.get("incorrect", 0)
         table.append(f"{row['round']} & {r['final_cd']:.3f} & {r['success_percent']:.0f} & {g['final_cd']:.3f} & {g['success_percent']:.0f} & "
                      f"{row['members']['rope']} / {row['members']['granular']} & 100 & {correct}/{total} " + r"\\")
+        main_table.append(f"{row['round']} & {r['final_cd']:.3f} & {g['final_cd']:.3f} & 100 & {100 * correct / total:.1f} " + r"\\")
     (ROOT / "tables/deform_mixed.tex").write_text("\n".join(table) + "\n")
+    (ROOT / "tables/deform_mixed_main.tex").write_text("\n".join(main_table) + "\n")
     print(json.dumps({"episodes": 300, "stored_members": rows[-1]["members"], "routing_decisions": dict(counts),
                       "slow_selection_accuracy_percent": 100 * 653 / 660}, indent=2))
 

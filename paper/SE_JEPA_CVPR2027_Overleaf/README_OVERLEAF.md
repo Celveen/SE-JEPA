@@ -362,3 +362,17 @@ comparison. Evidence and a reproducible audit are in
 `data/deform_mixed_20261110/` and `tools/audit_deform_mixed.py`.
 The main eight pages and references are unchanged; the combined PDF now has
 21 pages, and the standalone supplement has 12. The clean upload has 49 files.
+
+## Mixed deformable results in the main paper (2026-11-10)
+Section 4.5 and Table 2 on page 7 now report three-round rope/granular CD,
+stored-member purity and slow-predictor retrieval accuracy. Figure 7 keeps its
+vertical single-column arrangement with a shorter canvas and unchanged font size
+and numerical values. Repeated experiment and future-work prose is condensed;
+the conclusion also summarizes mixed deformable learning.
+Appendix D.6 and its detailed table (now Table 13) retain the full protocol and
+success rates. The abstract and all underlying experiment data are unchanged.
+The main text remains eight pages, with 2.43 trailing blank lines; all 127
+prose/caption endings and 42 reference endings satisfy the 40% width check.
+The combined PDF has 21 pages; the standalone supplement has 12.
+The clean upload now contains 50 files. This supersedes the preceding
+appendix-only placement and historical table-number/file-count statements.

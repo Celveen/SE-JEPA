@@ -45,15 +45,33 @@ Across seven PushObj rounds, about one quarter of episodes contribute to replay,
 \subsection{One memory across task and shift families}
 \label{sec:mixed14}
 
-We combine seven PushObj shapes and seven PushT visual conditions in one 14-domain stream. Each of three chains per planner starts with an empty memory and carries it through all domains for five rounds, with 50 episodes per domain per round. Targets repeat, while adaptation and memory updates remain active.
+We combine seven PushObj shapes and seven PushT visual conditions in one 14-domain stream. Three chains per planner each retain one memory for five rounds, with 50 episodes per domain per round. Targets repeat; adaptation and memory updates remain active.
 
-Averaging GD and CEM equally, online success rises from 65.3\% to 75.5\% (+10.2 points; Fig.~\ref{fig:mixed14_learning}). Both families improve: shapes from 73.4\% to 82.0\% and visual conditions from 57.2\% to 68.9\%. One evolving memory thus supports recurring geometric and appearance shifts across task families without resets. The AdaJEPA and Frozen references reach 65.2\% and 38.2\%; they use different initial checkpoints and do not retain adaptation across episodes. Appendix~D provides the protocols and detailed results for each shape and visual condition.
+Averaging GD and CEM equally, online success rises from 65.3\% to 75.5\% (Fig.~\ref{fig:mixed14_learning}): shapes improve from 73.4\% to 82.0\% and visual conditions from 57.2\% to 68.9\%. One memory thus handles recurring geometric and appearance shifts without resets. AdaJEPA and Frozen reach 65.2\% and 38.2\% under the different protocols in Appendix~D.
+
+\paragraph{Mixed deformable manipulation.}
+We also alternate rope and granular in one CEM stream: three rounds, each with 50 new goals per material, share a rope-trained base and persistent memory. Fast adaptation and an absolute-error write check are enabled (Appendix~\ref{app:mixed_deformable}). Without material labels, \ours discovers two memories with 100\% stored-member purity throughout (Table~\ref{tab:deform_mixed_main}). Slow-predictor retrieval is 98.9\% material-correct overall and 100\% in the last two rounds. CD decreases for both materials across disjoint trajectory groups, while rope success rises from 60\% to 82\%. Granular success remains low (2--8\%), so domain separation alone does not ensure precise control.
+
+\begin{table}[!ht]
+  \centering
+  \caption{\textbf{Mixed rope/granular learning (CEM).} Purity covers stored members; retrieval accuracy excludes frozen-base selections. Both are percentages; CD is lower-is-better.}
+  \label{tab:deform_mixed_main}
+  \small
+  \setlength{\tabcolsep}{3.5pt}
+  \begin{tabular}{@{}crrrr@{}}
+    \toprule
+    Round & Rope CD $\downarrow$ & Granular CD $\downarrow$ & Purity & Retrieval\\
+    \midrule
+    \inputrows{tables/deform_mixed_main.tex}
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \subsection{Ablation study}
 \label{sec:ablation}
 
 \paragraph{Accumulating fast updates across episodes.}
-We test whether retaining a fixed fraction of each fast update benefits subsequent goals. We compare $s_{e+1}=s_e+w\Delta_e$, where $s_e$ is the starting offset from the pretrained weights and $\Delta_e$ is the episode's fast update. Every setting receives the same 100 goals in five ordered blocks (I, square, T, I, square). Resetting between episodes reaches 62\% of goals. Full inheritance reaches 48\%, losing 25 reset successes and recovering 11 (Table~\ref{tab:inheritance}, exact McNemar $p=0.029$). The smallest tested coefficient reaches 64\%, while larger coefficients progressively reduce success. Thus the degradation depends on how strongly past updates are accumulated.
+We retain fast updates as $s_{e+1}=s_e+w\Delta_e$, where $s_e$ is the offset from pretrained weights and $\Delta_e$ the episode's update. All settings receive the same 100 goals in five blocks (I, square, T, I, square). Resetting reaches 62\% success; full inheritance reaches 48\%, losing 25 reset successes and recovering 11 (Table~\ref{tab:inheritance}, exact McNemar $p=0.029$). The smallest coefficient reaches 64\%; retaining larger fractions progressively reduces planning success.
 
 \begin{table}[!ht]
   \centering
@@ -73,7 +91,7 @@ We test whether retaining a fixed fraction of each fast update benefits subseque
 \paragraph{Replay rather than parameter averaging.}
 Table~\ref{tab:component_ablation} tests corresponding five-round learning streams from the same task-specific checkpoint, with 1,050 held-out evaluations per state. PushObj uses one chain; PushT repeats the components in two. The episodic-reset baseline removes persistent memory while keeping the same initial weights; the main benchmark uses the official AdaJEPA checkpoint.
 
-Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and by 10.10 and 8.86 points on the two PushT chains. On PushObj, replay solves 44 additional unseen-I goals out of 150, while the four pretraining shapes differ by only one solved goal. The full model also exceeds episodic reset in every comparison, supporting retention of transitions rather than episode-specific weight corrections.
+Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and by 10.10 and 8.86 points on the two PushT chains. On PushObj, replay solves 44 additional unseen-I goals out of 150, while the four pretraining shapes differ by only one solved goal. The full model also exceeds episodic reset in every comparison, supporting transition replay over weight inheritance.
 
 \begin{table}[!ht]
   \centering
@@ -93,10 +111,10 @@ Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and by 10.10 
 \end{table}
 
 \paragraph{Inheritance across repeated learning chains.}
-Across three chains, inheritance averages 65.94\% success versus 81.59\% for \ours on PushObj, and 31.71\% versus 75.68\% on PushT. The full model leads in every chain. Mean replans, including failures, fall from 15.84 to 11.30 on shapes and from 24.18 to 13.21 on visual conditions (Appendix~D). Each independently learned memory improves success and reduces interaction costs.
+Across three chains (Appendix~D), inheritance averages 65.94\% success versus 81.59\% for \ours on PushObj, and 31.71\% versus 75.68\% on PushT. \ours leads in every chain. Replans, including failures, fall from 15.84 to 11.30 on shapes and from 24.18 to 13.21 on visual conditions.
 
 \paragraph{Fixed slow learning rates.}
-Rates from $5\times10^{-5}$ to $3\times10^{-4}$ give 79.62--82.38\% on PushObj and 73.05--78.10\% across the two PushT chains. A rate of $5\times10^{-4}$ reduces success in all three comparisons relative to the default $10^{-4}$. Doubling the default changes the three-chain visual mean by only $+0.19$ points. These results support a range of slow learning rates; increasing the update size does not consistently improve planning success.
+Rates from $5\times10^{-5}$ to $3\times10^{-4}$ give 79.62--82.38\% on PushObj and 73.05--78.10\% across the two PushT chains. A rate of $5\times10^{-4}$ reduces success in all three comparisons relative to the default $10^{-4}$. Doubling the default changes the three-chain visual mean by only $+0.19$ points. Larger updates therefore do not consistently improve planning.
 
 \paragraph{Maturity and familiarity gates.}
 Removing maturity screening lowers PushObj success from 81.43\% to 80.86\%, but raises PushT success from 74.38\% to 76.95\% and from 76.57\% to 78.10\%. A prediction-error gate can filter unreliable predictors but may also delay useful retrieval, leaving room to improve its calibration.

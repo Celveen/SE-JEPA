@@ -32,8 +32,8 @@ def main():
         writer.writerow(["task", "condition", "planner", "ours_percent", "adajepa_percent", "gain_pp"])
         plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 7.4,
                              "pdf.fonttype": 42, "axes.unicode_minus": True})
-        fig, axes = plt.subplots(2, 1, figsize=(3.35, 3.9), sharex=True)
-        fig.subplots_adjust(left=.255, right=.97, top=.87, bottom=.14, hspace=.37)
+        fig, axes = plt.subplots(2, 1, figsize=(3.35, 2.75), sharex=True)
+        fig.subplots_adjust(left=.255, right=.97, top=.87, bottom=.18, hspace=.39)
         for ax, (task, (key, conditions)) in zip(axes, PANELS.items()):
             for row, (condition, _) in enumerate(conditions):
                 values = []
