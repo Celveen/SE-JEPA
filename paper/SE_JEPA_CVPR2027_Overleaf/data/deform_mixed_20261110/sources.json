@@ -1,0 +1,799 @@
+{
+  "repository": "https://github.com/Celveen/SE-JEPA",
+  "branch": "baselines",
+  "commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "files": [
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_00_rope/.hydra/config.yaml",
+      "git_blob": "7217a8ad70d1c283d9aff2c39ea1700e05d18d14",
+      "source_sha256": "fdaa865d2e0d7bdd4bba869bf5d930053ccd6ec144546babef278071a59ae775",
+      "local": "raw/chunk_00_rope/config.yaml",
+      "local_sha256": "fdaa865d2e0d7bdd4bba869bf5d930053ccd6ec144546babef278071a59ae775",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_00_rope/continual_episodes.jsonl.gz",
+      "git_blob": "331c3d4f21df37546c35911b76937e033913377a",
+      "source_sha256": "46d68f8cfcba70f4b55a16a714e2b23093044ea91bc7cf63db84a9d221fd74b1",
+      "local": "raw/chunk_00_rope/episodes.jsonl.txt",
+      "local_sha256": "e51a10ca326cace2f7b997316556c9d38184b618a21bd61e510d265c3f4d55fc",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_00_rope/logs.json.gz",
+      "git_blob": "204d985e85082d3263f61ff8997b2fab6cd2bbe5",
+      "source_sha256": "cda32aaff8acf039711ba49625e0d0fcd9a9a8809283eaf89efa800e53ecdc58",
+      "local": "raw/chunk_00_rope/logs.jsonl.txt",
+      "local_sha256": "c47e0fc82382aa8d147b51427488e11ab5ebc9fa06921ad98c9621eadd86a60f",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_01_granular/.hydra/config.yaml",
+      "git_blob": "1b6af55400a3471e4bd20ab6d656b5ba58368f37",
+      "source_sha256": "a91e4914d33667d1f57a5555f96c882c13c7ce04da1c0ef2348f008871debfff",
+      "local": "raw/chunk_01_granular/config.yaml",
+      "local_sha256": "a91e4914d33667d1f57a5555f96c882c13c7ce04da1c0ef2348f008871debfff",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_01_granular/continual_episodes.jsonl.gz",
+      "git_blob": "e9623025f76558f207bbf9918586abf11f362831",
+      "source_sha256": "efce27ed03d5375ba2b789999017f95d9ffbaa0a63db6107cb407263a146ec57",
+      "local": "raw/chunk_01_granular/episodes.jsonl.txt",
+      "local_sha256": "98bfcd4f5a35b96c51c7041bf27ed647fa1134a300c30e2482a4ef4f8b0407ed",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_01_granular/logs.json.gz",
+      "git_blob": "8a35cfd5c0b0eb6466c59323231fbc87fe508bb7",
+      "source_sha256": "2d2de56844a3f1087540ca4a897da3b03d9a4204c72f3ce437a5f267db4d7468",
+      "local": "raw/chunk_01_granular/logs.jsonl.txt",
+      "local_sha256": "34e0228bda90c58bd16dd377474d47cdbc9cef70931e8c13d2ab439df788514f",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_02_rope/.hydra/config.yaml",
+      "git_blob": "91221f2ec3d2d05eda926d0d1bebd6f694a0cbd3",
+      "source_sha256": "c81e4c01ec0c5a4a380f10ce8becabd74296055822b4226f2cce76d272759992",
+      "local": "raw/chunk_02_rope/config.yaml",
+      "local_sha256": "c81e4c01ec0c5a4a380f10ce8becabd74296055822b4226f2cce76d272759992",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_02_rope/continual_episodes.jsonl.gz",
+      "git_blob": "570b58e54ded6231a83f78e9e20b719989174910",
+      "source_sha256": "70fcbfa13f356e6b785aab8864f3f80cb9dde0dea699043bd6993097ea2018c6",
+      "local": "raw/chunk_02_rope/episodes.jsonl.txt",
+      "local_sha256": "f4386a0904fcc857b6fc1d2605b490f4d1e134e5d48be948644a1f462dfe5e94",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_02_rope/logs.json.gz",
+      "git_blob": "f8be2272fbf78e5e0680546c9ce39f88c65b9cef",
+      "source_sha256": "de7727d94260701c79037b8307551e2f66535fd4516ff1ba7d2230130c62437e",
+      "local": "raw/chunk_02_rope/logs.jsonl.txt",
+      "local_sha256": "67876dd0af5e8f5d497d564d7f72f2065b28ad6d753a72b38807da49c71320f3",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_03_granular/.hydra/config.yaml",
+      "git_blob": "acffe4aeb75fcd0f0488fb70719d4caed6473655",
+      "source_sha256": "3e30327eb4adf42cd245ccdb2e1baed88836dfaeed330cca137077c28e8a4b6c",
+      "local": "raw/chunk_03_granular/config.yaml",
+      "local_sha256": "3e30327eb4adf42cd245ccdb2e1baed88836dfaeed330cca137077c28e8a4b6c",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_03_granular/continual_episodes.jsonl.gz",
+      "git_blob": "4b6d42aebc049266991a712dfee0461832db9e85",
+      "source_sha256": "235004b531bbe027514c9dfd2c96f919ade0d35ff7e3f8977769dce582359a31",
+      "local": "raw/chunk_03_granular/episodes.jsonl.txt",
+      "local_sha256": "90c8b498da73d3000844a755694d62bcde56d2016705411f64722c6d30e6b773",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_03_granular/logs.json.gz",
+      "git_blob": "7bf58ec2ea6a5bfe036ba4ee0ccd338a28fd2628",
+      "source_sha256": "77f55f38f92acf80e64eecaa0e54e1af5dd92c4811aa3f5ae493de92a55be5f0",
+      "local": "raw/chunk_03_granular/logs.jsonl.txt",
+      "local_sha256": "bd1a87d23d924629b0b3ef3c4aa2670b68fa73d72e9f53d2aff8115adc303632",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_04_rope/.hydra/config.yaml",
+      "git_blob": "2f7149872684b8c46d0ba8b6f824b042ca1fc7c6",
+      "source_sha256": "a31f6117a76fe93b130f2d6b0d4f4bbc44a17c34b8ec2d0ff38347151aec8eaf",
+      "local": "raw/chunk_04_rope/config.yaml",
+      "local_sha256": "a31f6117a76fe93b130f2d6b0d4f4bbc44a17c34b8ec2d0ff38347151aec8eaf",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_04_rope/continual_episodes.jsonl.gz",
+      "git_blob": "4d74f286fbde77568acb0ea258c424a7db0bfdd9",
+      "source_sha256": "d62406a06c5b91d063a5eaaa17ba19f301d585608b0af913ac544d014a793f1a",
+      "local": "raw/chunk_04_rope/episodes.jsonl.txt",
+      "local_sha256": "6d58bd8b47e711ec2bbffa5dc93a9a4b49fac33cda8555ab10609816b380044a",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_04_rope/logs.json.gz",
+      "git_blob": "95b16a0125fb802dbc67e92d1ceadb01759fde9a",
+      "source_sha256": "645fe0fecbb536a80c3b82202472e37802d9b3d99c970254c19937b53c9bedf4",
+      "local": "raw/chunk_04_rope/logs.jsonl.txt",
+      "local_sha256": "d6bee7a2ecfac8cc409a541a9d1c2842121c8a73cf18ff4b554be138ac07c2ee",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_05_granular/.hydra/config.yaml",
+      "git_blob": "141a7fbdf8bbc2da10eb7f5757a769121502dba5",
+      "source_sha256": "34dcd03aec71892e4da044aa51c935c6494086c1aa945897042b5e926d1c7dde",
+      "local": "raw/chunk_05_granular/config.yaml",
+      "local_sha256": "34dcd03aec71892e4da044aa51c935c6494086c1aa945897042b5e926d1c7dde",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_05_granular/continual_episodes.jsonl.gz",
+      "git_blob": "b22ec687c42547f7091bf7deaa6409da9b5bdf09",
+      "source_sha256": "4bb4c8734b5e8d36ffbb3804866372cd8ab9708d26f2bb4b362468a5727d4b66",
+      "local": "raw/chunk_05_granular/episodes.jsonl.txt",
+      "local_sha256": "741a35639dee116c3ba6fa4d95ee347e0b2f92e86f7c47dc872fa4ab2147ce2e",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_05_granular/logs.json.gz",
+      "git_blob": "c6860b86f4603562237e650f65cd67daa98b4cda",
+      "source_sha256": "e45e11a66c426a27c2d49905d38a12e25e531a053d667e4256eacff9619f0e26",
+      "local": "raw/chunk_05_granular/logs.jsonl.txt",
+      "local_sha256": "7bfbbda246c75a5da906be2ac8b4ecfbff698279c373794ac86de8edab0907a1",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_06_rope/.hydra/config.yaml",
+      "git_blob": "9b2d8e2d602482954012c8d26b26ad6d56b59fac",
+      "source_sha256": "dacc1262813834f362b7c24e7ddaa6e29ea0c2cc7a28d49e54667db08cd381e5",
+      "local": "raw/chunk_06_rope/config.yaml",
+      "local_sha256": "dacc1262813834f362b7c24e7ddaa6e29ea0c2cc7a28d49e54667db08cd381e5",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_06_rope/continual_episodes.jsonl.gz",
+      "git_blob": "411ba0339dff9728b87a7de2e19218d28f194b37",
+      "source_sha256": "bb9e5e9c5fdc0e88dc6ba46b9d17df92f530498f99adf9fc8759c33e4799300e",
+      "local": "raw/chunk_06_rope/episodes.jsonl.txt",
+      "local_sha256": "8c3579ae62ba2a3a840c286d1596f7a98d4716fb1e5e0448b5485b0d0640ef29",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_06_rope/logs.json.gz",
+      "git_blob": "2175fef66ba4a1a741929d7c97dd15ffa0e984e7",
+      "source_sha256": "a2f78d043d7d9d5190bb79d5e549964d9817018a1a19b28667ce63ebcb9a8659",
+      "local": "raw/chunk_06_rope/logs.jsonl.txt",
+      "local_sha256": "12f360ee1c645e3f6226128434fbd77bcc86bb30482463c84e341f2821fe1126",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_07_granular/.hydra/config.yaml",
+      "git_blob": "0da774bc8db202c4be088b37bb6f8f0c55304d7f",
+      "source_sha256": "446608e91e2ad8c2e589866a92f60856f5060750bd72b5093bc32497a609003f",
+      "local": "raw/chunk_07_granular/config.yaml",
+      "local_sha256": "446608e91e2ad8c2e589866a92f60856f5060750bd72b5093bc32497a609003f",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_07_granular/continual_episodes.jsonl.gz",
+      "git_blob": "d52caf04980f352e570149272d49aefa28e30c69",
+      "source_sha256": "8ef42d86d0ce177833d449972b2ab60789bdab6adb04b9b498bb3d94b3cfb8f3",
+      "local": "raw/chunk_07_granular/episodes.jsonl.txt",
+      "local_sha256": "8329f7064b8217af73f6731a3c36d6ec7de9cd4bc7fb0d637d444364e8e46156",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_07_granular/logs.json.gz",
+      "git_blob": "0119992037a246dc822fff3cd7d288bccf19b43f",
+      "source_sha256": "3199c67a6fa8f3528e9ff51083a291fc432c88206aabae898ad568d4fe9ec85e",
+      "local": "raw/chunk_07_granular/logs.jsonl.txt",
+      "local_sha256": "61088508ba9334b3791ee432e621cbc31119a305bb93fc2f9b265212b724c2a7",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_08_rope/.hydra/config.yaml",
+      "git_blob": "999f1e3977a792e788842dcdf89a00438734ad6f",
+      "source_sha256": "9a651abc1ac40d1638ba7315a88b9aaf996d0a975fc0c0c6e7a9e40fa334afd5",
+      "local": "raw/chunk_08_rope/config.yaml",
+      "local_sha256": "9a651abc1ac40d1638ba7315a88b9aaf996d0a975fc0c0c6e7a9e40fa334afd5",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_08_rope/continual_episodes.jsonl.gz",
+      "git_blob": "9bff61937e2dac771b3f0a474fc6e39578ce4562",
+      "source_sha256": "a21a4c68632bba739965b30438ce205ca767016cf17a7accd51b792dd6fb44b8",
+      "local": "raw/chunk_08_rope/episodes.jsonl.txt",
+      "local_sha256": "87d492545804f87d9cb432d55fb562bc2f6ff5bddbf21664201c58a64160e677",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_08_rope/logs.json.gz",
+      "git_blob": "70d6fcf6a2c7df179e08a92e0cb5e120bec193c0",
+      "source_sha256": "6323187243afe3a6ab9eb79be50d53fdb13aeabe1ce6518a7b437073358807ab",
+      "local": "raw/chunk_08_rope/logs.jsonl.txt",
+      "local_sha256": "3050a72c416c0cba95fd841320cbacb3ed96ff19895540983d54965b7df23fcd",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_09_granular/.hydra/config.yaml",
+      "git_blob": "365fb2e181eb84e9b3e3cd4bfacbc590dc7fd3db",
+      "source_sha256": "a1528b1e49309c087f2909953d384f65738e16bd214e45e237f50b5a7d1ecbbc",
+      "local": "raw/chunk_09_granular/config.yaml",
+      "local_sha256": "a1528b1e49309c087f2909953d384f65738e16bd214e45e237f50b5a7d1ecbbc",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_09_granular/continual_episodes.jsonl.gz",
+      "git_blob": "46d135e00ed6c4cf338978002b9fb0bb80f4ec45",
+      "source_sha256": "2973a77d0855ddd19a885d9d1ce81dc820861fd9ba959fd1b901c292c70244ea",
+      "local": "raw/chunk_09_granular/episodes.jsonl.txt",
+      "local_sha256": "136aa32f5a62344f522ef48638179b0fc52a9ae5319a5b11eef144520d23bc0d",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_09_granular/logs.json.gz",
+      "git_blob": "aee9aa4488656a5ab0f6df6072b390b3ea93b86c",
+      "source_sha256": "399b92a21a24bb009385dec9e3a9ee6b74bd02f34345a5e24bc425bde16f30eb",
+      "local": "raw/chunk_09_granular/logs.jsonl.txt",
+      "local_sha256": "4746cf90d223457d07369528893cd54c532830de89e939b71ce2f549ce1d0f4c",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_10_rope/.hydra/config.yaml",
+      "git_blob": "71c57e4573dd3d10291eb235e795a328cbaa8dbc",
+      "source_sha256": "573641a166451e8b3803e63c3fd4d438bdbf5cf6c6441358667d7cb7f5a61590",
+      "local": "raw/chunk_10_rope/config.yaml",
+      "local_sha256": "573641a166451e8b3803e63c3fd4d438bdbf5cf6c6441358667d7cb7f5a61590",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_10_rope/continual_episodes.jsonl.gz",
+      "git_blob": "a18deb80fde01f1b25e2eaa1cdcbc6e5cb619a70",
+      "source_sha256": "2b6d0ac14371ac87cb3787cc89536808c4c0dc1aafe146e59b3bc7281416a516",
+      "local": "raw/chunk_10_rope/episodes.jsonl.txt",
+      "local_sha256": "5fbf6cbc54d7b189e8e475d8e1a83b17ac798dce25b500c0693508cfb840d3e1",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_10_rope/logs.json.gz",
+      "git_blob": "d0cf8d30939004e6ff8eb8eba8262eb87131089a",
+      "source_sha256": "b1fea789992bc8d2749ef904c43daeae90f92db0221b058eb450c3a777784aba",
+      "local": "raw/chunk_10_rope/logs.jsonl.txt",
+      "local_sha256": "80b1d06946b32cece5d348c14cb92ad16661a50bbfe358f12442f91e635c60f3",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_11_granular/.hydra/config.yaml",
+      "git_blob": "40c3573017af7831b7027c12feb0b630015569a5",
+      "source_sha256": "ad3607b1c0f8b7ea9b8714af23d324602b7ace34f75ab14d8fdbb1b9f91626fd",
+      "local": "raw/chunk_11_granular/config.yaml",
+      "local_sha256": "ad3607b1c0f8b7ea9b8714af23d324602b7ace34f75ab14d8fdbb1b9f91626fd",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_11_granular/continual_episodes.jsonl.gz",
+      "git_blob": "de25aecfa455e9f3297acd3c9e0bcf64a58a7496",
+      "source_sha256": "931fbae25bec4127b1ba00359be43a53736d26112f129e23597f3fe5fdfaa42a",
+      "local": "raw/chunk_11_granular/episodes.jsonl.txt",
+      "local_sha256": "7f0045e58999409c0df048117be6e15ef6e410b954f4d9b548e0a53f86ded959",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_11_granular/logs.json.gz",
+      "git_blob": "d8c1a11c46a4973e105837bf8a044d648020faeb",
+      "source_sha256": "95cbab0214b24999b94212fad61ac4af8e5927cdb200671d9150aff0aad363f4",
+      "local": "raw/chunk_11_granular/logs.jsonl.txt",
+      "local_sha256": "abd57f5ee4c6dcc68c95c72663259c2e8b5fcc2657415be25b3403ff2aca404f",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_12_rope/.hydra/config.yaml",
+      "git_blob": "2986eb82ac168afab2dc6c6682e3ef49055fdae5",
+      "source_sha256": "644d51dd7868f1de31e09679209f0104deac5439331ff758c447b881aa4231fd",
+      "local": "raw/chunk_12_rope/config.yaml",
+      "local_sha256": "644d51dd7868f1de31e09679209f0104deac5439331ff758c447b881aa4231fd",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_12_rope/continual_episodes.jsonl.gz",
+      "git_blob": "4a8a7e9645ad6f6d8c9a45c566419b2be7831d5f",
+      "source_sha256": "922bb880f9a2a199468c15f87e250dcf23dd2b3b30ac3b01833dffc3cfbd0979",
+      "local": "raw/chunk_12_rope/episodes.jsonl.txt",
+      "local_sha256": "e2190e6f21f3a69196d04989222501d8c492ed776543c102e6152e79859e468a",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_12_rope/logs.json.gz",
+      "git_blob": "204e8e24eb98c1256818c8141214126fd2228e25",
+      "source_sha256": "2f84cae54e189049a5ad23b0fdfe9e9f16eff6ae29ea8d9147864b86ad0e28f5",
+      "local": "raw/chunk_12_rope/logs.jsonl.txt",
+      "local_sha256": "a0c3dde92ef40fea9c7988de2bb3bb188fdcfe772debab57500539527a60917d",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_13_granular/.hydra/config.yaml",
+      "git_blob": "c8055f67a0e36132f79bba204e91218f7fc6b1e3",
+      "source_sha256": "7201806b90f2877891802f1230d024749d23ed6ee7400325153a038fd43d36dd",
+      "local": "raw/chunk_13_granular/config.yaml",
+      "local_sha256": "7201806b90f2877891802f1230d024749d23ed6ee7400325153a038fd43d36dd",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_13_granular/continual_episodes.jsonl.gz",
+      "git_blob": "1d28508a23ac9d413e78d39d62db5a97ce04bbed",
+      "source_sha256": "a35afdc5d555f510fe99af6afdc550f4aac53c64fbb6959ae2ba260656833f81",
+      "local": "raw/chunk_13_granular/episodes.jsonl.txt",
+      "local_sha256": "ca2363745011d0d8b03e418437b1aeca43f90dd632384852fb80dbbd52ce6168",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_13_granular/logs.json.gz",
+      "git_blob": "fa8581167aadb0072534cf1af484125714658310",
+      "source_sha256": "d5351a2669e9479369ea69baa25b876c2957e67357f5f934e155926c9afc6764",
+      "local": "raw/chunk_13_granular/logs.jsonl.txt",
+      "local_sha256": "07955e242a55dbdb8e49cbfea7c0391a9a7f03373424b15de283b29318595d47",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_14_rope/.hydra/config.yaml",
+      "git_blob": "fa4dc6a99a67a8ee98e7ccf36f40237d81984b22",
+      "source_sha256": "b563dc034eedb4f4af83cf389c988d93fb975d682427cc075ad78be1f710f719",
+      "local": "raw/chunk_14_rope/config.yaml",
+      "local_sha256": "b563dc034eedb4f4af83cf389c988d93fb975d682427cc075ad78be1f710f719",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_14_rope/continual_episodes.jsonl.gz",
+      "git_blob": "efd5e066aee0b3381b419c2d3f2f884e47e3550a",
+      "source_sha256": "6551be0ce3f1628f7e16a7b87d7539b3694b2816d0ab8e1cd20568c6297e5fa9",
+      "local": "raw/chunk_14_rope/episodes.jsonl.txt",
+      "local_sha256": "614808c8add0d6ddb300404af2ae63038a52c2d909a8f08a97bf53d83184e8ae",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_14_rope/logs.json.gz",
+      "git_blob": "d2707538f9a5286c4e00182f817001075c9eb7a7",
+      "source_sha256": "ca26c37d153c39ad1de04c6b416be1278ab0ec2ce145ba6d640901c6dbc9eb05",
+      "local": "raw/chunk_14_rope/logs.jsonl.txt",
+      "local_sha256": "18bf9c1a6622c4406509c98ecba00d7a5c55fedc77f4ef77219e5d0c1d4e44b7",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_15_granular/.hydra/config.yaml",
+      "git_blob": "9a6d727e80579a3cfa1ccd08a7080a900ab78d00",
+      "source_sha256": "03f852f12e07d2134bc7b5dad6224c6e005f8ca1199d883a3f865b5f31a6b2c3",
+      "local": "raw/chunk_15_granular/config.yaml",
+      "local_sha256": "03f852f12e07d2134bc7b5dad6224c6e005f8ca1199d883a3f865b5f31a6b2c3",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_15_granular/continual_episodes.jsonl.gz",
+      "git_blob": "06ab591c5964ebd3c5a5b23b2a0471cd4fa7fb49",
+      "source_sha256": "f9c2f8a0bb7d75b6951eb8a3d30ef4ab72c2a5f7ab718469fe1911e584cf4105",
+      "local": "raw/chunk_15_granular/episodes.jsonl.txt",
+      "local_sha256": "4949aa7dcd8e206764ceb03a3877ad6c4fbcc23661607f541c90eab8ce3c4c96",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_15_granular/logs.json.gz",
+      "git_blob": "7ea74e0527e8ec3ac77f944a9a22dc6eae294180",
+      "source_sha256": "caf5c8343714523fd6e2cbd8783cafecf72b0470f7f4d361f35386b62451a261",
+      "local": "raw/chunk_15_granular/logs.jsonl.txt",
+      "local_sha256": "1423f3c55482575674277bf5d0fb84119761236364e7c496463862da56965e92",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_16_rope/.hydra/config.yaml",
+      "git_blob": "5869dd52b5230d620c635b20e79bf9f78b651158",
+      "source_sha256": "4217bff60a1c8311fba4f3c001748a2fb2f67ca3722c437515c4308b3335b044",
+      "local": "raw/chunk_16_rope/config.yaml",
+      "local_sha256": "4217bff60a1c8311fba4f3c001748a2fb2f67ca3722c437515c4308b3335b044",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_16_rope/continual_episodes.jsonl.gz",
+      "git_blob": "1e8621b2e3641c99673530b193a684e614eca6ec",
+      "source_sha256": "1a18fe22bd2ecef34bd463a314beb4e285d3c4aeafc5ff750a72c40405a4ee02",
+      "local": "raw/chunk_16_rope/episodes.jsonl.txt",
+      "local_sha256": "fadd9fba5d13ff78e3e79e726c498fcde5fffd79a7910f41e034708ec9cec94b",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_16_rope/logs.json.gz",
+      "git_blob": "049ed7b9fbabfc84257fb322c779d262676c7344",
+      "source_sha256": "f9926d19d9b6734811435355c2b1c7223dbd2ac685ae8e09c5972ee3afa816a9",
+      "local": "raw/chunk_16_rope/logs.jsonl.txt",
+      "local_sha256": "d478c98fb523d8437129665dbef0795be64da46492da7228ecd338337abb8b90",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_17_granular/.hydra/config.yaml",
+      "git_blob": "58ca3c57e227c4ed537fe64cbdf0d7d826f074b9",
+      "source_sha256": "d903bec8c5113f1a8da55599da0425d9a8a78c75ba38e09421bfd8e05f24328d",
+      "local": "raw/chunk_17_granular/config.yaml",
+      "local_sha256": "d903bec8c5113f1a8da55599da0425d9a8a78c75ba38e09421bfd8e05f24328d",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_17_granular/continual_episodes.jsonl.gz",
+      "git_blob": "0cdbbf8178f9b6ea8b5bbcdf92ef5b297c61ed81",
+      "source_sha256": "9bc519e8b7c84ce26a71e8270593ce4ed9355c84b351db47cb919d2befbea8ab",
+      "local": "raw/chunk_17_granular/episodes.jsonl.txt",
+      "local_sha256": "38f242bcd6e6d78188cd9852d54f7abffc417523942f44391716749b320fc1a4",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_17_granular/logs.json.gz",
+      "git_blob": "afab5970b3bcbd43a7cac838e680db522f4b6d94",
+      "source_sha256": "fcdf24d8b566009d4999b575f6136ca497dfb41d71826bd4c66fdb6c0fd9c95b",
+      "local": "raw/chunk_17_granular/logs.jsonl.txt",
+      "local_sha256": "8eaf6b96b9c75084bb4bdf77c3766d042f158dfcd7039519c3b24af183b24390",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_18_rope/.hydra/config.yaml",
+      "git_blob": "d4da0e01282388337d542ffaa05e3908891783ff",
+      "source_sha256": "e8d8b996ffa48c6cc68160b37ca6002f0726a96b3d6d8642e44f7cfc07665300",
+      "local": "raw/chunk_18_rope/config.yaml",
+      "local_sha256": "e8d8b996ffa48c6cc68160b37ca6002f0726a96b3d6d8642e44f7cfc07665300",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_18_rope/continual_episodes.jsonl.gz",
+      "git_blob": "04f851c3111f187ccb703a13d1b3d3bd03efeec8",
+      "source_sha256": "bf826ea0e852dd0b1598fd9c150144964492297ce40183a0734b6fbbc88610fe",
+      "local": "raw/chunk_18_rope/episodes.jsonl.txt",
+      "local_sha256": "63a1d1cf62cdb056d95bd02d2b54588412eb9b7d13dc0a13419160dbf303c69e",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_18_rope/logs.json.gz",
+      "git_blob": "42d54964ee4076270456ea12d6c4c4b3eff83bd4",
+      "source_sha256": "4523b00cb13fd1663611348ddd64c0a52a9050f30c65483ece3d9d86b9ec4b71",
+      "local": "raw/chunk_18_rope/logs.jsonl.txt",
+      "local_sha256": "05b8806e0b45d818f33835774fe5eb682359f8841602001fcd1be84c677e94a6",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_19_granular/.hydra/config.yaml",
+      "git_blob": "ddce2f580cc35d07f4478daf1395849d280d647b",
+      "source_sha256": "04da294e0b8dca71af0ab4f95df555f4a65a7e50546576fb079a878842e8bbe1",
+      "local": "raw/chunk_19_granular/config.yaml",
+      "local_sha256": "04da294e0b8dca71af0ab4f95df555f4a65a7e50546576fb079a878842e8bbe1",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_19_granular/continual_episodes.jsonl.gz",
+      "git_blob": "a22c913c665526dacf66e47d0f822669a9d81659",
+      "source_sha256": "730b4c1cd98eecf4d7ee28fbc3982b8d42e68d7bbbe8355e757735d0da6e3f3a",
+      "local": "raw/chunk_19_granular/episodes.jsonl.txt",
+      "local_sha256": "bf028824ff28c6851bb93b35cfade5ea0d111627a64f9b22e49cda47af34ebcd",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_19_granular/logs.json.gz",
+      "git_blob": "95d6572eaaaca6b4bcf125d080ebf7705d1c8af0",
+      "source_sha256": "20da79c98969825b5c54e8b946d8da45b368a9659b394294d678b2e993ad73f3",
+      "local": "raw/chunk_19_granular/logs.jsonl.txt",
+      "local_sha256": "d8f7084044b8a431ced40691a0db0ae2b5a5314b4ecb7eb088325a9ed7f9577e",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_20_rope/.hydra/config.yaml",
+      "git_blob": "2ded4c80be9e7dfc01bff5884ef756a4217cac7c",
+      "source_sha256": "619ecad6d6b6c8cd870e8715f503bdbb6e70ad6312c13b65b09ce589a3750cfe",
+      "local": "raw/chunk_20_rope/config.yaml",
+      "local_sha256": "619ecad6d6b6c8cd870e8715f503bdbb6e70ad6312c13b65b09ce589a3750cfe",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_20_rope/continual_episodes.jsonl.gz",
+      "git_blob": "384ee9d6c3035347727a7dbfbfd0721117811c49",
+      "source_sha256": "d46db8d96234e8a4ed20b8755e04810f710eeb9d5d5c3bdbde0038b5ad7d438c",
+      "local": "raw/chunk_20_rope/episodes.jsonl.txt",
+      "local_sha256": "f2f68181751bd8b8732de59525265f07d7ff761623e7d8e31bae79db841c2c72",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_20_rope/logs.json.gz",
+      "git_blob": "43450e3c6fa9c9b39d800e4b1bb26c48006248cf",
+      "source_sha256": "4487ac75df30ed354bbd385c0a49f2dd228337278199c54bba9fa0fe9c85af28",
+      "local": "raw/chunk_20_rope/logs.jsonl.txt",
+      "local_sha256": "ea2b716d72701fb3c5fc824b66aa7a8595029428b194d198f651558e6031e702",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_21_granular/.hydra/config.yaml",
+      "git_blob": "cc8f9998309ee17531490aa5ea858316fe138ecc",
+      "source_sha256": "41772646061855b0dc7790b5a88d68f9046ec3c1763e0328b4dd4e013f3755fe",
+      "local": "raw/chunk_21_granular/config.yaml",
+      "local_sha256": "41772646061855b0dc7790b5a88d68f9046ec3c1763e0328b4dd4e013f3755fe",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_21_granular/continual_episodes.jsonl.gz",
+      "git_blob": "86f648d72ffb68ef7e412f06d0709587bddd073e",
+      "source_sha256": "494e6229d58df19e00be78b080b3f7cd3be422ef4f9f5a8f5ab0763881500561",
+      "local": "raw/chunk_21_granular/episodes.jsonl.txt",
+      "local_sha256": "de1168d497a256cb343fe6682b7d67784acbfc2b8c1c24010f2c56b1bb373c8d",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_21_granular/logs.json.gz",
+      "git_blob": "e1ef36c1c066fcbd108d00ec338ac1d64398b494",
+      "source_sha256": "97eabe61ec5c0573c0069fc90d2858f675a56a3a36760311b8a86f138e0b54e1",
+      "local": "raw/chunk_21_granular/logs.jsonl.txt",
+      "local_sha256": "d49b8cf34a197338c5edbe2621267bfc49c99cff4fbc91c210873a6b79335e1a",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_22_rope/.hydra/config.yaml",
+      "git_blob": "b213c9d427112057840071278b483cd16e26af36",
+      "source_sha256": "45ff41864f0926735f3efa685d7e49399f0fea05c869fce59746f4ea79cef57b",
+      "local": "raw/chunk_22_rope/config.yaml",
+      "local_sha256": "45ff41864f0926735f3efa685d7e49399f0fea05c869fce59746f4ea79cef57b",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_22_rope/continual_episodes.jsonl.gz",
+      "git_blob": "bafaac86a45cf06e1ec8cc0ed998d7b8908933af",
+      "source_sha256": "b0e869f3d013231d81d9b8e542c628dd2922f6df909a340798454a097b00e67f",
+      "local": "raw/chunk_22_rope/episodes.jsonl.txt",
+      "local_sha256": "8af3b360f091e2f668ce5daf12fa4e613c405c2524e125cd4778fae5a36076e9",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_22_rope/logs.json.gz",
+      "git_blob": "9013a7ad6f0a98fc7580bc367a3e8b39bb436491",
+      "source_sha256": "597348083dd2161677c3aca27074ca83bed6b90d424f5f14b531c463a533138b",
+      "local": "raw/chunk_22_rope/logs.jsonl.txt",
+      "local_sha256": "2cb1401bb9ff7bb0c16cda528686cdcd314861ae843df0b53b8017c9567996c6",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_23_granular/.hydra/config.yaml",
+      "git_blob": "7893213455e95829a8eff4622b0119ac1b791949",
+      "source_sha256": "3027cfeacbd34ffb64e8207e0af2714501f877fc260dd1b42503649b91bd5735",
+      "local": "raw/chunk_23_granular/config.yaml",
+      "local_sha256": "3027cfeacbd34ffb64e8207e0af2714501f877fc260dd1b42503649b91bd5735",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_23_granular/continual_episodes.jsonl.gz",
+      "git_blob": "f4cc7efbd591988ecc1a0f8df885d2064f04b3df",
+      "source_sha256": "c336c221c70b6b4a924ce469f88f905a4ba89b36a8d5baae8fe6c01d9bae738e",
+      "local": "raw/chunk_23_granular/episodes.jsonl.txt",
+      "local_sha256": "1013e51b2ee0fc902f3e9e6f9bf6e42d14725cdacfb8cb12d8d4ba582d158154",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_23_granular/logs.json.gz",
+      "git_blob": "d600005d311c87128e31454d2a5bf8dd6304b241",
+      "source_sha256": "535dcddbe0e381ae898c35388d4f9ead2ec7c1c05c7301c6644a1f25e7809065",
+      "local": "raw/chunk_23_granular/logs.jsonl.txt",
+      "local_sha256": "f7e3b99e4dcab96b2767a66879cce6a0047b217ac4386ca6ee1b66494e74ae64",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_24_rope/.hydra/config.yaml",
+      "git_blob": "0f414f1b7f67bfcfd00af1affe6462fef563735b",
+      "source_sha256": "77a631d75ed3b89111997748b309dedf793d02fe1ab01f0e49ad82aed44775e1",
+      "local": "raw/chunk_24_rope/config.yaml",
+      "local_sha256": "77a631d75ed3b89111997748b309dedf793d02fe1ab01f0e49ad82aed44775e1",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_24_rope/continual_episodes.jsonl.gz",
+      "git_blob": "6c73bb79e9c9be0e379436b813a9914e1719f421",
+      "source_sha256": "177dcc37f7fb6705143ac2a852a8999db0cf32bfacb1afcd40fb991e84745d68",
+      "local": "raw/chunk_24_rope/episodes.jsonl.txt",
+      "local_sha256": "f7115aacb63dffe41292154320bd892b0c4aacf20f5d8c9955c37f8f6977e0c1",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_24_rope/logs.json.gz",
+      "git_blob": "7d9f9ac075beb48c2343b8cfef96550a09f5ed53",
+      "source_sha256": "3cd9aca691c44ba4b686276c2799aa08285560b6b066a6ae6f367ce2f0c38b03",
+      "local": "raw/chunk_24_rope/logs.jsonl.txt",
+      "local_sha256": "3f7b3caeb150e2002e5bc450216e71f7417cf97ef63299aae97a5a21550e282c",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_25_granular/.hydra/config.yaml",
+      "git_blob": "3b80a641f8f8daf03f07f25068275568a3b25f7c",
+      "source_sha256": "ad12134b4a520cd1abf40236c77a7054650a0265d1344e987e7ad6678a0b7aaf",
+      "local": "raw/chunk_25_granular/config.yaml",
+      "local_sha256": "ad12134b4a520cd1abf40236c77a7054650a0265d1344e987e7ad6678a0b7aaf",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_25_granular/continual_episodes.jsonl.gz",
+      "git_blob": "5293444dc4e0faecd238f54ffcc53f16ffdf5d1f",
+      "source_sha256": "f84af8e9bbe027c648c6c68882c55867f98688b45e8abf1022b2d945a2ff5ea3",
+      "local": "raw/chunk_25_granular/episodes.jsonl.txt",
+      "local_sha256": "4c23d348d4586a4ab073977406327abd1268e62626eb0a2b8bc40ef42ab5c545",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_25_granular/logs.json.gz",
+      "git_blob": "95c2322fdadbe23dae628e1ab782974a679991c3",
+      "source_sha256": "a9b02f96063100ef06f36a55144ddc3d5a2b061f1cb71ce3d3ca18e236f6102e",
+      "local": "raw/chunk_25_granular/logs.jsonl.txt",
+      "local_sha256": "93112ff8acfaa9afac3a7ae37217d8b00f5fec0e70071e7f956ed2f8e72fcbe3",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_26_rope/.hydra/config.yaml",
+      "git_blob": "9a551df3212f8494ee509a061faaefb98274ff6d",
+      "source_sha256": "3913da6f7819f489e093ee4e7ccc33b23f80b7efcd564d94cc19f52a88b97fe2",
+      "local": "raw/chunk_26_rope/config.yaml",
+      "local_sha256": "3913da6f7819f489e093ee4e7ccc33b23f80b7efcd564d94cc19f52a88b97fe2",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_26_rope/continual_episodes.jsonl.gz",
+      "git_blob": "e1a81834c950736d7e63f0cd6a9c3fe582fc5138",
+      "source_sha256": "56863b348c60d8f1fca84679aefb65e1c3aefc7c177e3c75eefda97fdb712f0b",
+      "local": "raw/chunk_26_rope/episodes.jsonl.txt",
+      "local_sha256": "a9a1dfb219080670eeb9cf3195cfef028b140f858cf350f78e691b771064ad93",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_26_rope/logs.json.gz",
+      "git_blob": "ffb34a0b95132cb4da3aed301843dd615cb18a6e",
+      "source_sha256": "23d1a18b45dc6ad0735193886c919a6656b4ec22775b751d7f85d2964422595b",
+      "local": "raw/chunk_26_rope/logs.jsonl.txt",
+      "local_sha256": "5ddc83556e057a3b4cf84d0e68650cbebf705328fe20cb5cc1a9b00a1fa8a149",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_27_granular/.hydra/config.yaml",
+      "git_blob": "add431bd7d1095c2e5d47f0528043de19493b51b",
+      "source_sha256": "3ea632c5a6a155c98352ad858e3e8ad9836a59a13cb210fc09afd6e54bde05b1",
+      "local": "raw/chunk_27_granular/config.yaml",
+      "local_sha256": "3ea632c5a6a155c98352ad858e3e8ad9836a59a13cb210fc09afd6e54bde05b1",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_27_granular/continual_episodes.jsonl.gz",
+      "git_blob": "e80678e3196614711692d71a1b7bf7f50bb7d947",
+      "source_sha256": "2dae5a4a553fc8dd27f27c80089476f8185ff5c734843919876c63b44127bd4d",
+      "local": "raw/chunk_27_granular/episodes.jsonl.txt",
+      "local_sha256": "f4b34256ba432ac09a8e2129b46dd7b72d18ca51591ecf5d1b903ef676e30296",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_27_granular/logs.json.gz",
+      "git_blob": "9d4addeed63c4410b0a23cfd4d841c9b808532e9",
+      "source_sha256": "4f888adab9d0820032f9eccd6a60c5b0b549fa4673161699bba4f33be967cf77",
+      "local": "raw/chunk_27_granular/logs.jsonl.txt",
+      "local_sha256": "bc5342373a63843b317b7782ad57c0f31ca3c05680094c04ff8131aad48c1198",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_28_rope/.hydra/config.yaml",
+      "git_blob": "ce69340e2d5931df13806232e1dc27637587b8b5",
+      "source_sha256": "66d4a27fe5ec8d5d0ea3b4df2532bac86c34251535fcbfa9f268322cdd95e387",
+      "local": "raw/chunk_28_rope/config.yaml",
+      "local_sha256": "66d4a27fe5ec8d5d0ea3b4df2532bac86c34251535fcbfa9f268322cdd95e387",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_28_rope/continual_episodes.jsonl.gz",
+      "git_blob": "81f5ba8b3a3e0537a3d02e1330d92a91aac4eb9d",
+      "source_sha256": "a9697ff280b5dbf6459257c5a59a18d9ae0d5eca21b13d71ec9173c6c2a70189",
+      "local": "raw/chunk_28_rope/episodes.jsonl.txt",
+      "local_sha256": "f51997238e40cd5476455786d356a6a140e0635b87612592acb999560a2f5a12",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_28_rope/logs.json.gz",
+      "git_blob": "e1688afbe70cbccd4871560c2eaffeaeee1d3645",
+      "source_sha256": "4db0cf2a23690699cc3d64bd5d5d6d33bbf73538cc7c6005919916c03bf09ca1",
+      "local": "raw/chunk_28_rope/logs.jsonl.txt",
+      "local_sha256": "99994f3c15ee7dff2f2e3851c7d7ef9f0cccd9a5787eee6f43a927eaf2b92ff3",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_29_granular/.hydra/config.yaml",
+      "git_blob": "52f754a3ee241bb3dbc3a8ddffe6f118b15aa920",
+      "source_sha256": "4d763e98c9f539d63b60208e25bf78fdb5117280ff2e73a51d45e8b3c55aa2d1",
+      "local": "raw/chunk_29_granular/config.yaml",
+      "local_sha256": "4d763e98c9f539d63b60208e25bf78fdb5117280ff2e73a51d45e8b3c55aa2d1",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_29_granular/continual_episodes.jsonl.gz",
+      "git_blob": "6ac096bceb55da1a95a8e58b46ffb5ca73fc8728",
+      "source_sha256": "af245e9041548bec4e9634f7cc27c1474e9d1b6d0db867dd84d6a6804568c406",
+      "local": "raw/chunk_29_granular/episodes.jsonl.txt",
+      "local_sha256": "ad7155bf3779ae8fcfb7b759462938f7ac2cb5d1ff90bee65e0c2150c641e851",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/completed_runs/CL-JEPA-cudagraph/rope_granular_lr2e4_mixed_20261103/free_abs/chunk_29_granular/logs.json.gz",
+      "git_blob": "03258d3b326f9d5778ed72440f217aa3acd8459a",
+      "source_sha256": "6606a72fe8d0a9cee9b1a6d62253b4da0bd8740605381186be8da9ff10a772a8",
+      "local": "raw/chunk_29_granular/logs.jsonl.txt",
+      "local_sha256": "f084ee4cc4c4b33d06cd994f8edd32a86112a1088736e380e24acdd95a83e7fb",
+      "gzip_decoded": true
+    },
+    {
+      "source": "research_snapshots/2026-11-07/experiment_plans/rope_granular_lr2e4_mixed_20261103/README.md",
+      "git_blob": "4e6f5e62655d55117ea35c4b36150e5a38d43e5b",
+      "source_sha256": "3b973fff866488d793af0f6057acaf083ff752dd9505d7d5c5c752cd982db573",
+      "local": "README.md",
+      "local_sha256": "3b973fff866488d793af0f6057acaf083ff752dd9505d7d5c5c752cd982db573",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/experiment_plans/rope_granular_lr2e4_mixed_20261103/manifest.json",
+      "git_blob": "c8174eeab3b159d7561cba0f6d1d46f456d05a8f",
+      "source_sha256": "ec7c78ec0117a36403b1f0db36dfd985ec5f36d993d786ce7dcce152133f7946",
+      "local": "manifest.json",
+      "local_sha256": "ec7c78ec0117a36403b1f0db36dfd985ec5f36d993d786ce7dcce152133f7946",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/experiment_plans/rope_granular_lr2e4_mixed_20261103/round_1_review.json",
+      "git_blob": "12a6795b7430c57d97c7f464012d58c3f62db8a4",
+      "source_sha256": "233e5ac3989775c1da5e4adb5027f0fff25c0878792f9a682ae63281c82a73ed",
+      "local": "round_1_review.json",
+      "local_sha256": "233e5ac3989775c1da5e4adb5027f0fff25c0878792f9a682ae63281c82a73ed",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/experiment_plans/rope_granular_lr2e4_mixed_20261103/round_2_review.json",
+      "git_blob": "3e6bcfc9120557881837e8f614adfe6a08024d74",
+      "source_sha256": "3145ce452f71253f3381ebbb3a4f5bd4fd3c33c7a074899a46076ac999ffd79c",
+      "local": "round_2_review.json",
+      "local_sha256": "3145ce452f71253f3381ebbb3a4f5bd4fd3c33c7a074899a46076ac999ffd79c",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/experiment_plans/rope_granular_lr2e4_mixed_20261103/round_3_review.json",
+      "git_blob": "cff9a66b15442b03ae204a3e2a580fb1da5c0995",
+      "source_sha256": "180c6c57e92042e4505bda972b9c47c4ea8c948fd9386334314b63d9aae7edf0",
+      "local": "round_3_review.json",
+      "local_sha256": "180c6c57e92042e4505bda972b9c47c4ea8c948fd9386334314b63d9aae7edf0",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/experiment_plans/rope_granular_lr2e4_mixed_20261103/validation.json",
+      "git_blob": "72cf87402961ed1cd667b5059be53d35db75db36",
+      "source_sha256": "212191b7e9915561c87815d8843dfc86bb18f22bacd36b759e40bf8958514cd8",
+      "local": "validation.json",
+      "local_sha256": "212191b7e9915561c87815d8843dfc86bb18f22bacd36b759e40bf8958514cd8",
+      "gzip_decoded": false
+    },
+    {
+      "source": "planning/continual_v7.py",
+      "git_blob": "7750d021726c72ba5a4c90a1d15367f24d6c8c4b",
+      "source_sha256": "b442a618f03efb11769630efcef48d5f7d3c515d3e08f9ae227cb8bddf1a792d",
+      "local": "source_code/continual_v7.py",
+      "local_sha256": "b442a618f03efb11769630efcef48d5f7d3c515d3e08f9ae227cb8bddf1a792d",
+      "gzip_decoded": false
+    },
+    {
+      "source": "research_snapshots/2026-11-07/experiment_plans/rope_granular_lr2e4_mixed_20261103/analyze_round.py",
+      "git_blob": "94b324da43d7ae3c5b65436b9912704011c34652",
+      "source_sha256": "ef74ad196aa6e1a8bad4a1ba970c6f4734052a27100561e7bc1f3f57c0867e42",
+      "local": "source_code/analyze_round.py",
+      "local_sha256": "ef74ad196aa6e1a8bad4a1ba970c6f4734052a27100561e7bc1f3f57c0867e42",
+      "gzip_decoded": false
+    }
+  ],
+  "scope": "Prespecified three-round CEM mixed stream, slow_lr=2e-4, familiarity gate and absolute-error write check enabled. Distinct from single-domain slow-only experiments.",
+  "cd_evidence": "Per-instance final CD in archived round reports, aggregated independently and cross-checked against all 30 original chunk logs. Original console traces are not included in this snapshot.",
+  "routing_evidence": "All 300 original episode records, including all 900 within-episode routing decisions, 30 configs and cumulative memory composition.",
+  "routing_code_review": {
+    "file": "source_code/continual_v7.py",
+    "label_free_guard": "Constructor rejects oracle write mode. _route chooses the lowest latent-error candidate; _add uses tags only for diagnostic counts.",
+    "absolute_write_check": "Rejects a candidate whose absolute prediction error exceeds abs_ratio times its own replay-error median."
+  }
+}

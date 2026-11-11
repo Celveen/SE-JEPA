@@ -1,7 +1,7 @@
 {
   "pdf": "main.pdf",
-  "checked": 120,
-  "matched": 120,
+  "checked": 125,
+  "matched": 125,
   "short": [],
   "unmatched": [],
   "paragraphs": [
@@ -1502,9 +1502,9 @@
       "last_line": "slow learning rates (mean ± standard error, 50 instances).",
       "bbox": [
         58.50000762939453,
-        464.2386169433594,
+        465.2688293457031,
         265.7781066894531,
-        473.5736083984375
+        474.60382080078125
       ],
       "ending": " after each consolidation pass at two slow learning rates (mean $\\pm$ standard error, 50 instances).",
       "kind": "caption"
@@ -1514,15 +1514,15 @@
       "line": 125,
       "status": "ok",
       "page": 15,
-      "ratio": 0.7907,
-      "last_line": "erage over all episodes, counting failures as 30.",
+      "ratio": 0.6833,
+      "last_line": "ties nor a prescribed number of domains.",
       "bbox": [
         58.50000762939453,
-        582.71826171875,
-        247.07290649414062,
-        592.680908203125
+        618.583740234375,
+        221.46890258789062,
+        628.54638671875
       ],
-      "ending": "hift column in Table~\\mainref{tab:main}. Replans average over all episodes, counting failures as 30.",
+      "ending": "y for analysis; the algorithm receives neither domain identities nor a prescribed number of domains.",
       "kind": "prose"
     },
     {
@@ -1530,15 +1530,15 @@
       "line": 127,
       "status": "ok",
       "page": 15,
-      "ratio": 0.6611,
-      "last_line": "gibility test for slow-predictor maturity.",
+      "ratio": 0.7072,
+      "last_line": "use separate bases without fast adaptation.",
       "bbox": [
         317.25,
-        355.7000427246094,
-        474.9288635253906,
-        365.6626892089844
+        379.6103820800781,
+        485.92742919921875,
+        389.5730285644531
       ],
-      "ending": "ect-write restriction, or both, while keeping the same eligibility test for slow-predictor maturity.",
+      "ending": "se and retain fast adaptation; the single-domain results use separate bases without fast adaptation.",
       "kind": "prose"
     },
     {
@@ -1546,189 +1546,269 @@
       "line": 131,
       "status": "ok",
       "page": 17,
+      "ratio": 1.0,
+      "last_line": "terial. Correct retrievals count material-matched slow-predictor selections at MPC replans; selections of the frozen reference are excluded.",
+      "bbox": [
+        58.50001525878906,
+        94.7845230102539,
+        553.5067138671875,
+        103.75090026855469
+      ],
+      "ending": "l-matched slow-predictor selections at MPC replans; selections of the frozen reference are excluded.",
+      "kind": "caption"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 146,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.6707,
+      "last_line": "mains available throughout deployment.",
+      "bbox": [
+        317.25,
+        511.1243896484375,
+        477.210205078125,
+        521.0870361328125
+      ],
+      "ending": " and three are material-matched, while the frozen reference remains available throughout deployment.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 148,
+      "status": "ok",
+      "page": 15,
+      "ratio": 0.6541,
+      "last_line": "of improvement over a frozen baseline.",
+      "bbox": [
+        317.25,
+        630.683349609375,
+        473.2450256347656,
+        640.64599609375
+      ],
+      "ending": "ntain different targets, their trend is not a paired estimate of improvement over a frozen baseline.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 153,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.7907,
+      "last_line": "erage over all episodes, counting failures as 30.",
+      "bbox": [
+        58.50000762939453,
+        630.6669311523438,
+        247.07290649414062,
+        640.6295776367188
+      ],
+      "ending": "hift column in Table~\\mainref{tab:main}. Replans average over all episodes, counting failures as 30.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 155,
+      "status": "ok",
+      "page": 16,
+      "ratio": 0.6611,
+      "last_line": "gibility test for slow-predictor maturity.",
+      "bbox": [
+        317.25,
+        370.2943420410156,
+        474.9288635253906,
+        380.2569885253906
+      ],
+      "ending": "ect-write restriction, or both, while keeping the same eligibility test for slow-predictor maturity.",
+      "kind": "prose"
+    },
+    {
+      "file": "D_additional_results.tex",
+      "line": 159,
+      "status": "ok",
+      "page": 17,
       "ratio": 0.5892,
       "last_line": "evaluation is reused across columns and is not counted as three independent runs.",
       "bbox": [
         58.500030517578125,
-        94.7845230102539,
+        220.2902374267578,
         350.14935302734375,
-        103.75090026855469
+        229.25662231445312
       ],
       "ending": "shT episodic-reset evaluation is reused across columns and is not counted as three independent runs.",
       "kind": "caption"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 148,
+      "line": 176,
       "status": "ok",
-      "page": 17,
+      "page": 18,
       "ratio": 0.8101,
       "last_line": "combines 3,150 evaluations of repeated test targets, not 3,150 distinct physical scenes. Replans include failures.",
       "bbox": [
         58.50001525878906,
-        345.8448791503906,
+        83.82561492919922,
         459.4942932128906,
-        354.8112487792969
+        92.7919921875
       ],
       "ending": " evaluations of repeated test targets, not 3,150 distinct physical scenes. Replans include failures.",
       "kind": "caption"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 160,
+      "line": 188,
       "status": "ok",
-      "page": 15,
+      "page": 16,
       "ratio": 0.486,
       "last_line": "tively, with failures included.",
       "bbox": [
         317.25,
-        475.5982360839844,
+        493.2978515625,
         433.1553649902344,
-        485.5608825683594
+        503.260498046875
       ],
       "ending": "s it to 72.32\\%. Mean MPC replans are 13.21, 13.09, and 13.88, respectively, with failures included.",
       "kind": "prose"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 162,
+      "line": 190,
       "status": "ok",
-      "page": 15,
+      "page": 16,
       "ratio": 0.4446,
       "last_line": "these held-out evaluations.",
       "bbox": [
         317.25,
-        583.541259765625,
+        604.3462524414062,
         423.28240966796875,
-        593.50390625
+        614.3088989257812
       ],
       "ending": "arning-curve measurements are online outcomes and are kept separate from these held-out evaluations.",
       "kind": "prose"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 166,
+      "line": 194,
       "status": "ok",
-      "page": 17,
+      "page": 18,
       "ratio": 0.402,
       "last_line": "tions with no reported test.",
       "bbox": [
         58.50000762939453,
-        485.4721984863281,
+        408.5242614746094,
         154.3864288330078,
-        494.4385681152344
+        417.4906311035156
       ],
       "ending": ",050 held-out evaluations across seven shapes. Dashes indicate configurations with no reported test.",
       "kind": "caption"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 178,
+      "line": 206,
       "status": "ok",
-      "page": 16,
+      "page": 17,
       "ratio": 0.7043,
       "last_line": "mean success by −1.05 points with CEM.",
       "bbox": [
         58.50000762939453,
-        580.3762817382812,
+        493.39794921875,
         226.47508239746094,
-        590.7484741210938
+        503.7701721191406
       ],
       "ending": " Doubling the visual slow learning rate changes three-state mean success by $-1.05$ points with CEM.",
       "kind": "prose"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 181,
+      "line": 209,
       "status": "ok",
-      "page": 16,
+      "page": 17,
       "ratio": 0.8399,
       "last_line": "rates closer to those of independent episodic reset.",
       "bbox": [
-        317.25,
-        334.4288330078125,
-        517.5687866210938,
-        344.3914794921875
+        58.50000762939453,
+        640.466552734375,
+        258.8188781738281,
+        650.42919921875
       ],
       "ending": "cNemar $p=0.029$). Smaller weights give success rates closer to those of independent episodic reset.",
       "kind": "prose"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 186,
+      "line": 214,
       "status": "ok",
-      "page": 16,
+      "page": 17,
       "ratio": 0.6533,
       "last_line": "with the sampling-based CEM planner.",
       "bbox": [
         316.891357421875,
-        441.2255554199219,
+        505.7626953125,
         472.6970520019531,
-        451.1882019042969
+        515.725341796875
       ],
       "ending": "und to 78.6\\% in the seventh with GD, and from 72.3\\% to 78.3\\% with the sampling-based CEM planner.",
       "kind": "prose"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 188,
+      "line": 216,
       "status": "ok",
-      "page": 16,
+      "page": 17,
       "ratio": 0.7668,
       "last_line": "episode-speciﬁc parameter updates (Sec. 3.1).",
       "bbox": [
         317.25,
-        536.8668823242188,
+        602.4835815429688,
         500.12249755859375,
-        546.8295288085938
+        612.4462280273438
       ],
       "ending": "ion data rather than accumulating episode-specific parameter updates (Sec.~\\mainref{sec:diagnosis}).",
       "kind": "prose"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 193,
+      "line": 221,
       "status": "ok",
       "page": 18,
       "ratio": 0.9478,
       "last_line": "Figure 9. Cosine similarity between consecutive fast-update ﬁngerprints in the seven-round shape stream (2,449 pairs per planner).",
       "bbox": [
         71.43309783935547,
-        235.02395629882812,
+        344.7633972167969,
         540.5718994140625,
-        243.99034118652344
+        353.7297668457031
       ],
       "ending": "en consecutive fast-update fingerprints in the seven-round shape stream (2{,}449 pairs per planner).",
       "kind": "caption"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 200,
+      "line": 228,
       "status": "ok",
-      "page": 16,
+      "page": 17,
       "ratio": 0.8956,
       "last_line": "predictor; the others adapt from the pretrained model.",
       "bbox": [
         317.25,
-        631.7084350585938,
+        703.439453125,
         530.84912109375,
-        641.6710815429688
+        713.402099609375
       ],
       "ending": "About one quarter of episodes retrieve a slow predictor; the others adapt from the pretrained model.",
       "kind": "prose"
     },
     {
       "file": "D_additional_results.tex",
-      "line": 202,
+      "line": 230,
       "status": "ok",
-      "page": 16,
+      "page": 18,
       "ratio": 0.6647,
       "last_line": "ring changes from replayed trajectories.",
       "bbox": [
-        317.25,
-        703.439453125,
-        475.7755432128906,
-        713.402099609375
+        58.50000762939453,
+        578.4115600585938,
+        217.0255584716797,
+        588.3742065429688
       ],
       "ending": "and 84.8\\% for AdaJEPA. Separate slow predictors learn recurring changes from replayed trajectories.",
       "kind": "prose"
@@ -1737,14 +1817,14 @@
       "file": "E_qualitative.tex",
       "line": 5,
       "status": "ok",
-      "page": 17,
+      "page": 18,
       "ratio": 0.8753,
       "last_line": "reproduces all 31 archived Frozen frames and states.",
       "bbox": [
         58.50000762939453,
-        679.1121826171875,
+        690.5715942382812,
         267.2572021484375,
-        689.0748291015625
+        700.5342407226562
       ],
       "ending": "ys recorded actions; the same procedure exactly reproduces all 31 archived Frozen frames and states.",
       "kind": "prose"
@@ -1753,14 +1833,14 @@
       "file": "E_qualitative.tex",
       "line": 7,
       "status": "ok",
-      "page": 17,
+      "page": 18,
       "ratio": 0.5826,
       "last_line": "points and learning histories differ.",
       "bbox": [
         317.25,
-        561.7274169921875,
+        496.734619140625,
         456.1990051269531,
-        571.6900634765625
+        506.697265625
       ],
       "ending": "s. This is a comparison of complete systems whose initial checkpoints and learning histories differ.",
       "kind": "prose"
@@ -1769,14 +1849,14 @@
       "file": "E_qualitative.tex",
       "line": 9,
       "status": "ok",
-      "page": 17,
+      "page": 18,
       "ratio": 0.8706,
       "last_line": "aggregate success uses the complete evaluation sets.",
       "bbox": [
         317.25,
-        626.6058349609375,
+        557.6661376953125,
         524.8912963867188,
-        636.5684814453125
+        567.6287841796875
       ],
       "ending": " The examples were selected for these outcomes; aggregate success uses the complete evaluation sets.",
       "kind": "prose"
@@ -1789,10 +1869,10 @@
       "ratio": 0.7761,
       "last_line": "nal state once the episode has reached its goal.",
       "bbox": [
-        58.50000762939453,
-        279.398681640625,
-        243.595947265625,
-        289.361328125
+        317.25,
+        654.463134765625,
+        502.3458557128906,
+        664.42578125
       ],
       "ending": "rom the recorded actions. Gray frames hold the terminal state once the episode has reached its goal.",
       "kind": "prose"
@@ -1801,14 +1881,14 @@
       "file": "E_qualitative.tex",
       "line": 13,
       "status": "ok",
-      "page": 18,
+      "page": 19,
       "ratio": 0.5395,
       "last_line": "episode-local adaptation misses.",
       "bbox": [
         58.50000762939453,
-        363.74395751953125,
+        98.31243896484375,
         187.16751098632812,
-        373.70660400390625
+        108.27507781982422
       ],
       "ending": "ts of memory: reaching a shared goal sooner and solving a goal that episode-local adaptation misses.",
       "kind": "prose"
@@ -1817,7 +1897,7 @@
       "file": "E_qualitative.tex",
       "line": 18,
       "status": "ok",
-      "page": 19,
+      "page": 20,
       "ratio": 0.4774,
       "last_line": "notes specify frame provenance and the prediction-loss deﬁnition.",
       "bbox": [
@@ -1833,7 +1913,7 @@
       "file": "E_qualitative.tex",
       "line": 25,
       "status": "ok",
-      "page": 19,
+      "page": 20,
       "ratio": 0.4033,
       "last_line": "reaching the goal, as the AdaJEPA trajectory illustrates.",
       "bbox": [
@@ -1849,14 +1929,14 @@
       "file": "E_qualitative.tex",
       "line": 29,
       "status": "ok",
-      "page": 18,
+      "page": 19,
       "ratio": 0.7428,
       "last_line": "SE-JEPA achieves the desired conﬁguration.",
       "bbox": [
         58.50000762939453,
-        483.9547119140625,
+        217.8641357421875,
         235.6557159423828,
-        493.9173583984375
+        227.82676696777344
       ],
       "ending": "the red-agent episode but still misses the target, whereas \\ours achieves the desired configuration.",
       "kind": "prose"
@@ -1865,14 +1945,14 @@
       "file": "E_qualitative.tex",
       "line": 32,
       "status": "ok",
-      "page": 18,
+      "page": 19,
       "ratio": 0.9972,
       "last_line": "ues and success markers are retained from the original logs.",
       "bbox": [
         58.50000762939453,
-        643.0045166015625,
+        374.2775573730469,
         296.338134765625,
-        652.9671630859375
+        384.2402038574219
       ],
       "ending": "were saved during planning. Final CD values and success markers are retained from the original logs.",
       "kind": "prose"
@@ -1881,14 +1961,14 @@
       "file": "E_qualitative.tex",
       "line": 34,
       "status": "ok",
-      "page": 18,
+      "page": 19,
       "ratio": 0.4892,
       "last_line": "with fast adaptation disabled.",
       "bbox": [
-        316.891357421875,
-        279.398681640625,
-        433.5638122558594,
-        289.361328125
+        58.141361236572266,
+        457.9637451171875,
+        174.81385803222656,
+        467.9263916015625
       ],
       "ending": "eometry of the final configuration under a common action budget, even with fast adaptation disabled.",
       "kind": "prose"
@@ -1897,7 +1977,7 @@
       "file": "E_qualitative.tex",
       "line": 41,
       "status": "ok",
-      "page": 20,
+      "page": 21,
       "ratio": 0.678,
       "last_line": "success. SE-JEPA reaches both goals with its consolidated slow predictor; both baselines fail.",
       "bbox": [
@@ -1913,14 +1993,14 @@
       "file": "E_qualitative.tex",
       "line": 47,
       "status": "ok",
-      "page": 18,
+      "page": 19,
       "ratio": 0.8842,
       "last_line": "learned states, and the supporting evaluation records.",
       "bbox": [
-        317.25,
-        364.0811462402344,
-        528.1392211914062,
-        374.0437927246094
+        58.50000762939453,
+        542.6461791992188,
+        269.38922119140625,
+        552.6088256835938
       ],
       "ending": "he release will include code, configurations, learned states, and the supporting evaluation records.",
       "kind": "prose"

@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-10T22:28:30-08:00",
+  "checked_at": "2026-11-10T22:58:22-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
   "main": {
-    "pages": 20,
+    "pages": 21,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "f3f1c1fbeace5ef7c23a41e5dfcf4ac1b2853750c5a21d77d50e3e779da4910e",
+    "pdf_sha256": "d592c8a00695fd0c6ea5034992477bdaa3da357dda0b15f522f632ca74799e51",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -27,7 +27,7 @@
     },
     "conclusion_page": 8,
     "all_main_floats_precede_conclusion": true,
-    "familiarity_ablation_page": 17,
+    "familiarity_ablation_page": 18,
     "component_ablation_page": 8,
     "inheritance_ablation_page": 7,
     "last_page_trailing_blank_lines": 2.43,
@@ -38,11 +38,11 @@
     "last_page_blank_measurement": "Right-column final body ink relative to full left-column body ink, divided by the unchanged 12pt baseline."
   },
   "supplement": {
-    "pages": 11,
+    "pages": 12,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "a019ef6a0a015b4ff2df541c51f8a85ec96701fd225ae4271289fa25a56f2eec"
+    "pdf_sha256": "8043fe9dfbc656b858f6dbf7104657595a7e74bd00b825a8e14c5059fefa1e71"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -198,20 +198,20 @@
     "figures": {
       "fig:full_shape": {
         "number": 10,
-        "page": 19
+        "page": 20
       },
       "fig:full_visual": {
         "number": 11,
-        "page": 19
+        "page": 20
       },
       "fig:deform_reference": {
         "number": 12,
-        "page": 20
+        "page": 21
       }
     },
     "rendered_pages_checked": [
-      19,
-      20
+      20,
+      21
     ],
     "removed_final_figure_number": 13
   },
@@ -245,7 +245,7 @@
       "placement": "One row below the three learning panels"
     }
   },
-  "clean_upload_files": 48,
+  "clean_upload_files": 49,
   "pushobj_cem_main": {
     "source": "data/pushobj_cem_online/audit.json",
     "protocol": "Fifth-round online performance",
@@ -306,12 +306,12 @@
     ],
     "appendix_tables": {
       "tab:gd_components_full": {
-        "number": "12",
+        "number": "13",
         "page": 17
       },
       "tab:gd_inheritance_chains": {
-        "number": "13",
-        "page": 17
+        "number": "14",
+        "page": 18
       }
     },
     "official_benchmark_and_abstract_unchanged": false,
@@ -321,14 +321,15 @@
   },
   "paragraph_endings": {
     "audit": "data/paragraph_layout_audit.json",
-    "prose_and_captions": 120,
+    "prose_and_captions": 125,
     "bibliography_entries": 42,
     "minimum_required_fraction": 0.4,
     "minimum_prose_caption_fraction": 0.402,
     "minimum_reference_fraction": 0.4663,
     "unmatched": 0,
     "short": 0,
-    "standalone_supplement_references_checked": 2
+    "standalone_supplement_references_checked": 2,
+    "standalone_supplement_prose_checked": 70
   },
   "figure_alignment_revision": {
     "figure1_upper_pixel_identical_at_3x": true,
@@ -432,5 +433,34 @@
     "abstract_last_line_fraction": 0.4281,
     "pages_5_to_20_body_pixels_unchanged": true,
     "review_line_numbers_reflowed": true
+  },
+  "mixed_deformable": {
+    "source": "data/deform_mixed_20261110/sources.json",
+    "audit": "data/deform_mixed_20261110/audit.json",
+    "section": "D.6",
+    "section_page": 15,
+    "table_number": 12,
+    "table_page": 17,
+    "chains": 1,
+    "planner": "CEM",
+    "rounds": 3,
+    "episodes": 300,
+    "source_files_verified": 98,
+    "raw_routing_decisions": 900,
+    "stored_member_purity_percent": 100,
+    "final_stored_members": {
+      "rope": 80,
+      "granular": 150
+    },
+    "correct_slow_retrievals": 653,
+    "total_slow_retrievals": 660,
+    "correct_retrieval_percent": 98.93939393939394,
+    "rounds_2_3_correct": 457,
+    "rounds_2_3_total": 457,
+    "main_and_bibliography_first_ten_pages_pixel_identical": true,
+    "main_8_page_layout_unchanged": true,
+    "mixed_protocol_distinguished_from_single_domain": true,
+    "low_granular_success_reported": true,
+    "all_paragraph_endings_pass": true
   }
 }

@@ -153,3 +153,19 @@ The author-approved concise abstract now states “we propose SE-JEPA” explici
 It preserves all audited task-specific values, the fixed original pretrained
 weights and separate slow predictors, and the teacher’s code-availability sentence.
 Only the abstract changed; the main text remains eight pages.
+
+## Mixed deformable domains (2026-11-10)
+Appendix D.6 and Table 12 add the archived three-round CEM rope/granular
+mixed stream: 300 goal segments from disjoint source-trajectory groups across
+rounds, one shared rope-trained base, and label-free persistent memory.
+All 300 episode records, 900 routing decisions, 30 run configurations and
+30 chunk-level CD logs were checked against the per-instance reports.
+Stored-member purity is 100% (80 rope / 150 granular members); slow-predictor
+retrieval is material-matched in 653/660 decisions (98.9%), including 457/457
+in rounds two and three. Granular success remains low and is reported alongside
+CD. This is a single-chain diagnostic with the absolute-error write check,
+not a replacement for the task-specific slow-only benchmark or a paired Frozen
+comparison. Evidence and a reproducible audit are in
+`data/deform_mixed_20261110/` and `tools/audit_deform_mixed.py`.
+The main eight pages and references are unchanged; the combined PDF now has
+21 pages, and the standalone supplement has 12. The clean upload has 49 files.

@@ -1,0 +1,132 @@
+{
+  "source_commit": "d4f6cb491ac19d0224485b056fe5b24aa8e50f94",
+  "source_files_verified": 98,
+  "chunks": 30,
+  "episodes": 300,
+  "unique_goal_segments": 300,
+  "trajectory_groups_disjoint_between_rounds": true,
+  "state_links_verified": 29,
+  "empty_initial_memory_verified": true,
+  "rounds": [
+    {
+      "round": 1,
+      "performance": {
+        "rope": {
+          "n": 50,
+          "final_cd": 0.5978655245155096,
+          "standard_error": 0.07809431184782378,
+          "successes": 30,
+          "success_percent": 60
+        },
+        "granular": {
+          "n": 50,
+          "final_cd": 0.47128746449947356,
+          "standard_error": 0.027038925336990448,
+          "successes": 1,
+          "success_percent": 2
+        }
+      },
+      "members": {
+        "rope": 27,
+        "granular": 50
+      },
+      "stored_member_purity": 1.0,
+      "routing_decisions": {
+        "frozen": 97,
+        "incorrect": 7,
+        "correct": 196
+      },
+      "final_episode_selection": {
+        "frozen": 31,
+        "incorrect": 3,
+        "correct": 66
+      }
+    },
+    {
+      "round": 2,
+      "performance": {
+        "rope": {
+          "n": 50,
+          "final_cd": 0.4518561094999313,
+          "standard_error": 0.053633173586684256,
+          "successes": 37,
+          "success_percent": 74
+        },
+        "granular": {
+          "n": 50,
+          "final_cd": 0.3686872246861458,
+          "standard_error": 0.01721064816373282,
+          "successes": 4,
+          "success_percent": 8
+        }
+      },
+      "members": {
+        "rope": 50,
+        "granular": 100
+      },
+      "stored_member_purity": 1.0,
+      "routing_decisions": {
+        "frozen": 81,
+        "correct": 219
+      },
+      "final_episode_selection": {
+        "frozen": 27,
+        "correct": 73
+      }
+    },
+    {
+      "round": 3,
+      "performance": {
+        "rope": {
+          "n": 50,
+          "final_cd": 0.4116818945854902,
+          "standard_error": 0.07435752528677024,
+          "successes": 41,
+          "success_percent": 82
+        },
+        "granular": {
+          "n": 50,
+          "final_cd": 0.3550882738828659,
+          "standard_error": 0.01437711297734195,
+          "successes": 2,
+          "success_percent": 4
+        }
+      },
+      "members": {
+        "rope": 80,
+        "granular": 150
+      },
+      "stored_member_purity": 1.0,
+      "routing_decisions": {
+        "frozen": 62,
+        "correct": 238
+      },
+      "final_episode_selection": {
+        "frozen": 20,
+        "correct": 80
+      }
+    }
+  ],
+  "routing_decisions": {
+    "frozen": 240,
+    "incorrect": 7,
+    "correct": 653
+  },
+  "slow_predictor_selection_accuracy_percent": 98.93939393939394,
+  "rounds_2_3_correct_slow_selections": 457,
+  "rounds_2_3_total_slow_selections": 457,
+  "final_members": {
+    "rope": 80,
+    "granular": 150
+  },
+  "familiar_not_stored": 69,
+  "rejected_not_stored": 1,
+  "tags_used_only_for_posthoc_statistics": true,
+  "limits": [
+    "One CEM chain with an absolute-error write check, not the single-domain slow-only configuration.",
+    "CD values originate in the archived per-instance reports; their means match every original chunk log.",
+    "Simulator success flags are not used; success is CD < 0.5 for rope and CD < 0.2 for granular.",
+    "Purity describes stored members; retrieval accuracy excludes frozen-reference selections.",
+    "Different targets across rounds; no paired Frozen or cross-material positive-transfer comparison."
+  ]
+}
