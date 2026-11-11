@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T21:07:43-08:00",
+  "checked_at": "2026-11-10T22:10:27-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "f68a45317b99150fdfa89bc5d7ee4dd39d13bdf4ffe898cdd6697ed29896bd9c",
+    "pdf_sha256": "610efce176bd6c045d4f79ad0b3bbc255fa887b06b4ce93c15e3a612fa1ad2c6",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -373,7 +373,7 @@
     "explicitly_author_requested": true,
     "teacher_changes_preserved": true,
     "numerical_claims_unchanged": true,
-    "current_abstract_sha256": "74921bddaaa15230b0bbcb8349a9c3443e5554b228f822cb12372741737e3cbc"
+    "current_abstract_sha256": "899d61482ae9dea64f7a4c76fb1044bfcf82d8a4f545c26948b861c328d36f0f"
   },
   "compute_environment_revision": {
     "date": "2026-11-10",
@@ -400,5 +400,15 @@
     "all_other_19_pages_pixel_identical_to_prior_release": true,
     "main_cross_references_unchanged": true,
     "supplement_rebuild_unnecessary": "No supplement inputs or main.aux changed."
+  },
+  "abstract_task_results_revision": {
+    "audit": "data/abstract_results_audit.json",
+    "only_abstract_result_sentences_changed": true,
+    "all_evidence_source_hashes_verified": true,
+    "unmodified_main_reference_labels": true,
+    "main_pages": 8,
+    "remaining_pages": 12,
+    "main_formatting_unchanged": true,
+    "appendix_inputs_unchanged": true
   }
 }

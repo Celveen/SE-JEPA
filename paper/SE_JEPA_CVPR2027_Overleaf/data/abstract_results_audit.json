@@ -11,15 +11,15 @@
   },
   "heldout_scope": "Paired post-learning PushObj unseen shapes and PushT six visual shifts; both GD and CEM. Not the online PushObj main-table row or the seven-condition visual All rate.",
   "reported_gain_range_pp": [
-    15,
-    19
+    15.4,
+    18.7
   ],
   "chamfer_reduction_vs_frozen_percent": {
     "rope": 48.575420360889645,
     "granular": 26.731446835473015
   },
   "cd_scope": "Fourth-pass main-table slow predictor versus pretrained DINO-WM on the matched 50-instance stream.",
-  "reported_max_cd_reduction_percent": 49,
+  "reported_max_cd_reduction_percent": 48.6,
   "fingerprint_diagnostic": {
     "gd": {
       "episodes": 2450,
@@ -56,6 +56,28 @@
     "fixed_pretrained_weights_and_separate_memory_explicit": true,
     "teacher_code_availability_sentence_preserved": true,
     "quantitative_claims_unchanged": true,
-    "current_abstract_sha256": "74921bddaaa15230b0bbcb8349a9c3443e5554b228f822cb12372741737e3cbc"
+    "current_abstract_sha256": "899d61482ae9dea64f7a4c76fb1044bfcf82d8a4f545c26948b861c328d36f0f"
+  },
+  "reported_gain_ranges_pp_by_task": {
+    "PushObj_unseen": [
+      15.4,
+      17.1
+    ],
+    "PushT_visual_shifts": [
+      15.9,
+      18.7
+    ]
+  },
+  "reported_cd_reduction_percent": {
+    "rope": 48.6,
+    "granular": 26.7
+  },
+  "task_specific_results_revision": {
+    "date": "2026-11-10",
+    "author_requested": true,
+    "wording": "SE-JEPA achieves state-of-the-art planning performance, improving held-out success over AdaJEPA by 15.4--17.1 percentage points on unseen PushObj shapes and 15.9--18.7 points on PushT visual shifts across both planners. On rope and granular manipulation, Chamfer distance drops by 48.6\\% and 26.7\\%, respectively, relative to pretrained DINO-WM. Performance improves further over repeated deployment.",
+    "underlying_results_changed": false,
+    "success_metric": "Absolute percentage-point gain over official-checkpoint AdaJEPA on paired held-out evaluations. Each range spans CEM (lower) and GD (upper).",
+    "cd_metric": "Relative reduction versus pretrained DINO-WM, from unrounded fourth-pass mean CD on the repeated 50-instance streams. Kept separate from the held-out success comparison."
   }
 }

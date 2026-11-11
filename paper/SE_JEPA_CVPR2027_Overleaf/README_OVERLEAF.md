@@ -332,3 +332,11 @@ supporting experiments. All sections were reviewed for readable professional
 prose; the supplied abstract is unchanged. Primary-paper reading notes are in
 `data/readability_review_20261110.json`. The main text has eight pages with
 2.43 trailing lines; all audited paragraph endings meet the 40% requirement.
+
+## Task-specific abstract results (2026-11-10)
+The abstract now attributes success gains separately to unseen PushObj shapes
+(15.4–17.1 percentage points) and PushT visual shifts (15.9–18.7 points), spanning
+CEM and GD. A separate sentence gives CD reductions of 48.6% on rope and 26.7%
+on granular relative to pretrained DINO-WM. These values use the same audited
+results; only the wording and reporting precision changed. The original supplied
+abstract, teacher's code-availability sentence, and all other sections are retained.

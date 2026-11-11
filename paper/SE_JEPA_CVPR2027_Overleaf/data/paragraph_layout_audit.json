@@ -10,15 +10,15 @@
       "line": 2,
       "status": "ok",
       "page": 1,
-      "ratio": 0.5483,
-      "last_line": "source code will be made public.",
+      "ratio": 0.798,
+      "last_line": "ployment. The source code will be made public.",
       "bbox": [
         58.50000762939453,
-        488.0653991699219,
-        189.2796173095703,
-        498.0280456542969
+        511.9757080078125,
+        248.8163604736328,
+        521.9383544921875
       ],
-      "ending": "retrained model, and keeps improving the longer it is deployed. The source code will be made public.",
+      "ending": "DINO-WM. Performance improves further over repeated deployment. The source code will be made public.",
       "kind": "prose"
     },
     {
@@ -46,9 +46,9 @@
       "last_line": "resulting plans can fail when executed.",
       "bbox": [
         58.50000762939453,
-        642.6515502929688,
+        666.5618896484375,
         213.05047607421875,
-        652.6141967773438
+        676.5245361328125
       ],
       "ending": "visual conditions can make these predictions inaccurate. The resulting plans can fail when executed.",
       "kind": "prose"
@@ -62,9 +62,9 @@
       "last_line": "handle these recurring conditions.",
       "bbox": [
         317.25,
-        616.9182739257812,
+        640.82861328125,
         452.2737121582031,
-        626.8809204101562
+        650.791259765625
       ],
       "ending": "again. Experience from earlier goals could instead help the agent handle these recurring conditions.",
       "kind": "prose"
@@ -78,9 +78,9 @@
       "last_line": "lating their parameter updates.",
       "bbox": [
         58.50000762939453,
-        122.22277069091797,
+        146.13311767578125,
         179.68557739257812,
-        132.18540954589844
+        156.0957489013672
       ],
       "ending": "e learning across episodes from stored trajectories instead of accumulating their parameter updates.",
       "kind": "prose"
@@ -94,9 +94,9 @@
       "last_line": "quires no labels identifying shifts or task boundaries.",
       "bbox": [
         58.50000762939453,
-        253.72962951660156,
+        279.40423583984375,
         269.359375,
-        263.6922607421875
+        289.36688232421875
       ],
       "ending": "s own replay buffer and slow predictor. It requires no labels identifying shifts or task boundaries.",
       "kind": "prose"
@@ -110,9 +110,9 @@
       "last_line": "vant to the current encounter.",
       "bbox": [
         58.25094985961914,
-        397.1916198730469,
+        424.6305236816406,
         174.49505615234375,
-        407.1542663574219
+        434.5931701660156
       ],
       "ending": "he agent can reuse past experience while checking that it remains relevant to the current encounter.",
       "kind": "prose"
@@ -126,9 +126,9 @@
       "last_line": "generalization to previously unobserved trajectories.",
       "bbox": [
         58.50000762939453,
-        564.56396484375,
+        593.7671508789062,
         266.9981994628906,
-        574.526611328125
+        603.7297973632812
       ],
       "ending": "stance by 47\\% on new instances, demonstrating generalization to previously unobserved trajectories.",
       "kind": "prose"
@@ -158,9 +158,9 @@
       "last_line": "for improving the deployed predictor.",
       "bbox": [
         58.50000762939453,
-        665.6478881835938,
+        703.439453125,
         207.95956420898438,
-        675.6105346679688
+        713.402099609375
       ],
       "ending": "age planning, where executed actions provide transition errors for improving the deployed predictor.",
       "kind": "prose"
@@ -174,9 +174,9 @@
       "last_line": "jectories to improve planning across recurring shifts.",
       "bbox": [
         317.25,
-        146.13311767578125,
+        170.04345703125,
         526.9636840820312,
-        156.0957489013672
+        180.00608825683594
       ],
       "ending": "ening,yin2026ddpwm}. \\ours uses deployment trajectories to improve planning across recurring shifts.",
       "kind": "prose"
@@ -190,9 +190,9 @@
       "last_line": "precede replay training on each trajectory.",
       "bbox": [
         317.25,
-        328.767578125,
+        352.67791748046875,
         484.8116760253906,
-        338.730224609375
+        362.64056396484375
       ],
       "ending": "han those of the pretrained reference. These comparisons precede replay training on each trajectory.",
       "kind": "prose"
@@ -206,9 +206,9 @@
       "last_line": "trained model using the episode’s ﬁrst observed transitions.",
       "bbox": [
         317.25,
-        451.6261901855469,
+        475.5365295410156,
         550.545166015625,
-        461.5888366699219
+        485.4991760253906
       ],
       "ending": " among validated predictors and the pretrained model using the episode's first observed transitions.",
       "kind": "prose"
@@ -222,9 +222,9 @@
       "last_line": "the correction also beneﬁts the next trajectory.",
       "bbox": [
         317.25,
-        595.7171630859375,
+        619.6275024414062,
         501.0108947753906,
-        605.6798095703125
+        629.5901489257812
       ],
       "ending": "adajepa}. Reusing the adapted weights assumes that the correction also benefits the next trajectory.",
       "kind": "prose"
@@ -238,9 +238,9 @@
       "last_line": "of whether the episode eventually succeeds.",
       "bbox": [
         58.50000762939453,
-        423.501708984375,
+        447.41204833984375,
         232.95584106445312,
-        433.46435546875
+        457.37469482421875
       ],
       "ending": "able as soon as the next observation arrives, regardless of whether the episode eventually succeeds.",
       "kind": "prose"
@@ -254,9 +254,9 @@
       "last_line": "few actions provide evidence for which predictor to use.",
       "bbox": [
         58.50000762939453,
-        507.8499755859375,
+        531.7603759765625,
         282.2310791015625,
-        517.8126220703125
+        541.7230224609375
       ],
       "ending": "sitions. When a new goal arrives, the first few actions provide evidence for which predictor to use.",
       "kind": "prose"
@@ -270,9 +270,9 @@
       "last_line": "slow predictor as a base for adaptation (Sec. 3.4).",
       "bbox": [
         58.50000762939453,
-        666.911865234375,
+        690.8221435546875,
         254.96157836914062,
-        676.87451171875
+        700.7847900390625
       ],
       "ending": "plans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\\ref{sec:trust}).",
       "kind": "prose"
@@ -286,9 +286,9 @@
       "last_line": "tation changed the encoder differently in the two episodes.",
       "bbox": [
         317.25,
-        560.25,
+        589.0086059570312,
         550.1366577148438,
-        570.212646484375
+        598.9712524414062
       ],
       "ending": "e coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes.",
       "kind": "prose"
@@ -302,9 +302,9 @@
       "last_line": "cannot yet predict accurately.",
       "bbox": [
         58.50000762939453,
-        86.35726928710938,
+        110.2676010131836,
         175.16253662109375,
-        96.31990814208984
+        120.23023986816406
       ],
       "ending": "de's direct memory write. Replay thus receives episodes the reference cannot yet predict accurately.",
       "kind": "prose"
@@ -318,9 +318,9 @@
       "last_line": "ing episodes, the three trajectories establish a new domain.",
       "bbox": [
         58.50000762939453,
-        247.9086456298828,
+        263.02899169921875,
         292.3331604003906,
-        257.87127685546875
+        272.99163818359375
       ],
       "ending": " direction aligns with those of two waiting episodes, the three trajectories establish a new domain.",
       "kind": "prose"
@@ -334,9 +334,9 @@
       "last_line": "the rules for maintaining each prototype.",
       "bbox": [
         58.50000762939453,
-        379.4661865234375,
+        394.5358581542969,
         220.64202880859375,
-        389.4288330078125
+        404.4985046386719
       ],
       "ending": "already predicts well. \\supref{A} gives the thresholds and the rules for maintaining each prototype.",
       "kind": "prose"
@@ -350,9 +350,9 @@
       "last_line": "the reference (Appendix A).",
       "bbox": [
         58.50000762939453,
-        638.6353759765625,
+        643.0556640625,
         170.80886840820312,
-        648.5980224609375
+        653.018310546875
       ],
       "ending": "igible for retrieval once this record shows a sustained improvement over the reference (\\supref{A}).",
       "kind": "prose"
