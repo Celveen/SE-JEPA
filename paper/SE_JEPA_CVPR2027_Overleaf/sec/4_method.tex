@@ -7,7 +7,7 @@
 \label{sec:fast}
 \label{sec:slow}
 
-Each episode begins with the pretrained encoder $E_0$ and predictor $P_0$. To plan toward a goal image, the agent encodes the current observation and the goal, rolls out candidate action sequences with the current predictor, and chooses the sequence with the lowest latent goal cost~\cite{zhou2024dinowm,maes2026lewm}. It executes the first action block. Following AdaJEPA~\cite{wang2026adajepa}, it then takes one Adam step on the prediction loss over recent transitions to update the predictor's last block and the encoder head before replanning. These fast changes last for the episode. During the first few replans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\ref{sec:trust}).
+Each episode begins with working copies of the pretrained encoder $E_0$ and predictor $P_0$; their original weights remain fixed. The agent encodes the current observation and goal, rolls out candidate action sequences, and selects the plan with the lowest latent goal cost~\cite{zhou2024dinowm,maes2026lewm}. It executes the first action block. Following AdaJEPA~\cite{wang2026adajepa}, it then takes one Adam step on the prediction loss over recent transitions to update the predictor's last block and the encoder head before replanning. These fast changes last for the episode. During the first few replans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\ref{sec:trust}).
 
 Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predictor $P_{\phi_k}$ for each group $k$ of compatible trajectories, which we call a \emph{predictive domain}. After an episode, the frozen encoder $E_0$ re-encodes the executed trajectory. This gives replay a consistent latent space despite changes to the fast encoder within episodes. Once a trajectory is assigned to a domain, the agent adds it to $\replay_k$. The slow predictor trains on windows sampled from that buffer by minimizing
 \begin{equation}
@@ -16,7 +16,7 @@ Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predicto
   \big\|P_{\phi_k}(x)-z^+\big\|_2^2.
   \label{eq:replay}
 \end{equation}
-Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor starts as a copy of $P_0$. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes. The planner then uses the predictor to score candidate action sequences by their predicted distance to the goal.
+Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor is a separate copy of $P_0$ trained by replay. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes.
 
 \subsection{Discovering predictive domains}
 \label{sec:write}

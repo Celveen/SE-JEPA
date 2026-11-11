@@ -10,15 +10,15 @@
       "line": 2,
       "status": "ok",
       "page": 1,
-      "ratio": 0.6965,
-      "last_line": "keeps improving the longer it is deployed.",
+      "ratio": 0.5483,
+      "last_line": "source code will be made public.",
       "bbox": [
         58.50000762939453,
-        464.1550598144531,
-        224.60714721679688,
-        474.1177062988281
+        488.0653991699219,
+        189.2796173095703,
+        498.0280456542969
       ],
-      "ending": "tance by up to 49\\% relative to the pretrained model, and keeps improving the longer it is deployed.",
+      "ending": "retrained model, and keeps improving the longer it is deployed. The source code will be made public.",
       "kind": "prose"
     },
     {
@@ -46,9 +46,9 @@
       "last_line": "resulting plans can fail when executed.",
       "bbox": [
         58.50000762939453,
-        618.7412719726562,
+        642.6515502929688,
         213.05047607421875,
-        628.7039184570312
+        652.6141967773438
       ],
       "ending": "visual conditions can make these predictions inaccurate. The resulting plans can fail when executed.",
       "kind": "prose"
@@ -62,9 +62,9 @@
       "last_line": "handle these recurring conditions.",
       "bbox": [
         317.25,
-        593.0079345703125,
+        616.9182739257812,
         452.2737121582031,
-        602.9705810546875
+        626.8809204101562
       ],
       "ending": "again. Experience from earlier goals could instead help the agent handle these recurring conditions.",
       "kind": "prose"
@@ -78,9 +78,9 @@
       "last_line": "lating their parameter updates.",
       "bbox": [
         58.50000762939453,
-        98.31243896484375,
+        122.22277069091797,
         179.68557739257812,
-        108.27507781982422
+        132.18540954589844
       ],
       "ending": "e learning across episodes from stored trajectories instead of accumulating their parameter updates.",
       "kind": "prose"
@@ -90,15 +90,15 @@
       "line": 17,
       "status": "ok",
       "page": 2,
-      "ratio": 0.4815,
-      "last_line": "ing shifts or task boundaries.",
+      "ratio": 0.8841,
+      "last_line": "quires no labels identifying shifts or task boundaries.",
       "bbox": [
         58.50000762939453,
-        241.7744598388672,
-        173.33938598632812,
-        251.73709106445312
+        253.72962951660156,
+        269.359375,
+        263.6922607421875
       ],
-      "ending": "tor. It preserves the pretrained model and requires no labels identifying shifts or task boundaries.",
+      "ending": "s own replay buffer and slow predictor. It requires no labels identifying shifts or task boundaries.",
       "kind": "prose"
     },
     {
@@ -110,9 +110,9 @@
       "last_line": "vant to the current encounter.",
       "bbox": [
         58.25094985961914,
-        385.2364501953125,
+        397.1916198730469,
         174.49505615234375,
-        395.1990966796875
+        407.1542663574219
       ],
       "ending": "he agent can reuse past experience while checking that it remains relevant to the current encounter.",
       "kind": "prose"
@@ -126,9 +126,9 @@
       "last_line": "generalization to previously unobserved trajectories.",
       "bbox": [
         58.50000762939453,
-        552.6088256835938,
+        564.56396484375,
         266.9981994628906,
-        562.5714721679688
+        574.526611328125
       ],
       "ending": "stance by 47\\% on new instances, demonstrating generalization to previously unobserved trajectories.",
       "kind": "prose"
@@ -158,9 +158,9 @@
       "last_line": "for improving the deployed predictor.",
       "bbox": [
         58.50000762939453,
-        653.6926879882812,
+        665.6478881835938,
         207.95956420898438,
-        663.6553344726562
+        675.6105346679688
       ],
       "ending": "age planning, where executed actions provide transition errors for improving the deployed predictor.",
       "kind": "prose"
@@ -174,9 +174,9 @@
       "last_line": "jectories to improve planning across recurring shifts.",
       "bbox": [
         317.25,
-        134.17794799804688,
+        146.13311767578125,
         526.9636840820312,
-        144.1405792236328
+        156.0957489013672
       ],
       "ending": "ening,yin2026ddpwm}. \\ours uses deployment trajectories to improve planning across recurring shifts.",
       "kind": "prose"
@@ -186,13 +186,13 @@
       "line": 11,
       "status": "ok",
       "page": 2,
-      "ratio": 0.5298,
-      "last_line": "play training on each trajectory.",
+      "ratio": 0.7026,
+      "last_line": "precede replay training on each trajectory.",
       "bbox": [
         317.25,
-        316.8124084472656,
-        443.606201171875,
-        326.7750549316406
+        328.767578125,
+        484.8116760253906,
+        338.730224609375
       ],
       "ending": "han those of the pretrained reference. These comparisons precede replay training on each trajectory.",
       "kind": "prose"
@@ -206,9 +206,9 @@
       "last_line": "trained model using the episode’s ﬁrst observed transitions.",
       "bbox": [
         317.25,
-        439.6710205078125,
+        451.6261901855469,
         550.545166015625,
-        449.6336669921875
+        461.5888366699219
       ],
       "ending": " among validated predictors and the pretrained model using the episode's first observed transitions.",
       "kind": "prose"
@@ -222,9 +222,9 @@
       "last_line": "the correction also beneﬁts the next trajectory.",
       "bbox": [
         317.25,
-        583.761962890625,
+        595.7171630859375,
         501.0108947753906,
-        593.724609375
+        605.6798095703125
       ],
       "ending": "adajepa}. Reusing the adapted weights assumes that the correction also benefits the next trajectory.",
       "kind": "prose"
@@ -238,9 +238,9 @@
       "last_line": "of whether the episode eventually succeeds.",
       "bbox": [
         58.50000762939453,
-        412.7648010253906,
+        424.719970703125,
         232.95584106445312,
-        422.7274475097656
+        434.6826171875
       ],
       "ending": "able as soon as the next observation arrives, regardless of whether the episode eventually succeeds.",
       "kind": "prose"
@@ -254,9 +254,9 @@
       "last_line": "few actions provide evidence for which predictor to use.",
       "bbox": [
         58.50000762939453,
-        496.9100341796875,
+        508.865234375,
         282.2310791015625,
-        506.8726806640625
+        518.827880859375
       ],
       "ending": "sitions. When a new goal arrives, the first few actions provide evidence for which predictor to use.",
       "kind": "prose"
@@ -266,13 +266,13 @@
       "line": 10,
       "status": "ok",
       "page": 3,
-      "ratio": 0.9891,
-      "last_line": "retrieve a slow predictor as a base for adaptation (Sec. 3.4).",
+      "ratio": 0.8237,
+      "last_line": "slow predictor as a base for adaptation (Sec. 3.4).",
       "bbox": [
         58.50000762939453,
-        655.1597290039062,
-        294.393310546875,
-        665.1223754882812
+        667.1148681640625,
+        254.96157836914062,
+        677.0775146484375
       ],
       "ending": "plans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\\ref{sec:trust}).",
       "kind": "prose"
@@ -282,15 +282,15 @@
       "line": 19,
       "status": "ok",
       "page": 3,
-      "ratio": 0.587,
-      "last_line": "their predicted distance to the goal.",
+      "ratio": 0.9765,
+      "last_line": "tation changed the encoder differently in the two episodes.",
       "bbox": [
         317.25,
-        582.5664672851562,
-        457.2550048828125,
-        592.5291137695312
+        560.9144897460938,
+        550.1366577148438,
+        570.8771362304688
       ],
-      "ending": "then uses the predictor to score candidate action sequences by their predicted distance to the goal.",
+      "ending": "e coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes.",
       "kind": "prose"
     },
     {
@@ -302,9 +302,9 @@
       "last_line": "cannot yet predict accurately.",
       "bbox": [
         58.50000762939453,
-        110.2676010131836,
+        86.35726928710938,
         175.16253662109375,
-        120.23023986816406
+        96.31990814208984
       ],
       "ending": "de's direct memory write. Replay thus receives episodes the reference cannot yet predict accurately.",
       "kind": "prose"
@@ -318,9 +318,9 @@
       "last_line": "ing episodes, the three trajectories establish a new domain.",
       "bbox": [
         58.50000762939453,
-        263.02899169921875,
+        247.9086456298828,
         292.3331604003906,
-        272.99163818359375
+        257.87127685546875
       ],
       "ending": " direction aligns with those of two waiting episodes, the three trajectories establish a new domain.",
       "kind": "prose"
@@ -334,9 +334,9 @@
       "last_line": "the rules for maintaining each prototype.",
       "bbox": [
         58.50000762939453,
-        394.5358581542969,
+        379.4661865234375,
         220.64202880859375,
-        404.4985046386719
+        389.4288330078125
       ],
       "ending": "already predicts well. \\supref{A} gives the thresholds and the rules for maintaining each prototype.",
       "kind": "prose"
@@ -350,9 +350,9 @@
       "last_line": "the reference (Appendix A).",
       "bbox": [
         58.50000762939453,
-        643.0556640625,
+        638.6353759765625,
         170.80886840820312,
-        653.018310546875
+        648.5980224609375
       ],
       "ending": "igible for retrieval once this record shows a sustained improvement over the reference (\\supref{A}).",
       "kind": "prose"
@@ -906,13 +906,13 @@
       "line": 8,
       "status": "ok",
       "page": 11,
-      "ratio": 0.6797,
-      "last_line": "not replace the frozen reference encoder.",
+      "ratio": 0.5834,
+      "last_line": "place the frozen reference encoder.",
       "bbox": [
         58.50000762939453,
-        277.1587829589844,
-        220.6021728515625,
-        287.1214294433594
+        289.11395263671875,
+        197.63827514648438,
+        299.07659912109375
       ],
       "ending": "w predictor supplies the predictor initialization; it does not replace the frozen reference encoder.",
       "kind": "prose"
@@ -926,9 +926,9 @@
       "last_line": "ing likewise adds replay updates for absorbed experience.",
       "bbox": [
         58.50000762939453,
-        433.1084289550781,
+        445.0635986328125,
         288.19873046875,
-        443.0710754394531
+        455.0262451171875
       ],
       "ending": "s to process the accumulated evidence. Merging likewise adds replay updates for absorbed experience.",
       "kind": "prose"
@@ -958,9 +958,9 @@
       "last_line": "domains are recognized.",
       "bbox": [
         58.50000762939453,
-        481.4615783691406,
+        493.416748046875,
         155.6058807373047,
-        491.4242248535156
+        503.37939453125
       ],
       "ending": ", and merging and absorption remove redundant predictor copies as compatible domains are recognized.",
       "kind": "prose"
@@ -974,9 +974,9 @@
       "last_line": "changed to the visual experiments.",
       "bbox": [
         58.50000762939453,
-        568.27392578125,
+        580.2291259765625,
         196.43276977539062,
-        578.236572265625
+        590.1917724609375
       ],
       "ending": "hreshold is calibrated once on the shape backbone and transfers unchanged to the visual experiments.",
       "kind": "prose"
@@ -990,9 +990,9 @@
       "last_line": "merging, and absorption steps are all disabled.",
       "bbox": [
         58.50000762939453,
-        628.582275390625,
+        640.5374145507812,
         243.1575469970703,
-        638.544921875
+        650.5000610351562
       ],
       "ending": "end write, validation-history update, slow training, merging, and absorption steps are all disabled.",
       "kind": "prose"
@@ -1006,9 +1006,9 @@
       "last_line": "ble domain directions in descending cosine order.",
       "bbox": [
         317.25,
-        485.057861328125,
+        493.42657470703125,
         514.5501098632812,
-        495.0205078125
+        503.38922119140625
       ],
       "ending": "io check before replay. Otherwise, it tries compatible domain directions in descending cosine order.",
       "kind": "prose"
@@ -1022,9 +1022,9 @@
       "last_line": "appearance category participates in this procedure.",
       "bbox": [
         317.25,
-        581.2970581054688,
+        589.0679321289062,
         519.05322265625,
-        591.2597045898438
+        599.0305786132812
       ],
       "ending": "ther to the new replay. No ground-truth shape or appearance category participates in this procedure.",
       "kind": "prose"
@@ -1722,15 +1722,15 @@
       "line": 202,
       "status": "ok",
       "page": 16,
-      "ratio": 0.8421,
-      "last_line": "changes while preserving the pretrained reference.",
+      "ratio": 0.6647,
+      "last_line": "ring changes from replayed trajectories.",
       "bbox": [
         317.25,
         703.439453125,
-        518.0868530273438,
+        475.7755432128906,
         713.402099609375
       ],
-      "ending": "r AdaJEPA. Specialized predictors learn recurring changes while preserving the pretrained reference.",
+      "ending": "and 84.8\\% for AdaJEPA. Separate slow predictors learn recurring changes from replayed trajectories.",
       "kind": "prose"
     },
     {

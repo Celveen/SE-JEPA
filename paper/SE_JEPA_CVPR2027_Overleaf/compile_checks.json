@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T05:02:00-08:00",
+  "checked_at": "2026-11-10T20:36:42-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "d0e726b87a2985f734af0a2965a8ed64a780a90ba9739725ddc538afc028afbb",
+    "pdf_sha256": "884afc159cc6d6224b8757471ee783017d6110517d89de3ef753075138437277",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -42,7 +42,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "1bb4905d26082a8cf2af8e8bf8eaa144d78a38b3f125f14e4ec5ab266a7a631f"
+    "pdf_sha256": "2e7e7d69247f19b108636fbdf2d2e52b1ae4838758b3ac6fe3c8352dfb369e1e"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -54,7 +54,7 @@
   "reporting_overrides": "data/reporting_overrides.json",
   "bibliography_entries": 42,
   "bibliography_verification": "data/reference_verification.json",
-  "abstract_matches_author_source": true,
+  "abstract_matches_author_source": false,
   "qualitative_selection": "data/revision_assets/selection_manifest.json",
   "hardware_statement": {
     "source": "Author instruction",
@@ -314,8 +314,10 @@
         "page": 17
       }
     },
-    "official_benchmark_and_abstract_unchanged": true,
-    "future_work_maturity_calibration_added": true
+    "official_benchmark_and_abstract_unchanged": false,
+    "future_work_maturity_calibration_added": true,
+    "official_benchmark_unchanged": true,
+    "abstract_status": "Numerical claims unchanged; wording clarified in the subsequent Overleaf sync."
   },
   "paragraph_endings": {
     "audit": "data/paragraph_layout_audit.json",
@@ -359,10 +361,18 @@
   "readability_review": {
     "record": "data/readability_review_20261110.json",
     "all_sections_reviewed": true,
-    "supplied_abstract_verbatim": true,
+    "supplied_abstract_verbatim": false,
     "figures_unchanged": true,
     "other_numeric_results_unchanged": true,
     "main_text_pages": 8,
-    "trailing_blank_lines": 2.43
+    "trailing_blank_lines": 2.43,
+    "abstract_status": "Superseded by the requested fixed-weight and separate-memory clarification after syncing teacher edits from Overleaf."
+  },
+  "abstract_clarification": {
+    "record": "data/overleaf_sync_20261110.json",
+    "explicitly_author_requested": true,
+    "teacher_changes_preserved": true,
+    "numerical_claims_unchanged": true,
+    "current_abstract_sha256": "74921bddaaa15230b0bbcb8349a9c3443e5554b228f822cb12372741737e3cbc"
   }
 }

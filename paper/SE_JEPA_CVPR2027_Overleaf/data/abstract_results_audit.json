@@ -1,8 +1,8 @@
 {
   "author_source": "data/drive_reference/abstract1.md",
   "author_source_sha256": "56decac0d88b65ecfb176b4de45569a847f7deb037f8ebbe0fa091ddd93d6910",
-  "text_used_verbatim": true,
-  "tex_only_changes": "Percent signs escaped; abstract environment added.",
+  "text_used_verbatim": false,
+  "tex_only_changes": "Superseded: the author requested a wording clarification after the Overleaf teacher edit; all quantitative claims remain unchanged.",
   "heldout_success_gain_pp": {
     "PushObj_unseen_GD": 17.111111111111107,
     "PushT_shifted_GD": 18.740740740740733,
@@ -49,5 +49,13 @@
     "data/revision_assets/visual_summary.json": "bdf6c65a6f1bc923917bd78a24c911223b43e00e2642be3948cf5c38159ea5b1",
     "data/direction_diagnostic.json": "68d75323fccb390e6c9543be96faacab142119475891d58e51a9fad5d3e81053",
     "data/matched_accumulation_source.md": "6fd3eac9d2737e4be11130deaeada74a00a9c6c2a3f7e135de9d3c65d03388ed"
+  },
+  "approved_wording_revision": {
+    "record": "data/overleaf_sync_20261110.json",
+    "date": "2026-11-10",
+    "fixed_pretrained_weights_and_separate_memory_explicit": true,
+    "teacher_code_availability_sentence_preserved": true,
+    "quantitative_claims_unchanged": true,
+    "current_abstract_sha256": "74921bddaaa15230b0bbcb8349a9c3443e5554b228f822cb12372741737e3cbc"
   }
 }

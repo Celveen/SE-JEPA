@@ -199,4 +199,4 @@ The episode logs record the fast-update fingerprint of every episode. Figure~\re
 
 \ours learns selectively. In a seven-round PushObj stream of 2{,}450 episodes per planner, it writes only 25\% (GD) to 27\% (CEM) of episodes to memory; the rest are familiar to the pretrained model, still pending, or rejected by validation. About one quarter of episodes retrieve a slow predictor; the others adapt from the pretrained model.
 
-Selective writing leaves familiar dynamics to the pretrained model, which \ours never overwrites. On the four pretraining shapes, \ours reaches 86.0\% held-out success with CEM and 88.4\% with GD, against 82.3\% and 84.8\% for AdaJEPA. Specialized predictors learn recurring changes while preserving the pretrained reference.
+Selective writing leaves familiar dynamics to the pretrained model, whose original weights remain fixed. On the four pretraining shapes, \ours reaches 86.0\% held-out success with CEM and 88.4\% with GD, against 82.3\% and 84.8\% for AdaJEPA. Separate slow predictors learn recurring changes from replayed trajectories.

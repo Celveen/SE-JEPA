@@ -1,5 +1,19 @@
 # SE-JEPA — CVPR 2027 manuscript
 
+## Overleaf sync and fixed-weight clarification (2026-11-10)
+Downloaded the current Overleaf project and compared every manuscript file.
+The only text change relative to the previous local release was in the abstract;
+the teacher's source-code availability sentence is retained. The original
+pretrained weights are now explicitly fixed, fast adaptation uses working copies,
+and slow memory is learned in separate predictors. This small clarification is
+consistent across the abstract, introduction, related work, method and appendices.
+All numerical claims and figures are unchanged. The main text remains eight pages,
+with 2.43 trailing lines. The original supplied abstract remains an archived source;
+the current abstract supersedes the earlier verbatim-copy status.
+The sync record is `data/overleaf_sync_20261110.json`. This release updates the
+local source and GitHub; the Overleaf project itself has not been overwritten.
+
+
 Upload `SE_JEPA_CVPR2027_Overleaf.zip` with **New Project → Upload Project**.
 Select `main.tex` and the **pdfLaTeX** compiler. The project uses BibTeX and the
 unchanged official CVPR 2027 style in anonymous review mode.
