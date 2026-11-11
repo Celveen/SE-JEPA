@@ -1,5 +1,18 @@
 # SE-JEPA manuscript
 
+## Author-revised Figure 2 (2026-11-10)
+Figure 2 now uses the newly supplied `main figue.svg`, archived verbatim as
+`figures/source/architecture_author_20261110.svg`. The author's font colors,
+typefaces, positions, and connections are retained. Only the Square/T test-time
+images and their labels are replaced with the same verified Rope/Granular
+simulator observations used previously. Both the displayed SVG and its embedded
+draw.io document are updated. The PDF uses vector outlines from the embedded
+fonts so no local font substitution is needed. The editable SVG retains text.
+Rebuild with `python tools/update_overview_tasks.py` (CairoSVG/Cairo, fonttools,
+Brotli, uharfbuzz, PyMuPDF). Provenance records the original images and SVG hashes.
+Only page 3 changes in the rendered paper; all other pages remain identical.
+
+
 ## Overleaf sync and fixed-weight clarification (2026-11-10)
 Downloaded the current Overleaf project and compared every manuscript file.
 The only text change relative to the previous local release was in the abstract;

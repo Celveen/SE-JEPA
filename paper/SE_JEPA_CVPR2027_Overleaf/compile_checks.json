@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T20:49:00-08:00",
+  "checked_at": "2026-11-10T21:07:43-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "1dcc024dc74921f4697038d87e3c1f38b3b40095c1c5a04cce1d06efe6231a64",
+    "pdf_sha256": "f68a45317b99150fdfa89bc5d7ee4dd39d13bdf4ffe898cdd6697ed29896bd9c",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -382,5 +382,23 @@
     "author_requested_omission": "RTX 5090 system",
     "main_eight_pages_pixel_identical": true,
     "appendix_page_11_visually_reviewed": true
+  },
+  "architecture_author_revision": {
+    "source": "figures/source/architecture_author_20261110.svg",
+    "source_sha256": "d06dd30e6caacfb554ad7487219895f15b8cdb76889f28cc403828786c41a1f9",
+    "editable_result": "figures/source/architecture.svg",
+    "print_pdf": "figures/architecture.pdf",
+    "preview": "figures/architecture.png",
+    "provenance": "data/revision_assets/architecture_tasks/provenance.json",
+    "modified_panels": [
+      "Square -> Rope",
+      "T -> Granular"
+    ],
+    "author_colors_positions_embedded_fonts_preserved": true,
+    "all_other_svg_elements_and_rendered_pixels_identical_to_author": true,
+    "paper_rendered_changes_only_on_page": 3,
+    "all_other_19_pages_pixel_identical_to_prior_release": true,
+    "main_cross_references_unchanged": true,
+    "supplement_rebuild_unnecessary": "No supplement inputs or main.aux changed."
   }
 }

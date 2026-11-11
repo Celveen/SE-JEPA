@@ -142,9 +142,9 @@
       "last_line": "supervision. Test-time examples include rigid objects, rope, and granular material.",
       "bbox": [
         58.50000762939453,
-        332.5245361328125,
+        331.3063049316406,
         353.8703918457031,
-        341.49090576171875
+        340.2726745605469
       ],
       "ending": "ents and are not supervision. Test-time examples include rigid objects, rope, and granular material.",
       "kind": "caption"
@@ -238,9 +238,9 @@
       "last_line": "of whether the episode eventually succeeds.",
       "bbox": [
         58.50000762939453,
-        424.719970703125,
+        423.501708984375,
         232.95584106445312,
-        434.6826171875
+        433.46435546875
       ],
       "ending": "able as soon as the next observation arrives, regardless of whether the episode eventually succeeds.",
       "kind": "prose"
@@ -254,9 +254,9 @@
       "last_line": "few actions provide evidence for which predictor to use.",
       "bbox": [
         58.50000762939453,
-        508.865234375,
+        507.8499755859375,
         282.2310791015625,
-        518.827880859375
+        517.8126220703125
       ],
       "ending": "sitions. When a new goal arrives, the first few actions provide evidence for which predictor to use.",
       "kind": "prose"
@@ -270,9 +270,9 @@
       "last_line": "slow predictor as a base for adaptation (Sec. 3.4).",
       "bbox": [
         58.50000762939453,
-        667.1148681640625,
+        666.911865234375,
         254.96157836914062,
-        677.0775146484375
+        676.87451171875
       ],
       "ending": "plans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\\ref{sec:trust}).",
       "kind": "prose"
@@ -286,9 +286,9 @@
       "last_line": "tation changed the encoder differently in the two episodes.",
       "bbox": [
         317.25,
-        560.9144897460938,
+        560.25,
         550.1366577148438,
-        570.8771362304688
+        570.212646484375
       ],
       "ending": "e coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes.",
       "kind": "prose"

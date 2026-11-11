@@ -14,7 +14,22 @@
     "I",
     "L"
   ],
-  "original_pdf": "figures/source/architecture_before_deform.pdf",
+  "author_revision": "figures/source/architecture_author_20261110.svg",
+  "author_revision_sha256": "d06dd30e6caacfb554ad7487219895f15b8cdb76889f28cc403828786c41a1f9",
+  "author_colors_positions_and_fonts_preserved": true,
+  "font_export": {
+    "embedded_fonts": [
+      "SEJEPA Bold",
+      "SEJEPA Italic",
+      "SEJEPA Regular"
+    ],
+    "outlined_text_nodes": 59
+  },
+  "canvas": {
+    "width": "1253px",
+    "height": "518px",
+    "viewBox": "0 0 1253 518"
+  },
   "images": {
     "rope": {
       "xref": 13,
@@ -26,5 +41,15 @@
       "file": "granular.png",
       "sha256": "8a36f4792cccc85de7840bd1d86033d7d72d3991a218a216b6f84b0ffa94d485"
     }
+  },
+  "validation": {
+    "all_other_svg_elements_identical_to_author": true,
+    "all_other_rendered_pixels_identical_to_author": true,
+    "changed_svg_region": [
+      0,
+      242,
+      207,
+      371
+    ]
   }
 }
