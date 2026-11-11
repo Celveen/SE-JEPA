@@ -1,0 +1,299 @@
+{
+  "task": "Rope/Granular mixed-domain continual learning",
+  "audited_at_UTC": "2026-11-11T06:55:48.380459+00:00",
+  "primary_metric": "Final particle Chamfer distance after15 pushes; lower is better",
+  "completed_episodes": 700,
+  "no_new_experiments": true,
+  "variants": {
+    "lr2e4_with_familiarity": {
+      "source_plan": "rope_granular_lr2e4_mixed_20261103",
+      "slow_lr": 0.0002,
+      "familiarity_gate": true,
+      "completed_rounds": 3,
+      "planned_rounds": 3,
+      "completed_episodes": 300,
+      "status": "completed",
+      "previously_archived_chunks": 30,
+      "newly_completed_chunks_added": [],
+      "rounds": [
+        {
+          "round": 1,
+          "rope_CD": 0.5978655245155096,
+          "granular_CD": 0.47128746449947356,
+          "domains": {
+            "d0": {
+              "n": 27,
+              "tags": {
+                "rope": 27
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.43761154181568623,
+                0.5034120817587802,
+                0.5059423127606799
+              ]
+            },
+            "d1": {
+              "n": 50,
+              "tags": {
+                "granular": 50
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.16087401338436366,
+                0.12406276626775112,
+                0.13342829647586046
+              ]
+            }
+          },
+          "member_weighted_purity": 1.0
+        },
+        {
+          "round": 2,
+          "rope_CD": 0.4518561094999313,
+          "granular_CD": 0.3686872246861458,
+          "domains": {
+            "d0": {
+              "n": 50,
+              "tags": {
+                "rope": 50
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.36298791386254525,
+                0.31973357831878735,
+                0.33471645529557115
+              ]
+            },
+            "d1": {
+              "n": 100,
+              "tags": {
+                "granular": 100
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.20429544361766871,
+                0.18103101892084497,
+                0.13873380954664782
+              ]
+            }
+          },
+          "member_weighted_purity": 1.0
+        },
+        {
+          "round": 3,
+          "rope_CD": 0.4116818945854902,
+          "granular_CD": 0.3550882738828659,
+          "domains": {
+            "d0": {
+              "n": 80,
+              "tags": {
+                "rope": 80
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.5293221980465996,
+                0.77268052511682,
+                0.4301831911646452
+              ]
+            },
+            "d1": {
+              "n": 150,
+              "tags": {
+                "granular": 150
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.14574696867304027,
+                0.11866271368071683,
+                0.16181966240859336
+              ]
+            }
+          },
+          "member_weighted_purity": 1.0
+        }
+      ]
+    },
+    "lr1e4_with_familiarity": {
+      "source_plan": "rope_granular_lr1e4_mixed_20261104",
+      "slow_lr": 0.0001,
+      "familiarity_gate": true,
+      "completed_rounds": 1,
+      "planned_rounds": 3,
+      "completed_episodes": 100,
+      "status": "stopped_after_round1_not_complete_three_rounds",
+      "previously_archived_chunks": 10,
+      "newly_completed_chunks_added": [],
+      "rounds": [
+        {
+          "round": 1,
+          "rope_CD": 0.5102407985925674,
+          "granular_CD": 0.5056765335798263,
+          "domains": {
+            "d0": {
+              "n": 26,
+              "tags": {
+                "rope": 26
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.6564928365105817,
+                0.6011499860339747,
+                0.48412783433959933
+              ]
+            },
+            "d1": {
+              "n": 50,
+              "tags": {
+                "granular": 50
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.145832232142084,
+                0.1722031565745822,
+                0.15927430656266134
+              ]
+            }
+          },
+          "member_weighted_purity": 1.0
+        }
+      ]
+    },
+    "lr1e4_no_familiarity": {
+      "source_plan": "rope_granular_no_familiarity_lr1e4_mixed_20261106",
+      "slow_lr": 0.0001,
+      "familiarity_gate": false,
+      "completed_rounds": 3,
+      "planned_rounds": 3,
+      "completed_episodes": 300,
+      "status": "completed",
+      "previously_archived_chunks": 21,
+      "newly_completed_chunks_added": [
+        "chunk_21_granular",
+        "chunk_22_rope",
+        "chunk_23_granular",
+        "chunk_24_rope",
+        "chunk_25_granular",
+        "chunk_26_rope",
+        "chunk_27_granular",
+        "chunk_28_rope",
+        "chunk_29_granular"
+      ],
+      "rounds": [
+        {
+          "round": 1,
+          "rope_CD": 0.33614477671682835,
+          "granular_CD": 0.5308245244622231,
+          "domains": {
+            "d0": {
+              "n": 49,
+              "tags": {
+                "rope": 49
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.6906900237762191,
+                0.5591784105417915,
+                0.5785942124105186
+              ]
+            },
+            "d1": {
+              "n": 51,
+              "tags": {
+                "granular": 50,
+                "rope": 1
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.1393854070027056,
+                0.15119241269735192,
+                0.14081034637946122
+              ]
+            }
+          },
+          "member_weighted_purity": 0.99
+        },
+        {
+          "round": 2,
+          "rope_CD": 0.3916792458295822,
+          "granular_CD": 0.38279065310955046,
+          "domains": {
+            "d0": {
+              "n": 99,
+              "tags": {
+                "rope": 99
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.37899956139022783,
+                0.35464037487813316,
+                0.7305338186943644
+              ]
+            },
+            "d1": {
+              "n": 101,
+              "tags": {
+                "granular": 100,
+                "rope": 1
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.18542977378698736,
+                0.19950730973703165,
+                0.10940833997464222
+              ]
+            }
+          },
+          "member_weighted_purity": 0.995
+        },
+        {
+          "round": 3,
+          "rope_CD": 0.3874670921266079,
+          "granular_CD": 0.37576146721839904,
+          "domains": {
+            "d0": {
+              "n": 148,
+              "tags": {
+                "rope": 148
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.6439681628173453,
+                0.1669836390019095,
+                0.657038042633636
+              ]
+            },
+            "d1": {
+              "n": 151,
+              "tags": {
+                "granular": 150,
+                "rope": 1
+              },
+              "learner": true,
+              "mature": true,
+              "val_last": [
+                0.11739806680300287,
+                0.12500105798874012,
+                0.20029454321541526
+              ]
+            }
+          },
+          "member_weighted_purity": 0.9966555183946488
+        }
+      ]
+    }
+  }
+}

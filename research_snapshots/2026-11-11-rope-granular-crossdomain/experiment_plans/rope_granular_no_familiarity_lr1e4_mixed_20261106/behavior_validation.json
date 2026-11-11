@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "behavior_tests": 4,
+  "zero_success_does_not_stop": true,
+  "domain_count_or_maturity_does_not_stop": true,
+  "nonfinite_cd_stops": true,
+  "no_legacy_round1_review_gate": true,
+  "state_links_checked": 30
+}

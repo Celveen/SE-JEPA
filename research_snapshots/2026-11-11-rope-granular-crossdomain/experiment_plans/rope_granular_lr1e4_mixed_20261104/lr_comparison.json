@@ -1,0 +1,147 @@
+{
+  "comparisons": [
+    {
+      "round": 1,
+      "object": "rope",
+      "n": 50,
+      "cd_1e4": 0.5102407985925674,
+      "cd_2e4": 0.5978655245155096,
+      "cd_1e4_minus_2e4": -0.08762472592294217,
+      "paired_bootstrap_ci95": [
+        -0.26225584575906397,
+        0.10665094020031388
+      ],
+      "wilcoxon_p": 0.26120880915335754,
+      "domains_1e4": {
+        "d0": {
+          "n": 26,
+          "tags": {
+            "rope": 26
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.6564928365105817,
+            0.6011499860339747,
+            0.48412783433959933
+          ]
+        },
+        "d1": {
+          "n": 50,
+          "tags": {
+            "granular": 50
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.145832232142084,
+            0.1722031565745822,
+            0.15927430656266134
+          ]
+        }
+      },
+      "domains_2e4": {
+        "d0": {
+          "n": 27,
+          "tags": {
+            "rope": 27
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.43761154181568623,
+            0.5034120817587802,
+            0.5059423127606799
+          ]
+        },
+        "d1": {
+          "n": 50,
+          "tags": {
+            "granular": 50
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.16087401338436366,
+            0.12406276626775112,
+            0.13342829647586046
+          ]
+        }
+      },
+      "purity_1e4": 1.0,
+      "purity_2e4": 1.0
+    },
+    {
+      "round": 1,
+      "object": "granular",
+      "n": 50,
+      "cd_1e4": 0.5056765335798263,
+      "cd_2e4": 0.47128746449947356,
+      "cd_1e4_minus_2e4": 0.03438906908035278,
+      "paired_bootstrap_ci95": [
+        -0.022082999631762502,
+        0.09267908850312226
+      ],
+      "wilcoxon_p": 0.2571237847552261,
+      "domains_1e4": {
+        "d0": {
+          "n": 26,
+          "tags": {
+            "rope": 26
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.6564928365105817,
+            0.6011499860339747,
+            0.48412783433959933
+          ]
+        },
+        "d1": {
+          "n": 50,
+          "tags": {
+            "granular": 50
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.145832232142084,
+            0.1722031565745822,
+            0.15927430656266134
+          ]
+        }
+      },
+      "domains_2e4": {
+        "d0": {
+          "n": 27,
+          "tags": {
+            "rope": 27
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.43761154181568623,
+            0.5034120817587802,
+            0.5059423127606799
+          ]
+        },
+        "d1": {
+          "n": 50,
+          "tags": {
+            "granular": 50
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.16087401338436366,
+            0.12406276626775112,
+            0.13342829647586046
+          ]
+        }
+      },
+      "purity_1e4": 1.0,
+      "purity_2e4": 1.0
+    }
+  ],
+  "note": "Same targets, order, seeds and mixed method. Negative CD difference favors 1e-4. Single-chain exploratory comparison; no multiple-testing adjustment."
+}

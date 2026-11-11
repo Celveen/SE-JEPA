@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "complete_chunks": 70,
+  "episodes": 700,
+  "shared_target_blocks": 30,
+  "new_result_chunks_missing_from_previous_archive": 9,
+  "checks": [
+    "Finite actions and30 logged CD evaluations per chunk",
+    "Per-chunk final means agree with logs; per-round50/object means agree with reviews",
+    "Sequential episode IDs and object labels match routing logs",
+    "Exact shared initial/goal states and source hashes",
+    "Previously archived61 chunk NPZs match byte for byte",
+    "Final routing/domain summaries agree with reviews"
+  ],
+  "no_model_weights_included": true,
+  "no_training_data_included": true
+}

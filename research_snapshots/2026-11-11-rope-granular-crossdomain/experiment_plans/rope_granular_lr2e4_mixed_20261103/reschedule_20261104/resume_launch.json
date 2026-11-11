@@ -1,0 +1,12 @@
+{
+  "pid": 1921542,
+  "superseded_pid": 3102156,
+  "started_at": "2026-11-04T05:07:12.327727+00:00",
+  "target_gpus": [
+    "4",
+    "7"
+  ],
+  "chain_gpu": "4",
+  "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_lr2e4_mixed_20261103/resume_round3_launcher.log",
+  "reason": "Generate the already approved third-round targets without waiting for GPUs 5/6"
+}

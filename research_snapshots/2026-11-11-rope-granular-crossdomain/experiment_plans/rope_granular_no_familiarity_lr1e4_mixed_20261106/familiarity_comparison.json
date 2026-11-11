@@ -1,0 +1,145 @@
+{
+  "comparisons": [
+    {
+      "round": 1,
+      "object": "rope",
+      "n": 50,
+      "cd_no_familiarity_gate": 0.33614477671682835,
+      "cd_original": 0.5102407985925674,
+      "difference": -0.1740960218757391,
+      "paired_bootstrap_ci95": [
+        -0.3449683650266379,
+        -0.015554306006059079
+      ],
+      "wilcoxon_p": 0.055465717070337206,
+      "domains_no_gate": {
+        "d0": {
+          "n": 49,
+          "tags": {
+            "rope": 49
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.6906900237762191,
+            0.5591784105417915,
+            0.5785942124105186
+          ]
+        },
+        "d1": {
+          "n": 51,
+          "tags": {
+            "granular": 50,
+            "rope": 1
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.1393854070027056,
+            0.15119241269735192,
+            0.14081034637946122
+          ]
+        }
+      },
+      "domains_original": {
+        "d0": {
+          "n": 26,
+          "tags": {
+            "rope": 26
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.6564928365105817,
+            0.6011499860339747,
+            0.48412783433959933
+          ]
+        },
+        "d1": {
+          "n": 50,
+          "tags": {
+            "granular": 50
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.145832232142084,
+            0.1722031565745822,
+            0.15927430656266134
+          ]
+        }
+      }
+    },
+    {
+      "round": 1,
+      "object": "granular",
+      "n": 50,
+      "cd_no_familiarity_gate": 0.5308245244622231,
+      "cd_original": 0.5056765335798263,
+      "difference": 0.0251479908823967,
+      "paired_bootstrap_ci95": [
+        -0.02758626837283373,
+        0.07745845504105091
+      ],
+      "wilcoxon_p": 0.2954728324166016,
+      "domains_no_gate": {
+        "d0": {
+          "n": 49,
+          "tags": {
+            "rope": 49
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.6906900237762191,
+            0.5591784105417915,
+            0.5785942124105186
+          ]
+        },
+        "d1": {
+          "n": 51,
+          "tags": {
+            "granular": 50,
+            "rope": 1
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.1393854070027056,
+            0.15119241269735192,
+            0.14081034637946122
+          ]
+        }
+      },
+      "domains_original": {
+        "d0": {
+          "n": 26,
+          "tags": {
+            "rope": 26
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.6564928365105817,
+            0.6011499860339747,
+            0.48412783433959933
+          ]
+        },
+        "d1": {
+          "n": 50,
+          "tags": {
+            "granular": 50
+          },
+          "learner": true,
+          "mature": true,
+          "val_last": [
+            0.145832232142084,
+            0.1722031565745822,
+            0.15927430656266134
+          ]
+        }
+      }
+    }
+  ],
+  "note": "Both use slow lr 1e-4. Negative CD difference favors removing the familiarity gate. Historical control stopped after round 1; no same-LR control exists for rounds 2/3. Single-chain exploratory comparisons."
+}

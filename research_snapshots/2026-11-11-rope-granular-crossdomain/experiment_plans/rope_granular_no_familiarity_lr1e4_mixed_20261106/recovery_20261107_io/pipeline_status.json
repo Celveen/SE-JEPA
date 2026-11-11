@@ -1,0 +1,97 @@
+{
+  "status": "running",
+  "pid": 2453573,
+  "gpu": "1",
+  "slow_lr": 0.0001,
+  "started_at": "2026-11-06T02:42:20.188117+00:00",
+  "continuation_policy": "Run all three approved rounds; performance and domain checks are diagnostic only. Stop on execution/integrity errors or nonfinite numerical results.",
+  "stage": "running_round_2",
+  "updated_at": "2026-11-06T08:52:54.145892+00:00",
+  "round": 2,
+  "completed_rounds": 1,
+  "last_performance": {
+    "rope": {
+      "n": 50,
+      "initial_cd_mean": 1.7271848054176306,
+      "final_cd_mean": 0.33614477671682835,
+      "final_cd_median": 0.24643278121948242,
+      "final_cd_max": 1.1274757385253906,
+      "mean_cd_improvement": 1.391040028700802,
+      "improved_samples": 48,
+      "successes": 40,
+      "threshold": 0.5,
+      "read_counts": {
+        "None": 7,
+        "d0": 43
+      },
+      "write_counts": {
+        "None": 2,
+        "d0": 47,
+        "d1": 1
+      },
+      "write_rules": {
+        "pending": 2,
+        "new_from_pending": 1,
+        "direction": 3,
+        "learner": 43,
+        "abs_join": 1
+      }
+    },
+    "granular": {
+      "n": 50,
+      "initial_cd_mean": 0.5562700887966339,
+      "final_cd_mean": 0.5308245244622231,
+      "final_cd_median": 0.4823485165834427,
+      "final_cd_max": 1.1004137992858887,
+      "mean_cd_improvement": 0.02544556433441079,
+      "improved_samples": 28,
+      "successes": 1,
+      "threshold": 0.2,
+      "read_counts": {
+        "None": 4,
+        "d0": 5,
+        "d1": 41
+      },
+      "write_counts": {
+        "None": 2,
+        "d1": 48
+      },
+      "write_rules": {
+        "pending": 2,
+        "new_from_pending": 1,
+        "direction": 2,
+        "abs_join": 4,
+        "learner": 41
+      }
+    }
+  },
+  "last_domains": {
+    "d0": {
+      "n": 49,
+      "tags": {
+        "rope": 49
+      },
+      "learner": true,
+      "mature": true,
+      "val_last": [
+        0.6906900237762191,
+        0.5591784105417915,
+        0.5785942124105186
+      ]
+    },
+    "d1": {
+      "n": 51,
+      "tags": {
+        "granular": 50,
+        "rope": 1
+      },
+      "learner": true,
+      "mature": true,
+      "val_last": [
+        0.1393854070027056,
+        0.15119241269735192,
+        0.14081034637946122
+      ]
+    }
+  }
+}

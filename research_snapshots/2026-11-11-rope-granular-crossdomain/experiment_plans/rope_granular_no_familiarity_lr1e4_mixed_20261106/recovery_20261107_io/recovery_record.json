@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-11-07T05:56:15.965747+00:00",
+  "pid": 3152636,
+  "gpu": "1",
+  "last_completed_episode": 190,
+  "remaining_episodes": 110,
+  "checkpoint": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_no_familiarity_lr1e4_mixed_20261106/free_abs/chunk_18_rope/continual_state.pt",
+  "log": "/data/zjc/adaJEPA/CL-JEPA-cudagraph/eval_outputs/rope_granular_no_familiarity_lr1e4_mixed_20261106/pipeline_recovery_20261107.log",
+  "previous_pipeline_pid": 2453573,
+  "previous_chain_pid": 1450119,
+  "previous_chain_state_after_kill": {
+    "State": "D (disk sleep)",
+    "SigPnd": "0000000000000100",
+    "ShdPnd": "0000000000000100"
+  },
+  "change": "Defer checkpoint cleanup; experiment settings, inputs, and budget unchanged"
+}

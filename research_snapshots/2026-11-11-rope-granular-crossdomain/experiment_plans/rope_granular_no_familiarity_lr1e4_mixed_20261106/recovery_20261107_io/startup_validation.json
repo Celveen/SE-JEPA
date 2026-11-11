@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-11-07T05:59:20.125422+00:00",
+  "resumed_chunk": "chunk_19_granular",
+  "completed_before_recovery": 190,
+  "remaining_budget": 110,
+  "mpc_feedbacks": 2,
+  "fast_updates": 2,
+  "checkpoint_cleanup_deferred": true
+}
