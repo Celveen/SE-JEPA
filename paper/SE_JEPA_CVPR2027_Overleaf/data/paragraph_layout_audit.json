@@ -890,15 +890,15 @@
       "line": 5,
       "status": "ok",
       "page": 11,
-      "ratio": 0.9563,
-      "last_line": "GeForce RTX 5090 GPUs and 8× NVIDIA A100 GPUs.",
+      "ratio": 0.779,
+      "last_line": "used a server with eight NVIDIA A100 GPUs.",
       "bbox": [
         58.50000762939453,
-        142.11619567871094,
-        286.58197021484375,
-        152.4884033203125
+        130.5706024169922,
+        244.28334045410156,
+        140.53323364257812
       ],
-      "ending": "cted on systems equipped with $8\\times$ NVIDIA GeForce RTX 5090 GPUs and $8\\times$ NVIDIA A100 GPUs.",
+      "ending": "Model training and evaluation used a server with eight NVIDIA A100 GPUs.",
       "kind": "prose"
     },
     {
@@ -910,9 +910,9 @@
       "last_line": "place the frozen reference encoder.",
       "bbox": [
         58.50000762939453,
-        289.11395263671875,
+        277.1587829589844,
         197.63827514648438,
-        299.07659912109375
+        287.1214294433594
       ],
       "ending": "w predictor supplies the predictor initialization; it does not replace the frozen reference encoder.",
       "kind": "prose"
@@ -926,9 +926,9 @@
       "last_line": "ing likewise adds replay updates for absorbed experience.",
       "bbox": [
         58.50000762939453,
-        445.0635986328125,
+        433.1084289550781,
         288.19873046875,
-        455.0262451171875
+        443.0710754394531
       ],
       "ending": "s to process the accumulated evidence. Merging likewise adds replay updates for absorbed experience.",
       "kind": "prose"
@@ -958,9 +958,9 @@
       "last_line": "domains are recognized.",
       "bbox": [
         58.50000762939453,
-        493.416748046875,
+        481.4615783691406,
         155.6058807373047,
-        503.37939453125
+        491.4242248535156
       ],
       "ending": ", and merging and absorption remove redundant predictor copies as compatible domains are recognized.",
       "kind": "prose"
@@ -974,9 +974,9 @@
       "last_line": "changed to the visual experiments.",
       "bbox": [
         58.50000762939453,
-        580.2291259765625,
+        568.27392578125,
         196.43276977539062,
-        590.1917724609375
+        578.236572265625
       ],
       "ending": "hreshold is calibrated once on the shape backbone and transfers unchanged to the visual experiments.",
       "kind": "prose"
@@ -990,9 +990,9 @@
       "last_line": "merging, and absorption steps are all disabled.",
       "bbox": [
         58.50000762939453,
-        640.5374145507812,
+        628.582275390625,
         243.1575469970703,
-        650.5000610351562
+        638.544921875
       ],
       "ending": "end write, validation-history update, slow training, merging, and absorption steps are all disabled.",
       "kind": "prose"
@@ -1006,9 +1006,9 @@
       "last_line": "ble domain directions in descending cosine order.",
       "bbox": [
         317.25,
-        493.42657470703125,
+        485.057861328125,
         514.5501098632812,
-        503.38922119140625
+        495.0205078125
       ],
       "ending": "io check before replay. Otherwise, it tries compatible domain directions in descending cosine order.",
       "kind": "prose"
@@ -1022,9 +1022,9 @@
       "last_line": "appearance category participates in this procedure.",
       "bbox": [
         317.25,
-        589.0679321289062,
+        581.2970581054688,
         519.05322265625,
-        599.0305786132812
+        591.2597045898438
       ],
       "ending": "ther to the new replay. No ground-truth shape or appearance category participates in this procedure.",
       "kind": "prose"

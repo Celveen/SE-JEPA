@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T20:36:42-08:00",
+  "checked_at": "2026-11-10T20:49:00-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "884afc159cc6d6224b8757471ee783017d6110517d89de3ef753075138437277",
+    "pdf_sha256": "1dcc024dc74921f4697038d87e3c1f38b3b40095c1c5a04cce1d06efe6231a64",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -42,7 +42,7 @@
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "2e7e7d69247f19b108636fbdf2d2e52b1ae4838758b3ac6fe3c8352dfb369e1e"
+    "pdf_sha256": "a019ef6a0a015b4ff2df541c51f8a85ec96701fd225ae4271289fa25a56f2eec"
   },
   "notes": [
     "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
@@ -374,5 +374,13 @@
     "teacher_changes_preserved": true,
     "numerical_claims_unchanged": true,
     "current_abstract_sha256": "74921bddaaa15230b0bbcb8349a9c3443e5554b228f822cb12372741737e3cbc"
+  },
+  "compute_environment_revision": {
+    "date": "2026-11-10",
+    "manuscript": "Appendix A",
+    "reported_hardware": "One server with eight NVIDIA A100 GPUs",
+    "author_requested_omission": "RTX 5090 system",
+    "main_eight_pages_pixel_identical": true,
+    "appendix_page_11_visually_reviewed": true
   }
 }

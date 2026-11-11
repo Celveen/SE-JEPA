@@ -34,7 +34,7 @@ before Conclusion on page 8. Figure 7 shows the goal-success gains for each shap
 single-column, vertically stacked layout. The appendix adds two complete
 rope/granular rollout examples from the original Drive PDFs; the combined
 manuscript has 20 pages, including eight main-text pages. The bibliography contains 42 cited references;
-Appendix A records the author-supplied 8-GPU RTX 5090 and A100 compute systems.
+Appendix A records the server equipped with eight NVIDIA A100 GPUs.
 
 The backbone discussion distinguishes task-trained ResNet models on PushObj/PushT
 from DINO-WM on rope/granular. Main Figure 6 presents five-round unseen-shape

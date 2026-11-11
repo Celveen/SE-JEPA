@@ -142,8 +142,8 @@ and Conclusion with Future work closes the eight-page main text on page 8. Resul
 are declared early in `sec/5_result_floats.tex`; a float barrier before Conclusion
 keeps them ahead of the closing section. The bibliography has 42 cited entries, including the original ResNet paper,
 with primary-source checks recorded in `data/reference_verification.json`.
-Appendix A reports training and evaluation on systems with 8 NVIDIA GeForce
-RTX 5090 GPUs and 8 NVIDIA A100 GPUs, as supplied by the authors.
+Appendix A reports the server with eight NVIDIA A100 GPUs used for training
+and evaluation.
 
 ## Backbone and learning-progress revision
 
