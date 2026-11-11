@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T22:10:27-08:00",
+  "checked_at": "2026-11-10T22:28:30-08:00",
   "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
   "shell_escape_required": false,
@@ -13,7 +13,7 @@
     "appendix_start_page": 11,
     "architecture_figure_page": 3,
     "deform_qualitative_page": 6,
-    "pdf_sha256": "610efce176bd6c045d4f79ad0b3bbc255fa887b06b4ce93c15e3a612fa1ad2c6",
+    "pdf_sha256": "f3f1c1fbeace5ef7c23a41e5dfcf4ac1b2853750c5a21d77d50e3e779da4910e",
     "main_table_page": 5,
     "main_figure_pages": {
       "1": 1,
@@ -373,7 +373,7 @@
     "explicitly_author_requested": true,
     "teacher_changes_preserved": true,
     "numerical_claims_unchanged": true,
-    "current_abstract_sha256": "899d61482ae9dea64f7a4c76fb1044bfcf82d8a4f545c26948b861c328d36f0f"
+    "current_abstract_sha256": "8b53145dde82bfc05f28a1a4b4335b131ae0f46a03b0cffd13439aacf4ee4a9c"
   },
   "compute_environment_revision": {
     "date": "2026-11-10",
@@ -403,12 +403,34 @@
   },
   "abstract_task_results_revision": {
     "audit": "data/abstract_results_audit.json",
-    "only_abstract_result_sentences_changed": true,
+    "only_abstract_result_sentences_changed": false,
     "all_evidence_source_hashes_verified": true,
     "unmodified_main_reference_labels": true,
     "main_pages": 8,
     "remaining_pages": 12,
     "main_formatting_unchanged": true,
-    "appendix_inputs_unchanged": true
+    "appendix_inputs_unchanged": true,
+    "current_scope": "Author-approved concise abstract, with explicit we propose SE-JEPA; all other manuscript sections unchanged."
+  },
+  "abstract_concise_revision": {
+    "audit": "data/abstract_results_audit.json",
+    "word_count": 184,
+    "verb": "propose",
+    "rendered_body_pages_changed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "visually_reviewed_pages": [
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "abstract_last_line_fraction": 0.4281,
+    "pages_5_to_20_body_pixels_unchanged": true,
+    "review_line_numbers_reflowed": true
   }
 }

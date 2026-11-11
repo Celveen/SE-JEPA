@@ -339,4 +339,10 @@ The abstract now attributes success gains separately to unseen PushObj shapes
 CEM and GD. A separate sentence gives CD reductions of 48.6% on rope and 26.7%
 on granular relative to pretrained DINO-WM. These values use the same audited
 results; only the wording and reporting precision changed. The original supplied
-abstract, teacher's code-availability sentence, and all other sections are retained.
+abstract remains archived; the teacher's code-availability sentence and all other
+sections are retained.
+
+The author-approved concise abstract now states “we propose SE-JEPA” explicitly.
+It preserves all audited task-specific values, the fixed original pretrained
+weights and separate slow predictors, and the teacher’s code-availability sentence.
+Only the abstract changed; the main text remains eight pages.
