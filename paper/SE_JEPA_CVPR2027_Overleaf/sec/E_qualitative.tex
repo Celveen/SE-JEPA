@@ -4,7 +4,7 @@
 \subsection{Rigid-object planning sequences}
 Figure~\mainref{fig:qualitative} selects two GD episodes where Frozen, DINO-WM, and AdaJEPA fail and \ours succeeds. The unseen-I example uses the paired shape evaluation. Its DINO-WM frame replays recorded actions; the same procedure exactly reproduces all 31 archived Frozen frames and states.
 
-The red-object example comes from round five of the 14-domain stream (\ours chain two, sample 30), matched exactly in both initial and goal state to DINO-WM sample 31. Frozen and AdaJEPA use their seed-100 runs and the official shape-shift checkpoint; \ours uses the mixed-stream checkpoint and accumulated memory described in Appendix~D. The DINO-WM final frame comes from a new frozen-model run with 30 MPC replans, preserving the original epoch-three checkpoint, target and seed mapping. The other three final frames replay their original actions. This is a comparison of complete systems whose initial checkpoints and learning histories differ.
+The red-object example comes from round five of the 14-domain stream, with the same initial configuration and goal for all methods. DINO-WM's final frame comes from the 30-replan simulation; the other final frames reproduce the recorded action sequences in the original simulator. Appendix~D reports the mixed-stream evaluation.
 
 Figure~\mainref{fig:qualitative} labels MPC replans. All baseline runs fail after 30 replans of five environment actions, exhausting the same 150-action budget. \ours succeeds after six replans in each row. The examples were selected for these outcomes; aggregate success uses the complete evaluation sets.
 
@@ -44,4 +44,4 @@ The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \
 
 
 \subsection{Reproducibility}
-Source manifests link archived episode records, simulator images, outcomes, checksums, and crops. Appendix~D specifies mixed-stream protocols and checkpoint provenance. The release will include code, configurations, learned states, and the supporting evaluation records.
+Source manifests link archived episode records, simulator images, outcomes, checksums, and crops. Appendix~D specifies the mixed-stream evaluation. The release will include code, configurations, learned states, and \mbox{the supporting evaluation records}.

@@ -28,6 +28,8 @@ for cell in mx.findall('.//mxCell'):
   cell.set('value','Rope' if cid=='20' else 'Granular');g.set('width','100');g.set('x',str(center-50))
 root.set('content',ET.tostring(mx,encoding='unicode'));svg=FIG/'source/architecture.svg';tree.write(svg,encoding='utf-8',xml_declaration=True)
 font_export=export(svg,FIG/'architecture.pdf')
+from add_architecture_text_layer import main as restore_selectable_labels
+restore_selectable_labels()
 with fitz.open(FIG/'architecture.pdf') as doc:doc[0].get_pixmap(matrix=fitz.Matrix(2,2)).save(FIG/'architecture.png')
 (DATA/'provenance.json').write_text(json.dumps({
  'source':str(SIM.relative_to(R)),'source_sha256':sha(SIM),

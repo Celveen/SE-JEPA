@@ -1,0 +1,11 @@
+{
+  "selectable_labels": 59,
+  "visible_render_pixel_identical": true,
+  "font_families": [
+    "SEJEPA Regular",
+    "SEJEPA Bold",
+    "SEJEPA Italic"
+  ],
+  "source": "figures/source/architecture.svg",
+  "method": "Original outlined artwork plus aligned invisible text using the original embedded fonts."
+}

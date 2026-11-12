@@ -1,20 +1,14 @@
 {
-  "checked_at": "2026-11-10T23:35:29-08:00",
-  "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
-  "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
-  "shell_escape_required": false,
   "main": {
-    "pages": 21,
+    "pages": 20,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
+    "pdf_sha256": "96bad277785304dec7fcc6dde98a6372c95a5fd933afb7d44ddce355f36dbd37",
     "main_text_pages": 8,
     "appendix_appended": true,
     "appendix_start_page": 11,
-    "architecture_figure_page": 3,
-    "deform_qualitative_page": 6,
-    "pdf_sha256": "6f929ba59174cdb461c2f897580e32036cde33f4b4cd3a4121cbd4c14edd05fb",
-    "main_table_page": 5,
+    "last_page_trailing_blank_lines": 2.43,
     "main_figure_pages": {
       "1": 1,
       "2": 3,
@@ -25,475 +19,41 @@
       "7": 7,
       "8": 8
     },
-    "conclusion_page": 8,
-    "all_main_floats_precede_conclusion": true,
-    "familiarity_ablation_page": 18,
+    "architecture_figure_page": 3,
+    "main_table_page": 5,
     "component_ablation_page": 8,
-    "inheritance_ablation_page": 7,
-    "last_page_trailing_blank_lines": 2.43,
-    "last_page_body_bottom_y_points": {
-      "left": 713.402099609375,
-      "right": 684.376220703125
-    },
-    "last_page_blank_measurement": "Right-column final body ink relative to full left-column body ink, divided by the unchanged 12pt baseline."
+    "conclusion_page": 8
   },
   "supplement": {
-    "pages": 12,
+    "pages": 11,
     "unresolved_references": false,
     "layout_warnings": [],
     "fonts_without_embedded_data": [],
-    "pdf_sha256": "4ee8026036b4b96e56843b738b772e0f2db88a0b6c778456e793508036de76fc"
+    "pdf_sha256": "6c84a75465e4677db7c76acecdaaa46a6e934b2b04e02f4bf784e6628d73cbd6"
   },
-  "notes": [
-    "Ancillary style-source UTF-8 warnings and PDF 1.7 input/1.5 output notices; output rendered and inspected.",
-    "The appendix includes pages devoted to figures and tables.",
-    "Raw simulator frames remain raster; labels and charts are vector."
-  ],
-  "main_numbered_equations": 5,
-  "pusht_audit": "data/pusht_audit.json",
-  "reporting_overrides": "data/reporting_overrides.json",
-  "bibliography_entries": 42,
-  "bibliography_verification": "data/reference_verification.json",
-  "abstract_matches_author_source": false,
-  "qualitative_selection": "data/revision_assets/selection_manifest.json",
-  "hardware_statement": {
-    "source": "Author instruction; RTX 5090 system omitted in the accepted hardware revision",
-    "systems": [
-      "8 x NVIDIA A100"
-    ],
-    "scope": "Model training and evaluation"
-  },
-  "learning_progress": {
-    "source": "data/learning_progress.json",
-    "figure": "figures/learning_progress.pdf",
-    "color_counts_match_independent_audit": true,
-    "shape_rounds": 5,
-    "color_rounds": 5,
-    "deform_passes": 4,
-    "metric_directions": {
-      "success": "higher is better",
-      "Chamfer distance": "lower is better"
-    }
-  },
-  "backbones": {
-    "PushObj/PushT": "Task-trained ResNet-based world models",
-    "Rope/Granular": "DINO-WM with pretrained DINOv2 features"
-  },
-  "external_baseline_audit": {
-    "source_commit": "974c70aaefee43a867840fd118f21f7c39d452e2",
-    "source_manifest": "data/vis50/vis50_sources.json",
-    "original_npz_files_checked": 20,
-    "episodes_checked": 1000,
-    "pushobj_without_local_seven_shape_evaluation": [],
-    "published_pushobj": "DreamerV3 and IRIS PushObj cells superseded by the verified seven-shape CEM evaluation at 31f9b34.",
-    "dinowm_visual_cells_superseded_by": "data/dinowm_pusht_cem_epoch3/audit.json",
-    "missing_cell_recheck": "data/dreamer_iris_pushobj_20261110/local_audit.json"
-  },
-  "main_figure_revision": {
-    "progress_and_efficiency_means_only": true,
-    "se_jepa_emphasis_figures": [
-      1,
-      3,
-      4,
-      5,
-      6,
-      8,
-      9
-    ],
-    "teaser": {
-      "layout": "Single column: the supplied recurring-shift schematic above the GD chart.",
-      "data": "data/teaser_bars.csv",
-      "editable_source": "figures/source/teaser_combined.svg",
-      "ours": "Deep blue, bold method label, diagonal hatch and direct value labels",
-      "bar_value_labels": "Printed at CSV precision. SE-JEPA PushObj All uses the original three-chain mean (81.59%).",
-      "values_checked": 15,
-      "planner_groups": {
-        "GD": [
-          "Frozen",
-          "DINO-WM",
-          "LeWM",
-          "adaJEPA",
-          "SE-JEPA"
-        ]
-      },
-      "author_input": "figures/source/teaser_combined_original.svg",
-      "bar_panel": "figures/teaser_bars.svg",
-      "pushobj_baseline_provenance": "data/reporting_overrides.json#figure_1_pushobj_gd",
-      "pusht_shift_provenance": "Three paired GD results, cross-checked against the six shifted conditions in Drive test_summary.json.",
-      "ordering": "Ascending all-shape PushObj success; shared method order in all panels, SE-JEPA at bottom.",
-      "episodic_baseline_label": "adaJEPA (lower chart); One-round adaptive JEPA (upper schematic)",
-      "upper_schematic_unchanged": true,
-      "pusht_baseline_provenance": "data/reporting_overrides.json#figure_1_pusht_gd"
-    },
-    "condition_gains": {
-      "source": "data/condition_gains.csv",
-      "figure": "figures/condition_gains.pdf",
-      "values_checked": 26,
-      "protocol": "Full SE-JEPA versus episodic AdaJEPA with GD and CEM, per condition.",
-      "layout": "Single column, PushObj above PushT; compressed vertical margins and row spacing without shrinking text",
-      "canvas_inches": [
-        3.35,
-        2.75
-      ]
-    },
-    "planning_efficiency": {
-      "planner": "GD",
-      "sources": [
-        "data/revision_assets/shape_summary.json",
-        "data/revision_assets/visual_summary.json"
-      ],
-      "official_baseline_audit": "data/checkpoint_audit.json"
-    },
-    "qualitative": {
-      "figure": "figures/qualitative.pdf",
-      "text_width_fraction": 0.9,
-      "layout": "Two rows, six columns each; all four methods in both rows",
-      "goal_explanatory_line_removed": true,
-      "displayed_step_unit": "MPC replans",
-      "dino_wm_cases": {
-        "shape": {
-          "case": "Paired PushObj I / GD / seed 2000 / sample 0",
-          "provenance": "data/revision_assets/dinowm_shape_I/replay_provenance.json",
-          "replans": 30,
-          "physical_steps": 150
-        },
-        "visual": {
-          "case": "Mixed14 red-object / GD / exact target intersection",
-          "provenance": "data/revision_assets/dinowm_visual_30mpc/local_audit.json",
-          "replans": 30,
-          "physical_steps": 150
-        }
-      },
-      "matched_initial_and_goal_pixels": true,
-      "original_visual_example_archived": true,
-      "main_cem_step_units_unchanged": false,
-      "common_environment_action_budget": 150,
-      "ours_success_mpc_replans_per_case": 6,
-      "visual_dino_failure_mpc_replans": 30,
-      "other_baseline_failure_mpc_replans": 30,
-      "caption_explains_visual_dino_replanning_frequency": false,
-      "pending_visual_rerun": {
-        "status": "completed_and_integrated",
-        "evidence": "data/revision_assets/dinowm_visual_30mpc/local_audit.json"
-      },
-      "all_methods_actions_per_replan": 5,
-      "real_visual_rerun_verified": true,
-      "figure3_still_counts_actual_mpc_replans": true
-    }
-  },
-  "ablation": {
-    "archive_commit": "3faad041417c6f2a22df2ad62822c34fd075c4bb",
-    "heldout_episodes_per_run": 1050,
-    "scores": "data/reporting_overrides.json",
-    "familiarity_table": "tables/familiarity_ablation.tex",
-    "component_table": "tables/pushobj_component_ablation.tex",
-    "slow_rate_table": "tables/pushobj_learning_rates.tex",
-    "fast_accumulation_table": "tables/fast_accumulation.tex",
-    "fast_accumulation_source": "data/matched_accumulation_source.md"
-  },
-  "unseen_rope_audit": "data/reporting_overrides.json#unseen_rope_audit",
-  "official_checkpoint_audit": "data/checkpoint_audit.json",
-  "appendix_rollouts": {
-    "source_manifest": "data/revision_assets/reference_rollout_sources.json",
-    "requested_reference_cases": 4,
-    "additional_cases": 0,
-    "source_format": "Native Drive PDFs, cropped by panel; original text, curves, and simulator pixels preserved",
-    "figures": {
-      "fig:full_shape": {
-        "number": 10,
-        "page": 20
-      },
-      "fig:full_visual": {
-        "number": 11,
-        "page": 20
-      },
-      "fig:deform_reference": {
-        "number": 12,
-        "page": 21
-      }
-    },
-    "rendered_pages_checked": [
-      20,
-      21
-    ],
-    "removed_final_figure_number": 13
-  },
-  "mixed14": {
-    "source": "data/mixed14_audit.json",
-    "verified_npz_files": 588,
-    "episodes": 29400,
-    "verified_state_links": 414,
-    "state_audits": 420,
-    "chains": 6,
-    "rounds_per_chain": 5,
-    "shared_memory_across_both_families": true,
-    "official_adajepa_checkpoint": "pushobj_shape_shift",
-    "evaluation": "Online learning with repeated targets; distinct from held-out benchmarks",
-    "figure_page": 8,
-    "summary_table_page": 15,
-    "domain_table_page": 16,
-    "placement": "Main Section 4.5 and Figure 8; detailed comparison tables in Appendix D",
-    "main_section": "4.5",
-    "main_section_page": 7,
-    "plot_layout": "Three learning panels above one row of 14 native observations; all methods average GD and CEM equally",
-    "plot_aggregation_source": "data/mixed14_planner_average.json",
-    "baseline_lines": "Horizontal archived evaluation references; not five-round trajectories",
-    "plot_uncertainty": "Sample SD across six actual planner-by-chain or planner-by-seed success rates",
-    "observation_strip": {
-      "count": 14,
-      "source": "data/revision_assets/mixed14_observations/manifest.json",
-      "frame": "Native saved initial observation",
-      "selection": "GD chain 2, round 5, episode 0 of every domain",
-      "pixels_unchanged": true,
-      "placement": "One row below the three learning panels"
-    }
-  },
-  "clean_upload_files": 50,
-  "pushobj_cem_main": {
-    "source": "data/pushobj_cem_online/audit.json",
-    "protocol": "Fifth-round online performance",
-    "raw_files_verified": 21,
-    "episodes": 1050,
-    "successes": 844,
-    "all_percent": 80.38095238095238,
-    "unseen_percent": 73.11111111111111,
-    "mean_replans": 12.994285714285715,
-    "displayed_cells": [
-      "80.4",
-      "73.1",
-      "12.99"
-    ],
-    "paired_post_learning_tables_unchanged": true,
-    "table_caption_states_protocol_difference": true,
-    "source_and_table_checked": true
-  },
-  "qualitative_source_hashes_verified": true,
-  "dinowm_pusht_cem": {
-    "shift_rate": 33.0,
-    "color_rate": 37.333333333333336,
-    "steps": 22.05,
-    "steps_unit": "five-environment-action equivalents",
-    "native_mpc_replans": 4.41,
-    "scale_to_table_steps": 5,
-    "max_table_steps": 30,
-    "shift_successes": 99,
-    "shift_episodes": 300,
-    "color_successes": 56,
-    "color_episodes": 150,
-    "mpc_replans_total": 1323,
-    "environment_actions_per_replan": 25,
-    "mean_environment_actions": 110.25,
-    "max_mpc_replans": 6,
-    "physical_budget": 150,
-    "checkpoint_epoch": 3,
-    "checkpoint_sha256": "4cba2153c3851dd4f9fabc7ad67fd8384df11fc65422bf9d9dfc7000d48fa3a4",
-    "raw_episode_files_checked": 5,
-    "summary_only_conditions": [
-      "red_object",
-      "red_goal"
-    ]
-  },
-  "abstract_author_source": "data/drive_reference/abstract1.md",
-  "abstract_numeric_audit": "data/abstract_results_audit.json",
-  "gd_ablation_supplement": {
-    "audit": "data/gd_ablation_20261110/audit.json",
-    "source_audit": "data/gd_ablation_20261110/source_audit.json",
-    "unique_conditions": 51,
-    "evaluations": 53550,
-    "raw_npz_verified": 966,
-    "visual_state_pair_groups": 21,
-    "main_table_columns": [
-      "PushObj C1",
-      "PushT C1",
-      "PushT C2"
-    ],
-    "appendix_tables": {
-      "tab:gd_components_full": {
-        "number": "14",
-        "page": 17
-      },
-      "tab:gd_inheritance_chains": {
-        "number": "15",
-        "page": 18
-      }
-    },
-    "official_benchmark_and_abstract_unchanged": false,
-    "future_work_maturity_calibration_added": true,
-    "official_benchmark_unchanged": true,
-    "abstract_status": "Numerical claims unchanged; wording clarified in the subsequent Overleaf sync."
-  },
+  "checked_at": "2026-11-12T07:00:45-08:00",
+  "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
+  "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
+  "shell_escape_required": false,
+  "abstract_unchanged": true,
   "paragraph_endings": {
-    "audit": "data/paragraph_layout_audit.json",
-    "prose_and_captions": 127,
-    "bibliography_entries": 42,
-    "minimum_required_fraction": 0.4,
-    "minimum_prose_caption_fraction": 0.402,
-    "minimum_reference_fraction": 0.4663,
-    "unmatched": 0,
-    "short": 0,
-    "standalone_supplement_references_checked": 2,
-    "standalone_supplement_prose_checked": 70
+    "main": 125,
+    "supplement": 69,
+    "threshold": 0.4
   },
-  "figure_alignment_revision": {
-    "figure1_upper_pixel_identical_at_3x": true,
-    "figure1_lower_left_margin_before": 0.265,
-    "figure1_lower_left_margin_after": 0.215,
-    "figure2_new_test_time_tasks": [
-      "Rope",
-      "Granular"
-    ],
-    "figure2_replaced_tasks": [
-      "Square",
-      "T"
-    ],
-    "figure2_original_simulator_pixels_verified": true,
-    "figure2_other_images_unchanged": true,
-    "figure2_provenance": "data/revision_assets/architecture_tasks/provenance.json"
+  "bibliography_endings": {
+    "main": 42,
+    "supplement": 2,
+    "threshold": 0.4
   },
-  "dreamer_iris_pushobj": {
-    "source_commit": "31f9b34a3b46ef287e9a764b6d1fbef20b9e24f0",
-    "audit": "data/dreamer_iris_pushobj_20261110/local_audit.json",
-    "verified_episodes": 700,
-    "only_main_table_columns_changed": [
-      "PushObj All",
-      "PushObj Unseen",
-      "PushObj Steps"
-    ],
-    "no_extra_main_table_markers": true,
-    "checkpoint_and_adapter_scope_documented_in": "Appendix C"
-  },
-  "readability_review": {
-    "record": "data/readability_review_20261110.json",
-    "all_sections_reviewed": true,
-    "supplied_abstract_verbatim": false,
-    "figures_unchanged": true,
-    "other_numeric_results_unchanged": true,
-    "main_text_pages": 8,
-    "trailing_blank_lines": 2.43,
-    "abstract_status": "Superseded by the requested fixed-weight and separate-memory clarification after syncing teacher edits from Overleaf."
-  },
-  "abstract_clarification": {
-    "record": "data/overleaf_sync_20261110.json",
-    "explicitly_author_requested": true,
-    "teacher_changes_preserved": true,
-    "numerical_claims_unchanged": true,
-    "current_abstract_sha256": "8b53145dde82bfc05f28a1a4b4335b131ae0f46a03b0cffd13439aacf4ee4a9c"
-  },
-  "compute_environment_revision": {
-    "date": "2026-11-10",
-    "manuscript": "Appendix A",
-    "reported_hardware": "One server with eight NVIDIA A100 GPUs",
-    "author_requested_omission": "RTX 5090 system",
-    "main_eight_pages_pixel_identical": true,
-    "appendix_page_11_visually_reviewed": true
-  },
-  "architecture_author_revision": {
-    "source": "figures/source/architecture_author_20261110.svg",
-    "source_sha256": "d06dd30e6caacfb554ad7487219895f15b8cdb76889f28cc403828786c41a1f9",
-    "editable_result": "figures/source/architecture.svg",
-    "print_pdf": "figures/architecture.pdf",
-    "preview": "figures/architecture.png",
-    "provenance": "data/revision_assets/architecture_tasks/provenance.json",
-    "modified_panels": [
-      "Square -> Rope",
-      "T -> Granular"
-    ],
-    "author_colors_positions_embedded_fonts_preserved": true,
-    "all_other_svg_elements_and_rendered_pixels_identical_to_author": true,
-    "paper_rendered_changes_only_on_page": 3,
-    "all_other_19_pages_pixel_identical_to_prior_release": true,
-    "main_cross_references_unchanged": true,
-    "supplement_rebuild_unnecessary": "No supplement inputs or main.aux changed."
-  },
-  "abstract_task_results_revision": {
-    "audit": "data/abstract_results_audit.json",
-    "only_abstract_result_sentences_changed": false,
-    "all_evidence_source_hashes_verified": true,
-    "unmodified_main_reference_labels": true,
-    "main_pages": 8,
-    "remaining_pages": 12,
-    "main_formatting_unchanged": true,
-    "appendix_inputs_unchanged": true,
-    "current_scope": "Author-approved concise abstract, with explicit we propose SE-JEPA; all other manuscript sections unchanged."
-  },
-  "abstract_concise_revision": {
-    "audit": "data/abstract_results_audit.json",
-    "word_count": 184,
-    "verb": "propose",
-    "rendered_body_pages_changed": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "visually_reviewed_pages": [
-      1,
-      2,
-      3,
-      4,
-      8
-    ],
-    "abstract_last_line_fraction": 0.4281,
-    "pages_5_to_20_body_pixels_unchanged": true,
-    "review_line_numbers_reflowed": true
-  },
-  "mixed_deformable": {
-    "source": "data/deform_mixed_20261110/sources.json",
-    "audit": "data/deform_mixed_20261110/audit.json",
-    "section": "D.6",
-    "section_page": 15,
-    "table_number": 13,
-    "table_page": 17,
-    "chains": 1,
-    "planner": "CEM",
-    "rounds": 3,
-    "episodes": 300,
-    "source_files_verified": 98,
-    "raw_routing_decisions": 900,
-    "stored_member_purity_percent": 100,
-    "final_stored_members": {
-      "rope": 80,
-      "granular": 150
-    },
-    "correct_slow_retrievals": 653,
-    "total_slow_retrievals": 660,
-    "correct_retrieval_percent": 98.93939393939394,
-    "rounds_2_3_correct": 457,
-    "rounds_2_3_total": 457,
-    "main_and_bibliography_first_ten_pages_pixel_identical": false,
-    "main_8_page_layout_unchanged": false,
-    "mixed_protocol_distinguished_from_single_domain": true,
-    "low_granular_success_reported": true,
-    "all_paragraph_endings_pass": true
-  },
-  "mixed_deformable_main_revision": {
-    "section": "4.5",
-    "page": 7,
-    "table": {
-      "number": "2",
-      "page": 7
-    },
-    "detailed_appendix_table": {
-      "number": "13",
-      "page": 17
-    },
-    "figure_7_canvas_inches": [
-      3.35,
-      2.75
-    ],
-    "previous_figure_7_canvas_inches": [
-      3.35,
-      3.9
-    ],
-    "figure_font_size_unchanged": true,
-    "figure_values_unchanged": true,
-    "experiment_data_unchanged": true,
-    "abstract_unchanged": true,
-    "main_pages": 8,
-    "last_page_blank_lines": 2.43,
-    "paragraphs_checked": 127,
-    "paragraph_minimum_width_fraction": 0.4,
-    "all_paragraph_endings_pass": true,
-    "metric_scope": "Stored-member purity; material-correct slow-predictor selections, excluding frozen-reference choices. Different goal trajectories across rounds; single CEM chain with fast adaptation and absolute-error write check."
-  }
+  "clean_source_files": 49,
+  "architecture_selectable_labels": 59,
+  "architecture_visible_render_unchanged": true,
+  "CEM_records_verified": 21000,
+  "CEM_raw_batches_verified": 399,
+  "notes": [
+    "Overleaf pdfLaTeX can use different line breaks; the local eight-page layout is verified.",
+    "Appendix pages devoted to figures/tables are intentional.",
+    "Historical source records remain in the research archive; the clean upload contains only active dependencies."
+  ]
 }

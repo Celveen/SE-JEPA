@@ -47,6 +47,9 @@ Persistent replay is re-encoded by the reference encoder. Each slow learner is a
 
 Replay stores compact latent trajectories rather than images. The pending pool is bounded, and merging and absorption remove redundant predictor copies as compatible domains are recognized.
 
+\paragraph{Memory and computation.}
+For $K$ domains, persistent model storage consists of $K$ slow predictor copies plus the frozen reference. Replay storage scales with the number of retained latent transitions, rather than the number of pixels in the original observations. Retrieval scores eligible predictors during the first three replans; slow optimization occurs after an accepted write, with 15 updates per standard write. Thus interaction efficiency and computation depend on different quantities: the former on replans until success, the latter on candidate count, retained experience, and replay updates. Domain merging shares both stored experience and a single surviving learner.
+
 \subsection{Order of decisions}
 Algorithm~\ref{alg:sejepa} summarizes a learning episode. Familiarity uses the geometric mean of newest-frame prediction errors on up to the first three observed transitions. The threshold is calibrated once on the shape backbone and transfers unchanged to the visual experiments.
 

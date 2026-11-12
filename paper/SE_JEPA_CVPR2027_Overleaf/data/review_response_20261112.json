@@ -1,0 +1,80 @@
+{
+  "abstract_unchanged_sha256": "8b53145dde82bfc05f28a1a4b4335b131ae0f46a03b0cffd13439aacf4ee4a9c",
+  "teacher_review_source": "main(2).pdf, older 20-page draft",
+  "addressed": [
+    {
+      "topic": "Abstract task attribution and deployment timescale",
+      "action": "Retained latest accepted abstract verbatim; it already gives task-specific gains. Five-round timescale is explicit in introduction and results."
+    },
+    {
+      "topic": "Write validation versus retrieval",
+      "action": "Introduction now separates predictor reliability from current-encounter relevance; method states write ratio 1.2 and maturity ratio 0.9 over three records."
+    },
+    {
+      "topic": "Domain merging",
+      "action": "Clarified buffer union, larger-domain predictor retention, retirement of the absorbed predictor, and frozen-base fallback."
+    },
+    {
+      "topic": "Near-orthogonal updates and domain routing",
+      "action": "Distinguished adjacent-pair statistics from candidate-pair similarity, with predictive transfer determining compatibility. No unmeasured within-domain distribution claim added."
+    },
+    {
+      "topic": "Figure 1 versus Table 1",
+      "action": "Retained held-out GD versus online CEM labels and added a concise explicit explanation in Appendix B.1."
+    },
+    {
+      "topic": "Red-object shift",
+      "action": "Explained the persistent correction and limited within-episode evidence; did not assert unmeasured background-fitting causes."
+    },
+    {
+      "topic": "Compute and memory",
+      "action": "Added implementation-level storage and update accounting. No measured latency or memory numbers are available."
+    },
+    {
+      "topic": "Checkpoint and rerun prose",
+      "action": "Removed repeated asymmetry/rerun commentary; retained factual model initialization, evaluation phase, sample counts, and published-score attribution."
+    }
+  ],
+  "data_updates": {
+    "CEM_conditions_verified": 20,
+    "CEM_evaluations_verified": 21000,
+    "CEM_raw_NPZ_verified": 399,
+    "retained_chains": {
+      "PushObj": 1,
+      "PushT": 2
+    },
+    "removed_display_columns": [
+      "PushT C1",
+      "PushT C3"
+    ],
+    "complete_common_grid": "GD and CEM: 2 tasks x 7 unique variants",
+    "GD_memory_design": "Separate complete 2-task table; missing CEM runs are not fabricated."
+  },
+  "missing_experiments_priority": [
+    {
+      "priority": 1,
+      "experiment": "Within-domain / cross-domain update-direction distributions and routing diagnostic",
+      "purpose": "Test whether sparse compatible directions support routing despite near-zero adjacent-episode mean. Use external analysis labels, not only the learned assignment."
+    },
+    {
+      "priority": 2,
+      "experiment": "Runtime, peak GPU memory, predictor/buffer storage by domain count",
+      "purpose": "Measure per-replan, retrieval, and replay costs under matched hardware and planner budgets."
+    },
+    {
+      "priority": 3,
+      "experiment": "CEM reset, direct inheritance, shared EMA, shared replay, separate familiarity read/write ablations",
+      "purpose": "Extend the memory-design evidence to both planners using the same complete comparison grid."
+    },
+    {
+      "priority": 4,
+      "experiment": "Seven-round PushObj write-decision counts",
+      "purpose": "Separate familiar bypass, pending, validation rejection, and accepted writes; cross-check episode totals."
+    }
+  ],
+  "implementation_check": {
+    "maturity_statistic": "arithmetic mean, <= 0.9 over the latest three validation ratios",
+    "source": "data/revision_assets/dinowm_shape_I/source/continual.py:307-311",
+    "inherited_by": "data/deform_mixed_20261110/source_code/continual_v7.py"
+  }
+}

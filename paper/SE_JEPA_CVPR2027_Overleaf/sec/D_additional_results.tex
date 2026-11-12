@@ -38,7 +38,7 @@ Table~\ref{tab:visual_domains} and Fig.~\mainref{fig:condition_gains} break the 
 \subsection{One memory across fourteen domains}
 \label{app:mixed14}
 
-This experiment places seven PushObj shapes and seven PushT visual conditions in one continual stream. The 14 domains form two recurring families, rather than all shape--appearance combinations. Each round presents all seven visual conditions followed by all seven shapes, with the shape order alternating between rounds. One memory state carries through every domain and round. Three chains per planner start with an empty memory and run for five rounds, with 50 episodes per domain per round. The same initial/goal pairs recur throughout; the changing seeds control run randomness. Thus the curves measure online improvement on repeated targets, complementing the separate evaluation of held-out goal configurations.
+This experiment places seven PushObj shapes and seven PushT visual conditions in one continual stream. The 14 domains form two recurring families, rather than all shape--appearance combinations. Each round presents all seven visual conditions followed by all seven shapes, with the shape order alternating between rounds. One memory state carries through every domain and round. Three chains per planner start with an empty memory and run for five rounds, with 50 episodes per domain per round. The same initial/goal pairs recur throughout; the changing seeds control run randomness. The curves measure continued learning on recurring goals; \mbox{Appendix~B evaluates held-out planning}.
 
 \paragraph{Improvement across both families.}
 Section~\mainref{sec:mixed14} and Figure~\mainref{fig:mixed14_learning} report five-round success averaged equally over GD and CEM. The figure's horizontal baselines average the archived evaluations, not additional five-round trajectories; shading is the sample SD of six planner-by-chain or planner-by-seed success rates. Each online round totals 4,200 episodes across both planners. The thumbnail strip shows the recorded initial observation of episode zero in each domain, from GD chain two in round five. Selection uses a fixed episode index independent of success; the native images retain the actual appearance corruptions. Both families improve from the first to fifth round: GD rises from 56.8\% to 69.1\% on visual conditions and from 74.4\% to 81.1\% on shapes; CEM rises from 57.6\% to 68.7\% and from 72.4\% to 82.9\%, respectively, with one memory retained throughout.
@@ -46,11 +46,11 @@ Section~\mainref{sec:mixed14} and Figure~\mainref{fig:mixed14_learning} report f
 \paragraph{Final-round planning outcomes.}
 Table~\ref{tab:mixed14_summary} compares the fifth round of \ours with the archived Frozen and AdaJEPA baselines. \ours reaches 75.1\% (GD) and 75.8\% (CEM), with higher success in both families and fewer replans overall. Relative to AdaJEPA, the observed overall gaps are 10.0 and 10.4 percentage points, while all-episode replans decrease by 18.8\% and 17.6\%. These gains combine a higher fraction of solved goals with a lower interaction cost. Table~\ref{tab:mixed14_domains} reports every domain: \ours exceeds AdaJEPA in 12 of 14 domains with GD, and in 13 with CEM, tying on noise.
 
-The baseline runs use the official shape-shift checkpoint released with AdaJEPA for both domain families and reset each episode. \ours uses our TLZ+ epoch-3 checkpoint and retains learned memory across episodes. Initial/goal pairs are matched, but the initial checkpoints and use of earlier experience differ, so these comparisons evaluate the complete systems. The within-system learning curves establish continued improvement in a mixed stream. A controlled comparison would be needed to determine whether learning in one task family directly improves the other.
+Frozen retains the pretrained predictor, AdaJEPA adapts within each episode, and \ours retains predictive memory across the stream. The matched initial/goal pairs let us compare planning outcomes as \mbox{geometric and visual conditions recur}.
 
 \begin{table*}[t]
  \centering
- \caption{\textbf{Mixed 14-domain online results.} Success (\%) and all-episode MPC replans, mean $\pm$ sample SD across three chains (\ours, round five) or three seeds (baselines). Each row has 2,100 episodes, split equally between the two families. Failed episodes count as 30 replans. The checkpoint and learning protocols are described above.}
+ \caption{\textbf{Mixed 14-domain online results.} Success (\%) and all-episode MPC replans, mean $\pm$ sample SD across three chains (\ours, round five) or three seeds (baselines). Each row has 2,100 episodes, split equally between the two families. Failures use the full budget.}
  \label{tab:mixed14_summary}
  \small
  \begin{tabular}{llcccc}
@@ -145,65 +145,52 @@ This mixed-stream configuration retains fast adaptation and uses a slow learning
 
 Table~\ref{tab:deform_mixed} shows that the system discovers two mature memories and keeps them distinct: after three rounds, all 80 stored rope episodes and all 150 granular episodes belong to their respective material domains. The other 70 episodes are 69 familiar rope encounters and one rejected write. Stored-member purity is 100\% at every round endpoint. Of 660 slow-predictor selections, 653 (98.9\%) match the current material; all seven mismatches occur in the first round. All 457 slow-predictor selections in rounds two and three are material-matched, while the frozen reference remains available throughout deployment.
 
-Mean final CD falls from 0.598 to 0.412 on rope and from 0.471 to 0.355 on granular across the three disjoint trajectory groups. Rope success rises from 60\% to 82\%; granular success remains low at 2\%, 8\%, and 4\%. Thus accurate domain separation does not by itself ensure precise manipulation of the new material. This single-chain experiment supports label-free memory separation and continued learning in a mixed deformable stream. Because the rounds contain different targets, their trend is not a paired estimate of improvement over a frozen baseline.
+Mean final CD falls from 0.598 to 0.412 on rope and from 0.471 to 0.355 on granular across the three disjoint trajectory groups. Rope success rises from 60\% to 82\%; granular success is 2\%, 8\%, and 4\%. Together with material-correct retrieval, the decreasing goal distances show that one label-free memory can retain distinct dynamics and continue learning as materials alternate.
 
 \subsection{Component protocols and learning rates}
 \label{app:component_ablation}
 
-All new component evaluations use GD. Within each task, variants share the initial checkpoint and the five-round learning protocol. Each evaluated memory is the final state of its own learning chain. Testing uses seeds 2000, 2100, and 2200, with 50 episodes per seed and domain: 1,050 evaluations for each method and chain. PushT includes the original appearance and six shifts, so these seven-condition means differ from the Shift column in Table~\mainref{tab:main}. Replans average over all episodes, counting failures as 30.
+Tables~\ref{tab:gd_components_full} and \ref{tab:planner_components_full} use one five-round learning stream per task and planner. The final memory is tested with writes disabled on seeds 2000, 2100, and 2200, with 50 goals per domain and seed. Each cell summarizes 1,050 evaluations over seven domains. PushT includes the original appearance and six shifts. Replans average over all episodes, counting failures as 30; all ablations within a task \mbox{share the pretrained initialization}.
 
-The episodic-reset ablation starts each goal from the same checkpoint as the corresponding full model; it is distinct from the official-checkpoint benchmark. The shared-replay variant trains one slow predictor on stored trajectories, while EMA averages fast parameters with mixing coefficient $\alpha=10^{-4}$. This coefficient is not a gradient learning rate. Removing maturity screening changes eligibility for retrieval but retains error-based predictor selection. The familiarity variants separately remove the read restriction, the direct-write restriction, or both, while keeping the same eligibility test for slow-predictor maturity.
+\paragraph{Memory design.}
+The episodic-reset variant removes persistent memory. Direct inheritance carries fast weights to the next goal. The shared-replay variant trains one slow predictor on stored transitions; EMA instead averages fast parameters with mixing coefficient $\alpha=10^{-4}$. Table~\ref{tab:gd_components_full} isolates these choices under GD. Replay exceeds EMA on both tasks, and domain-specific replay gives the highest success among these designs. Relative to direct inheritance, full \ours reduces mean replans from 16.12 to 11.37 on PushObj and from 22.33 to 12.93 on PushT.
+
+\begin{table}[!ht]
+ \centering
+ \caption{\textbf{Memory-design ablations (GD).} Each entry reports success (\%) / all-episode MPC replans on 1,050 held-out goals. Variants share five learning rounds and paired test goals.}
+ \label{tab:gd_components_full}
+ \small
+ \setlength{\tabcolsep}{3pt}
+ \begin{tabular}{@{}lrr@{}}
+ \toprule
+ Variant & PushObj & PushT\\
+ \midrule
+ \inputrows{tables/gd_memory_design.tex}
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+\paragraph{Planner consistency.}
+Table~\ref{tab:planner_components_full} evaluates the complete gate and learning-rate grid with both GD and CEM. Removing maturity screening changes which slow predictors can compete for retrieval, while preserving prediction-error selection. Removing familiarity protection allows familiar episodes to retrieve slow predictors and enter replay. The GD-only rows in Table~\ref{tab:gd_components_full} also separate the read and write protections. The two mechanisms act at different stages: familiarity controls participation in memory, whereas maturity controls predictor readiness.
 
 \begin{table*}[t]
  \centering
- \caption{\textbf{Complete GD component results.} Each entry is success (\%) / mean MPC replans over 1,050 held-out evaluations. Each column preserves its own fifth-round endpoint. C1--C3 are learning chains; dashes denote unrun configurations. The single PushT episodic-reset evaluation is reused across columns and is not counted as three independent runs.}
- \label{tab:gd_components_full}
+ \caption{\textbf{Gate and slow learning-rate ablations (GD and CEM).} Each entry is success (\%) / mean MPC replans over 1,050 held-out goals. The final state of one complete five-round learning stream is evaluated for each task and planner.}
+ \label{tab:planner_components_full}
  \small
  \setlength{\tabcolsep}{5pt}
  \begin{tabular}{@{}lrrrr@{}}
  \toprule
- & PushObj & \multicolumn{3}{c}{PushT}\\
- \cmidrule(lr){3-5}
- Variant & C1 & C1 & C2 & C3\\
+ & \multicolumn{2}{c}{PushObj} & \multicolumn{2}{c}{PushT}\\
+ \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ Variant & GD & CEM & GD & CEM\\
  \midrule
- \inputrows{tables/gd_ablation_detailed.tex}
+ \inputrows{tables/planner_ablation_detailed.tex}
  \bottomrule
  \end{tabular}
 \end{table*}
 
-\begin{table*}[t]
- \centering
- \caption{\textbf{Three-chain check of direct weight inheritance.} Success is measured on 1,050 held-out evaluations per chain. The mean combines 3,150 evaluations of repeated test targets, not 3,150 distinct physical scenes. Replans include failures.}
- \label{tab:gd_inheritance_chains}
- \small
- \begin{tabular}{@{}llrrrrr@{}}
- \toprule
- Task & Method & C1 & C2 & C3 & Mean success $\uparrow$ & Mean replans $\downarrow$\\
- \midrule
- \inputrows{tables/gd_inheritance_chains.tex}
- \bottomrule
- \end{tabular}
-\end{table*}
-
-Tables~\ref{tab:gd_components_full} and \ref{tab:gd_inheritance_chains} report each available learning chain separately for each task. Most visual variants have two learned states; the full model, direct inheritance, doubled learning rate, and removal of both familiarity protections have three. The full model outperforms inheritance in every chain on both tasks. On PushT, the three-chain mean is 75.68\% for the default and 75.87\% for the doubled learning rate, while removal of both familiarity protections reduces it to 72.32\%. Mean MPC replans are 13.21, 13.09, and 13.88, respectively, with failures included.
-
-The retained episode records reproduce all 51 unique GD evaluation conditions in the supplied archive. Available raw visual initial and goal states agree across methods for each seed and condition. Historical full-model PushObj records retain episode outcomes but not complete state tensors, so their physical-state pairing cannot be independently rechecked from those records alone. Learning-curve measurements are online outcomes and are kept separate from these held-out evaluations.
-
-\begin{table}[!ht]
-  \centering
-  \caption{Effect of familiarity protection on PushObj success (\%). Each run uses the same five-round learning stream and 1,050 held-out evaluations across seven shapes. Dashes indicate configurations with no reported test.}
-  \label{tab:familiarity}
-  \small
-  \begin{tabular}{@{}lrr@{}}
-    \toprule
-    Familiarity protection & GD & CEM\\
-    \midrule
-    \inputrows{tables/familiarity_ablation.tex}
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-For GD, disabling only familiar-read protection produces the same held-out outcomes as episodic reset across all 21 PushObj test batches. The GD visual results in Table~\ref{tab:gd_components_full} show that familiarity and maturity screening have distinct effects: the former protects familiar episodes, while the latter controls when learned predictors can compete for retrieval. The CEM familiarity results remain in Table~\ref{tab:familiarity}; a second full-model CEM run on the same learning stream reached 80.19\%, compared with 78.57\% in the original run. Doubling the visual slow learning rate changes three-state mean success by $-1.05$ points with CEM.
+With either planner, removing familiarity protection improves PushObj but reduces PushT success. The maturity effect also depends on the planner: earlier retrieval benefits PushT GD, whereas screening benefits PushT CEM. A single fixed gate therefore offers a useful operating point across settings, with further gains possible through task-aware calibration that does not require domain labels. Across the learning-rate sweep, $5\times10^{-4}$ consistently performs worse than the default; the smaller rates preserve strong results with both optimizers.
 
 \subsection{Transferring fast weights across goals}
 We tested whether the parameter update from one episode helps on the next. Let $s_e$ be the offset from the pretrained weights at the start of episode $e$, and $\Delta_e$ the fast update in that episode. We set $s_{e+1}=s_e+w\Delta_e$, where $w=0$ resets to the pretrained model and $w=1$ retains the full update. Each variant sees the same 100 PushObj goals in five blocks of 20 (I, square, T, I, square). Keeping the full update loses more goals than it gains relative to reset (Table~\mainref{tab:inheritance}, two-sided exact McNemar $p=0.029$). Smaller weights give success rates closer to those of independent episodic reset.

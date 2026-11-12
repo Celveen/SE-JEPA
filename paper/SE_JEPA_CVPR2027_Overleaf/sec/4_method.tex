@@ -37,7 +37,7 @@ For an unfamiliar episode, $\Delta_e$ concatenates the fast predictor and encode
 \end{equation}
 where $c_k$ is the domain's unit-length prototype. The retrieved domain is the first write candidate; otherwise, candidates are ranked by $s(e,k)$. The trajectory is assigned to a candidate domain if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned trajectories remain in a pending pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
 
-Two contacts with the same object can induce different fast updates. Delayed domain creation retains unusual interactions until similar evidence arrives. The new predictor can then train on trajectories from several encounters. As more evidence arrives, two domains merge if each predictor transfers to the other's recent episodes and both outperform the reference. This bidirectional check requires the merged domain to model both groups of trajectories. A mature domain can also absorb a smaller group whose trajectories it already predicts well. \supref{A} gives the thresholds and the rules for maintaining each prototype.
+The near-zero mean cosine concerns consecutive episodes, not all pairs of encounters with compatible dynamics. Fingerprints propose candidates; prediction errors determine whether their trajectories can share a learner. Delayed creation gathers evidence before fitting a new predictor. Two domains merge when their predictors transfer in both directions. The larger domain retains its predictor, combines both replay buffers, and trains on the merged experience; the absorbed predictor is retired. The frozen base remains available for fallback. A mature domain can also absorb a smaller compatible group (\supref{A}).
 
 % Queue result displays for the next page, alongside the experiments.
 \input{sec/5_result_floats}
@@ -52,7 +52,7 @@ A slow predictor becomes eligible for planning by predicting new trajectories ac
        {\loss_{\mathrm{roll}}(\theta_0;\tau_e)}.
   \label{eq:ratio}
 \end{equation}
-Here $\theta_0$ denotes the weights of $P_0$. Scoring both predictors on the same actions controls for differences in trajectory difficulty. For example, a difficult turn may cause large errors in both models, yet still provide evidence for the slow predictor if its error is lower. The trajectory is rejected if the ratio exceeds the write threshold. Accepted episodes build a validation history of the predictor's performance on data it had not yet trained on. A domain becomes eligible for retrieval once this record shows a sustained improvement over the reference (\supref{A}).
+Here $\theta_0$ denotes the weights of $P_0$. Scoring both predictors on the same actions controls for trajectory difficulty. A write is rejected when $r_{e,k}>1.2$ in the rigid-object experiments. Accepted episodes record predictive transfer before replay training. A domain becomes eligible for retrieval when the arithmetic mean of its last three validation ratios is at most 0.9. Write acceptance admits useful experience, while the stricter maturity threshold requires consistent predictive improvement before the learner can guide planning.
 
 During the first three replans, the agent compares eligible predictors and $P_0$ on the transitions observed so far, $\mathcal{B}_{e,t}$. It selects the predictor with the lowest recent error,
 \begin{equation}

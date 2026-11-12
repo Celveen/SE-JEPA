@@ -1,0 +1,419 @@
+{
+  "evaluations_per_cell": 1050,
+  "test_seeds": [
+    2000,
+    2100,
+    2200
+  ],
+  "failure_replans": 30,
+  "results": [
+    {
+      "planner": "CEM",
+      "family": "shape",
+      "method": "no_familiarity",
+      "chain": 1,
+      "n": 1050,
+      "successes": 836,
+      "success_pct": 79.61904761904762,
+      "replans": 13.12
+    },
+    {
+      "planner": "CEM",
+      "family": "shape",
+      "method": "no_maturity_read",
+      "chain": 1,
+      "n": 1050,
+      "successes": 832,
+      "success_pct": 79.23809523809524,
+      "replans": 13.50952380952381
+    },
+    {
+      "planner": "CEM",
+      "family": "shape",
+      "method": "ours_lr1e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 825,
+      "success_pct": 78.57142857142857,
+      "replans": 13.642857142857142
+    },
+    {
+      "planner": "CEM",
+      "family": "shape",
+      "method": "slow_lr_2e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 820,
+      "success_pct": 78.0952380952381,
+      "replans": 13.888571428571428
+    },
+    {
+      "planner": "CEM",
+      "family": "shape",
+      "method": "slow_lr_3e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 810,
+      "success_pct": 77.14285714285714,
+      "replans": 14.01142857142857
+    },
+    {
+      "planner": "CEM",
+      "family": "shape",
+      "method": "slow_lr_5e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 781,
+      "success_pct": 74.38095238095238,
+      "replans": 14.543809523809523
+    },
+    {
+      "planner": "CEM",
+      "family": "shape",
+      "method": "slow_lr_5e5",
+      "chain": 1,
+      "n": 1050,
+      "successes": 831,
+      "success_pct": 79.14285714285714,
+      "replans": 13.560952380952381
+    },
+    {
+      "planner": "CEM",
+      "family": "visual",
+      "method": "no_familiarity",
+      "chain": 2,
+      "n": 1050,
+      "successes": 789,
+      "success_pct": 75.14285714285714,
+      "replans": 14.184761904761904
+    },
+    {
+      "planner": "CEM",
+      "family": "visual",
+      "method": "no_maturity_read",
+      "chain": 2,
+      "n": 1050,
+      "successes": 788,
+      "success_pct": 75.04761904761905,
+      "replans": 14.582857142857144
+    },
+    {
+      "planner": "CEM",
+      "family": "visual",
+      "method": "ours_lr1e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 818,
+      "success_pct": 77.9047619047619,
+      "replans": 14.02095238095238
+    },
+    {
+      "planner": "CEM",
+      "family": "visual",
+      "method": "slow_lr_2e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 806,
+      "success_pct": 76.76190476190476,
+      "replans": 14.331428571428571
+    },
+    {
+      "planner": "CEM",
+      "family": "visual",
+      "method": "slow_lr_3e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 788,
+      "success_pct": 75.04761904761905,
+      "replans": 14.446666666666667
+    },
+    {
+      "planner": "CEM",
+      "family": "visual",
+      "method": "slow_lr_5e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 772,
+      "success_pct": 73.52380952380952,
+      "replans": 15.082857142857144
+    },
+    {
+      "planner": "CEM",
+      "family": "visual",
+      "method": "slow_lr_5e5",
+      "chain": 2,
+      "n": 1050,
+      "successes": 796,
+      "success_pct": 75.80952380952381,
+      "replans": 14.306666666666667
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "adajepa_same",
+      "chain": 1,
+      "n": 1050,
+      "successes": 808,
+      "success_pct": 76.95238095238095,
+      "replans": 12.54
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "ema_slow",
+      "chain": 1,
+      "n": 1050,
+      "successes": 795,
+      "success_pct": 75.71428571428571,
+      "replans": 12.838095238095239
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "naive",
+      "chain": 1,
+      "n": 1050,
+      "successes": 679,
+      "success_pct": 64.66666666666667,
+      "replans": 16.11904761904762
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "no_familiar_read",
+      "chain": 1,
+      "n": 1050,
+      "successes": 808,
+      "success_pct": 76.95238095238095,
+      "replans": 12.54
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "no_familiar_write",
+      "chain": 1,
+      "n": 1050,
+      "successes": 834,
+      "success_pct": 79.42857142857143,
+      "replans": 11.755238095238095
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "no_familiarity",
+      "chain": 1,
+      "n": 1050,
+      "successes": 873,
+      "success_pct": 83.14285714285714,
+      "replans": 10.89904761904762
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "no_maturity_read",
+      "chain": 1,
+      "n": 1050,
+      "successes": 849,
+      "success_pct": 80.85714285714286,
+      "replans": 11.455238095238096
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "ours_lr1e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 855,
+      "success_pct": 81.42857142857143,
+      "replans": 11.366666666666667
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "shared_slow",
+      "chain": 1,
+      "n": 1050,
+      "successes": 853,
+      "success_pct": 81.23809523809524,
+      "replans": 11.413333333333334
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "slow_lr_2e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 865,
+      "success_pct": 82.38095238095238,
+      "replans": 11.262857142857143
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "slow_lr_3e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 846,
+      "success_pct": 80.57142857142857,
+      "replans": 11.724761904761905
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "slow_lr_5e4",
+      "chain": 1,
+      "n": 1050,
+      "successes": 823,
+      "success_pct": 78.38095238095238,
+      "replans": 12.39904761904762
+    },
+    {
+      "planner": "GD",
+      "family": "shape",
+      "method": "slow_lr_5e5",
+      "chain": 1,
+      "n": 1050,
+      "successes": 836,
+      "success_pct": 79.61904761904762,
+      "replans": 11.791428571428572
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "adajepa_same",
+      "chain": 0,
+      "n": 1050,
+      "successes": 692,
+      "success_pct": 65.9047619047619,
+      "replans": 15.468571428571428
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "ema_slow",
+      "chain": 2,
+      "n": 1050,
+      "successes": 696,
+      "success_pct": 66.28571428571429,
+      "replans": 15.302857142857142
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "naive",
+      "chain": 2,
+      "n": 1050,
+      "successes": 422,
+      "success_pct": 40.19047619047619,
+      "replans": 22.32952380952381
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "no_familiar_read",
+      "chain": 2,
+      "n": 1050,
+      "successes": 800,
+      "success_pct": 76.19047619047619,
+      "replans": 13.155238095238095
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "no_familiar_write",
+      "chain": 2,
+      "n": 1050,
+      "successes": 775,
+      "success_pct": 73.80952380952381,
+      "replans": 13.65904761904762
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "no_familiarity",
+      "chain": 2,
+      "n": 1050,
+      "successes": 768,
+      "success_pct": 73.14285714285714,
+      "replans": 13.466666666666667
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "no_maturity_read",
+      "chain": 2,
+      "n": 1050,
+      "successes": 820,
+      "success_pct": 78.0952380952381,
+      "replans": 12.628571428571428
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "ours_lr1e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 804,
+      "success_pct": 76.57142857142857,
+      "replans": 12.925714285714285
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "shared_slow",
+      "chain": 2,
+      "n": 1050,
+      "successes": 789,
+      "success_pct": 75.14285714285714,
+      "replans": 13.26095238095238
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "slow_lr_2e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 807,
+      "success_pct": 76.85714285714286,
+      "replans": 12.860952380952382
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "slow_lr_3e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 820,
+      "success_pct": 78.0952380952381,
+      "replans": 12.779047619047619
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "slow_lr_5e4",
+      "chain": 2,
+      "n": 1050,
+      "successes": 781,
+      "success_pct": 74.38095238095238,
+      "replans": 13.534285714285714
+    },
+    {
+      "planner": "GD",
+      "family": "visual",
+      "method": "slow_lr_5e5",
+      "chain": 2,
+      "n": 1050,
+      "successes": 767,
+      "success_pct": 73.04761904761905,
+      "replans": 13.651428571428571
+    }
+  ],
+  "missing_cem_variants": [
+    "adajepa_same",
+    "naive",
+    "ema_slow",
+    "shared_slow",
+    "no_familiar_read",
+    "no_familiar_write"
+  ]
+}

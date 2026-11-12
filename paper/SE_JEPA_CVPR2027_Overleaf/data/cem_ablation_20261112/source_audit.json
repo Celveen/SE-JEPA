@@ -1,0 +1,19 @@
+{
+  "source_folder": "CEM\u6d88\u878d_\u9010\u9879\u56fe\u8868\u4e0e\u6570\u636e_\u7cbe\u7b80\u7248_20261112",
+  "source_sha256": {
+    "data/shape/episodes.csv": "5e83264cbc397c54c3ec28038ec949170bcfa24cd267bbd3f8226f3a16b6c5ed",
+    "data/visual/episodes.csv": "686d9da0484463024bab76de2b33588459bb9d65f2bd0f5256d095fa4f94a34e",
+    "data/CEM\u6c47\u603b\u8bb0\u5f55.json": "f8b45b6b0c59dfd7d87027a89f9df1bcf4d9b25659675a63e3e48e5bb742b7dc"
+  },
+  "verified_conditions": 20,
+  "verified_evaluations": 21000,
+  "retained_evaluations": 14700,
+  "selected_chains": {
+    "PushObj": 1,
+    "PushT": 2
+  },
+  "selection_reason": "Complete common ablation grid; matches the retained GD task chains.",
+  "raw_npz_verified": 399,
+  "raw_evaluations_verified": 19950,
+  "raw_sha256_verified": true
+}

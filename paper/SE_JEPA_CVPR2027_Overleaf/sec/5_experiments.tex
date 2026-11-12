@@ -11,7 +11,7 @@ The planner receives an image goal but no shift labels or task-change signals. W
 The separate-task PushObj and PushT comparisons use three learned states per planner and five rounds, resampling 50 targets per condition per round. Table~\ref{tab:main} reports fifth-round online PushObj results for \ours. We also evaluate each learned memory on separate test-seed streams with memory writes disabled and retrieval and fast adaptation active. We report success and mean replans, counting the full budget for failures. Rope and granular isolate slow consolidation: one predictor per task revisits 50 fixed instances over four passes, with fast adaptation disabled. We measure final Chamfer distance (CD) to the goal and separately test rope on new instances.
 
 \paragraph{Baselines and planners.}
-We compare with Frozen, official-checkpoint AdaJEPA~\cite{wang2026adajepa}, and the predictive and representation baselines in Table~\ref{tab:main}. Rigid-object planners share a 150-action budget. Frozen, AdaJEPA, and \ours use paired held-out targets; \supref{B} and \supref{C} specify checkpoints and evaluation groups. Published deformable baseline scores come from Zhou et al.~\cite{zhou2024dinowm} and use ten instances per task; \supref{C} specifies the evaluation groups and checkpoint coverage.
+We compare with Frozen, AdaJEPA~\cite{wang2026adajepa}, and the predictive and representation baselines in Table~\ref{tab:main}. Rigid-object planners share a 150-action budget. The paired held-out comparisons evaluate Frozen, AdaJEPA, and \ours on the same targets. We use released AdaJEPA weights and reproduce its episodic adaptation. Published deformable baseline scores come from Zhou et al.~\cite{zhou2024dinowm}; \supref{B} and \supref{C} provide evaluation settings and sources.
 
 \subsection{Planning with memory on held-out targets}
 \label{sec:sota}
@@ -19,7 +19,7 @@ We compare with Frozen, official-checkpoint AdaJEPA~\cite{wang2026adajepa}, and 
 \paragraph{Generalization across shapes and appearances.}
 On shapes absent from pretraining, held-out CEM success is about 15 percentage points higher with \ours than with AdaJEPA (Table~\ref{tab:planners}). Both planners gain most on I, followed by square and small tee (Fig.~\ref{fig:condition_gains}; Table~\ref{tab:shape_domains}). Stored transitions support planning toward new goals.
 
-On PushT, CEM success under the red-object shift rises by over thirty percentage points relative to both Frozen and AdaJEPA, which tie on this condition (Table~\ref{tab:visual_domains}). Red-goal recoloring also shows a large gain. Replay reuses experience with each visual shift across goals.
+On PushT, CEM success under the red-object shift rises from 14.0\% for both Frozen and AdaJEPA to 47.1\% (Table~\ref{tab:visual_domains}). An appearance change persists across goals, but an episodic learner must fit it anew from each short interaction. Replay combines these encounters into a reusable predictor. Large gains under red-goal recoloring likewise show the value of retaining experience across goals.
 
 \paragraph{Planning efficiency.}
 Halfway through the GD replan budget, \ours solves more goals than AdaJEPA reaches with the full budget, on both the seven shapes and seven visual conditions (Fig.~\ref{fig:efficiency_main}). Curves include all goals, including failures. CEM gives the same ordering in mean replans for both shapes and visual shifts (\supref{B}).
@@ -47,10 +47,10 @@ Across seven PushObj rounds, about one quarter of episodes contribute to replay,
 
 We combine seven PushObj shapes and seven PushT visual conditions in one 14-domain stream. Three chains per planner each retain one memory for five rounds, with 50 episodes per domain per round. Targets repeat; adaptation and memory updates remain active.
 
-Averaging GD and CEM equally, online success rises from 65.3\% to 75.5\% (Fig.~\ref{fig:mixed14_learning}): shapes improve from 73.4\% to 82.0\% and visual conditions from 57.2\% to 68.9\%. One memory thus handles recurring geometric and appearance shifts without resets. AdaJEPA and Frozen reach 65.2\% and 38.2\% under the different protocols in Appendix~D.
+Averaging GD and CEM equally, online success rises from 65.3\% to 75.5\% (Fig.~\ref{fig:mixed14_learning}): shapes improve from 73.4\% to 82.0\% and visual conditions from 57.2\% to 68.9\%. One memory thus handles recurring geometric and appearance shifts without resets. AdaJEPA and Frozen reach 65.2\% and 38.2\%, respectively; Appendix~D reports \mbox{both planners and every domain}.
 
 \paragraph{Mixed deformable manipulation.}
-We also alternate rope and granular in one CEM stream: three rounds, each with 50 new goals per material, share a rope-trained base and persistent memory. Fast adaptation and an absolute-error write check are enabled (Appendix~\ref{app:mixed_deformable}). Without material labels, \ours discovers two memories with 100\% stored-member purity throughout (Table~\ref{tab:deform_mixed_main}). Slow-predictor retrieval is 98.9\% material-correct overall and 100\% in the last two rounds. CD decreases for both materials across disjoint trajectory groups, while rope success rises from 60\% to 82\%. Granular success remains low (2--8\%), so domain separation alone does not ensure precise control.
+We also alternate rope and granular in one CEM stream: three rounds, each with 50 new goals per material, share a rope-trained base and persistent memory. Fast adaptation and an absolute-error write check are enabled (Appendix~\ref{app:mixed_deformable}). Without material labels, \ours discovers two memories with 100\% stored-member purity throughout (Table~\ref{tab:deform_mixed_main}). Slow-predictor retrieval is 98.9\% material-correct overall and 100\% in the last two rounds. CD decreases for both materials across disjoint trajectory groups, while rope success rises from 60\% to 82\%. The same memory mechanism therefore separates recurring dynamics in both \mbox{rigid and deformable manipulation}.
 
 \begin{table}[!ht]
   \centering
@@ -89,34 +89,31 @@ We retain fast updates as $s_{e+1}=s_e+w\Delta_e$, where $s_e$ is the offset fro
 \end{table}
 
 \paragraph{Replay rather than parameter averaging.}
-Table~\ref{tab:component_ablation} tests corresponding five-round learning streams from the same task-specific checkpoint, with 1,050 held-out evaluations per state. PushObj uses one chain; PushT repeats the components in two. The episodic-reset baseline removes persistent memory while keeping the same initial weights; the main benchmark uses the official AdaJEPA checkpoint.
+We ablate memory construction under GD and evaluate gates and slow learning rates with both planners (Table~\ref{tab:component_ablation}). Each variant learns for five rounds and is tested on 1,050 held-out goals: seven domains, three seeds, and 50 goals per seed and domain. Within each task, all variants start from the same pretrained model. Appendix~D reports success and all-episode replans for each comparison.
 
-Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and by 10.10 and 8.86 points on the two PushT chains. On PushObj, replay solves 44 additional unseen-I goals out of 150, while the four pretraining shapes differ by only one solved goal. The full model also exceeds episodic reset in every comparison, supporting transition replay over weight inheritance.
+Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and 8.86 points on PushT. On PushObj, replay solves 44 additional unseen-I goals out of 150, while the four pretraining shapes differ by only one solved goal. Full \ours reaches 81.43\% and 76.57\%, compared with 64.67\% and 40.19\% when fast weights are inherited. It also exceeds episodic reset by 4.48 and 10.67 points. Retaining transitions therefore provides a more effective basis for cross-episode learning than \mbox{carrying parameter updates forward}.
 
 \begin{table}[!ht]
   \centering
-  \caption{\textbf{GD component and learning-rate ablations.} Success (\%) on seven domains per task, 1,050 held-out evaluations per cell. C1/C2 denote learning chains. The PushT reset score is one shared evaluation, not an independent run per column. Appendix~D gives replans and additional chains.}
+  \caption{\textbf{Gate and learning-rate ablations with both planners.} Held-out success (\%) over seven domains per task, 1,050 goals per cell. Each task uses one complete learning stream per planner. Appendix~D adds replans and the GD memory-design comparisons.}
   \label{tab:component_ablation}
   \small
-  \setlength{\tabcolsep}{2.5pt}
-  \begin{tabular}{@{}lrrr@{}}
+  \setlength{\tabcolsep}{2pt}
+  \begin{tabular}{@{}lrrrr@{}}
     \toprule
-    & PushObj & \multicolumn{2}{c}{PushT}\\
-    \cmidrule(lr){3-4}
-    Variant & C1 & C1 & C2\\
+    & \multicolumn{2}{c}{PushObj} & \multicolumn{2}{c}{PushT}\\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    Variant & GD & CEM & GD & CEM\\
     \midrule
-    \inputrows{tables/gd_ablation_main.tex}
+    \inputrows{tables/planner_ablation_main.tex}
     \bottomrule
   \end{tabular}
 \end{table}
 
-\paragraph{Inheritance across repeated learning chains.}
-Across three chains (Appendix~D), inheritance averages 65.94\% success versus 81.59\% for \ours on PushObj, and 31.71\% versus 75.68\% on PushT. \ours leads in every chain. Replans, including failures, fall from 15.84 to 11.30 on shapes and from 24.18 to 13.21 on visual conditions.
-
 \paragraph{Fixed slow learning rates.}
-Rates from $5\times10^{-5}$ to $3\times10^{-4}$ give 79.62--82.38\% on PushObj and 73.05--78.10\% across the two PushT chains. A rate of $5\times10^{-4}$ reduces success in all three comparisons relative to the default $10^{-4}$. Doubling the default changes the three-chain visual mean by only $+0.19$ points. Larger updates therefore do not consistently improve planning.
+The default $10^{-4}$ gives consistently strong results across tasks and planners. Rates from $5\times10^{-5}$ to $3\times10^{-4}$ keep success within 1.81 points of the default for PushObj and 3.52 points for PushT. The largest rate, $5\times10^{-4}$, reduces success in all four comparisons. Thus the gains do not depend on a narrow learning-rate choice, and larger updates can \mbox{reduce planning success}.
 
 \paragraph{Maturity and familiarity gates.}
-Removing maturity screening lowers PushObj success from 81.43\% to 80.86\%, but raises PushT success from 74.38\% to 76.95\% and from 76.57\% to 78.10\%. A prediction-error gate can filter unreliable predictors but may also delay useful retrieval, leaving room to improve its calibration.
+On PushT, removing maturity screening raises GD success from 76.57\% to 78.10\%, but reduces CEM success from 77.90\% to 75.05\%. PushObj changes by less than one point with either planner. Maturity screening therefore regulates when experience becomes useful to a particular planner, motivating calibration that combines prediction errors with planning outcomes.
 
-The familiarity checks keep the pretrained model as the adaptation base for familiar episodes and prevent these episodes from directly entering replay. Disabling either protection alone lowers success in all three comparisons. Disabling both raises PushObj success to 83.14\%, but lowers the three-chain PushT mean from 75.68\% to 72.32\%, with every visual chain declining. The same gate can therefore affect shape and visual shifts differently.
+Familiarity protection preserves the pretrained adaptation base and skips direct writes for familiar episodes. Disabling both checks reduces PushT success by 3.43 points with GD and 2.76 with CEM. PushObj instead improves by 1.71 and 1.05 points. These results distinguish two roles: replay supplies reusable dynamics, while the gates control which experience is stored and when it influences planning. Their task-dependent effects identify a concrete opportunity to improve selective memory.
