@@ -1,36 +1,43 @@
 \section{Experiments}
 \label{sec:experiments}
 
-\subsection{Evaluation setup}
+\subsection{Settings}
 \label{sec:setup}
 
-\paragraph{Tasks and backbones.}
+\noindent \textbf{Tasks and backbones.}
 The planner receives an image goal but no shift labels or task-change signals. We study shape and appearance shifts with task-trained ResNet world models~\cite{he2016resnet}. \emph{PushObj} pretraining covers T, L, Z, and plus shapes; deployment also introduces I, square, and small tee. \emph{PushT} keeps the T shape and changes appearance through blur, noise, darkness, or recoloring of the agent, object, or goal. Deformable tasks, \emph{rope} and \emph{granular}, use DINO-WM with pretrained DINOv2 features~\cite{zhou2024dinowm,oquab2024dinov2,lin2020softgym}.
 
-\paragraph{Deployment and evaluation.}
+\vspace{1mm}
+\noindent \textbf{Deployment and evaluation.}
 The separate-task PushObj and PushT comparisons use three learned states per planner and five rounds, resampling 50 targets per condition per round. Table~\ref{tab:main} reports fifth-round online PushObj results for \ours. We also evaluate each learned memory on separate test-seed streams with memory writes disabled and retrieval and fast adaptation active. We report success and mean replans, counting the full budget for failures. Rope and granular isolate slow consolidation: one predictor per task revisits 50 fixed instances over four passes, with fast adaptation disabled. We measure final Chamfer distance (CD) to the goal and separately test rope on new instances.
 
-\paragraph{Baselines and planners.}
+\vspace{1mm}
+\noindent \textbf{Baselines and planners.}
 We compare with Frozen, AdaJEPA~\cite{wang2026adajepa}, and the predictive and representation baselines in Table~\ref{tab:main}. Rigid-object planners share a 150-action budget. The paired held-out comparisons evaluate Frozen, AdaJEPA, and \ours on the same targets. We use released AdaJEPA weights and reproduce its episodic adaptation. Published deformable baseline scores come from Zhou et al.~\cite{zhou2024dinowm}; \supref{B} and \supref{C} provide evaluation settings and sources.
 
 \subsection{Planning with memory on held-out targets}
 \label{sec:sota}
 
+\vspace{1mm}
 \paragraph{Generalization across shapes and appearances.}
 On shapes absent from pretraining, held-out CEM success is about 15 percentage points higher with \ours than with AdaJEPA (Table~\ref{tab:planners}). Both planners gain most on I, followed by square and small tee (Fig.~\ref{fig:condition_gains}; Table~\ref{tab:shape_domains}). Stored transitions support planning toward new goals.
 
-On PushT, CEM success under the red-object shift rises from 14.0\% for both Frozen and AdaJEPA to 47.1\% (Table~\ref{tab:visual_domains}). An appearance change persists across goals, but an episodic learner must fit it anew from each short interaction. Replay combines these encounters into a reusable predictor. Large gains under red-goal recoloring likewise show the value of retaining experience across goals.
+On PushT, CEM success under red-object recoloring rises from 14.0\% for Frozen and AdaJEPA to 47.1\% (Table~\ref{tab:visual_domains}). Replay combines repeated encounters into a reusable predictor, with large gains \mbox{under red-goal recoloring}.
 
-\paragraph{Planning efficiency.}
+\vspace{1mm}
+\noindent \textbf{Planning efficiency.}
 Halfway through the GD replan budget, \ours solves more goals than AdaJEPA reaches with the full budget, on both the seven shapes and seven visual conditions (Fig.~\ref{fig:efficiency_main}). Curves include all goals, including failures. CEM gives the same ordering in mean replans for both shapes and visual shifts (\supref{B}).
 
-\paragraph{Consolidation on a second backbone.}
-With the same 15-push budget, the consolidated DINO-WM predictor lowers final CD on both rope and granular (Table~\ref{tab:main}). Fast adaptation is disabled, so these gains come from consolidation of earlier trajectories. Replay therefore benefits both task-trained ResNet and pretrained DINOv2 representations.
+On the matched PushT timing set, memory raises peak allocated GPU memory by 0.64\,GiB (GD) and 0.44\,GiB (CEM) over AdaJEPA, but fewer replans reduce mean episode time by 26.7\% and 27.6\%, respectively. Appendix~\ref{app:deployment_cost} details timing, memory, and consolidation costs.
+
+\vspace{1mm}
+\noindent \textbf{Consolidation on a second backbone.}
+Under the same 15-push budget, consolidation lowers final CD on rope and granular with fast adaptation disabled (Table~\ref{tab:main}). Replay thus benefits both task-trained ResNet and \mbox{pretrained DINOv2 representations}.
 
 \subsection{Qualitative results}
 \label{sec:qualitative}
 
-With matched starts and goals, \ours solves unseen-I and mixed-stream red-object episodes missed by Frozen, DINO-WM, and AdaJEPA (Fig.~\ref{fig:qualitative}). The slow predictor alone also moves rope and particles closer to their target configurations (Fig.~\ref{fig:deform_qualitative}). \supref{E} gives full trajectories, prediction losses, and task outcomes.
+With matched starts and goals, \ours solves unseen-I and mixed-stream red-object episodes missed by Frozen, DINO-WM, and AdaJEPA (Fig.~\ref{fig:qualitative}). Slow consolidation also improves rope and granular manipulation (Fig.~\ref{fig:deform_qualitative}); \supref{E} provides complete trajectories.
 
 \subsection{Learning over deployment}
 \label{sec:deployment}
@@ -39,8 +46,8 @@ With targets resampled each round, both GD and CEM improve online success on uns
 
 Revisiting rope and granular reduces CD over successive passes (Fig.~\ref{fig:deployment}, bottom). After one rope pass, we froze the predictor and tested 91 new instances. Mean CD fell from pretrained DINO-WM's 0.664 to 0.349, a 47\% reduction; the paired bootstrap 95\% interval for the mean reduction is [0.162, 0.470] (\supref{B}). Both predictors use the same new starts and goals, with weights fixed.
 
-\paragraph{Selective writing and retrieval.}
-Across seven PushObj rounds, about one quarter of episodes contribute to replay, and a similar fraction use a slow predictor at their final replan. On the four pretraining shapes, both planners also outperform AdaJEPA while retaining the original model as an adaptation base (\supref{D}).
+%\paragraph{Selective writing and retrieval.}
+Across seven PushObj rounds, about one quarter of episodes contribute to replay, and a similar fraction retrieve a slow predictor at their final replan (\supref{D}).
 
 \subsection{One memory across task and shift families}
 \label{sec:mixed14}
@@ -49,7 +56,8 @@ We combine seven PushObj shapes and seven PushT visual conditions in one 14-doma
 
 Averaging GD and CEM equally, online success rises from 65.3\% to 75.5\% (Fig.~\ref{fig:mixed14_learning}): shapes improve from 73.4\% to 82.0\% and visual conditions from 57.2\% to 68.9\%. One memory thus handles recurring geometric and appearance shifts without resets. AdaJEPA and Frozen reach 65.2\% and 38.2\%, respectively; Appendix~D reports \mbox{both planners and every domain}.
 
-\paragraph{Mixed deformable manipulation.}
+\vspace{1mm}
+\noindent \textbf{Mixed deformable manipulation.}
 We also alternate rope and granular in one CEM stream: three rounds, each with 50 new goals per material, share a rope-trained base and persistent memory. Fast adaptation and an absolute-error write check are enabled (Appendix~\ref{app:mixed_deformable}). Without material labels, \ours discovers two memories with 100\% stored-member purity throughout (Table~\ref{tab:deform_mixed_main}). Slow-predictor retrieval is 98.9\% material-correct overall and 100\% in the last two rounds. CD decreases for both materials across disjoint trajectory groups, while rope success rises from 60\% to 82\%. The same memory mechanism therefore separates recurring dynamics in both \mbox{rigid and deformable manipulation}.
 
 \begin{table}[!ht]
@@ -70,7 +78,8 @@ We also alternate rope and granular in one CEM stream: three rounds, each with 5
 \subsection{Ablation study}
 \label{sec:ablation}
 
-\paragraph{Accumulating fast updates across episodes.}
+\vspace{1mm}
+\noindent \textbf{Accumulating fast updates across episodes.}
 We retain fast updates as $s_{e+1}=s_e+w\Delta_e$, where $s_e$ is the offset from pretrained weights and $\Delta_e$ the episode's update. All settings receive the same 100 goals in five blocks (I, square, T, I, square). Resetting reaches 62\% success; full inheritance reaches 48\%, losing 25 reset successes and recovering 11 (Table~\ref{tab:inheritance}, exact McNemar $p=0.029$). The smallest coefficient reaches 64\%; retaining larger fractions progressively reduces planning success.
 
 \begin{table}[!ht]
@@ -88,10 +97,11 @@ We retain fast updates as $s_{e+1}=s_e+w\Delta_e$, where $s_e$ is the offset fro
   \end{tabular}
 \end{table}
 
-\paragraph{Replay rather than parameter averaging.}
+\vspace{1mm}
+\noindent \textbf{Replay rather than parameter averaging.}
 We ablate memory construction under GD and evaluate gates and slow learning rates with both planners (Table~\ref{tab:component_ablation}). Each variant learns for five rounds and is tested on 1,050 held-out goals: seven domains, three seeds, and 50 goals per seed and domain. Within each task, all variants start from the same pretrained model. Appendix~D reports success and all-episode replans for each comparison.
 
-Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and 8.86 points on PushT. On PushObj, replay solves 44 additional unseen-I goals out of 150, while the four pretraining shapes differ by only one solved goal. Full \ours reaches 81.43\% and 76.57\%, compared with 64.67\% and 40.19\% when fast weights are inherited. It also exceeds episodic reset by 4.48 and 10.67 points. Retaining transitions therefore provides a more effective basis for cross-episode learning than \mbox{carrying parameter updates forward}.
+Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and 8.86 on PushT. On PushObj, it solves 44 additional unseen-I goals out of 150. Full \ours reaches 81.43\% and 76.57\%, compared with 64.67\% and 40.19\% for fast-weight inheritance, and exceeds episodic reset by 4.48 and 10.67 points. Retaining transitions supports transfer more effectively than \mbox{carrying parameter updates forward}.
 
 \begin{table}[!ht]
   \centering
@@ -110,10 +120,33 @@ Shared replay exceeds fast-parameter EMA by 5.52 points on PushObj and 8.86 poin
   \end{tabular}
 \end{table}
 
-\paragraph{Fixed slow learning rates.}
-The default $10^{-4}$ gives consistently strong results across tasks and planners. Rates from $5\times10^{-5}$ to $3\times10^{-4}$ keep success within 1.81 points of the default for PushObj and 3.52 points for PushT. The largest rate, $5\times10^{-4}$, reduces success in all four comparisons. Thus the gains do not depend on a narrow learning-rate choice, and larger updates can \mbox{reduce planning success}.
+\vspace{1mm}
+\noindent \textbf{Fixed slow learning rates.}
+Rates from $5\times10^{-5}$ to $3\times10^{-4}$ stay within 1.81 points of the $10^{-4}$ default on PushObj and 3.52 on PushT. The largest rate, $5\times10^{-4}$, reduces success in all four comparisons, showing that gains persist across a range of moderate update sizes.
 
-\paragraph{Maturity and familiarity gates.}
-On PushT, removing maturity screening raises GD success from 76.57\% to 78.10\%, but reduces CEM success from 77.90\% to 75.05\%. PushObj changes by less than one point with either planner. Maturity screening therefore regulates when experience becomes useful to a particular planner, motivating calibration that combines prediction errors with planning outcomes.
+\vspace{1mm}
+\noindent \textbf{Maturity and familiarity gates.}
+Removing maturity screening changes PushT success from 76.57\% to 78.10\% with GD but from 77.90\% to 75.05\% with CEM; PushObj changes by less than one point. Removing familiarity protection reduces PushT success by 3.43 points (GD) and 2.76 (CEM), while improving PushObj by 1.71 and 1.05 points. These planner- and task-dependent effects motivate better calibration of when to store and reuse experience.
 
-Familiarity protection preserves the pretrained adaptation base and skips direct writes for familiar episodes. Disabling both checks reduces PushT success by 3.43 points with GD and 2.76 with CEM. PushObj instead improves by 1.71 and 1.05 points. These results distinguish two roles: replay supplies reusable dynamics, while the gates control which experience is stored and when it influences planning. Their task-dependent effects identify a concrete opportunity to improve selective memory.
+
+
+\vspace{1mm}
+\noindent \textbf{Does retrieval select a useful predictor?}
+On common CEM trajectories from 50 new PushT tasks under seven visual conditions, the first three transitions select among the pretrained model and three mature predictors. On subsequent observations, selection reduces one-step MSE by 77.6\% versus the pretrained model and 41.1\% versus a fixed domain chosen on separate calibration tasks (Table~\ref{tab:mature_routing}). Five-step prediction also improves, demonstrating transfer beyond the selection prefix (Appendix~\ref{app:mature_routing}).
+
+The one-step reduction relative to the calibrated single-domain comparator is 0.00909, with paired 95\% interval [0.00589, 0.01285]. Among cases eligible for retrieval, selection agrees with the future-best predictor in 82.7\% of cases, averaged by condition. Scoring all candidates on common trajectories isolates predictive compatibility: the early observations select dynamics that \mbox{remain useful later in the encounter}.
+
+\begin{table}[!ht]
+  \centering
+  \caption{\textbf{Selecting mature predictors on new trajectories.} Future latent MSE ($\times10^{-3}$, lower is better), averaged over seven visual conditions. One-step uses 350 task--condition pairs; five-step uses the 266 with sufficient future observations. \mbox{The oracle uses future errors for selection}.}
+  \label{tab:mature_routing}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}lrr@{}}
+    \toprule
+    Predictor selection & One-step $\downarrow$ & Five-step $\downarrow$\\
+    \midrule
+    \inputrows{tables/mature_routing.tex}
+    \bottomrule
+  \end{tabular}
+\end{table}

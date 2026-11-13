@@ -215,3 +215,16 @@ The episode logs record the fast-update fingerprint of every episode. Figure~\re
 \ours learns selectively. In a seven-round PushObj stream of 2{,}450 episodes per planner, it writes only 25\% (GD) to 27\% (CEM) of episodes to memory; the rest are familiar to the pretrained model, still pending, or rejected by validation. About one quarter of episodes retrieve a slow predictor; the others adapt from the pretrained model.
 
 Selective writing leaves familiar dynamics to the pretrained model, whose original weights remain fixed. On the four pretraining shapes, \ours reaches 86.0\% held-out success with CEM and 88.4\% with GD, against 82.3\% and 84.8\% for AdaJEPA. Separate slow predictors learn recurring changes from replayed trajectories.
+
+\subsection{Predictive compatibility of mature domains}
+\label{app:mature_routing}
+
+Table~\mainref{tab:mature_routing} evaluates the three mature predictors retained after five CEM learning rounds on PushT. We select 50 new physical start/goal pairs, each rendered under seven visual conditions, and a disjoint set of ten calibration pairs. These pairs exclude the trajectories used in the preceding learning and evaluation streams. The pretrained predictor collects a common CEM trajectory for each pair; all candidate predictors are then scored on the same observed states and actions with fast and slow learning disabled.
+
+\paragraph{Selection precedes evaluation.}
+The deployed rule scores the pretrained reference and eligible mature predictors on the first three observed transitions. Familiarity protection retains the reference in 195 of the 350 task--condition pairs; the remaining 155 admit all four candidates. A fixed-domain comparator retains only the reference and one mature predictor, chosen using the 70 calibration evaluations and locked before testing. Random selection averages uniformly over the eligible candidates. The future-error oracle is the minimum error among all four candidates over the subsequent observations.
+
+One-step MSE averages prediction errors strictly after the selection prefix. Five-step MSE uses autoregressive prediction with the recorded actions and requires a full five-step future window; 266 pairs meet this requirement. Every method uses the same valid pairs for each metric, and the reported aggregate weights the seven conditions equally. This diagnostic isolates predictive compatibility on \mbox{common observed trajectories}.
+
+\paragraph{Evidence for useful retrieval.}
+Selected predictors achieve one-step MSE 0.01303, compared with 0.05815 for the pretrained model, 0.02212 for the calibrated fixed-domain comparator, and 0.04674 for random eligible selection. The oracle reaches 0.01179. The mean reduction from the fixed-domain comparator is 0.00909, with paired 95\% interval [0.00589, 0.01285]; the reduction from random selection is 0.03371 [0.02847, 0.03932]. Intervals use 2,000 bootstrap resamples of the 50 physical tasks, retaining all visual conditions together. Among pairs eligible for retrieval, condition-averaged agreement with the future-best predictor is 82.7\%. Five-step error falls from 0.04747 for the fixed-domain comparator to 0.03154 for selection, supporting reuse beyond the \mbox{short prefix used for predictor selection}.

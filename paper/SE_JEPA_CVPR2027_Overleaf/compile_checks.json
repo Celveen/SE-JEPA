@@ -1,16 +1,13 @@
 {
+  "checked_at": "2026-11-13T00:17:08-08:00",
+  "compiler": "Tectonic / XeTeX with BibTeX",
   "main": {
-    "pages": 20,
-    "unresolved_references": false,
-    "layout_warnings": [],
-    "fonts_without_embedded_data": [],
-    "pdf_sha256": "96bad277785304dec7fcc6dde98a6372c95a5fd933afb7d44ddce355f36dbd37",
+    "pages": 22,
     "main_text_pages": 8,
-    "appendix_appended": true,
     "appendix_start_page": 11,
-    "last_page_trailing_blank_lines": 2.43,
+    "conclusion_page": 8,
     "main_figure_pages": {
-      "1": 1,
+      "1": 2,
       "2": 3,
       "3": 5,
       "4": 6,
@@ -19,26 +16,23 @@
       "7": 7,
       "8": 8
     },
-    "architecture_figure_page": 3,
-    "main_table_page": 5,
-    "component_ablation_page": 8,
-    "conclusion_page": 8
-  },
-  "supplement": {
-    "pages": 11,
+    "last_page_column_end_gap_lines": 2.6217026138305664,
     "unresolved_references": false,
     "layout_warnings": [],
-    "fonts_without_embedded_data": [],
-    "pdf_sha256": "6c84a75465e4677db7c76acecdaaa46a6e934b2b04e02f4bf784e6628d73cbd6"
+    "pdf_sha256": "155d604be84e4e5dc92377a457c868a95073a9055f9ac4bf9ca7a8911b1ddadc"
   },
-  "checked_at": "2026-11-12T07:00:45-08:00",
-  "compiler": "Tectonic 0.17.0 / XeTeX with BibTeX",
+  "supplement": {
+    "pages": 13,
+    "unresolved_references": false,
+    "layout_warnings": [],
+    "pdf_sha256": "4346384492bc427fe67f5c997af9de923090ef426fbb8def21332cb2cc41c12f"
+  },
   "official_style_sha256": "1cd7f434b13d41c475df4a1901a5d82d9ca8b80b8cf6205dc4602a5c164286b4",
-  "shell_escape_required": false,
-  "abstract_unchanged": true,
+  "teacher_abstract_wording_preserved": true,
+  "teacher_related_work_preserved_byte_for_byte": true,
   "paragraph_endings": {
-    "main": 125,
-    "supplement": 69,
+    "main": 146,
+    "supplement": 79,
     "threshold": 0.4
   },
   "bibliography_endings": {
@@ -46,14 +40,19 @@
     "supplement": 2,
     "threshold": 0.4
   },
-  "clean_source_files": 49,
-  "architecture_selectable_labels": 59,
-  "architecture_visible_render_unchanged": true,
-  "CEM_records_verified": 21000,
-  "CEM_raw_batches_verified": 399,
+  "clean_source_files": 53,
+  "routing_evaluations_verified": 350,
+  "cost_timed_runs_verified": 1260,
+  "overleaf": {
+    "synced": true,
+    "combined_pages": 22,
+    "main_text_pages": 8,
+    "teaser_page": 2,
+    "uploaded_files_verified": 14,
+    "untouched_files_verified": 45
+  },
   "notes": [
-    "Overleaf pdfLaTeX can use different line breaks; the local eight-page layout is verified.",
-    "Appendix pages devoted to figures/tables are intentional.",
-    "Historical source records remain in the research archive; the clean upload contains only active dependencies."
+    "Paragraph-ending and final-column-gap checks apply to the local XeTeX build; Overleaf pdfLaTeX uses different line breaks.",
+    "The clean archive contains active compile dependencies only."
   ]
 }

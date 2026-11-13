@@ -1,0 +1,62 @@
+[
+  {
+    "optimizer": "GD",
+    "chain": 1,
+    "active_learners": 4,
+    "mature_learners": 1,
+    "replay_count": 766,
+    "replay_tensor_bytes": 24004064,
+    "checkpoint_bytes": 550891429,
+    "slow_steps": 13455
+  },
+  {
+    "optimizer": "GD",
+    "chain": 2,
+    "active_learners": 2,
+    "mature_learners": 1,
+    "replay_count": 747,
+    "replay_tensor_bytes": 23580672,
+    "checkpoint_bytes": 346409396,
+    "slow_steps": 13155
+  },
+  {
+    "optimizer": "GD",
+    "chain": 3,
+    "active_learners": 5,
+    "mature_learners": 2,
+    "replay_count": 742,
+    "replay_tensor_bytes": 21510576,
+    "checkpoint_bytes": 603998623,
+    "slow_steps": 15180
+  },
+  {
+    "optimizer": "CEM",
+    "chain": 1,
+    "active_learners": 3,
+    "mature_learners": 3,
+    "replay_count": 733,
+    "replay_tensor_bytes": 22552896,
+    "checkpoint_bytes": 476896192,
+    "slow_steps": 11280
+  },
+  {
+    "optimizer": "CEM",
+    "chain": 2,
+    "active_learners": 5,
+    "mature_learners": 3,
+    "replay_count": 750,
+    "replay_tensor_bytes": 22874480,
+    "checkpoint_bytes": 605996055,
+    "slow_steps": 13080
+  },
+  {
+    "optimizer": "CEM",
+    "chain": 3,
+    "active_learners": 4,
+    "mature_learners": 2,
+    "replay_count": 740,
+    "replay_tensor_bytes": 21780448,
+    "checkpoint_bytes": 547976367,
+    "slow_steps": 12960
+  }
+]

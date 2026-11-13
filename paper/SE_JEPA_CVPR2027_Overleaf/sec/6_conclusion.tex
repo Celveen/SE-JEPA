@@ -1,9 +1,8 @@
 % Keep the closing section together when the preceding column is nearly full.
-\Needspace{18\baselineskip}
-\section{Conclusion}
+% \Needspace{18\baselineskip}
+\section{Conclusion and Future Works}
 \label{sec:conclusion}
 
 \ours turns deployment trajectories into predictive memory that improves held-out planning with GD and CEM. One memory handles 14 shape and visual domains; another separates rope from granular while learning both. Replay also generalizes beyond stored experience: a rope predictor learned in one pass reduces goal error on new instances.
-
-\paragraph{Future work.}
-Prediction uncertainty and planning outcomes could better calibrate the maturity gate. The opposite GD and CEM effects on PushT suggest that readiness should also reflect the planner's use of predictions. Longer observation histories could distinguish similar dynamics, while improved action selection near the goal could turn prediction gains into successful plans. Longer deployments should measure memory growth, retrieval latency, and replay cost alongside success. Comparing compressed memories with full replay buffers would test whether bounded storage can preserve useful experience \mbox{when rare conditions return.}
+%
+Prediction uncertainty and planning outcomes could better calibrate the maturity gate. The opposite GD and CEM effects on PushT suggest that readiness should also reflect the planner's use of predictions. Longer observation histories could distinguish similar dynamics, while improved action selection near the goal could turn prediction gains into successful plans. Longer deployments should test how memory growth affects the measured gains in episode time. Comparing compressed memories with full replay buffers would test whether bounded storage can preserve useful experience when rare conditions return.

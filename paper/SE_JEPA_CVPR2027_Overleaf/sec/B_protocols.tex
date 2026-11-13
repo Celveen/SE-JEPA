@@ -4,9 +4,9 @@
 \subsection{Shape shifts}
 The shape learning stream has five deployment rounds over seven shapes, with 50 episodes per shape in every round. The post-learning benchmark uses target seeds 2000, 2100, and 2200, each with 350 episodes. I, square, and small tee are unseen in pretraining; T, L, Z, and plus are seen.
 
-For the paired planner comparison in Table~\ref{tab:planners}, each planner has three learned memory states. Every state is evaluated on all three test seeds. For each seed we average over episodes and states, then compute the standard deviation across seed-level means. Figure~\mainref{fig:teaser} uses the paired GD results for Frozen, AdaJEPA, and \ours. The local external PushObj baselines use seed 2000.
+For the paired planner comparison in Table~\ref{tab:planners}, each planner has three learned memory states. Every state is evaluated on all three test seeds. For each seed we average over episodes and states, then compute the standard deviation across seed-level means. The local external PushObj baselines use seed 2000.
 
-Table~\mainref{tab:main} reports fifth-round online PushObj performance with adaptation and memory writing active: 844 successes out of 1,050 episodes (80.38\%) overall, and 329 out of 450 (73.11\%) on unseen shapes. Figure~\mainref{fig:teaser} instead reports held-out GD performance after learning. The two displays summarize different planners and evaluation phases.
+Table~\mainref{tab:main} reports fifth-round online PushObj performance with adaptation and memory writing active: 844 successes out of 1,050 episodes (80.38\%) overall, and 329 out of 450 (73.11\%) on unseen shapes. Figure~\mainref{fig:teaser} reports the gains over AdaJEPA on held-out targets \mbox{after learning, for both GD and CEM}.
 
 \subsection{Visual shifts}
 The paired visual evaluation contains the original T condition, blur, salt-and-pepper noise, darkness, red agent, red object, and red goal. Three five-round learning chains resample targets every round, with 350 episodes per round. Held-out testing uses three target seeds and 50 episodes per condition. Direct checks of source-episode identifiers confirm that held-out sources never occur in the learning streams and that the three test seeds use disjoint sources.
@@ -15,7 +15,6 @@ The color-learning curve in Fig.~\mainref{fig:deployment} aggregates red-agent, 
 
 The external visual baselines use the established VIS50 collection with planning seed 100. The external comparisons use its six shifted conditions, with 50 paired initial/goal states per condition.
 
-For the external PushT GD bars in Fig.~\mainref{fig:teaser}, DINO-WM and LeWM share 50 targets per condition at seed 100. Shift averages the six altered conditions, excluding the original T. Both use 100 GD steps and a 150-physical-step cap. DINO-WM executes 25 physical steps per replan (at most six replans); LeWM executes five (at most 30).
 
 \subsection{Success and interaction counts}
 For the paired rigid-object comparisons, GD uses 100 optimization steps; CEM uses 10 iterations with 200 samples and 30 elites per iteration. Rigid-object success requires a joint Euclidean error below 20 simulator units across the pusher and object positions, and an object orientation error below $\pi/9$. Each executed model action contains five physical actions, and an episode has at most 30 MPC replans. For episode $i$ with success indicator $S_i$ and first successful replan $T_i$,

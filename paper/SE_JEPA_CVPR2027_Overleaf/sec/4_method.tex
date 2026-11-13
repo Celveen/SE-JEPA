@@ -7,16 +7,16 @@
 \label{sec:fast}
 \label{sec:slow}
 
-Each episode begins with working copies of the pretrained encoder $E_0$ and predictor $P_0$; their original weights remain fixed. The agent encodes the current observation and goal, rolls out candidate action sequences, and selects the plan with the lowest latent goal cost~\cite{zhou2024dinowm,maes2026lewm}. It executes the first action block. Following AdaJEPA~\cite{wang2026adajepa}, it then takes one Adam step on the prediction loss over recent transitions to update the predictor's last block and the encoder head before replanning. These fast changes last for the episode. During the first few replans, the agent can also retrieve a slow predictor as a base for adaptation (Sec.~\ref{sec:trust}).
+Each episode starts with working copies of the fixed pretrained encoder $E_0$ and predictor $P_0$. The planner minimizes latent goal cost over candidate action sequences~\cite{zhou2024dinowm,maes2026lewm} and executes the first action block. Following AdaJEPA~\cite{wang2026adajepa}, one Adam step on recent transition errors updates the predictor's last block and encoder head before replanning. These changes last only for the episode. Early replans can also retrieve a slow predictor as an \mbox{adaptation base (Sec.~\ref{sec:trust})}.
 
-Across episodes, \ours maintains a replay buffer $\replay_k$ and a slow predictor $P_{\phi_k}$ for each group $k$ of compatible trajectories, which we call a \emph{predictive domain}. After an episode, the frozen encoder $E_0$ re-encodes the executed trajectory. This gives replay a consistent latent space despite changes to the fast encoder within episodes. Once a trajectory is assigned to a domain, the agent adds it to $\replay_k$. The slow predictor trains on windows sampled from that buffer by minimizing
+Across episodes, each \emph{predictive domain} $k$ maintains a replay buffer $\replay_k$ and slow predictor $P_{\phi_k}$. The frozen encoder re-encodes each accepted trajectory, keeping replay in a consistent latent space despite fast encoder changes. The slow predictor minimizes next-observation error on sampled replay windows:
 \begin{equation}
   \loss_k(\phi_k)=
   \mathbb{E}_{(x,z^+)\sim\replay_k}
   \big\|P_{\phi_k}(x)-z^+\big\|_2^2.
   \label{eq:replay}
 \end{equation}
-Here $x$ contains a short history of observation embeddings and executed actions, and $z^+$ is the embedding of the next observation. Each slow predictor is a separate copy of $P_0$ trained by replay. A replay update samples episodes from the buffer and draws a short window from each. The same update can therefore include a push that translated an object and an earlier push that turned it. Both windows describe observed motion in the coordinates of $E_0$, even if fast adaptation changed the encoder differently in the two episodes.
+Here $x$ contains observation embeddings and executed actions from a short history, and $z^+$ is the next observation embedding. Each slow predictor starts as a separate copy of $P_0$. Sampling windows across episodes combines different contacts and motions in the frozen representation space.
 
 \subsection{Discovering predictive domains}
 \label{sec:write}
@@ -37,7 +37,7 @@ For an unfamiliar episode, $\Delta_e$ concatenates the fast predictor and encode
 \end{equation}
 where $c_k$ is the domain's unit-length prototype. The retrieved domain is the first write candidate; otherwise, candidates are ranked by $s(e,k)$. The trajectory is assigned to a candidate domain if its predictor passes the error check in Sec.~\ref{sec:trust}. Unassigned trajectories remain in a pending pool. When a new direction aligns with those of two waiting episodes, the three trajectories establish a new domain.
 
-The near-zero mean cosine concerns consecutive episodes, not all pairs of encounters with compatible dynamics. Fingerprints propose candidates; prediction errors determine whether their trajectories can share a learner. Delayed creation gathers evidence before fitting a new predictor. Two domains merge when their predictors transfer in both directions. The larger domain retains its predictor, combines both replay buffers, and trains on the merged experience; the absorbed predictor is retired. The frozen base remains available for fallback. A mature domain can also absorb a smaller compatible group (\supref{A}).
+Fingerprints propose candidates; prediction errors decide whether trajectories can share a learner. Delayed creation gathers evidence before fitting a new predictor. Domains merge when their predictors transfer in both directions: the larger domain retains its predictor, combines the buffers, and replays the merged experience. The frozen base remains available. Mature domains can also absorb smaller compatible groups (\supref{A}).
 
 % Queue result displays for the next page, alongside the experiments.
 \input{sec/5_result_floats}

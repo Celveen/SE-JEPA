@@ -1,0 +1,77 @@
+{
+  "routing": {
+    "one_step": {
+      "n": 350,
+      "verified_macro_mse": {
+        "P0": 0.058149046682020915,
+        "selected": 0.013031357332531895,
+        "fixed_single": 0.02212499140662008,
+        "random_expectation": 0.046743089907020995,
+        "oracle": 0.011788429352454841
+      }
+    },
+    "five_step": {
+      "n": 266,
+      "verified_macro_mse": {
+        "P0": 0.08894016089891474,
+        "selected": 0.0315416454298197,
+        "fixed_single": 0.04747497065054477,
+        "random_expectation": 0.08121789844781972,
+        "oracle": 0.02782502345795005
+      }
+    }
+  },
+  "cost": {
+    "CEM_adajepa": {
+      "latency_mean_s": 21.34893751381342,
+      "latency_p95_s": 29.961053869023452,
+      "success_rate_pct": 35.714285714285715,
+      "mpc_mean": 23.085714285714285,
+      "gpu_peak_allocated_bytes_max": 2889997312
+    },
+    "CEM_frozen": {
+      "latency_mean_s": 21.263491696123747,
+      "latency_p95_s": 27.564977016866518,
+      "success_rate_pct": 22.857142857142858,
+      "mpc_mean": 24.714285714285715,
+      "gpu_peak_allocated_bytes_max": 2851188736
+    },
+    "CEM_ours": {
+      "latency_mean_s": 15.44835966705633,
+      "latency_p95_s": 33.057131391507575,
+      "success_rate_pct": 71.42857142857143,
+      "mpc_mean": 15.685714285714285,
+      "gpu_peak_allocated_bytes_max": 3365635072
+    },
+    "GD_adajepa": {
+      "latency_mean_s": 18.304563690602247,
+      "latency_p95_s": 25.52454689031001,
+      "success_rate_pct": 32.857142857142854,
+      "mpc_mean": 23.557142857142857,
+      "gpu_peak_allocated_bytes_max": 319407616
+    },
+    "GD_frozen": {
+      "latency_mean_s": 17.877011784428866,
+      "latency_p95_s": 23.64250800339505,
+      "success_rate_pct": 21.428571428571427,
+      "mpc_mean": 24.942857142857143,
+      "gpu_peak_allocated_bytes_max": 226253824
+    },
+    "GD_ours": {
+      "latency_mean_s": 13.417712713636105,
+      "latency_p95_s": 28.62457762826622,
+      "success_rate_pct": 67.14285714285714,
+      "mpc_mean": 15.914285714285715,
+      "gpu_peak_allocated_bytes_max": 1002177024
+    },
+    "total_timed_runs": 1260,
+    "hardware": "NVIDIA GeForce RTX 4090"
+  },
+  "sources": {
+    "routing_summary.json": "7fece20f68c27e15d307c8aaefed8cdb82fa04de8a3b2d02994a7683a84f5ad5",
+    "routing_task_comparisons.csv": "ef9334f2dee7c554f088c8aeeb0971d9af68fa1439b9fc6f36d20ad0f546a33b",
+    "cost_summary.csv": "5958666260e02c4332781799f622807208010324996f084f64ece276e97e6eff",
+    "cost_paired_tasks.csv": "58e557dfde93f4242c13279c34e3e8e0240c6ddb7e9f4737badeda8378d98c81",
+    "cost_step_summary.csv": "528db2d3f3bb0ce86def9f71cb8496d9836733c6197250c3c32a178e4b56ef37"
+  }
+}

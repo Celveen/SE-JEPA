@@ -1,49 +1,25 @@
 # SE-JEPA — CVPR 2027 manuscript
 
-## Current revision: 2026-11-12
+## Current revision: 2026-11-13
 
-The accepted abstract is unchanged. The main paper remains eight pages, with
-20 pages including references and appendices. The main ablation table now shows
-one complete GD/CEM stream for each task (PushObj chain 1, PushT chain 2).
-The appendix separates the available GD memory-design comparisons from the
-complete four-column GD/CEM gate and learning-rate grid. Incomplete PushT chain
-columns and the redundant familiarity/three-chain displays have been removed.
+The latest Overleaf teacher edits were downloaded before editing. The teacher's new abstract wording and Related Work are preserved. Repeated motivation and result explanations were shortened to keep the main paper at eight pages.
 
-Teacher-review changes clarify write validation versus retrieval, the 1.2 write
-threshold and 0.9 maturity criterion, and buffer/predictor handling at a merge.
-Repeated checkpoint and rerun commentary is removed; evaluation phases, sample
-sizes, initialization facts and published-score sources remain explicit.
-Figure 1 uses held-out GD results; Table 1 uses online CEM results for SE-JEPA
-PushObj. These are distinct measurements, not contradictory averages.
+Figure 1 now uses the author's `teaser_final(6).pdf`, with empty margins cropped and vector/text content retained. It spans both columns on page 2. Main Table 5 tests mature-predictor selection on future observations. The cost result is summarized in main Section 4.2, with detailed latency, GPU memory, phase breakdown, and prior consolidation/storage tables in Appendix A.4. Appendix D.11 documents the routing diagnostic and paired uncertainty.
 
-Figure 2 retains the author's supplied colors, positions and fonts, plus real
-rope/granular simulator images. Its original vector outlines now have an aligned
-searchable text layer using the original embedded fonts. All 59 labels can be
-copied, and the rendered pixels are unchanged. Rebuild with
-`python tools/update_overview_tasks.py`.
+## Build and synchronization
 
-## Build and upload
+Use `main.tex` with pdfLaTeX on Overleaf. `supplement.tex` builds the standalone appendix after `main.aux` exists. The official CVPR 2027 style, font size, margins, and line spacing are unchanged. The combined manuscript has 22 pages: main 8, statement/references 2, appendix 12; the standalone supplement has 13 pages.
 
-Use `main.tex` with pdfLaTeX on Overleaf; no shell escape or figure regeneration
-is required. `supplement.tex` builds the standalone appendix after `main.aux`
-exists. The official CVPR 2027 style is unchanged. The supplied preview is
-validated locally with Tectonic/XeTeX; pdfLaTeX may choose slightly different
-line breaks. The clean 49-file archive contains only active compile dependencies.
-The current revision has not automatically overwritten the existing online project.
+Overleaf was updated selectively: 14 files were verified after upload and the other 45 pre-existing files were unchanged. The online compile also has eight main pages and the teaser on page 2. Local previews use Tectonic/XeTeX. Its 146 prose/caption endings and 42 bibliography endings pass the 40% width check, and the final main-page column gap is 2.62 lines. The standalone appendix passes its corresponding checks. pdfLaTeX may choose different line breaks.
 
-## Evidence and reproduction
+The 53-file clean archive contains only active compile dependencies and its README. It excludes obsolete illustrations, unused tables, raw data, and tools. The full research archive retains source art, historical records, audited numeric data, and reproduction tools.
 
-- `data/review_response_20261112.json`: review-to-change mapping and prioritized missing experiments.
-- `data/cem_ablation_20261112/`: selected episode records, source hashes and recomputed metrics.
-- `tools/build_planner_ablation.py`: regenerate the new tables from GD/CEM episode outcomes.
-- `data/revision_assets/architecture_tasks/text_layer_audit.json`: font and visual-preservation checks.
-- `data/paragraph_layout_audit.json` and `compile_checks.json`: current layout/build checks.
+## Evidence
 
-All 21,000 CEM evaluation records were recomputed against the supplied summary;
-399 original NPZ batches (19,950 evaluations) were independently checked.
-The retained common grid contains 14,700 CEM evaluations. Three test seeds are
-evaluation repetitions, not independent training runs. Missing CEM memory-design
-ablations are not filled with other planners' results.
+- `data/revision_20261113/`: verified routing and cost summaries, paired task data, storage inventory, and Overleaf verification.
+- `tools/build_routing_cost_tables.py`: rebuild the four new tables.
+- `data/cem_ablation_20261112/` and `tools/build_planner_ablation.py`: prior GD/CEM ablations.
+- `data/revision_assets/architecture_tasks/text_layer_audit.json`: selectable architecture labels.
+- `data/paragraph_layout_audit.json` and `compile_checks.json`: current build/layout checks.
 
-The research archive retains historical source evidence for reproducibility;
-only the active tables and figures are included in the clean Overleaf archive.
+Dated review-response files and author notes describe historical revisions; this section records the current state.
