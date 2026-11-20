@@ -11,7 +11,7 @@ Persistent replay is re-encoded by the reference encoder. Each slow learner is a
 
 \begin{table}[t]
   \centering
-  \caption{Label-free configuration used for PushObj and PushT. The seven-round stream in Appendix~D uses a slow learning rate of $2\times10^{-4}$ for all replay updates.}
+  \caption{Label-free configuration used for PushObj and PushT. The seven-round stream in \appendixref{app:additional} uses a slow learning rate of $2\times10^{-4}$ for all replay updates.}
   \label{tab:hyperparams}
   \small
   \begin{tabular}{lr}
@@ -103,17 +103,17 @@ with the symmetric condition for $B\to A$. Each direction requires two jointly e
 
 Every 25 episodes, small immature domains can be absorbed into a mature predictor that explains their experience with an error ratio at most 0.8. The primary configuration limits absorption to fragments with fewer than six episodes and fewer than three maturity measurements. Pending-pool absorption and the additional absolute-error gate are disabled in the shape and visual experiments.
 
-\subsection{Measured deployment cost}
+\subsection{Single-GPU deployment cost}
 \label{app:deployment_cost}
 
-We profile Frozen, AdaJEPA, and \ours on one NVIDIA RTX 4090 GPU per run, using the same ten physical PushT tasks under seven visual conditions. Each method--planner pair has 70 task--condition pairs and three timing repetitions, giving 1,260 measured episodes overall. Two warm-up episodes precede each run. We average repetitions within each pair before computing mean and 95th-percentile (P95) episode times. CUDA operations are synchronized for timing. All methods use the same planner implementation within each planner family; GD builds its \mbox{CUDA graphs during warm-up}.
+To test deployment with a smaller compute and memory budget, we profiled Frozen, AdaJEPA, and \ours{} on a single consumer-grade NVIDIA RTX 4090. Each method and planner evaluated the same ten physical PushT tasks under seven visual conditions. We timed three repetitions per task--condition pair, yielding 1,260 measured episodes. All methods use the same implementation for each planner. In GD, CUDA graphs capture repeated optimization operations during warm-up to reduce kernel-launch overhead during planning.
 
-\paragraph{Time and GPU memory.}
-The measurement evaluates the memory learned after five rounds, with retrieval and fast adaptation active and persistent memory fixed. Episode time includes planning, adaptation, retrieval, simulator execution, and evaluation, but excludes process initialization and warm-up. Table~\ref{tab:deployment_cost} includes successful and unsuccessful episodes. Relative to AdaJEPA, \ours reduces mean replans from 23.56 to 15.91 under GD and from 23.09 to 15.69 under CEM, lowering mean episode time from 18.30 to 13.42 seconds and from 21.35 to 15.45 seconds. The respective speedups are $1.36\times$ and $1.38\times$. Peak allocated GPU memory increases by 0.64 and 0.44\,GiB. Allocated memory measures live tensors; reserved memory also includes the allocator cache.
+\paragraph{Higher success with shorter episodes.}
+Compared with AdaJEPA, \ours{} raises success by 34.3 percentage points under GD (32.86\% to 67.14\%) and 35.7 points under CEM (35.71\% to 71.43\%). Mean episode time falls by 26.7\% under GD (18.30 to 13.42 seconds) and 27.6\% under CEM (21.35 to 15.45 seconds). Peak allocated GPU memory increases by just 0.64\,GiB and 0.44\,GiB, respectively. \paperxref{Table}{tab:deployment_cost}{} reports all episodes and shows both allocated memory for live tensors and reserved memory, which includes the allocator cache.
 
 \begin{table*}[t]
   \centering
-  \caption{\textbf{Deployment time and GPU memory on matched PushT tasks.} Success (\%), mean replans, mean and P95 episode time (seconds), and maximum allocated/reserved GPU memory (GiB). Timing repetitions share the same tasks and learned memory.}
+  \caption{\textbf{Deployment cost on one RTX 4090 for matched PushT tasks.} Success (\%), mean replans, mean and P95 episode time (seconds), and maximum allocated/reserved GPU memory (GiB). Timing repetitions share the same tasks and learned memory.}
   \label{tab:deployment_cost}
   \small
   \begin{tabular}{@{}llrrrrrr@{}}
@@ -125,12 +125,12 @@ The measurement evaluates the memory learned after five rounds, with retrieval a
   \end{tabular}
 \end{table*}
 
-\paragraph{Where the time is spent.}
-Table~\ref{tab:deployment_phases} separates the major episode costs. Planning itself costs about 0.30 seconds per replan with GD and 0.44--0.45 seconds with CEM for all methods. The reduction in total time comes from completing more tasks with fewer replans. Adaptation includes prediction diagnostics, and retrieval adds only 0.094 seconds per GD episode and 0.118 seconds per CEM episode on average. P95 episode time is higher for \ours: difficult episodes can still exhaust the budget while paying the additional adaptation and retrieval costs.
+\paragraph{Timing protocol and runtime breakdown.}
+The study evaluates reuse of memory learned after five rounds. Retrieval and fast adaptation remain active, with persistent memory fixed. We synchronize CUDA operations and exclude initialization and two warm-up episodes per run from timing. Episode time includes planning, adaptation, retrieval, simulator execution, and evaluation. We average repetitions within each task--condition pair before computing mean and 95th-percentile (P95) episode times. \paperxref{Table}{tab:deployment_phases}{} separates the major costs. Planning itself costs about 0.30 seconds per replan with GD and 0.44--0.45 seconds with CEM for all methods. The lower mean episode time comes from solving more goals with fewer replans. Compared with AdaJEPA, mean replans drop from 23.56 to 15.91 with GD and from 23.09 to 15.69 with CEM. Adaptation includes prediction diagnostics, and retrieval adds only 0.094 seconds per GD episode and 0.118 seconds per CEM episode on average. P95 episode time is higher for \ours: difficult episodes can still exhaust the budget while paying the additional adaptation and retrieval costs.
 
 \begin{table*}[t]
   \centering
-  \caption{\textbf{Mean episode time by component (seconds).} Adaptation includes diagnostics; simulator time includes evaluation. Minor reset and bookkeeping costs account for the remaining difference from Table~\ref{tab:deployment_cost}.}
+  \caption{\textbf{Mean episode time by component (seconds).} Adaptation includes diagnostics; simulator time includes evaluation. Minor reset and bookkeeping costs account for the remaining difference from \paperxref{Table}{tab:deployment_cost}{}.}
   \label{tab:deployment_phases}
   \small
   \begin{tabular}{@{}llrrrr@{}}
@@ -143,7 +143,7 @@ Table~\ref{tab:deployment_phases} separates the major episode costs. Planning it
 \end{table*}
 
 \paragraph{Learning and persistent storage.}
-Table~\ref{tab:deployment_memory} reports the preceding five-round learning stage, with 1,750 episodes per stream. Each final memory holds 733--766 trajectories in the profiled streams; their latent replay tensors occupy 21.5--22.9\,MiB. The full saved state also contains predictor and optimizer tensors, fingerprints, and pending experience. Across all six streams, consolidation uses 11,280--15,180 slow optimizer steps, including learner initialization, ordinary writes, merges, and absorption. These counts are reconstructed from the executed update rules and recorded events and reconciled with the saved replay states. The deployment timings above measure reuse of these learned memories; earlier consolidation is reported separately.
+\paperxref{Table}{tab:deployment_memory}{} reports the preceding five-round learning stage, with 1,750 episodes per stream. Each final memory holds 733--766 trajectories in the profiled streams; their latent replay tensors occupy 21.5--22.9\,MiB. The full saved state also contains predictor and optimizer tensors, fingerprints, and pending experience. Across all six streams, consolidation uses 11,280--15,180 slow optimizer steps, including learner initialization, ordinary writes, merges, and absorption. These counts are reconstructed from the executed update rules and recorded events and reconciled with the saved replay states. The deployment timings above measure reuse of these learned memories; earlier consolidation is reported separately.
 
 \begin{table*}[t]
   \centering

@@ -6,11 +6,21 @@
 \usepackage{xr-hyper}
 \definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
 \usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
-\externaldocument[main-]{main}
+\IfFileExists{main.aux}{%
+  \externaldocument[main-]{main}%
+}{%
+  \input{main-crossrefs}%
+}
 \def\confName{CVPR}
 \def\confYear{2027}
 \title{SE-JEPA: Self-Evolving Latent World Models\\Supplementary Material}
 \author{Anonymous CVPR submission}
+
+% Link only the reference number, leaving the prefix and panels as text.
+\DeclareRobustCommand{\paperxref}[3]{\mbox{#1~\ref{#2}#3}}
+% Link only the letter in an appendix cross-reference.
+\DeclareRobustCommand{\appendixref}[1]{\mbox{Appendix~\ref{#1}}}
+
 \begin{document}
 \maketitle
 \appendix

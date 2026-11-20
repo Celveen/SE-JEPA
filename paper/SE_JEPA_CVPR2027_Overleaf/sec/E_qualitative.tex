@@ -2,13 +2,13 @@
 \label{app:qualitative}
 
 \subsection{Rigid-object planning sequences}
-Figure~\mainref{fig:qualitative} selects two GD episodes where Frozen, DINO-WM, and AdaJEPA fail and \ours succeeds. The unseen-I example uses the paired shape evaluation. Its DINO-WM frame replays recorded actions; the same procedure exactly reproduces all 31 archived Frozen frames and states.
+\paperxref{Figure}{main-fig:qualitative}{} selects two GD episodes where Frozen, DINO-WM, and AdaJEPA fail and \ours succeeds. The unseen-I example uses the paired shape evaluation. Its DINO-WM frame replays recorded actions; the same procedure exactly reproduces all 31 archived Frozen frames and states.
 
-The red-object example comes from round five of the 14-domain stream, with the same initial configuration and goal for all methods. DINO-WM's final frame comes from the 30-replan simulation; the other final frames reproduce the recorded action sequences in the original simulator. Appendix~D reports the mixed-stream evaluation.
+The red-object example comes from round five of the 14-domain stream, with the same initial configuration and goal for all methods. DINO-WM's final frame comes from the 30-replan simulation; the other final frames reproduce the recorded action sequences in the original simulator. \appendixref{app:additional} reports the mixed-stream evaluation.
 
-Figure~\mainref{fig:qualitative} labels MPC replans. All baseline runs fail after 30 replans of five environment actions, exhausting the same 150-action budget. \ours succeeds after six replans in each row. The examples were selected for these outcomes; aggregate success uses the complete evaluation sets.
+\paperxref{Figure}{main-fig:qualitative}{} labels MPC replans. All baseline runs fail after 30 replans of five environment actions, exhausting the same 150-action budget. \ours succeeds after six replans in each row. The examples were selected for these outcomes; aggregate success uses the complete evaluation sets.
 
-Figures~\ref{fig:full_shape} and~\ref{fig:full_visual} show the square and red-agent CEM examples from the original execution archive. Both use the first held-out target of test seed 2000. We retain the full frame strips, termination markers, prediction-loss curves, and explanatory notes. The label Ours denotes \ours; Replay identifies frames reconstructed in the original simulator from the recorded actions. Gray frames hold the terminal state once the episode has reached its goal.
+\paperxref{Figures}{fig:full_shape}{} and~\ref{fig:full_visual} show the square and red-agent CEM examples from the original execution archive. Both use the first held-out target of test seed 2000. We retain the full frame strips, termination markers, prediction-loss curves, and explanatory notes. The label Ours denotes \ours; Replay identifies frames reconstructed in the original simulator from the recorded actions. Gray frames hold the terminal state once the episode has reached its goal.
 
 On the unseen square, \ours reaches the goal after five replans, compared with eight for AdaJEPA; Frozen exhausts all 30 replans without success. On the red-agent shift, \ours succeeds at replan ten while both baselines exhaust the budget. These cases show two benefits of memory: reaching a shared goal sooner and solving a goal that episode-local adaptation misses.
 
@@ -29,7 +29,7 @@ On the unseen square, \ours reaches the goal after five replans, compared with e
 The plotted loss is prediction MSE over up to five recent transitions in the visual and proprioceptive latents, excluding action dimensions. Each curve is evaluated with its own method's weights, so absolute loss levels are not directly comparable across methods. The curves show how each method's prediction error changes during execution; task success is the common measure of planning performance. In particular, AdaJEPA reduces its prediction loss on the red-agent episode but still misses the target, whereas \ours achieves the desired configuration.
 
 \subsection{Deformable rollout sequences}
-Figure~\ref{fig:deform_reference} shows two complete deformable sequences: rope example 1 and granular example 2. Each row contains the start, every third push, and the goal within the same 15-push budget. These instances come from the repeated 50-instance stream and were selected where both baselines fail and the consolidated predictor succeeds. The examples use the third-pass slow predictor without within-episode adaptation; Table~\mainref{tab:main} reports fourth-pass aggregates. DINO-WM frames replay recorded actions in FleX; AdaJEPA and \ours frames were saved during planning. Final CD values and success markers are retained from the original logs.
+\paperxref{Figure}{fig:deform_reference}{} shows two complete deformable sequences: rope example 1 and granular example 2. Each row contains the start, every third push, and the goal within the same 15-push budget. These instances come from the repeated 50-instance stream and were selected where both baselines fail and the consolidated predictor succeeds. The examples use the third-pass slow predictor without within-episode adaptation; \paperxref{Table}{main-tab:main}{} reports fourth-pass aggregates. DINO-WM frames replay recorded actions in FleX; AdaJEPA and \ours frames were saved during planning. Final CD values and success markers are retained from the original logs.
 
 The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \ours reaches 0.31 and the target success threshold. In granular example 2, final CD is 0.33 for both baselines and 0.14 for \ours. The sequences show how replayed experience improves the geometry of the final configuration under a common action budget, even with fast adaptation disabled.
 
@@ -41,7 +41,3 @@ The first rope example starts at CD 1.72. Both baselines finish at 1.54, while \
  \caption{\textbf{Rope and granular execution sequences.} Top: rope example 1. Bottom: granular example 2. All methods share the initial configuration and goal. Columns show pushes 0, 3, 6, 9, 12 and 15, then the goal. Final-frame labels report CD (lower is better) and success. \ours reaches both goals with its consolidated slow predictor; both baselines fail.}
  \label{fig:deform_reference}
 \end{figure*}
-
-
-\subsection{Reproducibility}
-Source manifests link archived episode records, simulator images, outcomes, checksums, and crops. Appendix~D specifies the mixed-stream evaluation. The release will include code, configurations, learned states, and \mbox{the supporting evaluation records}.

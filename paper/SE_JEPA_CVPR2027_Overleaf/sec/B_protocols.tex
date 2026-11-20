@@ -4,16 +4,16 @@
 \subsection{Shape shifts}
 The shape learning stream has five deployment rounds over seven shapes, with 50 episodes per shape in every round. The post-learning benchmark uses target seeds 2000, 2100, and 2200, each with 350 episodes. I, square, and small tee are unseen in pretraining; T, L, Z, and plus are seen.
 
-For the paired planner comparison in Table~\ref{tab:planners}, each planner has three learned memory states. Every state is evaluated on all three test seeds. For each seed we average over episodes and states, then compute the standard deviation across seed-level means. The local external PushObj baselines use seed 2000.
+For the paired planner comparison in \paperxref{Table}{tab:planners}{}, each planner has three learned memory states. Every state is evaluated on all three test seeds. For each seed we average over episodes and states, then compute the standard deviation across seed-level means. The single-seed PushObj baseline runs use test seed 2000.
 
-Table~\mainref{tab:main} reports fifth-round online PushObj performance with adaptation and memory writing active: 844 successes out of 1,050 episodes (80.38\%) overall, and 329 out of 450 (73.11\%) on unseen shapes. Figure~\mainref{fig:teaser} reports the gains over AdaJEPA on held-out targets \mbox{after learning, for both GD and CEM}.
+\paperxref{Table}{main-tab:main}{} reports fifth-round online PushObj performance with adaptation and memory writing active: 844 successes out of 1,050 episodes (80.38\%) overall, and 329 out of 450 (73.11\%) on unseen shapes. \paperxref{Figure}{main-fig:teaser}{} reports the gains over AdaJEPA on held-out targets \mbox{after learning, for both GD and CEM}.
 
 \subsection{Visual shifts}
 The paired visual evaluation contains the original T condition, blur, salt-and-pepper noise, darkness, red agent, red object, and red goal. Three five-round learning chains resample targets every round, with 350 episodes per round. Held-out testing uses three target seeds and 50 episodes per condition. Direct checks of source-episode identifiers confirm that held-out sources never occur in the learning streams and that the three test seeds use disjoint sources.
 
-The color-learning curve in Fig.~\mainref{fig:deployment} aggregates red-agent, red-object, and red-goal episodes. For each round and learning chain, it sums successes over the three conditions and divides by 150 episodes, and plots the mean of the three chain-level rates. The archived statistics include their sample standard deviation. The three conditions share the same 50 source targets within a chain and round.
+The color-learning curve in \paperxref{Fig.}{main-fig:deployment}{} aggregates red-agent, red-object, and red-goal episodes. For each round and learning chain, it sums successes over the three conditions and divides by 150 episodes, and plots the mean of the three chain-level rates. The archived statistics include their sample standard deviation. The three conditions share the same 50 source targets within a chain and round.
 
-The external visual baselines use the established VIS50 collection with planning seed 100. The external comparisons use its six shifted conditions, with 50 paired initial/goal states per condition.
+For the VIS50 baseline comparison, we evaluate the same 50 initial/goal pairs under each of the six visual shifts, using planning seed 100.
 
 
 \subsection{Success and interaction counts}
@@ -22,9 +22,9 @@ For the paired rigid-object comparisons, GD uses 100 optimization steps; CEM use
   \overline{T} = \frac{1}{N}\sum_{i=1}^{N}
   \big[\, S_i T_i + (1-S_i)\, T_{\max} \big], \qquad T_{\max}=30.
 \end{equation}
-Equivalently, $\overline{T} = T_{\max} - \sum_{t=1}^{T_{\max}-1} F(t)$, where $F(t)$ is the fraction of episodes solved by replan $t$; the cumulative curves in Fig.~\mainref{fig:efficiency_main} visualize $F$.
+Equivalently, $\overline{T} = T_{\max} - \sum_{t=1}^{T_{\max}-1} F(t)$, where $F(t)$ is the fraction of episodes solved by replan $t$; the cumulative curves in \paperxref{Fig.}{main-fig:efficiency_main}{} visualize $F$.
 
-DINO-WM PushT CEM executes 25 actions per replan; Table~\mainref{tab:main} converts its mean to five-action units, $4.41\times25/5=22.05$, with failures assigned 30 units.
+DINO-WM PushT CEM executes 25 actions per replan; \paperxref{Table}{main-tab:main}{} converts its mean to five-action units, $4.41\times25/5=22.05$, with failures assigned 30 units.
 
 \subsection{Deformable manipulation}
 Rope and granular each use one slow predictor, a DINO-WM backbone, and 50 instances revisited over four passes, with the same targets, order, and planning seeds in every pass. The slow-only variant plans from the slow predictor without fast within-episode updates. CEM uses 300 samples, 30 elites, and 10 iterations, with three MPC iterations of five pushes each. The unseen-rope evaluation freezes the predictor saved after the first pass and tests it on 91 instances absent from the learning stream, against the frozen reference on the same instances. Mean CD falls from 0.664 with the reference to 0.349 with the one-pass predictor. Across the 91 matched instances, the predictor improves CD on 56. A paired percentile bootstrap over instances (20,000 resamples, seed 20261107) gives a 95\% interval of [0.162, 0.470] for the mean CD reduction. The observed mean reduction is 0.314.
