@@ -21,6 +21,8 @@
 % Link only the letter in an appendix cross-reference.
 \DeclareRobustCommand{\appendixref}[1]{\mbox{Appendix~\ref{#1}}}
 
+% Reference numbers are fixed to the submitted main paper.
+\newcommand{\maincite}[2]{\href{main.pdf\#cite.#1}{[#2]}}
 \begin{document}
 \maketitle
 \appendix
@@ -29,16 +31,4 @@
 \input{sec/C_baselines}
 \input{sec/D_additional_results}
 \input{sec/E_qualitative}
-\clearpage
-{\small
-% Keep bibliography endings substantial without altering entry wording.
-    \let\standardthebibliography\thebibliography
-    \renewcommand{\thebibliography}[1]{%
-      \standardthebibliography{#1}%
-      \tolerance=1000\relax
-      \setlength{\parfillskip}{0pt plus 0.25\linewidth}%
-    }
-    \bibliographystyle{ieeenat_fullname}
-\bibliography{references}
-}
 \end{document}

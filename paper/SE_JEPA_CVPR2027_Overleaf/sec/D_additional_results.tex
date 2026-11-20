@@ -71,7 +71,7 @@ Frozen retains the pretrained predictor, AdaJEPA adapts within each episode, and
  \toprule
  & & \multicolumn{3}{c}{GD} & \multicolumn{3}{c}{CEM}\\
  \cmidrule(lr){3-5}\cmidrule(lr){6-8}
- Family & Domain & Frozen & AdaJEPA & \ours & Frozen & AdaJEPA & \ours\\
+ Family & Domain & Frozen & AdaJEPA & \textbf{\ours} & Frozen & AdaJEPA & \textbf{\ours}\\
  \midrule
  \inputrows{tables/mixed14_domains.tex}
  \bottomrule
@@ -104,7 +104,7 @@ Frozen retains the pretrained predictor, AdaJEPA adapts within each episode, and
 
 \begin{table}[t]
   \centering
-  \caption{CD of \ours after each consolidation pass at two slow learning rates (mean $\pm$ standard error, 50 instances).}
+  \caption{CD of \textbf{\ours} after each consolidation pass at two slow learning rates (mean $\pm$ standard error, 50 instances).}
   \label{tab:deform_passes}
   \footnotesize
   \setlength{\tabcolsep}{2.5pt}
@@ -241,7 +241,7 @@ The GD learning stream contains only I, a shape absent from pretraining, for sev
 \small
 \begin{tabular}{@{}crrrr@{}}
 \toprule
- & \multicolumn{2}{c}{Fast inheritance} & \multicolumn{2}{c}{\ours}\\
+ & \multicolumn{2}{c}{Fast inheritance} & \multicolumn{2}{c}{\textbf{\ours}}\\
 \cmidrule(lr){2-3}\cmidrule(lr){4-5}
 Round & I & Other six & I & Other six\\
 \midrule
