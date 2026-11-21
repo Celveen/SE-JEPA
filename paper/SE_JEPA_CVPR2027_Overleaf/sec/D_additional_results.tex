@@ -124,7 +124,7 @@ Frozen retains the pretrained predictor, AdaJEPA adapts within each episode, and
 
 We also test whether one persistent memory can separate and learn two deformable dynamics regimes in the simulated robot-arm environment. A single CEM chain alternates ten rope episodes with ten granular episodes, five times per round, for three rounds and 300 goals. Each round uses 50 goals per material, with no source trajectory shared across rounds. Both materials use the same rope-trained DINO-WM initialization, so granular is a new material for the pretrained predictor. Memory starts empty and persists across every material switch. Material labels are used only for analysis; the algorithm receives neither domain identities nor a prescribed number of domains.
 
-This mixed-stream configuration retains fast adaptation and uses a slow learning rate of $2\times10^{-4}$. It also checks that an episode's prediction error is at most 20 times the candidate predictor's median error on its own stored trajectories before accepting a write. This absolute-error check supplements the relative validation test in \appendixref{app:implementation}. Each episode allows 15 pushes, and success requires final CD below 0.5 for rope or 0.2 for granular. These runs share one base and retain fast adaptation; the single-domain results use separate bases without fast adaptation.
+\paperxref{Table}{tab:deform_hyperparams}{} lists the mixed-stream learning settings. It also checks that an episode's prediction error is at most 20 times the candidate predictor's median error on its own stored trajectories before accepting a write. This absolute-error check supplements the relative validation test in \appendixref{app:implementation}.
 
 \begin{table*}[t]
  \centering
@@ -132,20 +132,18 @@ This mixed-stream configuration retains fast adaptation and uses a slow learning
  \label{tab:deform_mixed}
  \small
  \setlength{\tabcolsep}{5pt}
- \begin{tabular}{@{}crrrrrrr@{}}
+ \begin{tabular}{@{}crrrrr@{}}
  \toprule
- & \multicolumn{2}{c}{Rope} & \multicolumn{2}{c}{Granular} & \multicolumn{3}{c}{Memory and retrieval}\\
- \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-8}
- Round & CD $\downarrow$ & Success (\%) $\uparrow$ & CD $\downarrow$ & Success (\%) $\uparrow$ & Stored R/G & Purity (\%) & Correct retrievals\\
+ Round & Rope CD $\downarrow$ & Granular CD $\downarrow$ & Stored R/G & Purity (\%) & Correct retrievals\\
  \midrule
  \inputrows{tables/deform_mixed.tex}
  \bottomrule
  \end{tabular}
 \end{table*}
 
-\paperxref{Table}{tab:deform_mixed}{} shows that the system discovers two mature memories and keeps them distinct: after three rounds, all 80 stored rope episodes and all 150 granular episodes belong to their respective material domains. The other 70 episodes are 69 familiar rope encounters and one rejected write. Stored-member purity is 100\% at every round endpoint. Of 660 slow-predictor selections, 653 (98.9\%) match the current material; all seven mismatches occur in the first round. All 457 slow-predictor selections in rounds two and three are material-matched, while the frozen reference remains available throughout deployment.
+\paperxref{Table}{tab:deform_mixed}{} shows that the system discovers two mature memories and keeps them distinct: after three rounds, all 80 stored rope episodes and all 150 granular episodes belong to their respective material domains. The other 70 episodes are 69 familiar rope encounters and one rejected write. Stored-member purity is 100\% at every round endpoint. Of 660 slow-predictor selections, 653 (98.9\%) match the current material; all seven mismatches occurred in three episodes in the first granular block. During those replans the system selected the rope predictor, but it stored all three trajectories in the granular domain. All 457 slow-predictor selections in rounds two and three are material-matched, while the frozen reference remains available throughout deployment.
 
-Mean final CD falls from 0.598 to 0.412 on rope and from 0.471 to 0.355 on granular across the three disjoint trajectory groups. Rope success rises from 60\% to 82\%; granular success is 2\%, 8\%, and 4\%. Together with material-correct retrieval, the decreasing goal distances show that one label-free memory can retain distinct dynamics and continue learning as materials alternate.
+Mean final CD falls from 0.598 to 0.412 on rope and from 0.471 to 0.355 on granular across the three disjoint trajectory groups. Together with material-correct retrieval, the decreasing goal distances show that one label-free memory can retain distinct dynamics and continue learning as materials alternate.
 
 \subsection{Component protocols and learning rates}
 \label{app:component_ablation}

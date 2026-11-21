@@ -17,7 +17,7 @@ For the VIS50 baseline comparison, we evaluate the same 50 initial/goal pairs un
 
 
 \subsection{Success and interaction counts}
-For the paired rigid-object comparisons, GD uses 100 optimization steps; CEM uses 10 iterations with 200 samples and 30 elites per iteration. Rigid-object success requires a joint Euclidean error below 20 simulator units across the pusher and object positions, and an object orientation error below $\pi/9$. Each executed model action contains five physical actions, and an episode has at most 30 MPC replans. For episode $i$ with success indicator $S_i$ and first successful replan $T_i$,
+For the paired evaluations on PushObj and PushT, GD uses 100 optimization steps; CEM uses 10 iterations with 200 samples and 30 elites per iteration. On both datasets, success requires a joint Euclidean error below 20 simulator units across the pusher and object positions, and an object orientation error below $\pi/9$. Each executed model action contains five physical actions, and an episode has at most 30 MPC replans. For episode $i$ with success indicator $S_i$ and first successful replan $T_i$,
 \begin{equation}
   \overline{T} = \frac{1}{N}\sum_{i=1}^{N}
   \big[\, S_i T_i + (1-S_i)\, T_{\max} \big], \qquad T_{\max}=30.
@@ -27,7 +27,52 @@ Equivalently, $\overline{T} = T_{\max} - \sum_{t=1}^{T_{\max}-1} F(t)$, where $F
 DINO-WM PushT CEM executes 25 actions per replan; \paperxref{Table}{main-tab:main}{} converts its mean to five-action units, $4.41\times25/5=22.05$, with failures assigned 30 units.
 
 \subsection{Deformable manipulation}
-Rope and granular each use one slow predictor, a DINO-WM backbone, and 50 instances revisited over four passes, with the same targets, order, and planning seeds in every pass. The slow-only variant plans from the slow predictor without fast within-episode updates. CEM uses 300 samples, 30 elites, and 10 iterations, with three MPC iterations of five pushes each. The unseen-rope evaluation freezes the predictor saved after the first pass and tests it on 91 instances absent from the learning stream, against the frozen reference on the same instances. Mean CD falls from 0.664 with the reference to 0.349 with the one-pass predictor. Across the 91 matched instances, the predictor improves CD on 56. A paired percentile bootstrap over instances (20,000 resamples, seed 20261107) gives a 95\% interval of [0.162, 0.470] for the mean CD reduction. The observed mean reduction is 0.314.
+\paperxref{Table}{tab:deform_hyperparams}{} summarizes the Rope and Granular learning and evaluation settings. In single-material consolidation, each pass revisits the same targets in the same order with the same planning seeds. The unseen-rope evaluation freezes the predictor saved after the first pass and tests it on 91 instances absent from the learning stream, against the frozen reference on the same instances. Mean CD falls from 0.664 with the reference to 0.349 with the one-pass predictor. Across the 91 matched instances, the predictor improves CD on 56. A paired percentile bootstrap over instances (20,000 resamples, seed 20261107) gives a 95\% interval of [0.162, 0.470] for the mean CD reduction. The observed mean reduction is 0.314.
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Rope and Granular hyperparameters.} Planning settings apply to both materials. Single-material consolidation uses a separate slow predictor for each material; mixed-material learning retains one memory across material switches.}
+\label{tab:deform_hyperparams}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.59\columnwidth}p{0.35\columnwidth}@{}}
+\toprule
+Setting & Value\\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Planning and evaluation}}\\
+Backbone & DINO-WM\\
+Planner & CEM\\
+CEM samples / elites / iterations & 300 / 30 / 10\\
+MPC replans / pushes per replan & 3 / 5\\
+Maximum pushes per episode & 15\\
+Evaluation metric & Final CD $\downarrow$\\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Single-material consolidation}}\\
+Instances per material / passes & 50 / 4\\
+Slow predictors per material & 1\\
+Fast adaptation & Disabled\\
+Slow learning rate & $10^{-4}$\\
+Alternative slow learning rate & $2\times10^{-4}$\\
+Unseen Rope instances & 91\\
+Frozen predictor for unseen test & After pass 1\\
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Mixed-material learning}}\\
+Episodes per material / round & 50\\
+Rounds / total episodes & 3 / 300\\
+Consecutive episodes per material & 10\\
+Optimizer & Adam\\
+Fast steps per replan & 1\\
+Fast predictor / encoder-head LR & $5\times10^{-4}$ / $10^{-5}$\\
+Recent adaptation buffer & 5 transitions\\
+Slow learning rate & $2\times10^{-4}$\\
+Slow steps per standard write & 15\\
+Slow batch size (episodes) & 8\\
+Familiarity threshold & 0.117\\
+Maturity history / error ratio & 3 / 0.9\\
+Absolute write-error ratio limit & 20\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{table*}[t]
  \centering

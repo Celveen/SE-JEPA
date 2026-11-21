@@ -5,7 +5,7 @@
 Model training and evaluation used a server with eight NVIDIA A100 GPUs.
 
 \subsection{Fast and slow learning}
-The label-free rigid-object configuration builds on the episodic adaptation loop of AdaJEPA~\maincite{wang2026adajepa}{35}. At every replan, recent observed transitions provide a self-supervised next-state prediction loss. One Adam step adapts the predictor's last block and the encoder's designated projection/head parameters in working copies, leaving the original pretrained weights fixed. The episode-local predictor and encoder changes are reset at the next episode. A retrieved slow predictor supplies the predictor initialization; it does not replace the frozen reference encoder.
+On PushObj and PushT, our label-free configuration builds on the episodic adaptation loop of AdaJEPA~\maincite{wang2026adajepa}{35}. At every replan, recent observed transitions provide a self-supervised next-state prediction loss. One Adam step adapts the predictor's last block and the encoder's designated projection/head parameters in working copies, leaving the original pretrained weights fixed. The episode-local predictor and encoder changes are reset at the next episode. A retrieved slow predictor supplies the predictor initialization; it does not replace the frozen reference encoder.
 
 Persistent replay is re-encoded by the reference encoder. Each slow learner is a full predictor copy, initialized from the pretrained predictor rather than from the final fast parameters of the episode that created the domain. For each slow optimization step, up to eight stored episodes are sampled with replacement; each contributes a random window of up to six latent frames. The prediction objective averages one-step observation-feature errors over the available history windows. Actions condition the prediction; the loss is computed only on observation features. Standard writes use 15 Adam steps. Founding a learner after $n$ stored episodes uses $15n$ steps to process the accumulated evidence. Merging likewise adds replay updates for absorbed experience.
 
@@ -113,12 +113,12 @@ Compared with AdaJEPA, \ours{} raises success by 34.3 percentage points under GD
 
 \begin{table*}[t]
   \centering
-  \caption{\textbf{Deployment cost on one RTX 4090 for matched PushT tasks.} Success (\%), mean replans, mean and P95 episode time (seconds), and maximum allocated/reserved GPU memory (GiB). Timing repetitions share the same tasks and learned memory.}
+  \caption{\textbf{Deployment cost on one RTX 4090 for matched PushT tasks.} Success (\%), mean replans, mean episode time (seconds), and maximum allocated/reserved GPU memory (GiB).}
   \label{tab:deployment_cost}
   \small
-  \begin{tabular}{@{}llrrrrrr@{}}
+  \begin{tabular}{@{}llrrrrr@{}}
     \toprule
-    Planner & Method & Success $\uparrow$ & Replans $\downarrow$ & Mean time $\downarrow$ & P95 time & Allocated & Reserved\\
+    Planner & Method & Success $\uparrow$ & Replans $\downarrow$ & Mean time $\downarrow$ & Allocated & Reserved\\
     \midrule
     \inputrows{tables/deployment_cost.tex}
     \bottomrule
@@ -126,7 +126,7 @@ Compared with AdaJEPA, \ours{} raises success by 34.3 percentage points under GD
 \end{table*}
 
 \paragraph{Timing protocol and runtime breakdown.}
-The study evaluates reuse of memory learned after five rounds. Retrieval and fast adaptation remain active, with persistent memory fixed. We synchronize CUDA operations and exclude initialization and two warm-up episodes per run from timing. Episode time includes planning, adaptation, retrieval, simulator execution, and evaluation. We average repetitions within each task--condition pair before computing mean and 95th-percentile (P95) episode times. \paperxref{Table}{tab:deployment_phases}{} separates the major costs. Planning itself costs about 0.30 seconds per replan with GD and 0.44--0.45 seconds with CEM for all methods. The lower mean episode time comes from solving more goals with fewer replans. Compared with AdaJEPA, mean replans drop from 23.56 to 15.91 with GD and from 23.09 to 15.69 with CEM. Adaptation includes prediction diagnostics, and retrieval adds only 0.094 seconds per GD episode and 0.118 seconds per CEM episode on average. P95 episode time is higher for \ours: difficult episodes can still exhaust the budget while paying the additional adaptation and retrieval costs.
+The study evaluates reuse of memory learned after five rounds. Retrieval and fast adaptation remain active, with persistent memory fixed. We synchronize CUDA operations and exclude initialization and two warm-up episodes per run from timing. Episode time includes planning, adaptation, retrieval, simulator execution, and evaluation. We average repetitions within each task--condition pair before computing the mean episode time. \paperxref{Table}{tab:deployment_phases}{} separates the major costs. Planning itself costs about 0.30 seconds per replan with GD and 0.44--0.45 seconds with CEM for all methods. The lower mean episode time comes from solving more goals with fewer replans. Compared with AdaJEPA, mean replans drop from 23.56 to 15.91 with GD and from 23.09 to 15.69 with CEM. Adaptation includes prediction diagnostics, and retrieval adds only 0.094 seconds per GD episode and 0.118 seconds per CEM episode on average.
 
 \begin{table*}[t]
   \centering
