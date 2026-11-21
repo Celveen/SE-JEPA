@@ -106,6 +106,10 @@ The shape and maze checkpoints ship the VQVAE decoder that was co-trained with t
   <i>Planning with an unseen I shape: AdaJEPA (left, red) reaches the goal; the frozen one (right, blue) does not.</i>
 </p>
 
+### Rope and granular robot-arm recordings
+
+[Eight qualitative comparison groups](media/robot_arm_qualitative/README.md) provide native PyFleX PNG sequences, push-boundary keyframes, goal images, Chamfer distances, and provenance for continual learning and Frozen DINO-WM comparisons.
+
 ## Acknowledgement
 
 This repository builds on [temporal-straightening](https://github.com/agentic-learning-ai-lab/temporal-straightening) and [DINO-WM](https://github.com/gaoyuezhou/dino_wm). We are grateful to the authors for sharing open-source implementations.

@@ -1,0 +1,15 @@
+{
+  "case": "granular_ep104",
+  "arm": "round3",
+  "CD5": 0.23667064309120178,
+  "CD10": 0.16404685378074646,
+  "CD15": 0.14497411251068115,
+  "motion_frames": 233,
+  "keyframes": 16,
+  "env_seed": 20485,
+  "plan_seed": 5125,
+  "resolution": [
+    224,
+    224
+  ]
+}

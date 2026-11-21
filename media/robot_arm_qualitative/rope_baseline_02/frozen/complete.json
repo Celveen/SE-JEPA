@@ -1,0 +1,15 @@
+{
+  "case": "rope_ep118",
+  "arm": "frozen",
+  "CD5": 1.0928928852081299,
+  "CD10": 0.3352809548377991,
+  "CD15": 0.3023604452610016,
+  "motion_frames": 250,
+  "keyframes": 16,
+  "env_seed": 40977,
+  "plan_seed": 5130,
+  "resolution": [
+    224,
+    224
+  ]
+}

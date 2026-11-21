@@ -1,0 +1,14 @@
+{
+  "state_in": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/granular/round_01/chunk_09_granular/continual_state.pt",
+  "domain": "granular",
+  "episode": 50,
+  "n": 50,
+  "tags": {
+    "granular": 50
+  },
+  "val_last": [
+    0.8840092648505049,
+    0.9460214703084658,
+    0.8036724321461375
+  ]
+}

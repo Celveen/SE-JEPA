@@ -1,0 +1,18 @@
+{
+  "candidate_tasks": 16,
+  "evaluations": 48,
+  "candidates_per_object": 8,
+  "candidate_rule": "Five highest-CD first-round online tasks and three lowest-CD third-round online tasks per object.",
+  "continual_rule": "At least 30% lower CD than original first-round encounter, with a further decrease in the matched-seed round-1 versus round-3 checkpoint comparison.",
+  "baseline_rule": "At least 30% lower CD than Frozen DINO-WM on a task not already used in the continual groups.",
+  "selected_groups": [
+    "rope_continual_01",
+    "rope_continual_02",
+    "rope_baseline_01",
+    "rope_baseline_02",
+    "granular_continual_01",
+    "granular_continual_02",
+    "granular_baseline_01",
+    "granular_baseline_02"
+  ]
+}

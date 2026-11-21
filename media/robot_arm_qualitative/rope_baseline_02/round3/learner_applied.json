@@ -1,0 +1,14 @@
+{
+  "state_in": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/rope/round_03/chunk_28_rope/continual_state.pt",
+  "domain": "rope",
+  "episode": 150,
+  "n": 150,
+  "tags": {
+    "rope": 150
+  },
+  "val_last": [
+    0.6875565784525933,
+    0.18701289270117286,
+    0.6702859471890477
+  ]
+}

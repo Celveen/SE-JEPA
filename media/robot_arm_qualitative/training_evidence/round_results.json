@@ -1,0 +1,72 @@
+{
+  "rope": [
+    {
+      "round": 1,
+      "n": 50,
+      "mean_CD": 0.5278014121949672,
+      "median_CD": 0.25156884640455246,
+      "se_CD": 0.0931712472601452,
+      "successes": 36,
+      "success_rate": 0.72,
+      "threshold": 0.5,
+      "checkpoint": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/rope/round_01/chunk_08_rope/continual_state.pt"
+    },
+    {
+      "round": 2,
+      "n": 50,
+      "mean_CD": 0.31882780402898786,
+      "median_CD": 0.22328659147024155,
+      "se_CD": 0.05158489245073775,
+      "successes": 44,
+      "success_rate": 0.88,
+      "threshold": 0.5,
+      "checkpoint": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/rope/round_02/chunk_18_rope/continual_state.pt"
+    },
+    {
+      "round": 3,
+      "n": 50,
+      "mean_CD": 0.31142691694200036,
+      "median_CD": 0.1868414431810379,
+      "se_CD": 0.06648694910796171,
+      "successes": 45,
+      "success_rate": 0.9,
+      "threshold": 0.5,
+      "checkpoint": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/rope/round_03/chunk_28_rope/continual_state.pt"
+    }
+  ],
+  "granular": [
+    {
+      "round": 1,
+      "n": 50,
+      "mean_CD": 0.2660620328783989,
+      "median_CD": 0.25243543088436127,
+      "se_CD": 0.012558772086065184,
+      "successes": 13,
+      "success_rate": 0.26,
+      "threshold": 0.2,
+      "checkpoint": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/granular/round_01/chunk_09_granular/continual_state.pt"
+    },
+    {
+      "round": 2,
+      "n": 50,
+      "mean_CD": 0.25412800803780555,
+      "median_CD": 0.24083569645881653,
+      "se_CD": 0.01806671083873242,
+      "successes": 19,
+      "success_rate": 0.38,
+      "threshold": 0.2,
+      "checkpoint": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/granular/round_02/chunk_19_granular/continual_state.pt"
+    },
+    {
+      "round": 3,
+      "n": 50,
+      "mean_CD": 0.23868884816765784,
+      "median_CD": 0.23158635944128036,
+      "se_CD": 0.010886792266624597,
+      "successes": 14,
+      "success_rate": 0.28,
+      "threshold": 0.2,
+      "checkpoint": "/data/zjc/SE-JEPA/eval_outputs/single_domain_new50x3/granular/round_03/chunk_29_granular/continual_state.pt"
+    }
+  ]
+}

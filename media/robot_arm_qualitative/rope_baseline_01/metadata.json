@@ -1,0 +1,45 @@
+{
+  "group": "rope_baseline_01",
+  "comparison": "baseline",
+  "source": {
+    "case": "rope_ep121",
+    "object": "rope",
+    "online_row": {
+      "object": "rope",
+      "round": "3",
+      "episode": "121",
+      "chunk": "chunk_24_rope",
+      "sample": "1",
+      "trajectory": "400",
+      "offset": "0",
+      "env_seed": "5125",
+      "CD5": "0.26863163709640503",
+      "CD10": "0.0733344629406929",
+      "CD15": "0.06696395576000214",
+      "success": "1",
+      "read": "rope",
+      "write": "rope",
+      "slow_loss": "0.027167105674743654",
+      "val_ratio": "0.9727059980967762"
+    },
+    "source_block": "chunk_24_rope",
+    "sample": 1,
+    "trajectory": 400,
+    "offset": 0,
+    "env_seed": 5125,
+    "plan_seed": 5125,
+    "target": "/data/zjc/SE-JEPA/eval_outputs/community_frames/candidates/rope_ep121/target.pkl",
+    "candidate_reason": "round3_low_CD"
+  },
+  "before_arm": "frozen",
+  "after_arm": "round3",
+  "before_CD": 1.7795374393463135,
+  "after_CD": 0.06133228540420532,
+  "relative_CD_reduction": 0.9655347035425482,
+  "target_sha256": "3936756a1202edb0ee15707119db1fc3afe5c63d6292ad81c043cf2ebe7416ff",
+  "checkpoint_sha256": {
+    "frozen": "d8f0af314f651b6265bf33359f2b8a55b5cf05e58edacdf127780d28a4948515",
+    "round3": "5be574b00ce9cf4c25469711d4c84e4d479930d832e916414755fb083a2d2cf2"
+  },
+  "rendering": "Native PyFleX RGB, 224x224; captured from existing store_data calls during planning."
+}

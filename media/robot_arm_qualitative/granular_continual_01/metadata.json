@@ -1,0 +1,47 @@
+{
+  "group": "granular_continual_01",
+  "comparison": "continual",
+  "source": {
+    "case": "granular_ep003",
+    "object": "granular",
+    "online_row": {
+      "object": "granular",
+      "round": "1",
+      "episode": "3",
+      "chunk": "chunk_01_granular",
+      "sample": "3",
+      "trajectory": "55",
+      "offset": "12",
+      "env_seed": "15304",
+      "CD5": "0.5352104902267456",
+      "CD10": "0.425825834274292",
+      "CD15": "0.44547486305236816",
+      "success": "0",
+      "read": "",
+      "write": "granular",
+      "slow_loss": "0.05703130513429642",
+      "val_ratio": "1.0053047567937867"
+    },
+    "source_block": "chunk_01_granular",
+    "sample": 3,
+    "trajectory": 55,
+    "offset": 12,
+    "env_seed": 15304,
+    "plan_seed": 5104,
+    "target": "/data/zjc/SE-JEPA/eval_outputs/community_frames/candidates/granular_ep003/target.pkl",
+    "candidate_reason": "round1_high_CD"
+  },
+  "before_arm": "round1",
+  "after_arm": "round3",
+  "before_CD": 0.22842778265476227,
+  "after_CD": 0.2099561244249344,
+  "relative_CD_reduction": 0.08086432401152055,
+  "target_sha256": "fdd04ce61701bbe37180386fbb3758fee199cd48c5487e296434b8dec9b88f4b",
+  "checkpoint_sha256": {
+    "round1": "ec26566f3d9d3973255373bce064c70479d4001a1714deff241855292a1bf86a",
+    "round3": "4274d36113d22ea6033d14e3a1a8363034830954108b147750181aa175725cfb"
+  },
+  "rendering": "Native PyFleX RGB, 224x224; captured from existing store_data calls during planning.",
+  "round1_online_CD": 0.44547486305236816,
+  "online_to_round3_relative_CD_reduction": 0.5286914215847622
+}
