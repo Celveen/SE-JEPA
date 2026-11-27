@@ -55,34 +55,19 @@ are never overwritten.
 | **Maturity gate** | A slow predictor becomes eligible for retrieval only after it predicts new, not-yet-trained-on trajectories better than $P_0$. |
 | **Validated retrieval** | During the first replans of an episode, the planner switches to whichever of $P_0$ and the mature slow predictors best predicts the transitions observed so far. |
 
-### How an episode flows through SE-JEPA
+### Writing experience into memory
 
-**① Read: choose a predictor for planning.** Familiar episodes keep $P_0$. Otherwise, the predictor with the
-lowest error on the observed feedback, among $P_0$ and the mature slow predictors, becomes the adaptation base.
-
-<p align="center">
-  <img src="assets/method_read.gif" width="90%" alt="Read: choose a predictor for planning">
-</p>
-
-**② Write: route the episode at episode end.** A familiar episode is skipped. An episode that read a slow
-predictor is validated against it (error ratio ≤ 1.2) before being written. An episode planned with $P_0$ is
-matched by its fast-update fingerprint, or waits in the pending pool until enough similar episodes found a
-new domain. Replay then trains the matching slow predictor.
+At the end of an episode, SE-JEPA decides where its experience goes. A familiar episode is skipped. An
+episode that read a slow predictor is validated against it (error ratio ≤ 1.2) before being written. An
+episode planned with $P_0$ is matched by its fast-update fingerprint, or waits in the pending pool until
+enough similar episodes found a new domain. Replay then trains the matching slow predictor.
 
 <p align="center">
   <img src="assets/method_write.gif" width="90%" alt="Write: route the episode experience at episode end">
 </p>
 
-**③ Maintain: maturity and library upkeep.** A slow predictor is selectable only while the mean of its last
-three validation ratios is ≤ 0.9. Compatible domains merge, and small fragments are absorbed by mature
-domains.
-
-<p align="center">
-  <img src="assets/method_maintain.gif" width="90%" alt="Slow-weight library: maturity and maintenance">
-</p>
-
-<sub>Animations are excerpts of the method video, played at 1.5× speed. The full 1080p video is
-`assets/videos/method.mp4` (download it with the <i>Raw</i> button).</sub>
+<sub>Excerpt of the method video at 1.5× speed. The full 1080p video is `assets/videos/method.mp4`
+(download it with the <i>Raw</i> button).</sub>
 
 ## Results
 
