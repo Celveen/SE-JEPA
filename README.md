@@ -15,8 +15,6 @@ stream of deployment episodes. The pretrained model θ0 is never overwritten:
 - **Retrieval.** During the first replans of an episode, SE-JEPA plans with whichever of θ0 and the mature
   slow predictors best predicts the transitions observed so far.
 
-The gradient-descent planner has a CUDA-graph implementation that gives bitwise-identical results to the
-eager implementation and runs much faster.
 
 ## Repository structure
 
