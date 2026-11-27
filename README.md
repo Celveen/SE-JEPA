@@ -4,7 +4,7 @@
 
 **Turning deployment experience into reusable predictive knowledge**
 
-[![Project Website](https://12138tyy.github.io/SE-pages/)](https://12138tyy.github.io/SE-pages)
+
 [![Arxiv](https://img.shields.io/badge/Paper-coming%20soon-b31b1b.svg)](#citation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-3776ab.svg)](https://www.python.org/)
