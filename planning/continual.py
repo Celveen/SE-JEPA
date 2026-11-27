@@ -30,7 +30,6 @@ import numpy as np
 import torch
 from einops import rearrange
 
-from .adajepa import AdaJEPATrainer
 from .adajepa_probe import ProbeMPCPlanner, _cos, _norm
 from .mpc import MPCPlanner
 
@@ -215,9 +214,9 @@ class CLSMPCPlanner(ContinualMPCPlanner):
     theta0's error on its own training-validation data) is familiar -- theta0
     already predicts it -- and is never written; only unfamiliar episodes are
     clustered. With pending_m > 1 an unfamiliar episode that joins no domain waits
-    in a pending pool, and a new domain is founded only when pending_m pending
-    episodes are mutually aligned (cosine >= tau_new), so isolated episodes never
-    found domains. fp_unit builds fingerprints from unit-norm fast changes.
+    in a pending pool, and a new domain is founded only when an incoming episode
+    is aligned (cosine >= tau_new) with pending_m - 1 pending episodes, so isolated
+    episodes never found domains. fp_unit builds fingerprints from unit-norm fast changes.
     Reading is unchanged.
     """
 
@@ -390,7 +389,6 @@ class CLSMPCPlanner(ContinualMPCPlanner):
 
     # ------------------------------------------------------------------ write and learn
     def _end_episode(self):
-        k = self._groups["pred"]
         delta = [p.detach() - s for p, s in zip(self._params, self._start)]
         z = self._episode_latents()
         rule, key = "none", None

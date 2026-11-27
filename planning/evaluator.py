@@ -1,16 +1,8 @@
-import os
 import torch
 import imageio
 import numpy as np
-from einops import rearrange, repeat
-from utils import (
-    cfg_to_dict,
-    seed,
-    slice_trajdict_with_t,
-    aggregate_dct,
-    move_to_device,
-    concat_trajdict,
-)
+from einops import rearrange
+from utils import move_to_device
 from torchvision import utils
 from planning.image_corruption import corrupt_obs_dict
 
@@ -178,7 +170,7 @@ class PlanEvaluator:  # evaluator for planning
         successes = eval_results['success']
 
         logs = {
-            f"success_rate" if key == "success" else f"mean_{key}": np.mean(value) if key != "success" else np.mean(value.astype(float))
+            "success_rate" if key == "success" else f"mean_{key}": np.mean(value) if key != "success" else np.mean(value.astype(float))
             for key, value in eval_results.items()
         }
 

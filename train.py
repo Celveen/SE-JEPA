@@ -19,7 +19,7 @@ from collections import OrderedDict
 from functools import partial
 from metrics.image_metrics import eval_images
 from utils import slice_trajdict_with_t, cfg_to_dict, seed, sample_tensors
-import custom_resolvers  # noqa: F401  # Registers OmegaConf resolvers at import time.
+import utils.custom_resolvers  # noqa: F401  # registers the OmegaConf resolvers
 
 warnings.filterwarnings("ignore")
 log = logging.getLogger(__name__)

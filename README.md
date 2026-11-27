@@ -1,291 +1,271 @@
-# SE-JEPA
+<div align="center">
 
-SE-JEPA plans with a latent world model (JEPA) under model predictive control and keeps learning across a
-stream of deployment episodes. The pretrained model θ0 is never overwritten:
+# SE-JEPA: Self-Evolving Latent World Models
 
-- **Fast learning (within an episode).** After every replan, one Adam step on the recently executed
-  transitions adapts the predictor's last block and the encoder head. The change is discarded at the end of
-  the episode.
-- **Slow learning (across episodes).** SE-JEPA keeps one slow predictor per discovered domain, trained on
-  latent replay. Domains are discovered without labels:
-  - a familiarity gate keeps episodes θ0 already predicts out of memory;
-  - a confirmation pool founds a domain only when several unassigned episodes agree;
-  - maturity and write gates decide when a learner is read and which episodes it may learn from;
-  - validated merging and fragment absorption combine domains.
-- **Retrieval.** During the first replans of an episode, SE-JEPA plans with whichever of θ0 and the mature
-  slow predictors best predicts the transitions observed so far.
+**Turning deployment experience into reusable predictive knowledge**
 
+[![Paper](https://img.shields.io/badge/Paper-coming%20soon-b31b1b.svg)](#citation)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10](https://img.shields.io/badge/Python-3.10-3776ab.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.7-ee4c2c.svg)](https://pytorch.org/)
+
+<img src="assets/teaser.png" width="100%" alt="SE-JEPA teaser">
+
+</div>
+
+SE-JEPA lets a latent world model **keep learning across deployment episodes** without overwriting what it
+learned in pretraining. Instead of carrying episode-specific weight updates forward, it replays the observed
+interaction trajectories, groups compatible ones into **self-discovered predictive domains**, trains one
+**slow predictor per domain**, and **retrieves** a validated predictor when a condition comes back. No domain
+labels or domain-switch signals are needed, and it works with both gradient-descent (GD) and
+cross-entropy-method (CEM) planners.
+
+## Highlights
+
+- **+15.4 to +17.1 points** held-out success over AdaJEPA on PushObj shapes unseen during pretraining, and
+  **+15.9 to +18.7 points** on PushT visual shifts (GD and CEM).
+- **65.3% → 75.5%** online success over five rounds of a single stream that mixes 14 shape and visual
+  conditions, with one persistent memory.
+- With a DINO-WM backbone, a predictor trained in **one consolidation pass** reduces Chamfer distance by
+  **47%** on rope instances excluded from learning, without any within-episode adaptation.
+
+## Contents
+
+- [Method](#method)
+- [Results](#results)
+- [Repository structure](#repository-structure)
+- [Getting started](#getting-started)
+- [Citation](#citation)
+- [Acknowledgements](#acknowledgements)
+
+## Method
+
+<p align="center">
+  <img src="assets/architecture.png" width="100%" alt="SE-JEPA overview">
+</p>
+
+Each episode starts from working copies of the frozen pretrained encoder–predictor pair $(E_0, P_0)$, which
+are never overwritten.
+
+| Component | What it does |
+|---|---|
+| **Fast adaptation** (within an episode) | After every replan, one Adam step on the recently executed transitions adapts the predictor's last block and the encoder head. The change is discarded at the end of the episode. |
+| **Replay consolidation** (across episodes) | Trajectories are re-encoded by the frozen $E_0$, so cross-episode learning stays in a fixed latent space. Each predictive domain keeps its own replay buffer and a slow predictor initialized from $P_0$. |
+| **Label-free domain discovery** | A familiarity gate keeps out episodes that $P_0$ already predicts. Fast-update fingerprints propose candidate domains, and prediction errors decide whether a trajectory is accepted. A new domain is founded only when several pending episodes agree, and validated merging and fragment absorption combine domains. |
+| **Maturity gate** | A slow predictor becomes eligible for retrieval only after it predicts new, not-yet-trained-on trajectories better than $P_0$. |
+| **Validated retrieval** | During the first replans of an episode, the planner switches to whichever of $P_0$ and the mature slow predictors best predicts the transitions observed so far. |
+
+## Results
+
+### Held-out planning after learning
+
+Success (%) and mean MPC replans on test goals excluded from memory learning. The learned memory is
+read-only; retrieval and fast adaptation stay active. *Unseen* averages the shapes absent from pretraining
+(I, square, small tee); *Shift* averages the six visual shifts (blur, noise, dark, red agent, red object,
+red goal). Failures count as 30 replans.
+
+<table>
+  <thead>
+    <tr><th rowspan="2">Planner</th><th rowspan="2">Method</th><th colspan="3">PushObj (shape shifts)</th><th colspan="3">PushT (visual shifts)</th></tr>
+    <tr><th>All-7 ↑</th><th>Unseen ↑</th><th>Replans ↓</th><th>All-7 ↑</th><th>Shift ↑</th><th>Replans ↓</th></tr>
+  </thead>
+  <tbody>
+    <tr><td rowspan="3">GD</td><td>Frozen</td><td>42.5</td><td>32.4</td><td>20.02</td><td>44.1</td><td>41.6</td><td>19.94</td></tr>
+    <tr><td>AdaJEPA</td><td>72.2</td><td>55.3</td><td>14.52</td><td>58.7</td><td>54.9</td><td>17.96</td></tr>
+    <tr><td><b>SE-JEPA</b></td><td><b>81.6</b></td><td><b>72.4</b></td><td><b>11.30</b></td><td><b>75.7</b></td><td><b>73.6</b></td><td><b>13.21</b></td></tr>
+    <tr><td rowspan="3">CEM</td><td>Frozen</td><td>43.8</td><td>36.2</td><td>21.08</td><td>50.9</td><td>48.3</td><td>19.56</td></tr>
+    <tr><td>AdaJEPA</td><td>70.4</td><td>54.4</td><td>16.02</td><td>63.0</td><td>60.2</td><td>17.87</td></tr>
+    <tr><td><b>SE-JEPA</b></td><td><b>79.1</b></td><td><b>69.9</b></td><td><b>13.53</b></td><td><b>77.1</b></td><td><b>76.1</b></td><td><b>14.15</b></td></tr>
+  </tbody>
+</table>
+
+<table>
+  <tr>
+    <td width="50%" align="center"><img src="assets/condition_gains.png" alt="Held-out success gains over AdaJEPA"></td>
+    <td width="50%" align="center"><img src="assets/planning_efficiency.png" alt="Planning efficiency"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Held-out gains over AdaJEPA per condition.</b> The largest gains are on the unseen I and square shapes and on object / goal recoloring.</td>
+    <td align="center"><b>Planning efficiency (GD).</b> Within 15 replans, SE-JEPA already exceeds AdaJEPA's success at the full 30-replan budget.</td>
+  </tr>
+</table>
+
+### Learning from deployment experience
+
+<p align="center">
+  <img src="assets/learning_progress.png" width="55%" alt="Learning progress">
+</p>
+
+**(a, b)** Online success on unseen PushObj shapes and PushT color shifts rises across five rounds, although
+goals are resampled every round. **(c, d)** With fast adaptation disabled, revisiting 50 rope / granular
+instances lowers the final Chamfer distance (CD) pass by pass:
+
+| Final CD ↓ (15 pushes) | Rope | Granular |
+|---|---|---|
+| DINO-WM (frozen) | 0.491 | 0.301 |
+| AdaJEPA | 0.629 | 0.304 |
+| **SE-JEPA**, pass 4, no fast adaptation | **0.252** | **0.220** |
+
+On **91 new rope instances** excluded from learning, the predictor after a single consolidation pass lowers
+mean final CD from 0.664 (pretrained DINO-WM) to **0.349 (−47%)**, with both predictors fixed.
+
+### One memory across recurring conditions
+
+<p align="center">
+  <img src="assets/mixed14_learning.png" width="100%" alt="Mixed 14-condition stream">
+</p>
+
+One stream mixes 7 PushObj shapes and 7 PushT visual conditions over five rounds, with a single persistent
+memory. Averaged over GD and CEM, online success rises from **65.3% to 75.5%** (shapes 73.4% → 82.0%,
+visual 57.2% → 68.9%). In round five, SE-JEPA reaches 75.1% (GD) and 75.8% (CEM), compared with 65.1% / 65.4%
+for AdaJEPA and 37.7% / 38.6% for the frozen model.
+
+When rope and granular tasks alternate in one CEM stream, SE-JEPA forms two predictive domains **without
+material labels**:
+
+| Round | Rope CD ↓ | Granular CD ↓ | Domain purity (%) ↑ | Retrieval accuracy (%) ↑ |
+|:---:|:---:|:---:|:---:|:---:|
+| 1 | 0.598 | 0.471 | 100 | 96.6 |
+| 2 | 0.452 | 0.369 | 100 | 100.0 |
+| 3 | 0.412 | 0.355 | 100 | 100.0 |
+
+### Qualitative results
+
+<p align="center">
+  <img src="assets/qualitative.png" width="100%" alt="Qualitative results on PushObj and PushT">
+</p>
+<p align="center">
+  <img src="assets/deform_qualitative.png" width="100%" alt="Qualitative results on rope and granular">
+</p>
+
+<details>
+<summary><b>Ablations</b> (click to expand)</summary>
+
+**Inheriting fast weights does not transfer.** Fast updates are accumulated as $s_{e+1} = s_e + w\Delta_e$
+on 100 matched PushObj goals; wins / losses are relative to episodic reset.
+
+| Accumulation $w$ | Success (%) | Wins / losses |
+|---|:---:|:---:|
+| 0 (episodic reset) | 62.0 | – |
+| 0.003 | 64.0 | 7 / 5 |
+| 0.01 | 59.0 | 5 / 8 |
+| 0.03 | 54.0 | 4 / 12 |
+| 1 (naive inheritance) | 48.0 | 11 / 25 |
+
+**Error-guided predictor selection** on new PushT trajectories (future latent MSE, ×10⁻³):
+
+| Predictor selection | One-step ↓ | Five-step ↓ |
+|---|:---:|:---:|
+| Pretrained predictor | 58.15 | 88.94 |
+| Fixed domain + pretrained | 22.12 | 47.47 |
+| Random eligible predictor | 46.74 | 81.22 |
+| **Error-based selection (ours)** | **13.03** | **31.54** |
+| Future-error oracle | 11.79 | 27.83 |
+
+**Specialization with retention (GD).** After seven rounds of only the I shape:
+
+| Method | I success (%) ↑ | Other 6 shapes (%) ↑ | I replans ↓ |
+|---|:---:|:---:|:---:|
+| Episodic reset | 47.33 | 81.89 | 20.18 |
+| Fast-weight inheritance | 38.00 | 33.78 | 22.19 |
+| **SE-JEPA** | **76.67** | **81.78** | **12.04** |
+
+</details>
 
 ## Repository structure
 
 ```
-plan.py                     planning / evaluation entry point (Hydra)
-train.py                    world-model training entry point (Hydra)
-conf/
-  sejepa_gd_pushobj.yaml    SE-JEPA, GD planner   (PushObj and PushT)
-  sejepa_cem_pushobj.yaml   SE-JEPA, CEM planner  (PushObj and PushT)
-  sejepa_cem_deformable.yaml SE-JEPA, CEM planner (rope and granular)
-  train_pushobj_bias16k.yaml world model for PushObj (shapes T, L, Z, +)
-  train_pushobj_T16k.yaml   world model for PushT (shape T)
-  encoder/ predictor/ decoder/ action_encoder/ proprio_encoder/ env/   model and environment parts
-planning/
-  sejepa.py                 SE-JEPA planner (SEJEPAMPCPlanner)
-  continual.py              fast/slow weights, per-domain slow learners, gates (base classes)
-  continual_merge.py        validated domain merging
-  adajepa_probe.py, adajepa.py, adajepa_mpc.py   within-episode fast adaptation
-  mpc.py, gd.py, cem.py, objectives.py, evaluator.py   MPC loop, planners, objective, evaluation
-  gd_check.py               checks the CUDA-graph GD planner against eager GD on every call
-  image_corruption.py       visual conditions (blur, salt-and-pepper, dark)
-models/ datasets/ env/ metrics/   world model, datasets, environments (PushT/PushObj, rope/granular)
-scripts/
-  build_streams.py          build PushObj / PushT deployment streams
-  run_stream.py             run a stream (SE-JEPA, AdaJEPA or frozen)
-  calibrate_familiarity.py  familiarity threshold for a checkpoint
-  gen_pushobj_dataset.py    generate PushObj / PushT training data
-  deformable/               targets and stream runs for rope / granular
+SE-JEPA/
+├── plan.py                     # planning / evaluation entry point (Hydra)
+├── train.py                    # world-model training entry point (Hydra)
+├── conf/                       # Hydra configs
+│   ├── sejepa_gd_pushobj.yaml      # SE-JEPA + GD planner   (PushObj, PushT)
+│   ├── sejepa_cem_pushobj.yaml     # SE-JEPA + CEM planner  (PushObj, PushT)
+│   ├── sejepa_cem_deformable.yaml  # SE-JEPA + CEM planner  (rope, granular)
+│   ├── train_pushobj_bias16k.yaml  # world model for PushObj (shapes T, L, Z, +)
+│   ├── train_pushobj_T16k.yaml     # world model for PushT   (shape T)
+│   └── encoder/ predictor/ decoder/ action_encoder/ proprio_encoder/ env/
+├── planning/                   # planners
+│   ├── sejepa.py                   # SE-JEPA planner (SEJEPAMPCPlanner)
+│   ├── continual.py                # fast/slow weights, per-domain slow predictors, gates
+│   ├── continual_merge.py          # validated domain merging
+│   ├── adajepa*.py                 # within-episode fast adaptation (AdaJEPA)
+│   ├── mpc.py gd.py cem.py         # MPC loop and action optimizers
+│   ├── objectives.py evaluator.py  # planning objective and evaluation
+│   └── image_corruption.py         # PushT visual shifts (blur, salt-and-pepper, dark)
+├── models/                     # encoders, ViT predictor, decoder, world model
+├── datasets/                   # PushT / PushObj and deformable datasets
+├── env/                        # PushT / PushObj and rope / granular (PyFleX) environments
+├── metrics/                    # image metrics (LPIPS)
+├── distributed_fn/             # multi-GPU training helpers
+├── utils/                      # shared helpers, observation preprocessor, OmegaConf resolvers
+├── scripts/
+│   ├── build_streams.py            # build PushObj / PushT deployment streams
+│   ├── run_stream.py               # run a stream with SE-JEPA, AdaJEPA or a frozen model
+│   ├── calibrate_familiarity.py    # familiarity threshold for a checkpoint
+│   ├── gen_pushobj_dataset.py      # generate PushObj / PushT training data
+│   └── deformable/                 # targets and stream runs for rope / granular
+├── docs/
+│   ├── REPRODUCE.md                # full settings and commands for every experiment
+│   └── IMPLEMENTATION.md           # paper-to-code map, planner hierarchy, CUDA-graph GD
+└── assets/                     # figures used in this README
 ```
 
-## Installation
+## Getting started
+
+### Installation
 
 ```bash
-pip install -r requirements.txt     # Python 3.10
+git clone https://github.com/Celveen/SE-JEPA.git
+cd SE-JEPA
+conda create -n sejepa python=3.10 -y && conda activate sejepa
+pip install -r requirements.txt
 ```
 
-- Install the `torch` / `torchvision` builds that match your CUDA driver; GPUs of compute capability sm_120
-  need CUDA 12.8 builds.
-- The rope / granular environments additionally need a PyFleX build. Its `env.sh` must be sourced before
-  running them (the scripts in `scripts/deformable/` do this).
-- The rope world model uses a frozen DINOv2 ViT-S/14 encoder, loaded through `torch.hub` on first use
-  (network access or a warm hub cache is needed once).
-- Runs without a display need `SDL_VIDEODRIVER=dummy` (the run scripts set it).
+Install the `torch` / `torchvision` builds that match your CUDA driver. Rope / granular experiments also need
+PyFleX (see [docs/REPRODUCE.md](docs/REPRODUCE.md#1-installation)).
 
-## Data and world models
+### Quick start
 
-Model weights and datasets are not included.
-
-| | PushObj (shape shifts) | PushT (visual shifts) | Rope / Granular |
-|---|---|---|---|
-| Training data | PushT expert trajectories (DINO-WM `pusht_noise`) replayed with shapes T, L, Z, +; 4,000 trajectories per shape | the same replay with shape T only; 16,000 trajectories | DINO-WM deformable dataset, `<DATA>/deformable/{rope,granular}/` |
-| World model | `conf/train_pushobj_bias16k.yaml` (ResNet-GeM encoder, ViT predictor, frameskip 5, history 3, 3 epochs) | `conf/train_pushobj_T16k.yaml` (same architecture, no decoder) | frozen DINOv2 patch encoder, ViT predictor, frameskip 1, history 1, 100 epochs; trained on rope only |
-| Planning targets | `data/pushobj_eval/val_<shape>/plan_targets.pkl` for T, L, Z, +, I, small_tee, square | `data/pushobj_eval/val_T/plan_targets.pkl` | validation start states plus the dataset's next 5 pushes (`scripts/deformable/gen_targets.sh`) |
-
-The `data/pushobj_eval/` segments are the PushObj evaluation segments released with AdaJEPA. Each file is a
-pickle with `segments` (start state, 25 pixel-space actions, `shape`, source trajectory `ep_idx`) and
-`traj_len`.
+Model weights and datasets are not included. Once a world-model checkpoint is available (see
+[Data and world models](docs/REPRODUCE.md#2-data-and-world-models)), build a deployment stream and run SE-JEPA
+on it:
 
 ```bash
-# PushObj training data and world model
-python scripts/gen_pushobj_dataset.py --source data/pusht_noise --out-dir data/pushobj_bias_16k \
-    --shapes T,L,Z,+ --train-per-shape 4000 --val-per-shape 250 \
-    --action-bias-px 9 --action-noise-px 10 --placement source
-python train.py --config-name train_pushobj_bias16k      # -> checkpoints/pushobj_bias_16k_e3_seed0
-
-# PushT training data and world model
-python scripts/gen_pushobj_dataset.py --source data/pusht_noise --out-dir data/pushobj_T16k_bias \
-    --shapes T --train-per-shape 16000 --val-per-shape 1000 --max-draws 2 \
-    --action-bias-px 9 --action-noise-px 10 --placement source
-python train.py --config-name train_pushobj_T16k         # -> checkpoints/pushobj_T16k_bias_e3_seed0
-
-# Rope world model (2 GPUs)
-DATASET_DIR=<DATA> torchrun --standalone --nproc_per_node 2 train.py \
-    env=deformable_env env.kwargs.object_name=rope env.dataset.object_name=rope encoder=dino \
-    frameskip=1 num_hist=1 model.train_encoder=false training.straighten=False +training.eval_lpips=false \
-    training.epochs=100 training.batch_size=32 training.encoder_lr=1e-6 training.save_every_x_epoch=10 \
-    training.save_every_x_iterations=0 hydra.run.dir=checkpoints/rope_dino_h1_fs1_e100_seed0
-```
-
-A checkpoint directory holds `hydra.yaml` (the training config, which defines the model and the environment)
-and `checkpoints/model_<epoch>.pth`.
-
-The familiarity threshold depends on the checkpoint. The configs hold the values used in the paper. For
-other weights, recalibrate it as the 90th percentile of θ0's error on its own training-distribution
-validation windows:
-
-```bash
-python scripts/calibrate_familiarity.py --ckpt /abs/path/to/ckpt --epoch 3 --val-data data/pushobj_bias_16k/val
-```
-
-## Settings
-
-SE-JEPA hyperparameters shared by all experiments (defaults of `planning/sejepa.py` and `conf/sejepa_*.yaml`):
-
-| Setting | Value | Config key (`planner.*`) |
-|---|---|---|
-| Fast predictor / encoder-head learning rate | 5e-4 / 1e-5 | `adapt.lr`, `adapt.encoder_lr` |
-| Fast steps per replan | 1 (Adam) | `adapt.steps` |
-| Recent adaptation buffer | 5 transitions | `adapt.replay_buffer=recent5` |
-| Slow steps per standard write | 15 | `continual.slow_steps` |
-| Slow batch | 8 episodes, windows of up to 6 latent frames | `continual.slow_batch` |
-| Existing-domain / new-domain cosine threshold | 0.10 / 0.05 | `continual.tau`, `continual.tau_new` |
-| Episodes to confirm a domain / pending-pool capacity | 3 / 40 | `continual.pending_m`, `continual.pending_max` |
-| Minimum episodes to train a learner | 3 | `continual.min_n` |
-| Retrieval window | first 3 replans | `continual.reroute` |
-| Maturity history / error-ratio threshold | 3 / 0.9 | `continual.mature_k`, `continual.mature_ratio` |
-| Write rejection ratio | 1.2 | `continual.reject_ratio` |
-| Merge evidence per direction / relative tolerance | 2 episodes / 0.5 | `continual.merge_k`, `continual.merge_eps` |
-| Fragment absorption interval / error ratio / size limit | 25 episodes / 0.8 / < 6 episodes | `continual.absorb_every`, `continual.absorb_ratio`, `continual.absorb_frag` |
-
-Settings that differ between datasets:
-
-| | PushObj | PushT | Rope / Granular |
-|---|---|---|---|
-| Config | `sejepa_gd_pushobj` or `sejepa_cem_pushobj` | `sejepa_gd_pushobj` or `sejepa_cem_pushobj` | `sejepa_cem_deformable` |
-| World model | `pushobj_bias_16k_e3_seed0`, `--epoch 3` | `pushobj_T16k_bias_e3_seed0`, `--epoch latest` | rope model, `latest` |
-| Familiarity threshold (`continual.familiar_thr`) | 0.0146 | 0.0146 | 0.117 |
-| Slow learning rate (`continual.slow_lr`) | 1e-4 | 1e-4 | 2e-4 |
-| Absolute write-error ratio limit (`continual.abs_ratio`) | off (0) | off (0) | 20 |
-| Planner | GD: 100 steps, lr 0.1; CEM: 200 samples, 30 elites, 10 iterations | same as PushObj | CEM: 300 samples, 30 elites, 10 iterations |
-| Planning horizon / goal horizon | 25 environment steps (5 model steps, frameskip 5) | same | 5 pushes (frameskip 1) |
-| MPC | at most 30 replans, 5 executed actions each | same | 3 replans, 5 pushes each (15 pushes), simulation continues from the current state |
-| Objective | `staged` | `staged` | `last` |
-| Success | position error < 20 and angle error < π/9 | same | final Chamfer distance (lower is better) |
-| Episodes per chunk | 50 (one shape) | 50 (one visual condition) | 10 (one material) |
-| Learning stream | 5 rounds x 7 shapes (I, L, square, Z, small_tee, +, T); new targets each round | 5 rounds x 7 conditions (default, blur, salt-and-pepper, dark, red agent, red object, red goal); the 7 conditions of a round share 50 targets | 3 rounds x (50 rope + 50 granular), materials alternate every 10 episodes |
-| Seeds | three streams: 100/200/300/1000/1100, 400/500/600/1200/1300, 700/800/900/1400/1500 | same | 5100 to 5129 (one per chunk) |
-| Held-out test | seeds 2000, 2100, 2200; learned memory read-only | same | none |
-
-Visual conditions on PushT (applied per chunk by `scripts/build_streams.py`):
-
-| Condition | Overrides |
-|---|---|
-| blur | `ood_corruption=blur ood_level=2.0` |
-| salt-and-pepper | `ood_corruption=snp1 ood_level=0.01` |
-| dark | `ood_corruption=dark ood_level=0.9` |
-| red agent / red object / red goal | `++env_kwargs_override.agent_color=Red` / `.color=Red` / `.goal_color=Red` |
-
-## Running
-
-`scripts/run_stream.py` runs one method on one stream:
-
-- **`sejepa`** runs the chunks in order as one chain: every chunk starts from the memory
-  (`continual_state.pt`) the previous chunk saved.
-- **`sejepa` with `--state-in <continual_state.pt>`** evaluates a learned memory read-only. Retrieval and
-  fast adaptation are active; writes, slow training and merging are off. Chunks are independent.
-- **`adajepa`** (fast adaptation only, reset after every episode) and **`frozen`** (no adaptation) run their
-  chunks independently.
-
-Independent chunks run in parallel over `--gpus`. Re-running a command resumes after the last finished chunk.
-Add `--max-episodes 1` for a smoke test.
-
-### PushObj: shape shifts
-
-```bash
+# 1. a PushObj shape-shift stream (5 rounds x 7 shapes)
 python scripts/build_streams.py shape --name shape_s100 --seeds 100 200 300 1000 1100
-python scripts/build_streams.py shape --name shape_s400 --seeds 400 500 600 1200 1300
-python scripts/build_streams.py shape --name shape_s700 --seeds 700 800 900 1400 1500
-python scripts/build_streams.py shape --name shape_test --seeds 2000 2100 2200 \
-    --exclude shape_s100 shape_s400 shape_s700
 
-CKPT=$(pwd)/checkpoints/pushobj_bias_16k_e3_seed0
-
-# learning (one chain per stream and planner; repeat for shape_s400 and shape_s700)
+# 2. SE-JEPA with the GD planner; chunks run as one chain through the persistent memory
 python scripts/run_stream.py --stream shape_s100 --method sejepa --config sejepa_gd_pushobj \
-    --ckpt $CKPT --epoch 3 --gpus 0
-python scripts/run_stream.py --stream shape_s100 --method sejepa --config sejepa_cem_pushobj \
-    --ckpt $CKPT --epoch 3 --gpus 1 --root eval_outputs/shape_s100_cem
-
-# held-out test of the memory after round 5
-python scripts/run_stream.py --stream shape_test --method sejepa --config sejepa_gd_pushobj \
-    --ckpt $CKPT --epoch 3 --gpus 0,1 --root eval_outputs/shape_test_gd_s100 \
-    --state-in eval_outputs/shape_s100/sejepa/chunk_34_T/continual_state.pt
+    --ckpt /abs/path/to/checkpoints/pushobj_bias_16k_e3_seed0 --epoch 3 --gpus 0
 ```
 
-### PushT: visual shifts
+Add `--max-episodes 1` for a smoke test. Use `--method adajepa` or `--method frozen` for the baselines.
+Each chunk writes its success rate, per-episode routing decisions and the memory state to
+`eval_outputs/<stream>/<method>/chunk_<k>_<tag>/`.
 
-```bash
-python scripts/build_streams.py visual --name visual_s100 --seeds 100 200 300 1000 1100
-python scripts/build_streams.py visual --name visual_s400 --seeds 400 500 600 1200 1300
-python scripts/build_streams.py visual --name visual_s700 --seeds 700 800 900 1400 1500
-python scripts/build_streams.py visual --name visual_test --seeds 2000 2100 2200 --heldout \
-    --exclude visual_s100 visual_s400 visual_s700
+See **[docs/REPRODUCE.md](docs/REPRODUCE.md)** for the full settings, the PushT, rope and granular streams,
+held-out evaluation and the baselines.
 
-CKPT=$(pwd)/checkpoints/pushobj_T16k_bias_e3_seed0
+## Citation
 
-python scripts/run_stream.py --stream visual_s100 --method sejepa --config sejepa_gd_pushobj \
-    --ckpt $CKPT --epoch latest --gpus 0
-python scripts/run_stream.py --stream visual_test --method sejepa --config sejepa_gd_pushobj \
-    --ckpt $CKPT --epoch latest --gpus 0,1 --root eval_outputs/visual_test_gd_s100 \
-    --state-in eval_outputs/visual_s100/sejepa/chunk_34_red_goal/continual_state.pt
+If you find this work useful, please cite:
+
+```bibtex
+@article{sejepa2026,
+  title   = {SE-JEPA: Self-Evolving Latent World Models},
+  author  = {Anonymous},
+  year    = {2026}
+}
 ```
 
-For CEM, use `--config sejepa_cem_pushobj` with a separate `--root`, as for PushObj.
+## Acknowledgements
 
-### Baselines
+This code builds on [DINO-WM](https://github.com/gaoyuezhou/dino_wm) (world model, environments, datasets and
+training) and follows the within-episode adaptation and PushObj evaluation protocol of AdaJEPA. The deformable
+environments use PyFleX, and the LPIPS metric is a PyTorch port of
+[LPIPS](https://github.com/richzhang/PerceptualSimilarity). We thank the authors for releasing their code.
 
-The baselines run on the same streams. In the paper, the AdaJEPA and frozen baselines use the world models
-released with AdaJEPA (`pushobj_shape_shift` for PushObj, `pusht_visual_shift` for PushT, `--epoch latest`).
+## License
 
-```bash
-python scripts/run_stream.py --stream shape_test --method adajepa --config sejepa_gd_pushobj \
-    --ckpt /abs/path/to/baseline_ckpt --epoch latest --gpus 0,1,2,3
-python scripts/run_stream.py --stream shape_test --method frozen --config sejepa_gd_pushobj \
-    --ckpt /abs/path/to/baseline_ckpt --epoch latest --gpus 0,1
-```
-
-### Rope and granular
-
-```bash
-export CKPT=/abs/path/to/checkpoints/rope_dino_h1_fs1_e100_seed0 DATA=/abs/path/to/data PYFLEX_ROOT=/abs/path/to/PyFleX
-
-bash scripts/deformable/gen_targets.sh 0          # targets of every chunk of the stream
-bash scripts/deformable/run_stream.sh sejepa 0    # SE-JEPA, 30 chunks as one chain
-bash scripts/deformable/run_stream.sh adajepa 1,2
-bash scripts/deformable/run_stream.sh frozen 3,4
-```
-
-The default stream is the mixed-material stream of the settings table. `STREAM` overrides it as a list of
-`object:seed` chunks.
-
-Single-material consolidation uses the method `single`: one slow predictor per material, assigned by the
-known material, with fast adaptation off and slow learning rate 1e-4. Each pass revisits the same 50
-instances. For four passes over rope:
-
-```bash
-export STREAM="$(for p in 1 2 3 4; do echo rope:99 rope:100 rope:101 rope:102 rope:103; done)"
-bash scripts/deformable/gen_targets.sh 0
-OUT=eval_outputs/rope_single bash scripts/deformable/run_stream.sh single 0
-```
-
-## CUDA-graph GD
-
-The continual planners plan one episode at a time, so each replan runs a batch-1 GD optimization of 100 steps,
-which is dominated by CPU-side kernel launches. With `planner.sub_planner.cuda_graph=true` (the default in
-`sejepa_gd_pushobj.yaml`), `planning/gd.py` captures one GD step's `rollout -> objective -> backward` as a CUDA
-graph and replays it:
-
-- The first call warms up on a side stream and captures the graph. Later steps only replay it to obtain the
-  action gradient.
-- The Adam update, the learning-rate schedule and the action noise stay outside the graph, so learning rates
-  and random-number consumption match eager mode.
-- Graphs are cached by MPC step, input shapes, model tensor addresses, `requires_grad` flags and train/eval
-  mode; any change triggers a re-capture. Weight updates (fast adaptation, loading θ0 or a slow learner) are
-  in-place copies, so the graph reads the current values without re-capture.
-- Inputs are copied into static buffers on each call, and the returned actions are a copy.
-- `planning/objectives.py` keeps the objective coefficients on the GPU, because host-to-device copies cannot be
-  captured.
-
-Results are bitwise identical to eager GD. Without a GPU, the eager path runs. To verify the equivalence,
-the following runs eager and CUDA-graph GD on every planning call, compares the actions and the random-number
-state, and continues with the eager result:
-
-```bash
-python scripts/run_stream.py --stream shape_s100 --method sejepa --ckpt $CKPT --epoch 3 --gpus 0 \
-    --max-episodes 3 --root eval_outputs/graph_check \
-    --extra planner.sub_planner.target=planning.gd_check.GDCheckPlanner \
-            +planner.sub_planner.check_log=$(pwd)/eval_outputs/graph_check/graph_check.jsonl
-```
-
-## Outputs
-
-Each chunk writes `<root>/<method>/chunk_<k>_<tag>/`:
-
-| File | Content |
-|---|---|
-| `logs.json` | final success rate (`final_eval/success_rate`), or the Chamfer distances for rope / granular |
-| `per_iter_logs.json` | success, distances and timings per episode and replan |
-| `continual_episodes.jsonl` | per-episode retrieval, familiarity score, write decision and domain |
-| `continual_state.pt` | the memory (slow learners, replay, pending pool) passed to the next chunk |
-| `adajepa_losses.csv` | prediction loss of every fast-adaptation step |
-
-All methods plan the same targets in the same order with the same seeds, so they can be compared episode by
-episode.
+This project is released under the [MIT License](LICENSE).

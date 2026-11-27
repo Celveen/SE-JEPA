@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Data, weights and run outputs (not tracked)
+data/
+checkpoints/
+eval_outputs/
+outputs/
+plan_outputs/
+wandb/
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.pkl
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

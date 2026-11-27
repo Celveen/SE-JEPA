@@ -28,7 +28,7 @@ def load_world(ckpt_dir, epoch, device):
     import plan
     from datasets.img_transforms import default_transform
     from datasets.pusht_dset import ACTION_MEAN, ACTION_STD, PROPRIO_MEAN, PROPRIO_STD, STATE_MEAN, STATE_STD
-    from preprocessor import Preprocessor
+    from utils.preprocessor import Preprocessor
 
     cfg = OmegaConf.load(Path(ckpt_dir) / "hydra.yaml")
     wm = plan.load_model(Path(ckpt_dir) / "checkpoints" / f"model_{epoch}.pth", cfg, cfg.num_action_repeat, device)

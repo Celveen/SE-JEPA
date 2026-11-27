@@ -9,7 +9,8 @@ maturity and write gates) and CLSMergeMPCPlanner (validated, symmetric domain me
 2. Learner writes. An episode that read a learner is written to that learner's domain unless the write gate
    (reject_ratio, and abs_ratio when set) rejects it. Otherwise an unfamiliar episode planned with theta0
    joins the domain whose fingerprint its fast change is most aligned with (cosine >= tau), else it waits in
-   the pending pool; pending_m mutually aligned pending episodes (cosine >= tau_new) found a new domain.
+   the pending pool; an episode aligned (cosine >= tau_new) with pending_m - 1 pending episodes founds a new
+   domain together with them.
 3. Fragment absorption. Every absorb_every episodes, an immature domain with fewer than absorb_frag episodes
    (and fewer than mature_k validations) whose stored episodes some mature learner predicts within
    absorb_ratio of theta0 is absorbed by that domain.

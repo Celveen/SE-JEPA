@@ -15,8 +15,8 @@ from einops import rearrange
 from omegaconf import OmegaConf, open_dict
 
 from env.venv import SubprocVectorEnv
-from custom_resolvers import replace_slash
-from preprocessor import Preprocessor
+import utils.custom_resolvers  # noqa: F401  # registers the OmegaConf resolvers
+from utils.preprocessor import Preprocessor
 from planning.evaluator import PlanEvaluator
 from planning.image_corruption import corrupt_obs_dict
 from utils import cfg_to_dict, seed
@@ -519,7 +519,6 @@ def planning_main(cfg_dict):
         wandb_run = None
 
     ckpt_base_path = cfg_dict["ckpt_base_path"]
-    model_name = cfg_dict.get("model_name")
     if ckpt_base_path.startswith("/"):
         model_path = ckpt_base_path
     else:
