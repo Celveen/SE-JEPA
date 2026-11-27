@@ -9,7 +9,7 @@
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-3776ab.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.7-ee4c2c.svg)](https://pytorch.org/)
 
-<img src="assets/teaser.png" width="100%" alt="SE-JEPA teaser">
+<img src="assets/summary.gif" width="100%" alt="SE-JEPA overview animation">
 
 </div>
 
@@ -54,6 +54,18 @@ are never overwritten.
 | **Label-free domain discovery** | A familiarity gate keeps out episodes that $P_0$ already predicts. Fast-update fingerprints propose candidate domains, and prediction errors decide whether a trajectory is accepted. A new domain is founded only when several pending episodes agree, and validated merging and fragment absorption combine domains. |
 | **Maturity gate** | A slow predictor becomes eligible for retrieval only after it predicts new, not-yet-trained-on trajectories better than $P_0$. |
 | **Validated retrieval** | During the first replans of an episode, the planner switches to whichever of $P_0$ and the mature slow predictors best predicts the transitions observed so far. |
+
+### Method video
+
+A step-by-step walkthrough of one episode: reading a predictor, fast adaptation, writing the episode into
+memory, and maintaining the slow-predictor library.
+
+<!-- To embed a player: edit this file on github.com, delete the <p> block below, drag assets/videos/method.mp4
+     into the editor and commit. GitHub replaces it with a https://github.com/user-attachments/assets/... link. -->
+<p align="center">
+  <a href="assets/videos/method.mp4"><img src="assets/method_poster.png" width="85%" alt="Method video (click to play)"></a>
+  <br><sub>▶ Click to play the method video (1080p, 1:45)</sub>
+</p>
 
 ## Results
 
@@ -131,12 +143,32 @@ material labels**:
 
 ### Qualitative results
 
+All examples use matched start states and goals. Playback is rescaled for presentation and does not reflect
+runtime.
+
+**PushT / PushObj: AdaJEPA vs. SE-JEPA**
+
+<p align="center">
+  <img src="assets/demo_push.gif" width="100%" alt="AdaJEPA vs. SE-JEPA on PushT and PushObj">
+</p>
+
+**Rope / Granular: frozen DINO-WM vs. SE-JEPA** (final Chamfer distance, lower is better)
+
+<p align="center">
+  <img src="assets/demo_deformable.gif" width="100%" alt="Frozen DINO-WM vs. SE-JEPA on rope and granular">
+</p>
+
+<details>
+<summary><b>Final states from the paper</b> (click to expand)</summary>
+
 <p align="center">
   <img src="assets/qualitative.png" width="100%" alt="Qualitative results on PushObj and PushT">
 </p>
 <p align="center">
   <img src="assets/deform_qualitative.png" width="100%" alt="Qualitative results on rope and granular">
 </p>
+
+</details>
 
 <details>
 <summary><b>Ablations</b> (click to expand)</summary>
@@ -208,7 +240,8 @@ SE-JEPA/
 ├── docs/
 │   ├── REPRODUCE.md                # full settings and commands for every experiment
 │   └── IMPLEMENTATION.md           # paper-to-code map, planner hierarchy, CUDA-graph GD
-└── assets/                     # figures used in this README
+└── assets/                     # README figures and animations
+    └── videos/                     # 1080p videos (method, demos, summary)
 ```
 
 ## Getting started
