@@ -1,0 +1,33 @@
+# Python 3.10. Install with: pip install -r requirements.txt
+# The torch / torchvision wheels must match the local CUDA driver; GPUs of compute capability sm_120
+# need CUDA 12.8 builds of the same versions.
+torch==2.7.1
+torchvision==0.22.1
+numpy==1.26.4
+einops==0.4.1
+hydra-core==1.2.0
+omegaconf==2.3.0
+accelerate==0.26.1
+wandb==0.13.1
+protobuf==3.20.3
+setuptools==70.0.0
+tqdm==4.66.4
+PyYAML==6.0.1
+psutil==5.9.8
+pillow==10.3.0
+imageio==2.34.1
+imageio-ffmpeg==0.4.9
+matplotlib==3.5.3
+decord==0.6.0
+scipy==1.13.1
+# PushT / PushObj environment
+gym==0.23.1
+cloudpickle==2.1.0
+pymunk==6.8.0
+pygame==2.5.2
+shapely==2.0.3
+opencv-python==4.6.0.66
+scikit-image==0.19.3
+# rope / granular environments (PyFleX itself is built separately)
+pybullet
+beautifulsoup4

@@ -1,0 +1,94 @@
+# SE-JEPA on the deformable environments (rope / granular, PyFleX) with the CEM planner.
+# Targets come from scripts/deformable/gen_targets.sh: pass +goal_file_path=<targets>.pkl.
+hydra:
+  run:
+    dir: eval_outputs/sejepa_deformable/${now:%Y%m%d_%H%M%S}
+
+ckpt_base_path: ./checkpoints     # absolute path of a checkpoint dir (hydra.yaml + checkpoints/model_<epoch>.pth)
+model_name: null
+model_epoch: latest
+
+seed: 100                         # planning seed; episode env seeds are seed * i + 1
+n_evals: 10                       # episodes in this run (one chunk of a stream)
+segments_order: file              # plan the chunk's targets in stored order
+goal_source: file
+eval_data_path: null              # data root of the deformable dataset (<DATA>/deformable)
+goal_file_path: null              # targets of this chunk (scripts/deformable/gen_targets.sh)
+ood_corruption: null
+ood_level: null
+env_kwargs_override: null         # ++env_kwargs_override.object_name=rope|granular
+goal_H: 5
+n_plot_samples: 10
+decode_for_viz: false
+num_start_frames: 1
+debug_dset_init: False
+
+objective:
+  _target_: planning.objectives.create_objective_fn
+  alpha: 1
+  base: 2
+  mode: last
+
+planner:
+  _target_: planning.sejepa.SEJEPAMPCPlanner
+  max_iter: 3                     # MPC replans per episode
+  n_taken_actions: 5               # executed actions per replan
+  resim_from_start: false         # continue simulating from the current state
+  adapt:                           # within-episode fast adaptation (AdaJEPA step)
+    lr: 5e-4                       # fast predictor learning rate (last predictor block)
+    steps: 1                       # Adam steps per replan
+    optimizer: adam
+    finetune_every: 1
+    replay_buffer: recent5         # recent adaptation buffer: 5 transitions
+    finetune_encoder: true
+    encoder_lr: 1e-5               # fast encoder-head learning rate
+    last_layer_only: true
+    encoder_last_layer_only: true
+
+  probe:
+    seed: 0
+  continual:                       # SE-JEPA cross-episode memory (planning/sejepa.py)
+    tag: null                      # chunk label, only recorded in the logs (never used for routing)
+    state_in: null                 # memory state saved by the previous chunk (null: empty memory)
+    state_out: continual_state.pt
+    read_only: false               # evaluate state_in frozen: read learners and adapt as usual, but write,
+                                   #   train, merge and save nothing
+    save_deltas: false             # per-episode fast change (fp16) -> deltas.pt
+    save_frames: false             # executed frames at the model stride -> episode_frames.npz
+    memory_size: 30                # recent episodes kept for the transfer diagnostics
+    write: delta                   # label-free routing
+    tau: 0.10                      # existing-domain cosine threshold (fingerprint join)
+    tau_new: 0.05                  # new-domain cosine threshold among pending episodes
+    pending_m: 3                   # aligned pending episodes needed to found a domain
+    pending_max: 40                # pending-pool capacity
+    fp_unit: true                  # fingerprints from unit-norm fast changes
+    min_n: 3                       # minimum episodes before a domain trains a learner
+    slow_lr: 2e-4                  # Adam lr of a domain's slow predictor
+    slow_steps: 15                 # replay updates per standard write
+    slow_batch: 8                  # replayed episodes per update (windows of up to 6 latent frames)
+    reroute: 3                     # replans over which the read is decided (retrieval window)
+    familiar_thr: 0.117            # familiarity threshold (scripts/calibrate_familiarity.py; recalibrate per checkpoint)
+    familiar_read: true            # familiar episodes plan with theta0
+    mature_k: 3                    # maturity history length
+    mature_ratio: 0.9              # maturity error-ratio threshold (learner / theta0, 5-step)
+    reject_ratio: 1.2              # write rejection ratio
+    merge_k: 2                     # merge evidence per direction (episodes)
+    merge_eps: 0.5                 # merge relative tolerance
+    absorb_every: 25               # fragment absorption interval (episodes)
+    absorb_ratio: 0.8              # absorption error-ratio threshold
+    absorb_frag: 6                 # only fragments with fewer episodes are absorbed
+    absorb_pending: false
+    join_ratio: 0                  # 0: no direct joins into mature domains
+    learner_win: false
+    abs_ratio: 20                  # absolute write-error ratio limit (0: off)
+  reuse_actions: true
+
+  sub_planner:
+    target: planning.cem.CEMPlanner
+    horizon: 5
+    topk: 30
+    num_samples: 300
+    var_scale: 1
+    opt_steps: 10
+    eval_every: -1
+  name: sejepa_cem_deformable
