@@ -80,10 +80,9 @@ git clone https://github.com/Celveen/SE-JEPA.git
 cd SE-JEPA
 conda create -n sejepa python=3.10 -y && conda activate sejepa
 pip install -r requirements.txt
+# Rope / granular experiments also need PyFleX (see [docs/REPRODUCE.md](docs/REPRODUCE.md#1-installation)).
 ```
 
-Install the `torch` / `torchvision` builds that match your CUDA driver. Rope / granular experiments also need
-PyFleX (see [docs/REPRODUCE.md](docs/REPRODUCE.md#1-installation)).
 
 ### Quick start
 
