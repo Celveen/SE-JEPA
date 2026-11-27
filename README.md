@@ -1,3 +1,8 @@
+<p align="right">
+  <a href="README.md"><img src="https://img.shields.io/badge/English-0969da?style=flat-square" alt="English (current)"></a>
+  <a href="README.zh-CN.md"><img src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-6e7681?style=flat-square" alt="中文"></a>
+</p>
+
 <div align="center">
 
 # SE-JEPA: Self-Evolving Latent World Models
@@ -5,10 +10,9 @@
 **Turning deployment experience into reusable predictive knowledge**
 
 
+[![Project Website](https://img.shields.io/badge/Project-Website-2563eb.svg)](https://12138tyy.github.io/SE-pages/)
 [![Arxiv](https://img.shields.io/badge/Paper-coming%20soon-b31b1b.svg)](#citation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.10](https://img.shields.io/badge/Python-3.10-3776ab.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.7-ee4c2c.svg)](https://pytorch.org/)
 
 <img src="assets/summary.gif" width="100%" alt="SE-JEPA overview animation">
 
@@ -72,7 +76,9 @@ SE-JEPA/
 ```
 
 ## Getting started
-#### See **[docs/REPRODUCE.md](docs/REPRODUCE.md)** for the detailed experimental settings.
+
+> [!IMPORTANT]
+> **📌 See [docs/REPRODUCE.md](docs/REPRODUCE.md) for the detailed experimental settings.**
 
 ### Installation
 
