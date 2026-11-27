@@ -72,6 +72,7 @@ SE-JEPA/
 ```
 
 ## Getting started
+#### See **[docs/REPRODUCE.md](docs/REPRODUCE.md)** for the detailed experimental settings.
 
 ### Installation
 
@@ -80,8 +81,8 @@ git clone https://github.com/Celveen/SE-JEPA.git
 cd SE-JEPA
 conda create -n sejepa python=3.10 -y && conda activate sejepa
 pip install -r requirements.txt
-# Rope / granular experiments also need PyFleX (see [docs/REPRODUCE.md](docs/REPRODUCE.md#1-installation)).
 ```
+Rope / granular experiments also need PyFleX (see [docs/REPRODUCE.md](docs/REPRODUCE.md#1-installation)).
 
 
 ### Quick start
@@ -103,8 +104,6 @@ Add `--max-episodes 1` for a smoke test. Use `--method adajepa` or `--method fro
 Each chunk writes its success rate, per-episode routing decisions and the memory state to
 `eval_outputs/<stream>/<method>/chunk_<k>_<tag>/`.
 
-See **[docs/REPRODUCE.md](docs/REPRODUCE.md)** for the full settings, the PushT, rope and granular streams,
-held-out evaluation and the baselines.
 
 
 ## Citation
