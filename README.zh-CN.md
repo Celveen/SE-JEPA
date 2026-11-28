@@ -23,7 +23,7 @@ SE-JEPA 让潜在空间世界模型能够**跨部署回合持续学习**，同�
 
 - 在预训练阶段未见过的 PushObj 形状上，留出测试集的成功率较 AdaJEPA 提高 **+15.4 至 +17.1 个百分点**；在 PushT 视觉变化任务上提高 **+15.9 至 +18.7 个百分点**（GD 和 CEM）。
 - 在混合了 14 种形状与视觉条件的单一部署流中，使用同一份持久记忆，经过五轮运行，在线成功率从 **65.3% 提升至 75.5%**。
-- 以 DINO-WM 为骨干模型，预测器仅经过**一轮知识整合训练**，便在未参与学习的绳索实例上将 Chamfer 距离降低 **47%**，且无需任何回合内自适应。
+- 以 DINO-WM 为骨干模型，预测器仅经过**一轮知识整合训练**，便在未参与学习的 Rope 实例上将 Chamfer 距离降低 **47%**，且无需任何回合内自适应。
 
 ## 仓库结构
 
@@ -34,7 +34,7 @@ SE-JEPA/
 ├── conf/                       # Hydra 配置
 │   ├── sejepa_gd_pushobj.yaml      # SE-JEPA + GD 规划器（PushObj、PushT）
 │   ├── sejepa_cem_pushobj.yaml     # SE-JEPA + CEM 规划器（PushObj、PushT）
-│   ├── sejepa_cem_deformable.yaml  # SE-JEPA + CEM 规划器（绳索、颗粒物）
+│   ├── sejepa_cem_deformable.yaml  # SE-JEPA + CEM 规划器（Rope、Granular）
 │   ├── train_pushobj_bias16k.yaml  # PushObj 世界模型（T、L、Z、+ 形状）
 │   ├── train_pushobj_T16k.yaml     # PushT 世界模型（T 形状）
 │   └── encoder/ predictor/ decoder/ action_encoder/ proprio_encoder/ env/
@@ -48,7 +48,7 @@ SE-JEPA/
 │   └── image_corruption.py         # PushT 视觉变化（模糊、椒盐噪声、变暗）
 ├── models/                     # 编码器、ViT 预测器、解码器、世界模型
 ├── datasets/                   # PushT / PushObj 与可变形物体数据集
-├── env/                        # PushT / PushObj 与绳索 / 颗粒物（PyFleX）环境
+├── env/                        # PushT / PushObj 与 Rope / Granular（PyFleX）环境
 ├── metrics/                    # 图像指标（LPIPS）
 ├── distributed_fn/             # 多 GPU 训练辅助工具
 ├── utils/                      # 通用工具、观测预处理器、OmegaConf 解析器
@@ -57,7 +57,7 @@ SE-JEPA/
 │   ├── run_stream.py               # 使用 SE-JEPA、AdaJEPA 或冻结模型运行部署流
 │   ├── calibrate_familiarity.py    # 为模型检查点确定熟悉度阈值
 │   ├── gen_pushobj_dataset.py      # 生成 PushObj / PushT 训练数据
-│   └── deformable/                 # 绳索 / 颗粒物的目标与部署流运行脚本
+│   └── deformable/                 # Rope / Granular 的目标与部署流运行脚本
 ├── docs/
 │   ├── REPRODUCE.md                # 各项实验的完整设置与命令（英文）
 │   ├── REPRODUCE.zh-CN.md          # 各项实验的完整设置与命令（中文）
@@ -80,7 +80,7 @@ conda create -n sejepa python=3.10 -y && conda activate sejepa
 pip install -r requirements.txt
 ```
 
-绳索 / 颗粒物实验还需要安装 PyFleX，详见 [docs/REPRODUCE.zh-CN.md](docs/REPRODUCE.zh-CN.md#1-installation)。
+Rope / Granular 实验还需要安装 PyFleX，详见 [docs/REPRODUCE.zh-CN.md](docs/REPRODUCE.zh-CN.md#1-installation)。
 
 ### 快速上手
 
