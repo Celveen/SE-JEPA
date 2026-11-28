@@ -15,7 +15,7 @@
   - [PushObj：形状变化](#pushobj-shape-shifts)
   - [PushT：视觉变化](#pusht-visual-shifts)
   - [基线方法](#baselines)
-  - [绳索与颗粒物](#rope-and-granular)
+  - [Rope and Granular](#rope-and-granular)
 - [5. 输出结果](#5-outputs)
 
 <a name="1-installation"></a>
@@ -29,9 +29,9 @@ pip install -r requirements.txt
 ```
 
 - 安装与 CUDA 驱动匹配的 `torch` / `torchvision` 版本。计算能力为 sm_120 的 GPU 需要使用 CUDA 12.8 构建版本。
-- 绳索 / 颗粒物环境还需要编译安装 PyFleX（与 DINO-WM 相同）。运行前必须通过 `source` 加载其
+- Rope / Granular 环境还需要编译安装 PyFleX（与 DINO-WM 相同）。运行前必须通过 `source` 加载其
   `env.sh`（`scripts/deformable/` 中的脚本会执行此操作）。
-- 绳索世界模型使用冻结的 DINOv2 ViT-S/14 编码器，首次使用时通过 `torch.hub` 加载
+- Rope 世界模型使用冻结的 DINOv2 ViT-S/14 编码器，首次使用时通过 `torch.hub` 加载
   （首次加载需要网络连接，或已准备好的 hub 缓存）。
 - 在无显示设备的环境中运行时，需要设置 `SDL_VIDEODRIVER=dummy`（运行脚本会自动设置）。
 
@@ -41,10 +41,10 @@ pip install -r requirements.txt
 
 本仓库不包含模型权重和数据集。
 
-| | PushObj（形状变化） | PushT（视觉变化） | 绳索 / 颗粒物 |
+| | PushObj（形状变化） | PushT（视觉变化） | Rope / Granular |
 |---|---|---|---|
 | 训练数据 | 使用 T、L、Z、+ 形状回放 PushT 专家轨迹（DINO-WM `pusht_noise`）；每种形状 4,000 条轨迹 | 仅使用 T 形状进行相同的回放；共 16,000 条轨迹 | DINO-WM 可变形物体数据集，`<DATA>/deformable/{rope,granular}/` |
-| 世界模型 | `conf/train_pushobj_bias16k.yaml`（ResNet-GeM 编码器、ViT 预测器、frameskip 为 5、历史长度为 3、训练 3 个 epoch） | `conf/train_pushobj_T16k.yaml`（架构相同，不含解码器） | 冻结的 DINOv2 图像块编码器、ViT 预测器、frameskip 为 1、历史长度为 1、训练 100 个 epoch；仅使用绳索数据训练 |
+| 世界模型 | `conf/train_pushobj_bias16k.yaml`（ResNet-GeM 编码器、ViT 预测器、frameskip 为 5、历史长度为 3、训练 3 个 epoch） | `conf/train_pushobj_T16k.yaml`（架构相同，不含解码器） | 冻结的 DINOv2 图像块编码器、ViT 预测器、frameskip 为 1、历史长度为 1、训练 100 个 epoch；仅使用 Rope 数据训练 |
 | 规划目标 | T、L、Z、+、I、small_tee、square 对应的 `data/pushobj_eval/val_<shape>/plan_targets.pkl` | `data/pushobj_eval/val_T/plan_targets.pkl` | 验证集初始状态及数据集中随后 5 次推动（`scripts/deformable/gen_targets.sh`） |
 
 `data/pushobj_eval/` 中的片段来自 AdaJEPA 发布的 PushObj 评估片段。每个文件均为 pickle 格式，包含
@@ -63,7 +63,7 @@ python scripts/gen_pushobj_dataset.py --source data/pusht_noise --out-dir data/p
     --action-bias-px 9 --action-noise-px 10 --placement source
 python train.py --config-name train_pushobj_T16k         # -> checkpoints/pushobj_T16k_bias_e3_seed0
 
-# 绳索世界模型（2 张 GPU）
+# Rope 世界模型（2 张 GPU）
 DATASET_DIR=<DATA> torchrun --standalone --nproc_per_node 2 train.py \
     env=deformable_env env.kwargs.object_name=rope env.dataset.object_name=rope encoder=dino \
     frameskip=1 num_hist=1 model.train_encoder=false training.straighten=False +training.eval_lpips=false \
@@ -104,10 +104,10 @@ python scripts/calibrate_familiarity.py --ckpt /abs/path/to/ckpt --epoch 3 --val
 
 不同数据集的设置差异如下：
 
-| | PushObj | PushT | 绳索 / 颗粒物 |
+| | PushObj | PushT | Rope / Granular |
 |---|---|---|---|
 | 配置 | `sejepa_gd_pushobj` 或 `sejepa_cem_pushobj` | `sejepa_gd_pushobj` 或 `sejepa_cem_pushobj` | `sejepa_cem_deformable` |
-| 世界模型 | `pushobj_bias_16k_e3_seed0`, `--epoch 3` | `pushobj_T16k_bias_e3_seed0`, `--epoch latest` | 绳索模型，`latest` |
+| 世界模型 | `pushobj_bias_16k_e3_seed0`, `--epoch 3` | `pushobj_T16k_bias_e3_seed0`, `--epoch latest` | Rope 模型，`latest` |
 | 熟悉度阈值（`continual.familiar_thr`） | 0.0146 | 0.0146 | 0.117 |
 | 慢学习率（`continual.slow_lr`） | 1e-4 | 1e-4 | 2e-4 |
 | 绝对写入误差比上限（`continual.abs_ratio`） | 关闭（0） | 关闭（0） | 20 |
@@ -117,7 +117,7 @@ python scripts/calibrate_familiarity.py --ckpt /abs/path/to/ckpt --epoch 3 --val
 | 目标函数 | `staged` | `staged` | `last` |
 | 成功判据 / 评价指标 | 位置误差 < 20 且角度误差 < π/9 | 相同 | 最终 Chamfer 距离（越小越好） |
 | 每个数据块的回合数 | 50（单一形状） | 50（单一视觉条件） | 10（单一材料） |
-| 学习流 | 5 轮 × 7 种形状（I、L、square、Z、small_tee、+、T）；每轮使用新目标 | 5 轮 × 7 种条件（默认、模糊、椒盐噪声、变暗、红色智能体、红色物体、红色目标）；同一轮的 7 种条件共用 50 个目标 | 3 轮 ×（50 个绳索回合 + 50 个颗粒物回合），每 10 个回合切换一次材料 |
+| 学习流 | 5 轮 × 7 种形状（I、L、square、Z、small_tee、+、T）；每轮使用新目标 | 5 轮 × 7 种条件（默认、模糊、椒盐噪声、变暗、红色智能体、红色物体、红色目标）；同一轮的 7 种条件共用 50 个目标 | 3 轮 ×（50 个 Rope 回合 + 50 个 Granular 回合），每 10 个回合切换一次材料 |
 | 随机种子 | 三条流：100/200/300/1000/1100、400/500/600/1200/1300、700/800/900/1400/1500 | 相同 | 5100 至 5129（每个数据块一个） |
 | 留出测试 | 随机种子为 2000、2100、2200；以只读方式使用已学习的记忆 | 相同 | 无 |
 
@@ -206,9 +206,7 @@ python scripts/run_stream.py --stream shape_test --method frozen --config sejepa
     --ckpt /abs/path/to/baseline_ckpt --epoch latest --gpus 0,1
 ```
 
-<a name="rope-and-granular"></a>
-
-### 绳索与颗粒物
+### Rope and Granular
 
 ```bash
 export CKPT=/abs/path/to/checkpoints/rope_dino_h1_fs1_e100_seed0 DATA=/abs/path/to/data PYFLEX_ROOT=/abs/path/to/PyFleX
@@ -222,7 +220,7 @@ bash scripts/deformable/run_stream.sh frozen 3,4
 默认部署流为实验设置表中的混合材料流。可通过 `STREAM` 指定由 `object:seed` 数据块组成的列表，以覆盖默认设置。
 
 单一材料的知识整合使用 `single` 方法：为每种材料设置一个慢预测器，并根据已知材料类型分配预测器；
-关闭快速自适应，慢学习率为 1e-4。每轮整合都会重新访问相同的 50 个实例。对绳索进行四轮整合的命令如下：
+关闭快速自适应，慢学习率为 1e-4。每轮整合都会重新访问相同的 50 个实例。对 Rope 进行四轮整合的命令如下：
 
 ```bash
 export STREAM="$(for p in 1 2 3 4; do echo rope:99 rope:100 rope:101 rope:102 rope:103; done)"
@@ -238,7 +236,7 @@ OUT=eval_outputs/rope_single bash scripts/deformable/run_stream.sh single 0
 
 | 文件 | 内容 |
 |---|---|
-| `logs.json` | 最终成功率（`final_eval/success_rate`），或绳索 / 颗粒物的 Chamfer 距离 |
+| `logs.json` | 最终成功率（`final_eval/success_rate`），或 Rope / Granular 的 Chamfer 距离 |
 | `per_iter_logs.json` | 各回合、各次重规划的成功情况、距离与耗时 |
 | `continual_episodes.jsonl` | 每个回合的检索结果、熟悉度分数、写入决策与所属域 |
 | `continual_state.pt` | 传递给下一个数据块的记忆（慢学习器、回放数据、待定池） |
