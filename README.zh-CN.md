@@ -68,7 +68,7 @@ SE-JEPA/
 ## 使用教程
 
 > [!IMPORTANT]
-> **📌 详细实验设置请参阅 [docs/REPRODUCE.md](docs/REPRODUCE.md)。**
+> **📌 详细实验设置请参阅 [docs/REPRODUCE.zh-CN.md](docs/REPRODUCE.zh-CN.md)。**
 
 ### 环境安装
 
